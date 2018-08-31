@@ -26,3 +26,9 @@ $ mkdocs serve
 # build docs
 $ mkdocs build --clean
 ```
+
+**Deploy on Matic server**
+
+```bash
+$ bash deploy.sh
+```
