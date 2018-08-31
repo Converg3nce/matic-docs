@@ -52,6 +52,7 @@ Also, Matic Network's core focus on creating applications having an enhanced use
 
 [Sol-Trace](https://github.com/maticnetwork/sol-trace.js)
 
+
 ## How does Matic compare with other sidechain solutions like POA/Go-Chain?
 
 Matic Network's biggest differentiator is Plasma Framework which ensures Decentralization and Security of side chain transactions.
@@ -178,10 +179,10 @@ A single side chain has the capacity of 2^16 (65,000+) transactions per second. 
 
 Making our Mainnet live on Ethereum is the first priority as of now. Once we have a stable implementation of our Testnet ready we will announce our plans for other Blockchains.
 
-## "We also intend to launch the alpha version of our Mainnet with working Dapps before the ICO"
+## "We also intend to launch the alpha version of our Mainnet with working Dapps before the Token sale"
 
 The partner information is confidential as of now. We will soon make them public. We have 4 teams building their solutions on top of Matic. One of them is a banking wallet in India, 1 in gaming segment, 1 in referral marketing (who are going to publish about Matic Network in the Whitepaper) and 1 in the ad network. There are others in pipeline but are not yet finalized.
 
-## Do you have a timeline on the ICO? Any information on these DApps?
+## Do you have a timeline on the Token sale? Any information on these DApps?
 
-ICO related details are again confidential as of now
+Token sale related details are again confidential as of now.

@@ -1,8 +1,10 @@
-site_name: Matic
-pages:
-  - Home: index.md
-  - FAQ: faq.md
+site_name: "Matic"
+site_url: "https://docs.matic.network"
+
 theme:
+  language: "en"
+  feature:
+    tabs: true
   palette:
     primary: "white"
     accent: "indigo"
@@ -10,3 +12,44 @@ theme:
     text: "Roboto"
     code: "Roboto Mono"
   name: "material"
+
+markdown_extensions:
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"
+
+extra:
+  social:
+    - type: "github"
+      link: "https://github.com/maticnetwork"
+    - type: "twitter"
+      link: "https://twitter.com/maticnetwork"
+    - type: "linkedin"
+      link: "https://www.linkedin.com/company/matic-network"
+    - type: "telegram"
+      link: "https://t.me/maticnetwork"
+    - type: "medium"
+      link: "https://medium.com/matic-network"
+
+nav:
+  - Matic:
+      - Home: index.md
+      - FAQ: faq.md
+  - Dagger:
+      - Home: dagger/index.md
