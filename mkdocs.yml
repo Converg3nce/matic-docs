@@ -1,11 +1,10 @@
-site_name: FAQ
+site_name: Docs
 pages:
-     - FAQ: index.md
+  - Home: index.md
+  - FAQ: faq.md
 theme:
-   palette: 
-     primary: 'grey'
-     accent: 'grey'
-   font:
-     text: 'Ubuntu'
-     code: 'Ubuntu Mono'
-   name: 'material'
+  palette:
+    primary: "white"
+    accent: "black"
+  name: "material"
+  custom_dir: "theme"
