@@ -44,13 +44,7 @@ Matic Network intends to enable DEX's (eg 0x), Liquidity pools (eg. Kyber Networ
 
 - Others
 
-Also, Matic Network's core focus on creating enhanced user experience applications aims to contribute to the mass adoption of DApps. In the same league, we are intent on building ecosystem tools. Our products like Dagger (which is very famous amongst the Ethereum community) and Opensigner (implementation of Walletconnect protocol and complete Node.js implementation) are a testimony to the same -
-
-[WalletConenct](https://github.com/WalletConenct/WalletConenct)
-
-[Dagger](https://github.com/maticnetwork/eth-dagger.js)
-
-[Sol-Trace](https://github.com/maticnetwork/sol-trace.js)
+Also, Matic Network's core focus on creating enhanced user experience applications aims to contribute to the mass adoption of DApps. In the same league, we are intent on building ecosystem tools. Our products like Dagger (which is very famous amongst the Ethereum community) and Opensigner (implementation of Walletconnect protocol and complete Node.js implementation) are a testimony to the same: [WalletConenct](https://github.com/WalletConenct/WalletConenct), [Dagger](https://github.com/maticnetwork/eth-dagger.js), and [sol-trace](https://github.com/maticnetwork/sol-trace.js)
 
 ## How does Matic compare with other sidechain solutions like POA/Go-Chain?
 
@@ -156,7 +150,7 @@ Yes. The demo is available [Here](https://www.youtube.com/watch?v=l1vb5pjezJ8)
 
 ## What is the transaction per seconds?
 
-Currently “a single Matic side chain” can theoretically handle 2^16 (65000+) transactions per second
+Currently "a single Matic sidechain" can theoretically handle $2^{16}$ (65000+) transactions per second
 
 ## Is token type ERC20?
 
@@ -169,20 +163,21 @@ Most likely Q3
 ## Could you outline your roadmap, How far are you with development and When do you expect a live implementation of Matic to be launched?
 
 We already have a live implementation. We have recently put it on youtube. We also conducted Consensys BSIC in Mumbai where we demoed Matic network on Kovan Testnet.
+
 In terms of the Roadmap, we are going to publish a detailed roadmap soon.
 
 ## What is the expected TPS you'll be able to bring to the Ethereum network? What are you running at now on testnet?
 
-A single side chain has the capacity of 2^16 (65000+) transactions per second. Matic network has the capability to add multiple side chains without much effort. But currently, our focus would be on stabilizing the network with one side chain.
+A single side chain has the capacity of $2^{16}$ (65000+) transactions per second. Matic network has the capability to add multiple side chains without much effort. But currently, our focus would be on stabilizing the network with one side chain.
 
 ## "We have chosen Ethereum as the first platform to showcase our scalability" What other platforms are you aiming toward, and is there a timeline for implementation
 
 Making our Mainnet live with Ethereum as basechain is the first priority as of now. For other platforms we will announce once we have a reliable implementation of Testnet ready.
 
-## "We also intend to launch the alpha version of our Mainnet with working Dapps before the ICO"
+## "We also intend to launch the alpha version of our Mainnet with working Dapps before the Token sale"
 
 The partner information is confidential as of now. We will soon make them public. We have 4 teams building their solutions on top of Matic. One of them is a banking wallet in India, 1 in gaming segment, 1 in referral marketing (who are going to publish about Matic Network in the Whitepaper) and 1 in the ad network. There are others in pipeline/pre-final stages but not confirmed yet.
 
-## Do you have a timeline on the ICO? Any information on these DApps?
+## Do you have a timeline on the Token sale? Any information on these DApps?
 
-ICO related details are again confidential as of now
+Token sale related details are again confidential as of now.
