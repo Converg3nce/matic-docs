@@ -64,21 +64,6 @@ All this makes Matic Network economically incentivized side chain network which 
 
 Secondly, capacity and TPS of Matic sidechains are much higher than that of POA and Go-chain. Especially when Matic Network can have thousands of transactions while POA and Go-chain are single sidechains which have a higher limit of a few thousand transactions.
 
-## Your whitepaper are plain 8 pages, will you make it nicer and more presentable to explain it?
-
-Yes. We are in process of putting more technical details by putting in the underlying research theories and concepts for the critical parts of the product, consensus mechanisms etc.
-
-## When will the new version of the White Paper, website, and roadmap be published? Really curious to see them.
-
-The new website (https://matic.network/) has been made live recently days back but we haven’t made a public announcement about it as we are curating a lot more content around it.
-Plus we are ready to release an exciting feature on our product “Dagger” wherein we have provide easy integrations for Dapp Developers to deploy custom notifications (Emails, push notifications etc) by listening to smart contract events. So we wanted to make a big announcement with the product feature along with the go live of the website.
-
-Whitepaper 2.0 has also been made live at https://whitepaper.matic.network/
-
-Roadmap’s draft is here, there may be a few changes here and there but the draft is as below :
-
-https://drive.google.com/file/d/1R-WICPWI_Qcb2_Ic2MYmybfVxRIpdath/view?usp=sharing
-
 ## How will Multi Chain Support work?
 
 Matic Network uses Plasma framework which has few key principles. In simple words, proofs of the transactions happening off chain should be pushed on Mainchain, Fraud proofs on the mainchains and safe exit mechanisms in case of a fraudulent activity for ex. Exit queues.
@@ -131,12 +116,6 @@ Priority order would be DEX, Payments, Liquidity Providers, Lending & Credit Sco
 
 Although most of these features will run in parallel, we are in talks with various top teams to collaborate with us to deploy these protocols on Matic side chains.
 
-## How is Matic Network different than Celer Network
-
-Both Matic Network and Celer Network are different solutions to the same problem - low transaction throughput in current blockchains. Both utilise off-chain scaling techniques and rely on the main chain for final security; however the fundamental difference is in the approaches - Matic Network is based on a set of Plasma sidechain(s) backed by Proof-of-Stake consensus [see](http://plasma.io/ for more details), whereas Celer Network is a state-channel based solution. Both projects aim for generalized state transitions off-chain, but in vastly different ways.
-
-Matic Network is aiming to build a dApp developer ecosystem. Since it uses an account-based Plasma sidechain, and also employs a EVM-compatible runtime known as the Matic VM, it will be relatively easier for Ethereum based dApps to migrate to Matic Network once it is live. So in this respect as well, Celer Network is different in terms of developer interfacing. There are other differences as well - let’s see if we can publish these in a long form blog post.
-
 ## Why no one else cannot replicate Matic’s plasma implementation?
 
 Although with blockchain solutions its more about the network effect as to which network is able to scale/grow ecosystem better than others BUT more importantly with blockchain solutions they have to mandatorily be open source as it entails the actual assets being used in them.
@@ -159,7 +138,7 @@ So firstly, The PoA nodes that you saw, are going to be Delegates ( with Proof o
 
 Secondly, let’s assume all of the Delegates (or 2/3rd of them) turn bad actors and produce faulty blocks, then you have PoS layer stakers who are going to validate all the blocks and if any frauds are committed the stakes of Delegates are slashed, the checkpointing is stopped for the corrective actions.
 
-Thirdly, let's say even the Staker PoS layer (which would be a large number of nodes) also turns bad and collude to produce faulty checkpoints. I.e all the PoA are corrupt and PoS are corrupt Even then following Plasma philosophy we are writing one of the coveted things of side chain scaling, _Fraud proofs_ which is being watched by many big projects ( The watchers can be seen as our repository watchers on Github). This fraud proof mechanism enables any one in public to challenge any transaction on the Mainchain, succeeding which they stand to gain rewards from the slashing of stakes of all the stakeholders involved in the commited fraud.
+Thirdly, let's say even the Staker PoS layer (which would be a large number of nodes) also turns bad and collude to produce faulty checkpoints. I.e all the PoA are corrupt and PoS are corrupt Even then following Plasma philosophy we are writing one of the coveted things of side chain scaling, **Fraud proofs** which is being watched by many big projects ( The watchers can be seen as our repository watchers on Github). This fraud proof mechanism enables any one in public to challenge any transaction on the Mainchain, succeeding which they stand to gain rewards from the slashing of stakes of all the stakeholders involved in the commited fraud.
 
 ## Why Matic Token is required?
 
