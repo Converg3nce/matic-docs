@@ -1,22 +1,8 @@
-### eth-dagger
-
-[![Build Status](https://travis-ci.org/maticnetwork/eth-dagger.js.svg?branch=master)](https://travis-ci.org/maticnetwork/eth-dagger.js)
-
-eth-dagger is library for dagger project written in node.js and browser. It uses dagger server to get realtime updates from Ethereum Network.
+eth-dagger is library for dagger project written in node.js and browser. It uses dagger server to get realtime updatesfrom Ethereum Network.
 
 **About dagger**
 
 Dagger helps users to develop faster and better Ethereum DApps. For more information:
-
-- [Installation](#install)
-- [Example](#example)
-- [Network](#network)
-- [Events](#events)
-- [API](#api)
-- [Support](#support)
-- [License](#license)
-
-<a name="install"></a>
 
 ## Installation
 
@@ -27,8 +13,6 @@ yarn add eth-dagger
 # Using NPM
 npm install eth-dagger --save
 ```
-
-<a name="network"></a>
 
 ## Network
 
@@ -45,8 +29,6 @@ Socket: mqtts://mainnet.dagger.matic.network (You can also use `ssl://` protocol
 Websocket: wss://kovan.dagger.matic.network
 Socket: mqtts://kovan.dagger.matic.network (You can also use `ssl://` protocol)
 ```
-
-<a name="example"></a>
 
 ## Example
 
@@ -87,8 +69,6 @@ $ woodendagger --url=http://localhost:8545 --sockport=1883 --wsport=1884
 # To connect from dagger:
 var dagger = new Dagger('mqtt://localhost:1883')
 ```
-
-<a name="events"></a>
 
 ## Events
 
@@ -160,29 +140,19 @@ dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252
 
 > Event names are case-sensitive. `address`, `txId` and `topics` must be in lowercase.
 
-<a name="api"></a>
-
 ## API
 
-- <a href="#connect"><code>Dagger.<b>connect()</b></code></a>
-- <a href="#on"><code>dagger.<b>on()</b></code></a>
-- <a href="#once"><code>dagger.<b>once()</b></code></a>
-- <a href="#off"><code>dagger.<b>off()</b></code></a>
-- <a href="#of"><code>dagger.<b>of()</b></code></a>
-- <a href="#end"><code>dagger.<b>end()</b></code></a>
-- <a href="#contract"><code>dagger.<b>contract()</b></code></a>
+### new Dagger(url)
 
----
+Create dagger object
 
-<a name="connect"></a>
+- `url` is a `String` url to connect with dagger server node. Check [network section](#network) for all available url values
 
-### Dagger.connect(url, options)
+Example:
 
-Connects to the dagger specified by the given url and options. It returns a Dagger object.
-
----
-
-<a name="on"></a>
+```js
+var dagger = new Dagger(<url>);
+```
 
 ### dagger.on(event, fn)
 
@@ -194,17 +164,9 @@ Subscribe to a topic
   - `data` data from event
   - `removed` flag saying if data is removed from blockchain due to re-organization.
 
----
-
-<a name="once"></a>
-
 ### dagger.once(event, fn)
 
 Same as `on` but will be fired only once.
-
----
-
-<a name="off"></a>
 
 ### dagger.off(event, fn)
 
@@ -212,10 +174,6 @@ Unsubscribe from a topic
 
 - `event` is a `String` topic to unsubscribe from
 - `fn` - `function (data, removed)`
-
----
-
-<a name="of"></a>
 
 ### dagger.of(room)
 
@@ -226,19 +184,11 @@ Create room out of dagger. `room` has to be one out of two values: `latest` and 
   - `once` same as dagger `once`
   - `off` same as dagger `off`
 
----
-
-<a name="end"></a>
-
 ### dagger.end([force])
 
 Close the dagger, accepts the following options:
 
 - `force`: passing it to true will close the dagger right away. This parameter is optional.
-
----
-
-<a name="contract"></a>
 
 ### dagger.contract(web3Contract)
 
@@ -270,13 +220,9 @@ Creates web3 contract wrapper to support dagger.
   filter.stopWatching();
   ```
 
-<a name="support"></a>
-
 ## Support
 
 If you have any queries, feedback or feature requests, feel free to reach out to us on telegram: https://t.me/maticnetwork
-
-<a name="license"></a>
 
 ## License
 
