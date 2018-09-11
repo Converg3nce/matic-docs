@@ -53,3 +53,7 @@ nav:
       - FAQ: faq.md
   - Dagger:
       - Home: dagger/index.md
+      - Getting started: dagger/getting-started.md
+  - Zapier:
+      - Introduction: zapier/introduction.md
+      - Getting started: zapier/getting-started.md
