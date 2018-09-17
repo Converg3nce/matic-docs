@@ -144,23 +144,21 @@ Thirdly, let's say even the Staker PoS layer (which would be a large number of n
 
 The following reasons reinforce the need of having Matic token
 
-1. Matic intend to be a general purpose scaling solution for public blockchains:
-
+### Matic intends to be a general purpose scaling solution for public blockchains:
 We are starting out on Ethereum as our first base chain, but in the future Matic can be deployed on multiple base chains.
 There will be other basechains added soon, So it won’t make sense to have one currency (ether) to be used for paying fees on the sidechains.
 If there's an existential concern over any basechains future, having that basechains’ currency as native asset for the Matic network will cripple the scaling network.
 Therefore it is important to build the Staker ecosystem on Matic’s own network token.
 
-2. Appcoin security model:
+### Appcoin security model:
 When the consensus participants have their stakes in Matic tokens, they have a strong economic disincentive to not act in the disinterest of the network. Eliminating dependency on Ethereum as if in future there’s some existential threat on Ethereum, Matic token holders and stakers can simply move to other blockchains like NEO and EOS. While if we allow people to stake only in Ether, then it makes us platform dependent. Since the PoS ecosystem requires high value stakes to safeguard the network, Staking in Ethereum or any other base chain would make it financially not viable for us to setup the base blockchain infrastructure.
 
 If your concern is about Developers, one of the pillars of our strategy is to keep the entry barrier for developers very low.We have made sure that all the dev tools, documentation works out of the box. It is no different than anyone developing on Ethereum, you can get free tokens from the testnet faucet and get developing, just like on Ethereum. You need Matic tokens only when you want to deploy on Matic Mainnet. There the gas fees is much lower, around 1/100th of a txn fee you will pay on Ethereum.
 
-3. Seeding the network in nascent stages:
-
+### Seeding the network in nascent stages:
 It’s practically impossible to seed the system when there are little to no txns in the network at the start, as we cannot distribute Eth to the highly decentralized Validator layer and the block producers. Whilst with Matic tokens, we have provisioned a large percentage of tokens to be distributed for seeding block producer, checkpointer stakes and subsequently offer block rewards. This provision ensures that the stakers receive rewards even if the network takes some time to assume network effects. It is akin to why Block Mining rewards were kept for Bitcoin, stakers and block producers can be incentivized in this way to keep the network secure. 
 
-## Whats drives the use and demand for Matic tokens?
+## What drives the use and demand for Matic tokens?
 
 There are two primary uses of the token:
 
