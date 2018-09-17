@@ -176,6 +176,14 @@ Some of the secondary reasons for token demand:
 * Protocol Level burning of tokens
 We intend to burn a percentage of transaction fee in every block. This makes the tokens deflationary in nature and provide it a constant support in terms of its value at the protocol level
 
+* We intend to build Matic as a general purpose scaling solution for public blockchains. As in future there can be multiple base chains like Ethereum, its not favourable to build the Staker ecosystem on any other asset than Matic's own token.
+
+* Appcoin security model - i.e when the consensus participants have their stakes in Matic tokens, they have a strong economic disincentive to not act in the disinterest of the network. 
+
+* Though Matic believes in the long term success of Ethereum but if in future there’s some existential threat on Ethereum, having Matic tokens as a separate asset enables Matic token holders and stakers to simply move to other blockchains as basechain
+
+* Since the PoS ecosystem requires high value stakes to safeguard the network, Staking in Ethereum or any other base chain would make it financially not viable for us to setup the base blockchain infrastructure.
+
 ## Do you have prototype or demo to show to the public yet?
 
 Yes. The demo is available [Here](https://www.youtube.com/watch?v=l1vb5pjezJ8)
