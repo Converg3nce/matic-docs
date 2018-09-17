@@ -140,15 +140,49 @@ Secondly, let’s assume all of the Delegates (or 2/3rd of them) turn bad actors
 
 Thirdly, let's say even the Staker PoS layer (which would be a large number of nodes) also turns bad and collude to produce faulty checkpoints. I.e all the PoA are corrupt and PoS are corrupt Even then following Plasma philosophy we are writing one of the coveted things of side chain scaling, **Fraud proofs** which is being watched by many big projects ( The watchers can be seen as our repository watchers on Github). This fraud proof mechanism enables any one in public to challenge any transaction on the Mainchain, succeeding which they stand to gain rewards from the slashing of stakes of all the stakeholders involved in the commited fraud.
 
-## Why Matic Token is required?
+## Why is Matic Token required?
 
-We intend to build Matic as a general purpose scaling solution for public blockchains. As in future there can be multiple base chains like Ethereum, its not favourable to build the Staker ecosystem on any other asset than Matic's own token.
+The following reasons reinforce the need of having Matic token
 
-Appcoin security model - i.e when the consensus participants have their stakes in Matic tokens, they have a strong economic disincentive to not act in the disinterest of the network
+1. Matic intend to be a general purpose scaling solution for public blockchains:
 
-No dependency on Ethereum as if in future there’s some existential threat on Ethereum, Matic token holders and stakers can simply move to other blockchains like NEO and EOS. While if we allow people to stake only in Ether, then it makes us platform dependent.
+We are starting out on Ethereum as our first base chain, but in the future Matic can be deployed on multiple base chains.
+There will be other basechains added soon, So it won’t make sense to have one currency (ether) to be used for paying fees on the sidechains.
+If there's an existential concern over any basechains future, having that basechains’ currency as native asset for the Matic network will cripple the scaling network.
+Therefore it is important to build the Staker ecosystem on Matic’s own network token.
 
-Since the PoS ecosystem requires high value stakes to safeguard the network, Staking in Ethereum or any other base chain would make it financially not viable for us to setup the base blockchain infrastructure.
+2. Appcoin security model:
+When the consensus participants have their stakes in Matic tokens, they have a strong economic disincentive to not act in the disinterest of the network. Eliminating dependency on Ethereum as if in future there’s some existential threat on Ethereum, Matic token holders and stakers can simply move to other blockchains like NEO and EOS. While if we allow people to stake only in Ether, then it makes us platform dependent. Since the PoS ecosystem requires high value stakes to safeguard the network, Staking in Ethereum or any other base chain would make it financially not viable for us to setup the base blockchain infrastructure.
+
+If your concern is about Developers, one of the pillars of our strategy is to keep the entry barrier for developers very low.We have made sure that all the dev tools, documentation works out of the box. It is no different than anyone developing on Ethereum, you can get free tokens from the testnet faucet and get developing, just like on Ethereum. You need Matic tokens only when you want to deploy on Matic Mainnet. There the gas fees is much lower, around 1/100th of a txn fee you will pay on Ethereum.
+
+3. Seeding the network in nascent stages:
+
+It’s practically impossible to seed the system when there are little to no txns in the network at the start, as we cannot distribute Eth to the highly decentralized Validator layer and the block producers. Whilst with Matic tokens, we have provisioned a large percentage of tokens to be distributed for seeding block producer, checkpointer stakes and subsequently offer block rewards. This provision ensures that the stakers receive rewards even if the network takes some time to assume network effects. It is akin to why Block Mining rewards were kept for Bitcoin, stakers and block producers can be incentivized in this way to keep the network secure. 
+
+## Whats drives the use and demand for Matic tokens?
+
+There are two primary uses of the token:
+
+1. The token is used to pay for the transaction fees in the network
+2. The token is used for staking to participate in the Proof of Stake consensus mechanism for checkpointing layer and block production layer
+
+Some of the secondary reasons for token demand:
+
+* Matic Network intends to enable Dapps to pay Matic network fees in Dapp-coins by abstracting a token swap mechanism using a liquidity pool like Kyber. The user simply uses her Dapp-coins to pay fees, in the background the Dappcoin is swapped for Matic tokens. Hence the DApp developers who want to provide a seamless user experience will help maintain a Matic Network liquidity pool.
+
+* Plasma exits mandate a wait-time of 7 days which results in a sub-par user experience. To enable faster exits we are implementing a lending mechanism using Dharma Protocol wherein an underwriter/lender can receive the exit-token and disburse the exit amount with a small fee as interest. The lender then claims the tokens after one week by using exit-token. The user thus gets near immediate withdrawals while the lenders can earn interest for the service they provide.
+
+* Protocol Level burning of tokens
+We intend to burn a percentage of transaction fee in every block. This makes the tokens deflationary in nature and provide it a constant support in terms of its value at the protocol level
+
+* We intend to build Matic as a general purpose scaling solution for public blockchains. As in future there can be multiple base chains like Ethereum, its not favourable to build the Staker ecosystem on any other asset than Matic's own token.
+
+* Appcoin security model - i.e when the consensus participants have their stakes in Matic tokens, they have a strong economic disincentive to not act in the disinterest of the network. 
+
+* Though Matic believes in the long term success of Ethereum but if in future there’s some existential threat on Ethereum, having Matic tokens as a separate asset enables Matic token holders and stakers to simply move to other blockchains as basechain
+
+* Since the PoS ecosystem requires high value stakes to safeguard the network, Staking in Ethereum or any other base chain would make it financially not viable for us to setup the base blockchain infrastructure.
 
 ## Do you have prototype or demo to show to the public yet?
 
