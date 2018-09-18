@@ -9,6 +9,10 @@ fi
 echo "SETUP: activating virtual env for python"
 source venv/bin/activate
 
+# getting latest changes from git
+echo "SETUP: fetching latest changes from git"
+git pull origin master
+
 # install all dependencies
 echo "SETUP: installing dependencies"
 pip install -r requirements.txt
