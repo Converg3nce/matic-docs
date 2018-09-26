@@ -1,16 +1,16 @@
 ## What is Matic Network?
 
-Matic Network is a sidechain based scaling solution for public blockchains.It is based on an adapted implementation of Plasma framework. Matic provides scalability while ensuring a superior user experience in a secured and decentralized manner. It has a working implementation for Ethereum on Kovan Testnet. Matic intends to support other blockchains in the future which will enable it to provide interoperability features alongside offering scalability to existing public blockchains.
+Matic Network is a sidechain based scaling solution for public blockchains. It is based on an adapted implementation of Plasma framework. Matic provides scalability while ensuring a superior user experience in a secured and decentralized manner. It has a working implementation for Ethereum on Kovan Testnet. Matic intends to support other blockchains in the future which will enable it to provide interoperability features alongside offering scalability to existing public blockchains.
 
 ## How is Matic different from other implementations of Plasma?
 
-Matic Network's implementation of Plasma is built on state-based side chains which run on EVM, while the other implementations of Plasma primarily use UTXOs which   restricts them to being payment specific. Having state based side chains allows Matic to provide scalability for generic smart contracts as well.
+Matic Network's implementation of Plasma is built on state-based side chains which run on EVM, while the other implementations of Plasma primarily use UTXOs which restricts them to being payment specific. Having state based side chains allows Matic to provide scalability for generic smart contracts as well.
 
 Secondly, Matic Network uses a public checkpointing layer which publishes checkpoints after periodic intervals (unlike checkpoints  after every block in Plasma Cash) allowing the side chains to operate at high speeds while publishing the checkpoints in batches. These checkpoints along with the fraud proofs ensure that Matic's side chains operate in a secure manner and any fraudulent activity can be detected on Ethereum mainchain and be penalized by slashing the stakes of the bad actors. This mainchain security is supplementary to the PoS protocol security on the side chains.
 
 ## Your project provides scalability for Ethereum using plasma chains, is it a protocol or a native blockchain in itself?
 
-Matic Network is a "side chain" solution where Ethereum mainchain assets, i.e all Dapps/Tokens/Protocols of the main chain can be moved/migrated to Matic Network side chain(s) and when needed, one can withdraw assets back to mainchain. 
+Matic Network is a "side chain" solution where Ethereum mainchain assets, i.e. all Dapps/Tokens/Protocols of the main chain can be moved/migrated to Matic Network side chain(s) and when needed, one can withdraw assets back to mainchain. 
 
 ## What are the competitive advantages of Matic over its competitor?
 
@@ -24,7 +24,7 @@ First and foremost,The focus is different. Loom is focusing on games and social 
 
 Secondly, Plasma Cash, which is what we believe Loom wants to use "in future", will have block times greater than the Ethereum block times as you need to push every block of the sidechain to the main chain, while Matic uses checkpoints for 1-second block times (with PoS layer)
 
-As Plasma Cash works with Non-Fungible Tokes (NFT), it works great for game cards and social state changes where you have pre-defined fees (bundled as NFT - eg "20 tokens" to play game equals 1 NFT coin on plasma cash). For normal token transfers, you may need to swap tokens (like currency notes & change) on top of plasma cash which makes it difficult to implement while offering a friendly UX. It is still being discussed on plasma calls, While Matic uses state-based plasma (closer to Plasma MVP).
+As Plasma Cash works with Non-Fungible Tokes (NFT), it works great for game cards and social state changes where you have pre-defined fees (bundled as NFT - eg "20 tokens" to play game equals 1 NFT coin on plasma cash). For normal token transfers, you may need to swap tokens (like currency notes & change) on top of plasma cash which makes it difficult to implement while offering a friendly UX. It is still being discussed on plasma calls, while Matic uses state-based plasma (closer to Plasma MVP).
 
 - L1 scaling solutions
 
@@ -65,7 +65,7 @@ This makes Matic Network an economically incentivized side chain network which h
 
 Secondly, capacity and TPS of Matic sidechains are much higher than that of POA and Go-chain. Especially when Matic Network can have thousands of transactions while POA and Go-chain are single sidechains which have a higher limit of a few thousand transactions.
 
-## How will Multi Chain Support work?
+<!--## How will Multi Chain Support work?
 
 Matic Network uses Plasma framework which has few key principles. In simple words, proofs of the transactions happening off chain should be pushed on Mainchain, Fraud proofs on the mainchains and safe exit mechanisms in case of a fraudulent activity for ex. Exit queues.
 
@@ -75,7 +75,7 @@ Basically any asset being deposited to Matic Network is deposited as a equivalen
 
 Also, if by Multi Chain support you mean multiple side chains, then yes Matic checkpointing layer can support multiple side chains. A single side chain can have tens of thousands of TPS. Multiple side chains can provide a capacity of millions of transactions per second to Matic Network.
 
-The Plasma whitepaper itself has made it very clear on how multiple sidechains can be implemented. The Plasma sidechain tree architecture is the best way to implement this. You can have a number of side-chains of arbitrary depth, with different use cases possible as you go up and down the tree. Sidechain exits are an important design consideration in Plasma, and therefore, we will need to implement multiple sidechains, because if exits happen in one child chain, users can easily shift to another side chain. The entire element of the Proof of Stake layer is to mitigate the possibility of such exits, so that user experience is not spoilt.
+The Plasma whitepaper itself has made it very clear on how multiple sidechains can be implemented. The Plasma sidechain tree architecture is the best way to implement this. You can have a number of side-chains of arbitrary depth, with different use cases possible as you go up and down the tree. Sidechain exits are an important design consideration in Plasma, and therefore, we will need to implement multiple sidechains, because if exits happen in one child chain, users can easily shift to another side chain. The entire element of the Proof of Stake layer is to mitigate the possibility of such exits, so that user experience is not spoilt. -->
 
 ## Via what principles will new Side Chains be added? Will there be any special requirements for private companies' local Side Chains?
 
@@ -116,7 +116,7 @@ Priority order would be DEX, Payments, Liquidity Providers, Lending & Credit Sco
 
 Although most of these features will run in parallel, we are in talks with various top teams to collaborate with us to deploy these protocols on Matic side chains.
 
-## Why no one else cannot replicate Matic’s plasma implementation?
+## Why will it be difficult to replicate Matic's plasma implementation?
 
 Although with blockchain solutions its more about the network effect as to which network is able to scale/grow ecosystem better than others BUT more importantly with blockchain solutions they have to mandatorily be open source as it entails the actual assets being used in them.
 
@@ -124,7 +124,7 @@ Also it is the case with all the open source projects. It is equally applicable 
 
 ## What’s special about Matic Network’s Plasma implementation?
 
-So Plasma Matic uses a account based model system rather than the UTXO system used by Plasma Cash, Plasma MVP and Plasma XT. This provides us with a huge advantage of using an EVM on the matic chain which enables us to utilize the entire Ethereum ecosystem, developer tools, integration libraries etc for the Matic network.
+So Plasma Matic uses a account based model system rather than the UTXO system used by Plasma Cash, Plasma MVP and Plasma XT. This provides us with a huge advantage of using an EVM on the Matic chain which enables us to utilize the entire Ethereum ecosystem, developer tools, integration libraries etc for the Matic network.
 
 The Dapps can easily use the the Matic system without making any changes to their ERC20 tokens. Also our checkpointing layer enables us to be magnitudes of times faster than the other Plasma implementations as we batch the proofs of the individual blocks in the checkpoints while other Plasma implementations have to submit every block proof to the mainchain
 
@@ -145,18 +145,15 @@ Thirdly, let's say even the Staker PoS layer (which would be a large number of n
 The following reasons reinforce the need of having Matic token
 
 ### Matic intends to be a general purpose scaling solution for public blockchains:
-We are starting out on Ethereum as our first base chain, but in the future Matic can be deployed on multiple base chains.
-There will be other basechains added soon, So it won’t make sense to have one currency (ether) to be used for paying fees on the sidechains.
-If there's an existential concern over any basechains future, having that basechains’ currency as native asset for the Matic network will cripple the scaling network.
-Therefore it is important to build the Staker ecosystem on Matic’s own network token.
+We are starting out on Ethereum as our first base chain, but in the future Matic can be deployed on multiple base chains. There will be other basechains added soon, So it won’t make sense to have one currency (ether) to be used for paying fees on the sidechains. If there's an existential concern over any basechains future, having that basechains’ currency as native asset for the Matic network will cripple the scaling network. Therefore it is important to build the Staker ecosystem on Matic’s own network token.
 
 ### Appcoin security model:
-When the consensus participants have their stakes in Matic tokens, they have a strong economic disincentive to not act in the disinterest of the network. Eliminating dependency on Ethereum as if in future there’s some existential threat on Ethereum, Matic token holders and stakers can simply move to other blockchains like NEO and EOS. While if we allow people to stake only in Ether, then it makes us platform dependent. Since the PoS ecosystem requires high value stakes to safeguard the network, Staking in Ethereum or any other base chain would make it financially not viable for us to setup the base blockchain infrastructure.
-
-If your concern is about Developers, one of the pillars of our strategy is to keep the entry barrier for developers very low.We have made sure that all the dev tools, documentation works out of the box. It is no different than anyone developing on Ethereum, you can get free tokens from the testnet faucet and get developing, just like on Ethereum. You need Matic tokens only when you want to deploy on Matic Mainnet. There the gas fees is much lower, around 1/100th of a txn fee you will pay on Ethereum.
+Matic Network intends to enable Dapps to pay Matic network fees in Dapp-coins by abstracting a token swap mechanism using a liquidity pool like Kyber. The user simply uses her Dapp-coins to pay fees, in the background the Dappcoin is swapped for Matic tokens. Hence the DApp developers who want to provide a seamless user experience will help maintain a Matic Network liquidity pool.
 
 ### Seeding the network in nascent stages:
 It’s practically impossible to seed the system when there are little to no txns in the network at the start, as we cannot distribute Eth to the highly decentralized Validator layer and the block producers. Whilst with Matic tokens, we have provisioned a large percentage of tokens to be distributed for seeding block producer, checkpointer stakes and subsequently offer block rewards. This provision ensures that the stakers receive rewards even if the network takes some time to assume network effects. It is akin to why Block Mining rewards were kept for Bitcoin, stakers and block producers can be incentivized in this way to keep the network secure. 
+
+If your concern is about Devs, one of the pillars of our strategy is to keep the entry barrier for devs very low. We have made sure that all the Ethereum dev tools work out of the box on Matic. In terms of the tokens needed for paying fees on testnet, it is no different for a developer developing on Ethereum. The dev gets free tokens for the testnet from a Matic faucet and gets going, just like it is on Ethereum. You need Matic tokens only when you want to deploy on Matic Mainnet, where the gas fee is much lower than Ethereum, around 1/100th of a txn fee you pay on Ethereum.
 
 ## What drives the use and demand for Matic tokens?
 
@@ -169,18 +166,9 @@ Some of the secondary reasons for token demand:
 
 * Matic Network intends to enable Dapps to pay Matic network fees in Dapp-coins by abstracting a token swap mechanism using a liquidity pool like Kyber. The user simply uses her Dapp-coins to pay fees, in the background the Dappcoin is swapped for Matic tokens. Hence the DApp developers who want to provide a seamless user experience will help maintain a Matic Network liquidity pool.
 
-* Plasma exits mandate a wait-time of 7 days which results in a sub-par user experience. To enable faster exits we are implementing a lending mechanism using Dharma Protocol wherein an underwriter/lender can receive the exit-token and disburse the exit amount with a small fee as interest. The lender then claims the tokens after one week by using exit-token. The user thus gets near immediate withdrawals while the lenders can earn interest for the service they provide.
-
 * Protocol Level burning of tokens
 We intend to burn a percentage of transaction fee in every block. This makes the tokens deflationary in nature and provide it a constant support in terms of its value at the protocol level
 
-* We intend to build Matic as a general purpose scaling solution for public blockchains. As in future there can be multiple base chains like Ethereum, its not favourable to build the Staker ecosystem on any other asset than Matic's own token.
-
-* Appcoin security model - i.e when the consensus participants have their stakes in Matic tokens, they have a strong economic disincentive to not act in the disinterest of the network. 
-
-* Though Matic believes in the long term success of Ethereum but if in future there’s some existential threat on Ethereum, having Matic tokens as a separate asset enables Matic token holders and stakers to simply move to other blockchains as basechain
-
-* Since the PoS ecosystem requires high value stakes to safeguard the network, Staking in Ethereum or any other base chain would make it financially not viable for us to setup the base blockchain infrastructure.
 
 ## Do you have prototype or demo to show to the public yet?
 

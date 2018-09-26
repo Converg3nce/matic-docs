@@ -57,3 +57,5 @@ nav:
   - Zapier:
       - Introduction: zapier/introduction.md
       - Getting started: zapier/getting-started.md
+  - ERC20:
+      - How to Integrate: erc20/getting-started.md
