@@ -32,6 +32,7 @@ TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
 ### Tokens for testing
 Please write to info@matic.network to request TEST tokens for development purposes. We will soon have a faucet in place for automatic distribution of tokens for testing.
 
+TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
 
 ## Step-by-step workflow details
 

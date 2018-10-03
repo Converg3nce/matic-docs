@@ -46,7 +46,7 @@ Matic Network intends to enable DEX's (eg 0x), Liquidity pools (eg. Kyber Networ
 
 Also, Matic Network's core focus on creating applications having an enhanced user experience will aid in the mass adoption of DApps. For the same end objective, we are intent on building ecosystem tools. Our products like Dagger (which is well known in the Ethereum community) and Opensigner (implementation of Walletconnect protocol and complete Node.js implementation) are a testimony to the same -
 
-[WalletConenct](https://github.com/WalletConenct/WalletConenct)
+[WalletConnect](https://github.com/WalletConnect/walletconnect-monorepo)
 
 [Dagger](https://github.com/maticnetwork/eth-dagger.js)
 
