@@ -126,9 +126,6 @@ async transferTokens(token, user, amount, options = {}) {
 
   ```javascript
   
-    const tokenAddress = '0xc60CEc8200513c4eAaF179783d30CdcE8DED8492'
-    const address = '0x77559f3e4fc3f22d0a680993ad3a8b117cf5abfc'
-    const TokenABI = require("./abi/erc20-token");
     const web3 = new Web3("https://testnet.matic.network");
     const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
     const balance = await erc20Contract.methods.balanceOf(address).call();
@@ -138,9 +135,7 @@ async transferTokens(token, user, amount, options = {}) {
   Balance on Kovan testnet:
   
   ```javascript
-    const tokenAddress = '0xC4375B7De8af5a38a93548eb8453a498222C4fF2'
-    const address = '0x77559f3e4fc3f22d0a680993ad3a8b117cf5abfc'
-    const TokenABI = require("./abi/erc20-token");
+  
     const web3 = new Web3("https://kovan.infura.io/matic");
     const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
     const balance = await erc20Contract.methods.balanceOf(address).call();
