@@ -1,5 +1,3 @@
-# Getting Started
-
 ## DApp Server - Integration with Matic Network - for ERC20 transfers
 
 This note details the steps to be followed by DApp developer(s) to integrate with the Matic test network and Kovan testnet, for scaling ERC20 transfers.
@@ -23,16 +21,20 @@ The flow for asset transfers on the Matic Network is as follows:
 
 TEST mainchain ERC20 token: 0x670568761764f53E6C10cd63b71024c31551c9EC
 
+<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/StandardToken.json" target="_blank">Download ABI</a>
+
 Plasma Root Contract: 0x24e01716a6ac34D5f2C4C082F553D86a557543a7
+
+<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/RootChain.json" target="_blank">Download ABI</a>
 
 **Matic testnet addresses**
 
 TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
 
+<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/ChildERC20.json" target="_blank">Download ABI</a>
+
 ### Tokens for testing
 Please write to info@matic.network to request TEST tokens for development purposes. We will soon have a faucet in place for automatic distribution of tokens for testing.
-
-TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
 
 ## Step-by-step workflow details
 
@@ -125,28 +127,26 @@ async transferTokens(token, user, amount, options = {}) {
 
   Balance on Matic testnet:
 
-  ```javascript
-  
-    const web3 = new Web3("https://testnet.matic.network");
-    const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
-    const balance = await erc20Contract.methods.balanceOf(address).call();
-    console.log("balance", balance);
+  ```javascript  
+  const web3 = new Web3("https://testnet.matic.network");
+  const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
+  const balance = await erc20Contract.methods.balanceOf(address).call();
+  console.log("balance", balance);
   ```
     
   Balance on Kovan testnet:
   
   ```javascript
-  
-    const web3 = new Web3("https://kovan.infura.io/matic");
-    const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
-    const balance = await erc20Contract.methods.balanceOf(address).call();
-    console.log("balance", balance);
+  const web3 = new Web3("https://kovan.infura.io/<insert custom key>");
+  const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
+  const balance = await erc20Contract.methods.balanceOf(address).call();
+  console.log("balance", balance);
   ```
 
 
 ### 4. Withdraw ERC20 tokens from Matic to Kovan
 
-**Description**: To withdrawing assets (ERC20) from Matic testnet to Kovan
+**Description**: To withdraw assets (ERC20) from Matic testnet to Kovan
 
 **Networks**: Matic Testnet & Kovan Testnet
 

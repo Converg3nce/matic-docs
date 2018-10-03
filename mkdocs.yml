@@ -49,6 +49,7 @@ extra:
 
 nav:
   - Matic Network:
+      - Home: index.md
       - FAQ: faq.md
       - Getting Started: getting-started.md      
   - Dagger:
