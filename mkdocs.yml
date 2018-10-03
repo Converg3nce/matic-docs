@@ -51,11 +51,10 @@ nav:
   - Matic:
       - Home: index.md
       - FAQ: faq.md
+      - Getting Started: getting-started.md
   - Dagger:
       - Home: dagger/index.md
       - Getting started: dagger/getting-started.md
   - Zapier:
       - Introduction: zapier/introduction.md
       - Getting started: zapier/getting-started.md
-  - ERC20:
-      - How to Integrate: erc20/getting-started.md
