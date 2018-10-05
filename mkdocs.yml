@@ -48,9 +48,10 @@ extra:
       link: "https://medium.com/matic-network"
 
 nav:
-  - Matic:
+  - Matic Network:
       - Home: index.md
       - FAQ: faq.md
+      - Getting Started: getting-started.md      
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:
