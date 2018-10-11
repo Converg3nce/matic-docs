@@ -162,12 +162,19 @@ There are two primary uses of the token:
 1. The token is used to pay for the transaction fees in the network
 2. The token is used for staking to participate in the Proof of Stake consensus mechanism for checkpointing layer and block production layer
 
-Some of the secondary reasons for token demand:
+**Some of the secondary reasons for token demand**:
 
 * Matic Network intends to enable Dapps to pay Matic network fees in Dapp-coins by abstracting a token swap mechanism using a liquidity pool like Kyber. The user simply uses her Dapp-coins to pay fees, in the background the Dappcoin is swapped for Matic tokens. Hence the DApp developers who want to provide a seamless user experience will help maintain a Matic Network liquidity pool.
 
-* Protocol Level burning of tokens
-We intend to burn a percentage of transaction fee in every block. This makes the tokens deflationary in nature and provide it a constant support in terms of its value at the protocol level
+* Plasma exits mandate a wait-time of 7 days which results in a sub-par user experience. To enable faster exits we are implementing a lending mechanism using Dharma Protocol wherein an underwriter/lender can receive the exit-token and disburse the exit amount with a small fee as interest. The lender then claims the tokens after one week by using exit-token. The user thus gets near immediate withdrawals while the lenders can earn interest for the service they provide.
+
+**Protocol Level burning of tokens**
+
+We intend to burn a percentage of transaction fee in every block. This makes the tokens deflationary in nature and provide it a constant support in terms of its value at the protocol level.
+
+**Low entry barrier (and hence higher chances of quick adoption)**
+
+We will heavily lean on DApps to bring in end-user adoption. One of the key features is that we maintain an architecture which is fully compatible to Ethereum development ecosystem i.e all smart contracts, wallets, IDEs, DevOps tools etc are directly compatible with Matic Network. Any Ethereum Dapp can be ported to Matic without almost no significant changes. So the entry barriers for existing Ethereum developers to transition to  Matic network are negligible which can jumpstart a viral Dapp adoption.This has the potential to bring in a lot of organic demand due to Network effects that build around the Matic Network.
 
 
 ## Do you have prototype or demo to show to the public yet?
