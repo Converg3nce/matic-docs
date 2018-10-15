@@ -1,303 +1,377 @@
-## DApp Server - Integration with Matic Network - for ERC20 transfers
+# Matic SDK
 
-This note details the steps to be followed by DApp developer(s) to integrate with the Matic test network and Kovan testnet, for scaling ERC20 transfers.
+[![Build Status](https://travis-ci.org/maticnetwork/matic.js.svg?branch=master)](https://travis-ci.org/maticnetwork/matic.js)
+
+This note contains the `maticjs` client lib. `maticjs` makes it easy for developers, who may not be deeply familiar with smart contract development, to interact with the various components of Matic Network.
+
+This library will help developers to move assets from Ethereum chain to Matic chain, and withdraw from Matic to Ethereum using fraud proofs.
+
+We will be improving this library to make all features available like Plasma Faster Exit, challenge exit, finalize exit and more.
+
+### Installation
+
+```bash
+$ npm install --save maticjs # or yarn add maticjs
+```
+
+### Getting started
+
+```js
+// Import Matic sdk
+import Matic from 'maticjs'
+
+// Create sdk instance
+const matic = new Matic({
+
+  // Set Matic provider - string or provider instance
+  // Example: 'https://testnet.matic.network' OR new Web3.providers.HttpProvider('http://localhost:8545')
+  maticProvider: <web3-provider>,
+
+  // Set Mainchain provider - string or provider instance
+  // Example: 'https://kovan.infura.io' OR new Web3.providers.HttpProvider('http://localhost:8545')
+  parentProvider: <web3-provider>,
+
+  // Set rootchain contract. See below for more information
+  rootChainAddress: <root-contract-address>,
+
+  // Syncer API URL
+  // Fetches tx/receipt proof data instead of fetching whole block on client side
+  syncerUrl: 'https://eth-syncer.api.matic.network/api/v1', // (optional)
+
+  // Watcher API URL
+  // Fetches headerBlock info from mainchain & finds appropriate headerBlock for given blockNumber
+  watcherUrl: 'https://eth-watcher.api.matic.network/api/v1', // (optional)
+})
+
+// Set wallet
+// Warning: Not-safe
+// matic.wallet = <private-key> // Use metamask provider or use WalletConnect provider instead.
+
+// Approve token for deposit
+await matic.approveTokensForDeposit(
+  token,  // Token address,
+  amount,  // Token amount for approval (in wei)
+  options // transaction fields
+)
+
+// Deposit token into Matic chain. Remember to call `approveTokens` before
+await matic.depositTokens(
+  token,  // Token address
+  user,   // User address (in most cases, this will be sender's address),
+  amount,  // Token amount for deposit (in wei)
+  options // transaction fields
+)
+
+// Transfer token on Matic
+await matic.transferTokens(
+  token,  // Token address
+  user,   // Recipient address
+  amount,  // Token amount for deposit (in wei)
+  options // transaction fields
+)
+
+// Initiate withdrawal of funds from Matic and retrieve the Transaction id
+await matic.startWithdraw(
+  token, // Token address
+  amount, // Token amount for withdraw (in wei)
+  options // transaction fields
+)
+
+// Withdraw funds from the Matic chain using the Transaction id generated from the 'startWithdraw' method
+// after header has been submitted to mainchain
+await matic.withdraw(
+  txId, // Transaction id generated from the 'startWithdraw' method
+  options // transaction fields
+)
+```
+
+### How it works?
 
 The flow for asset transfers on the Matic Network is as follows:
 
-  1. User deposits crypto assets in Matic contract on mainchain (currently implemented with Ethereum blockchain only)
+- User deposits crypto assets in Matic contract on mainchain
+- Once deposited tokens get confirmed on the main chain, the corresponding tokens will get reflected on the Matic chain.
+- The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second). That way, the transfer will be done almost instantly.
+- Once a user is ready, they can withdraw remaining tokens from the mainchain by establishing proof of remaining tokens on Root contract (contract deployed on Ethereum chain)
 
-  2. Once deposited tokens get confirmed on the main chain, the corresponding tokens will get reflected on the Matic chain.
+### Contracts and addresses
 
-  3. The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second or less). That way, the transfer will be done almost instantly.
+**Matic Testnet**
 
-  4. Once a user is ready, they can withdraw remaining tokens from the main chain by establishing proof of remaining tokens on Root contract (contract deployed on Ethereum chain)
-
-
-## Important Addresses and Links
-
-**Matic Testnet link**: https://testnet.matic.network
+* RPC endpoint host: https://testnet.matic.network
+* TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
 
 **Kovan testnet addresses**
 
-TEST mainchain ERC20 token: 0x670568761764f53E6C10cd63b71024c31551c9EC
+* TEST mainchain ERC20 token: 0x670568761764f53E6C10cd63b71024c31551c9EC
+* Root Contract: 0x24e01716a6ac34D5f2C4C082F553D86a557543a7
 
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/StandardToken.json" target="_blank">Download ABI</a>
+### Faucet
 
-Plasma Root Contract: 0x24e01716a6ac34D5f2C4C082F553D86a557543a7
-
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/RootChain.json" target="_blank">Download ABI</a>
-
-**Matic testnet addresses**
-
-TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
-
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/ChildERC20.json" target="_blank">Download ABI</a>
-
-### Tokens for testing
 Please write to info@matic.network to request TEST tokens for development purposes. We will soon have a faucet in place for automatic distribution of tokens for testing.
 
-## Step-by-step workflow details
+### API
 
-### 1. Deposit ERC20 token from Kovan to Matic
+- <a href="#initialize"><code>new Matic()</code></a>
+- <a href="#approveTokensForDeposit"><code>matic.<b>approveTokensForDeposit()</b></code></a>
+- <a href="#depositTokens"><code>matic.<b>depositTokens()</b></code></a>
+- <a href="#depositEthers"><code>matic.<b>depositEthers()</b></code></a>
+- <a href="#transferTokens"><code>matic.<b>transferTokens()</b></code></a>
+- <a href="#startWithdraw"><code>matic.<b>startWithdraw()</b></code></a>
+- <a href="#getHeaderObject"><code>matic.<b>getHeaderObject()</b></code></a>
+- <a href="#withdraw"><code>matic.<b>withdraw()</b></code></a>
+- <a href="#getTx"><code>matic.<b>getTx()</b></code></a>
+- <a href="#getReceipt"><code>matic.<b>getReceipt()</b></code></a>
 
-**Description**: To deposit assets (ERC20) from Kovan testnet to Matic
+---
 
-**Network**: Kovan Testnet
+<a name="initialize"></a>
 
-    Contract: ERC20 contract
-    e.g. use TEST mainchain ERC20 token for reference
-    
-    Function: approve(address _rootContract, uint256 _amount)
+#### new Matic(options)
 
-        _rootContract - address of the Plasma Root contract
-        _amount - amount of tokens to be deposited
+Creates Matic SDK instance with given options. It returns a MaticSDK object.
 
-    Function: deposit(address _token, address _user, uint256 _amount)
+```js
+import Matic from 'maticjs'
 
-        _token - address of the mainchain ERC20 token
-        _user - address of the user
-        _amount - amount of tokens to be deposited
-
-  Sample code:
-
-```javascript
-
-async depositToken(a) {
-  
-  const rootChainAddress = '0x24e01716a6ac34d5f2c4c082f553d86a557543a7'
-  const web3 = this.selectedNetwork.web3
-  
-  var rootChainContract = new web3.eth.Contract(
-    RootContractAbi,
-    rootChainAddress.toLowerCase()
-  ) 
-
-  var tokenContract = new web3.eth.Contract(TokenABI, a.address.toLowerCase())
-
-  await tokenContract.methods
-    .approve(rootChainAddress, web3.utils.toWei((2).toString()))
-    .send({ from: this.accounts[0].address.toLowerCase() })
-
-  var allowance = await tokenContract.methods
-    .allowance(
-      this.accounts[0].address.toLowerCase(),
-      rootChainAddress.toLowerCase()
-    )
-    .call()
-
-  await rootChainContract.methods
-    .deposit(
-      a.address.toLowerCase(),
-      this.accounts[0].address.toLowerCase(),
-      allowance
-    )
-    .send({ from: this.accounts[0].address.toLowerCase() })
-}
+const matic = new Matic(options)
 ```
 
-### 2.  Transfer tokens on the sidechain
+- `options` is simple Javascript `object` which can have following fields:
+    - `maticProvider` can be `string` or `Web3.providers` instance. This provider must connect to Matic chain. Value can be anyone of the following:
+         * `'https://testnet.matic.network'`
+         * `new Web3.providers.HttpProvider('http://localhost:8545')`
+         * [WalletConnect Provider instance](https://github.com/WalletConnect/walletconnect-monorepo#for-web3-provider-web3js)
+    - `parentProvider` can be `string` or `Web3.providers` instance. This provider must connect to Ethereum chain (testnet or mainchain). Value can be anyone of the following:
+         * `'https://kovan.infura.io'`
+         * `new Web3.providers.HttpProvider('http://localhost:8545')`
+         * [WalletConnect Provider instance](https://github.com/WalletConnect/walletconnect-monorepo#for-web3-provider-web3js)
+    - `rootChainAddress` must be valid Ethereum contract address.
+    - `syncerUrl` must be valid API host. MaticSDK uses this value to fetch receipt/tx proofs instead of getting whole block to client side.
+    - `watcherUrl` must be valid API host. MaticSDK uses this value to fetch headerBlock info from mainchain and to find appropriate headerBlock for given blockNumber.
 
-**Description**: To transfer tokens on the Matic sidechain
+---
 
-**Network**: Matic Testnet
+<a name="approveTokensForDeposit"></a>
 
-    Contract: ERC20 contract
-    e.g. use TEST mainchain ERC20 token for reference
-    
-    Function: transfer(address _to, uint256_amount)
+#### matic.approveTokensForDeposit(token, amount, options)
 
-        _to - Address of the user to which the tokens are to be transferred
-        _amount - Amount of tokens to be transferred
+Approves given `amount` of `token` to `rootChainContract`.
 
-Sample code:
+- `token` must be valid ERC20 token address
+- `amount` must be token amount in wei (string, not in Number)
+- `options` (optional) must be valid javascript object containing `from`, `gasPrice`, `gasLimit`, `nonce`, `value`, `onTransactionHash`, `onReceipt` or `onError`
+    * `from` must be valid account address
+    * `gasPrice` same as Ethereum `sendTransaction`
+    * `gasLimit` same as Ethereum `sendTransaction`
+    * `nonce` same as Ethereum `sendTransaction`
+    * `nonce` same as Ethereum `sendTransaction`
+    * `value` contains ETH value. Same as Ethereum `sendTransaction`.
+    * `onTransactionHash` must be `function`. This function will be called when transaction will be broadcasted.
+    * `onReceipt` must be `function`. This function will be called when transaction will be included in block (when transaction gets confirmed)
+    * `onError` must be `function`. This function will be called when sending transaction fails.
 
-```javascript
-async transferTokens(token, user, amount, options = {}) {
-  const _tokenContract = this._getChildTokenContract(token)
-  return _tokenContract.methods.transfer(user, amount).send({
-    from: this.wallet.address,
-  ...options
-  })
-}
+This returns `Promise` object, which will be fulfilled when transaction gets confirmed (when receipt is generated).
+
+Example:
+
+```js
+matic.approveTokensForDeposit('0x718Ca123...', '1000000000000000000', {
+  from: '0xABc578455...'
+}).on('onTransactionHash', (txHash) => {
+  console.log('New transaction', txHash)
+})
 ```
 
-### 3. Display account balances for user
+---
 
-**Description**: Query ERC20 token balances for user
+<a name="depositTokens"></a>
 
-  Balance on Matic testnet:
+#### matic.depositTokens(token, user, amount, options)
 
-  ```javascript  
-  const web3 = new Web3("https://testnet.matic.network");
-  const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
-  const balance = await erc20Contract.methods.balanceOf(address).call();
-  console.log("balance", balance);
-  ```
-    
-  Balance on Kovan testnet:
-  
-  ```javascript
-  const web3 = new Web3("https://kovan.infura.io/<insert custom key>");
-  const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
-  const balance = await erc20Contract.methods.balanceOf(address).call();
-  console.log("balance", balance);
-  ```
+Deposit given `amount` of `token` with user `user`.
 
+- `token` must be valid ERC20 token address
+- `user` must be valid account address
+- `amount` must be token amount in wei (string, not in Number)
+- `options` see [more infomation here](#approveTokensForDeposit)
 
-### 4. Withdraw ERC20 tokens from Matic to Kovan
+This returns `Promise` object, which will be fulfilled when transaction gets confirmed (when receipt is generated).
 
-**Description**: To withdraw assets (ERC20) from Matic testnet to Kovan
+Example:
 
-**Networks**: Matic Testnet & Kovan Testnet
+```js
+const user = <your-address> or <any-account-address>
 
-**Matic Testnet**: 
-  
-    Contract: Childchain ERC20 token contract
-    e.g. use TEST childchain ERC20 token
-  
-    Function: withdraw(uint256 _amount)
-
-        _amount - Amount of tokens to be withdrawn
-
-Submit withdraw request with this code and get the transaction id:
-
-```javascript
-async withdrawToken() {
-  this.isLoading = true
-  const web3 = this.selectedNetwork.web3
-  
-  var childERC20Contract = new web3.eth.Contract(
-    ChildTokenABI,
-    this.withdrawTx.address.toLowerCase()
-  )
-
-  var withdrawData = childERC20Contract.methods.withdraw(
-    web3.utils.toWei(this.amount.toString())
-  )
-  
-  sendContractTransaction(
-    this.selectedNetwork.web3,
-    withdrawData,
-    {
-      from: this.accounts[0].address.toLowerCase()
-    },
-    {
-      txShowSuccess: hash => {
-        // Add transaction hash to firebase.
-        fire.userPendingWithdrawalsRef(hash.toLowerCase()).set({
-          transactionId: hash,        
-          updatedAt: fire.FieldValue.serverTimestamp()
-        })
-        .then(() => {
-          // reset form
-          this.isWithdrawDone= !this.isWithdrawDone
-          this.resetForm()
-          // this.$router.push('/pending')
-        })
-        .catch((error) => {
-          console.error("Error adding document: ", error);
-        });
-      }
-    }
-  )
-}
+matic.depositToken('0x718Ca123...', user, '1000000000000000000', {
+  from: '0xABc578455...'
+})
 ```
 
-**Kovan Testnet**: 
+---
 
-    Contract: Plasma root contract
+<a name="depositEthers"></a>
 
-    Function: withdraw(uint256 _headerNumber, bytes _headerProof, uint256 _blockNumber, uint256 _blockTime, bytes32 _txRoot,bytes32 _receiptRoot, bytes _path,bytes _txBytes, bytes _txProof, bytes _receiptBytes, bytes _receiptProof)
+#### matic.depositEthers(user, options)
 
-        _headerNumber - Header block number
-        _headerProof - Header block proof
-        _blockNumber - Plasma block number
-        _blockTime - Timestamp of Plasma block creation
-        _txRoot - Transaction root
-        _receiptRoot - Receipt root
-        _path - Key for the Trie
-        _txBytes - Transaction Bytes
-        _txProof - Transction Proof
-        _receiptBytes - Receipt Bytes
-        _receiptProof - Receipt Proof
+Deposit `options.value` ETH to user `user`.
 
-Using the transaction id from previous step, call the following code:
+- `user` must be valid account address
+- `options` see [more infomation here](#approveTokensForDeposit). 
+    * `value` = Amount of Ethers (mandatory *)
 
-```javascript
-async submitProof(txId) {
-  var transactionHash = txId
-  const web3Child = new Web3('https://testnet.matic.network')
-  const rootChainAddress = '0x24e01716a6ac34d5f2c4c082f553d86a557543a7'
-  const web3 = new Web3(this.selectedNetwork.web3)
+This returns `Promise` object, which will be fulfilled when transaction gets confirmed (when receipt is generated).
 
-  var rootChainContract = new web3.eth.Contract(
-    RootContractAbi,
-    rootChainAddress.toLowerCase()
-  )
+Example:
 
-  const withdrawTx = await web3Child.eth.getTransaction(transactionHash)
-  
-  const withdrawReceipt = await web3Child.eth.getTransactionReceipt(
-    transactionHash
-  )
-  
-  const withdrawBlock = await web3Child.eth.getBlock(
-    withdrawReceipt.blockNumber,
-    true
-  )
+```js
+const user = <your-address> or <any-account-address>
 
-  var withdrawObj = {
-    txId: txId,
-    block: withdrawBlock,
-    tx: withdrawTx,
-    receipt: withdrawReceipt
-  }
-
-  const txProof = await getTxProof(withdrawObj.tx, withdrawObj.block)
-
-  const receiptProof = await getReceiptProof(
-    withdrawObj.receipt,
-    withdrawObj.block,
-    web3Child
-  )
-  
-  const currentHeaderBlock = await rootChainContract.methods
-    .currentHeaderBlock()
-    .call()
-  
-  var header = await rootChainContract.methods
-    .getHeaderBlock(parseInt(currentHeaderBlock) - 1)
-    .call()
-
-  const headerNumber = +currentHeaderBlock - 1
-  const start = header.start
-  const end = header.end
-  const headers = await getHeaders(start, end, web3Child)
-  const tree = new MerkleTree(headers)
-  const headerProof = await tree.getProof(getBlockHeader(withdrawObj.block))
-  
-  const startWithdrawReceipt = await rootChainContract.methods
-    .withdraw(
-      headerNumber.toString(), // header block
-      utils.bufferToHex(Buffer.concat(headerProof)), // header proof
-      withdrawObj.block.number.toString(), // block number
-      withdrawObj.block.timestamp.toString(), // block timestamp
-      utils.bufferToHex(withdrawObj.block.transactionsRoot.toString()), // tx root
-      utils.bufferToHex(withdrawObj.block.receiptsRoot.toString()), // tx root
-      utils.bufferToHex(rlp.encode(receiptProof.path)), // key for trie (both tx and receipt)
-      utils.bufferToHex(getTxBytes(withdrawObj.tx)), // tx bytes
-      utils.bufferToHex(rlp.encode(txProof.parentNodes)), // tx proof nodes
-      utils.bufferToHex(getReceiptBytes(withdrawObj.receipt)), // receipt bytes
-      utils.bufferToHex(rlp.encode(receiptProof.parentNodes)) // reciept proof nodes
-    )
-    .send({
-      from: this.accounts[0].address.toLowerCase()
-    })
-  }
+matic.depositEthers('0x718Ca123...', {
+  from: '0xABc578455...',
+  value: '1000000000000000000'
+})
 ```
 
+---
+
+<a name="transferTokens"></a>
+
+#### matic.transferTokens(token, user, amount, options)
+
+Transfer given `amount` of `token` to `user`.
+
+- `token` must be valid ERC20 token address
+- `user` must be valid account address
+- `amount` must be token amount in wei (string, not in Number)
+- `options` see [more infomation here](#approveTokensForDeposit)
+
+This returns `Promise` object, which will be fulfilled when transaction gets confirmed (when receipt is generated).
+
+Example:
+
+```js
+const user = <your-address> or <any-account-address>
+
+matic.transferTokens('0x718Ca123...', user, '1000000000000000000', {
+  from: '0xABc578455...'
+})
+```
+
+---
+
+<a name="startWithdraw"></a>
+
+#### matic.startWithdraw(token, amount, options)
+
+Initiate withdraw process with given `amount` for `token`.
+
+- `token` must be valid ERC20 token address
+- `amount` must be token amount in wei (string, not in Number)
+- `options` see [more infomation here](#approveTokensForDeposit)
+
+This returns `Promise` object, which will be fulfilled when transaction gets confirmed (when receipt is generated).
+
+Example:
+
+```js
+matic.startWithdraw('0x718Ca123...', '1000000000000000000', {
+  from: '0xABc578455...'
+}).on('onTransactionHash', txHash => {
+   console.log("Started withdraw process with txId", txHash)
+})
+```
+
+---
+
+<a name="getHeaderObject"></a>
+
+#### matic.getHeaderObject(blockNumber)
+
+Fetch header/checkpoint corresponding to `blockNumber`
+
+- `blockNumber` must be valid Matic's sidechain block number
+
+This returns `Promise` object, which will be fulfilled when header/checkpoint is found corresponding to `blockNumber`
+
+Example:
+
+```js
+matic.getHeaderObject(673874).then(header => {
+   // header.start
+   // header.end
+   // header.proposer
+   // header.number
+})
+```
+
+---
+
+<a name="withdraw"></a>
+
+#### matic.withdraw(txId, options)
+
+Withdraw tokens on mainchain using `txId` from `startWithdraw` method after header has been submitted to mainchain.
+
+- `txId` must be valid tx hash
+- `options` see [more infomation here](#approveTokensForDeposit)
+
+This returns `Promise` object, which will be fulfilled when transaction gets confirmed (when receipt is generated).
+
+Example:
+
+```js
+matic.withdraw('0xabcd...789', {
+  from: '0xABc578455...'
+})
+```
+
+---
+
+<a name="getTx"></a>
+
+#### matic.getTx(txId)
+
+Get transaction object using `txId` from Matic chain.
+
+- `txId` must be valid tx id
+
+This returns `Promise` object.
+
+Example:
+
+```js
+matic.getTx("0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b").then((txObject) => {
+   console.log(txObject)
+})
+```
+
+---
+
+<a name="getReceipt"></a>
+
+#### matic.getReceipt(txId)
+
+Get receipt object using `txId` from Matic chain.
+
+- `txId` must be valid tx id
+
+This returns `Promise` object.
+
+Example:
+
+```js
+matic.getReceipt("0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b").then((obj) => {
+   console.log(obj)
+})
+```
+
+### Support
+
+Please write to info@matic.network for integration support. If you have any queries, feedback or feature requests, feel free to reach out to us on telegram: [t.me/maticnetwork](https://t.me/maticnetwork)
+
+### License
+
+MIT
 
 
-
-
-  
