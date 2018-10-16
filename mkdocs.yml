@@ -51,7 +51,8 @@ nav:
   - Matic Network:
       - Home: index.md
       - FAQ: faq.md
-      - Getting Started: getting-started.md      
+      - Getting Started: getting-started.md
+      - Matic Internals: matic-internals.md    
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:
