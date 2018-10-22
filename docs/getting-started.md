@@ -1,14 +1,53 @@
-# Matic SDK
+# Getting Started
 
-[![Build Status](https://travis-ci.org/maticnetwork/matic.js.svg?branch=master)](https://travis-ci.org/maticnetwork/matic.js)
+This page will help you understand the basics of how Matic Network works. 
 
-This note contains the `maticjs` client lib. `maticjs` makes it easy for developers, who may not be deeply familiar with smart contract development, to interact with the various components of Matic Network.
+It is recommended that developers new to Matic, start with the Matic.js library. `maticjs` makes it easy for developers, who may not be deeply familiar with smart contract development and otherwise, to quickly interact with the various components of Matic Network.
 
-This library will help developers to move assets from Ethereum chain to Matic chain, and withdraw from Matic to Ethereum using fraud proofs.
+This page will help developers to move assets from Ethereum chain to Matic chain, transfer assets on Matic and withdraw from Matic to Ethereum using fraud proofs.
 
-We will be improving this library to make all features available like Plasma Faster Exit, challenge exit, finalize exit and more.
+We will be improving this library on an ongoing basis to make all features available like Plasma Faster Exit, Challenge exit, Finalize exit and more.
 
-### Installation
+### Sidechain basics
+The basic workflow of how we can scale transactions on a sidechain is that we can take
+
+* assets from one chain and transfer them to another (called the “sidechain")
+* by locking the assets up on the primary chain (or “root chain”) and
+* “creating” them again on the sidechain and
+* transfer assets cheaply on the sidechain.
+* When you want to go back, you simply need to “destroy” the asset on the sidechain and
+* unlock them on the root chain.
+
+### How Matic works?
+
+The flow for asset transfers on the Matic Network is as follows:
+
+![](images/Matic-Workflow.jpg?raw=true)
+
+- User deposits crypto assets in Matic contract on mainchain
+- Once deposited tokens get confirmed on the main chain, the corresponding tokens will get reflected on the Matic chain.
+- The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second). That way, the transfer will be done almost instantly.
+- Once a user is ready, they can withdraw remaining tokens from the mainchain by establishing proof of remaining tokens on Root contract (contract deployed on Ethereum chain) within 7 days. 
+- User can also get a fast exit via 0x or Dharma (coming soon!)
+
+
+### Important contracts and addresses
+
+**Matic Testnet**
+
+* RPC endpoint host: https://testnet.matic.network
+* TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
+
+**Kovan testnet addresses**
+
+* TEST mainchain ERC20 token: 0x670568761764f53E6C10cd63b71024c31551c9EC
+* Root Contract: 0x24e01716a6ac34D5f2C4C082F553D86a557543a7
+
+### Faucet
+
+Please write to info@matic.network to request TEST tokens for development purposes. We will soon have a faucet in place for automated distribution of tokens for testing.
+
+### Install Matic.js
 
 ```bash
 $ npm install --save maticjs # or yarn add maticjs
@@ -85,30 +124,9 @@ await matic.withdraw(
 )
 ```
 
-### How it works?
+### Code Samples
 
-The flow for asset transfers on the Matic Network is as follows:
-
-- User deposits crypto assets in Matic contract on mainchain
-- Once deposited tokens get confirmed on the main chain, the corresponding tokens will get reflected on the Matic chain.
-- The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second). That way, the transfer will be done almost instantly.
-- Once a user is ready, they can withdraw remaining tokens from the mainchain by establishing proof of remaining tokens on Root contract (contract deployed on Ethereum chain)
-
-### Contracts and addresses
-
-**Matic Testnet**
-
-* RPC endpoint host: https://testnet.matic.network
-* TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
-
-**Kovan testnet addresses**
-
-* TEST mainchain ERC20 token: 0x670568761764f53E6C10cd63b71024c31551c9EC
-* Root Contract: 0x24e01716a6ac34D5f2C4C082F553D86a557543a7
-
-### Faucet
-
-Please write to info@matic.network to request TEST tokens for development purposes. We will soon have a faucet in place for automatic distribution of tokens for testing.
+// To be updated soon
 
 ### API
 
