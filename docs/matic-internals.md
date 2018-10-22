@@ -1,27 +1,28 @@
-## DApp Server - Integration with Matic Network - for ERC20 transfers
+## Matic Internals
 
-This note details the steps to be followed by DApp developer(s) to integrate with the Matic test network and Kovan testnet, for scaling ERC20 transfers.
+For most developers, it is advisable and recommended to use the Matic.js library to interact with Matic.
 
+However, this page helps developers, who have a good understanding of smart contracts in Ethereum, to bypass the Matic.js library and interact directly with the Matic smart contracts. This might help developers to understand the inner workings of Matic Network, as well as to customise their interaction with Matic to some extent.
 
 ## Important Addresses and Links
 
-**Matic Testnet link**: https://testnet.matic.network
+**Matic RPC endpoint host**: https://testnet.matic.network
 
 **Kovan testnet addresses**
 
 TEST mainchain ERC20 token: 0x670568761764f53E6C10cd63b71024c31551c9EC
 
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/StandardToken.json" target="_blank">Download ABI</a>
+<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json" target="_blank">Download ABI</a>
 
 Plasma Root Contract: 0x24e01716a6ac34D5f2C4C082F553D86a557543a7
 
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/RootChain.json" target="_blank">Download ABI</a>
+<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json" target="_blank">Download ABI</a>
 
 **Matic testnet addresses**
 
 TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
 
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/feat_deposit_withdraw/src/artifacts/ChildERC20.json" target="_blank">Download ABI</a>
+<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/ChildERC20.json" target="_blank">Download ABI</a>
 
 ### Tokens for testing
 Please write to info@matic.network to request TEST tokens for development purposes. We will soon have a faucet in place for automatic distribution of tokens for testing.
@@ -286,7 +287,7 @@ async submitProof(txId) {
   }
 ```
 
-
+For detailed help on the functions used in the above snippet, you can refer [this link](https://github.com/maticnetwork/matic.js/blob/master/src/helpers/proofs.js).
 
 
 
