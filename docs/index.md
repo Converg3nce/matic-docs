@@ -4,4 +4,4 @@ The latest developer and end-user resources will be updated here on a continuous
 
 Please refer [FAQs](/faq) for a list of Frequently Asked Questions on Matic Network.
 
-For a detailed note on the contracts powering the Matic Network and directly interacting with these contracts, you can refer [Matic Internals](/matic-internals).
+For a detailed note on the contracts powering the Matic Network and directly interacting with these contracts, you can refer [Matic Internals](/matic-sdk).
