@@ -1,5 +1,3 @@
-## Matic Internals
-
 For most developers, it is advisable and recommended to use the Matic.js library to interact with Matic.
 
 However, this page helps developers, who have a good understanding of smart contracts in Ethereum, to bypass the Matic.js library and interact directly with the Matic smart contracts. This might help developers to understand the inner workings of Matic Network, as well as to customise their interaction with Matic to some extent.
@@ -25,6 +23,7 @@ TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
 <a href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/ChildERC20.json" target="_blank">Download ABI</a>
 
 ### Tokens for testing
+
 Please write to info@matic.network to request TEST tokens for development purposes. We will soon have a faucet in place for automatic distribution of tokens for testing.
 
 ## Step-by-step workflow details
@@ -37,7 +36,7 @@ Please write to info@matic.network to request TEST tokens for development purpos
 
     Contract: ERC20 contract
     e.g. use TEST mainchain ERC20 token for reference
-    
+
     Function: approve(address _rootContract, uint256 _amount)
 
         _rootContract - address of the Plasma Root contract
@@ -49,19 +48,19 @@ Please write to info@matic.network to request TEST tokens for development purpos
         _user - address of the user
         _amount - amount of tokens to be deposited
 
-  Sample code:
+Sample code:
 
 ```javascript
 
 async depositToken(a) {
-  
+
   const rootChainAddress = '0x24e01716a6ac34d5f2c4c082f553d86a557543a7'
   const web3 = this.selectedNetwork.web3
-  
+
   var rootChainContract = new web3.eth.Contract(
     RootContractAbi,
     rootChainAddress.toLowerCase()
-  ) 
+  )
 
   var tokenContract = new web3.eth.Contract(TokenABI, a.address.toLowerCase())
 
@@ -86,7 +85,7 @@ async depositToken(a) {
 }
 ```
 
-### 2.  Transfer tokens on the sidechain
+### 2. Transfer tokens on the sidechain
 
 **Description**: To transfer tokens on the Matic sidechain
 
@@ -94,7 +93,7 @@ async depositToken(a) {
 
     Contract: ERC20 contract
     e.g. use TEST mainchain ERC20 token for reference
-    
+
     Function: transfer(address _to, uint256_amount)
 
         _to - Address of the user to which the tokens are to be transferred
@@ -116,24 +115,23 @@ async transferTokens(token, user, amount, options = {}) {
 
 **Description**: Query ERC20 token balances for user
 
-  Balance on Matic testnet:
+Balance on Matic testnet:
 
-  ```javascript  
-  const web3 = new Web3("https://testnet.matic.network");
-  const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
-  const balance = await erc20Contract.methods.balanceOf(address).call();
-  console.log("balance", balance);
-  ```
-    
-  Balance on Kovan testnet:
-  
-  ```javascript
-  const web3 = new Web3("https://kovan.infura.io/<insert custom key>");
-  const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress);
-  const balance = await erc20Contract.methods.balanceOf(address).call();
-  console.log("balance", balance);
-  ```
+```javascript
+const web3 = new Web3("https://testnet.matic.network")
+const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
+const balance = await erc20Contract.methods.balanceOf(address).call()
+console.log("balance", balance)
+```
 
+Balance on Kovan testnet:
+
+```javascript
+const web3 = new Web3("https://kovan.infura.io/<insert custom key>")
+const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
+const balance = await erc20Contract.methods.balanceOf(address).call()
+console.log("balance", balance)
+```
 
 ### 4. Withdraw ERC20 tokens from Matic to Kovan
 
@@ -141,11 +139,11 @@ async transferTokens(token, user, amount, options = {}) {
 
 **Networks**: Matic Testnet & Kovan Testnet
 
-**Matic Testnet**: 
-  
+**Matic Testnet**:
+
     Contract: Childchain ERC20 token contract
     e.g. use TEST childchain ERC20 token
-  
+
     Function: withdraw(uint256 _amount)
 
         _amount - Amount of tokens to be withdrawn
@@ -156,7 +154,7 @@ Submit withdraw request with this code and get the transaction id:
 async withdrawToken() {
   this.isLoading = true
   const web3 = this.selectedNetwork.web3
-  
+
   var childERC20Contract = new web3.eth.Contract(
     ChildTokenABI,
     this.withdrawTx.address.toLowerCase()
@@ -165,7 +163,7 @@ async withdrawToken() {
   var withdrawData = childERC20Contract.methods.withdraw(
     web3.utils.toWei(this.amount.toString())
   )
-  
+
   sendContractTransaction(
     this.selectedNetwork.web3,
     withdrawData,
@@ -176,7 +174,7 @@ async withdrawToken() {
       txShowSuccess: hash => {
         // Add transaction hash to firebase.
         fire.userPendingWithdrawalsRef(hash.toLowerCase()).set({
-          transactionId: hash,        
+          transactionId: hash,
           updatedAt: fire.FieldValue.serverTimestamp()
         })
         .then(() => {
@@ -194,7 +192,7 @@ async withdrawToken() {
 }
 ```
 
-**Kovan Testnet**: 
+**Kovan Testnet**:
 
     Contract: Plasma root contract
 
@@ -227,11 +225,11 @@ async submitProof(txId) {
   )
 
   const withdrawTx = await web3Child.eth.getTransaction(transactionHash)
-  
+
   const withdrawReceipt = await web3Child.eth.getTransactionReceipt(
     transactionHash
   )
-  
+
   const withdrawBlock = await web3Child.eth.getBlock(
     withdrawReceipt.blockNumber,
     true
@@ -251,11 +249,11 @@ async submitProof(txId) {
     withdrawObj.block,
     web3Child
   )
-  
+
   const currentHeaderBlock = await rootChainContract.methods
     .currentHeaderBlock()
     .call()
-  
+
   var header = await rootChainContract.methods
     .getHeaderBlock(parseInt(currentHeaderBlock) - 1)
     .call()
@@ -266,7 +264,7 @@ async submitProof(txId) {
   const headers = await getHeaders(start, end, web3Child)
   const tree = new MerkleTree(headers)
   const headerProof = await tree.getProof(getBlockHeader(withdrawObj.block))
-  
+
   const startWithdrawReceipt = await rootChainContract.methods
     .withdraw(
       headerNumber.toString(), // header block
@@ -288,7 +286,3 @@ async submitProof(txId) {
 ```
 
 For detailed help on the functions used in the above snippet, you can refer [this link](https://github.com/maticnetwork/matic.js/blob/master/src/helpers/proofs.js).
-
-
-
-  
