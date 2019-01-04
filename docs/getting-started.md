@@ -126,7 +126,7 @@ await matic.withdraw(
 
 ### Code Samples
 
-// To be updated soon
+Please refer https://github.com/maticnetwork/matic.js/tree/master/examples for code samples.
 
 ### API
 
