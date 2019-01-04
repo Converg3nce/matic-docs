@@ -52,7 +52,7 @@ nav:
       - Home: index.md
       - Getting Started: getting-started.md
       - FAQ: faq.md
-      - Matic SDK: matic-sdk.md
+      - Calling Matic contracts: matic-call-contracts.md
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:
