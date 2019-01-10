@@ -58,3 +58,8 @@ nav:
   - Zapier:
       - Introduction: zapier/introduction.md
       - Getting started: zapier/getting-started.md
+  - For newbies:
+      - Home: newbies/introduction.md
+      - Create accounts on Metamask: newbies/create-accounts-metamask.md
+      - Configure Matic testnet on Metamask: newbies/conf-testnet-metamask.md
+      - Configure custom tokens on Metamask: newbies/conf-custom-tokens-metamask.md
