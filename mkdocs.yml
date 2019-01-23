@@ -53,6 +53,7 @@ nav:
       - Getting Started: getting-started.md
       - FAQ: faq.md
       - Calling Matic contracts: matic-call-contracts.md
+      - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:
