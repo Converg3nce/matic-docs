@@ -50,8 +50,8 @@ extra:
 nav:
   - Matic Network:
       - Home: index.md
-      - Getting Started: getting-started.md
-      - Matic JS Tutorial: matic-js-tutorial.md
+      - Getting started: getting-started.md
+      - Matic.js tutorial: matic-js-tutorial.md
       - FAQ: faq.md
       - Calling Matic contracts: matic-call-contracts.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md

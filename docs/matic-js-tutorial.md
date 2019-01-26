@@ -1,6 +1,6 @@
 # Beginner-friendly tutorial to Matic.js
 
-This tutorial will act as a guide for a step-by-step process to understand and use [Matic JS](http://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. This guide is directed towards developers just starting to begin their Ethereum journey. Experienced developers can skim through the article or choose to directly go to https://docs.matic.network/getting-started/
+This tutorial will act as a guide for a step-by-step process to understand and use [Matic JS](http://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. This guide is directed towards developers starting to begin their Ethereum journey. If you want to dive right ahead, feel free to skim through the article or choose to directly go to https://docs.matic.network/getting-started/.
 
 ### Prerequisites:
 
@@ -10,7 +10,7 @@ In order to make any transactions, you will also need some Ether in the test acc
 
 ### Matic Faucet
 
-Throughout this tutorial, we will be using the ERC20 token `TEST` on the Kovan network as an example. In your DApp, you can replace it with any ERC20 token. To get some example `TEST` tokens on Matic Network, you can drop an email to info@matic.network
+Throughout this tutorial, we will be using the ERC20 token `TEST` on the Kovan network as an example. In your DApp, you can replace it with any ERC20 token. To get some example `TEST` tokens on Matic Network, you can drop an email to info@matic.network.
 
 This is only a temporary workaround till we get our Matic Faucet up and running.
 
@@ -73,7 +73,7 @@ For reference purposes, I will be creating a test folder to showcase how to setu
 
 Install the `maticjs` package via npm:
 
-`$ npm install --save maticjs`
+`$ npm install --save maticjs@latest`
 
 If you wish to directly refer a set of code examples, you can do so at https://github.com/maticnetwork/matic.js/tree/master/examples
 
@@ -448,13 +448,13 @@ We will now initiate the Withdraw process.
 
 We currently have `1.680 TEST` tokens at our address on Matic — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`
 
-To initiate the withdraw we will run `$ node withdraw-initiate.js`.
+To initiate the withdraw we will run `$ node initiate-withdraw.js`.
 
 Once this process is initiated, you will receive the transaction hash. The transaction hash will be used as input to run the next step i.e. completing the withdraw process.
 
 I’ll add the transaction hash to the code — `0xacd94a91e6d1dec48db29d1edf71102f69cb0a334ad8db3c0d0a219fe44a5d51`. Note that in your case, this transaction hash will be different.
 
-Once the initiate process is complete, we will wait for ~5 minutes, before running the second script `$node withdraw-complete.js`.
+Once the initiate process is complete, we will wait for ~5 minutes, before running the second script `$ node confirm-withdraw.js`.
 
 ![Arch](maticjstutorial-images/run-withdraw.png)
 
