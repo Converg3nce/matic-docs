@@ -54,6 +54,8 @@ nav:
       - FAQ: faq.md
       - Calling Matic contracts: matic-call-contracts.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
+  - Maticjs:
+      - Matic JS Tutorial: maticjs/matic-js-tutorial.md
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:
