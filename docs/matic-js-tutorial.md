@@ -6,7 +6,7 @@ This tutorial will act as a guide for a step-by-step process to understand and u
 
 ### Some ETH on Kovan in your account
 
-In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Kovan, you can use the faucet links given here — https://faucet.metamask.io/ or https://gitter.im/kovan-testnet/faucet. 
+In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Kovan, you can use the faucet links given here — https://faucet.metamask.io/ or https://gitter.im/kovan-testnet/faucet.
 
 ### Matic Faucet
 
@@ -20,12 +20,11 @@ We will be showcasing the flow for asset transfers on the Matic Network in this 
 
 ![Arch](maticjstutorial-images/workflow.jpeg)
 
-* User deposits tokens in Matic contract on mainchain
-* Once deposited tokens get confirmed on the main chain, the corresponding tokens will get reflected on the Matic chain.
-* The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second). That way, the transfer will be done almost instantly.
-* Once a user is ready, they can withdraw remaining tokens from the mainchain by establishing proof of remaining tokens on Root contract (contract deployed on Kovan/Ethereum chain) within 7 days.
-* User can also get a fast exit via 0x or Dharma (coming soon!)
-
+- User deposits tokens in Matic contract on mainchain
+- Once deposited tokens get confirmed on the main chain, the corresponding tokens will get reflected on the Matic chain.
+- The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second). That way, the transfer will be done almost instantly.
+- Once a user is ready, they can withdraw remaining tokens from the mainchain by establishing proof of remaining tokens on Root contract (contract deployed on Kovan/Ethereum chain) within 7 days.
+- User can also get a fast exit via 0x or Dharma (coming soon!)
 
 ### Basic setup for the tutorial
 
@@ -49,18 +48,18 @@ In order to view the flow of funds easily on the Matic Network using Matic.js, y
 
 The `TEST` token, taken as an example for this tutorial, can be configured in Metamask so as to easily visualise account balances. Again note this is **optional**. You can very easily query the token balances and other variables using [web3](https://web3js.readthedocs.io/en/1.0/)
 
-The TEST token needs to be added to all 3 test accounts in Metamask once each in both the Kovan and Matic testnets: 
+The TEST token needs to be added to all 3 test accounts in Metamask once each in both the Kovan and Matic testnets:
 
 ```js
-Token name: TEST 
+Token name: TEST
 Where: Kovan Network
 Contract address: 0x670568761764f53E6C10cd63b71024c31551c9EC
 
 ----------------------
 
-Token name: TEST 
+Token name: TEST
 Where: Matic Testnet (Custom RPC: https://testnet.matic.network)
-Contract address: 0x343461c74133E3fA476Dbbc614a87473270a226c
+Contract address: 0xca3C863EE5a4aFD2FCcADC5427dDBd7C28B254b0
 ```
 
 In case you are new to Ethereum and Metamask, you can refer https://docs.matic.network/newbies/conf-custom-tokens-metamask/ on instructions on how to.
@@ -82,11 +81,11 @@ If you wish to directly refer a set of code examples, you can do so at https://g
 Within the `matic-js-test` folder, create a new file and name it `deposit.js`.
 
 ```js
-const Matic = require('maticjs').default
-const config = require('./config')
-const token = '0x670568761764f53E6C10cd63b71024c31551c9EC' // test token address
-const amount = '10000000000000000' // amount in wei (0.01 TEST)
-const from = '0xdcd53258BA8A69C6a505300BE75447A772bFd3d6' // from address
+const Matic = require("maticjs").default
+const config = require("./config")
+const token = "0x670568761764f53E6C10cd63b71024c31551c9EC" // test token address
+const amount = "10000000000000000" // amount in wei (0.01 TEST)
+const from = "0xdcd53258BA8A69C6a505300BE75447A772bFd3d6" // from address
 
 // Create object of Matic
 const matic = new Matic({
@@ -94,10 +93,10 @@ const matic = new Matic({
   parentProvider: config.PARENT_PROVIDER,
   rootChainAddress: config.ROOTCHAIN_ADDRESS,
   syncerUrl: config.SYNCER_URL,
-  watcherUrl: config.WATCHER_URL,
+  watcherUrl: config.WATCHER_URL
 })
 
-matic.wallet = '0x' + config.PRIVATE_KEY // prefix with `0x`
+matic.wallet = "0x" + config.PRIVATE_KEY // prefix with `0x`
 
 // Approve token from your account to the Matic contracts
 matic
@@ -105,59 +104,60 @@ matic
     from,
     onTransactionHash: () => {
       // action on Transaction success
-      console.log("Deposit Tokens from Kovan/Ethereum to Matic - Transaction Approved.")
-    },
-})
-.then(() => {
-// Deposit tokens
-matic.
-  depositTokens(token, from, amount, {
-    from,
-    onTransactionHash: () => {
-      // action on Transaction success
-      console.log("Tokens deposited from Kovan/Ethereum to Matic.")
-    },
+      console.log(
+        "Deposit Tokens from Kovan/Ethereum to Matic - Transaction Approved."
+      )
+    }
   })
-})
+  .then(() => {
+    // Deposit tokens
+    matic.depositTokens(token, from, amount, {
+      from,
+      onTransactionHash: () => {
+        // action on Transaction success
+        console.log("Tokens deposited from Kovan/Ethereum to Matic.")
+      }
+    })
+  })
 ```
 
-Let’s understand this a bit in detail. 
+Let’s understand this a bit in detail.
 
 `token` is the address of the `TEST` ERC20 token contract taken as an example in this tutorial. You will replace it with the relevant ERC20 token address in your DApp.
 
 ```js
-const token = '0x670568761764f53E6C10cd63b71024c31551c9EC' // test token address
+const token = "0x670568761764f53E6C10cd63b71024c31551c9EC" // test token address
 ```
 
 `amount` is the amount that is to be deposited. Amount is mentioned in `wei` . To those new to the field, `1 TEST` token is equivalent to 10¹⁸ `wei` . In the code snippet, `0.01 TEST` = 10¹⁶ `wei`.
 
 ```js
-const amount = '10000000000000000' // amount in wei (0.01 TEST)
+const amount = "10000000000000000" // amount in wei (0.01 TEST)
 ```
 
 `from` is your address. This will be address from which funds will be debited. Note that this is my test account address — you will need to plug your own in here.
 
 ```js
-const from = '0xdcd53258BA8A69C6a505300BE75447A772bFd3d6' // from address
+const from = "0xdcd53258BA8A69C6a505300BE75447A772bFd3d6" // from address
 ```
 
 `matic.wallet` is your private key. **Never store your private key in code on production** — this is shown here only for illustration purposes. Typically a user’s private key will be stored in a browser wallet such as Metamask or a mobile wallet such as the Matic wallet, Status or a hardware wallet.
 
 ```js
-matic.wallet = '0x' + config.PRIVATE_KEY // prefix with `0x`
+matic.wallet = "0x" + config.PRIVATE_KEY // prefix with `0x`
 ```
 
 You will also need to create another file `config.js`. This will contain all configuration related to Matic.js.
 
 ```js
 module.exports = {
-  MATIC_PROVIDER: 'https://testnet.matic.network',
-  PARENT_PROVIDER: 'https://kovan.infura.io/matic',
-  ROOTCHAIN_ADDRESS: '0x24e01716a6ac34d5f2c4c082f553d86a557543a7',
-  SYNCER_URL: 'https://eth-syncer.api.matic.network/api/v1',
-  WATCHER_URL: 'https://eth-watcher.api.matic.network/api/v1',
-  MATICWETH_ADDRESS: '0xeD3CAFb4dCf835E7a1D2E3169F8D296f931b4aA7',
-  PRIVATE_KEY: '<insert-your-private-key-here>'
+  MATIC_PROVIDER: "https://testnet.matic.network",
+  PARENT_PROVIDER: "https://kovan.infura.io/matic",
+  ROOTCHAIN_ADDRESS: "0x24e01716a6ac34d5f2c4c082f553d86a557543a7",
+  SYNCER_URL: "https://eth-syncer.api.matic.network/api/v1",
+  WATCHER_URL: "https://eth-watcher.api.matic.network/api/v1",
+  MATICWETH_ADDRESS: "0xFCbE295b918848001eB43941Db3fF9b6439a5e13",
+  PRIVATE_KEY: "<insert-your-private-key-here>"
 }
 ```
 
@@ -166,42 +166,42 @@ For now, don’t worry about these values — just keep them as is.
 You will need to add your private key here. Signing of transactions will require your private key. Again, it is **NOT ADVISABLE** to hard code your private key when on production. Later, you can build keeping in mind that the user will be handling their keys at their end with MetaMask, Matic Wallet or any other compatible user wallet.
 
 ```js
-PRIVATE_KEY: '<insert-your-private-key-here>'
+PRIVATE_KEY: "<insert-your-private-key-here>"
 ```
 
 Deposit is a 2 step process
 
-* The tokens need to be first approved to the Matic rootchain contract on Ethereum.
+- The tokens need to be first approved to the Matic rootchain contract on Ethereum.
 
 ```js
 // Approve token from your account to the Matic contracts
-matic
-  .approveTokensForDeposit(token, amount, {
-    from,
-    onTransactionHash: () => {
-      // action on Transaction success
-      console.log("Deposit Tokens from Kovan/Ethereum to Matic - Transaction Approved.")
-    },
+matic.approveTokensForDeposit(token, amount, {
+  from,
+  onTransactionHash: () => {
+    // action on Transaction success
+    console.log(
+      "Deposit Tokens from Kovan/Ethereum to Matic - Transaction Approved."
+    )
+  }
 })
 ```
 
-* Once approved, the deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
+- Once approved, the deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
 
 ```js
 // Deposit tokens
-matic.
-  depositTokens(token, from, amount, {
-    from,
-    onTransactionHash: () => {
-      // action on Transaction success
-      console.log("Tokens deposited from Kovan/Ethereum to Matic.")
-    },
+matic.depositTokens(token, from, amount, {
+  from,
+  onTransactionHash: () => {
+    // action on Transaction success
+    console.log("Tokens deposited from Kovan/Ethereum to Matic.")
+  }
 })
 ```
 
 For reference purposes, the screenshots below will provide context during the actual deposit.
 
-We currently have `1.050 TEST` tokens and `0.9986` ETH at our address `(0xdcd53258BA8A69C6a505300BE75447A772bFd3d6)` on Kovan Network, 
+We currently have `1.050 TEST` tokens and `0.9986` ETH at our address `(0xdcd53258BA8A69C6a505300BE75447A772bFd3d6)` on Kovan Network,
 
 ![Arch](maticjstutorial-images/kovan-balance.png)
 
@@ -215,7 +215,7 @@ Let’s run the Deposit function. To run use:
 
 `$ node deposit.js`
 
-We have added console logging for both events, which when run successfully will display `“Deposit Tokens from Kovan/Ethereum to Matic — Transaction Approved.”.` Once deposit is complete, you will see the message `”Tokens deposited from Kovan/Ethereum to Matic.”`
+We have added console logging for both events, which when run successfully will display `“Deposit Tokens from Kovan/Ethereum to Matic — Transaction Approved.”.` Once deposit is complete, you will see the message `”Tokens deposited from Kovan/Ethereum to Matic.”`
 
 ![Arch](maticjstutorial-images/run-deposit.png)
 
@@ -225,7 +225,7 @@ Our Balance on Kovan now shows `1.040 TEST` which means our Deposit transaction 
 
 ![Arch](maticjstutorial-images/kovan-balance-update.png)
 
-Verifying our balance on Matic Testnet also shows that our balance is increased by 0.010 TEST. 
+Verifying our balance on Matic Testnet also shows that our balance is increased by 0.010 TEST.
 
 ![Arch](maticjstutorial-images/matic-tesnet-balance-update.png)
 
@@ -237,51 +237,51 @@ In order to ensure you have more funds, deposit `1 TEST` token to Matic by repea
 
 Once you have funds on Matic, you can use those funds to send to others instantly.
 
-Create a new file — `transfer.js` —  in your code directory. 
+Create a new file — `transfer.js` —  in your code directory.
 
 ```js
-const Matic = require('maticjs').default
-const config = require('./config')
+const Matic = require("maticjs").default
+const config = require("./config")
 
-const from = '0xdcd53258BA8A69C6a505300BE75447A772bFd3d6' // from address
-const to = '0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4' // to address
+const from = "0xdcd53258BA8A69C6a505300BE75447A772bFd3d6" // from address
+const to = "0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4" // to address
 
-const token = '0x343461c74133E3fA476Dbbc614a87473270a226c' // test token address
-const amount = '10000000000000000' // amount in wei (0.01 TEST)
+const token = "0xca3C863EE5a4aFD2FCcADC5427dDBd7C28B254b0" // test token address
+const amount = "10000000000000000" // amount in wei (0.01 TEST)
 
 // Create object of Matic
 const matic = new Matic({
- maticProvider: config.MATIC_PROVIDER,
- parentProvider: config.PARENT_PROVIDER,
- rootChainAddress: config.ROOTCHAIN_ADDRESS,
- syncerUrl: config.SYNCER_URL,
- watcherUrl: config.WATCHER_URL,
- maticWethAddress: config.MATICWETH_ADDRESS,
+  maticProvider: config.MATIC_PROVIDER,
+  parentProvider: config.PARENT_PROVIDER,
+  rootChainAddress: config.ROOTCHAIN_ADDRESS,
+  syncerUrl: config.SYNCER_URL,
+  watcherUrl: config.WATCHER_URL,
+  maticWethAddress: config.MATICWETH_ADDRESS
 })
 
-matic.wallet = '0x' + config.PRIVATE_KEY // prefix with `0x`
+matic.wallet = "0x" + config.PRIVATE_KEY // prefix with `0x`
 
 // Send Tokens
 matic.transferTokens(token, to, amount, {
- from,
- parent: false, // For token transfer on Main network (false for Matic Network)
- onTransactionHash: () => {
-   // action on Transaction success
-   console.log("Transfer")
- },
+  from,
+  parent: false, // For token transfer on Main network (false for Matic Network)
+  onTransactionHash: () => {
+    // action on Transaction success
+    console.log("Transfer")
+  }
 })
 ```
 
 `to` is the receiver’s address, to whom the funds are supposed to be sent.
 
 ```js
-const to = '0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4' // to address
+const to = "0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4" // to address
 ```
 
 `token` is the Matic TEST token contract address on the Matic testnet. **Note that this is different from the Kovan TEST token contract address.**
 
 ```js
-const token = '0x343461c74133E3fA476Dbbc614a87473270a226c' // test token address
+const token = "0xca3C863EE5a4aFD2FCcADC5427dDBd7C28B254b0" // test token address
 ```
 
 The config details are then mentioned appropriately. You need not make any changes to it.
@@ -336,7 +336,7 @@ And to confirm that on our receiver’s account, our balance is now updated to `
 
 **Transfer #2**
 
-In this transaction we will attempt to transfer `0.01 TEST` from Account 1 to Account 3. 
+In this transaction we will attempt to transfer `0.01 TEST` from Account 1 to Account 3.
 
 From — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`
 
@@ -358,7 +358,6 @@ whereas the balance on Account 3 shows us `0.030 TEST`.
 
 ![Arch](maticjstutorial-images/account3-matic-testnet-balance-update-transfer-2.png)
 
-
 ### Withdraw funds from Matic
 
 Funds that are available on Matic chain can be withdrawn back to the Ethereum Network.
@@ -377,70 +376,69 @@ Just for reference, there will be an active exit market, which will allow tradin
 Create 2 new files and name them `initiate-withdraw.js` and `confirm-withdraw.js`.
 
 ```js
-const Matic = require('maticjs').default
-const config = require('./config')
+const Matic = require("maticjs").default
+const config = require("./config")
 
-const mtoken = '0x343461c74133E3fA476Dbbc614a87473270a226c' // test token address
-const amount = '10000000000000000' // amount in wei (0.01 TEST)
-const from = '0xdcd53258BA8A69C6a505300BE75447A772bFd3d6' // from address
+const mtoken = "0xca3C863EE5a4aFD2FCcADC5427dDBd7C28B254b0" // test token address
+const amount = "10000000000000000" // amount in wei (0.01 TEST)
+const from = "0xdcd53258BA8A69C6a505300BE75447A772bFd3d6" // from address
 
 // Create object of Matic
 const matic = new Matic({
- maticProvider: config.MATIC_PROVIDER,
- parentProvider: config.PARENT_PROVIDER,
- rootChainAddress: config.ROOTCHAIN_ADDRESS,
- syncerUrl: config.SYNCER_URL,
- watcherUrl: config.WATCHER_URL,
+  maticProvider: config.MATIC_PROVIDER,
+  parentProvider: config.PARENT_PROVIDER,
+  rootChainAddress: config.ROOTCHAIN_ADDRESS,
+  syncerUrl: config.SYNCER_URL,
+  watcherUrl: config.WATCHER_URL
 })
 
-matic.wallet = '0x' + config.PRIVATE_KEY // prefix with `0x`
+matic.wallet = "0x" + config.PRIVATE_KEY // prefix with `0x`
 
 var transactionHash = null
 
-matic
- .startWithdraw(mtoken, amount, {
-   from,
-   onTransactionHash: txHash => {
-     transactionHash = txHash
-     console.log("Withdraw Initiated")
-     console.log(transactionHash)
-   },
+matic.startWithdraw(mtoken, amount, {
+  from,
+  onTransactionHash: txHash => {
+    transactionHash = txHash
+    console.log("Withdraw Initiated")
+    console.log(transactionHash)
+  }
 })
 ```
 
 ```js
-const Matic = require('maticjs').default
-const config = require('./config')
+const Matic = require("maticjs").default
+const config = require("./config")
 
-const mtoken = '0x343461c74133E3fA476Dbbc614a87473270a226c' // test token address
-const amount = '10000000000000000' // amount in wei (0.01 TEST)
-const from = '0xdcd53258BA8A69C6a505300BE75447A772bFd3d6' // from address
+const mtoken = "0xca3C863EE5a4aFD2FCcADC5427dDBd7C28B254b0" // test token address
+const amount = "10000000000000000" // amount in wei (0.01 TEST)
+const from = "0xdcd53258BA8A69C6a505300BE75447A772bFd3d6" // from address
 
 // Create object of Matic
 const matic = new Matic({
- maticProvider: config.MATIC_PROVIDER,
- parentProvider: config.PARENT_PROVIDER,
- rootChainAddress: config.ROOTCHAIN_ADDRESS,
- syncerUrl: config.SYNCER_URL,
- watcherUrl: config.WATCHER_URL,
+  maticProvider: config.MATIC_PROVIDER,
+  parentProvider: config.PARENT_PROVIDER,
+  rootChainAddress: config.ROOTCHAIN_ADDRESS,
+  syncerUrl: config.SYNCER_URL,
+  watcherUrl: config.WATCHER_URL
 })
 
-matic.wallet = '0x' + config.PRIVATE_KEY // prefix with `0x`
+matic.wallet = "0x" + config.PRIVATE_KEY // prefix with `0x`
 
-var transactionHash = "0xacd94a91e6d1dec48db29d1edf71102f69cb0a334ad8db3c0d0a219fe44a5d51"
-
+var transactionHash =
+  "0xacd94a91e6d1dec48db29d1edf71102f69cb0a334ad8db3c0d0a219fe44a5d51"
 
 //Wait for 5 mins till the checkpoint is submitted, then run the confirm withdraw
 matic.withdraw(transactionHash, {
-   from,
-   onTransactionHash: (txHash) => {
-   // action on Transaction success
-   console.log("Withdraw complete",txHash)
-   },
+  from,
+  onTransactionHash: txHash => {
+    // action on Transaction success
+    console.log("Withdraw complete", txHash)
+  }
 })
 ```
 
-*Note: A checkpoint, which is a representation of all transactions happening on the Matic Network to the Ethereum chain every ~5 minutes, is submitted to the mainchain Ethereum contract.*
+_Note: A checkpoint, which is a representation of all transactions happening on the Matic Network to the Ethereum chain every ~5 minutes, is submitted to the mainchain Ethereum contract._
 
 ### Withdrawing funds from Matic to Ethereum
 
