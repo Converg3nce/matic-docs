@@ -10,7 +10,7 @@ In order to make any transactions, you will also need some Ether in the test acc
 
 ### Matic Faucet
 
-Throughout this tutorial, we will be using the ERC20 token `MTX` on the Ropsten network as an example. This is a TEST token. In your DApp,you can replace it with any ERC20 token. To get some Test `MTX` tokens on Matic Network, you can access the Matic Faucet: https://wallet.matic.network/faucet
+Throughout this tutorial, we will be using the ERC20 token `MTX` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `MTX` tokens on Matic Network, you can access the Matic Faucet: https://wallet.matic.network/faucet
 
 All you would need to do is follow simple steps on the link above and you will get some funds in to your account:
 
@@ -39,9 +39,9 @@ Before starting with the tutorial, go ahead and have 3 Ethereum test accounts re
 For your reference we will be using the following accounts in this tutorial
 
 ```js
-Account #1: 0xdcd53258BA8A69C6a505300BE75447A772bFd3d6
-Account #2: 0xbAf7D06543b241E286dc776545c8e9F318aBcC47
-Account #3: 0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4
+Account #1: 0x74FE3F2b084062dEe9AE0662cA14ecf5C85b94a8
+Account #2: 0x05446221202a128a10978D4C9c4500C780455429
+Account #3: 0x552A00De3aa5953efe4caE8c2c8a04b48554B359
 ```
 
 When you create multiple accounts at your end, your addresses will be different from those shown here.
@@ -213,15 +213,15 @@ matic
 
 For reference purposes, the screenshots below will provide context during the actual deposit.
 
-We currently have `9988.460 MTX` tokens and `19` ETH at our address `(0xdcd53258BA8A69C6a505300BE75447A772bFd3d6)` on Ropsten Network,
+We currently have `10 MTX` tokens and `0.5` ETH at our address `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6` on Ropsten Network,
 
 ![Arch](maticjstutorial-images/before-deposit-balance-ropsten.png)
 
-while on Matic Network we have `0 Matic ETH` and `4.680 MTX` tokens.
+while on Matic Network we have `0 MTX` tokens.
 
 ![Arch](maticjstutorial-images/before-deposit-balance-matic.png)
 
-We will be depositing `0.100 MTX` tokens to Matic Testnet.
+We will be depositing `1 MTX` tokens to Matic Testnet.
 
 Let’s run the Deposit function. To run use:
 
@@ -233,11 +233,11 @@ We have added console logging for both events, which when run successfully will 
 
 Let’s verify our account balances on Metamask.
 
-Our Balance on Ropsten now shows `9988.360 MTX` which means our Deposit transaction of `0.100 MTX` was successful.
+Our Balance on Ropsten now shows `9 MTX` which means our Deposit transaction of `1 MTX` was successful.
 
 ![Arch](maticjstutorial-images/after-deposit-balance-update-ropsten.png)
 
-Verifying our balance on Matic Testnet also shows that our balance is increased by `0.100 MTX`.
+Verifying our balance on Matic Testnet also shows that our balance is increased by `1 MTX`.
 
 ![Arch](maticjstutorial-images/after-deposit-balance-update-matic.png)
 
@@ -287,7 +287,7 @@ matic.transferTokens(token, recipient, amount, {
 `recipient` is the receiver’s address, to whom the funds are supposed to be sent.
 
 ```js
-const recipient = "0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4" // to address
+const recipient = "0x05446221202a128a10978D4C9c4500C780455429" // to address
 ```
 
 `token` is the Matic TEST token contract address on the Matic testnet. **Note that this is different from the Ropsten MTX token contract address.**. This is automatically picked up from the `config.js` file.
@@ -321,11 +321,11 @@ The screenshots below will provide context during the actual transfer.
 
 **Transfer #1**
 
-We will be transferring `1 MTX` from Account 1 to Account 2 on Matic Network.
+We will be transferring `0.100 MTX` from Account 1 to Account 2 on Matic Network.
 
-Account 1–`0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`. This account currently holds `4.780 MTX` tokens.
+Account 1–`0x74FE3F2b084062dEe9AE0662cA14ecf5C85b94a8`. This account currently holds `9 MTX` tokens.
 
-Account 2–`0xbAf7D06543b241E286dc776545c8e9F318aBcC47`. This account currently holds `0.010 MTX` tokens.
+Account 2–`0x05446221202a128a10978D4C9c4500C780455429`. This account currently holds `0 MTX` tokens.
 
 ![Arch](maticjstutorial-images/account2-transfer1-balance.png)
 
@@ -339,11 +339,11 @@ Once the code has run successfully, it will display a message of `"Transfer done
 
 Let’s verify our balances on Metamask.
 
-Our balance on account address — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6` is now updated to `3.780 MTX` tokens.
+Our balance on account address — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6` is now updated to `0.900 MTX` tokens.
 
 ![Arch](maticjstutorial-images/account1-transfer1-update.png)
 
-And to confirm that on our receiver’s account, our balance is now updated to `1.010 MTX` tokens.
+And to confirm that on our receiver’s account, our balance is now updated to `0.100 MTX` tokens.
 
 ![Arch](maticjstutorial-images/account2-transfer1-update.png)
 
@@ -352,11 +352,11 @@ And to confirm that on our receiver’s account, our balance is now updated to `
 
 In this transaction we will attempt to transfer `0.01 MTX` from Account 1 to Account 3.
 
-From — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`
+From — `0x74FE3F2b084062dEe9AE0662cA14ecf5C85b94a8`
 
 ![Arch](maticjstutorial-images/account1-transfer1-update.png)
 
-To — `0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4`. Account 3 currently has `0 MTX` tokens.
+To — `0x552A00De3aa5953efe4caE8c2c8a04b48554B359`. Account 3 currently has `0 MTX` tokens.
 
 ![Arch](maticjstutorial-images/account3-transfer2-balance.png)
 
@@ -364,7 +364,7 @@ We will again run `$ node transfer-ERC20.js` from the terminal. Once we get the 
 
 ![Arch](maticjstutorial-images/run-transfer-erc20-2.png)
 
-Balance on Account 1 now shows a balance of `3.770 MTX`,
+Balance on Account 1 now shows a balance of `0.890MTX`,
 
 ![Arch](maticjstutorial-images/account1-transfer2-update.png)
 
@@ -499,15 +499,15 @@ _Note: A checkpoint, which is a representation of all transactions happening on 
 
 We will now initiate the Withdraw process.
 
-We currently have `3.770 MTX` tokens at our address on Matic — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`
+We currently have `0.890 MTX` tokens at our address on Matic — `0x74FE3F2b084062dEe9AE0662cA14ecf5C85b94a8`
 
-We will withdraw `1 MTX` from the Matic Account.
+We will withdraw `0.010 MTX` from the Matic Account.
 
 To initiate the withdraw we will run `$ node initiate-withdraw-ERC20.js`.
 
 Once this process is initiated, you will receive the transaction hash. The transaction hash will be used as input to run the next step i.e. confirm withdraw process.
 
-I’ll add the transaction hash to the code — `0x0b6928e4ff6d981b7f9d06290a449c893f3fe5a3beaade6b1c07171686dc0824`. Note that in your case, this transaction hash will be different.
+I’ll add the transaction hash to the code — `0x25af48b8699bf51140d74cd2d1e035c5d5ffdd0b1f86ea61ce2e2c6139b1c8d4`. Note that in your case, this transaction hash will be different.
 
 Once the initiate process is complete, we will wait for ~5 minutes, before running the second script `$ node confirm-withdraw.js`.
 
@@ -515,7 +515,7 @@ Once the initiate process is complete, we will wait for ~5 minutes, before runni
 
 To verify, we will also check the account balances on Metamask.
 
-The balance on Account 1 on Matic Network now shows `2.770 MTX` Tokens.
+The balance on Account 1 on Matic Network now shows `0.880 MTX` Tokens.
 
 ![Arch](maticjstutorial-images/confirm-withdraw-balance-update.png)
 
@@ -532,5 +532,7 @@ Once this is complete, you will see the funds in your Ropsten account.
 So that’s it folks! You have withdrawn your funds successfuly and gotten to the end of this tutorial :)
 
 Hope you have understood now that interacting with the Matic Network is quite easy. We will dive deeper and explore advanced interactions with Matic in later posts.
+
+Similarly, as an exercise you can Deposit, transfer and withdraw ERC721 and Ether using Matic.js following the same steps as above.
 
 Feel free to comment below or reach out to us at info@matic.network in case you face any issues.
