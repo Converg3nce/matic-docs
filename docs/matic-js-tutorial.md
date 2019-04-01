@@ -54,7 +54,6 @@ The `MTX` token, taken as an example for this tutorial, can be configured in Met
 
 These Test tokens needs to be added to all 3 test accounts in Metamask once each in both the Ropsten and Matic testnets:
 
-**Note: When adding the Matic Testnet token in Metamask, make sure you edit the ticker symbol from CHE to MTX**
 
 ```js
 Token name: MTX
@@ -63,7 +62,7 @@ Contract address: 0x6b0b0e265321e788af11b6f1235012ae7b5a6808
 
 ----------------------
 
-Token name: MTX
+Token name: MTX (Note: When adding the Matic Testnet token in Metamask, make sure you edit the ticker symbol from CHE to MTX)
 Where: Matic Testnet (Custom RPC: https://testnet2.matic.network)
 Contract address: 0xcc5de81d1af53dcb5d707b6b33a50f4ee46d983e
 ```
@@ -78,7 +77,7 @@ For reference purposes, I will be creating a test folder to showcase how to setu
 
 Install the `maticjs` package via npm:
 
-`$ npm install --save maticjs@latest`
+`$ npm install --save web3 maticjs`
 
 If you wish to directly refer a set of code examples, you can do so at https://github.com/maticnetwork/matic.js/tree/master/examples
 
