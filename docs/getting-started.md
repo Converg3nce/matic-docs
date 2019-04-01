@@ -61,11 +61,11 @@ Direct **<script>** Include
 Simply download dist/matic.js and include with a script tag. Matic will be registered as a global variable.
 
 CDN
-```bash
+```html
 <script src="https://cdn.jsdelivr.net/npm/maticjs/dist/matic.js"></script>
 ```
 
-Matic is also available on unpkg
+Matic is also available on [unpkg](https://unpkg.com/maticjs/dist/matic.js)
 
 ### Getting started
 
@@ -778,7 +778,7 @@ matic
 
 ### Support
 
-Please write to info@matic.network for integration support. If you have any queries, feedback or feature requests, feel free to reach out to us on telegram: [t.me/maticnetwork](https://t.me/maticnetwork)
+Please post your queries to https://stack.matic.network for integration support. If you have any queries, feedback or feature requests, feel free to reach out to us on telegram: [t.me/maticnetwork](https://t.me/maticnetwork)
 
 ### License
 
