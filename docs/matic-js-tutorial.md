@@ -10,7 +10,7 @@ In order to make any transactions, you will also need some Ether in the test acc
 
 ### Matic Faucet
 
-Throughout this tutorial, we will be using the ERC20 token `MTX` on the Ropsten network as an example. This is a TEST token. In your DApp,you can replace it with any ERC20 token. To get some Test `CHE` tokens on Matic Network, you can access the Matic Faucet: https://wallet.matic.network/faucet
+Throughout this tutorial, we will be using the ERC20 token `MTX` on the Ropsten network as an example. This is a TEST token. In your DApp,you can replace it with any ERC20 token. To get some Test `MTX` tokens on Matic Network, you can access the Matic Faucet: https://wallet.matic.network/faucet
 
 All you would need to do is follow simple steps on the link above and you will get some funds in to your account:
 
@@ -50,9 +50,11 @@ In order to view the flow of funds easily on the Matic Network using Matic.js, y
 
 ### Configuring Matic Test tokens on Metamask
 
-The `MTX` & `CHE` token, taken as an example for this tutorial, can be configured in Metamask so as to easily visualise account balances. Again note this is **optional**. You can very easily query the token balances and other variables using [web3](https://web3js.readthedocs.io/en/1.0/)
+The `MTX` token, taken as an example for this tutorial, can be configured in Metamask so as to easily visualise account balances. Again note this is **optional**. You can very easily query the token balances and other variables using [web3](https://web3js.readthedocs.io/en/1.0/)
 
 These Test tokens needs to be added to all 3 test accounts in Metamask once each in both the Ropsten and Matic testnets:
+
+**Note: When adding the Matic Testnet token in Metamask, make sure you edit the ticker symbol from CHE to MTX**
 
 ```js
 Token name: MTX
@@ -61,7 +63,7 @@ Contract address: 0x6b0b0e265321e788af11b6f1235012ae7b5a6808
 
 ----------------------
 
-Token name: CHE
+Token name: MTX
 Where: Matic Testnet (Custom RPC: https://testnet2.matic.network)
 Contract address: 0xcc5de81d1af53dcb5d707b6b33a50f4ee46d983e
 ```
@@ -216,7 +218,7 @@ We currently have `9988.460 MTX` tokens and `19` ETH at our address `(0xdcd53258
 
 ![Arch](maticjstutorial-images/before-deposit-balance-ropsten.png)
 
-while on Matic Network we have `0 Matic ETH` and `4.680 CHE` tokens.
+while on Matic Network we have `0 Matic ETH` and `4.680 MTX` tokens.
 
 ![Arch](maticjstutorial-images/before-deposit-balance-matic.png)
 
@@ -232,11 +234,11 @@ We have added console logging for both events, which when run successfully will 
 
 Let’s verify our account balances on Metamask.
 
-Our Balance on Ropsten now shows `9988.360 MTX` which means our Deposit transaction of `0.100 CHE` was successful.
+Our Balance on Ropsten now shows `9988.360 MTX` which means our Deposit transaction of `0.100 MTX` was successful.
 
 ![Arch](maticjstutorial-images/after-deposit-balance-update-ropsten.png)
 
-Verifying our balance on Matic Testnet also shows that our balance is increased by `0.100 CHE`.
+Verifying our balance on Matic Testnet also shows that our balance is increased by `0.100 MTX`.
 
 ![Arch](maticjstutorial-images/after-deposit-balance-update-matic.png)
 
@@ -314,17 +316,17 @@ matic.transferTokens(token, recipient, amount, {
 
 We have added console logging on both events, which when run successfully will display `“Transfer done!”` to assure that the transaction was completed successfully. These messages are completely customized for this tutorial, by default only the Transaction Hash will be displayed.
 
-We will be making 2 different transfers worth `0.100 CHE` and `0.010 CHE` tokens respectively.
+We will be making 2 different transfers worth `0.100 MTX` and `0.010 MTX` tokens respectively.
 
 The screenshots below will provide context during the actual transfer.
 
 **Transfer #1**
 
-We will be transferring `1 CHE` from Account 1 to Account 2 on Matic Network.
+We will be transferring `1 MTX` from Account 1 to Account 2 on Matic Network.
 
-Account 1–`0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`. This account currently holds `4.780 CHE` tokens.
+Account 1–`0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`. This account currently holds `4.780 MTX` tokens.
 
-Account 2–`0xbAf7D06543b241E286dc776545c8e9F318aBcC47`. This account currently holds `0.010 CHE` tokens.
+Account 2–`0xbAf7D06543b241E286dc776545c8e9F318aBcC47`. This account currently holds `0.010 MTX` tokens.
 
 ![Arch](maticjstutorial-images/account2-transfer1-balance.png)
 
@@ -338,24 +340,24 @@ Once the code has run successfully, it will display a message of `"Transfer done
 
 Let’s verify our balances on Metamask.
 
-Our balance on account address — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6` is now updated to `3.780 CHE` tokens.
+Our balance on account address — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6` is now updated to `3.780 MTX` tokens.
 
 ![Arch](maticjstutorial-images/account1-transfer1-update.png)
 
-And to confirm that on our receiver’s account, our balance is now updated to `1.010 CHE` tokens.
+And to confirm that on our receiver’s account, our balance is now updated to `1.010 MTX` tokens.
 
 ![Arch](maticjstutorial-images/account2-transfer1-update.png)
 
 
 **Transfer #2**
 
-In this transaction we will attempt to transfer `0.01 CHE` from Account 1 to Account 3.
+In this transaction we will attempt to transfer `0.01 MTX` from Account 1 to Account 3.
 
 From — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`
 
 ![Arch](maticjstutorial-images/account1-transfer1-update.png)
 
-To — `0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4`. Account 3 currently has `0 CHE` tokens.
+To — `0x4933ba598e6B1f33bCDc299bE76AbE2DdFbCC6A4`. Account 3 currently has `0 MTX` tokens.
 
 ![Arch](maticjstutorial-images/account3-transfer2-balance.png)
 
@@ -363,11 +365,11 @@ We will again run `$ node transfer-ERC20.js` from the terminal. Once we get the 
 
 ![Arch](maticjstutorial-images/run-transfer-erc20-2.png)
 
-Balance on Account 1 now shows a balance of `3.770 CHE`,
+Balance on Account 1 now shows a balance of `3.770 MTX`,
 
 ![Arch](maticjstutorial-images/account1-transfer2-update.png)
 
-whereas the balance on Account 3 shows us `0.010 CHE`.
+whereas the balance on Account 3 shows us `0.010 MTX`.
 
 ![Arch](maticjstutorial-images/account3-transfer2-update.png)
 
@@ -498,9 +500,9 @@ _Note: A checkpoint, which is a representation of all transactions happening on 
 
 We will now initiate the Withdraw process.
 
-We currently have `3.770 CHE` tokens at our address on Matic — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`
+We currently have `3.770 MTX` tokens at our address on Matic — `0xdcd53258BA8A69C6a505300BE75447A772bFd3d6`
 
-We will withdraw `1 CHE` from the Matic Account.
+We will withdraw `1 MTX` from the Matic Account.
 
 To initiate the withdraw we will run `$ node initiate-withdraw-ERC20.js`.
 
@@ -514,7 +516,7 @@ Once the initiate process is complete, we will wait for ~5 minutes, before runni
 
 To verify, we will also check the account balances on Metamask.
 
-The balance on Account 1 on Matic Network now shows `2.770 CHE` Tokens.
+The balance on Account 1 on Matic Network now shows `2.770 MTX` Tokens.
 
 ![Arch](maticjstutorial-images/confirm-withdraw-balance-update.png)
 
