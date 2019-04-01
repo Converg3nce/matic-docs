@@ -537,4 +537,4 @@ Hope you have understood now that interacting with the Matic Network is quite ea
 
 Similarly, as an exercise you can Deposit, transfer and withdraw ERC721 and Ether using Matic.js following the same steps as above.
 
-Feel free to comment below or reach out to us at info@matic.network in case you face any issues.
+Feel free to reach out to us at https://stack.matic.network/ in case you face any issues.
