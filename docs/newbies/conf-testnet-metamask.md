@@ -4,7 +4,7 @@ To add Matic’s Testnet, click on the Network selection dropdown and then click
 
 ![](images/select-network.png?raw=true)
 
-It will open up a form with 2 tabs on the top, Settings and Info. In the Settings tab you can add the URL `https://testnet.matic.network`.
+It will open up a form with 2 tabs on the top, Settings and Info. In the Settings tab you can add the URL `https://testnet2.matic.network`.
 
 ![](images/metamask-settings.png?raw=true)
 
