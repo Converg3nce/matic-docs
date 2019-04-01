@@ -81,6 +81,8 @@ Install the `maticjs` package via npm:
 
 If you wish to directly refer a set of code examples, you can do so at https://github.com/maticnetwork/matic.js/tree/master/examples
 
+**Note:You might need to install some dependencies such as web3@1.0.0-beta.34 incase you run into any errors while running matic.js. To install this you can run the command `$ npm install web3@1.0.0-beta.34`**
+
 ### Depositing Funds from Ropsten to Matic
 
 Within the `matic-js-test` folder, create a new file and name it `deposit-ERC20.js`.
