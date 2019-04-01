@@ -57,7 +57,7 @@ $ npm install --save web3 maticjs # or yarn add web3 maticjs
 
 Note: This library is dependent on web3.js library. Tested with `web3@1.0.0-beta.34`
 
-Direct **<script>** Include
+#### Include directly in `<script>`
 Simply download dist/matic.js and include with a script tag. Matic will be registered as a global variable.
 
 CDN
