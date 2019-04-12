@@ -10,13 +10,22 @@ In order to make any transactions, you will also need some Ether in the test acc
 
 ### Matic Faucet
 
-Throughout this tutorial, we will be using the ERC20 token `MTX` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `MTX` tokens on Matic Network, you can access the Matic Faucet: https://wallet.matic.network/faucet
+Throughout this tutorial, we will be using the ERC20 token `MTX` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `MTX` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below
+
+<div style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
+<button class="btn btn-primary btn-md" style="padding: 15px;background-color: #000;color: #fff; border-radius: 4px;cursor: pointer; box-shadow: 0px 4px 7px -4px rgba(0,0,0,0.75);">
+  <a href="https://wallet.matic.today/faucet" target="_blank" style="color:inherit;">
+    Get Test Tokens
+  </a>
+</button>
+</div>
+
 
 All you would need to do is follow simple steps on the link above and you will get some funds in to your account:
 
 1. Go to the link and enter your address
 2. Copy the tweet content and tweet it
-3. Now, paste the Tweet Id in the last field and click on `Get Test Matic'`
+3. Now, paste the Tweet Id in the last field and click on `Get Test Matic`
 
 ## Using Matic JS
 
