@@ -54,6 +54,7 @@ nav:
       - Matic.js tutorial: matic-js-tutorial.md
       - FAQ: faq.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
+      - Deploying contracts on Matic testnet: deploy-contracts-remix.md
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:
@@ -64,3 +65,4 @@ nav:
       - Create accounts on Metamask: newbies/create-accounts-metamask.md
       - Configure Matic testnet on Metamask: newbies/conf-testnet-metamask.md
       - Configure custom tokens on Metamask: newbies/conf-custom-tokens-metamask.md
+      - Changing Gas fees on Metamask: newbies/how-to-change-gas-fees.md
