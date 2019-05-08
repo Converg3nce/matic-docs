@@ -13,6 +13,6 @@ Block time on the Matic testnet is ~1s.
 * Use matic.js (https://github.com/maticnetwork/matic.js) to interact with the Matic Plasma contracts
 * The flow is Deposit from Ropsten to Matic->Fast transfers on the Matic Plasma sidechain->Withdraw from Matic to Ropsten
 
-![Arch](/images/matic-workflow.jpg)
+![Arch](/images/matic-workflow-theme.jpg)
 
 * Take a look at the examples here - https://github.com/maticnetwork/matic.js/tree/master/examples - to get started
