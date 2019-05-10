@@ -51,7 +51,7 @@ nav:
   - Matic Network:
       - Home: index.md
       - Getting started: getting-started.md
-      - Quick start to Matic: 2-min-guide.md
+      - Quick start to Matic: 2-min-guide-to-matic.md
       - Matic.js tutorial: matic-js-tutorial.md
       - FAQ: faq.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
