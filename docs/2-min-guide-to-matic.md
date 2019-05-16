@@ -10,7 +10,7 @@ Block time on the Matic testnet is ~1s.
 
 ### Matic Faucet
 
-To get some TEST tokens on Matic Network, you can access the Matic Faucet: https://wallet.matic.network/faucet
+To get some TEST tokens on Matic Network, you can access the Matic Faucet: https://wallet.matic.today/faucet
 
 All you would need to do is follow simple steps on the link above and you will get some funds into your account:
 
