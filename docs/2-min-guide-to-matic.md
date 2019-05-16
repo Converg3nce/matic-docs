@@ -16,7 +16,7 @@ All you would need to do is follow simple steps on the link above and you will g
 
 * Go to the link and enter your address
 * Copy the tweet content and tweet it
-* Now, paste the Tweet Id in the last field and click on Get Test Matic'
+* Now, paste the Tweet Id in the last field and click on 'Get Test Matic'
 
 
 ### Bring Ropsten assets (ERC20/ERC721) to the Matic testnet using Plasma
