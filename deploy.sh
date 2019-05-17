@@ -22,6 +22,9 @@ mkdocs build
 
 HTML="/var/www/docs.matic.network/html"
 
+# remove directory
+rm -rf $HTML
+
 if [ ! -d "$HTML" ]; then
   # Create nested directories if $HTML doesn't exist.
   mkdir -p "$HTML"
