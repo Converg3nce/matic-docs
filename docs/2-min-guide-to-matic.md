@@ -8,20 +8,16 @@ Block time on the Matic testnet is ~1s.
 * Everything else remains the same
 * Matic Mainnet will have PoS security, with greater Plasma guarantees being added
 
-### Matic Faucet
-
-To get some TEST tokens on Matic Network, you can access the Matic Faucet: https://wallet.matic.today/faucet
-
-All you would need to do is follow simple steps on the link above and you will get some funds into your account:
-
-* Go to the link and enter your address
-* Copy the tweet content and tweet it
-* Now, paste the Tweet Id in the last field and click on 'Get Test Matic'
-
 
 ### Bring Ropsten assets (ERC20/ERC721) to the Matic testnet using Plasma
 
-* Use matic.js (https://github.com/maticnetwork/matic.js) to interact with the Matic Plasma contracts
+* To get TEST tokens on Ropsten you can access the Matic Faucet: https://wallet.matic.today/faucet
+
+```js
+Ropsten TEST token contract address - 0x6b0b0e265321e788af11b6f1235012ae7b5a6808
+```
+
+* Use matic.js (https://github.com/maticnetwork/matic.js) to interact with the Matic Plasma contracts. Go to https://docs.matic.network/matic-js-tutorial/ for a walkthrough of matic.js.
 
 The flow for this would be:
 
