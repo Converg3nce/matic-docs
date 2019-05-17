@@ -47,7 +47,7 @@ The flow for asset transfers on the Matic Network is as follows:
 
 ### Faucet
 
-You can get test MATIC tokens on Ropsten from our faucet - https://wallet.matic.network/faucet.
+You can get test MATIC tokens on Ropsten from our faucet - https://wallet.matic.today/faucet.
 
 ### Install Matic.js
 
