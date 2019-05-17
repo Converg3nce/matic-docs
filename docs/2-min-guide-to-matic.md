@@ -21,9 +21,11 @@ Ropsten TEST token contract address - 0x6b0b0e265321e788af11b6f1235012ae7b5a6808
 
 The flow for this would be:
 
-* Deposit assets from Ropsten to Matic
-* Fast transfers on the Matic Plasma sidechain
-* Withdraw from Matic to Ropsten
+* Deposit assets from Ropsten to Matic - [deposit-ERC20.js](https://github.com/maticnetwork/matic.js/blob/master/examples/node/deposit-ERC20.js)
+* Fast transfers on the Matic Plasma sidechain - [transfer-ERC20.js](https://github.com/maticnetwork/matic.js/blob/master/examples/node/transfer-ERC20.js)
+* Withdraw from Matic to Ropsten - [initiate-withdraw-ERC20.js](https://github.com/maticnetwork/matic.js/blob/master/examples/node/initiate-withdraw-ERC20.js) >> (wait for ~5 mins) >>
+[confirm-withdraw.js](https://github.com/maticnetwork/matic.js/blob/master/examples/node/confirm-withdraw.js) >> (wait for ~5 mins) >>
+[process-exit-ERC20.js](https://github.com/maticnetwork/matic.js/blob/master/examples/node/process-exit-ERC20.js)
 
 ![Arch](/images/matic-workflow-theme.jpg)
 
