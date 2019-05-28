@@ -8,6 +8,7 @@ Block time on the Matic testnet is ~1s.
 * Everything else remains the same
 * Matic Mainnet will have PoS security, with greater Plasma guarantees being added
 
+> **Note**: Developers already integrating with https://testnet2.matic.network/ can change their RPC to https://pre-alpha.matic.network in order to move to the pre-alpha Matic mainnet test chain. This environment will have the same changes as in the alpha Matic mainnet, and will allow any breaking changes to be rectified in your application.
 
 ### Bring Ropsten assets (ERC20/ERC721) to the Matic testnet using Plasma
 
