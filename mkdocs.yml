@@ -48,7 +48,7 @@ extra:
       link: "https://medium.com/matic-network"
 
 nav:
-  - Matic Network:
+  - Matic Testnet:
       - Home: index.md
       - Getting started: getting-started.md
       - Quick start to Matic: 2-min-guide-to-matic.md
@@ -67,3 +67,7 @@ nav:
       - Configure Matic testnet on Metamask: newbies/conf-testnet-metamask.md
       - Configure custom tokens on Metamask: newbies/conf-custom-tokens-metamask.md
       - Changing Gas fees on Metamask: newbies/how-to-change-gas-fees.md
+  - Matic Alpha-Mainnet:
+      - Introduction: alpha-mainnet/introduction.md
+      - Matic.js tutorial: alpha-mainnet/matic-js-alpha-mainnet.md
+      - Configure Matic Alpha-mainnet on Metamask: alpha-mainnet/conf-alpha-mainnet-metamask.md
