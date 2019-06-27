@@ -1,0 +1,1 @@
+This section of the docs pertains to developers that would like to get their hands on Matic Alpha-mainnet. In this section you will learn how to use Matic JS (SDK) to deposit funds to Matic sidechains and then make transfers.
