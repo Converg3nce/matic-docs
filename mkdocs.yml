@@ -51,11 +51,11 @@ nav:
   - Matic Testnet:
       - Home: index.md
       - Getting started: getting-started.md
+      - Deploying contracts on Matic testnet: deploy-contracts-remix.md
       - Quick start to Matic: 2-min-guide-to-matic.md
       - Matic.js tutorial: matic-js-tutorial.md
       - FAQ: faq.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
-      - Deploying contracts on Matic testnet: deploy-contracts-remix.md
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:
@@ -69,6 +69,7 @@ nav:
       - Changing Gas fees on Metamask: newbies/how-to-change-gas-fees.md
   - Matic Alpha-Mainnet:
       - Introduction: alpha-mainnet/introduction.md
+      - Deploying contracts on Matic Alpha-mainnet: alpha-mainnet/deploy-contracts-remix-alpha-mainnet.md
       - Matic.js tutorial: alpha-mainnet/matic-js-alpha-mainnet.md
       - Configure Matic Alpha-mainnet on Metamask: alpha-mainnet/conf-alpha-mainnet-metamask.md
-      - Deploying contracts on Matic Alpha-mainnet: alpha-mainnet/deploy-contracts-remix-alpha-mainnet.md
+      

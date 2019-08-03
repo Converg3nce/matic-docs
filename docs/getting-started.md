@@ -2,11 +2,14 @@
 
 This page will help you understand the basics of how Matic Network works. 
 
+To deploy contracts on the Matic, you can read our tutorial on [How to deploy contracts on Matic Testnet](https://docs.matic.network/deploy-contracts-remix/)
+
 It is recommended that developers new to Matic, start with the Matic.js library. `maticjs` makes it easy for developers, who may not be deeply familiar with smart contract development and otherwise, to quickly interact with the various components of Matic Network.
 
 This page will help developers to move assets from Ethereum chain to Matic chain, transfer assets on Matic and withdraw from Matic to Ethereum using fraud proofs.
 
 We will be improving this library on an ongoing basis to make all features available like Plasma Faster Exit, Challenge exit, Finalize exit and more.
+
 
 ### Sidechain basics
 The basic workflow of how we can scale transactions on a sidechain is that we can take
@@ -35,7 +38,7 @@ The flow for asset transfers on the Matic Network is as follows:
 
 **Ropsten testnet addresses**
 
-* Ropsten MATIC ERC20 token: 0x6b0b0e265321e788af11b6f1235012ae7b5a6808
+* Ropsten MATIC ERC20 token: 0x70459e550254b9d3520a56ee95b78ee4f2dbd846
 * Root Contract: 0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4
 * DepositManager Contract: 0x4072fab2a132bf98207cbfcd2c341adb904a67e9
 * WithdrawManager Contract: 0x4ef2b60cdd4611fa0bc815792acc14de4c158d22
@@ -43,11 +46,11 @@ The flow for asset transfers on the Matic Network is as follows:
 **Matic Testnet**
 
 * RPC endpoint host: https://testnet2.matic.network
-* Matic testnet MATIC ERC20 token: 0xcc5de81d1af53dcb5d707b6b33a50f4ee46d983e
+* Matic testnet MATIC ERC20 token: 0xc82c13004c06E4c627cF2518612A55CE7a3Db699
 
 ### Faucet
 
-You can get test MATIC tokens on Ropsten from our faucet - https://wallet.matic.today/faucet.
+You can get test MATIC tokens on Ropsten from our faucet - https://faucet.matic.network.
 
 ### Install Matic.js
 
@@ -66,6 +69,7 @@ CDN
 ```
 
 Matic is also available on [unpkg](https://unpkg.com/maticjs/dist/matic.js)
+
 
 ### Getting started
 

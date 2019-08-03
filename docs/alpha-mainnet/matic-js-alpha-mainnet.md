@@ -16,7 +16,7 @@ Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ethereu
 
 <div style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
 <button class="btn btn-primary btn-md" style="padding: 15px;background-color: #000;color: #fff; border-radius: 4px;cursor: pointer; box-shadow: 0px 4px 7px -4px rgba(0,0,0,0.75);">
-  <a href="https://wallet.matic.today/faucet" target="_blank" style="color:inherit;">
+  <a href="https://faucet.matic.today" target="_blank" style="color:inherit;">
     Get Test Tokens
   </a>
 </button>
@@ -57,13 +57,13 @@ Account #3: 0xbFF81BA6Fa6593F0467592ACcF770A120f740552
 
 When you create multiple accounts at your end, your addresses will be different from those shown here.
 
-In order to view the flow of funds easily on the Matic Network using Matic.js, you can configure Matic’s testnet URL on Metamask. Refer this link — https://docs.matic.network/newbies/conf-testnet-metamask/ to quickly set it up. Note this is **optional**. You can query using web3, if you choose to.
+In order to view the flow of funds easily on the Matic Network using Matic.js, you can configure Matic’s Alpha-mainnet URL on Metamask. Refer this link — https://docs.matic.network/alpha-mainnet/conf-alpha-mainnet-metamask/ to quickly set it up. Note this is **optional**. You can query using web3, if you choose to.
 
 ### Configuring Matic Test tokens on Metamask
 
 The `TEST` token, taken as an example for this tutorial, can be configured in Metamask so as to easily visualise account balances. Again note this is **optional**. You can very easily query the token balances and other variables using [web3](https://web3js.readthedocs.io/en/1.0/)
 
-These Test tokens needs to be added to all 3 test accounts in Metamask once each in both the Ethereum and Matic testnets:
+These Test tokens needs to be added to all 3 test accounts in Metamask once each in both the Ethereum and Matic alpha-mainnet:
 
 
 ```js
@@ -233,7 +233,7 @@ while on Matic Network we have `0 TEST` tokens.
 
 ![Arch](images/before-deposit-balance-matic.png)
 
-We will be depositing `1 TEST` tokens to Matic Testnet.
+We will be depositing `1 TEST` tokens to Matic.
 
 Let’s run the Deposit function. To run use:
 
