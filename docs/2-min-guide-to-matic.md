@@ -31,3 +31,9 @@ The flow for this would be:
 * Take a look at the examples here - https://github.com/maticnetwork/matic.js/tree/master/examples - to get started
 
 
+### For introduction to Matic, Plasma, Layer-2 architecture, and how to get started
+
+<center>
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/M1OTnVGcuMI">
+    </iframe>
+</center>
