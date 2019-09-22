@@ -31,7 +31,7 @@ The flow for asset transfers on the Matic Network is as follows:
 2. Once deposited tokens get confirmed on the mainchain, the corresponding tokens will get reflected on the Matic chain
     - The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second). That way, the transfer will be done almost instantly.
 3. Once a user is ready, they can withdraw remaining tokens from the mainchain. Withdrawal of funds is initiated from the Plasma Sidechain. A checkpoint interval of 5 mins is set, where all the blocks on the Matic block layer are validated since the last checkpoint.
-4. Once the checkpoint is submitted to the mainchain Ethereum contract, an NFT Exi (ERC721) token is created of equivalent value.
+4. Once the checkpoint is submitted to the mainchain Ethereum contract, an Exit NFT (ERC721) token is created of equivalent value.
 5. Users need to wait for a 7 day challenge period
 6. Once the challenge period is complete, the withdrawn funds can be claimed back to your Ethereum acccount from the mainchain contract using a process-exit procedure.
     - User can also get a fast exit via 0x or Dharma (coming soon!)
@@ -42,7 +42,7 @@ The flow for asset transfers on the Matic Network is as follows:
     - In case you don’t have some ETH on Ropsten, you can use the faucet links given here — https://faucet.metamask.io/ or https://faucet.ropsten.be/.
 - Add TEST token to your Ropsten account on Metamask
     - Refer the tutorial given [here](https://docs.matic.network/newbies/conf-custom-tokens-metamask/) to add a custom token
-    - TEST token contract address on Ropsten: `0x6b0b0e265321e788af11b6f1235012ae7b5a6808`
+    - TEST token contract address on Ropsten: `0x70459e550254b9d3520a56ee95b78ee4f2dbd846`
 - Get TEST tokens from the faucet https://wallet.matic.today/faucet
 - Add Matic RPC endpoint on Metamask
     - Refer the tutorial [here](https://docs.matic.network/newbies/conf-testnet-metamask/) to add a custom RPC endpoint
