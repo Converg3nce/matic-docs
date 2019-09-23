@@ -1,4 +1,4 @@
-# Registered Tokens
+# Registered Tokens with Ethereum and Matic Alpha-mainnet
 
 1. Matic Token (MATIC)
 

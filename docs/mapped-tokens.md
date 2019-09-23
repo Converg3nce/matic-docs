@@ -1,4 +1,4 @@
-# Registered Tokens
+# Registered Tokens with Ropsten and Matic Testnet
 
 1. Marblecoin (MBC)  
 
