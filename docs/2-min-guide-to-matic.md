@@ -14,11 +14,9 @@ Block time on the Matic testnet is ~1s.
 
 * To get TEST tokens on Ropsten you can access the Matic Faucet: https://wallet.matic.today/faucet
 
-```js
-Ropsten TEST token contract address - 0x6b0b0e265321e788af11b6f1235012ae7b5a6808
-```
+* Ropsten TEST token contract address - `0x6b0b0e265321e788af11b6f1235012ae7b5a6808`
 
-* Use matic.js (https://github.com/maticnetwork/matic.js) to interact with the Matic Plasma contracts. Go to https://docs.matic.network/matic-js-tutorial/ for a walkthrough of matic.js.
+* Use [matic.js](https://github.com/maticnetwork/matic.js) to interact with the Matic Plasma contracts. Go to  the [maticjs walkthrough](https://docs.matic.network/matic-js-tutorial/).
 
 The flow for this would be:
 
@@ -33,3 +31,9 @@ The flow for this would be:
 * Take a look at the examples here - https://github.com/maticnetwork/matic.js/tree/master/examples - to get started
 
 
+### For introduction to Matic, Plasma, Layer-2 architecture, and how to get started
+
+<center>
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/M1OTnVGcuMI">
+    </iframe>
+</center>
