@@ -56,6 +56,7 @@ nav:
       - Matic.js tutorial: matic-js-tutorial.md
       - FAQ: faq.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
+      - Registered Tokens (ERC20): mapped-tokens.md
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:
