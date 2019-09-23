@@ -2,7 +2,7 @@ Matic JS - Alpha Mainnet
 
 # Beginner-friendly tutorial to Matic.js
 
-This tutorial will act as a guide for a step-by-step process to understand and use [Matic JS](http://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. This guide is directed towards developers starting to begin their Ethereum journey. If you want to dive right ahead, feel free to skim through the article or choose to directly go to https://docs.matic.network/getting-started/.
+This tutorial will act as a guide for a step-by-step process to understand and use [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. This guide is directed towards developers starting to begin their Ethereum journey. If you want to dive right ahead, feel free to skim through the article or choose to directly go to https://docs.matic.network/getting-started/.
 
 ### Prerequisites:
 

@@ -87,7 +87,7 @@ Also, Matic side chains would be primarily public side chains i.e sidechains ava
 
 ## How is Matic Network different than Celer Network?
 
-Both Matic Network and Celer Network are different solutions to the same problem - low transaction throughput in current blockchains. Both utilise off-chain scaling techniques and rely on the main chain for final security; however the fundamental difference is in the approaches - Matic Network is based on a set of Plasma sidechain(s) backed by Proof-of-Stake consensus (see http://plasma.io/ for more details), whereas Celer Network is a state-channel based solution. Both projects aim for generalized state transitions off-chain, but in vastly different ways.
+Both Matic Network and Celer Network are different solutions to the same problem - low transaction throughput in current blockchains. Both utilise off-chain scaling techniques and rely on the main chain for final security; however the fundamental difference is in the approaches - Matic Network is based on a set of Plasma sidechain(s) backed by Proof-of-Stake consensus (see https://plasma.io/ for more details), whereas Celer Network is a state-channel based solution. Both projects aim for generalized state transitions off-chain, but in vastly different ways.
 
 Matic Network is aiming to build a DApp developer ecosystem. Since it uses an account-based Plasma sidechain, and also employs a EVM-compatible runtime known as the Matic VM, it will be relatively easier for Ethereum based DApps to migrate to Matic Network once it is live. So in this respect as well, Celer Network is different in terms of developer interfacing.
 
