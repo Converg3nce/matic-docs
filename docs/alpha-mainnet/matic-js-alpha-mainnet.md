@@ -359,6 +359,9 @@ And to confirm that on our receiver’s account, our balance is now updated to `
 
 ![Arch](images/account2-transfer1-update.png)
 
+You can also check the transaction on the Matic Explorer by searching the transaction hash.
+
+Link to the explorer - https://alpha-mainnet.explorer.matic.network/
 
 **Transfer #2**
 

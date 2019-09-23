@@ -73,4 +73,5 @@ nav:
       - Deploying contracts on Matic Alpha-mainnet: alpha-mainnet/deploy-contracts-remix-alpha-mainnet.md
       - Matic.js tutorial: alpha-mainnet/matic-js-alpha-mainnet.md
       - Configure Matic Alpha-mainnet on Metamask: alpha-mainnet/conf-alpha-mainnet-metamask.md
+      - Registered Tokens (ERC20): mapped-tokens-alpha.md
       
