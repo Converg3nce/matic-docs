@@ -50,13 +50,15 @@ extra:
 nav:
   - Matic Testnet:
       - Home: index.md
+      - Quick start to Matic: 2-min-guide-to-matic.md
       - Getting started: getting-started.md
       - Deploying contracts on Matic testnet: deploy-contracts-remix.md
-      - Quick start to Matic: 2-min-guide-to-matic.md
       - Matic.js tutorial: matic-js-tutorial.md
-      - FAQ: faq.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
+      - API Reference: api-reference.md
       - Registered Tokens (ERC20): mapped-tokens.md
+      - FAQ: faq.md
+
   - Dagger:
       - Getting started: dagger/getting-started.md
   - Zapier:

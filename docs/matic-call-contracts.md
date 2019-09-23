@@ -4,57 +4,66 @@ However, this page helps developers, who have a good understanding of smart cont
 
 ## Important Addresses and Links
 
-**Matic RPC endpoint host**: https://testnet.matic.network
+**Matic RPC endpoint**: `https://testnet2.matic.network`
 
-**Kovan testnet addresses**
-
-TEST mainchain ERC20 token: 0x670568761764f53E6C10cd63b71024c31551c9EC
-
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json" target="_blank">Download ABI</a>
-
-Plasma Root Contract: 0x24e01716a6ac34D5f2C4C082F553D86a557543a7
-
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json" target="_blank">Download ABI</a>
-
-**Matic testnet addresses**
-
-TEST childchain ERC20 token: 0x343461c74133E3fA476Dbbc614a87473270a226c
-
-<a href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/ChildERC20.json" target="_blank">Download ABI</a>
+|Contract|ABI|Ropsten|Matic|
+|---|---|---|---|
+|TEST (ERC20) token|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x70459e550254b9d3520a56ee95b78ee4f2dbd846`|`0xc82c13004c06E4c627cF2518612A55CE7a3Db699`|
+|Plasma Root Contract|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4`|   |
 
 ### Tokens for testing
 
-Please write to info@matic.network to request TEST tokens for development purposes. We will soon have a faucet in place for automatic distribution of tokens for testing.
+To get some `TEST` tokens on Ropsten network, you can access the Matic Faucet by clicking on the link below:
 
-## Step-by-step workflow details
+<div style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
+<button class="btn btn-primary btn-md" style="padding: 15px;background-color: #000;color: #fff; border-radius: 4px;cursor: pointer; box-shadow: 0px 4px 7px -4px rgba(0,0,0,0.75);">
+  <a href="https://wallet.matic.today/faucet" target="_blank" style="color:inherit;">
+    Get Test Tokens
+  </a>
+</button>
+</div>
 
-### 1. Deposit ERC20 token from Kovan to Matic
+## Workflow
 
-**Description**: To deposit assets (ERC20) from Kovan testnet to Matic
+### 1. Deposit ERC20 token from Ropsten to Matic
 
-**Network**: Kovan Testnet
+**Description**: To deposit assets (ERC20) from Ropsten to Matic
 
-    Contract: ERC20 contract
-    e.g. use TEST mainchain ERC20 token for reference
+Let the required amount of tokens be **X**.
 
-    Function: approve(address _rootContract, uint256 _amount)
+1. The Plasma Root Contract is approved to spend **X** on behalf of msg.sender
+    - **Contract**: `StandardToken.sol`
+    - **Network**: Ropsten
+    - **Function**: 
+        ```javascript
+        /**
+         * @dev Approve the passed address to spend the specified amount of tokens on behalf of msg.sender.
+         * @param _rootContract address of plasma root contract
+         * @param _amount amount of tokens to approve
+         **/
+        approve(address _rootContract, uint256 _amount)
+        ```
+2. **X** tokens are deposited from msg.sender to the Plasma Root   Contract
+    - **Contract**: `RootChain.sol`
+    - **Network**: Ropsten
+    - **Function**:
+      ```javascript
+      /**
+       * @dev deposit tokens for another user. transfers tokens to current contract and generates a deposit block
+       * @param _token address of mainchain erc20 token
+       * @param _user address of the user
+       * @param _amount amount of tokens to be deposited
+       **/
+      deposit(address _token, address _user, uint256 _amount)
+      ```
 
-        _rootContract - address of the Plasma Root contract
-        _amount - amount of tokens to be deposited
-
-    Function: deposit(address _token, address _user, uint256 _amount)
-
-        _token - address of the mainchain ERC20 token
-        _user - address of the user
-        _amount - amount of tokens to be deposited
-
-Sample code:
+**Sample code**:
 
 ```javascript
 
-async depositToken(a) {
+async depositToken(tokenAddress, amount) {
 
-  const rootChainAddress = '0x24e01716a6ac34d5f2c4c082f553d86a557543a7'
+  const rootChainAddress = '0x70459e550254b9d3520a56ee95b78ee4f2dbd846' 
   const web3 = this.selectedNetwork.web3
 
   var rootChainContract = new web3.eth.Contract(
@@ -62,10 +71,10 @@ async depositToken(a) {
     rootChainAddress.toLowerCase()
   )
 
-  var tokenContract = new web3.eth.Contract(TokenABI, a.address.toLowerCase())
+  var tokenContract = new web3.eth.Contract(TokenABI, tokenaddress.toLowerCase())
 
   await tokenContract.methods
-    .approve(rootChainAddress, web3.utils.toWei((2).toString()))
+    .approve(rootChainAddress, web3.utils.toWei((amount).toString()))
     .send({ from: this.accounts[0].address.toLowerCase() })
 
   var allowance = await tokenContract.methods
@@ -85,139 +94,166 @@ async depositToken(a) {
 }
 ```
 
-### 2. Transfer tokens on the sidechain
+### 2. Transfer tokens on Matic
 
-**Description**: To transfer tokens on the Matic sidechain
+**Description**: To transfer tokens on Matic testnet
 
-**Network**: Matic Testnet
+- **Contract**: `StandardToken.sol`
+- **Network**: Matic
+- **Function**: 
+      ```javascript
+      /**
+        * @dev Transfer token to a specified address
+        * @param to The address to transfer to.
+        * @param value The amount to be transferred.
+        */
+      transfer (address _to, uint256 _amount)
+      ```
 
-    Contract: ERC20 contract
-    e.g. use TEST mainchain ERC20 token for reference
-
-    Function: transfer(address _to, uint256_amount)
-
-        _to - Address of the user to which the tokens are to be transferred
-        _amount - Amount of tokens to be transferred
-
-Sample code:
+**Sample code**:
 
 ```javascript
-async transferTokens(token, user, amount, options = {}) {
-  const _tokenContract = this._getChildTokenContract(token)
-  return _tokenContract.methods.transfer(user, amount).send({
-    from: this.wallet.address,
-  ...options
-  })
+async transferTokens(tokenAddress, to, amount) {
+  var tokenContract = new web3.eth.Contract(TokenABI, tokenAddress.toLowerCase())
+
+  await tokenContract.methods
+    .transfer(to, amount)
+    .send({ from: this.accounts[0].address.toLowerCase() })
 }
 ```
 
-### 3. Display account balances for user
+### 3. Display account balances for users on Matic
 
-**Description**: Query ERC20 token balances for user
+**Description**: Query ERC20 token balances for user on Matic and Ropsten
 
-Balance on Matic testnet:
+- **Contract**: `StandardToken.sol`
+- **Network**: Matic
+- **Function**: 
+      ```javascript
+      /**
+       * @dev Gets the balance of the specified address.
+       * @param owner The address to query the balance of.
+       * @return A uint256 representing the amount owned by the passed address.
+       */
+      balanceOf (address _to, uint256 _amount)
+      ```
+
+
+**Sample code for Balance on Matic testnet**:
 
 ```javascript
 const web3 = new Web3("https://testnet.matic.network")
-const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
-const balance = await erc20Contract.methods.balanceOf(address).call()
-console.log("balance", balance)
+
+async getBalanceMatic (accountAddress) {
+  const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
+  const balance = await erc20Contract.methods.balanceOf(accountAddress).call()
+  console.log("balance", balance)
+}
+
 ```
 
-Balance on Kovan testnet:
+**Sample code for Balance on Ropsten testnet**:
 
 ```javascript
-const web3 = new Web3("https://kovan.infura.io/<insert custom key>")
-const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
-const balance = await erc20Contract.methods.balanceOf(address).call()
-console.log("balance", balance)
-```
+const web3 = new Web3("https://ropsten.infura.io/<insert custom key>")
 
-### 4. Withdraw ERC20 tokens from Matic to Kovan
-
-**Description**: To withdraw assets (ERC20) from Matic testnet to Kovan
-
-**Networks**: Matic Testnet & Kovan Testnet
-
-**Matic Testnet**:
-
-    Contract: Childchain ERC20 token contract
-    e.g. use TEST childchain ERC20 token
-
-    Function: withdraw(uint256 _amount)
-
-        _amount - Amount of tokens to be withdrawn
-
-Submit withdraw request with this code and get the transaction id:
-
-```javascript
-async withdrawToken() {
-  this.isLoading = true
-  const web3 = this.selectedNetwork.web3
-
-  var childERC20Contract = new web3.eth.Contract(
-    ChildTokenABI,
-    this.withdrawTx.address.toLowerCase()
-  )
-
-  var withdrawData = childERC20Contract.methods.withdraw(
-    web3.utils.toWei(this.amount.toString())
-  )
-
-  sendContractTransaction(
-    this.selectedNetwork.web3,
-    withdrawData,
-    {
-      from: this.accounts[0].address.toLowerCase()
-    },
-    {
-      txShowSuccess: hash => {
-        // Add transaction hash to firebase.
-        fire.userPendingWithdrawalsRef(hash.toLowerCase()).set({
-          transactionId: hash,
-          updatedAt: fire.FieldValue.serverTimestamp()
-        })
-        .then(() => {
-          // reset form
-          this.isWithdrawDone= !this.isWithdrawDone
-          this.resetForm()
-          // this.$router.push('/pending')
-        })
-        .catch((error) => {
-          console.error("Error adding document: ", error);
-        });
-      }
-    }
-  )
+async getBalanceRopsten (accountAddress) {
+  const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
+  const balance = await erc20Contract.methods.balanceOf(accountAddress).call()
+  console.log("balance", balance)
 }
 ```
 
-**Kovan Testnet**:
+### 4. Withdraw ERC20 tokens from Matic to Ropsten
 
-    Contract: Plasma root contract
+**Description**: To withdraw assets (ERC20) from Matic testnet to Ropsten
 
-    Function: withdraw(uint256 _headerNumber, bytes _headerProof, uint256 _blockNumber, uint256 _blockTime, bytes32 _txRoot,bytes32 _receiptRoot, bytes _path,bytes _txBytes, bytes _txProof, bytes _receiptBytes, bytes _receiptProof)
+Let **X** be the amount of tokens to be withdrawn.
 
-        _headerNumber - Header block number
-        _headerProof - Header block proof
-        _blockNumber - Plasma block number
-        _blockTime - Timestamp of Plasma block creation
-        _txRoot - Transaction root
-        _receiptRoot - Receipt root
-        _path - Key for the Trie
-        _txBytes - Transaction Bytes
-        _txProof - Transction Proof
-        _receiptBytes - Receipt Bytes
-        _receiptProof - Receipt Proof
+1. Submit withdraw request of **X** tokens on Matic - burns the tokens and returns a tx ID.
+    - **Contract**: `ChildERC20.sol`
+    - **Network**: Matic
+    - **Function**: 
+        ```javascript
+        /**
+         * @dev Withdraw tokens
+         *
+         * @param amount tokens
+         */
+        function withdraw(uint256 amount)
+        ```
+2. Use tx ID from previous step to create a withdraw transaction on Ropsten
+    - **Contract**: `Rootchain.sol`
+    - **Network**: Ropsten
+    - **Function**:
+      ```javascript
+      /**
+       * @dev withdraws the tokens burnt on matic  
+       * @param headerNumber header block
+       * @param headerProof proof
+       * @param blockNumber block number
+       * @param blockTime Timestamp of Plasma block creation
+       * @param txRoot tx root 
+       * @param receiptRoot receipt root
+       * @param path Key for the Trie 
+       * @param txBytes tx bytes
+       * @param txProof tx proof nodes
+       * @param receiptBytes receipt bytes
+       * @param receiptProof receipt proof nodes
+      **/
+      function withdrawBurntTokens(
+        uint256 headerNumber,
+        bytes headerProof,
 
-Using the transaction id from previous step, call the following code:
+        uint256 blockNumber,
+        uint256 blockTime,
+        bytes32 txRoot,
+        bytes32 receiptRoot,
+        bytes path,
+
+        bytes txBytes,
+        bytes txProof,
+
+        bytes receiptBytes,
+        bytes receiptProof
+      )
+      ```
+3. Process Exits
+    - **Contract**: `RootChain.sol`
+    - **Network**: Ropsten
+    - **Function**: 
+        ```javascript
+        /**
+         * @dev Processes any exits that have completed the exit period.
+         */
+        function processExits(address _token) 
+        ```
+
+**Sample Code**
+
+Submit withdraw request and get tx ID:
 
 ```javascript
-async submitProof(txId) {
-  var transactionHash = txId
-  const web3Child = new Web3('https://testnet.matic.network')
-  const rootChainAddress = '0x24e01716a6ac34d5f2c4c082f553d86a557543a7'
-  const web3 = new Web3(this.selectedNetwork.web3)
+
+_web3 = new Web3 (maticProvider)
+
+async startWithdraw(tokenAddress, amount, _from) {
+    const tokenContract = new web3.eth.Contract(tokenABI, tokenAddress)
+    
+    return tokenContract.methods.withdraw(amount).send(
+      from: _from
+    )
+}
+```
+
+Use the tx ID to withdraw burnt tokens:
+
+```javascript
+async submitProof (txId) {
+var transactionHash = txId
+  const web3Child = new Web3(maticProvider)
+  const rootChainAddress = '0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4'
+  const web3 = new Web3(ropstenProvider)
 
   var rootChainContract = new web3.eth.Contract(
     RootContractAbi,
@@ -266,7 +302,7 @@ async submitProof(txId) {
   const headerProof = await tree.getProof(getBlockHeader(withdrawObj.block))
 
   const startWithdrawReceipt = await rootChainContract.methods
-    .withdraw(
+    .withdrawBurntTokens(
       headerNumber.toString(), // header block
       utils.bufferToHex(Buffer.concat(headerProof)), // header proof
       withdrawObj.block.number.toString(), // block number
@@ -285,4 +321,21 @@ async submitProof(txId) {
   }
 ```
 
-For detailed help on the functions used in the above snippet, you can refer [this link](https://github.com/maticnetwork/matic.js/blob/master/src/helpers/proofs.js).
+Process Exits:
+
+```javascript
+async processExits (rootTokenAddress) {
+  const rootChainAddress = '0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4'
+  const web3 = new Web3(ropstenProvider)
+
+  var rootChainContract = new web3.eth.Contract(
+    RootContractAbi,
+    rootChainAddress.toLowerCase()
+  )
+  rootChainContract.methods.processExits(
+      rootTokenAddress
+    ).send ({
+      from: this.accounts[0].address.toLowerCase()
+    })
+}
+```
