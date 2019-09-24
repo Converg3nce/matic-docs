@@ -53,7 +53,7 @@ nav:
       - Quick start to Matic: 2-min-guide-to-matic.md
       - Getting started: getting-started.md
       - Deploying contracts on Matic testnet: deploy-contracts-remix.md
-      - Calling the Matic Plasma contracts directly: matic-call-contracts.md
+      - Calling Matic Plasma Contracts: calling-matic-plasma-contracts.md
       - Matic.js tutorial: matic-js-tutorial.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
       - API Reference: api-reference.md
@@ -74,8 +74,7 @@ nav:
   - Matic Alpha-Mainnet:
       - Introduction: alpha-mainnet/introduction.md
       - Deploying contracts on Matic Alpha-mainnet: alpha-mainnet/deploy-contracts-remix-alpha-mainnet.md
-      - Calling the Matic Plasma contracts directly: alpha-mainnet/matic-call-contracts-alpha.md
+      - Calling Matic Plasma Contracts: alpha-mainnet/calling-matic-plasma-contracts-alpha.md
       - Matic.js tutorial: alpha-mainnet/matic-js-alpha-mainnet.md
       - Configure Matic Alpha-mainnet on Metamask: alpha-mainnet/conf-alpha-mainnet-metamask.md
       - Registered Tokens (ERC20): alpha-mainnet/mapped-tokens-alpha.md
-      
