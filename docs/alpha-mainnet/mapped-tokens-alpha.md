@@ -13,3 +13,7 @@ Matic: 0xc2cfb9df693008d45E0E1ac7218dF89Beb092928
 Ethereum: 0xd391dd06730931c84cc168e54466b234451c1a0e
 Matic: 0x9d3F6E51A7C485381AFD53802fF828b083DB403C
 ```
+
+### To propose a new token (ERC20/721) on Matic Alpha-mainnet you can fill the form below:
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScaiH5Z9rfBgglPiIZXbCH_qe-SKXFnq7VTgxMOgas25lHmBQ/viewform?embedded=true" width="640" height="981" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>

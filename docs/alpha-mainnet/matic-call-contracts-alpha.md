@@ -4,16 +4,16 @@ However, this page helps developers, who have a good understanding of smart cont
 
 ## Important Addresses and Links
 
-**Matic RPC endpoint**: `https://testnet2.matic.network`
+**Matic RPC endpoint**: `https://alpha.ethereum.matic.network/`
 
-|Contract|ABI|Ropsten|Matic|
+|Contract|ABI|Ethereum|Matic Alpha-mainnet|
 |---|---|---|---|
-|TEST (ERC20) token|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x70459e550254b9d3520a56ee95b78ee4f2dbd846`|`0xc82c13004c06E4c627cF2518612A55CE7a3Db699`|
-|Plasma Root Contract|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4`|   |
+|TEST (ERC20) token|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0xd391dd06730931c84cc168e54466b234451c1a0e`|`0x9d3F6E51A7C485381AFD53802fF828b083DB403C`|
+|Plasma Root Contract|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x2aa012a32db4297b6c1ec06b81e498154b4e8d46`|   |
 
 ### Tokens for testing
 
-To get some `TEST` tokens on Ropsten network, you can access the Matic Faucet by clicking on the link below:
+To get some `TEST` tokens on Ethereum or Matic Alpha-mainnet network, you can access the Matic Faucet by clicking on the link below:
 
 <div style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
 <button class="btn btn-primary btn-md" style="padding: 15px;background-color: #000;color: #fff; border-radius: 4px;cursor: pointer; box-shadow: 0px 4px 7px -4px rgba(0,0,0,0.75);">
@@ -27,19 +27,19 @@ To get some `TEST` tokens on Ropsten network, you can access the Matic Faucet by
 
 You can also check transaction procesed on the Matic Sidechain using the Matic Explorer.
 
-Link to the explorer - https://explorer.testnet2.matic.network/
+Link to the explorer - https://alpha-mainnet.explorer.matic.network/
 
 ## Workflow
 
-### 1. Deposit ERC20 token from Ropsten to Matic
+### 1. Deposit ERC20 token from Ethereum to Matic Alpha-mainnet
 
-**Description**: To deposit assets (ERC20) from Ropsten to Matic
+**Description**: To deposit assets (ERC20) from Ethereum to Matic
 
 Let the required amount of tokens be **X**.
 
 1. The Plasma Root Contract is approved to spend **X** on behalf of msg.sender
     - **Contract**: `StandardToken.sol`
-    - **Network**: Ropsten
+    - **Network**: Ethereum
     - **Function**: 
         ```javascript
         /**
@@ -51,7 +51,7 @@ Let the required amount of tokens be **X**.
         ```
 2. **X** tokens are deposited from msg.sender to the Plasma Root   Contract
     - **Contract**: `RootChain.sol`
-    - **Network**: Ropsten
+    - **Network**: Ethereum
     - **Function**:
       ```javascript
       /**
@@ -69,7 +69,7 @@ Let the required amount of tokens be **X**.
 
 async depositToken(tokenAddress, amount) {
 
-  const rootChainAddress = '0x70459e550254b9d3520a56ee95b78ee4f2dbd846' 
+  const rootChainAddress = '0xd391dd06730931c84cc168e54466b234451c1a0e' 
   const web3 = this.selectedNetwork.web3
 
   var rootChainContract = new web3.eth.Contract(
@@ -102,7 +102,7 @@ async depositToken(tokenAddress, amount) {
 
 ### 2. Transfer tokens on Matic
 
-**Description**: To transfer tokens on Matic testnet
+**Description**: To transfer tokens on Matic alpha-mainnet
 
 - **Contract**: `StandardToken.sol`
 - **Network**: Matic
@@ -130,7 +130,7 @@ async transferTokens(tokenAddress, to, amount) {
 
 ### 3. Display account balances for users on Matic
 
-**Description**: Query ERC20 token balances for user on Matic and Ropsten
+**Description**: Query ERC20 token balances for user on Matic and Ethereum
 
 - **Contract**: `StandardToken.sol`
 - **Network**: Matic
@@ -145,10 +145,10 @@ async transferTokens(tokenAddress, to, amount) {
       ```
 
 
-**Sample code for Balance on Matic testnet**:
+**Sample code for Balance on Matic Alpha-mainnet**:
 
 ```javascript
-const web3 = new Web3("https://testnet.matic.network")
+const web3 = new Web3("https://alpha.ethereum.matic.network/")
 
 async getBalanceMatic (accountAddress) {
   const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
@@ -158,10 +158,10 @@ async getBalanceMatic (accountAddress) {
 
 ```
 
-**Sample code for Balance on Ropsten testnet**:
+**Sample code for Balance on Ethereum mainnet**:
 
 ```javascript
-const web3 = new Web3("https://ropsten.infura.io/<insert custom key>")
+const web3 = new Web3("https://mainnet.infura.io/<insert custom key>")
 
 async getBalanceRopsten (accountAddress) {
   const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
@@ -170,9 +170,9 @@ async getBalanceRopsten (accountAddress) {
 }
 ```
 
-### 4. Withdraw ERC20 tokens from Matic to Ropsten
+### 4. Withdraw ERC20 tokens from Matic alpha-mainnet to Ethereum
 
-**Description**: To withdraw assets (ERC20) from Matic testnet to Ropsten
+**Description**: To withdraw assets (ERC20) from Matic alpha-mainnet to Ethereum
 
 Let **X** be the amount of tokens to be withdrawn.
 
@@ -188,9 +188,9 @@ Let **X** be the amount of tokens to be withdrawn.
          */
         function withdraw(uint256 amount)
         ```
-2. Use tx ID from previous step to create a withdraw transaction on Ropsten
+2. Use tx ID from previous step to create a withdraw transaction on Ethereum
     - **Contract**: `Rootchain.sol`
-    - **Network**: Ropsten
+    - **Network**: Ethereum
     - **Function**:
       ```javascript
       /**
@@ -226,7 +226,7 @@ Let **X** be the amount of tokens to be withdrawn.
       ```
 3. Process Exits
     - **Contract**: `RootChain.sol`
-    - **Network**: Ropsten
+    - **Network**: Ethereum
     - **Function**: 
         ```javascript
         /**
@@ -331,7 +331,7 @@ Process Exits:
 
 ```javascript
 async processExits (rootTokenAddress) {
-  const rootChainAddress = '0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4'
+  const rootChainAddress = '0x2aa012a32db4297b6c1ec06b81e498154b4e8d46'
   const web3 = new Web3(parentProvider)
 
   var rootChainContract = new web3.eth.Contract(

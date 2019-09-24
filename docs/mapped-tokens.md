@@ -76,3 +76,8 @@ Matic: 0xc82c13004c06E4c627cF2518612A55CE7a3Db699
 Ropsten: 0xc399f24304D3FC8Ffde09B4Cc59bD2B4a5E6D177
 Matic: 0xAa4c5157F21e3F72Dd431F9d5dc997727a2EF191
 ```
+
+
+### To propose a new token (ERC20/721) on Matic Testnet you can fill the form below:
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScaiH5Z9rfBgglPiIZXbCH_qe-SKXFnq7VTgxMOgas25lHmBQ/viewform?embedded=true" width="640" height="981" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
