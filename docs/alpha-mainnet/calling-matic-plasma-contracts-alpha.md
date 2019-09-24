@@ -1,3 +1,5 @@
+# Calling the Matic Plasma contracts directly
+
 For most developers, it is advisable and recommended to use the Matic.js library to interact with Matic.
 
 However, this page helps developers, who have a good understanding of smart contracts in Ethereum, to bypass the Matic.js library and interact directly with the Matic smart contracts. This might help developers to understand the inner workings of Matic Network, as well as to customise their interaction with Matic to some extent.
