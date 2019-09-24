@@ -34,6 +34,6 @@ The flow for this would be:
 ### For introduction to Matic, Plasma, Layer-2 architecture, and how to get started
 
 <center>
-    <iframe width="420" height="315" src="http://www.youtube.com/embed/M1OTnVGcuMI">
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/M1OTnVGcuMI">
     </iframe>
 </center>

@@ -1,6 +1,6 @@
 # Beginner-friendly tutorial to Matic.js
 
-This tutorial will act as a guide for a step-by-step process to understand and use [Matic JS](http://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. This guide is directed towards developers starting to begin their Ethereum journey. If you want to dive right ahead, feel free to skim through the article or choose to directly go to https://docs.matic.network/getting-started/.
+This tutorial will act as a guide for a step-by-step process to understand and use [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. This guide is directed towards developers starting to begin their Ethereum journey. If you want to dive right ahead, feel free to skim through the article or choose to directly go to https://docs.matic.network/getting-started/.
 
 ### Prerequisites:
 
@@ -357,6 +357,10 @@ Our balance on account address — `0x1a06816065731fcBD7296f9B2400d632816b07
 And to confirm that on our receiver’s account, our balance is now updated to `1 TEST` tokens.
 
 ![Arch](maticjstutorial-images/account2-transfer1-update.png)
+
+You can also check the transaction on the Matic Explorer by searching the transaction hash.
+
+Link to the explorer - https://explorer.testnet2.matic.network/
 
 
 **Transfer #2**
