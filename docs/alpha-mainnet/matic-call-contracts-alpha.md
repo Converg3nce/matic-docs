@@ -23,6 +23,12 @@ To get some `TEST` tokens on Ethereum or Matic Alpha-mainnet network, you can ac
 </button>
 </div>
 
+### Matic Explorer
+
+You can also check transaction procesed on the Matic Sidechain using the Matic Explorer.
+
+Link to the explorer - https://alpha-mainnet.explorer.matic.network/
+
 ## Workflow
 
 ### 1. Deposit ERC20 token from Ethereum to Matic Alpha-mainnet

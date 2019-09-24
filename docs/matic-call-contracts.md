@@ -23,6 +23,12 @@ To get some `TEST` tokens on Ropsten network, you can access the Matic Faucet by
 </button>
 </div>
 
+### Matic Explorer
+
+You can also check transaction procesed on the Matic Sidechain using the Matic Explorer.
+
+Link to the explorer - https://explorer.testnet2.matic.network/
+
 ## Workflow
 
 ### 1. Deposit ERC20 token from Ropsten to Matic
