@@ -71,6 +71,7 @@ nav:
       - Configure Matic testnet on Metamask: newbies/conf-testnet-metamask.md
       - Configure custom tokens on Metamask: newbies/conf-custom-tokens-metamask.md
       - Changing Gas fees on Metamask: newbies/how-to-change-gas-fees.md
+      - Getting Started with Solidity: newbies/getting-started-solidity.md
       - Deploying a DApp on Matic Network: newbies/deploy-dapp-on-matic.md
   - Matic Alpha-Mainnet:
       - Introduction: alpha-mainnet/introduction.md

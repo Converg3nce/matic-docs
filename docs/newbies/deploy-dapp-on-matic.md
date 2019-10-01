@@ -4,6 +4,8 @@
 
 This tutorial covers an overview of web interaction with Solidity - making use of an extension called Metamask. We'll be using a pre-written Ethereum smart contract and would be deploying it on a local blockchain using ganache-cli and Remix.
 
+To get a snippet on Solidity you can read this post: https://docs.matic.network/newbies/getting-started-solidity/
+
 This ĐApp uses Nuxt.js, but we'd only be focusing on the pieces that help us build. In reality, any JS framework can be used.
 
 ## Installation and Prerequisites
@@ -101,6 +103,8 @@ For this, we use the Remix IDE - an online IDE to develop smart contracts.
 If not already activated, you will need to activate plugins such as `Deploy & Run Transactions` and `Solidity Complier`
 
 Your left menu should look something like this:
+
+![](images/dapp-tutorial/remix-left-menu.png?raw=true)<br/><br/>
 
 - Create a new file, Airbnb.sol
 
