@@ -25,21 +25,13 @@ There exist two types of accounts:
 
 These can be differentiated as follows:
 
-| Contract accounts                                                                                     |
-| :-----------                                                                                          |
-| **A Contract**:                                                                                       |
-| 1. has an ether balance,                                                                              |
-| 2. has associated code,                                                                               |
-| 3. code execution is triggered by transactions or messages (calls) received from other contracts,     |
-| 4. when executed - perform operations of arbitrary complexity (Turing completeness) - manipulate its  | own persistent storage, i.e., can have its own permanent state - can call other contracts.    
-
-| Externally Owned Account (EOA)                                                                        |
-| :-----------                                                                                          |
-| **An externally controlled account**:                                                                 |
-| 1. has an ether balance,                                                                              |
-| 2. can send transactions (ether transfer or trigger contract code),                                   |
-| 3. is controlled by private keys                                                                      |
-| 4. has no associated code.                                                                            |
+| Contract accounts| Externally Owned Account (EOA)|  
+|---|---|
+|**A Contract**:|**An externally controlled account**:<img width=700/>|   
+|1. has an ether balance|1. has an ether balance|   
+|2. has associated code|2. can send transactions (ether transfer or trigger contract code), |   
+|3. code execution is triggered by transactions or messages (calls) received from other contracts|3. is controlled by private keys|
+|4. when executed - perform operations of arbitrary complexity (Turing completeness) - manipulate its own persistent storage, i.e., can have its own permanent state - can call other contracts.|4. has no associated code.|
 
 [Source](https://github.com/ethereum/homestead-guide/blob/master/source/contracts-and-transactions/account-types-gas-and-transactions.rst#externally-owned-accounts-eoas)
 
@@ -166,88 +158,73 @@ On the whole, we require three basic functions:
 
 1. `renOutProperty`
 
-```js
-function rentOutproperty(string memory name, string memory description, uint256 price) public {
-    Property memory property = Property(name, description, true /* isActive */, price, msg.sender /* owner */, new bool[](365));
+        function rentOutproperty(string memory name, string memory description, uint256 price) public {
+            Property memory property = Property(name, description, true /* isActive */, price, msg.sender /* owner */, new bool[](365));
 
-    // Persist `property` object to the "permanent" storage
-    properties[propertyId] = property;
+            // Persist `property` object to the "permanent" storage
+            properties[propertyId] = property;
 
-    // emit an event to notify the clients
-    emit NewProperty(propertyId++);
-
-```
+            // emit an event to notify the clients
+            emit NewProperty(propertyId++);
 
 2. `rentProperty`
 
-```js
-function rentProperty(uint256 _propertyId, uint256 checkInDate, uint256 checkoutDate) public payable {
-    // Retrieve `property` object from the storage
-    Property storage property = properties[_propertyId];
+        function rentProperty(uint256 _propertyId, uint256 checkInDate, uint256 checkoutDate) public payable {
+            // Retrieve `property` object from the storage
+            Property storage property = properties[_propertyId];
 
-    // Assert that property is active
-    require(
-      property.isActive == true,
-      "property with this ID is not active"
-    );
+            // Assert that property is active
+            require(
+              property.isActive == true,
+              "property with this ID is not active"
+            );
 
-    // Assert that property is available for the dates
-    for (uint256 i = checkInDate; i < checkoutDate; i++) {
-      if (property.isBooked[i] == true) {
-        // if property is booked on a day, revert the transaction
-        revert("property is not available for the selected dates");
-      }
-}
-
-```
+            // Assert that property is available for the dates
+            for (uint256 i = checkInDate; i < checkoutDate; i++) {
+              if (property.isBooked[i] == true) {
+                // if property is booked on a day, revert the transaction
+                revert("property is not available for the selected dates");
+              }
+        }
 
 3. `markPropertyAsInactive`
 
-```js
-function markPropertyAsInactive(uint256 _propertyId) public {
-    require(
-      properties[_propertyId].owner == msg.sender,
-      "THIS IS NOT YOUR PROPERTY"
-    );
-    properties[_propertyId].isActive = false;
-  }
-
-```
+        function markPropertyAsInactive(uint256 _propertyId) public {
+            require(
+              properties[_propertyId].owner == msg.sender,
+              "THIS IS NOT YOUR PROPERTY"
+            );
+            properties[_propertyId].isActive = false;
+          }
 
 We used two functions `_sendFunds` and `_createBooking` in the `rentProperty` function. These two functions are internal functions and as the naming convention in Solidity goes, they are prefixed with an underscore. We require these to be internal for we won’t want anyone to be able to send funds to their own account or create a booking on an inactive property.
 
 These two functions are defined as:
 
 4. `_sendFunds`
+    You can read more about the particular transfer function we’ve used [here](https://solidity.readthedocs.io/en/v0.5.10/050-breaking-changes.html?highlight=address%20payable#explicitness-requirements).
 
-You can read more about the particular transfer function we’ve used [here](https://solidity.readthedocs.io/en/v0.5.10/050-breaking-changes.html?highlight=address%20payable#explicitness-requirements).
-
-```js
-function _sendFunds (address beneficiary, uint256 value) internal {
-address(uint160(beneficiary)).transfer(value);
-  }
-```
+        function _sendFunds (address beneficiary, uint256 value) internal {
+          address(uint160(beneficiary)).transfer(value);
+        }
 
 5. `_createBooking`
 
-```js
-    function _createBooking(uint256 _propertyId, uint256 checkInDate, uint256 checkoutDate) internal {
-    // Create a new booking object
-    bookings[bookingId] = Booking(_propertyId, checkInDate, checkoutDate, msg.sender);
+        function _createBooking(uint256 _propertyId, uint256 checkInDate, uint256 checkoutDate) internal {
+        // Create a new booking object
+        bookings[bookingId] = Booking(_propertyId, checkInDate, checkoutDate, msg.sender);
 
-    // Retrieve `property` object from the storage
-    Property storage property = properties[_propertyId];
+        // Retrieve `property` object from the storage
+        Property storage property = properties[_propertyId];
 
-    // Mark the property booked on the requested dates
-    for (uint256 i = checkInDate; i < checkoutDate; i++) {
-      property.isBooked[i] = true;
-    }
+        // Mark the property booked on the requested dates
+        for (uint256 i = checkInDate; i < checkoutDate; i++) {
+          property.isBooked[i] = true;
+        }
 
-    // Emit an event to notify clients
-    emit NewBooking(_propertyId, bookingId++);
-  }
-
-```
+        // Emit an event to notify clients
+        emit NewBooking(_propertyId, bookingId++);
+      }
 
 You can view the entire code [here](https://github.com/maticnetwork/ethindia-workshop/blob/master/contracts/Airbnb.sol).
 
