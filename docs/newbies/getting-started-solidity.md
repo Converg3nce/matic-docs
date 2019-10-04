@@ -12,7 +12,7 @@ To understand how you could deploy a DApp on Matic Network you can read this pos
 
 Solidity is an object oriented, high-level programming language for implementing smart contracts. Smart contracts are programs which govern the behavior of accounts within the Ethereum state. To familiarize with Ethereum it is important to discuss about the two main components of the ecosystem: Accounts and Transactions.
 
-### What are accounts?
+### What are Accounts?
 
 The global state of Ethereum is comprised of accounts that interact with one another through a message-passing framework. The most basic interaction is that of sending some value - like ether - the native cryptocurrency of Ethereum blockchain.
 
