@@ -8,11 +8,11 @@ Having sufficient introduction of the ecosystem we'll start with the tutorial an
 
 To understand how you could deploy a DApp on Matic Network you can read this post: https://docs.matic.network/newbies/deploy-dapp-on-matic/
 
-### What is solidity
+### What is Solidity?
 
 Solidity is an object oriented, high-level programming language for implementing smart contracts. Smart contracts are programs which govern the behavior of accounts within the Ethereum state. To familiarize with Ethereum it is important to discuss about the two main components of the ecosystem: Accounts and Transactions.
 
-### What are accounts
+### What are Accounts?
 
 The global state of Ethereum is comprised of accounts that interact with one another through a message-passing framework. The most basic interaction is that of sending some value - like ether - the native cryptocurrency of Ethereum blockchain.
 
@@ -35,7 +35,7 @@ These can be differentiated as follows:
 
 [Source](https://github.com/ethereum/homestead-guide/blob/master/source/contracts-and-transactions/account-types-gas-and-transactions.rst#externally-owned-accounts-eoas)
 
-### What are Transactions
+### What are Transactions?
 
 The term "transaction" is used in Ethereum to refer to the signed data package that stores a message to be sent from an externally owned account to another account on the blockchain.
 
@@ -81,7 +81,7 @@ smart contract
 
 ## Building a Decentralized Airbnb
 
-### What we are building
+### What are we building?
 
 We plan to build a Decentralized Airbnb that incorporates three main functionalities:
 
