@@ -1,16 +1,28 @@
 # Beginner-friendly tutorial to Matic.js
 
-This tutorial will act as a guide for a step-by-step process to understand and use [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. This guide is directed towards developers starting to begin their Ethereum journey. If you want to dive right ahead, feel free to skim through the article or choose to directly go to https://docs.matic.network/getting-started/.
+<!-- This tutorial will act as a guide for a step-by-step process to understand and use [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. This guide is directed towards developers starting to begin their Ethereum journey. If you want to dive right ahead, feel free to skim through the article or choose to directly go to https://docs.matic.network/getting-started/. -->
+
+This tutorial will act as a guide for step-by-step process to understand and use [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. 
+
+The process followed here is:
+
+1. Deposit assets from root chain to Matic
+2. Transfer assets between accounts on Matic
+3. Withdraw assets from Matic on to root chain
+
+In this tutorial we use ERC-20 assets to be transferred from Ropsten to Matic. The flow discussed below remains similar for ERC-721 assets with minor changes that will be mentioned wherever required.
 
 ### Prerequisites:
 
-### Some ETH on Ropsten in your account
+### Some ETH in your Ropsten account
 
 In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Ropsten, you can use the faucet links given here — https://faucet.metamask.io/ or https://faucet.ropsten.be/.
 
 ### Matic Faucet
 
 Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `TEST` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below
+
+#### ERC20
 
 <div style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
 <button class="btn btn-primary btn-md" style="padding: 15px;background-color: #000;color: #fff; border-radius: 4px;cursor: pointer; box-shadow: 0px 4px 7px -4px rgba(0,0,0,0.75);">
@@ -20,24 +32,26 @@ Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten
 </button>
 </div>
 
+#### ERC721
 
-All you would need to do is follow simple steps on the link above and you will get some funds in to your account:
-
-1. Go to the link and enter your address
-2. Copy the tweet content and tweet it
-3. Now, paste the Tweet Id in the last field and click on `Get Test Matic`
+To get `TEST` ERC721 tokens, you'd need to submit a request via this
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSekAoPK5dKecoYpNQ9YKMycNoegY39Oujy7mvLF23fsammRoQ/viewform?usp=sf_link" target="_blank">
+    form.</a>
 
 ## Using Matic JS
 
 We will be showcasing the flow for asset transfers on the Matic Network in this tutorial and how you can do the same using Matic.js:
 
-![Arch](maticjstutorial-images/workflow.jpeg)
+![](images/Matic-Workflow-2.jpg?raw=true)
 
-- User deposits tokens in Matic contract on mainchain
-- Once deposited tokens get confirmed on the main chain, the corresponding tokens will get reflected on the Matic chain.
-- The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second). That way, the transfer will be done almost instantly.
-- Once a user is ready, they can withdraw remaining tokens from the mainchain by establishing proof of remaining tokens on Root contract (contract deployed on Ropsten/Ethereum chain) within 7 days.
-- User can also get a fast exit via 0x or Dharma (coming soon!)
+1. User deposits crypto assets in Matic contract on mainchain
+2. Once deposited tokens get confirmed on the mainchain, the corresponding tokens will get reflected on the Matic chain
+    - The user can now transfer tokens to anyone they want instantly with negligible fees. Matic chain has faster blocks (approximately 1 second). That way, the transfer will be done almost instantly.
+3. Once a user is ready, they can withdraw remaining tokens from the mainchain. Withdrawal of funds is initiated from the Plasma Sidechain. A checkpoint interval of 5 mins is set, where all the blocks on the Matic block layer are validated since the last checkpoint.
+4. Once the checkpoint is submitted to the mainchain Ethereum contract, an Exit NFT (ERC721) token is created of equivalent value.
+5. Users need to wait for a 7 day challenge period
+6. Once the challenge period is complete, the withdrawn funds can be claimed back to your Ethereum acccount from the mainchain contract using a process-exit procedure.
+    - User can also get a fast exit via 0x or Dharma (coming soon!)
 
 ### Basic setup for the tutorial
 
@@ -61,20 +75,12 @@ In order to view the flow of funds easily on the Matic Network using Matic.js, y
 
 The `TEST` token, taken as an example for this tutorial, can be configured in Metamask so as to easily visualise account balances. Again note this is **optional**. You can very easily query the token balances and other variables using [web3](https://web3js.readthedocs.io/en/1.0/)
 
-These Test tokens needs to be added to all 3 test accounts in Metamask once each in both the Ropsten and Matic testnets:
+These Test tokens needs to be added (depending upon the type of asset you are using - erc20/erc721) to all 3 test accounts in Metamask once each in both the Ropsten and Matic testnets:
 
-
-```js
-Token name: TEST
-Where: Ropsten Network
-Contract address: 0x70459e550254b9d3520a56ee95b78ee4f2dbd846
-
-----------------------
-
-Token name: TEST 
-Where: Matic Testnet (Custom RPC: https://testnet2.matic.network)
-Contract address: 0xc82c13004c06e4c627cf2518612a55ce7a3db699
-```
+|  |Ropsten  |Matic  | 
+|---|---|---|
+|TEST (ERC20)  | `0x70459e550254b9d3520a56ee95b78ee4f2dbd846` | `0xc82c13004c06e4c627cf2518612a55ce7a3db699` |    
+|TEST (ERC721)  | `0x07d799252cf13c01f602779b4dce24f4e5b08bbd` | `0x9f289a264b6db56d69ad53f363d06326b984e637` |     
 
 In case you are new to Ethereum and Metamask, you can refer https://docs.matic.network/newbies/conf-custom-tokens-metamask/ on instructions on how to.
 
@@ -94,14 +100,12 @@ If you wish to directly refer a set of code examples, you can do so at https://g
 
 ### Depositing Funds from Ropsten to Matic
 
-Within the `matic-js-test` folder, create a new file and name it `deposit-ERC20.js`.
+Within the `matic-js-test` folder, create a new file and name it `deposit-ERC20.js`. (or `deposit-ERC721.js`) and add the following code
 
 ```js
 const Matic = require('maticjs').default
 const config = require('./config')
-
 const token = config.ROPSTEN_TEST_TOKEN // test token address
-const amount = '1000000000000000000' // amount in wei
 const from = config.FROM_ADDRESS // from address
 
 // Create object of Matic
@@ -114,6 +118,19 @@ const matic = new Matic({
 })
 
 matic.wallet = config.PRIVATE_KEY // prefix with `0x`
+```
+
+`token` is the address of the `TEST` TEST ERC20 token contract taken as an example in this tutorial. You will replace it with the relevant ERC20 token address in your DApp.
+
+`from` is your address. This will be address from which funds will be debited. Note that this is my test account address — you will need to plug your own address in here.
+
+`matic.wallet` is your private key. **Never store your private key in code on production** — this is added in the `config.js` file for illustration purposes. Typically a user’s private key will be stored in a browser wallet such as Metamask or a mobile wallet such as the Matic wallet, Status or a hardware wallet.
+
+Once matic object has been instantiated and wallet set up in place, add the following code, depending upon the type of token you're depositing: 
+
+#### ERC20
+```js
+const amount = '1000000000000000000' // amount in wei
 
 // Approve token
 matic
@@ -135,32 +152,33 @@ matic
     })
   })
 ```
-
-Let’s understand this a bit in detail.
-
-`token` is the address of the `TEST` TEST ERC20 token contract taken as an example in this tutorial. You will replace it with the relevant ERC20 token address in your DApp.
-
-```js
-const token = "config.ROPSTEN_TEST_TOKEN" // test token address
-```
-
 `amount` is the amount that is to be deposited. Amount is mentioned in `wei` . To those new to the field, `1 TEST` token is equivalent to 10¹⁸ `wei` . In the code snippet, `0.01 TEST` = 10¹⁶ `wei`.
 
 ```js
-const amount = "10000000000000000" // amount in wei (0.01 TEST)
+
+const tokenId = '1' // ERC721 token Id
+matic
+  .approveERC721TokenForDeposit(token, tokenId, {
+    from,
+    onTransactionHash: (hash) => {
+      // action on Transaction success
+      console.log(hash) // eslint-disable-line      
+    },
+  })
+  .then(() => {
+    matic.depositERC721Tokens(token, from, tokenId, {
+      from,
+      onTransactionHash: (hash) => {
+        // action on Transaction success
+        console.log(hash) // eslint-disable-line
+      },
+    })
+  })
+
 ```
 
-`from` is your address. This will be address from which funds will be debited. Note that this is my test account address — you will need to plug your own address in here.
+Here, instead of `amount` we mention the `tokenId` to be deposited.
 
-```js
-const from = "0xdcd53258BA8A69C6a505300BE75447A772bFd3d6" // from address
-```
-
-`matic.wallet` is your private key. **Never store your private key in code on production** — this is added in the `config.js` file for illustration purposes. Typically a user’s private key will be stored in a browser wallet such as Metamask or a mobile wallet such as the Matic wallet, Status or a hardware wallet.
-
-```js
-matic.wallet = config.PRIVATE_KEY // prefix with `0x`
-```
 
 You will also need to create another file `config.js`. This will contain all configuration related to Matic.js.
 
@@ -189,9 +207,7 @@ For now, don’t worry about these values — just keep them as is.
 
 You will need to add your private key here. Signing of transactions will require your private key. Again, it is **NOT ADVISABLE** to hard code your private key when on production. Later, you can build keeping in mind that the user will be handling their keys at their end with MetaMask, Matic Wallet or any other compatible user wallet.
 
-```js
-PRIVATE_KEY: "<insert-your-private-key-here>"
-```
+Make sure you prefix `0x` to your private key.
 
 Deposit is a 2 step process
 
@@ -238,6 +254,8 @@ Let’s run the Deposit function. To run use:
 
 `$ node deposit-ERC20.js`
 
+or `$ node deposit-ERC721.js`
+
 We have added console logging for both events, which when run successfully will display the Transaction Hash as well as a message `“Deposit Tokens from Ropsten/Ethereum to Matic — Transaction Approved.”.` Once deposit is complete, you will see the Transaction Hash and message `”Tokens deposited from Ropsten/Ethereum to Matic.”` Since this is only for illustration purposes, the message can be customized to anything of your choice. By default it will only display the Transaction Hash.
 
 ![Arch](maticjstutorial-images/run-deposit-erc20.png)
@@ -260,7 +278,7 @@ In order to ensure you have more funds, deposit `1 TEST` token to Matic by repea
 
 Once you have funds on Matic, you can use those funds to send to others instantly.
 
-Create a new file — `transfer-ERC20.js` —  in your code directory.
+Create a new file — `transfer-ERC20.js` —  in your code directory. (or `transfer-ERC721.js`)
 
 ```js
 const Matic = require('maticjs').default
@@ -268,9 +286,6 @@ const config = require('./config')
 
 const from = config.FROM_ADDRESS // from address
 const recipient = 'Paste Your receipent address here ...' // receipent address
-
-const token = config.MATIC_TEST_TOKEN // test token address
-const amount = '100000000000000000' // amount in wei
 
 // Create object of Matic
 const matic = new Matic({
@@ -282,6 +297,20 @@ const matic = new Matic({
 })
 
 matic.wallet = config.PRIVATE_KEY // prefix with `0x`
+```
+
+`recipient` is the receiver’s address, to whom the funds are supposed to be sent.
+
+```js
+const recipient = "0xf66f409086647591e0c2f122C1945554b8e0e74F" // to address
+```
+
+Once the above setup is in place, now depending upon the asset you are transferring, add the following code:
+
+#### ERC20
+```js
+const token = config.MATIC_TEST_TOKEN // test token address
+const amount = '1000000000000000000' // amount in wei
 
 // Send Tokens
 matic.transferTokens(token, recipient, amount, {
@@ -292,35 +321,27 @@ matic.transferTokens(token, recipient, amount, {
     console.log(hash) // eslint-disable-line
   },
 })
-
 ```
 
-`recipient` is the receiver’s address, to whom the funds are supposed to be sent.
-
+#### ERC721
 ```js
-const recipient = "0xf66f409086647591e0c2f122C1945554b8e0e74F" // to address
-```
 
-`token` is the Matic TEST token contract address on the Matic testnet. **Note that this is different from the Ropsten TEST token contract address.**. This is automatically picked up from the `config.js` file.
-
-```js
-const token = config.MATIC_TEST_TOKEN // test token address
-```
-
-The config details are then mentioned appropriately. You need not make any changes to it.
-
-The transfer functionality is invoked here.
-
-```js
-matic.transferTokens(token, recipient, amount, {
+const token = config.MATIC_ERC721_TOKEN // test token address
+const tokenId = '1' // ERC721 token Id
+// Send Tokens
+matic.transferERC721Tokens(token, receipent, tokenId, {
   from,
   // parent: true, // For token transfer on Main network (false for Matic Network)
   onTransactionHash: (hash) => {
     // action on Transaction success
-    console.log(hash, 'Transfer done!') // eslint-disable-line
+    console.log(hash) // eslint-disable-line
   },
 })
+
+
 ```
+
+The config details are then mentioned appropriately. You need not make any changes to it.
 
 **Sidenote** — you can change the `parent` parameter to TRUE if you are using Matic.js to transfer funds on the main Ethereum network.
 
@@ -402,18 +423,15 @@ Just for reference, there will be an active exit market, which will allow tradin
 
 **To keep the withdrawal process easier for now on the Matic Testnet, we have not enforced the 7-day withdrawal process**. This means while going through this tutorial and developing apps on the testnet, for now, you will get the withdrawn funds immediately after you initiate the `process-exit` procedure.
 
-Create 3 new files and name them `initiate-withdraw-ERC20.js`, `confirm-withdraw-ERC20.js`,  and `process-exit-ERCO20.js`
+Create 3 new files and name them `initiate-withdraw-ERC20.js`, `confirm-withdraw-ERC20.js`,  and `process-exit-ERC20.js`
+(Or, replace ERC20 with ERC721 in case you're using NFTs)
 
-**Initiate Withdraw**
+### Initiate Withdraw
 
 ```js
 const Matic = require('maticjs').default
 const config = require('./config')
-
-const token = config.MATIC_TEST_TOKEN // test token address
-const amount = '1000000000000000000' // amount in wei
 const from = config.FROM_ADDRESS // from address
-
 // Create object of Matic
 const matic = new Matic({
   maticProvider: config.MATIC_PROVIDER,
@@ -425,7 +443,16 @@ const matic = new Matic({
 })
 
 matic.wallet = config.PRIVATE_KEY // prefix with `0x`
+```
 
+The above setup code remains the same for ERC20/ERC721
+
+Now, depending upon your asset, add the following code:
+
+#### ERC20
+```js
+const token = config.MATIC_TEST_TOKEN // test token address
+const amount = '1000000000000000000' // amount in wei
 // NOTE: Initiate the withdraw on the Matic chain, and wait for ~5 minutes for 
 // the checkpoint (refer https://whitepaper.matic.network/#checklayer for technical details) 
 // before confirming the withdraw by executing `confirm-withdraw.js`.
@@ -440,7 +467,27 @@ matic
 })
 ```
 
-**Confirm Withdraw**
+#### ERC721
+
+```js
+const token = config.MATIC_ERC721_TOKEN // test token address
+const tokenId = '1' // ERC721 token Id
+matic
+  .startERC721Withdraw(token, tokenId, {
+    from,
+    onTransactionHash: (hash) => {
+      // action on Transaction success
+      console.log(hash) // eslint-disable-line
+    },
+  })
+
+// NOTE: Wait for next checkpoint, which will take approximately 5-10 mins. 
+// Then you can call complete-withdraw.js to submit proof.
+```
+
+### Confirm Withdraw
+
+The code for confirm withdraw remains common for ERC20 AND ERC721 tokens
 
 ```js
 const Matic = require('maticjs').default
@@ -473,7 +520,9 @@ matic.withdraw(transactionHash, {
 })
 ```
 
-**Process Exit**
+### Process Exit
+
+The code for confirm withdraw remains common for ERC20 AND ERC721 tokens except for the value of `rootTokenAddress`
 
 ```js
 
