@@ -48,6 +48,11 @@ extra:
       link: "https://medium.com/matic-network"
 
 nav:
+  - Staking:
+      - Economics: staking/economics.md
+      - Technical Requirements: staking/technical-requirements.md
+      - Staking FAQs: staking/faqs.md
+      - Node Setup Guide: staking/node-setup-guide.md
   - Matic Testnet:
       - Home: index.md
       - Quick start to Matic: 2-min-guide-to-matic.md
