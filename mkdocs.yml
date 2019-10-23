@@ -48,11 +48,6 @@ extra:
       link: "https://medium.com/matic-network"
 
 nav:
-  - Staking:
-      - Economics: staking/economics.md
-      - Technical Requirements: staking/technical-requirements.md
-      - Staking FAQs: staking/faqs.md
-      - Node Setup Guide: staking/node-setup-guide.md
   - Matic Testnet:
       - Home: index.md
       - Quick start to Matic: 2-min-guide-to-matic.md
@@ -83,3 +78,8 @@ nav:
       - Matic.js tutorial: alpha-mainnet/matic-js-alpha-mainnet.md
       - Configure Matic Alpha-mainnet on Metamask: alpha-mainnet/conf-alpha-mainnet-metamask.md
       - Registered Tokens (ERC20): alpha-mainnet/mapped-tokens-alpha.md
+  - Staking:
+      - Economics: staking/economics.md
+      - Staking FAQs: staking/faqs.md
+      - Technical Requirements: staking/technical-requirements.md
+      - Node Setup Guide: staking/node-setup-guide.md
