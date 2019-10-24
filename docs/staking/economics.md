@@ -36,7 +36,7 @@ Below is a sample snapshot of the expected annual rewards for the first 5 years 
 
 Stakers running validator nodes and stakers delegating their tokens toward a validator that they prefer. Validators will have an option to charge a commission on the reward earned by delegators. 
 
-It is important to note that funds belonging to all stakers will be locked in a contract deployed on the ethereum main-chain. Also, no validator holds custody over delegator’s tokens. 
+It is important to note that funds belonging to all stakers will be locked in a contract deployed on the ethereum main-chain. Also, no validator holds custody over delegator tokens. 
 
 
 ## Responsibilities
@@ -68,9 +68,9 @@ Checkpoint cost-to-reward ratio pertaining to the checkpoint reward during the f
  
 If we were to update the interval to 30 mins, then the same ratio comes down to 3.89%.
  
-Let’s say that during the initial phase, if we were to go ahead with the same assumptions as stated above with the checkpoint interval being 15 mins, then the bonus to be paid out to the checkpoint proposer will be 7.77% and the algorithm will derive this bonus number dynamically depending upon the current checkpoint cost. Please note that the bonus percentage is also dependent on the governance mechanism among validators..
+Let’s say that during the initial phase, if we were to go ahead with the same assumptions as stated above with the checkpoint interval being 15 mins, then the bonus to be paid out to the checkpoint proposer will be 7.77% and the algorithm will derive this bonus number dynamically depending upon the current checkpoint cost. Please note that the bonus percentage is also dependent on the governance mechanism among validators.
  
-If at some point in time during the first year, and proposer bonus being at 7.77%, if the total bonded tokens in the system is 1 billion, then the network reward rate is 30% and the effective reward rate for every staker other than the proposer, after deducting the bonus component from the checkpoint reward, is 27.67%
+If at some point in time during the first year, and proposer bonus being at 7.77%, if the total bonded tokens in the system is 1 billion, then the network reward rate is 30% and the effective reward rate for every staker other than the proposer, after deducting the bonus component from the checkpoint reward, is 27.67%.
 
  
  
@@ -83,4 +83,17 @@ To avail the bonus completely, the proposer would need to include all signatures
 
 Each block producer at Bor will be given a certain percentage of the transaction fees collected in each block. Selection of producers for any given span is also dependent on the validator’s ratio in the overall stake. The remaining transaction fees flow through the same funnel as the rewards which get shared among all validators working at the Heimdall layer. What exact percentage of transaction fees will be shared with every block producer will be decided at a later point in time taking into consideration the overall statistics of the live network. Until then, the transaction fees flow through the same funnel disbursing everything collected among all validators.
 
+## Becoming a Validator
+
+We had earlier mentioned that we are thinking of having a minimum self-stake requirement from the validators, as we do hope that validators also have their skin in the game. However, since we will be moving to a robust replacement strategy because the number of validator slots are limited as of now, the Matic Network staking program will not have a minimum self-stake requirement. It is however, logical that over time, the average/median stake by a validator will tend upwards and become substantial.
+
+Thus to begin with, becoming a validator on Matic Network requires a minimum self stake of 1 MATIC.
+
+The replacement strategy involves calculation of a comprehensive validator scoring mechanism. If all validator slots are filled, a new validator can only replace one from the current set if it can beat the score of the least ranked validator. Bidding in the real world is simple, whoever gets the most stake gets the spot. However, the way to elect validators is not limited in this ecosystem. 
+
+Our initial bidding design takes a combination of stake, age, rewards earned and deductions, if any, to rank validators. One can revise one’s self stake, for example, to replace an existing validator. 
+
+To replace a new validator with more stake should be easier than replacing an old one with the same amount of stake because of the effect of age on the validator scoring equation, assuming that both of these validators from the current set have the same stake ratio as compared to the total pool and that no deductions have occured in this example. 
+
+We’ll be disclosing the exact equation after our public testnet event where we’ll be formulating above mentioned factors with appropriate weightages.
 
