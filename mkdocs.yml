@@ -80,3 +80,8 @@ nav:
       - Matic.js tutorial: alpha-mainnet/matic-js-alpha-mainnet.md
       - Configure Matic Alpha-mainnet on Metamask: alpha-mainnet/conf-alpha-mainnet-metamask.md
       - Registered Tokens (ERC20): alpha-mainnet/mapped-tokens-alpha.md
+  - Staking:
+      - Economics: staking/economics.md
+      - Staking FAQs: staking/faqs.md
+      - Technical Requirements: staking/technical-requirements.md
+      - Node Setup Guide: staking/node-setup-guide.md
