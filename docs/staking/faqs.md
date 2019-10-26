@@ -5,7 +5,7 @@ Matic Network is a Layer 2 scaling solution that achieves scale by utilizing sid
 
 ### What is Proof of Stake (PoS)?
 
-Proof-of-Stake is a system in which the blockchain network aims to achieve distributed consensus. Anyone with sufficient amount of tokens can lock up their cryptocurrencies and the economic incentive lies in the shared value of the decentralized network. The individuals staking their cryptocurrencies validate transactions by voting on the same while consensus is achieved when a transaction or a set of transactions in a block or a set of blocks in a checkpoint receives enough votes. The threshold uses the weight in terms of stake that comes with every vote. For instance, in Matic Network, consensus is achieved for committing checkpoints of Matic blocks to the Ethereum network, when at least 2/3rd of the total staking power vote for this. 
+Proof-of-Stake is a system in which the blockchain network aims to achieve distributed consensus. Anyone with sufficient amount of tokens can lock up their cryptocurrencies and the economic incentive lies in the shared value of the decentralized network. The individuals staking their cryptocurrencies validate transactions by voting on the same while consensus is achieved when a transaction or a set of transactions in a block or a set of blocks in a checkpoint receives enough votes. The threshold uses the weight in terms of stake that comes with every vote. For instance, in Matic Network, consensus is achieved for committing checkpoints of Matic blocks to the Ethereum network, when at least ⅔ +1  of the total staking power vote for this 
 
 
 ### What role does Proof-of-Stake play in the Matic Network architecture?
@@ -48,23 +48,26 @@ The staking reward gets distributed proportionally to all stakers; proposer and 
  
 ### How is proposer bonus calculated?
  
-Let’s have a look at some of the varying state of affairs affecting the checkpoint cost with following assumptions:
+Let’s have a look at a scenario affecting the checkpoint cost with the following assumptions:
  
-- Eth Price: $200
-- Matic Price: $.013
+- ETH Price: $200
+- MATIC Price: $0.013
 - Gwei considered: 30
-- Gas considered: 1500000
+- Gas considered: 1,000,000
 - Checkpoint interval: 15 mins
  
-Checkpoint cost to reward ratio pertaining to the checkpoint reward during the first year of live network based on the above assumptions comes to be 7.77%
+Checkpoint cost-to-reward ratio pertaining to the checkpoint reward during the first year of live network based on the above assumptions comes to 5.18%.
  
-If we were to update the interval to 30 mins, then the same ratio comes down to be 3.89%
+If we were to update the interval to 30 mins, then the same ratio comes down to be 2.59%
  
-Let’s say that during the initial phase if we were to go ahead with the same assumptions as stated above with the checkpoint interval being 15 mins, then the bonus to be paid out to the checkpoint proposer will be 7.77% and the algorithm will update this bonus number dynamically depending upon the current checkpoint cost. Please note that this updated bonus value will come into effect based on the governance and consensus between the validators.
+Let’s say that during the initial phase if we were to go ahead with the same assumptions as stated above with the checkpoint interval being 15 mins, then the bonus to be paid out to the checkpoint proposer will be 5.18% and the algorithm will update this bonus number dynamically depending upon the current checkpoint cost. Please note that this updated bonus value will come into effect based on the governance and consensus between the validators.
  
-If at some point in time during the first year, and proposer bonus being at 7.77%, if the total bonded tokens in the system is 1 billion, then the network reward rate is 30% and the effective reward rate for every staker other than the proposer, after deducting the bonus component from the checkpoint reward, is 27.67%
+If at some point in time during the first year, and proposer bonus being at 5.18%, if the total bonded tokens in the system is 1 billion, then the network reward rate is 30% and the effective reward rate for every staker other than the proposer, after deducting the bonus component from the checkpoint reward, is 28.45%
  
-Encouraging the proposer to include all signatures
+Please note that the cost has been calculated pre-istanbul and will decrease significantly now.
+
+ 
+### Encouraging the proposer to include all signatures
 To avail the bonus completely, the proposer would need to include all signatures in the checkpoint. Because the protocol desires 2/3+1 weight of the total stake, the checkpoint will be accepted even with 80% votes. However, in this case, proposer gets only 80% of the calculated bonus. 
 
 
@@ -109,7 +112,8 @@ The minimum is 1 Matic.
 We had earlier mentioned that we are thinking of having a minimum self stake requirement from the validators, as we do hope that validators also have their skin in the game. However, since we will be moving to a robust replacement strategy as the number of validator slots are limited as of now, this does not need any minimum self stake requirement. It is however, logical that over time, the average/median stake by a validator will tend upwards and become substantial.
 
 
-### Can a new validator replace an existing one? 
+### How can a new validator replace an existing one? 
+
 Because of the limitation criteria on the number of validator slots in the network which will be initially close to 100, if all slots are filled, then a new validator can only replace one from the current set if it can beat the score of the least ranked validator. Validator’s rank depends on certain factors like total stake, age, rewards earned and deductions if any.
 Exact equation to be disclosed after our public testnet event where we’ll be formulating above mentioned factors with appropriate weighting.
 
