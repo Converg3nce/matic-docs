@@ -3,7 +3,7 @@
 This document aims to provide an introduction to the transfer of mapped assets on Matic plasma chain. 
 Note: For tokens deployed on Matic directly - the process isn't required. The process only applies to tokens that are *mapped* on to Matic.
 
-The trasfer process is enabled by making using of the new RPC call `eth_SignTypedData`, introduced in [EIP712](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-712.md) - this is done to avoid complexity of allowance on plasma chains and to add simplicity to plasma fraud proofs.
+The transfer process is enabled by making use of the new RPC call `eth_SignTypedData`, introduced in [EIP712](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-712.md) - this is done to avoid the complexity of allowance on plasma chains and to add simplicity to plasma fraud proofs.
 
 The construction includes introduction of a new method in each associated asset contract - [ERC721](https://github.com/maticnetwork/contracts/blob/aee2433b2cb76b8bf2ad53736a9e6340cd3d9f15/contracts/child/ChildERC721.sol#L76) and [ERC20](https://github.com/maticnetwork/contracts/blob/aee2433b2cb76b8bf2ad53736a9e6340cd3d9f15/contracts/child/ChildERC20.sol#L104) on matic plasma chain, called `transferWithSig`. And a `Marketplace.sol` smart contract that executes the swap.
 
@@ -269,7 +269,7 @@ Marketplace.methods.executeOrder(
     address2
 ).send({
     from: address3,
-    gas: 6721975
+    gas: maxGas
 }).then(console.log)
 ```
 
