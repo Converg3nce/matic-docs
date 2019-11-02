@@ -56,6 +56,7 @@ nav:
       - Calling Matic Plasma Contracts: calling-matic-plasma-contracts.md
       - Matic.js tutorial: matic-js-tutorial.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
+      - Swapping ERC20/ERC721: dex-on-matic.md
       - API Reference: api-reference.md
       - Registered Tokens (ERC20): mapped-tokens.md
       - FAQ: faq.md
