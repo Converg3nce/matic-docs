@@ -4,7 +4,8 @@ This document will help you understand the Plasma asset swaps that can be perfor
 
 ## Introduction to EIP712 and signed transfer
 This section aims to provide an introduction to the swap of mapped assets on Matic plasma chain. 
-Note: For tokens deployed on Matic directly - the process isn't required. The process only applies to tokens that are *mapped* on to Matic.
+
+>Note: For tokens deployed on Matic directly - the process isn't required. The process only applies to tokens that are *mapped* on to Matic.
 
 The transfer process is enabled by making use of the new RPC call `eth_SignTypedData`, introduced in [EIP712](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-712.md) - this is done to avoid the complexity of allowance on plasma chains and to add simplicity to plasma fraud proofs.
 
@@ -35,9 +36,13 @@ function transferWithSig(bytes calldata sig, uint256 amount, bytes32 data, uint2
 
 ### Params
 `bytes calldata sig` - signature of the user on an order of spending a set amount of tokens in exchange of another set of tokens (creating an *order*)
+
 `uint256 amount` - the amount of tokens user signs on
+
 `bytes32 data`  is a `keccak256` hash of the matching order (order id, token, amount)
+
 `uint256 expiration` - the block number at which the order is to be expired
+
 `address to` - order filler's address
 
 The above method, when called from an external contract, validates the passed signature - the construction of which follows [EIP712](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-712.md), recovers the user address and transfers the specified amount of tokens from the user's account to the specified account.
@@ -132,10 +137,22 @@ Here is a short tutorial for you to try out execution of plasma-backed asset swa
 A boilerplate codebase is ready for you to clone [here](https://github.com/nglglhtr/asset-swap-tutorial). 
 The repository consists of all the relevant contracts, which are, ChildERC20, ChildERC721, Marketplace and their dependencies along with the scripts that will guide you through the tutorial ahead.
 
+### Prerequisites
+1. Best to use node v10.17.0 (npm v6.11.3)
+2. Truffle
+```
+npm install -g truffle
+```
+3. Web3
+```
+npm install -g web3
+```
+
 Clone the repository and install dependencies
 
 ```bash
 $ git clone https://github.com/nglglhtr/asset-swap-tutorial.git
+$ cd asset-swap-tutorial
 $ npm i
 ```
 
@@ -173,11 +190,17 @@ Change directory to scripts
 Open the `config.js` file sitting under `/scripts/erc20-721/` directory, and fill in the values of the variables mentioned.
 
 `provider` - the network provider your contracts are deployed on
+
 `erc20` - address of the erc20 contract
+
 `erc721` - address of the erc721 contract
+
 `marketplace` - address of the marketplace contract
+
 `amount` - amount of erc20 tokens you'd like to exchange for the `tokenid`
+
 `tokenid` - the id of the erc721 token you'd like to exchange for `amount` of erc20 tokens
+
 `privateKey1` and `privateKey2` - the private keys of the accounts participating in the swap
 
 You can leave `orderId` and `expiration` untouched for now.
@@ -196,7 +219,7 @@ to mint tokens in the two accounts.
 
 The following function in the script mints the specified amount of tokens in the first account and the NFT of specified tokenId in the second account.
 
-```javascript=
+```javascript
 async function mint () {
     await CHE.methods.mint(config.amount).send({
         from: wallet[0].address,
@@ -282,6 +305,43 @@ $ node swap.js
 ```
 A successful swap displays a transaction hash. Next you can check the balances - 
 
+```bash
+$ node balance.js
+```
+
+### Deploying and Swapping on Matic
+
+If you'd like to deploy and test on Matic network, the steps would only differ in migrating your smart contracts onto Matic and changing contract addresses in the config file.
+
+From root directory, run:
+```bash
+$ truffle migrate --network maticTestnet
+```
+or, for Matic beta network, run:
+```bash
+$ truffle migrate --network maticBetaMainnet
+```
+
+Once you have your contract addresses, fill them in the config file under `/scripts/erc20-721/` along with the provider, which will be the following for the two networks:
+
+Matic testnet: `https://testnet2.matic.network`
+Matic beta mainnet: `https://beta.matic.network`
+
+Once the config file is ready, inside the `/scripts/erc20-721/` run the following - 
+
+To mint tokens
+```bash
+$ node mint.js
+```
+To check balances
+```bash
+$ node balance.js
+```
+To Swap
+```bash
+$ node swap.js
+```
+Once the swap is successful, you can check and confirm the balances again 
 ```bash
 $ node balance.js
 ```
