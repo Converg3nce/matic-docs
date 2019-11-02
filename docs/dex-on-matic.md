@@ -1,6 +1,9 @@
 # Swap ERC20 and ERC721 tokens atomically using Plasma Asset Swaps
+
+This document will help you understand the Plasma asset swaps that can be performed while using Matic. This allows you to create applications such as decentralized exchanges, NFT marketplaces and similar while using our Plasma construction, which piggybacks on the security of Ethereum.
+
 ## Introduction to EIP712 and signed transfer
-This document aims to provide an introduction to the transfer of mapped assets on Matic plasma chain. 
+This section aims to provide an introduction to the swap of mapped assets on Matic plasma chain. 
 Note: For tokens deployed on Matic directly - the process isn't required. The process only applies to tokens that are *mapped* on to Matic.
 
 The transfer process is enabled by making use of the new RPC call `eth_SignTypedData`, introduced in [EIP712](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-712.md) - this is done to avoid the complexity of allowance on plasma chains and to add simplicity to plasma fraud proofs.
