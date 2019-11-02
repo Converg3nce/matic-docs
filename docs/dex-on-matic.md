@@ -285,3 +285,40 @@ A successful swap displays a transaction hash. Next you can check the balances -
 ```bash
 $ node balance.js
 ```
+
+### Deploying and Swapping on Matic
+
+If you'd like to deploy and test on Matic network, the steps would only differ in migrating your smart contracts onto Matic and changing contract addresses in the config file.
+
+From root directory, run:
+```bash
+$ truffle migrate --network maticTestnet
+```
+or, for Matic beta network, run:
+```bash
+$ truffle migrate --network maticBetaMainnet
+```
+
+Once you have your contract addresses, fill them in the config file under `/scripts/erc20-721/` along with the provider, which will be the following for the two networks:
+
+Matic testnet: `https://testnet2.matic.network`
+Matic beta mainnet: `https://beta.matic.network`
+
+Once the config file is ready, inside the `/scripts/erc20-721/` run the following - 
+
+To mint tokens
+```bash
+$ node mint.js
+```
+To check balances
+```bash
+$ node balance.js
+```
+To Swap
+```bash
+$ node swap.js
+```
+Once the swap is successfull, you can check and confirm the balances again 
+```bash
+$ node balance.js
+```
