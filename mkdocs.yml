@@ -50,16 +50,16 @@ extra:
 nav:
   - Matic Testnet:
       - Home: index.md
-      - Quick start to Matic: 2-min-guide-to-matic.md
+      - Quick start: 2-min-guide-to-matic.md
       - Getting started: getting-started.md
-      - Deploying contracts on Matic testnet: deploy-contracts-remix.md
-      - Calling Matic Plasma Contracts: calling-matic-plasma-contracts.md
-      - Matic.js tutorial: matic-js-tutorial.md
+      - Deploying contracts on testnet: deploy-contracts-remix.md
+      - Calling Plasma Contracts: calling-matic-plasma-contracts.md
+      - Matic.js SDK tutorial: matic-js-tutorial.md
       - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
       - Swapping ERC20/ERC721: swap-assets.md
       - API Reference: api-reference.md
       - Registered Tokens (ERC20): mapped-tokens.md
-      - Integration with Moibit decentralized storage: integrate-with-moibit.md
+      - Moibit - Decentralized Storage: integrate-with-moibit.md
       - FAQ: faq.md
 
   - Dagger:
