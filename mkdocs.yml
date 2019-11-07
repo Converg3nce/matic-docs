@@ -59,6 +59,7 @@ nav:
       - Swapping ERC20/ERC721: swap-assets.md
       - API Reference: api-reference.md
       - Registered Tokens (ERC20): mapped-tokens.md
+      - Integration with Moibit decentralized storage: integrate-with-moibit.md
       - FAQ: faq.md
 
   - Dagger:
