@@ -89,11 +89,11 @@ nav:
       - 'Node Setup Guide': 
         - 'Overview': staking/node-setup-guide.md
         - 'Deploying Contracts': staking/validator-contracts/deploying-contracts.md
-        - 'Becoming a Validator': staking/become-a-validator.md
+        - 'Becoming a Validator': staking/validator-contracts/become-a-validator.md
         - 'Heimdall':
-          - 'Install Heimdall': staking/heimdall/install-heimdall.md
-          - 'Running Heimdall': staking/heimdall/run-heimdall.md
+          - 'Install Heimdall': staking/heimdall/install-heimdall.md          
           - 'Configuring Heimdall': staking/heimdall/configure-heimdall.md
+          - 'Running Heimdall': staking/heimdall/run-heimdall.md
         - 'Bor':
           - 'Install Bor': staking/bor/install-bor.md
           - 'Running Bor': staking/bor/run-bor.md
