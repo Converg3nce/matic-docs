@@ -91,12 +91,12 @@ nav:
         - 'Deploying Contracts': staking/validator-contracts/deploying-contracts.md
         - 'Becoming a Validator': staking/validator-contracts/become-a-validator.md
         - 'Heimdall':
+          - 'What is Heimdall': staking/heimdall/what-is-heimdall.md
           - 'Install Heimdall': staking/heimdall/install-heimdall.md          
           - 'Configuring Heimdall': staking/heimdall/configure-heimdall.md
           - 'Running Heimdall': staking/heimdall/run-heimdall.md
-        - 'Bor':
-          - 'Install Bor': staking/bor/install-bor.md
-          - 'Running Bor': staking/bor/run-bor.md
-        - 'Public Testnet': staking/join-public-testnet.md
-        - 'Examples': staking/examples.md
+        - 'Install Bor': staking/install-bor.md
         - 'Deploy Matic Testnet': staking/deploy-your-own-matic-testnet.md
+        - 'Join Public Testnet': staking/join-public-testnet.md
+        - 'Examples': staking/examples.md
+        
