@@ -79,7 +79,7 @@ Follow this [step](https://docs.matic.network/staking/validator-contracts/deploy
 
 We need to stake some test tokens for your validator on our `rootChain` contract.
 
-> You can read here on [How to become a Validator](http://127.0.0.1:8000/staking/validator-contracts/become-a-validator) on Matic Network
+> You can read here on [How to become a Validator](https://docs.matic.network/staking/validator-contracts/become-a-validator) on Matic Network
 
 #### Ta-Da
 

@@ -17,7 +17,7 @@ $ cat ~/.heimdalld/config/heimdall-config.toml
 # This is a TOML config file.
 # For more information, see https://github.com/toml-lang/toml
 
-##### RPC configrations #####
+##### RPC configurations #####
 
 # Change this to point to parent chain
 # RPC endpoint for ethereum chain
@@ -30,7 +30,7 @@ bor_RPC_URL = "https://testnet2.matic.network"
 # RPC endpoint for tendermint
 tendermint_RPC_URL = "http://0.0.0.0:26657"
 
-##### Chain ID configration #####
+##### Chain ID configuration #####
 
 # Bor chain ID
 bor_chain_id = "15001" 
@@ -81,7 +81,7 @@ confirmation_blocks = "6"
 
 > Update the config file to point to correct RPC url's and update the contract addresses.
 
-Checkout Tendermint related configrations [here](https://github.com/tendermint/tendermint).
+Checkout Tendermint related configurations [here](https://github.com/tendermint/tendermint).
 
 ### Add peers
 
