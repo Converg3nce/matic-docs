@@ -88,6 +88,8 @@ nav:
       - Technical Requirements: staking/technical-requirements.md
       - 'Node Setup Guide': 
         - 'Overview': staking/node-setup-guide.md
+        - 'Deploying Contracts': staking/validator-contracts/deploying-contracts.md
+        - 'Becoming a Validator': staking/become-a-validator.md
         - 'Heimdall':
           - 'Install Heimdall': staking/heimdall/install-heimdall.md
           - 'Running Heimdall': staking/heimdall/run-heimdall.md
