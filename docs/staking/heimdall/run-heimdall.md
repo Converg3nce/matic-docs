@@ -24,7 +24,7 @@ The rest server can be used by external services like explorer, faucets etc to c
 
 ```js
 
-$ make run-server
+$ heimdalld rest-server
 
 ```
 
@@ -38,11 +38,13 @@ $ make start-server
 
 ### Run Bridge
 
-Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge. 
+Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge.
+
+> Only run bridge if you are planning to stake
 
 ```js
 
-$ make run-bridge
+$ bridge start --all
 
 ```
 
