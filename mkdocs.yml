@@ -98,5 +98,5 @@ nav:
         - 'Install Bor': staking/install-bor.md
         - 'Deploy Matic Testnet': staking/deploy-your-own-matic-testnet.md
         - 'Join Public Testnet': staking/join-public-testnet.md
-        - 'Examples': staking/examples.md
+
         

@@ -2,15 +2,11 @@ Instructions on how to join public testnet
 
 You need to install [Heimdall](https://docs.matic.network/staking/heimdall/install-heimdall) and [Bor](https://docs.matic.network/staking/install-bor) before you proceed any further. 
 
-As soon as we start the public testnet event you would be able to see the genesis file and other required configurations and seed-nodes here.
+As soon as we start the public testnet event you would be able to see the genesis file and other required configurations and seed-nodes [here](https://github.com/maticnetwork/public-testnets).
 
 ### Join Pre Stage-0 Testnet
 
-Genesis files, Seed Nodes for Pre stage-0 are available here.
-
-#### Start & Sync Heimdall
-
-Once heimdall is build and initialised, 
+Run the following commands once heimdall is build and initialised.
 
 **Heimdall genesis Config**
 
@@ -32,11 +28,11 @@ Peers are the other nodes you want to sync to in order to maintain your full nod
 
 Refer to `seeds.txt` for peer info in your testnet folder.
 
+#### Start & Sync Bor
+
 You can start heimdall and other associated services now using the link below! 
 
 > Click here to understand how you can [Run Heimdall](https://docs.matic.network/staking/heimdall/run-heimdall)
-
-#### Start & Sync Bor
 
 **Initialise genesis block**
 
@@ -75,6 +71,6 @@ Your `bor-node` should be syncing now! Checkout `logs/bor.log` to get to the log
 
 #### Query Data
 
-To see examples on how to query your full node and get network status, please refer here.
+To see examples on how to query your full node and get network status, please refer [here](http://34.196.40.122:1317/swagger-ui/#/).
 
 

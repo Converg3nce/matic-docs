@@ -4,7 +4,7 @@ Step by step instructions on how to create a single and multiple validator testn
 
 Running a testnet with a single validator is recommended if you want to understand how the system works. For ease of setup we have a package of configurations setup already. 
 
-Before moving forward please ensure that you have the binaries for `heimdall` and bor created and are available in your path.
+Before moving forward please ensure that you have the binaries for `heimdall` and `bor` created and are available in your path.
 
 > You can view this post to install [Heimdall and its dependencies](https://docs.matic.network/staking/heimdall/install-heimdall/)
 
@@ -22,28 +22,36 @@ Check that your `heimdall` and `bor` commit id's match the ones given in `borver
 
 #### Step 2: Deploy Root Contracts
 
-To start a testnet you need to deploy your contracts and make changes to `heimdall-config.toml` . Follow [these steps](https://docs.matic.network/staking/validator-contracts/deploying-contracts/#step-1-deploy-root-contracts-on-base-chain) to deploy contracts on a base chain. 
+```js
+
+// (optional) If you are runnng testrpc to simulate base chain, run the below command to add your validator to testrpc instance
+$ export MNEMONIC="257bc7bbb735c3cb39d0b809f9d95dc5e5385ba7444f0459d231cfd1f1f954ff"
+
+```
+
+Follow [this](https://docs.matic.network/staking/validator-contracts/deploying-contracts/#step-1-deploy-root-contracts-on-base-chain) step to deploy contracts on a base chain. 
 
 #### Step 3: Deploy Heimdall
 
 ```js
 
-$ cd $GOPATH/src/github.com/maticnetwork/public-testnets
+// Run the following from your public-testnets repo.
 $ cp -r heimdall-config/* ~/.heimdalld
 
 ```
 
-Update `~/.heimdalld/config/heimdall-config.toml` with the root contract addresses and RPC links. 
+Update `~/.heimdalld/config/heimdall-config.toml` with the root contract addresses and RPC links. Also update the file `~/.heimdalld/config/genesis.json` with the correct heimdall `chain_id`. 
 
 You can start heimdall and other associated services now using the link below! 
 
-> You can view this post to understand how to run Matic's [Validator layer](http://127.0.0.1:8000/staking/heimdall/run-heimdall)
+> You can view this post to understand how to run Matic's [Validator layer](https://docs.matic.network/staking/heimdall/run-heimdall)
 
 
 #### Step-4: Deploy BOR  
 
 ```js
 
+// Run the following from your public-testnets repo.
 $ cd bor-config
 
 ```
@@ -54,11 +62,15 @@ This sample config package for bor contains the genesis file and keystore for a 
 
 ```js
 
+$ bash clean.sh && bash stop.sh
+
 ```
 
 ##### Start Bor
 
 ```js
+
+$ bash start.sh
 
 ```
 
