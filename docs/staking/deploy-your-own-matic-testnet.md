@@ -1,4 +1,4 @@
-Step by step instructions on how to create a single and multiple validator testnet
+Step by step instructions on how to create a single and multiple (soon to be added) validator testnet.
 
 ### Creating a single validator testnet
 
@@ -6,11 +6,11 @@ Running a testnet with a single validator is recommended if you want to understa
 
 Before moving forward please ensure that you have the binaries for `heimdall` and `bor` created and are available in your path.
 
-> You can view this post to install [Heimdall and its dependencies](https://docs.matic.network/staking/heimdall/install-heimdall/)
+> You can view this post to install [Heimdall and its dependencies](../heimdall/install-heimdall/)
 
-> Additionally, you can view this post to [Install Bor](https://docs.matic.network/staking/install-bor)
+> Additionally, you can view this post to [Install Bor](../install-bor)
 
-#### Step 1
+#### Step 1: 
 
 ```js
 
@@ -20,7 +20,7 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 Check that your `heimdall` and `bor` commit id's match the ones given in `borversion.txt` and `heimdallversion.txt`.
 
-#### Step 2: Deploy Root Contracts
+#### Step 2: Deploy root contracts
 
 ```js
 
@@ -29,7 +29,7 @@ $ export MNEMONIC="257bc7bbb735c3cb39d0b809f9d95dc5e5385ba7444f0459d231cfd1f1f95
 
 ```
 
-Follow [this](https://docs.matic.network/staking/validator-contracts/deploying-contracts/#step-1-deploy-root-contracts-on-base-chain) step to deploy contracts on a base chain. 
+Follow this step [Deploy root contracts on base chain](../validator-contracts/deploying-contracts/#step-1-deploy-root-contracts-on-base-chain)
 
 #### Step 3: Deploy Heimdall
 
@@ -40,14 +40,14 @@ $ cp -r heimdall-config/* ~/.heimdalld
 
 ```
 
-Update `~/.heimdalld/config/heimdall-config.toml` with the root contract addresses and RPC links. Also update the file `~/.heimdalld/config/genesis.json` with the correct heimdall `chain_id`. 
+Update the file `~/.heimdalld/config/heimdall-config.toml` with the root contract addresses and RPC links. Also update the file `~/.heimdalld/config/genesis.json` with the correct heimdall `chain_id`. 
 
 You can start heimdall and other associated services now using the link below! 
 
-> You can view this post to understand how to run Matic's [Validator layer](https://docs.matic.network/staking/heimdall/run-heimdall)
+> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall)
 
 
-#### Step-4: Deploy BOR  
+#### Step 4: Deploy Bor  
 
 ```js
 
@@ -76,22 +76,20 @@ $ bash start.sh
 
 Node started! Logs are being written to to `logs/bor.log` check them out! 
 
-#### Step-5: Finish Deploying Contracts 
+#### Step 5: Deploy child contracts on Bor 
 
-**Deploy child contracts on BOR**
+Follow this step [Deploy contracts on Bor](../validator-contracts/deploying-contracts/#step-2-deploy-contracts-on-bor) 
 
-Follow this [step](https://docs.matic.network/staking/validator-contracts/deploying-contracts/#step-2-deploy-contracts-on-bor) to deploy contracts on a bor chain. 
+#### Step 6: Link child and base chain contracts
 
-**Link child and base chain contracts**
-
-Follow this [step](https://docs.matic.network/staking/validator-contracts/deploying-contracts/#step-3-link-contracts-on-bor-with-contracts-on-base-chain) to connect contracts on both chains. 
+Follow this step [Link contracts on Bor with contracts on base chain](../validator-contracts/deploying-contracts/#step-3-link-contracts-on-bor-with-contracts-on-base-chain)
 
 
-#### Step-6: Stake it
+#### Step 7: Stake It!
 
 We need to stake some test tokens for your validator on our `rootChain` contract.
 
-> You can read here on [How to become a Validator](https://docs.matic.network/staking/validator-contracts/become-a-validator) on Matic Network
+> You can read here on [Becoming a Validator](../validator-contracts/become-a-validator)
 
 #### Ta-Da
 

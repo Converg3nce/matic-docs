@@ -1,4 +1,4 @@
-Know how to deploy contracts on Ethereum (Parent) and Matic (Child chain)
+Know how to deploy contracts on Ethereum (Base) and Matic (Child chain)
 
 ### When do I need to deploy contracts?
 
@@ -15,15 +15,15 @@ To deploy contracts you need to install truffle like explained [here](https://ww
 ### Clone the contracts repo
 
 ```js
-git clone https://github.com/maticnetwork/contracts
-cd contracts
+$ git clone https://github.com/maticnetwork/contracts
+$ cd contracts
 
 ```
 
 ### Install dependencies
 
 ```js
-npm i
+$ npm i
 
 ```
 
@@ -37,7 +37,7 @@ We need to deploy our set of contracts on 2 chains:
 
 * `Child Chain`: EVM compatible chain to work as our side-chain. For testing note that using `ganache` for child-chain is not recommended, instead running `npm run simuate-bor` would be better.
 
-#### Step-1: Deploy root contracts on base chain 
+#### Step 1: Deploy root contracts on base chain 
 
 * Do make sure that the dependencies are installed and that you have cloned the contracts repo as stated above in this document. 
 
@@ -69,7 +69,7 @@ Post successful deployment all contract addresses will be written to a `contract
 
 
 
-#### Step-2: Deploy contracts on BOR
+#### Step 2: Deploy contracts on Bor
 
 ```js
 // Contracts like ChildERC20Token are deployed on child chain aka BOR chain
@@ -79,11 +79,11 @@ Post successful deployment all contract addresses will be written to a `contract
 ```js
 
 // NOTE: You need to deploy or simulate BOR before running the below command
-// modify truffle-config.js to configure bor chain
+// Modify truffle-config.js to configure bor chain
 */ 
  bor: {
       host: 'localhost',
-      port: 8545,
+      port: 8546,
       network_id: '*', // match any network
       skipDryRun: true,
       gas: 7000000
@@ -93,12 +93,12 @@ $ npm run truffle:migrate -- --reset --network <child_chain_network_name> -f 4 -
 
 ```
 
-#### Step-3: Link contracts on BOR with contracts on base chain
+#### Step 3: Link contracts on Bor with contracts on base chain
 
 ```js
 
 // Contracts deployed on BOR are mapped to the registry contract deployed on-chain
-npm run truffle:migrate -- --network <base_chain_network_name> -f 5 --to 5
+$ npm run truffle:migrate -- --network <base_chain_network_name> -f 5 --to 5
 
 ```
 
@@ -108,5 +108,5 @@ Post successful deployment all contract addresses will be written to a `contract
 
 ### Almost Done! 
 
-The `contractAddresses.json` file should be stored somewhere where you can read it again because we need to add contract addresses to `heimdall-config`
+The `contractAddresses.json` file should be stored somewhere where you can read it again because we need to add contract addresses to `heimdall-config`.
 

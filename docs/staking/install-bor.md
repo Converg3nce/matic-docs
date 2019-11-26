@@ -1,10 +1,10 @@
-Installing and running BOR node
+Installing and running Bor node.
 
-### What is BOR?
+### What is Bor?
 
 BOR is the EVM compatible Matic Side chain which currently is built on top of `geth` using `bor` consensus mechanism. 
 
-### Installing BOR
+### Installing Bor
 
 ```js
 

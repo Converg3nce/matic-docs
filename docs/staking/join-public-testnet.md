@@ -1,14 +1,10 @@
-Instructions on how to join public testnet
-
-You need to install [Heimdall](https://docs.matic.network/staking/heimdall/install-heimdall) and [Bor](https://docs.matic.network/staking/install-bor) before you proceed any further. 
+Instructions on how to join an existing public testnet.
 
 As soon as we start the public testnet event you would be able to see the genesis file and other required configurations and seed-nodes [here](https://github.com/maticnetwork/public-testnets).
 
-### Join Pre Stage-0 Testnet
+### Join pre-stage0 testnet
 
-Run the following commands once heimdall is build and initialised.
-
-**Heimdall genesis Config**
+#### Step 1: Get Heimdall genesis config
 
 ```js
 $ git clone https://github.com/maticnetwork/public-testnets
@@ -22,19 +18,22 @@ $ cp heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
 
 ```
 
-**Configure Peers**
+
+#### Step 2: Configure peers for Heimdall
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas in file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT` 
 
 Refer to `seeds.txt` for peer info in your testnet folder.
 
-#### Start & Sync Bor
+
+#### Step 3: Start & sync Heimdall
 
 You can start heimdall and other associated services now using the link below! 
 
-> Click here to understand how you can [Run Heimdall](https://docs.matic.network/staking/heimdall/run-heimdall)
+> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall)
 
-**Initialise genesis block**
+
+#### Step 4: Initialise genesis block for Bor
 
 ```js
 // go to bor-config directory
@@ -46,9 +45,10 @@ $ cp ../pre-stage0/bor-genesis.json genesis.json
 // initialize Genesis Block
 $ $GOPATH/src/github.com/maticnetwork/bor/build/bin --datadir dataDir init genesis.json 
  
- ```
+```
 
-**Configure Static nodes**
+
+#### Step 5: Configure peers for Bor
 
 You can configure permanent static nodes by putting something like the following into `<datadir>/bor/static-nodes.json`with the format `pubkey@IP:PORT` or `pubkey@DOMAIN:PORT`
 
@@ -60,7 +60,8 @@ Refer `seeds.txt` for the enode url to use in the `static-nodes.json` file.
 ]
 ```
 
-**Start bor**
+
+#### Step 6: Start Bor
 
 ```js
 $ bash start.sh
@@ -69,8 +70,9 @@ $ bash start.sh
 
 Your `bor-node` should be syncing now! Checkout `logs/bor.log` to get to the logs 🤩
 
-#### Query Data
 
-To see examples on how to query your full node and get network status, please refer [here](http://34.196.40.122:1317/swagger-ui/#/).
+#### Step 7: Query data
+
+To see examples on how to query your full node and get network status, please refer [here](http://34.196.40.122:1317/swagger-ui/#/). You may also use `localhost` to query your own node. 
 
 

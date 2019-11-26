@@ -1,4 +1,4 @@
-Here you would find all config related details about Heimdall
+Here you would find all config related details about Heimdall.
 
 ### Configuring Heimdall is fairly straight forward
 
