@@ -80,13 +80,6 @@ This will emit the following output which shows your node id and chain id, these
 
 ```
 
-### Check Heimdall version
-
-```js
-
-$ heimdallcli version
-
-```
 
 
 
