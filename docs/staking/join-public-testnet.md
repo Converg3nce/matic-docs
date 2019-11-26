@@ -2,13 +2,14 @@ Instructions on how to join an existing public testnet.
 
 As soon as we start the public testnet event you would be able to see the genesis file and other required configurations and seed-nodes [here](https://github.com/maticnetwork/public-testnets).
 
-### Join pre-stage0 testnet
+### Join public testnet
 
 #### Step 1: Get Heimdall genesis config
 
 ```js
 $ git clone https://github.com/maticnetwork/public-testnets
-$ cd public-testnets/pre-stage0
+//NOTE: Do make sure to join the relevant folder
+$ cd public-testnets/<testnet version>
 
 // copy genesis file to config directory
 $ cp heimdall-genesis.json ~/.heimdalld/config/genesis.json 
