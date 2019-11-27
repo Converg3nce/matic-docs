@@ -6,15 +6,7 @@ Starting Heimdall is fairly easy, the below command will start heimdall using th
 
 ```js
 
-$ heimdalld start 
-
-```
-
-This will output the logs saying blocks are being created onto the terminal, if you want to pipe logs into a file use the below command.
-
-```js
-
-$ make start-heimdall
+$ heimdalld start
 
 ```
 
@@ -28,14 +20,6 @@ $ heimdalld rest-server
 
 ```
 
-This will output the logs onto the terminal, if you want to pipe logs into a file use the below command.
-
-```js
-
-$ make start-server
-
-```
-
 ### Run Bridge
 
 Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge.
@@ -45,14 +29,6 @@ Bridge is a helper package that sends transactions to heimdall on behalf of vali
 ```js
 
 $ bridge start --all
-
-```
-
-This will output the logs onto the terminal, if you want to pipe logs into a file use the below command.
-
-```js
-
-$ make start-bridge
 
 ```
 
