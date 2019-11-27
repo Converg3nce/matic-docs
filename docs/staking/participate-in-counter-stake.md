@@ -19,6 +19,6 @@ You can start with setting up the Validator nodes on the testnet from here - the
 > After you have installed Heimdall and Bor, the final step is join the public testnet that we have setup. Completing this step will ensure that you are ready to fully participate in later stages of Counter Stake.
 
 
-If you face any trouble during installation or syncing, do share your queries in this forum [here](https://forum.matic.network/c/counter-stake) or on our Validator [Discord channel](https://discord.gg/6Dk9qDv).  
+If you face any trouble during installation or syncing, do share your queries in this forum [here](https://forum.matic.network/c/counter-stake) or on our Validator [Discord channel](https://discord.gg/XvpHAxZ).  
 
 This will be useful for others to review as well. We’ll try to resolve things as soon as we can.
