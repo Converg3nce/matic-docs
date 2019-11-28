@@ -40,6 +40,22 @@ $ rabbitmq-server
 
 This will run the `rabbitmq` server
 
+### Install make
+
+You need to install `make` to run some commands. Using the below commands you can install `make` depending on your system.
+
+**For Ubuntu**
+
+```
+$ sudo apt-get install build-essential
+```
+
+**For MacOS**
+
+```
+$ brew install make
+```
+
 ### Install Heimdall
 
 Next, let's install the latest version of Heimdall. Here, we'll use the master branch, which contains the latest stable release. If necessary, make sure you `git checkout` the correct [released version](https://github.com/maticnetwork/heimdall/releases)
@@ -54,10 +70,9 @@ $ make dep && make install
 
 That will install the `heimdalld` and `heimdallcli` binaries. Verify that everything is OK:
 
-
 ```js
 
-$ heimdalld --help 
+$ heimdalld --help
 
 ```
 
@@ -69,7 +84,7 @@ $ heimdalld init
 
 ```
 
-This will emit the following output which shows your node id and chain id, these can be changed before starting a chain from the genesis file. 
+This will emit the following output which shows your node id and chain id, these can be changed before starting a chain from the genesis file.
 
 ```js
 
@@ -79,11 +94,3 @@ This will emit the following output which shows your node id and chain id, these
 }
 
 ```
-
-
-
-
-
-
-
-

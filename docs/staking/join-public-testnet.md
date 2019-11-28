@@ -19,6 +19,8 @@ $ cp heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
 
 ```
 
+Do check the checksums of the files from here:
+
 #### Step 2: Configure peers for Heimdall
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas in file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
@@ -27,9 +29,9 @@ Refer to `seeds.txt` for peer info in your testnet folder.
 
 #### Step 3: Start & sync Heimdall
 
-You can start heimdall and other associated services now using the link below!
+You can start heimdall and other associated services like [rest-server](https://docs.matic.network/staking/heimdall/run-heimdall/#run-rest-server) now using the link below!
 
-> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall)
+> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall). NOTE: If you are starting heimdall after a crash or simply changed genesis files you need to [reset heimdall](../heimdall/run-heimdall/#reset-heimdall) before moving forward.
 
 #### Step 4: Initialise genesis block for Bor
 
