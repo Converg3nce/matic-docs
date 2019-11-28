@@ -8,8 +8,10 @@ As soon as we start the public testnet event you would be able to see the genesi
 
 ```js
 $ git clone https://github.com/maticnetwork/public-testnets
+
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
+// Example: $ cd public-testnets/CS-1001
 
 // copy genesis file to config directory
 $ cp heimdall-genesis.json ~/.heimdalld/config/genesis.json
@@ -68,4 +70,6 @@ Your `bor-node` should be syncing now! Checkout `logs/bor.log` to get to the log
 
 #### Step 7: Query data
 
-To see examples on how to query your full node and get network status, please refer [here](http://34.196.40.122:1317/swagger-ui/#/). You may also use `localhost` to query your own node.
+To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/
+
+
