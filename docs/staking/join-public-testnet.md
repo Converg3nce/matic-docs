@@ -19,9 +19,9 @@ $ cp heimdall-genesis.json ~/.heimdalld/config/genesis.json
 // copy config file to config directory
 $ cp heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
 
-// NOTE : Generate ropsten api key if you don't have one.
+//  Generate ropsten api key if you don't have one.
 // Generate API key using: https://ethereumico.io/knowledge-base/infura-api-key-guide
-// Add your api key in ~/.heimdalld/config/heimdall-config.toml under the key "eth_RPC_URL"
+// NOTE: Add your api key in ~/.heimdalld/config/heimdall-config.toml under the key "eth_RPC_URL"
 ```
 
 Do check the checksums of the files from here:
@@ -36,7 +36,8 @@ Refer to `heimdall-seeds.txt` for peer info in your testnet folder.
 
 You can start heimdall and other associated services like [rest-server](https://docs.matic.network/staking/heimdall/run-heimdall/#run-rest-server) now using the link below!
 
-> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall). NOTE: If you are starting heimdall after a crash or simply changed genesis files you need to [reset heimdall](../heimdall/run-heimdall/#reset-heimdall) before moving forward.
+> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall).
+> NOTE: If you are starting heimdall after a crash or simply changed genesis files you need to [reset heimdall](../heimdall/run-heimdall/#reset-heimdall) before moving forward.
 
 #### Step 4: Initialise genesis block for Bor
 

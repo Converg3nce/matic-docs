@@ -17,7 +17,7 @@ Or we have a script to install go for you
 
 ```js
 
-$ curl https://gist.githubusercontent.com/vaibhavchellani/d7a7fe21c6a4834708336c925bea1319/raw/ff543157eaa187162aa3080cff136d57e9087cd6/download_go.sh > install_go.sh
+$ curl https://gist.githubusercontent.com/vaibhavchellani/cbe0fa947dc0a6557cb9583d081ff8ce/raw/d47b3df14ccffdd7a965e44c39fb5ec235360166/new.sh > install_go.sh
 $ bash install_go.sh
 
 ```
