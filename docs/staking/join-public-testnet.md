@@ -19,11 +19,12 @@ $ cp heimdall-genesis.json ~/.heimdalld/config/genesis.json
 // copy config file to config directory
 $ cp heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
 
-// generate ropsten api key if you don't have one. 
-[Steps to generate ropsten API key](https://ethereumico.io/knowledge-base/infura-api-key-guide/ "Generate Ropsten API Key")
-
-Add your api key in ~/.heimdalld/config/heimdall-config.toml
+// NOTE : Generate ropsten api key if you don't have one.
+// Generate API key using: https://ethereumico.io/knowledge-base/infura-api-key-guide
+// Add your api key in ~/.heimdalld/config/heimdall-config.toml under the key "eth_RPC_URL"
 ```
+
+Do check the checksums of the files from here:
 
 #### Step 2: Configure peers for Heimdall
 
@@ -33,9 +34,9 @@ Refer to `heimdall-seeds.txt` for peer info in your testnet folder.
 
 #### Step 3: Start & sync Heimdall
 
-You can start heimdall and other associated services now using the link below!
+You can start heimdall and other associated services like [rest-server](https://docs.matic.network/staking/heimdall/run-heimdall/#run-rest-server) now using the link below!
 
-> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall)
+> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall). NOTE: If you are starting heimdall after a crash or simply changed genesis files you need to [reset heimdall](../heimdall/run-heimdall/#reset-heimdall) before moving forward.
 
 #### Step 4: Initialise genesis block for Bor
 
@@ -53,10 +54,7 @@ $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor --datadir dataDir init g
 
 #### Step 5: Configure peers for Bor
 
-
-You can configure permanent static nodes by putting something like the following into `<datadir>/bor/static-nodes.json`with the format `pubkey@IP:PORT` or `pubkey@DOMAIN:PORT`
-
-Refer `static-nodes.json` for the enode url to use in the `static-nodes.json` file.
+To sync blocks on the testnet, you need to add peers. The file `static-nodes.json` contains information for all the availalble seed nodes. Let's copy this file to your datadir so that when you start your nodes you already have peers!
 
 ```js
 $ cp static-nodes.json ../bor-config/dataDir/bor/
@@ -74,5 +72,3 @@ Your `bor-node` should be syncing now! Checkout `logs/bor.log` to get to the log
 #### Step 7: Query data
 
 To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/
-
-
