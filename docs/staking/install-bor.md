@@ -13,7 +13,10 @@ BOR is the EVM compatible Matic Side chain which currently is built on top of `g
 $ mkdir -p $GOPATH/src/github.com/maticnetwork
 $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
-$ cd bor && git checkout master
+$ cd bor
+// Checkout to a public-testnet version.
+// For eg: git checkout CS-1001
+$ git checkout <TAG OR BRANCH>
 $ make bor
 
 ```
