@@ -64,7 +64,11 @@ Next, let's install the latest version of Heimdall. Here, we'll use the master b
 $ mkdir -p $GOPATH/src/github.com/maticnetwork
 $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/heimdall
-$ cd heimdall && git checkout master
+$ cd heimdall
+
+// Checkout to a public-testnet version.
+// For eg: git checkout CS-1001
+$ git checkout <TAG OR BRANCH>
 $ make dep && make install
 ```
 
