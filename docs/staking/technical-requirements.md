@@ -1,5 +1,5 @@
 For the upcoming testnet event, this is the minimal hardware configuration:
-> 4GB RAM 
+> 8 GB RAM 
 
 > 100GB SSD
 
@@ -8,3 +8,5 @@ For the upcoming testnet event, this is the minimal hardware configuration:
 While we do not favor any operation system, more secure and stable Linux server distributions (like CentOS) should be preferred over desktop operating systems (like Mac OS and Windows).
 
 We will provide more detailed information on the hardware setup in due course of time.
+
+Note: Requirements like storage space will change over time
