@@ -35,3 +35,14 @@ Bor also supports a feature called static nodes if you have certain peers you al
 ```
 
 For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
+
+### Connecting to console 
+
+Just like geth you can connect to bor console to execute various types of queries! From your `dataDir` run the following command.
+
+> Note If you are trying to connect to a public-tertnet your dataDir is mostly `public-testnets/bor-config/dataDir`
+
+```
+$ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor attach geth.ipc
+```
+
