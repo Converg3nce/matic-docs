@@ -28,7 +28,14 @@ $ bash install_go.sh
 
 Steps to install DEP are [here](https://golang.github.io/dep/docs/installation.html)
 
-### Install RabbitMq
+Or you can install by running the commands given below
+```
+$ curl https://raw.githubusercontent.com/golang/dep/master/install.sh -o install_dep.sh
+$ sh install_dep.sh 
+```
+
+
+<!-- ### Install RabbitMq
 
 A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions [here](https://www.rabbitmq.com/download.html).
 
@@ -39,7 +46,7 @@ $ rabbitmq-server
 ```
 
 This will run the `rabbitmq` server
-
+> NOTE: You don't need rabbit-mq for stage-0 so you can skip -->
 ### Install make
 
 You need to install `make` to run some commands. Using the below commands you can install `make` depending on your system.
@@ -74,27 +81,21 @@ $ make dep && make install
 
 That will install the `heimdalld` and `heimdallcli` binaries. Verify that everything is OK:
 
-```js
-
+```bash 
 $ heimdalld --help
-
 ```
 
 ### Setting up a new node
 
-```js
-
+```bash 
 $ heimdalld init
-
 ```
 
 This will emit the following output which shows your node id and chain id, these can be changed before starting a chain from the genesis file.
 
-```js
-
+```bash
 {
   "chain_id": "heimdall-pldzov",
   "node_id": "ae8fd49c192f39a400c00b328d4fd109d5bcb71d"
 }
-
 ```
