@@ -21,7 +21,7 @@ $ make bor
 
 ```
 
-Now you have `bor` installed on your local system and you can run it using `build/bin/bor`
+Now you have `bor` installed on your local system and the binary is available in the path `build/bin/bor`
 
 ### Adding peers
 
