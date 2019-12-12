@@ -1,6 +1,11 @@
 ## Install docker 
 
-You can install docker from [here]()
+You can install docker from the official website or you can run the commands provided below.
+
+```
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+```
 
 ## Running heimdall with docker
 
