@@ -12,7 +12,7 @@ $ sh get-docker.sh
 ## Run docker 
 
 ```
-$ docker run -d --name matic-heimdall -p 1317:1317 -p 26656:26656 -p 26657:26657 -it maticnetwork/heimdall:CS1001 bash
+$ docker run -d --name matic-heimdall -p 1317:1317 -p 26656:26656 -p 26657:26657 -it maticnetwork/heimdall:CS-1001 bash
 ```
 
 ## Check your docker container is now running
@@ -21,7 +21,7 @@ $ docker ps
 
 // Output should be something like this
 CONTAINER ID        IMAGE                              COMMAND             CREATED             STATUS              PORTS                                                          NAMES
-76cede244f3c        mankenavenkatesh/heimdall:CS1001   "bash"              13 seconds ago      Up 10 seconds       0.0.0.0:1317->1317/tcp, 0.0.0.0:26656-26657->26656-26657/tcp   matic-heimdall
+76cede244f3c        maticnetwork/heimdall:CS-1001   "bash"              13 seconds ago      Up 10 seconds       0.0.0.0:1317->1317/tcp, 0.0.0.0:26656-26657->26656-26657/tcp   matic-heimdall
 ```
 
 Yay! Your heimdall is installed and is now running inside a docker container!

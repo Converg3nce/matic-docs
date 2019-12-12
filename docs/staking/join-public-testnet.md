@@ -2,7 +2,7 @@ Instructions on how to join an existing public testnet.
 
 As soon as we start the public testnet event you would be able to see the genesis file and other required configurations and seed-nodes [here](https://github.com/maticnetwork/public-testnets).
 
-Before we start with the steps make sure you have installed `heimdall` and `bor` binaries or have the docker image for [`heimdall`](./heimdall/running-with-docker) and `bor ` running.
+Before we start with the steps make sure you have installed `heimdall` and `bor` binaries or have the docker image for [`heimdall`](./heimdall/running-with-docker) and [`bor`](./bor/running-with-docker)) running.
 
 ### Join public testnet
 
