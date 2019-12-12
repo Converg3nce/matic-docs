@@ -2,7 +2,7 @@ Instructions on how to join an existing public testnet.
 
 As soon as we start the public testnet event you would be able to see the genesis file and other required configurations and seed-nodes [here](https://github.com/maticnetwork/public-testnets).
 
-Before we start with the steps make sure you have installed `heimdall` and `bor` binaries or have the docker image for [`heimdall`](./heimdall/running-with-docker) and [`bor`](./bor/running-with-docker)) running.
+Before we start with the steps make sure you have either installed [`heimdall`](../heimdall/install-heimdall) and [`bor`](../bor/install-bor) binaries or have the docker image for [`heimdall`](../heimdall/running-with-docker) and [`bor`](../bor/running-with-docker)) running.
 
 ### Join public testnet
 
@@ -59,7 +59,7 @@ You can start heimdall and other associated services like [rest-server](https://
 #### Step 4: Initialise genesis block for Bor
 
 ```js
-// go to bor-config directory
+// go to bor-config directory that you'll find under 'public-testnets' 
 $ cd bor-config
 
 // Using genesis file of validator bor node
@@ -72,7 +72,7 @@ $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor --datadir dataDir init g
 
 #### Step 5: Configure peers for Bor
 
-To sync blocks on the testnet, you need to add peers. The file `static-nodes.json` contains information for all the availalble seed nodes. Let's copy this file to your datadir so that when you start your nodes you already have peers!
+To sync blocks on the testnet, you need to add peers. The file `static-nodes.json` in your relevant public-testnets version folder contains information for all the availalble seed nodes. Let's copy this file to your datadir so that when you start your nodes you already have peers!
 
 ```js
 $ cp static-nodes.json ../bor-config/dataDir/bor/
@@ -81,6 +81,7 @@ $ cp static-nodes.json ../bor-config/dataDir/bor/
 #### Step 6: Start Bor
 
 ```js
+// You'll find the following in bor-config directory
 $ bash start.sh
 
 ```

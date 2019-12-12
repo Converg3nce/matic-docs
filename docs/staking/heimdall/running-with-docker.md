@@ -47,5 +47,3 @@ commit: 812ab544c1f658acf5f84c0b2e4bfe9943fa4854
 go: go version go1.13.4 darwin/amd64
 ```
 
-> To connect to a public testnet run Step-1 from [here](../join-public-testnet#step-1-get-heimdall-genesis-config)
-

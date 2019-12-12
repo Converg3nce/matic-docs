@@ -1,4 +1,4 @@
-Installing and running Bor node.
+Installing your Bor node.
 
 ### What is Bor?
 
@@ -40,7 +40,7 @@ For more info on how to connect to peers see [this](https://geth.ethereum.org/do
 
 Just like geth you can connect to bor console to execute various types of queries! From your `dataDir` run the following command.
 
-> Note If you are trying to connect to a public-testnet your dataDir is mostly `public-testnets/bor-config/dataDir`
+> Note: If you are trying to connect to a public-testnet, your dataDir is mostly `public-testnets/bor-config/dataDir`
 
 ```
 $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor attach geth.ipc

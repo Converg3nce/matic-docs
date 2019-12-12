@@ -4,11 +4,7 @@ Step by step instructions on how to create a single and multiple (soon to be add
 
 Running a testnet with a single validator is recommended if you want to understand how the system works. For ease of setup we have a package of configurations setup already. 
 
-Before moving forward please ensure that you have the binaries for `heimdall` and `bor` created and are available in your path.
-
-> You can view this post to install [Heimdall and its dependencies](../heimdall/install-heimdall/)
-
-> Additionally, you can view this post to [Install Bor](../install-bor)
+Before we start with the steps make sure you have either installed [`heimdall`](../heimdall/install-heimdall) and [`bor`](../bor/install-bor) binaries or have the docker image for [`heimdall`](../heimdall/running-with-docker) and [`bor`](../bor/running-with-docker)) running.
 
 #### Step 1: 
 
