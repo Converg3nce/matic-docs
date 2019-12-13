@@ -8,21 +8,21 @@ To participate in the public testnet event, you need to first setup your Full No
 
 This is mainly to help everyone setup their own nodes and understand the functioning of the network. 
 
-Please note that you have an option to either install `Heimdall` and `Bor` binaries or have the Docker Image (more resource-intensive) for `Heimdall` and `Bor` running as mentioned below.
+Please note that in order to setup `Heimdall` and `Bor`, you have an option to either install its binaries or have the Docker Image (more resource-intensive) running as mentioned below.
 
-> * **Step 1:** [`Install Heimdall`](../heimdall/install-heimdall)
+> * **Step 1:** [Install Heimdall](../heimdall/install-heimdall)
 
-> [Heimdall](https://github.com/maticnetwork/heimdall) is the Proof-of-Stake Validator node and layer for the Matic Network. It works in consonance with the [Staking contracts](https://github.com/maticnetwork/contracts/tree/master/contracts/staking) on Ethereum to enable the PoS mechanism on Matic. You can read up on it more [here](https://blog.matic.network/heimdall-and-bor-matic-validator-and-block-production-layers/).
+> Heimdall is the Proof-of-Stake validator layer for Matic Network. The core responsibilities of Heimdall include verifying all state transitions happening on Bor and to periodically submit checkpoints on the Etehreum chain.
 
-> **Alternatively**, if you do not wish to follow many installation steps, get the **Docker Image for Heimdall** running as mentioned [`here`](../heimdall/running-with-docker).
+> **Alternatively**, if you do not wish to follow many installation steps, get the **Docker Image for Heimdall** running as mentioned [here](../heimdall/running-with-docker).
 
-> * **Step 2:** [`Install Bor`](../install-bor)
+> * **Step 2:** [Install Bor](../install-bor)
 
-> [Bor](https://github.com/maticnetwork/bor) is the Block producer node and layer for the Matic Network. Blocks produced on Bor are validated by Heimdall nodes, and a checkpoint consisting of the Merkle tree hash is committed on Ethereum periodically. You can get more details about Bor [here](https://blog.matic.network/heimdall-and-bor-matic-validator-and-block-production-layers/).
+> Bor is the Block Producer layer for the Matic Network. Blocks produced on Bor are validated by Heimdall nodes.
 
-> **Alternatively**, get the **Docker Image for Bor** running as mentioned [`here`](../bor/running-with-docker).
+> **Alternatively**, get the **Docker Image for Bor** running as mentioned [here](../bor/running-with-docker).
 
-> * **Step 3:** [`Join the public testnet`](../join-public-testnet)
+> * **Step 3:** [Join the public testnet](../join-public-testnet)
 
 > After you have installed Heimdall and Bor, the final step is to sync your node with the on-going testnet. 
 

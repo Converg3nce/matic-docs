@@ -12,7 +12,7 @@ $ heimdalld start
 
 ### Run rest-server
 
-The rest server can be used by external services like explorer, faucets etc to connect to heimdall chain for fetching data and sending transactions.
+The rest-server can be used by external services like explorer, faucets etc to connect to heimdall chain for fetching data and sending transactions.
 
 ```js
 
@@ -24,7 +24,7 @@ $ heimdalld rest-server
 
 Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge.
 
-> Only run bridge if you are planning to stake!
+> NOTE: Skip this step for Stage 0 as this is needed only when you stake to participate in validation and need to send transactions.
 
 ```js
 

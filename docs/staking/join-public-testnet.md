@@ -1,8 +1,8 @@
 Instructions on how to join an existing public testnet.
 
-As soon as we start the public testnet event you would be able to see the genesis file and other required configurations and seed-nodes [here](https://github.com/maticnetwork/public-testnets).
+> As soon as we start the public testnet event you would be able to see the genesis file and other required configurations and seed-nodes [here](https://github.com/maticnetwork/public-testnets).
 
-Before we start with the steps make sure you have either installed [`heimdall`](../heimdall/install-heimdall) and [`bor`](../bor/install-bor) binaries or have the docker image for [`heimdall`](../heimdall/running-with-docker) and [`bor`](../bor/running-with-docker)) running.
+Before we start with the steps, make sure you have either installed [`heimdall`](../heimdall/install-heimdall) and [`bor`](../bor/install-bor) binaries or have the docker image for [`heimdall`](../heimdall/running-with-docker) and [`bor`](../bor/running-with-docker)) running.
 
 ### Join public testnet
 
@@ -20,13 +20,11 @@ $ cp heimdall-genesis.json ~/.heimdalld/config/genesis.json
 
 // copy config file to config directory
 $ cp heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
-
-//  Generate ropsten api key if you don't have one.
-// Generate API key using: https://ethereumico.io/knowledge-base/infura-api-key-guide
-// NOTE: Add your api key in ~/.heimdalld/config/heimdall-config.toml under the key "eth_RPC_URL"
 ```
 
-Do check the checksums of the files from [here](https://github.com/maticnetwork/public-testnets)
+> NOTE: In case you do not have a ropsten API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
+
+Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
 
 #### Step 2: Configure peers for Heimdall
 
@@ -50,11 +48,11 @@ commit: 812ab544c1f658acf5f84c0b2e4bfe9943fa4854
 go: go version go1.13.4 darwin/amd64
 ```
 
-You can start heimdall and other associated services like [rest-server](https://docs.matic.network/staking/heimdall/run-heimdall/#run-rest-server) now using the link below!
+You can start Heimdall and other associated services now using the link below!
 
-> Click here to understand how you can [Run Heimdall](../heimdall/run-heimdall).
-> NOTE: If you are starting heimdall after a crash or simply changed genesis files you need to [reset heimdall](../heimdall/run-heimdall/#reset-heimdall) before moving forward.
-> For Stage-0 there is no need to start bridge as you don't need to send any transactions
+[Run Heimdall](../heimdall/run-heimdall)
+
+> NOTE: If you are starting Heimdall after a crash or simply changed genesis files you need to [Reset Heimdall](../heimdall/run-heimdall/#reset-heimdall) before moving forward.
 
 #### Step 4: Initialise genesis block for Bor
 

@@ -1,10 +1,10 @@
-Installing your Bor node.
+### Introduction to Bor
 
-### What is Bor?
+[Bor](https://github.com/maticnetwork/bor) is the Block producer node and layer for the Matic Network. Blocks produced on Bor are validated by Heimdall nodes. You can get more details about Bor [here](https://blog.matic.network/heimdall-and-bor-matic-validator-and-block-production-layers/).
 
-BOR is the EVM compatible Matic Side chain which currently is built on top of `geth` using `bor` consensus mechanism.
+Bor is the EVM compatible Matic Side chain which currently is built on top of `geth` using `bor` consensus mechanism.
 
-> NOTE: Ensure you have go installed before moving forward.
+> NOTE: To move forward, follow the below mentioned steps ensuring first that you have `go` installed already, or [run](../bor/running-with-docker) using our docker containers.
 
 ### Installing Bor
 

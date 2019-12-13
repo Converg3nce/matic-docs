@@ -1,3 +1,5 @@
+> Note: Skip this if you are installing Heimdall binaries as mentioned [here](../heimdall/install-heimdall). 
+
 ## Install docker 
 
 You can install docker from the official website or you can run the commands provided below.

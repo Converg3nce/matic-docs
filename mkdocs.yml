@@ -89,7 +89,6 @@ nav:
       - 'Participate in Counter Stake': 
         - 'Getting Started': staking/participate-in-counter-stake.md
         - 'Heimdall':
-          - 'What is Heimdall': staking/heimdall/what-is-heimdall.md
           - 'Install Heimdall': staking/heimdall/install-heimdall.md
           - 'Running with Docker': staking/heimdall/running-with-docker.md          
           - 'Configuring Heimdall': staking/heimdall/configure-heimdall.md
