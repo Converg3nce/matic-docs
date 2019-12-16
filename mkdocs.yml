@@ -86,22 +86,15 @@ nav:
       - Economics: staking/economics.md
       - Staking FAQs: staking/faqs.md
       - Technical Requirements: staking/technical-requirements.md
-      - 'Participate in Counter Stake': 
-        - 'Getting Started': staking/participate-in-counter-stake.md
+      - 'Node Setup Guide': 
+        - 'Overview': staking/node-setup-guide.md
         - 'Heimdall':
           - 'Install Heimdall': staking/heimdall/install-heimdall.md
-          - 'Running with Docker': staking/heimdall/running-with-docker.md          
-          - 'Configuring Heimdall': staking/heimdall/configure-heimdall.md
           - 'Running Heimdall': staking/heimdall/run-heimdall.md
+          - 'Configuring Heimdall': staking/heimdall/configure-heimdall.md
         - 'Bor':
           - 'Install Bor': staking/bor/install-bor.md
-          - 'Running with Docker': staking/bor/running-with-docker.md
-        - 'Join Public Testnet': staking/join-public-testnet.md
-      - 'Advanced':
-        - 'Deploy Your Own Matic Testnet': staking/deploy-your-own-matic-testnet.md
-        - 'Deploying Contracts': staking/validator-contracts/deploying-contracts.md
-        - 'Becoming a Validator': staking/validator-contracts/become-a-validator.md
-        
-        
-
-        
+          - 'Running Bor': staking/bor/run-bor.md
+        - 'Public Testnet': staking/join-public-testnet.md
+        - 'Examples': staking/examples.md
+        - 'Deploy Matic Testnet': staking/deploy-your-own-matic-testnet.md
