@@ -8,23 +8,13 @@ To participate in the public testnet event, you need to first setup your Full No
 
 This is mainly to help everyone setup their own nodes and understand the functioning of the network. 
 
-Please note that in order to setup `Heimdall` and `Bor`, you have an option to either install its binaries or have the Docker Image (more resource-intensive) running as mentioned below.
+You may set up your node using any one of the following options: 
 
-> * **Step 1:** [Install Heimdall](../heimdall/install-heimdall)
+> * **Option 1:** [Linux Package Installation](../linux-package-installation) (Recommended)
 
-> Heimdall is the Proof-of-Stake validator layer for Matic Network. The core responsibilities of Heimdall include verifying all state transitions happening on Bor and to periodically submit checkpoints on the Etehreum chain.
+> * **Option 2:** [Running with Docker](../running-with-docker) (A bit resource intensive than the third option)
 
-> **Alternatively**, if you do not wish to follow many installation steps, get the **Docker Image for Heimdall** running as mentioned [here](../heimdall/running-with-docker).
-
-> * **Step 2:** [Install Bor](../install-bor)
-
-> Bor is the Block Producer layer for the Matic Network. Blocks produced on Bor are validated by Heimdall nodes.
-
-> **Alternatively**, get the **Docker Image for Bor** running as mentioned [here](../bor/running-with-docker).
-
-> * **Step 3:** [Join the public testnet](../join-public-testnet)
-
-> After you have installed Heimdall and Bor, the final step is to sync your node with the on-going testnet. 
+> * **Option 3:** [Running with Binaries](../running-with-binaries)
 
 Please note that this stage is only for you to setup your Full Node and checkout the network status. You may stop all services later and restart again to participate in later stages of Counter Stake.
 
@@ -46,6 +36,6 @@ This is not required to participate in the Counter stake event. However, if you 
 
 
 **Queries, any?**
-If you face any trouble during installation or syncing, do share your queries in this forum [here](https://forum.matic.network/c/counter-stake) or on our Validator [Discord channel](https://discord.gg/XvpHAxZ).  
+If you face any trouble during installation or syncing, do share your queries in this [forum](https://forum.matic.network/c/counter-stake) or on our validator [Discord](https://discord.gg/XvpHAxZ) server.  
 
 This will be useful for others to review as well. We’ll try to resolve things as soon as we can. Good luck and looking forward to working together! 
