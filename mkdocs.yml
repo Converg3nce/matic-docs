@@ -94,8 +94,6 @@ nav:
         - 'Running with Binaries': staking/running-with-binaries.md
       - 'Advanced':
         - 'Deploy Your Own Matic Testnet': staking/deploy-your-own-matic-testnet.md
-        - 'Deploying Contracts': staking/validator-contracts/deploying-contracts.md
-        - 'Becoming a Validator': staking/validator-contracts/become-a-validator.md
         
         
 

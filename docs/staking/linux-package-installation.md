@@ -110,7 +110,15 @@ $ sudo service heimdalld-rest-server start
 $ sudo service heimdalld-bridge start
 ``` 
     
-You can see logs of the above services under `~/matic-logs/`
+
+
+**Expected Output**
+
+Your `heimdall-node` should be syncing now! You can see logs of the above services under `~/matic-logs/` 🤩
+
+If everything's well, then your logs should look something like this:
+
+![Screenshot](../images/expected_heimdall.png)
     
 ### Step 6: Configure and run Bor
 
@@ -128,4 +136,20 @@ $ cp static-nodes.json ~/bor/dataDir/bor/static-nodes.json
 $ sudo service bor start
 ```
 
-You can see logs of Bor service under ``~/matic-logs/bor.log``
+**Expected Output**
+
+You can see logs of Bor service under ``~/matic-logs/bor.log`` 🤩
+
+If everything's well, then your logs should look something like this:
+
+![Screenshot](../images/expected_bor.png)
+
+**Ta-Da**
+
+If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
+
+Once you are done checking the logs or querying the data, you may stop all services and restart again soon as we start staking in the next stage.
+
+#### Query data
+
+To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/

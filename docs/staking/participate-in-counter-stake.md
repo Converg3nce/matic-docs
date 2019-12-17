@@ -10,11 +10,11 @@ This is mainly to help everyone setup their own nodes and understand the functio
 
 You may set up your node using any one of the following options: 
 
-> * **Option 1:** [Linux Package Installation](../linux-package-installation) (Recommended)
+> * **Option 1:** [Linux Package Installation](../linux-package-installation) (Recommended; lightweight, native)
 
-> * **Option 2:** [Running with Docker](../running-with-docker) (A bit resource intensive than the third option)
+> * **Option 2:** [Running with Docker](../running-with-docker) (Easy to set up, but a bit resource intensive)
 
-> * **Option 3:** [Running with Binaries](../running-with-binaries)
+> * **Option 3:** [Running with Binaries](../running-with-binaries) (Relatively complex to setup, but offers advanced customization)
 
 Please note that this stage is only for you to setup your Full Node and checkout the network status. You may stop all services later and restart again to participate in later stages of Counter Stake.
 

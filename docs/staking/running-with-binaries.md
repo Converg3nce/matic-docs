@@ -37,19 +37,19 @@ $ sh install_dep.sh
 ```
 
 
-<!-- ### Install RabbitMq
+### Step 3: Install RabbitMq
+
+> NOTE: You do not need rabbit-mq for stage-0 so you can choose to skip.
 
 A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions [here](https://www.rabbitmq.com/download.html).
 
 ```js
-
+// Not needed during Stage 0. The following command will run the `rabbitmq` server
 $ rabbitmq-server
 
 ```
 
-This will run the `rabbitmq` server
-> NOTE: You don't need rabbit-mq for stage-0 so you can skip -->
-### Step 3: Install make
+### Step 4: Install make
 
 You need to install `make` to run some commands. Using the below commands you can install `make` depending on your system.
 
@@ -63,8 +63,7 @@ $ sudo apt-get install build-essential
 ```
 $ brew install make
 ```
-
-### Step 4: Install Heimdall
+### Step 5: Install Heimdall
 
 Next, let's install the latest version of Heimdall. Here, we'll use the master branch, which contains the latest stable release. If necessary, make sure you `git checkout` the correct [released version](https://github.com/maticnetwork/heimdall/releases)
 
@@ -100,7 +99,7 @@ This will emit the following output which shows your node id and chain id, these
   "node_id": "ae8fd49c192f39a400c00b328d4fd109d5bcb71d"
 }
 ```
-### Step 5: Install Bor
+### Step 6: Install Bor
 
 ```js
 
@@ -117,19 +116,6 @@ $ make bor
 
 Now you have `bor` installed on your local system and the binary is available in the path `build/bin/bor`
 
-**Adding peers**
-
-Bor also supports a feature called static nodes if you have certain peers you always want to connect to. Static nodes are re-connected on disconnects. You can configure permanent static nodes by putting something like the following example into `<datadir>/bor/static-nodes.json:`
-
-```js
-[
-  "enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303",
-  "enode://ENODEID@ip:port"
-];
-```
-
-For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
-
 **Connecting to console** 
 
 Just like geth you can connect to bor console to execute various types of queries! From your `dataDir` run the following command.
@@ -139,9 +125,10 @@ Just like geth you can connect to bor console to execute various types of querie
 ```
 $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor attach geth.ipc
 ```
-### Step 6: Join public testnet
+<!-- #CHECK following step is the same as in running-with-docker -->
+### Step 7: Join public testnet
 
-#### 6.1: Get Heimdall genesis config
+#### 7.1: Get Heimdall genesis config
 
 ```js
 $ git clone https://github.com/maticnetwork/public-testnets
@@ -161,13 +148,13 @@ $ cp heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
 
 Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
 
-#### 6.2: Configure peers for Heimdall
+#### 7.2: Configure peers for Heimdall
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas in file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
 Refer to `heimdall-seeds.txt` for peer info in your testnet folder.
 
-#### 6.3: Start & sync Heimdall
+#### 7.3: Start & sync Heimdall
 
 Before starting do verify you are on the correct version by running the below command
 
@@ -182,7 +169,7 @@ version: CS-1001
 commit: 812ab544c1f658acf5f84c0b2e4bfe9943fa4854
 go: go version go1.13.4 darwin/amd64
 ```
-
+<!-- #CHECK following `run` commands are same as in deploy-your-own-testnet -->
 **Run Heimdall**
 
 Starting Heimdall is fairly easy, the below command will start heimdall using the genesis file in `~/.heimdalld/config/genesis.json`.
@@ -279,7 +266,15 @@ $ curl http://localhost:26657/status
 
 The key called `catching_up` will show your sync status, if it's not catching up it means that you are fully synced!
 
-#### 6.4: Initialise genesis block for Bor
+**Expected Output**
+
+Your `heimdall-node` should be syncing now! Checkout `$GOPATH/src/github.com/maticnetwork/heimdall/logs/heimdalld.log` to get to the logs 🤩
+
+If everything's well, then your logs should look something like this:
+
+![Screenshot](../images/expected_heimdall.png)
+
+#### 7.4: Initialise genesis block for Bor
 
 ```js
 // go to bor-config directory that you'll find under 'public-testnets' 
@@ -293,7 +288,7 @@ $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor --datadir dataDir init g
 
 ```
 
-#### 6.5: Configure peers for Bor
+#### 7.5: Configure peers for Bor
 
 To sync blocks on the testnet, you need to add peers. The file `static-nodes.json` in your relevant public-testnets version folder contains information for all the availalble seed nodes. Let's copy this file to your datadir so that when you start your nodes you already have peers!
 
@@ -301,7 +296,19 @@ To sync blocks on the testnet, you need to add peers. The file `static-nodes.jso
 $ cp static-nodes.json ../bor-config/dataDir/bor/
 ```
 
-#### 6.6: Start Bor
+**Adding additional peers (optional)**
+
+If you have certain peers you always want to connect to, you can configure permanent static nodes by putting something like the following example into `<datadir>/bor/static-nodes.json`
+
+```js
+[
+  "enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303",
+  "enode://ENODEID@ip:port"
+];
+```
+For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
+
+#### 7.6: Start Bor
 
 ```js
 // You'll find the following in bor-config directory
@@ -309,9 +316,21 @@ $ bash start.sh
 
 ```
 
+**Expected Output**
+
 Your `bor-node` should be syncing now! Checkout `logs/bor.log` to get to the logs 🤩
 
-#### 6.7: Query data
+If everything's well, then your logs should look something like this:
+
+![Screenshot](../images/expected_bor.png)
+
+**Ta-Da**
+
+If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
+
+Once you are done checking the logs or querying the data, you may stop all services and restart again soon as we start staking in the next stage.
+
+#### 7.7: Query data
 
 To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/
 
