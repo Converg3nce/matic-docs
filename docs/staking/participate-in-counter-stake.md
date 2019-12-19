@@ -1,24 +1,41 @@
 Hey everyone! Counter Stake is here - Get ready to run Validator nodes on the Matic testnet!
 
-We have been working hard on enabling the Proof-of-Stake (PoS) layer on the Matic Network, and we are launching our public incentivized staking testnet event [Counter Stake](https://matic.network/counter-stake/). We had previously released the details of our Staking economics and updates [here](https://blog.matic.network/matic-network-staking-economics/) and [here](https://blog.matic.network/matic-network-staking-update-and-becoming-a-validator).
+We have been working hard on enabling the Proof-of-Stake (PoS) layer on the Matic Network, and we are launching our public incentivized staking testnet event [Counter Stake](https://matic.network/counter-stake/). 
 
-**Stage 0 of Counter Stake has officially started now**, with stages 1 and 2 to come [later](https://matic.network/counter-stake/). 
-
-You can start with setting up the Validator nodes on the testnet from here - these are the set of steps that will help you get started.
+To participate in the public testnet event, you need to first setup your Full Node (Stage 0) and then become a Validator (Stage 1 & 2.) 
  
-> * **Step 1:** [Install Heimdall](../heimdall/install-heimdall)
+**Stage 0 - Setup (Currently on-going)**
 
-> [Heimdall](https://github.com/maticnetwork/heimdall) is the Proof-of-Stake Validator node and layer for the Matic Network. It works in consonance with the [Staking contracts](https://github.com/maticnetwork/contracts/tree/master/contracts/staking) on Ethereum to enable the PoS mechanism on Matic. You can read up on it more [here](https://blog.matic.network/heimdall-and-bor-matic-validator-and-block-production-layers/).
+This is mainly to help everyone setup their own nodes and understand the functioning of the network. 
 
-> * **Step 2:** [Install Bor](../install-bor)
+You may set up your node using any one of the following options: 
 
-> [Bor](https://github.com/maticnetwork/bor) is the Block producer node and layer for the Matic Network. Blocks produced on Bor are validated by Heimdall nodes, and a checkpoint consisting of the Merkle tree hash is committed on Ethereum periodically. You can get more details about Bor [here](https://blog.matic.network/heimdall-and-bor-matic-validator-and-block-production-layers/).
+> * **Option 1:** [Linux Package Installation](../linux-package-installation) (Recommended; lightweight, native)
 
-> * **Step 3:** [Join the public testnet](../join-public-testnet)
+> * **Option 2:** [Running with Docker](../running-with-docker) (Easy to set up, but a bit resource intensive)
 
-> After you have installed Heimdall and Bor, the final step is join the public testnet that we have setup. Completing this step will ensure that you are ready to fully participate in later stages of Counter Stake.
+> * **Option 3:** [Running with Binaries](../running-with-binaries) (Relatively complex to setup, but offers advanced customization)
+
+Please note that this stage is only for you to setup your Full Node and checkout the network status. You may stop all services later and restart again to participate in later stages of Counter Stake.
+
+**Stage 1 - Stake on the Beach (Will start sometime soon after the new year)**
+
+> * **Step 1:** Setup your Full Node as mentioned under Stage 0.
+
+> * **Step 2:** Stake tokens to become a validator - Contract addresses and other details will be released before the stage commences.
+
+We will be testing all features incrementally here; rewards, slashing, replacement and more. You will need to maintain your uptime and earn rewards as per your performance.
+
+**Stage 2 - The Grand Staking League**
+
+Based on the performance of all nodes in the previous round, we will have a limited number of testnet validator slots (as per tendermint limit) in this stage. Every node begins with the same amount of stake. The one with the most power in the end wins!
+
+**Advanced**
+
+This is not required to participate in the Counter stake event. However, if you wish to deploy your own Matic Testnet and experiment with the code, please follow the steps mentioned [here](../deploy-your-own-matic-testnet).
 
 
-If you face any trouble during installation or syncing, do share your queries in this forum [here](https://forum.matic.network/c/counter-stake) or on our Validator [Discord channel](https://discord.gg/XvpHAxZ).  
+**Queries, any?**
+If you face any trouble during installation or syncing, do share your queries in this [forum](https://forum.matic.network/c/counter-stake) or on our validator [Discord](https://discord.gg/XvpHAxZ) server.  
 
-This will be useful for others to review as well. We’ll try to resolve things as soon as we can.
+This will be useful for others to review as well. We’ll try to resolve things as soon as we can. Good luck and looking forward to working together! 
