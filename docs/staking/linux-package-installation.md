@@ -10,7 +10,7 @@
 ```js
 $ sudo apt-get install rabbitmq-server
 
-$ sudo rabbitmq-server start
+$ sudo service rabbitmq-server start
 ```
     
 **For CentOS/RHEL/AmazonLinux**
