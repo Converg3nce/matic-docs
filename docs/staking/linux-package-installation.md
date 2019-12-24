@@ -22,7 +22,7 @@ $ curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/
 
 $ sudo yum install rabbitmq-server
 
-$ sudo rabbitmq-server start
+$ sudo service rabbitmq-server start
 ```
    
 ### Step 2: Dowload node setup package
