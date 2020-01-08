@@ -51,9 +51,16 @@ go: go version go1.13.4 darwin/amd64
 
 ### Step 3: Run docker for Bor
 
-TBD
+#### Start docker container for Bor
 
-<!-- #CHECK following step is the same as in running-with-binaries -->
+```
+docker run --name matic-bor -it maticnetwork/bor:CS-1001 bash`
+```
+
+To start bor you can run `bash start.sh`
+
+And to verify you can run `tail -f logs/bor.log` and check the logs.
+
 ### Step 4: Join public testnet
 
 #### 4.1: Get Heimdall genesis config
