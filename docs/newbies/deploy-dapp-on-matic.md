@@ -56,38 +56,20 @@ cd dapp-ui
 npm install
 
 ```
-
-Start test blockchain using ganache-cli
-
-```js
-ganache-cli -p 8545
-```
-
-Now that we have a local blockchain running on localhost port 8545, we'd like to connect our metamask to the same. 
+Now, we’d like to connect our Metamask to Matic Network's Testnet.
 
 For this:
-
 - Open Metamask and select Custom RPC from the networks dropdown
 
 ![](images/dapp-tutorial/metamask-custom-rpc.png?raw=true)<br/><br/>
 
-- Put in a Network name - "Localhost 8545"
-- In URL field you can add the URL as - "http://localhost:8545"
+- Put in a Network name - “Matic Testnet v3”
+In URL field you can add the URL as - “https://testnetv3.matic.network”
 - Go ahead and click save
+- Copy your address from Metamask
 
-Add one of the test accounts generated on ganache on Metamask - to get test ether
-
-- Copy one of the private keys generated with ganache
-
-![](images/dapp-tutorial/ganache-private-key.png?raw=true)<br/><br/>
-
-- Select Import account on Metamask
-
-![](images/dapp-tutorial/metamask-import-account.png?raw=true)<br/><br/>
-
-- Paste the private key and you should get an account with 100 test ether to use
-
-![](images/dapp-tutorial/metamask-import-account.png?raw=true)<br/><br/>
+![](images/dapp-tutorial/metamask-copy-address.png?raw=true)<br /><br />
+- head over to https://faucet.matic.network and request test ether - if you'd like. (the gas fee can also be safely set to 0 on testnet - read more about how to do that here: [link])
 
 ## Deploying the Smart Contract
 
