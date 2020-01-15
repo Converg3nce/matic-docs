@@ -60,6 +60,7 @@ nav:
       - API Reference: api-reference.md
       - Registered Tokens (ERC20): mapped-tokens.md
       - Moibit - Decentralized Storage: integrate-with-moibit.md
+      - Razor - Oracle: integrate-with-razor.md
       - FAQ: faq.md
 
   - Dagger:
