@@ -4,17 +4,15 @@ Block time on the Matic testnet is ~1s.
 
 ### Deploy smart contracts
 
-* If you are already developing contracts on Ethereum, just configure the Web3 Provider URL to https://testnet2.matic.network
+* If you are already developing contracts on Ethereum, just configure the Web3 Provider URL to https://testnetv3.matic.network
 * Everything else remains the same
 * Matic Mainnet will have PoS security, with greater Plasma guarantees being added
 
-> **Note**: Developers already integrating with https://testnet2.matic.network/ can change their RPC to https://pre-alpha.matic.network in order to move to the pre-alpha Matic mainnet test chain. This environment will have the same changes as in the alpha Matic mainnet, and will allow any breaking changes to be rectified in your application.
-
 ### Bring Ropsten assets (ERC20/ERC721) to the Matic testnet using Plasma
 
-* To get TEST tokens on Ropsten you can access the Matic Faucet: https://wallet.matic.today/faucet
+* To get TEST tokens on Ropsten you can access the Matic Faucet: https://faucet.matic.network
 
-* Ropsten TEST token contract address - `0x6b0b0e265321e788af11b6f1235012ae7b5a6808`
+* Ropsten TEST token contract address - `0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec`
 
 * Use [matic.js](https://github.com/maticnetwork/matic.js) to interact with the Matic Plasma contracts. Go to  the [maticjs walkthrough](https://docs.matic.network/matic-js-tutorial/).
 
