@@ -91,7 +91,15 @@ We plan to build a Decentralized Airbnb that incorporates three main functionali
 
 Go ahead and clone the [repository](https://github.com/maticnetwork/ethindia-workshop) and install dependencies and then run `npm install`
 
+`cd` into the repository directory 
+
+```bash
+$ cd ethindia-workshop
+```
+
 ### Setting up Data Structures
+
+Open `Airbnb.sol` in your favourite editor. Next, we'll start adding data structures and functions to add some functionality in the smart contract. 
 
 We’d like a property with a name, description, owner and a price to be rented.
 
