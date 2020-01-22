@@ -364,6 +364,7 @@ function getAirbnbContract() {
 }
 
 ```
+the above function checks for an already defined contract object, if not, it creates and defines a new one.
 
 With metamask connected and contract initiated we can go forward with interacting with our contract
 
@@ -392,6 +393,8 @@ postProperty(this.title, this.description, weiValue)
 
 ```
 
+We first convert price from `ether` to `wei`. Wei is the smallest transferrable unit of ether on Ethereum. You can keep this simple calculation in mind: `1 ether` is equal to `10^18 wei`.
+
 The `postProperty` function is to be defined inside `dapp-ui/plugins/utils.js`. Which should look something like this:
 
 ```js
@@ -401,6 +404,7 @@ const prop = await getAirbnbContract().methods.rentOutproperty(name, description
   alert('Property Posted Successfully')
 
 ```
+Here, we are simply calling the `rentOutProperty` method in the Airbnb contract we deployed in the [previous](https://docs.matic.network/newbies/getting-started-solidity/) tutorial.
 
 Next, to incorporate booking of a new property, we’ll define the `book()` function in `dapp-ui/components/detailsModal.vue`. Copy the code snippet inside the `book()`
 
@@ -426,6 +430,8 @@ const prop = await getAirbnbContract().methods.rentProperty(spaceId, checkInDate
 
 ```
 
+Again, we are simply calling the `rentProperty` method in the Airbnb contract we deployed in the [previous](https://docs.matic.network/newbies/getting-started-solidity/) tutorial.
+
 Copy the code snippet inside the `bookProperty()`
 
 The next and final functionality to add is fetching and displaying all available spaces. `fetchAllProperties()` function is invoked inside `index.vue` and defined inside `utils.js`
@@ -448,6 +454,7 @@ Navigate to `dapp-ui/plugins/utils.js` and add the following code to the `fetchA
   return properties
     
 ```
+The above code queries our deployed smart contract, first, for the total number of properties till date, and next loops to retrieve each property from its `id` and stores details in an array.
 
 ## Run and Test!
 
