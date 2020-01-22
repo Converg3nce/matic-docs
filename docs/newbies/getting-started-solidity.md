@@ -211,7 +211,7 @@ On the whole, we require three basic functions:
             );
             properties[_propertyId].isActive = false;
           }
-    For situations where the property is to be marked as inactive, we'd only like the owner to be able to do so: which is checked by the first `require(...)` statement. After the check, the `isActive` flag is set to false.
+    For situations where the property is to be marked as inactive, you would only like the owner to be able to do so: which is checked by the first `require(...)` statement. After the check, the `isActive` flag is set to false.
 
 We used two functions `_sendFunds` and `_createBooking` in the `rentProperty` function. These two functions are internal functions and as the naming convention in Solidity goes, they are prefixed with an underscore. We require these to be internal for we won’t want anyone to be able to send funds to their own account or create a booking on an inactive property.
 

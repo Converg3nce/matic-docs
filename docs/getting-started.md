@@ -42,25 +42,25 @@ The flow for asset transfers on the Matic Network is as follows:
     - In case you don’t have some ETH on Ropsten, you can use the faucet links given here — https://faucet.metamask.io/ or https://faucet.ropsten.be/.
 - Add TEST token to your Ropsten account on Metamask
     - Refer the tutorial given [here](https://docs.matic.network/newbies/conf-custom-tokens-metamask/) to add a custom token
-    - TEST token contract address on Ropsten: `0x70459e550254b9d3520a56ee95b78ee4f2dbd846`
+    - TEST token contract address on Ropsten: `0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec`
 - Get TEST tokens from the faucet https://wallet.matic.today/faucet
 - Add Matic RPC endpoint on Metamask
     - Refer the tutorial [here](https://docs.matic.network/newbies/conf-testnet-metamask/) to add a custom RPC endpoint
-    - Matic RPC endpoint: `https://testnet2.matic.network/`
+    - Matic RPC endpoint: `https://testnetv3.matic.network/`
 
 ### Important contracts and addresses
 
 **Ropsten testnet addresses**
 
-* Ropsten MATIC ERC20 token (TEST token): `0x70459e550254b9d3520a56ee95b78ee4f2dbd846`
-* Root Contract: `0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4`
-* DepositManager Contract: `0x4072fab2a132bf98207cbfcd2c341adb904a67e9`
-* WithdrawManager Contract: `0x4ef2b60cdd4611fa0bc815792acc14de4c158d22`
+* Ropsten MATIC ERC20 token (TEST token): `0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec`
+* Root Contract: `0x82a72315E16cE224f28E1F1fB97856d3bF83f010`
+* DepositManager Contract: `0x3Bc6701cA1C32BBaC8D1ffA2294EE3444Ad93989`
+* WithdrawManager Contract: `0x3cf9aD3395028a42EAfc949e2EC4588396b8A7D4`
 
 **Matic Testnet**
 
-* RPC endpoint host: `https://testnet2.matic.network`
-* Matic testnet MATIC ERC20 token (TEST token): `0xc82c13004c06E4c627cF2518612A55CE7a3Db699`
+* RPC endpoint host: `https://testnetv3.matic.network`
+* Matic testnet MATIC ERC20 token (TEST token): `0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec`
 
 <!-- ### Faucet
 

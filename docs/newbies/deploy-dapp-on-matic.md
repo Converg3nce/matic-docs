@@ -2,7 +2,7 @@
 
 ## What this tutorial covers
 
-This tutorial covers an overview of web interaction with Solidity - making use of an extension called Metamask. We'll be using a pre-written Ethereum smart contract and would be deploying it on a local blockchain using ganache-cli and Remix.
+This tutorial covers an overview of web interaction with Solidity - making use of an extension called Metamask. We will be using a pre-written Ethereum smart contract and would be deploying it on a local blockchain using ganache-cli and Remix.
 
 To get a snippet on Solidity you can read this post: https://docs.matic.network/newbies/getting-started-solidity/
 

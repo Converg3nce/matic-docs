@@ -6,12 +6,12 @@ However, this page helps developers, who have a good understanding of smart cont
 
 ## Important Addresses and Links
 
-**Matic RPC endpoint**: `https://testnet2.matic.network`
+**Matic RPC endpoint**: `https://testnetv3.matic.network`
 
 |Contract|ABI|Ropsten|Matic|
 |---|---|---|---|
-|TEST (ERC20) token|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x70459e550254b9d3520a56ee95b78ee4f2dbd846`|`0xc82c13004c06E4c627cF2518612A55CE7a3Db699`|
-|Plasma Root Contract|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x60e2b19b9a87a3f37827f2c8c8306be718a5f9b4`|   |
+|TEST (ERC20) token|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec`|`0x9a93c912F4eFf0254d178a18ACD980C1B05b57b0`|
+|Plasma Root Contract|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"></a>|`0x82a72315E16cE224f28E1F1fB97856d3bF83f010`|   |
 
 ### Tokens for testing
 
@@ -29,7 +29,7 @@ To get some `TEST` tokens on Ropsten network, you can access the Matic Faucet by
 
 You can also check transaction procesed on the Matic Sidechain using the Matic Explorer.
 
-Link to the explorer - https://explorer.testnet2.matic.network/
+Link to the explorer - https://testnetv3-explorer.matic.network/
 
 ## Workflow
 
@@ -150,7 +150,7 @@ async transferTokens(tokenAddress, to, amount) {
 **Sample code for Balance on Matic testnet**:
 
 ```javascript
-const web3 = new Web3("https://testnet.matic.network")
+const web3 = new Web3("https://testnetv3.matic.network")
 
 async getBalanceMatic (accountAddress) {
   const erc20Contract = new web3.eth.Contract(TokenABI, tokenAddress)
