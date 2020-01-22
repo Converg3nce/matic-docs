@@ -45,7 +45,7 @@ We will be using existing solidity contract called Airbnb.sol - a decentralized 
 * View available spaces
 * Rent a space  
 
-We'll be building a UI that corresponds to these three functionalities and gives a nice looking interface for users to find or rent their spaces.
+We'll be building a UI that corresponds to these three functionalities and gives a clean looking interface for users to find or rent their spaces.
 
 Clone the template ([https://github.com/maticnetwork/ethindia-workshop](https://github.com/maticnetwork/ethindia-workshop)) into a new directory
 
@@ -106,7 +106,7 @@ Your left menu should look something like this:
 
 ![](images/dapp-tutorial/remix-left-menu.png?raw=true)<br/><br/>
 
-- Create a new file, Airbnb.sol
+- Create a new file, Airbnb.sol. To understand the details of the smart contract you can read this article: https://docs.matic.network/newbies/getting-started-solidity/#setting-up-data-structures
 
 - Copy the entire smart contract code and paste it in the editor
 
@@ -464,7 +464,7 @@ Execute `npm run dev` to view and interact with your decentralized application!
 
 ![](images/dapp-tutorial/rent-your-property.png?raw=true)<br/><br/>
 
-Click on 'Rent your Property' button on top right, it displays a dialogue box requiring title, description and price. The submit button sends these values to the function 'rentOutProperty' on the smart contract in the form of a transaction. Since it 'transacts' with the blockchain it would create a metamask popup requiring you to sign the transaction, shown below.
+Click on 'Rent your Property' button on top right, it displays a dialogue box requiring title, description and price. The submit button sends these values to the function `rentOutProperty` on the smart contract in the form of a transaction. Since it 'transacts' with the blockchain it would create a metamask popup requiring you to sign the transaction, shown below.
 
 ![](images/dapp-tutorial/dapp-metamask-tx-confirm.png?raw=true)<br/><br/>
 
