@@ -91,7 +91,15 @@ We plan to build a Decentralized Airbnb that incorporates three main functionali
 
 Go ahead and clone the [repository](https://github.com/maticnetwork/ethindia-workshop) and install dependencies and then run `npm install`
 
+`cd` into the repository directory 
+
+```bash
+$ cd ethindia-workshop
+```
+
 ### Setting up Data Structures
+
+Open `Airbnb.sol` in your favourite editor. Next, we'll start adding data structures and functions to add some functionality in the smart contract. 
 
 We’d like a property with a name, description, owner and a price to be rented.
 
@@ -113,19 +121,19 @@ struct Property {
 
 ```
 
-We’d also like to keep track of the Property object we just created by mapping a unique property id to each new Property object.
+We’d also like to keep track of the Property object we just created by mapping a unique `propertyId` to each new Property object.
 
-For this, we first declare a variable propertyId followed by a mapping of propertyId to property, called properties.
+For this, we first declare a variable `propertyId` followed by a mapping of `propertyId` to property, called properties.
 
 ```js
 uint256 public propertyId;
-  // mapping of propertyId to Property object
-  mapping(uint256 => Property) public properties;
+// mapping of propertyId to Property object
+mapping(uint256 => Property) public properties;
 ```
 
 Having a property we’d also like to keep track of all the bookings made till date.
 
-We can do that by creating another structure for a Booking with properties such as: propertyId, check in and check out date and the user who made the booking.
+We can do that by creating another structure for a Booking with properties such as: `propertyId`, check in and check out date and the user who made the booking.
 
 ```js
 struct Booking {
@@ -136,12 +144,12 @@ struct Booking {
 }
 
 ```
-Similar to what we did to keep track of each property, we can do to keep track of each booking - by mapping each booking id to a particular booking object.
+Similar to what we did to keep track of each property, we can do to keep track of each booking - by mapping each `bookingId` to a particular booking object.
 
 ```js
 uint256 public bookingId;
-  // mapping of bookingId to Booking object
-  mapping(uint256 => Booking) public bookings;
+// mapping of bookingId to Booking object
+mapping(uint256 => Booking) public bookings;
 ```
 
 ### Defining events
@@ -166,6 +174,10 @@ On the whole, we require three basic functions:
 
             // emit an event to notify the clients
             emit NewProperty(propertyId++);
+    
+    The above function first creates a  `property` object, stores it in the `properties` array and emits a new event `NewProperty` with relevant details. Events are a great way of keeping a log of important state changes, read more about them [here](https://ethereum.stackexchange.com/a/11231)
+
+    Here, the `memory` keyword tells solidity to create a chunk of space for the variable at method runtime, guaranteeing its size and structure for future use in that method.
 
 2. `rentProperty`
 
@@ -186,6 +198,9 @@ On the whole, we require three basic functions:
                 revert("property is not available for the selected dates");
               }
         }
+  * The function first retrieves the `property` object from storage and then runs a few checks, which are:
+    * The `require(...)` checks if the property is active; the first arguement is a boolean condition, the second argument is the error message for when the condition turns out to be false
+    * The second assertion is a check of the range of available dates for the particular property of interest. 
 
 3. `markPropertyAsInactive`
 
@@ -196,6 +211,7 @@ On the whole, we require three basic functions:
             );
             properties[_propertyId].isActive = false;
           }
+    For situations where the property is to be marked as inactive, we'd only like the owner to be able to do so: which is checked by the first `require(...)` statement. After the check, the `isActive` flag is set to false.
 
 We used two functions `_sendFunds` and `_createBooking` in the `rentProperty` function. These two functions are internal functions and as the naming convention in Solidity goes, they are prefixed with an underscore. We require these to be internal for we won’t want anyone to be able to send funds to their own account or create a booking on an inactive property.
 
@@ -206,7 +222,7 @@ These two functions are defined as:
 
         function _sendFunds (address beneficiary, uint256 value) internal {
           address(uint160(beneficiary)).transfer(value);
-        }
+        } The above function simply transfers ether to the `beneficiary`
 
 5. `_createBooking`
 
@@ -224,7 +240,9 @@ These two functions are defined as:
 
         // Emit an event to notify clients
         emit NewBooking(_propertyId, bookingId++);
-      }
+      } The above function handles creation of bookings.
+
+  > Notice the `_` prefixed to the above two function names. This is a format used for `internal` functions.
 
 You can view the entire code [here](https://github.com/maticnetwork/ethindia-workshop/blob/master/contracts/Airbnb.sol).
 
@@ -411,4 +429,4 @@ Once Metamask is connected to Remix, the 'Deploy' transaction would generate ano
 
 - And once the contract is deployed you can test the functions
 
-
+![](images/dapp-tutorial/test-contract.png)
