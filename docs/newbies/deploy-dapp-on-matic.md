@@ -45,7 +45,7 @@ We will be using existing solidity contract called Airbnb.sol - a decentralized 
 * View available spaces
 * Rent a space  
 
-We'll be building a UI that corresponds to these three functionalities and gives a nice looking interface for users to find or rent their spaces.
+We'll be building a UI that corresponds to these three functionalities and gives a clean looking interface for users to find or rent their spaces.
 
 Clone the template ([https://github.com/maticnetwork/ethindia-workshop](https://github.com/maticnetwork/ethindia-workshop)) into a new directory
 
@@ -106,7 +106,7 @@ Your left menu should look something like this:
 
 ![](images/dapp-tutorial/remix-left-menu.png?raw=true)<br/><br/>
 
-- Create a new file, Airbnb.sol
+- Create a new file, Airbnb.sol. To understand the details of the smart contract you can read this article: https://docs.matic.network/newbies/getting-started-solidity/#setting-up-data-structures
 
 - Copy the entire smart contract code and paste it in the editor
 
@@ -364,6 +364,7 @@ function getAirbnbContract() {
 }
 
 ```
+the above function checks for an already defined contract object, if not, it creates and defines a new one.
 
 With metamask connected and contract initiated we can go forward with interacting with our contract
 
@@ -392,6 +393,8 @@ postProperty(this.title, this.description, weiValue)
 
 ```
 
+We first convert price from `ether` to `wei`. Wei is the smallest transferrable unit of ether on Ethereum. You can keep this simple calculation in mind: `1 ether` is equal to `10^18 wei`.
+
 The `postProperty` function is to be defined inside `dapp-ui/plugins/utils.js`. Which should look something like this:
 
 ```js
@@ -401,6 +404,7 @@ const prop = await getAirbnbContract().methods.rentOutproperty(name, description
   alert('Property Posted Successfully')
 
 ```
+Here, we are simply calling the `rentOutProperty` method in the Airbnb contract we deployed in the [previous](https://docs.matic.network/newbies/getting-started-solidity/) tutorial.
 
 Next, to incorporate booking of a new property, we’ll define the `book()` function in `dapp-ui/components/detailsModal.vue`. Copy the code snippet inside the `book()`
 
@@ -426,6 +430,8 @@ const prop = await getAirbnbContract().methods.rentProperty(spaceId, checkInDate
 
 ```
 
+Again, we are simply calling the `rentProperty` method in the Airbnb contract we deployed in the [previous](https://docs.matic.network/newbies/getting-started-solidity/) tutorial.
+
 Copy the code snippet inside the `bookProperty()`
 
 The next and final functionality to add is fetching and displaying all available spaces. `fetchAllProperties()` function is invoked inside `index.vue` and defined inside `utils.js`
@@ -448,6 +454,7 @@ Navigate to `dapp-ui/plugins/utils.js` and add the following code to the `fetchA
   return properties
     
 ```
+The above code queries our deployed smart contract, first, for the total number of properties till date, and next loops to retrieve each property from its `id` and stores details in an array.
 
 ## Run and Test!
 
@@ -457,7 +464,7 @@ Execute `npm run dev` to view and interact with your decentralized application!
 
 ![](images/dapp-tutorial/rent-your-property.png?raw=true)<br/><br/>
 
-Click on 'Rent your Property' button on top right, it displays a dialogue box requiring title, description and price. The submit button sends these values to the function 'rentOutProperty' on the smart contract in the form of a transaction. Since it 'transacts' with the blockchain it would create a metamask popup requiring you to sign the transaction, shown below.
+Click on 'Rent your Property' button on top right, it displays a dialogue box requiring title, description and price. The submit button sends these values to the function `rentOutProperty` on the smart contract in the form of a transaction. Since it 'transacts' with the blockchain it would create a metamask popup requiring you to sign the transaction, shown below.
 
 ![](images/dapp-tutorial/dapp-metamask-tx-confirm.png?raw=true)<br/><br/>
 
