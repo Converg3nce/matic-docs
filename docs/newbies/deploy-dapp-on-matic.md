@@ -6,7 +6,7 @@ This tutorial covers an overview of web interaction with Solidity - making use o
 
 To get a snippet on Solidity you can read this post: https://docs.matic.network/newbies/getting-started-solidity/
 
-This ĐApp uses Nuxt.js, but we'd only be focusing on the pieces that help us build. In reality, any JS framework can be used.
+This ĐApp uses Nuxt.js, but you would only be focusing on the pieces that help us build. In reality, any JS framework can be used.
 
 ## Installation and Prerequisites
 
@@ -56,7 +56,7 @@ cd dapp-ui
 npm install
 
 ```
-Now, we’d like to connect our Metamask to Matic Network's Testnet.
+Now, you can connect Metamask to Matic Network's Testnet.
 
 For this:
 - Open Metamask and select Custom RPC from the networks dropdown
