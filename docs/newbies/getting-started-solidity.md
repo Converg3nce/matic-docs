@@ -121,9 +121,9 @@ struct Property {
 
 ```
 
-We’d also like to keep track of the Property object we just created by mapping a unique property id to each new Property object.
+We’d also like to keep track of the Property object we just created by mapping a unique `propertyId` to each new Property object.
 
-For this, we first declare a variable propertyId followed by a mapping of propertyId to property, called properties.
+For this, we first declare a variable `propertyId` followed by a mapping of `propertyId` to property, called properties.
 
 ```js
 uint256 public propertyId;
@@ -133,7 +133,7 @@ mapping(uint256 => Property) public properties;
 
 Having a property we’d also like to keep track of all the bookings made till date.
 
-We can do that by creating another structure for a Booking with properties such as: propertyId, check in and check out date and the user who made the booking.
+We can do that by creating another structure for a Booking with properties such as: `propertyId`, check in and check out date and the user who made the booking.
 
 ```js
 struct Booking {
@@ -144,7 +144,7 @@ struct Booking {
 }
 
 ```
-Similar to what we did to keep track of each property, we can do to keep track of each booking - by mapping each booking id to a particular booking object.
+Similar to what we did to keep track of each property, we can do to keep track of each booking - by mapping each `bookingId` to a particular booking object.
 
 ```js
 uint256 public bookingId;
@@ -174,9 +174,10 @@ On the whole, we require three basic functions:
 
             // emit an event to notify the clients
             emit NewProperty(propertyId++);
-    the above function creates a new property. The above function first creates a  `property` object, stores it in the `properties` arrat and emits a new event `NewProperty` with relevant details. Events are a great way of keeping a log of important state changes, read more about them [here](https://ethereum.stackexchange.com/a/11231)
+    
+    The above function first creates a  `property` object, stores it in the `properties` array and emits a new event `NewProperty` with relevant details. Events are a great way of keeping a log of important state changes, read more about them [here](https://ethereum.stackexchange.com/a/11231)
 
-    here, the `memory` keyword tells solidity to create a chunk of space for the variable at method runtime, guaranteeing its size and structure for future use in that method.
+    Here, the `memory` keyword tells solidity to create a chunk of space for the variable at method runtime, guaranteeing its size and structure for future use in that method.
 
 2. `rentProperty`
 
@@ -197,9 +198,9 @@ On the whole, we require three basic functions:
                 revert("property is not available for the selected dates");
               }
         }
-  The function first retrieves the `property` object from storage and then runs a few checks, which are:
-  1. `require(...)` checks if the property is active; the first arguement is a boolean condition, the second argument is the error message for when the condition turns out to be false
-  2. The second assertion is a check of the range of available dates for the particular property of interest. 
+  * The function first retrieves the `property` object from storage and then runs a few checks, which are:
+    * The `require(...)` checks if the property is active; the first arguement is a boolean condition, the second argument is the error message for when the condition turns out to be false
+    * The second assertion is a check of the range of available dates for the particular property of interest. 
 
 3. `markPropertyAsInactive`
 
@@ -221,8 +222,7 @@ These two functions are defined as:
 
         function _sendFunds (address beneficiary, uint256 value) internal {
           address(uint160(beneficiary)).transfer(value);
-        }
-    The above function simply transfers ether to the `beneficiary`
+        } The above function simply transfers ether to the `beneficiary`
 
 5. `_createBooking`
 
@@ -240,8 +240,7 @@ These two functions are defined as:
 
         // Emit an event to notify clients
         emit NewBooking(_propertyId, bookingId++);
-      }
-  The above function handles creation of bookings.
+      } The above function handles creation of bookings.
 
   > Notice the `_` prefixed to the above two function names. This is a format used for `internal` functions.
 
