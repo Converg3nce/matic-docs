@@ -4,7 +4,7 @@ We have been working hard on enabling the Proof-of-Stake (PoS) layer on the Mati
 
 To participate in the public testnet event, you need to first setup your Full Node (Stage 0) and then become a Validator (Stage 1 & 2.) 
  
-**Stage 0 - Setup (Currently on-going)**
+**Stage 0 - Setup (Ended)**
 
 This is mainly to help everyone setup their own nodes and understand the functioning of the network. 
 
@@ -18,7 +18,7 @@ You may set up your node using any one of the following options:
 
 Please note that this stage is only for you to setup your Full Node and checkout the network status. You may stop all services later and restart again to participate in later stages of Counter Stake.
 
-**Stage 1 - Stake on the Beach (Will start sometime soon after the new year)**
+**Stage 1 - Stake on the Beach (On-going)**
 
 > * **Step 1:** Setup your Full Node as mentioned under Stage 0.
 
