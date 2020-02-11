@@ -12,19 +12,7 @@ $ sudo apt-get install rabbitmq-server
 
 $ sudo service rabbitmq-server start
 ```
-    
-**For CentOS/RHEL/AmazonLinux**
-
-```js
-$ curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash
-    
-$ curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash
-
-$ sudo yum install rabbitmq-server
-
-$ sudo service rabbitmq-server start
-```
-   
+       
 ### Step 2: Download Heimdall And Bor
 
 **For Ubuntu/Debian**
@@ -73,7 +61,6 @@ $ cd public-testnets/<testnet version>
 // Example: $ cd public-testnets/CS-2001
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
-$ echo "export HEIMDALLDIR=/etc/heimdall" >> ~/.bashrc
 
 $ source ~/.bashrc
 
@@ -82,6 +69,7 @@ $ sudo cp $CONFIGPATH/heimdall/config/genesis.json /etc/heimdall/config/genesis.
 
 // copy config file to config directory
 $ sudo cp $CONFIGPATH/heimdall/config/heimdall-config.toml /etc/heimdall/config/heimdall-config.toml
+```
 
 > NOTE: In case you do not have a ropsten API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
 
@@ -133,10 +121,6 @@ $ sudo service heimdalld-bridge start
 **Expected Output**
 
 Your `heimdall-node` should be syncing now! You can see logs of the above services under `/var/log/matic-logs/` 🤩
-
-If everything's well, then your logs should look something like this:
-
-![Screenshot](./images/expected_heimdall.png)
     
 ### Step 8: Configure Bor
 
@@ -185,8 +169,6 @@ sudo mv password.txt /etc/bor/dataDir/
 ### Step 9: Add your address to `/etc/bor/metadata`
 
 ```js
-$ echo "VALIDATOR_ADDRESS=YOUR_ADDRESS" >> /etc/bor/metadata
-
 $ sudo vi  /etc/bor/metadata
 
 // eg: add the address in following format "VALIDATOR_ADDRESS=0xasdasklhemwlmasdsad3ewwew" 
@@ -201,10 +183,6 @@ $ sudo vi  /etc/bor/metadata
 **Expected Output**
 
 You can see logs of Bor service under `/var/log/matic-logs/bor.log` 🤩
-
-If everything's well, then your logs should look something like this:
-
-![Screenshot](./images/expected_bor.png)
 
 **Ta-Da**
 
