@@ -26,25 +26,15 @@ $ bash install_go.sh
 
 > Note: Go version 1.11+ is recommended
 
-### Step 2: Install DEP
 
-Steps to install DEP are [here](https://golang.github.io/dep/docs/installation.html)
-
-Or you can install by running the commands given below
-```
-$ curl https://raw.githubusercontent.com/golang/dep/master/install.sh -o install_dep.sh
-$ sh install_dep.sh 
-```
-
-
-### Step 3: Install RabbitMq
+### Step 2: Install RabbitMq
 
 > NOTE: You do not need rabbit-mq for stage-0 so you can choose to skip.
 
 A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions [here](https://www.rabbitmq.com/download.html).
 
 ```js
-// Not needed during Stage 0. The following command will run the `rabbitmq` server
+
 $ rabbitmq-server
 
 ```
@@ -63,6 +53,7 @@ $ sudo apt-get install build-essential
 ```
 $ brew install make
 ```
+
 ### Step 5: Install Heimdall
 
 Next, let's install the latest version of Heimdall. Here, we'll use the master branch, which contains the latest stable release. If necessary, make sure you `git checkout` the correct [released version](https://github.com/maticnetwork/heimdall/releases)
@@ -74,9 +65,9 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-1001
+// For eg: git checkout CS-2001
 $ git checkout <TAG OR BRANCH>
-$ make dep && make install
+$ make install
 ```
 
 That will install the `heimdalld` and `heimdallcli` binaries. Verify that everything is OK:
@@ -108,7 +99,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-1001
+// For eg: git checkout CS-2001
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
@@ -118,6 +109,8 @@ Now you have `bor` installed on your local system and the binary is available in
 
 **Connecting to console** 
 
+This is an optional step. You need not connect to a console. You can do so only if you are interested in other details.
+
 Just like geth you can connect to bor console to execute various types of queries! From your `dataDir` run the following command.
 
 > Note: If you are trying to connect to a public-testnet, your dataDir is mostly `public-testnets/bor-config/dataDir`
@@ -126,6 +119,8 @@ Just like geth you can connect to bor console to execute various types of querie
 $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor attach geth.ipc
 ```
 <!-- #CHECK following step is the same as in running-with-docker -->
+
+
 ### Step 7: Join public testnet
 
 #### 7.1: Get Heimdall genesis config
@@ -148,11 +143,12 @@ $ cp heimdall/config/heimdall-config.toml ~/.heimdalld/config/heimdall-config.to
 
 Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
 
-**Setup validator key**
+
+### Generate Heimdall private key
 
 If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
 
-To generate a private key for your validator, run the following command. Private key is the key for the address you received your tokens on.
+To generate a private key for your validator, run the following command:
 
     heimdallcli generate-validatorkey <private-key>
 
@@ -160,9 +156,7 @@ This will create **priv_validator_key.json i**n the same folder.
 
 Move this validator key file to heimdall config folder.
 
-```
-cp priv_validator_key.json ~/.heimdalld/config/
-```
+    mv ./priv_validator_key.json $HEIMDALLDIR/config 
 
 #### 7.2: Configure peers for Heimdall
 
@@ -181,11 +175,13 @@ $ heimdallcli version --long
 name: heimdall
 server_name: heimdalld
 client_name: heimdallcli
-version: CS-1001
+version: CS-2001
 commit: 812ab544c1f658acf5f84c0b2e4bfe9943fa4854
 go: go version go1.13.4 darwin/amd64
 ```
 <!-- #CHECK following `run` commands are same as in deploy-your-own-testnet -->
+
+
 **Run Heimdall**
 
 Starting Heimdall is fairly easy, the below command will start heimdall using the genesis file in `~/.heimdalld/config/genesis.json`.
@@ -210,7 +206,6 @@ $ heimdalld rest-server
 
 Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge.
 
-> NOTE: Skip this part of the step for Stage 0 as this is needed only when you stake to participate in validation and need to send transactions.
 
 ```js
 
@@ -288,7 +283,7 @@ Your `heimdall-node` should be syncing now! Checkout `$GOPATH/src/github.com/mat
 
 If everything's well, then your logs should look something like this:
 
-![Screenshot](../images/expected_heimdall.png)
+![Screenshot](./images/expected-heimdall.png)
 
 #### 7.4: Initialise genesis block for Bor
 
@@ -320,30 +315,32 @@ If you have certain peers you always want to connect to, you can configure perma
 ```
 For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
 
-#### 7.6: Setup keystore file
+### Generate Bor keystore file
 
-If you have received Matic tokens as part of Counter-stake. You need to generate keystore file to participate.
+To generate the keystore file for Bor, run the following command:
 
-To generate a private key for your validator, run the following command. Private key is the key for the address you received your tokens on.
+    heimdallcli generate-keystore <private-key>
 
-```bash
-heimdallcli generate-keystorefile <private-key>
-```
+The private key required over here is the address of the one which has the tokens that you're going to stake. Make sure you add a prefix of '0x' to the beginning of the private key.
 
-This will create **UTC-<time>-<address>** the same folder.
+Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
 
-Move this keystore file to heimdall config folder.
+This will create a keystore file in UTC format. For example: 
 
-```bash
-makedir -p keystore
-cp <path-to-keystore-file>/UTC-<time>-<address> keystore/
-```
+    UTC--2020-02-10T10-11-48.027180000Z--6c468cf8c9879006e22ec4029696e005c2319c9d
+
+Do `ls` here and you will see the file name in the above format.
+
+Now you will have to move the keystore file to bor data directory.
+
+    mv ./UTC-<time>-<address> $BORDIR/keystore/
+
 
 #### 7.7: Start Bor
 
 ```js
 // You'll find the following in bor-config directory
-$ bash start.sh <address>
+$ bash start.sh <Your address>
 ```
 
 **Expected Output**
@@ -352,7 +349,7 @@ Your `bor-node` should be syncing now! Checkout `logs/bor.log` to get to the log
 
 If everything's well, then your logs should look something like this:
 
-![Screenshot](../images/expected_bor.png)
+![Screenshot](./images/expected-bor.png)
 
 **Ta-Da**
 

@@ -7,37 +7,6 @@ This is a step-by-step guide to help you become a validator on Matic's incentivi
 
 You should have Heimdall and Bor setups up and running on your machine. If you haven't yet set it up, you can do so by reading this guide: [https://docs.matic.network/staking/participate-in-counter-stake/](https://docs.matic.network/staking/participate-in-counter-stake/)
 
-### Generate Bor keystore file
-
-To generate the keystore file for Bor, run the following command:
-
-    heimdallcli generate-keystore <private-key>
-
-The private key required over here is the address of the one which has the tokens that you're going to stake. Make sure you add a prefix of '0x' to the beginning of the private key.
-
-Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
-
-This will create a keystore file in UTC format. For example: 
-
-    UTC--2020-02-10T10-11-48.027180000Z--6c468cf8c9879006e22ec4029696e005c2319c9d
-
-Do `ls` here and you will see the file name in the above format.
-
-Now you will have to move the keystore file to bor data directory.
-
-    mv ./UTC-<time>-<address> $BORDIR/keystore/
-
-### Generate Heimdall private key
-
-To generate a private key for your validator, run the following command:
-
-    heimdallcli generate-validatorkey <private-key>
-
-This will create **priv_validator_key.json i**n the same folder.
-
-Move this validator key file to heimdall config folder.
-
-    mv ./priv_validator_key.json $HEIMDALLDIR/config 
 
 ### Account information
 
@@ -106,7 +75,7 @@ To check the balance of your address:
 
 You can find details regarding chain id over here: https://github.com/maticnetwork/public-testnets/tree/master/CS-2001
 
-    ./build/heimdallcli query auth account <signer-address> --chain-id <chain-id>
+    heimdallcli query auth account <signer-address> --chain-id <chain-id>
 
 The following output should appear:
 
@@ -125,6 +94,8 @@ Please note that you need to keep checking if you balance has been updated with 
 Once you have adequate balance to pay fees on Heimdall, you can join the network by running the following command:
 
     ./build/heimdallcli tx staking validator-join --signer-pubkey <signer-pub-key> --tx-hash <stake-etheruem-tx-hash> --chain-id <chain-id>
+
+The can view your `pub-key` by running the command `heimdalld show-account` 
 
 ### Validator information
 
