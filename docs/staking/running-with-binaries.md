@@ -144,7 +144,7 @@ $ cp heimdall/config/heimdall-config.toml ~/.heimdalld/config/heimdall-config.to
 
 Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
 
-### Generate Heimdall private key
+**Generate Heimdall private key**
 
 If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
 
@@ -308,7 +308,7 @@ If you have certain peers you always want to connect to, you can configure perma
 
 For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
 
-### Generate Bor keystore file
+**Generate Bor keystore file**
 
 To generate the keystore file for Bor, run the following command:
 
