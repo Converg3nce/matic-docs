@@ -39,11 +39,12 @@ $ rabbitmq-server
 
 ```
 
-### Step 4: Install make
+### Step 3: Install make
 
 You need to install `make` to run some commands. Using the below commands you can install `make` depending on your system.
 
 **For Ubuntu**
+
 ```
 $ sudo apt-get install build-essential
 ```
@@ -54,7 +55,7 @@ $ sudo apt-get install build-essential
 $ brew install make
 ```
 
-### Step 5: Install Heimdall
+### Step 4: Install Heimdall
 
 Next, let's install the latest version of Heimdall. Here, we'll use the master branch, which contains the latest stable release. If necessary, make sure you `git checkout` the correct [released version](https://github.com/maticnetwork/heimdall/releases)
 
@@ -72,13 +73,13 @@ $ make install
 
 That will install the `heimdalld` and `heimdallcli` binaries. Verify that everything is OK:
 
-```bash 
+```bash
 $ heimdalld --help
 ```
 
 **Set up a new node**
 
-```bash 
+```bash
 $ heimdalld init
 ```
 
@@ -90,7 +91,8 @@ This will emit the following output which shows your node id and chain id, these
   "node_id": "ae8fd49c192f39a400c00b328d4fd109d5bcb71d"
 }
 ```
-### Step 6: Install Bor
+
+### Step 5: Install Bor
 
 ```js
 
@@ -107,7 +109,7 @@ $ make bor
 
 Now you have `bor` installed on your local system and the binary is available in the path `build/bin/bor`
 
-**Connecting to console** 
+**Connecting to console**
 
 This is an optional step. You need not connect to a console. You can do so only if you are interested in other details.
 
@@ -118,12 +120,12 @@ Just like geth you can connect to bor console to execute various types of querie
 ```
 $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor attach geth.ipc
 ```
+
 <!-- #CHECK following step is the same as in running-with-docker -->
 
+### Step 6: Join public testnet
 
-### Step 7: Join public testnet
-
-#### 7.1: Get Heimdall genesis config
+#### 6.1: Get Heimdall genesis config
 
 ```js
 $ git clone https://github.com/maticnetwork/public-testnets
@@ -152,23 +154,23 @@ To generate a private key for your validator, run the following command:
 
     heimdallcli generate-validatorkey <private-key>
 
-This will create **priv_validator_key.json i**n the same folder.
+This will create **priv_validator_key.json** in the same folder.
 
 Move this validator key file to heimdall config folder.
 
     mv ./priv_validator_key.json $HEIMDALLDIR/config 
 
-#### 7.2: Configure peers for Heimdall
+#### 6.2: Configure peers for Heimdall
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas in file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
 Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder.
 
-#### 7.3: Start & sync Heimdall
+#### 6.3: Start & sync Heimdall
 
 Before starting do verify you are on the correct version by running the below command
 
-```
+```bash
 $ heimdallcli version --long
 
 // Expected Output
@@ -179,8 +181,8 @@ version: CS-2001
 commit: 812ab544c1f658acf5f84c0b2e4bfe9943fa4854
 go: go version go1.13.4 darwin/amd64
 ```
-<!-- #CHECK following `run` commands are same as in deploy-your-own-testnet -->
 
+<!-- #CHECK following `run` commands are same as in deploy-your-own-testnet -->
 
 **Run Heimdall**
 
@@ -197,9 +199,7 @@ $ heimdalld start
 The rest-server can be used by external services like explorer, faucets etc to connect to heimdall chain for fetching data and sending transactions.
 
 ```js
-
 $ heimdalld rest-server
-
 ```
 
 **Run Bridge**
@@ -207,10 +207,8 @@ $ heimdalld rest-server
 Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge.
 
 
-```js
-
+```bash
 $ bridge start --all
-
 ```
 
 > Note: Bridge won't run without `rabbitmq` and `rest-server` so ensure they are running before trying to run bridge.
@@ -221,20 +219,19 @@ $ bridge start --all
 
 Use the following to delete blockchain data and reset everything.
 
-```js
-
+```bash
 $ heimdalld unsafe-reset-all
-
+$ rm -rf ~/.heimdalld/bridge
 ```
 
-**Check sync status** 
+**Check sync status**
 
 To check the sync status you can run the follwing command on your node
 
-```
+```bash
 $ curl http://localhost:26657/status
 
-// Output 
+// Output
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -285,7 +282,7 @@ If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-heimdall.png)
 
-#### 7.4: Initialise genesis block for Bor
+#### 6.4: Initialise genesis block for Bor
 
 ```js
 // Go to 'public-testnets' and testnet version
@@ -295,7 +292,7 @@ $ cd public-testnets/<testnet version>
 $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor --datadir dataDir init ./genesis.json
 ```
 
-#### 7.5: Configure peers for Bor
+#### 6.5: Configure peers for Bor
 
 To sync blocks on the testnet, you need to add peers. The file `static-nodes.json` in your relevant public-testnets version folder contains information for all the availalble seed nodes. Let's copy this file to your datadir so that when you start your nodes you already have peers!
 
@@ -308,11 +305,12 @@ $ cp static-nodes.json ./dataDir/bor/
 If you have certain peers you always want to connect to, you can configure permanent static nodes by putting something like the following example into `<datadir>/bor/static-nodes.json`
 
 ```js
-[
+;[
   "enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303",
   "enode://ENODEID@ip:port"
-];
+]
 ```
+
 For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
 
 ### Generate Bor keystore file
@@ -336,7 +334,7 @@ Now you will have to move the keystore file to bor data directory.
     mv ./UTC-<time>-<address> $BORDIR/keystore/
 
 
-#### 7.7: Start Bor
+#### 6.7: Start Bor
 
 ```js
 // You'll find the following in bor-config directory
@@ -357,7 +355,6 @@ If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Co
 
 Once you are done checking the logs or querying the data, you may stop all services and restart again soon as we start staking in the next stage.
 
-#### 7.7: Query data
+#### 6.8: Query data
 
 To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/
-
