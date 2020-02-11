@@ -25,7 +25,7 @@ $ sudo yum install rabbitmq-server
 $ sudo service rabbitmq-server start
 ```
    
-### Step 2: Dowload Heimdall And Bor
+### Step 2: Download Heimdall And Bor
 
 **For Ubuntu/Debian**
 
