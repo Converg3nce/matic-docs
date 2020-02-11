@@ -114,7 +114,7 @@ This is an optional step. You need not connect to a console. You can do so only 
 
 Just like geth you can connect to bor console to execute various types of queries! From your `dataDir` run the following command.
 
-> Note: If you are trying to connect to a public-testnet, your dataDir is mostly `public-testnets/bor-config/dataDir`
+> Note: If you are trying to connect to a public-testnet, your dataDir is mostly `~/.bor/dataDir`
 
 ```
 $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor attach geth.ipc
