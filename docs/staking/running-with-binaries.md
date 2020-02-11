@@ -1,6 +1,6 @@
 # Setup Matic Validator Node
 
-## We strongly recommend not using a latptop if you're running a full node.
+## We strongly recommend not using a laptop if you are running a full node.
 
 ### Step 1: Install GO
 
