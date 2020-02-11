@@ -61,6 +61,7 @@ $ sudo rpm -i matic_node-1.0.0-1.x86_64_centos.rpm
 
 ```js
 $ echo alias heimdalld='"sudo heimdalld --home /etc/heimdall"' >> ~/.bashrc
+$ echo alias heimdallcli='"sudo heimdallcli --home /etc/heimdall"' >> ~/.bashrc
 
 $ source ~/.bashrc
 ```
@@ -81,28 +82,29 @@ $ cd public-testnets/<testnet version>
 // Example: $ cd public-testnets/CS-1001
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
+$ echo "export HEIMDALLDIR=/etc/heimdall" >> ~/.bashrc
 
 $ source ~/.bashrc
 
 // copy genesis file to config directory
-$ sudo cp $CONFIGPATH/heimdall-genesis.json /etc/heimdall/config/genesis.json
+$ sudo cp $CONFIGPATH/heimdall-genesis.json $HEIMDALLDIR/config/genesis.json
 
 // copy config file to config directory
-$ sudo cp $CONFIGPATH/heimdall-config.toml /etc/heimdall/config/heimdall-config.toml
+$ sudo cp $CONFIGPATH/heimdall-config.toml $HEIMDALLDIR/config/heimdall-config.toml
 ```
 
 > NOTE: In case you do not have a ropsten API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
 
-Add your API key in file `/etc/heimdall/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
+Add your API key in file `$HEIMDALLDIR/heimdall-config.toml` under the key `"eth_RPC_URL"`.
     
 ### Step 5: Add Peers
 
-Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas at `/etc/heimdall/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
+Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas at `$HEIMDALLDIR/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
 
 Open the config.toml file and copy paste the peer address from `public-testnets/<testnet version>/heimdall-seeds.txt`
 
 ``` js
-$ sudo vi /etc/heimdall/config/config.toml 
+$ sudo vi $HEIMDALLDIR/config/config.toml 
 ```
 
 ### Step 6: Run Heimdall
@@ -138,11 +140,15 @@ If everything's well, then your logs should look something like this:
 **Initialise genesis block for Bor**
    
 ```js
-$ cd /etc/bor/
-    
-$ sudo bor --datadir dataDir init genesis.json
+$ echo "export BORDIR=/etc/bor" >> ~/.bashrc
 
-$ sudo cp $CONFIGPATH/static-nodes.json /etc/bor/dataDir/bor/static-nodes.json
+$ source ~/.bashrc
+
+$ cd $BORDIR
+    
+$ sudo bor --datadir $BORDIR/dataDir init genesis.json
+
+$ sudo cp $CONFIGPATH/static-nodes.json $BORDIR/dataDir/bor/static-nodes.json
    
 $ sudo service bor start
 ```

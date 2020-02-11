@@ -87,12 +87,13 @@ nav:
       - Economics: staking/economics.md
       - Staking FAQs: staking/faqs.md
       - Technical Requirements: staking/technical-requirements.md
-      - 'Participate in Counter Stake': 
+      - 'Counter Stake - Stage 1': 
         - 'Getting Started': staking/participate-in-counter-stake.md
         - 'Introduction': staking/introduction.md
         - 'Linux Package Installation': staking/linux-package-installation.md
         - 'Running with Docker': staking/running-with-docker.md
         - 'Running with Binaries': staking/running-with-binaries.md
+        - 'Stake on Matic': staking/stake-on-matic.md
       - 'Advanced':
         - 'Deploy Your Own Matic Testnet': staking/deploy-your-own-matic-testnet.md
         
