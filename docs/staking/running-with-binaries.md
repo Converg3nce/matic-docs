@@ -26,7 +26,6 @@ $ bash install_go.sh
 
 > Note: Go version 1.11+ is recommended
 
-
 ### Step 2: Install RabbitMq
 
 > NOTE: You do not need rabbit-mq for stage-0 so you can choose to skip.
@@ -145,7 +144,6 @@ $ cp heimdall/config/heimdall-config.toml ~/.heimdalld/config/heimdall-config.to
 
 Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
 
-
 ### Generate Heimdall private key
 
 If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
@@ -158,7 +156,7 @@ This will create **priv_validator_key.json** in the same folder.
 
 Move this validator key file to heimdall config folder.
 
-    mv ./priv_validator_key.json $HEIMDALLDIR/config 
+    mv ./priv_validator_key.json $HEIMDALLDIR/config
 
 #### 6.2: Configure peers for Heimdall
 
@@ -205,7 +203,6 @@ $ heimdalld rest-server
 **Run Bridge**
 
 Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge.
-
 
 ```bash
 $ bridge start --all
@@ -288,24 +285,22 @@ If everything's well, then your logs should look something like this:
 // Go to 'public-testnets' and testnet version
 $ cd public-testnets/<testnet version>
 
-// initialize Genesis Block
-$ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor --datadir dataDir init ./genesis.json
+// initialize Genesis Block and peers
+$ bash setup.sh
 ```
+
+This will create Bor home directory at `~/.bor` and data directory at `~/.bor/dataDir`
 
 #### 6.5: Configure peers for Bor
 
-To sync blocks on the testnet, you need to add peers. The file `static-nodes.json` in your relevant public-testnets version folder contains information for all the availalble seed nodes. Let's copy this file to your datadir so that when you start your nodes you already have peers!
-
-```js
-$ cp static-nodes.json ./dataDir/bor/
-```
+To sync blocks on the testnet, you need to add peers. The file `static-nodes.json` in your relevant public-testnets version folder contains information for all the available seed nodes. It will be already copied using `bash setup.sh` command.
 
 **Adding additional peers (optional)**
 
-If you have certain peers you always want to connect to, you can configure permanent static nodes by putting something like the following example into `<datadir>/bor/static-nodes.json`
+If you have certain peers you always want to connect to, you can configure permanent static nodes by putting something like the following example into `~/.bor/dataDir/bor/static-nodes.json`
 
-```js
-;[
+```bash
+[
   "enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303",
   "enode://ENODEID@ip:port"
 ]
@@ -317,22 +312,35 @@ For more info on how to connect to peers see [this](https://geth.ethereum.org/do
 
 To generate the keystore file for Bor, run the following command:
 
-    heimdallcli generate-keystore <private-key>
+```bash
+heimdallcli generate-keystore <private-key>
+```
 
 The private key required over here is the address of the one which has the tokens that you're going to stake. Make sure you add a prefix of '0x' to the beginning of the private key.
 
 Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
 
-This will create a keystore file in UTC format. For example: 
+This will create a keystore file in UTC format. For example:
 
-    UTC--2020-02-10T10-11-48.027180000Z--6c468cf8c9879006e22ec4029696e005c2319c9d
+```
+UTC--2020-02-10T10-11-48.027180000Z--6c468cf8c9879006e22ec4029696e005c2319c9d
+```
 
 Do `ls` here and you will see the file name in the above format.
 
 Now you will have to move the keystore file to bor data directory.
 
-    mv ./UTC-<time>-<address> $BORDIR/keystore/
+```bash
+mv ./UTC-<time>-<address> ~/.bor/keystore/
+```
 
+**Add password.txt**
+
+```
+$ vim ~/.bor/password.txt
+```
+
+Add phrase you choose during generating key store file in `password.txt`
 
 #### 6.7: Start Bor
 
@@ -343,7 +351,7 @@ $ bash start.sh <Your address>
 
 **Expected Output**
 
-Your `bor-node` should be syncing now! Checkout `logs/bor.log` to get to the logs 🤩
+Your `bor-node` should be syncing now! Checkout `~/.bor/logs/bor.log` to get to the logs 🤩
 
 If everything's well, then your logs should look something like this:
 
