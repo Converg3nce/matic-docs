@@ -31,11 +31,11 @@ $ bash install_go.sh
 Steps to install DEP are [here](https://golang.github.io/dep/docs/installation.html)
 
 Or you can install by running the commands given below
+
 ```
 $ curl https://raw.githubusercontent.com/golang/dep/master/install.sh -o install_dep.sh
-$ sh install_dep.sh 
+$ sh install_dep.sh
 ```
-
 
 ### Step 3: Install RabbitMq
 
@@ -54,6 +54,7 @@ $ rabbitmq-server
 You need to install `make` to run some commands. Using the below commands you can install `make` depending on your system.
 
 **For Ubuntu**
+
 ```
 $ sudo apt-get install build-essential
 ```
@@ -63,6 +64,7 @@ $ sudo apt-get install build-essential
 ```
 $ brew install make
 ```
+
 ### Step 5: Install Heimdall
 
 Next, let's install the latest version of Heimdall. Here, we'll use the master branch, which contains the latest stable release. If necessary, make sure you `git checkout` the correct [released version](https://github.com/maticnetwork/heimdall/releases)
@@ -81,13 +83,13 @@ $ make dep && make install
 
 That will install the `heimdalld` and `heimdallcli` binaries. Verify that everything is OK:
 
-```bash 
+```bash
 $ heimdalld --help
 ```
 
 **Set up a new node**
 
-```bash 
+```bash
 $ heimdalld init
 ```
 
@@ -99,6 +101,7 @@ This will emit the following output which shows your node id and chain id, these
   "node_id": "ae8fd49c192f39a400c00b328d4fd109d5bcb71d"
 }
 ```
+
 ### Step 6: Install Bor
 
 ```js
@@ -116,7 +119,7 @@ $ make bor
 
 Now you have `bor` installed on your local system and the binary is available in the path `build/bin/bor`
 
-**Connecting to console** 
+**Connecting to console**
 
 Just like geth you can connect to bor console to execute various types of queries! From your `dataDir` run the following command.
 
@@ -125,7 +128,9 @@ Just like geth you can connect to bor console to execute various types of querie
 ```
 $ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor attach geth.ipc
 ```
+
 <!-- #CHECK following step is the same as in running-with-docker -->
+
 ### Step 7: Join public testnet
 
 #### 7.1: Get Heimdall genesis config
@@ -156,7 +161,7 @@ To generate a private key for your validator, run the following command. Private
 
     heimdallcli generate-validatorkey <private-key>
 
-This will create **priv_validator_key.json i**n the same folder.
+This will create **priv_validator_key.json** in the same folder.
 
 Move this validator key file to heimdall config folder.
 
@@ -174,7 +179,7 @@ Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder.
 
 Before starting do verify you are on the correct version by running the below command
 
-```
+```bash
 $ heimdallcli version --long
 
 // Expected Output
@@ -185,7 +190,9 @@ version: CS-1001
 commit: 812ab544c1f658acf5f84c0b2e4bfe9943fa4854
 go: go version go1.13.4 darwin/amd64
 ```
+
 <!-- #CHECK following `run` commands are same as in deploy-your-own-testnet -->
+
 **Run Heimdall**
 
 Starting Heimdall is fairly easy, the below command will start heimdall using the genesis file in `~/.heimdalld/config/genesis.json`.
@@ -201,9 +208,7 @@ $ heimdalld start
 The rest-server can be used by external services like explorer, faucets etc to connect to heimdall chain for fetching data and sending transactions.
 
 ```js
-
 $ heimdalld rest-server
-
 ```
 
 **Run Bridge**
@@ -212,10 +217,8 @@ Bridge is a helper package that sends transactions to heimdall on behalf of vali
 
 > NOTE: Skip this part of the step for Stage 0 as this is needed only when you stake to participate in validation and need to send transactions.
 
-```js
-
+```bash
 $ bridge start --all
-
 ```
 
 > Note: Bridge won't run without `rabbitmq` and `rest-server` so ensure they are running before trying to run bridge.
@@ -226,20 +229,19 @@ $ bridge start --all
 
 Use the following to delete blockchain data and reset everything.
 
-```js
-
+```bash
 $ heimdalld unsafe-reset-all
-
+$ rm -rf ~/.heimdalld/bridge
 ```
 
-**Check sync status** 
+**Check sync status**
 
 To check the sync status you can run the follwing command on your node
 
-```
+```bash
 $ curl http://localhost:26657/status
 
-// Output 
+// Output
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -313,16 +315,17 @@ $ cp static-nodes.json ./dataDir/bor/
 If you have certain peers you always want to connect to, you can configure permanent static nodes by putting something like the following example into `<datadir>/bor/static-nodes.json`
 
 ```js
-[
+;[
   "enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303",
   "enode://ENODEID@ip:port"
-];
+]
 ```
+
 For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
 
 #### 7.6: Setup keystore file
 
-If you have received Matic tokens as part of Counter-stake. You need to generate keystore file to participate.
+If you have received Matic tokens as part of Counter-stake, you need to generate keystore file to participate.
 
 To generate a private key for your validator, run the following command. Private key is the key for the address you received your tokens on.
 
@@ -363,4 +366,3 @@ Once you are done checking the logs or querying the data, you may stop all servi
 #### 7.7: Query data
 
 To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/
-
