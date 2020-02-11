@@ -1,5 +1,7 @@
 # Setup Matic Validator Node
 
+## We strongly recommend not using a latptop if you're running a full node.
+
 ### Step 1: Install GO
 
 Install go by following the [official docs](https://golang.org/doc/install). Remember to set your `$GOPATH`, `$GOBIN`, and `$PATH` environment variables, for example:
@@ -110,18 +112,6 @@ $ make bor
 
 Now you have `bor` installed on your local system and the binary is available in the path `build/bin/bor`
 
-**Connecting to console**
-
-This is an optional step. You need not connect to a console. You can do so only if you are interested in other details.
-
-Just like geth you can connect to bor console to execute various types of queries! From your `dataDir` run the following command.
-
-> Note: If you are trying to connect to a public-testnet, your dataDir is mostly `~/.bor/dataDir`
-
-```
-$ $GOPATH/src/github.com/maticnetwork/bor/build/bin/bor attach geth.ipc
-```
-
 <!-- #CHECK following step is the same as in running-with-docker -->
 
 ### Step 6: Join public testnet
@@ -140,10 +130,10 @@ $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 $ source ~/.bashrc
 
 // copy genesis file to config directory
-$ cp $CONFIGPATH/heimdall/config/genesis.json  ~/.heimdalld/config/genesis.json
+$ cp $CONFIGPATH/heimdall/config/genesis.json  $HEIMDALLDIR/config/genesis.json
 
 // copy config file to config directory
-$ cp $CONFIGPATH/heimdall/config/heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
+$ cp $CONFIGPATH/heimdall/config/heimdall-config.toml $HEIMDALLDIR/config/heimdall-config.toml
 ```
 
 > NOTE: In case you do not have a ropsten API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
@@ -168,7 +158,7 @@ Move this validator key file to heimdall config folder.
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas in file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
-Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder.
+Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`.
 
 #### 6.3: Start & sync Heimdall
 
@@ -176,14 +166,6 @@ Before starting do verify you are on the correct version by running the below co
 
 ```bash
 $ heimdallcli version --long
-
-// Expected Output
-name: heimdall
-server_name: heimdalld
-client_name: heimdallcli
-version: CS-2001
-commit: 812ab544c1f658acf5f84c0b2e4bfe9943fa4854
-go: go version go1.13.4 darwin/amd64
 ```
 
 <!-- #CHECK following `run` commands are same as in deploy-your-own-testnet -->
@@ -290,7 +272,7 @@ If everything's well, then your logs should look something like this:
 ```js
 
 // Go to 'public-testnets' and testnet version
-$ cd public-testnets/<testnet version>
+$ cd $CONFIGPATH/bor
 
 // initialize Genesis Block and peers
 $ bash setup.sh
@@ -325,7 +307,7 @@ To generate the keystore file for Bor, run the following command:
 heimdallcli generate-keystore <private-key>
 ```
 
-The private key required over here is the address of the one which has the tokens that you're going to stake. Make sure you add a prefix of '0x' to the beginning of the private key.
+The private key required over here is the address of the one which has the tokens that you're going to stake. 
 
 Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
 
@@ -344,6 +326,8 @@ mv ./UTC-<time>-<address> ~/.bor/keystore/
 ```
 
 **Add password.txt**
+
+Add the password that you entered in the password.txt file
 
 ```
 $ vim ~/.bor/password.txt

@@ -4,25 +4,33 @@ We have been working hard on enabling the Proof-of-Stake (PoS) layer on the Mati
 
 To participate in the public testnet event, you need to first setup your Full Node (Stage 0) and then become a Validator (Stage 1 & 2.) 
  
-**Stage 0 - Setup (Ended)**
+~~**Stage 0 - Setup (Ended)**~~
 
-This is mainly to help everyone setup their own nodes and understand the functioning of the network. 
+~~This is mainly to help everyone setup their own nodes and understand the functioning of the network.~~
 
-You may set up your node using any one of the following options: 
+~~You may set up your node using any one of the following options:~~ 
 
-> * **Option 1:** [Linux Package Installation](../linux-package-installation) (Recommended; lightweight, native)
+~~> * **Option 1:** Linux Package Installation (Recommended; lightweight, native)~~
 
-> * **Option 2:** [Running with Docker](../running-with-docker) (Easy to set up, but a bit resource intensive)
+~~> * **Option 2:** Running with Docker (Easy to set up, but a bit resource intensive)~~
 
-> * **Option 3:** [Running with Binaries](../running-with-binaries) (Relatively complex to setup, but offers advanced customization)
+~~> * **Option 3:** Running with Binaries (Relatively complex to setup, but offers advanced customization)~~
 
-Please note that this stage is only for you to setup your Full Node and checkout the network status. You may stop all services later and restart again to participate in later stages of Counter Stake.
+~~Please note that this stage is only for you to setup your Full Node and checkout the network status. You may stop all services later and restart again to participate in later stages of Counter Stake.~~
 
 **Stage 1 - Stake on the Beach (On-going)**
 
-> * **Step 1:** Setup your Full Node as mentioned under Stage 0.
+* **Step 1:** Setup your Full Node 
 
-> * **Step 2:** Stake tokens to become a validator - Contract addresses and other details will be released before the stage commences.
+> * **Option 1:** [Linux Package Installation](../linux-package-installation) (Recommended; lightweight, native)
+> * **Option 2:** [Running with Binaries](../running-with-binaries) (Relatively complex to setup, but offers advanced 
+> * **Option 3:** Running with Docker, Coming Soon...
+> * **Option 4:** One Click Setup, Coming Soon...
+
+* **Step 2:** Stake tokens to become a validator - Contract addresses and other details will be released before the stage commences.
+
+
+
 
 We will be testing all features incrementally here; rewards, slashing, replacement and more. You will need to maintain your uptime and earn rewards as per your performance.
 
