@@ -80,6 +80,8 @@ $ heimdalld --help
 
 ```bash
 $ heimdalld init
+$ echo "export HEIMDALLDIR=~/.heimdalld" >> ~/.bashrc
+$ source ~/.bashrc
 ```
 
 This will emit the following output which shows your node id and chain id, these can be changed before starting a chain from the genesis file.
@@ -133,11 +135,15 @@ $ git clone https://github.com/maticnetwork/public-testnets
 $ cd public-testnets/<testnet version>
 // Example: $ cd public-testnets/CS-2001
 
+$ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
+
+$ source ~/.bashrc
+
 // copy genesis file to config directory
-$ cp heimdall/config/genesis.json ~/.heimdalld/config/genesis.json
+$ cp $CONFIGPATH/heimdall/config/genesis.json  ~/.heimdalld/config/genesis.json
 
 // copy config file to config directory
-$ cp heimdall/config/heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
+$ cp $CONFIGPATH/heimdall/config/heimdall-config.toml ~/.heimdalld/config/heimdall-config.toml
 ```
 
 > NOTE: In case you do not have a ropsten API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
@@ -218,7 +224,7 @@ Use the following to delete blockchain data and reset everything.
 
 ```bash
 $ heimdalld unsafe-reset-all
-$ rm -rf ~/.heimdalld/bridge
+$ rm -rf $HEIMDALLDIR/bridge
 ```
 
 **Check sync status**
@@ -282,11 +288,14 @@ If everything's well, then your logs should look something like this:
 #### 6.4: Initialise genesis block for Bor
 
 ```js
+
 // Go to 'public-testnets' and testnet version
 $ cd public-testnets/<testnet version>
 
 // initialize Genesis Block and peers
 $ bash setup.sh
+
+$ echo "export BORDIR=~/.bor" >> ~/.bashrc
 ```
 
 This will create Bor home directory at `~/.bor` and data directory at `~/.bor/dataDir`
