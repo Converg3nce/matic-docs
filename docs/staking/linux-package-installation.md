@@ -87,7 +87,7 @@ Peers are the other nodes you want to sync to in order to maintain your full nod
 Open the config.toml file and copy paste the peer address from `$CONFIGPATH/heimdall/heimdall-seeds.txt`
 
 ``` js
-$ sudo vi $HEIMDALLDIR/config/config.toml 
+$ sudo vi /etc/heimdall/config/config.toml 
 ```
 
 ### Step 6: Generate Heimdall private key
