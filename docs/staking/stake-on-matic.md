@@ -47,6 +47,10 @@ The `approve` command will initiate your transaction towards staking on Matic.
 
     heimdallcli approve --staked-amount <stake-amount>  --fee-amount <heimdall-fee-amount>
 
+For example, to approve for stake amount 100 Matic tokens and fee 20 tokens, 
+    
+    heimdallcli approve --staked-amount 100000000000000000000 --fee-amount 20000000000000000000 
+
 Once you run the approve command you should see the following response along with the transaction hash.
 
     Sent approve tx sucessfully txHash=0x987aa9a319de34f61b768e4bbac160212055d8e5e9b813b2fc520dc650488943
@@ -62,6 +66,10 @@ Once `approve` transaction gets confirmed, send `stake` transaction on Ethereum.
 Owner can manage stake, rewards and manage signer address for the validator. Signer address will be same as your address on node. You can always change your signer address.
 
     heimdallcli stake --staked-amount <stake-amount>  --fee-amount <heimdall-fee-amount> --validator <validator-owner-address>
+
+For example, to stake amount 100 Matic tokens and fee 20 tokens, 
+    
+    heimdallcli approve --staked-amount 100000000000000000000 --fee-amount 20000000000000000000 --validator 0xc40e52501d9969B6788C173C1cA6b23DE6f33943
 
 You should see the following response once you run the above command
 
