@@ -91,7 +91,6 @@ nav:
         - 'Getting Started': staking/participate-in-counter-stake.md
         - 'Introduction': staking/introduction.md
         - 'Linux Package Installation': staking/linux-package-installation.md
-        - 'Running with Docker': staking/running-with-docker.md
         - 'Running with Binaries': staking/running-with-binaries.md
         - 'Stake on Matic': staking/stake-on-matic.md
       - 'Advanced':
