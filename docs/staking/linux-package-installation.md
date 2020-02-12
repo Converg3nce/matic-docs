@@ -95,7 +95,7 @@ $ sudo vi /etc/heimdall/config/config.toml
 ```js
 $ heimdallcli generate-validatorkey <private-key>
 
-$ sudo mv ./priv_validator_key.json /etc/bor/config
+$ sudo mv ./priv_validator_key.json /etc/heimdall/config/
 ```
 
 ### Step 7: Run Heimdall
