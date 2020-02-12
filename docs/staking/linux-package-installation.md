@@ -172,7 +172,7 @@ sudo mv password.txt /etc/bor/dataDir/
 ```js
 $ sudo vi  /etc/bor/metadata
 
-// eg: add the address in following format "VALIDATOR_ADDRESS=0xasdasklhemwlmasdsad3ewwew" 
+// eg: add the address in following format VALIDATOR_ADDRESS=0xasdasklhemwlmasdsad3ewwew 
 ```
 
 
