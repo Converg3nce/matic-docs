@@ -123,6 +123,7 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
+// Current testnet version is CS-2001
 // Example: $ cd public-testnets/CS-2001
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
