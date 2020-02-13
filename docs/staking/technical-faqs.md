@@ -14,8 +14,6 @@ Yes, the private key used for generating Validator keys and Bor Keystore is the 
 
 **Bor Block Time**: 5 secs
 
-**Heimdall version**: heimdalld version is beta-1.1-rc1-213-g2bfd1ac
-
 **Repo details**: [https://github.com/maticnetwork/public-testnets/](https://github.com/maticnetwork/public-testnets/)
 
 **Ropsten Contract Details**
@@ -312,11 +310,17 @@ You can add the persistent_peers in the following file:
     ~/.heimdalld/config/config.toml
 
 
-### “Did you reset Tendermint without resetting your application's data?”
+### 24. “Did you reset Tendermint without resetting your application's data?”
 
 In such a case you can reset heimdall config data and try running the installation again.
 
     $ heimdalld unsafe-reset-all
     $ rm -rf $HEIMDALLDIR/bridge
 
+
+### 25. Error: Unable to unmarshall config Error 1 error(s) decoding
+
+Error: `* '' has invalid keys: clerk_polling_interval, matic_token, span_polling_interval, stake_manager_contract, stakinginfo_contract`
+
+This occurs mostly because when there are typos, or some missing parts or an old config file which is still a remnant. You will need to clear all the remnants and then try setting it up again.
 
