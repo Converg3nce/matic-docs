@@ -93,7 +93,7 @@ Please note that you need to keep checking if you balance has been updated with 
 
 Once you have adequate balance to pay fees on Heimdall, you can join the network by running the following command:
 
-    heimdallcli tx staking validator-join --signer-pubkey <signer-pub-key> --tx-hash <stake-etheruem-tx-hash> --chain-id <chain-id>
+    heimdallcli tx staking validator-join --signer-pubkey <signer-pub-key> --tx-hash <stake-ethereum-tx-hash> --chain-id <chain-id>
 
 You can view your `pub-key` by running the command `heimdalld show-account` 
 
