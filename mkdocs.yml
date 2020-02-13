@@ -94,6 +94,7 @@ nav:
         - 'Running with Docker': staking/running-with-docker.md
         - 'Running with Binaries': staking/running-with-binaries.md
         - 'Stake on Matic': staking/stake-on-matic.md
+        - 'Technical FAQs': staking/technical-faqs.md
       - 'Advanced':
         - 'Deploy Your Own Matic Testnet': staking/deploy-your-own-matic-testnet.md
         
