@@ -43,7 +43,7 @@ Now that you have done a basic health check and generated the keystore and priva
 
 The `approve` command will initiate your transaction towards staking on Matic.
 
-`approve` Matic tokens to `StakeManager` Stake amount and fee amount must be in 18 decimals — `1000000000000000000` is 1 Matic token. Note that stake and fee amount must be greater than 10 Matic tokens.
+`approve` Matic tokens to `StakeManager` Stake amount and fee amount must be in 18 decimals — `1000000000000000000` is 1 Matic token. Note that stake and fee amount must be greater than 10 Matic tokens. You can keep the fee amount at 20 tokens.
 
     heimdallcli approve --staked-amount <stake-amount>  --fee-amount <heimdall-fee-amount>
 
@@ -93,9 +93,11 @@ Please note that you need to keep checking if you balance has been updated with 
 
 Once you have adequate balance to pay fees on Heimdall, you can join the network by running the following command:
 
-    ./build/heimdallcli tx staking validator-join --signer-pubkey <signer-pub-key> --tx-hash <stake-etheruem-tx-hash> --chain-id <chain-id>
+    heimdallcli tx staking validator-join --signer-pubkey <signer-pub-key> --tx-hash <stake-ethereum-tx-hash> --chain-id <chain-id>
 
-The can view your `pub-key` by running the command `heimdalld show-account` 
+You can view your `pub-key` by running the command `heimdalld show-account` 
+
+The chain-id required here is the heimdall chain-id - heimdall-lXaaU9
 
 ### Validator information
 
