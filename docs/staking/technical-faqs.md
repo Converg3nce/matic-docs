@@ -99,6 +99,22 @@ We currently have an easy to dive-in list for you for the Linux packages. We wil
 
 `sudo service bor start`
 
+####K Check heimdall logs
+
+`tail -f heimdalld.log`
+
+####L. Check Heimdall rest-server
+
+`tail -f heimdalld-rest-server.log`
+
+####M. Check Heimdall bridge logs
+
+`tail -f heimdalld-bridge.log`
+
+####N. Check bor logs
+
+`tail -f bor.log`
+
 ### 3. Error: Failed to unlock account (0x...) No key for given address or file
 
 This error occurs because the path for the password.txt file is incorrect. You can follow the below steps to rectify this:
