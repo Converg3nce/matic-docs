@@ -113,6 +113,17 @@ We currently have an easy to dive-in list for you for the Linux packages. We wil
 
 `tail -f bor.log`
 
+####O. Kill Bor process
+
+**For linux**:
+
+1. `ps -aux | grep bor`. Get the PID for Bor and then run the following command.
+2. `sudo kill -9 PID` 
+
+**For Binaries**:
+
+Go to `CS-2001/bor` and then run, `bash stop.sh`
+
 ### 3. Error: Failed to unlock account (0x...) No key for given address or file
 
 This error occurs because the path for the password.txt file is incorrect. You can follow the below steps to rectify this:
@@ -323,4 +334,8 @@ In such a case you can reset heimdall config data and try running the installati
 Error: `* '' has invalid keys: clerk_polling_interval, matic_token, span_polling_interval, stake_manager_contract, stakinginfo_contract`
 
 This occurs mostly because when there are typos, or some missing parts or an old config file which is still a remnant. You will need to clear all the remnants and then try setting it up again.
+
+
+
+
 
