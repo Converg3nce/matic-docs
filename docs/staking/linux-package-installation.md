@@ -3,6 +3,15 @@
 
 > The following has been tested to work with: Ubuntu 16.04 or later, CentOS 7 or later, RHEL 7 or later,  Debian  8 or later.
 
+**TL;DR** - We have made a video demonstrating step by step on how to setup your Heimdall and Bor nodes
+
+
+<center>
+    <iframe width="700" height="480" src="https://matic-public.s3.amazonaws.com/CS-2001/mat-full-node-setup.mp4">
+    </iframe>
+</center>
+
+
 ### Step 1: Install rabbit-mq
 
 **For Ubuntu/Debian**
