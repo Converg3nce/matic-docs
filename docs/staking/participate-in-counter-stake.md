@@ -27,7 +27,7 @@ To participate in the public testnet event, you need to first setup your Full No
 > * **Option 3:** Running with Docker, Coming Soon...
 > * **Option 4:** One Click Setup, Coming Soon...
 
-* **Step 2:** Stake tokens to become a validator - Contract addresses and other details will be released before the stage commences.
+* **Step 2:** Stake tokens to become a validator - follow this guide - [https://docs.matic.network/staking/stake-on-matic/](../stake-on-matic) or just follow along with this video - [https://matic-public.s3.amazonaws.com/CS-2001/how-to-stake.mp4](https://matic-public.s3.amazonaws.com/CS-2001/how-to-stake.mp4)
 
 
 
