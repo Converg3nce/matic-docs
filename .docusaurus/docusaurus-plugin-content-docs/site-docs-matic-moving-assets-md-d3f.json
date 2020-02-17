@@ -1,0 +1,17 @@
+{
+  "id": "matic-moving-assets",
+  "title": "Ethereum to Matic",
+  "description": "# Moving Assets",
+  "source": "@site/docs/matic-moving-assets.md",
+  "permalink": "/docs/matic-moving-assets",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/matic-moving-assets.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Matic Architecture",
+    "permalink": "/docs/matic-architecture"
+  },
+  "next": {
+    "title": "Security Models",
+    "permalink": "/docs/matic-security-models"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "tutorial-key-management-portis",
+  "title": "Portis",
+  "description": "Portis is a web-based wallet built keeping easy user-onboarding in mind. It comes with a javascript SDK that integrates into the DApp and creates a local wallet-less experience for the user. Further, it handles setting up the wallet, transactions and gas fees. Like Metamask, it is non-custodial - users control their keys, Portis just stores them securely. But, unlike Metamask, it is integrated into the application and not the browser. Users have their keys associated with their login id and passwords.",
+  "source": "@site/docs/tutorial-key-management-portis.md",
+  "permalink": "/docs/tutorial-key-management-portis",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-key-management-portis.md",
+  "sidebar": "Tutorials",
+  "previous": {
+    "title": "Wallet Connect",
+    "permalink": "/docs/tutorial-key-management-walletconnect"
+  },
+  "next": {
+    "title": "Getting started",
+    "permalink": "/docs/tutorial-metatransactions"
+  }
+}

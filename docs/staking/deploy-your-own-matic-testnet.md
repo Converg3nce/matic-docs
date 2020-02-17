@@ -1,3 +1,9 @@
+---
+id: tutorial-oracles
+title: Getting Started with Oracles
+sidebar_label: Oracles
+---
+
 Step by step instructions on how to create a single and multiple (soon to be added) validator testnet.
 
 ### Creating a single validator testnet

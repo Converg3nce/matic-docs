@@ -1,0 +1,14 @@
+{
+  "id": "dagger/getting-started",
+  "title": "Dagger",
+  "description": "Dagger is the best way to get realtime updates from Ethereum Blockchain.",
+  "source": "@site/docs/dagger/getting-started.md",
+  "permalink": "/docs/dagger/getting-started",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/dagger/getting-started.md",
+  "sidebar_label": "Getting Started",
+  "sidebar": "Tutorials",
+  "previous": {
+    "title": "MóiBit",
+    "permalink": "/docs/integrations/decentralised-storage/moibit"
+  }
+}

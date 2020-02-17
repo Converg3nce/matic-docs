@@ -1,0 +1,17 @@
+{
+  "id": "resources/blockchain-basics/consensus-mechanism",
+  "title": "Consensus Mechanism",
+  "description": "A Consensus mechanism is a fault-tolerant mechanism that is used in computer and blockchain systems to achieve the necessary agreement on a single data value or a single state of the network among distributed processes or multi-agent systems, such as with cryptocurrencies.",
+  "source": "@site/docs/resources/blockchain-basics/basics-consensus-mechanism.md",
+  "permalink": "/docs/resources/blockchain-basics/consensus-mechanism",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/blockchain-basics/basics-consensus-mechanism.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Types of Blockchain",
+    "permalink": "/docs/resources/blockchain-basics/blockchain-types"
+  },
+  "next": {
+    "title": "What is Ethereum?",
+    "permalink": "/docs/resources/blockchain-basics/ethereum"
+  }
+}

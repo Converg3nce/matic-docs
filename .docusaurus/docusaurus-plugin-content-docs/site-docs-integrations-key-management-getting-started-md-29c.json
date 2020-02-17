@@ -1,0 +1,18 @@
+{
+  "id": "integrations/key-management/getting-started",
+  "title": "Key Management Strategies",
+  "description": "The following article aims to be a guide through integration of a key management strategy on client side of your Decentralised Application on Matic Network.",
+  "source": "@site/docs/integrations/key-management/getting-started.md",
+  "permalink": "/docs/integrations/key-management/getting-started",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/key-management/getting-started.md",
+  "sidebar_label": "Getting Started",
+  "sidebar": "Tutorials",
+  "previous": {
+    "title": "How to create a MetaMask Wallet?",
+    "permalink": "/docs/quickstart-metamask"
+  },
+  "next": {
+    "title": "Metamask",
+    "permalink": "/docs/integrations/key-management/metamask"
+  }
+}

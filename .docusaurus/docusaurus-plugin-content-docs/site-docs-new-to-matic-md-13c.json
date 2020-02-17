@@ -1,0 +1,13 @@
+{
+  "id": "new-to-matic",
+  "title": "New to Matic?",
+  "description": "Matic Network is a scaling solution for public blockchains. Based on an adapted implementation of Plasma framework (Plasma MoreVP) - with an account based implementation (read more [here](https://ethresear.ch/t/account-based-plasma-morevp/5480)), Matic supports all the existing Ethereum tooling along with faster and cheaper transactions.",
+  "source": "@site/docs/new-to-matic.md",
+  "permalink": "/docs/new-to-matic",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/new-to-matic.md",
+  "sidebar": "Resources",
+  "next": {
+    "title": "Blockchain",
+    "permalink": "/docs/blockchain-basics/blockchain"
+  }
+}

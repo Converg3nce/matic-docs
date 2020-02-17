@@ -1,0 +1,17 @@
+{
+  "id": "staking/counter-stake-stage-1/technical-faqs",
+  "title": "Technical FAQs",
+  "description": "### 1. Are the private keys same for Heimdall and Bor keystore?",
+  "source": "@site/docs/staking/counter-stake-stage-1/technical-faqs.md",
+  "permalink": "/docs/staking/counter-stake-stage-1/technical-faqs",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/counter-stake-stage-1/technical-faqs.md",
+  "sidebar": "Staking",
+  "previous": {
+    "title": "Stake on Matic",
+    "permalink": "/docs/staking/counter-stake-stage-1/stake-on-matic"
+  },
+  "next": {
+    "title": "FAQs",
+    "permalink": "/docs/staking/faqs"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "staking/counter-stake-stage-1/running-with-binaries",
+  "title": "Setup Matic Validator Node",
+  "description": "## We strongly recommend not using a laptop if you are running a full node.",
+  "source": "@site/docs/staking/counter-stake-stage-1/running-with-binaries.md",
+  "permalink": "/docs/staking/counter-stake-stage-1/running-with-binaries",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/counter-stake-stage-1/running-with-binaries.md",
+  "sidebar_label": "Running with Binaries",
+  "sidebar": "Staking",
+  "previous": {
+    "title": "Setup Matic Validator Node",
+    "permalink": "/docs/staking/counter-stake-stage-1/linux-package-installation"
+  },
+  "next": {
+    "title": "Stake on Matic",
+    "permalink": "/docs/staking/counter-stake-stage-1/stake-on-matic"
+  }
+}

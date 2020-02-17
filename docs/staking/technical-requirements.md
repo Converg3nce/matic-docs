@@ -1,3 +1,8 @@
+---
+id: technical-requirements
+title: Minimum Technical Requirements
+---
+
 For the upcoming testnet event, this is the minimal hardware configuration:
 > 8 GB RAM 
 

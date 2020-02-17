@@ -1,5 +1,8 @@
-#Staking Economics
-
+---
+id: economics
+title: Staking Economics
+sidebar_label: Economics
+---
 Matic is a Layer 2 scaling solution for public blockchains. It uses an account based variant of More Viable Plasma to guarantee the security of assets on the main-chain and it ensures the security of generic transactions by using a decentralized network of Proof-of-Stake validators. The system is designed to enable quicker partial confirmations for better user experience while the final confirmation is attained periodically as the checkpoints are committed on the main-chain.  
 
 Validators stake their Matic tokens as collateral to work for the security of the network and in exchange for their service, earn rewards. 

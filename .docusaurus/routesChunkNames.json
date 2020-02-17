@@ -1,0 +1,257 @@
+{
+  "/": {
+    "component": "component---site-src-pages-index-jsc-4-f-f99"
+  },
+  "/blog": {
+    "component": "component---theme-blog-list-pagea-6-a-7ba",
+    "items": [
+      {
+        "content": "content---blogaf-1-856"
+      },
+      {
+        "content": "content---blog-357-22b"
+      },
+      {
+        "content": "content---blog-8-e-9-35c"
+      }
+    ],
+    "metadata": "metadata---blogbbb-5f9"
+  },
+  "/blog/hello-world": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "content": "content---blog-hello-worldd-61-086"
+  },
+  "/blog/hola": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "content": "content---blog-holabdd-150"
+  },
+  "/blog/tags": {
+    "component": "component---theme-blog-tags-list-page-01-a-d0b",
+    "tags": "tags---blog-tags-8-be-13d"
+  },
+  "/blog/tags/docusaurus": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "items": [
+      {
+        "content": "content---blogaf-1-856"
+      },
+      {
+        "content": "content---blog-357-22b"
+      },
+      {
+        "content": "content---blog-8-e-9-35c"
+      }
+    ],
+    "metadata": "metadata---blog-tags-docusaurus-6-ca-f43"
+  },
+  "/blog/tags/facebook": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "items": [
+      {
+        "content": "content---blogaf-1-856"
+      }
+    ],
+    "metadata": "metadata---blog-tags-facebookeec-618"
+  },
+  "/blog/tags/hello": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "items": [
+      {
+        "content": "content---blogaf-1-856"
+      },
+      {
+        "content": "content---blog-357-22b"
+      }
+    ],
+    "metadata": "metadata---blog-tags-hello-3-a-6-b36"
+  },
+  "/blog/tags/hola": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "items": [
+      {
+        "content": "content---blog-8-e-9-35c"
+      }
+    ],
+    "metadata": "metadata---blog-tags-hola-31-d-e2f"
+  },
+  "/blog/welcome": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "content": "content---blog-welcome-286-e55"
+  },
+  "/docs/:route": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "docsMetadata": "docsMetadata---docs-route-20-a-f24"
+  },
+  "/docs/dagger/getting-started": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-dagger-getting-started-95-b-83a"
+  },
+  "/docs/integrations/decentralised-storage/moibit": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-decentralised-storage-moibite-45-66d"
+  },
+  "/docs/integrations/key-management/getting-started": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-key-management-getting-started-29-c-6d3"
+  },
+  "/docs/integrations/key-management/metamask": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-key-management-metamask-6-e-8-901"
+  },
+  "/docs/integrations/key-management/portis": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-key-management-portis-39-d-37c"
+  },
+  "/docs/integrations/key-management/walletconnect": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-key-management-walletconnect-80-f-bef"
+  },
+  "/docs/integrations/zapier/about": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-zapier-about-027-450"
+  },
+  "/docs/integrations/zapier/getting-started": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-zapier-getting-startedb-22-79d"
+  },
+  "/docs/quickstart": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-quickstart-30-f-132"
+  },
+  "/docs/quickstart-helloworld": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-quickstart-helloworldac-3-bbd"
+  },
+  "/docs/quickstart-metamask": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-quickstart-metamaskf-4-a-e5e"
+  },
+  "/docs/resources/blockchain-basics/accounts": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-blockchain-basics-accounts-66-a-404"
+  },
+  "/docs/resources/blockchain-basics/blockchain": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-blockchain-basics-blockchain-9-c-8-fd2"
+  },
+  "/docs/resources/blockchain-basics/blockchain-types": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-blockchain-basics-blockchain-types-677-bec"
+  },
+  "/docs/resources/blockchain-basics/consensus-mechanism": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-blockchain-basics-consensus-mechanismf-06-ff7"
+  },
+  "/docs/resources/blockchain-basics/ethereum": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-blockchain-basics-ethereum-5-da-4eb"
+  },
+  "/docs/resources/blockchain-basics/gas": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-blockchain-basics-gasb-93-895"
+  },
+  "/docs/resources/blockchain-basics/solidity": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-blockchain-basics-soliditye-91-a75"
+  },
+  "/docs/resources/blockchain-basics/transactions": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-blockchain-basics-transactions-903-171"
+  },
+  "/docs/resources/matic-architecture": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-matic-architecture-8-ce-064"
+  },
+  "/docs/resources/matic-moving-assets": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-matic-moving-assets-8-ec-ff0"
+  },
+  "/docs/resources/matic-security-models": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-matic-security-modelsc-59-56e"
+  },
+  "/docs/resources/matic-sidechain": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-matic-sidechain-1-b-8-5b9"
+  },
+  "/docs/resources/new-to-matic": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-new-to-matic-4-d-9-f62"
+  },
+  "/docs/resources/tutorial-ethindia-workshop-dapp": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-tutorial-ethindia-workshop-dapp-423-d8c"
+  },
+  "/docs/resources/tutorial-ethindia-workshop-solidity": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-tutorial-ethindia-workshop-solidity-0-d-6-e57"
+  },
+  "/docs/staking/counter-stake-stage-1/getting-started": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-counter-stake-stage-1-getting-startedc-66-21d"
+  },
+  "/docs/staking/counter-stake-stage-1/introduction": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-counter-stake-stage-1-introduction-294-dd7"
+  },
+  "/docs/staking/counter-stake-stage-1/linux-package-installation": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-counter-stake-stage-1-linux-package-installation-99-d-b09"
+  },
+  "/docs/staking/counter-stake-stage-1/running-with-binaries": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-counter-stake-stage-1-running-with-binaries-075-916"
+  },
+  "/docs/staking/counter-stake-stage-1/stake-on-matic": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-counter-stake-stage-1-stake-on-maticf-53-c61"
+  },
+  "/docs/staking/counter-stake-stage-1/technical-faqs": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-counter-stake-stage-1-technical-faqsd-35-68a"
+  },
+  "/docs/staking/economics": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-economicsade-7de"
+  },
+  "/docs/staking/faqs": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-faqs-113-d80"
+  },
+  "/docs/staking/running-with-docker": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-running-with-docker-9-e-4-f91"
+  },
+  "/docs/staking/technical-requirements": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-technical-requirementsfc-1-481"
+  },
+  "/docs/staking/tutorial-oracles": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-tutorial-oracles-520-aa9"
+  },
+  "/docs/tutorial-fiat-on-ramp": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-fiat-on-ramp-4-a-7-62c"
+  },
+  "/docs/tutorial-getting-started": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-getting-startede-5-a-718"
+  },
+  "/docs/tutorial-metatransactions": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-metatransactions-515-71b"
+  },
+  "/docs/tutorial-metatransactions-biconomy": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-metatransactions-biconomya-08-8d6"
+  },
+  "/docs/tutorial-metatransactions-gsn": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-metatransactions-gsnc-00-18e"
+  },
+  "/docs/tutorial-oracles": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-oracles-1-bb-510"
+  }
+}

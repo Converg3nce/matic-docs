@@ -1,4 +1,12 @@
-eth-dagger is library for dagger project written in node.js and browser. It uses dagger server to get realtime updatesfrom Ethereum Network.
+---
+id: getting-started
+title: Dagger
+sidebar_label: Getting Started
+---
+Dagger is the best way to get realtime updates from Ethereum Blockchain.
+It provides a way for your DApps and Backend system to get ethereum blockchain events, like transactions, receipts and logs in realtime over websocket or socket.
+
+We maintain infrastructure for reliable and scalable realtime events. eth-dagger is library for dagger project written in node.js and browser. It uses dagger server to get realtime updatesfrom Ethereum Network.
 
 **About dagger**
 

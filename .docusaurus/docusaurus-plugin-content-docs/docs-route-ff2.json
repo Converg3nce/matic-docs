@@ -1,0 +1,318 @@
+{
+  "docsSidebars": {
+    "Resources": [
+      {
+        "type": "link",
+        "label": "New to Matic?",
+        "href": "/docs/resources/new-to-matic"
+      },
+      {
+        "type": "category",
+        "label": "Blockchain Basics",
+        "items": [
+          {
+            "type": "link",
+            "label": "Blockchain",
+            "href": "/docs/resources/blockchain-basics/blockchain"
+          },
+          {
+            "type": "link",
+            "label": "Types of Blockchain",
+            "href": "/docs/resources/blockchain-basics/blockchain-types"
+          },
+          {
+            "type": "link",
+            "label": "Consensus Mechanism",
+            "href": "/docs/resources/blockchain-basics/consensus-mechanism"
+          },
+          {
+            "type": "link",
+            "label": "Ethereum",
+            "href": "/docs/resources/blockchain-basics/ethereum"
+          },
+          {
+            "type": "link",
+            "label": "Solidity",
+            "href": "/docs/resources/blockchain-basics/solidity"
+          },
+          {
+            "type": "link",
+            "label": "Transactions",
+            "href": "/docs/resources/blockchain-basics/transactions"
+          },
+          {
+            "type": "link",
+            "label": "Gas",
+            "href": "/docs/resources/blockchain-basics/gas"
+          },
+          {
+            "type": "link",
+            "label": "Accounts",
+            "href": "/docs/resources/blockchain-basics/accounts"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Sidechains and Plasma",
+        "href": "/docs/resources/matic-sidechain"
+      },
+      {
+        "type": "link",
+        "label": "Matic Architecture",
+        "href": "/docs/resources/matic-architecture"
+      },
+      {
+        "type": "category",
+        "label": "Advanced Concepts",
+        "items": [
+          {
+            "type": "link",
+            "label": "Ethereum to Matic",
+            "href": "/docs/resources/matic-moving-assets"
+          },
+          {
+            "type": "link",
+            "label": "Security Models",
+            "href": "/docs/resources/matic-security-models"
+          },
+          {
+            "type": "link",
+            "label": "Getting Started with Solidity",
+            "href": "/docs/resources/tutorial-ethindia-workshop-solidity"
+          },
+          {
+            "type": "link",
+            "label": "Deploying a DApp on Matic",
+            "href": "/docs/resources/tutorial-ethindia-workshop-dapp"
+          }
+        ]
+      }
+    ],
+    "Tutorials": [
+      {
+        "type": "link",
+        "label": "Getting Started",
+        "href": "/docs/tutorial-getting-started"
+      },
+      {
+        "type": "category",
+        "label": "QuickStart",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/quickstart"
+          },
+          {
+            "type": "link",
+            "label": "Hello World",
+            "href": "/docs/quickstart-helloworld"
+          },
+          {
+            "type": "link",
+            "label": "Metamask Wallet",
+            "href": "/docs/quickstart-metamask"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Integrations",
+        "items": [
+          {
+            "type": "category",
+            "label": "Key Management Strategies",
+            "items": [
+              {
+                "type": "link",
+                "label": "Getting Started",
+                "href": "/docs/integrations/key-management/getting-started"
+              },
+              {
+                "type": "link",
+                "label": "Metamask",
+                "href": "/docs/integrations/key-management/metamask"
+              },
+              {
+                "type": "link",
+                "label": "Wallet Connect",
+                "href": "/docs/integrations/key-management/walletconnect"
+              },
+              {
+                "type": "link",
+                "label": "Portis",
+                "href": "/docs/integrations/key-management/portis"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Meta Transactions",
+            "items": [
+              {
+                "type": "link",
+                "label": "Getting Started",
+                "href": "/docs/tutorial-metatransactions"
+              },
+              {
+                "type": "link",
+                "label": "Biconomy",
+                "href": "/docs/tutorial-metatransactions-biconomy"
+              },
+              {
+                "type": "link",
+                "label": "GSN",
+                "href": "/docs/tutorial-metatransactions-gsn"
+              }
+            ]
+          },
+          {
+            "type": "link",
+            "label": "Oracles",
+            "href": "/docs/tutorial-oracles"
+          },
+          {
+            "type": "link",
+            "label": "Fiat-on-Ramp",
+            "href": "/docs/tutorial-fiat-on-ramp"
+          },
+          {
+            "type": "category",
+            "label": "Dagger on Ethereum",
+            "items": [
+              {
+                "type": "link",
+                "label": "Zapier",
+                "href": "/docs/integrations/zapier/about"
+              },
+              {
+                "type": "link",
+                "label": "Getting Started",
+                "href": "/docs/integrations/zapier/getting-started"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Decentralised Storage",
+            "items": [
+              {
+                "type": "link",
+                "label": "MóiBit",
+                "href": "/docs/integrations/decentralised-storage/moibit"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Dagger",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/dagger/getting-started"
+          }
+        ]
+      }
+    ],
+    "Staking": [
+      {
+        "type": "link",
+        "label": "Economics",
+        "href": "/docs/staking/economics"
+      },
+      {
+        "type": "link",
+        "label": "Minimum Technical Requirements",
+        "href": "/docs/staking/technical-requirements"
+      },
+      {
+        "type": "category",
+        "label": "Counter Stake: Stage 1",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/staking/counter-stake-stage-1/getting-started"
+          },
+          {
+            "type": "link",
+            "label": "Introduction",
+            "href": "/docs/staking/counter-stake-stage-1/introduction"
+          },
+          {
+            "type": "link",
+            "label": "Linux Package Installation",
+            "href": "/docs/staking/counter-stake-stage-1/linux-package-installation"
+          },
+          {
+            "type": "link",
+            "label": "Running with Binaries",
+            "href": "/docs/staking/counter-stake-stage-1/running-with-binaries"
+          },
+          {
+            "type": "link",
+            "label": "Stake on Matic",
+            "href": "/docs/staking/counter-stake-stage-1/stake-on-matic"
+          },
+          {
+            "type": "link",
+            "label": "Technical FAQs",
+            "href": "/docs/staking/counter-stake-stage-1/technical-faqs"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "FAQs",
+        "href": "/docs/staking/faqs"
+      }
+    ]
+  },
+  "permalinkToSidebar": {
+    "/docs/dagger/getting-started": "Tutorials",
+    "/docs/integrations/decentralised-storage/moibit": "Tutorials",
+    "/docs/integrations/key-management/getting-started": "Tutorials",
+    "/docs/integrations/key-management/metamask": "Tutorials",
+    "/docs/integrations/key-management/portis": "Tutorials",
+    "/docs/integrations/key-management/walletconnect": "Tutorials",
+    "/docs/integrations/zapier/about": "Tutorials",
+    "/docs/integrations/zapier/getting-started": "Tutorials",
+    "/docs/quickstart": "Tutorials",
+    "/docs/quickstart-helloworld": "Tutorials",
+    "/docs/quickstart-metamask": "Tutorials",
+    "/docs/resources/blockchain-basics/accounts": "Resources",
+    "/docs/resources/blockchain-basics/blockchain": "Resources",
+    "/docs/resources/blockchain-basics/blockchain-types": "Resources",
+    "/docs/resources/blockchain-basics/consensus-mechanism": "Resources",
+    "/docs/resources/blockchain-basics/ethereum": "Resources",
+    "/docs/resources/blockchain-basics/gas": "Resources",
+    "/docs/resources/blockchain-basics/solidity": "Resources",
+    "/docs/resources/blockchain-basics/transactions": "Resources",
+    "/docs/resources/matic-architecture": "Resources",
+    "/docs/resources/matic-moving-assets": "Resources",
+    "/docs/resources/matic-security-models": "Resources",
+    "/docs/resources/matic-sidechain": "Resources",
+    "/docs/resources/new-to-matic": "Resources",
+    "/docs/resources/tutorial-ethindia-workshop-dapp": "Resources",
+    "/docs/resources/tutorial-ethindia-workshop-solidity": "Resources",
+    "/docs/staking/counter-stake-stage-1/getting-started": "Staking",
+    "/docs/staking/counter-stake-stage-1/introduction": "Staking",
+    "/docs/staking/counter-stake-stage-1/linux-package-installation": "Staking",
+    "/docs/staking/counter-stake-stage-1/running-with-binaries": "Staking",
+    "/docs/staking/counter-stake-stage-1/stake-on-matic": "Staking",
+    "/docs/staking/counter-stake-stage-1/technical-faqs": "Staking",
+    "/docs/staking/economics": "Staking",
+    "/docs/staking/faqs": "Staking",
+    "/docs/staking/technical-requirements": "Staking",
+    "/docs/tutorial-fiat-on-ramp": "Tutorials",
+    "/docs/tutorial-getting-started": "Tutorials",
+    "/docs/tutorial-metatransactions": "Tutorials",
+    "/docs/tutorial-metatransactions-biconomy": "Tutorials",
+    "/docs/tutorial-metatransactions-gsn": "Tutorials",
+    "/docs/tutorial-oracles": "Tutorials"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "resources/tutorial-ethindia-workshop-solidity",
+  "title": "Getting Started with Solidity",
+  "description": "## What this tutorial covers",
+  "source": "@site/docs/resources/tutorial-ethindia-workshop-solidity.md",
+  "permalink": "/docs/resources/tutorial-ethindia-workshop-solidity",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/tutorial-ethindia-workshop-solidity.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Security Models",
+    "permalink": "/docs/resources/matic-security-models"
+  },
+  "next": {
+    "title": "Deploying a DApp on Matic",
+    "permalink": "/docs/resources/tutorial-ethindia-workshop-dapp"
+  }
+}

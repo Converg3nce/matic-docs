@@ -1,0 +1,18 @@
+{
+  "id": "resources/blockchain-basics/solidity",
+  "title": "What is Solidity?",
+  "description": "Solidity is an object oriented, high-level programming language for implementing smart contracts. Smart contracts are programs which govern the behavior of accounts within the Ethereum state. To familiarize with Ethereum it is important to discuss about the two main components of the ecosystem: Accounts and Transactions.",
+  "source": "@site/docs/resources/blockchain-basics/basics-solidity.md",
+  "permalink": "/docs/resources/blockchain-basics/solidity",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/blockchain-basics/basics-solidity.md",
+  "sidebar_label": "Solidity",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "What is Ethereum?",
+    "permalink": "/docs/resources/blockchain-basics/ethereum"
+  },
+  "next": {
+    "title": "What are Transactions?",
+    "permalink": "/docs/resources/blockchain-basics/transactions"
+  }
+}

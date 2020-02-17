@@ -1,34 +1,33 @@
-# Matic documentation
+# Website
 
-It contains all documentations for Matic Network and Matic products.
+This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-### Usage
+### Installation
 
-**Installation**
-
-```bash
-# Create and activate virtualenv
-$ virtualenv venv
-$ source venv/bin/activate
-$ pip install -r requirements.txt
+```
+$ yarn
 ```
 
-**Development**
+### Local Development
 
-```bash
-# serve on localhost
-$ mkdocs serve
+```
+$ yarn start
 ```
 
-**Production**
+This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
-```bash
-# build docs
-$ mkdocs build --clean
+### Build
+
+```
+$ yarn build
 ```
 
-**Deploy on Matic server**
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-```bash
-$ bash deploy.sh
+### Deployment
+
 ```
+$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
