@@ -26,19 +26,25 @@ Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten
 
 #### ERC20
 
-<div style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
-<button class="btn btn-primary btn-md" style="padding: 15px;background-color: #000;color: #fff; border-radius: 4px;cursor: pointer; box-shadow: 0px 4px 7px -4px rgba(0,0,0,0.75);">
-  <a href="https://wallet.matic.today/faucet" target="_blank" style="color:inherit;">
-    Get Test Tokens
-  </a>
-</button>
-</div>
+<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
+        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#000', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
+          <a href="https://wallet.matic.today/faucet" target="_blank" style={{color: 'inherit'}}>
+            Get Test Tokens
+          </a>
+        </button>
+      </div>
+
 
 #### ERC721
 
 To get `TEST` ERC721 tokens, you'd need to submit a request via this
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSekAoPK5dKecoYpNQ9YKMycNoegY39Oujy7mvLF23fsammRoQ/viewform?usp=sf_link" target="_blank">
-    form.</a>
+<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
+        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#1E90FF', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSekAoPK5dKecoYpNQ9YKMycNoegY39Oujy7mvLF23fsammRoQ/viewform?usp=sf_link" target="_blank" style={{color: 'inherit'}}>
+            Fill the Form
+          </a>
+        </button>
+      </div>
 
 ## Using Matic JS
 

@@ -13,26 +13,22 @@ However, this page helps developers, who have a good understanding of smart cont
 
 **Matic RPC endpoint**: `https://testnetv3.matic.network`
 
-<!-- |Contract|ABI|Ropsten|Matic|
-|---|---|---|---|
-|TEST (ERC20) token|
-<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json">
-<img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"/>
-</a>
-|`0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec`|`0x9a93c912F4eFf0254d178a18ACD980C1B05b57b0`|
-|Plasma Root Contract|<a target = "_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style=" padding: 2px;"/></a>|`0x82a72315E16cE224f28E1F1fB97856d3bF83f010`|   | -->
+| Contract           | ABI | Ropsten | Matic |
+|--------------------|--|--|--|
+| TEST (ERC20) token |<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/StandardToken.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec`|`0x9a93c912F4eFf0254d178a18ACD980C1B05b57b0`|
+|Plasma Root Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/matic.js/master/artifacts/RootChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0x82a72315E16cE224f28E1F1fB97856d3bF83f010`|   |
 
 ### Tokens for testing
 
 To get some `TEST` tokens on Ropsten network, you can access the Matic Faucet by clicking on the link below:
 
-<div style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
-<button class="btn btn-primary btn-md" style="padding: 15px;background-color: #000;color: #fff; border-radius: 4px;cursor: pointer; box-shadow: 0px 4px 7px -4px rgba(0,0,0,0.75);">
-  <a href="https://faucet.matic.network" target="_blank" style="color:inherit;">
-    Get Test Tokens
-  </a>
-</button>
-</div>
+<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
+        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#000', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
+          <a href="https://faucet.matic.network" target="_blank" style={{color: 'inherit'}}>
+            Get Test Tokens
+          </a>
+        </button>
+      </div>
 
 ### Matic Explorer
 
