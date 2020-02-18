@@ -70,6 +70,42 @@ export default [
   
   routes: [
 {
+  path: '/docs/advanced/calling-plasma-contracts',
+  component: ComponentCreator('/docs/advanced/calling-plasma-contracts'),
+  exact: true,
+  
+},
+{
+  path: '/docs/advanced/custom-restrictions',
+  component: ComponentCreator('/docs/advanced/custom-restrictions'),
+  exact: true,
+  
+},
+{
+  path: '/docs/advanced/deploy-your-own-matic-testnet',
+  component: ComponentCreator('/docs/advanced/deploy-your-own-matic-testnet'),
+  exact: true,
+  
+},
+{
+  path: '/docs/advanced/moving-assets',
+  component: ComponentCreator('/docs/advanced/moving-assets'),
+  exact: true,
+  
+},
+{
+  path: '/docs/advanced/security-models',
+  component: ComponentCreator('/docs/advanced/security-models'),
+  exact: true,
+  
+},
+{
+  path: '/docs/advanced/swap-assets',
+  component: ComponentCreator('/docs/advanced/swap-assets'),
+  exact: true,
+  
+},
+{
   path: '/docs/dagger/getting-started',
   component: ComponentCreator('/docs/dagger/getting-started'),
   exact: true,
@@ -136,6 +172,12 @@ export default [
   
 },
 {
+  path: '/docs/resources/architecture',
+  component: ComponentCreator('/docs/resources/architecture'),
+  exact: true,
+  
+},
+{
   path: '/docs/resources/blockchain-basics/accounts',
   component: ComponentCreator('/docs/resources/blockchain-basics/accounts'),
   exact: true,
@@ -184,32 +226,26 @@ export default [
   
 },
 {
-  path: '/docs/resources/matic-architecture',
-  component: ComponentCreator('/docs/resources/matic-architecture'),
+  path: '/docs/resources/faq',
+  component: ComponentCreator('/docs/resources/faq'),
   exact: true,
   
 },
 {
-  path: '/docs/resources/matic-moving-assets',
-  component: ComponentCreator('/docs/resources/matic-moving-assets'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/matic-security-models',
-  component: ComponentCreator('/docs/resources/matic-security-models'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/matic-sidechain',
-  component: ComponentCreator('/docs/resources/matic-sidechain'),
+  path: '/docs/resources/mapped-tokens',
+  component: ComponentCreator('/docs/resources/mapped-tokens'),
   exact: true,
   
 },
 {
   path: '/docs/resources/new-to-matic',
   component: ComponentCreator('/docs/resources/new-to-matic'),
+  exact: true,
+  
+},
+{
+  path: '/docs/resources/sidechain',
+  component: ComponentCreator('/docs/resources/sidechain'),
   exact: true,
   
 },
@@ -222,6 +258,18 @@ export default [
 {
   path: '/docs/resources/tutorial-ethindia-workshop-solidity',
   component: ComponentCreator('/docs/resources/tutorial-ethindia-workshop-solidity'),
+  exact: true,
+  
+},
+{
+  path: '/docs/sdk/api-reference',
+  component: ComponentCreator('/docs/sdk/api-reference'),
+  exact: true,
+  
+},
+{
+  path: '/docs/sdk/matic-js',
+  component: ComponentCreator('/docs/sdk/matic-js'),
   exact: true,
   
 },
@@ -250,6 +298,12 @@ export default [
   
 },
 {
+  path: '/docs/staking/counter-stake-stage-1/running-with-docker',
+  component: ComponentCreator('/docs/staking/counter-stake-stage-1/running-with-docker'),
+  exact: true,
+  
+},
+{
   path: '/docs/staking/counter-stake-stage-1/stake-on-matic',
   component: ComponentCreator('/docs/staking/counter-stake-stage-1/stake-on-matic'),
   exact: true,
@@ -274,20 +328,8 @@ export default [
   
 },
 {
-  path: '/docs/staking/running-with-docker',
-  component: ComponentCreator('/docs/staking/running-with-docker'),
-  exact: true,
-  
-},
-{
   path: '/docs/staking/technical-requirements',
   component: ComponentCreator('/docs/staking/technical-requirements'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/tutorial-oracles',
-  component: ComponentCreator('/docs/staking/tutorial-oracles'),
   exact: true,
   
 },

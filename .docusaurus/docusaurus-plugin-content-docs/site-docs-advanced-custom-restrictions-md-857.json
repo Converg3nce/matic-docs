@@ -1,0 +1,17 @@
+{
+  "id": "advanced/custom-restrictions",
+  "title": "Adding Custom Restrictions (ERC20/ERC721)",
+  "description": "**How to add custom restrictions to your ERC20 token on Matic Network**",
+  "source": "@site/docs/advanced/custom-restrictions.md",
+  "permalink": "/docs/advanced/custom-restrictions",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/advanced/custom-restrictions.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Deploy your own Matic Testnet",
+    "permalink": "/docs/advanced/deploy-your-own-matic-testnet"
+  },
+  "next": {
+    "title": "Getting Started with Solidity",
+    "permalink": "/docs/resources/tutorial-ethindia-workshop-solidity"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "sdk/api-reference",
+  "title": "API",
+  "description": "- <a href=\"#initialize\"><code><b>new Matic()</b></code></a>",
+  "source": "@site/docs/sdk/api-reference.md",
+  "permalink": "/docs/sdk/api-reference",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/sdk/api-reference.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Matic.js",
+    "permalink": "/docs/sdk/matic-js"
+  },
+  "next": {
+    "title": "FAQ",
+    "permalink": "/docs/resources/faq"
+  }
+}

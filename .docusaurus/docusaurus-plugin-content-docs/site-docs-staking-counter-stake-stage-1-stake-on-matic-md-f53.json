@@ -8,7 +8,7 @@
   "sidebar": "Staking",
   "previous": {
     "title": "Setup Matic Validator Node",
-    "permalink": "/docs/staking/counter-stake-stage-1/running-with-binaries"
+    "permalink": "/docs/staking/counter-stake-stage-1/running-with-docker"
   },
   "next": {
     "title": "Technical FAQs",

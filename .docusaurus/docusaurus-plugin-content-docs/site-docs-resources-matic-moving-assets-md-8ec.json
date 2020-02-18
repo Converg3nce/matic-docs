@@ -7,11 +7,11 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/matic-moving-assets.md",
   "sidebar": "Resources",
   "previous": {
-    "title": "Matic Architecture",
-    "permalink": "/docs/resources/matic-architecture"
+    "title": "Swap Assets",
+    "permalink": "/docs/advanced/swap-assets"
   },
   "next": {
-    "title": "Security Models",
-    "permalink": "/docs/resources/matic-security-models"
+    "title": "Getting Started with Solidity",
+    "permalink": "/docs/resources/tutorial-ethindia-workshop-solidity"
   }
 }

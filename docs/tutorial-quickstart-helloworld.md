@@ -68,7 +68,7 @@ The `string public message` function is another public function that is simila
 - Select Compiler Version to 0.5.10
 - Now, ```Compile HelloWorld.sol```
 - After Successful Compilation, it will show ![../static/img/helloworld/Screenshot_2020-02-14_at_1.08.22_PM.png](../static/img/helloworld/Screenshot_2020-02-14_at_1.08.22_PM.png)
-- Now, We have to deploy our smart contract on Matic Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](metamask-tutorial.md).
+- Now, We have to deploy our smart contract on Matic Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](quickstart-metamask).
 - Open Metamask and select Custom RPC from the networks dropdown
 
 <div

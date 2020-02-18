@@ -55,12 +55,17 @@
       {
         "type": "link",
         "label": "Sidechains and Plasma",
-        "href": "/docs/resources/matic-sidechain"
+        "href": "/docs/resources/sidechain"
       },
       {
         "type": "link",
         "label": "Matic Architecture",
-        "href": "/docs/resources/matic-architecture"
+        "href": "/docs/resources/architecture"
+      },
+      {
+        "type": "link",
+        "label": "Mapped Tokens",
+        "href": "/docs/resources/mapped-tokens"
       },
       {
         "type": "category",
@@ -68,13 +73,33 @@
         "items": [
           {
             "type": "link",
-            "label": "Ethereum to Matic",
-            "href": "/docs/resources/matic-moving-assets"
+            "label": "Security Models",
+            "href": "/docs/advanced/security-models"
           },
           {
             "type": "link",
-            "label": "Security Models",
-            "href": "/docs/resources/matic-security-models"
+            "label": "Calling Plasma Contracts",
+            "href": "/docs/advanced/calling-plasma-contracts"
+          },
+          {
+            "type": "link",
+            "label": "Swap Assets",
+            "href": "/docs/advanced/swap-assets"
+          },
+          {
+            "type": "link",
+            "label": "Moving Assets",
+            "href": "/docs/advanced/moving-assets"
+          },
+          {
+            "type": "link",
+            "label": "Deploying Matic Locally",
+            "href": "/docs/advanced/deploy-your-own-matic-testnet"
+          },
+          {
+            "type": "link",
+            "label": "Adding Custom Restrictions (ERC20/ERC721)",
+            "href": "/docs/advanced/custom-restrictions"
           },
           {
             "type": "link",
@@ -87,6 +112,27 @@
             "href": "/docs/resources/tutorial-ethindia-workshop-dapp"
           }
         ]
+      },
+      {
+        "type": "category",
+        "label": "SDK",
+        "items": [
+          {
+            "type": "link",
+            "label": "Matic.js",
+            "href": "/docs/sdk/matic-js"
+          },
+          {
+            "type": "link",
+            "label": "API",
+            "href": "/docs/sdk/api-reference"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "FAQ",
+        "href": "/docs/resources/faq"
       }
     ],
     "Tutorials": [
@@ -255,6 +301,11 @@
           },
           {
             "type": "link",
+            "label": "Running with Docker",
+            "href": "/docs/staking/counter-stake-stage-1/running-with-docker"
+          },
+          {
+            "type": "link",
             "label": "Stake on Matic",
             "href": "/docs/staking/counter-stake-stage-1/stake-on-matic"
           },
@@ -273,6 +324,12 @@
     ]
   },
   "permalinkToSidebar": {
+    "/docs/advanced/calling-plasma-contracts": "Resources",
+    "/docs/advanced/custom-restrictions": "Resources",
+    "/docs/advanced/deploy-your-own-matic-testnet": "Resources",
+    "/docs/advanced/moving-assets": "Resources",
+    "/docs/advanced/security-models": "Resources",
+    "/docs/advanced/swap-assets": "Resources",
     "/docs/dagger/getting-started": "Tutorials",
     "/docs/integrations/decentralised-storage/moibit": "Tutorials",
     "/docs/integrations/key-management/getting-started": "Tutorials",
@@ -284,6 +341,7 @@
     "/docs/quickstart": "Tutorials",
     "/docs/quickstart-helloworld": "Tutorials",
     "/docs/quickstart-metamask": "Tutorials",
+    "/docs/resources/architecture": "Resources",
     "/docs/resources/blockchain-basics/accounts": "Resources",
     "/docs/resources/blockchain-basics/blockchain": "Resources",
     "/docs/resources/blockchain-basics/blockchain-types": "Resources",
@@ -292,17 +350,19 @@
     "/docs/resources/blockchain-basics/gas": "Resources",
     "/docs/resources/blockchain-basics/solidity": "Resources",
     "/docs/resources/blockchain-basics/transactions": "Resources",
-    "/docs/resources/matic-architecture": "Resources",
-    "/docs/resources/matic-moving-assets": "Resources",
-    "/docs/resources/matic-security-models": "Resources",
-    "/docs/resources/matic-sidechain": "Resources",
+    "/docs/resources/faq": "Resources",
+    "/docs/resources/mapped-tokens": "Resources",
     "/docs/resources/new-to-matic": "Resources",
+    "/docs/resources/sidechain": "Resources",
     "/docs/resources/tutorial-ethindia-workshop-dapp": "Resources",
     "/docs/resources/tutorial-ethindia-workshop-solidity": "Resources",
+    "/docs/sdk/api-reference": "Resources",
+    "/docs/sdk/matic-js": "Resources",
     "/docs/staking/counter-stake-stage-1/getting-started": "Staking",
     "/docs/staking/counter-stake-stage-1/introduction": "Staking",
     "/docs/staking/counter-stake-stage-1/linux-package-installation": "Staking",
     "/docs/staking/counter-stake-stage-1/running-with-binaries": "Staking",
+    "/docs/staking/counter-stake-stage-1/running-with-docker": "Staking",
     "/docs/staking/counter-stake-stage-1/stake-on-matic": "Staking",
     "/docs/staking/counter-stake-stage-1/technical-faqs": "Staking",
     "/docs/staking/economics": "Staking",

@@ -9,5 +9,9 @@
   "previous": {
     "title": "Getting Started with Solidity",
     "permalink": "/docs/resources/tutorial-ethindia-workshop-solidity"
+  },
+  "next": {
+    "title": "Matic.js",
+    "permalink": "/docs/sdk/matic-js"
   }
 }

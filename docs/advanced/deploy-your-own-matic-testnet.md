@@ -1,7 +1,7 @@
 ---
-id: tutorial-oracles
-title: Getting Started with Oracles
-sidebar_label: Oracles
+id: deploy-your-own-matic-testnet
+title: Deploy your own Matic Testnet
+sidebar_label: Deploying Matic Locally
 ---
 
 Step by step instructions on how to create a single and multiple (soon to be added) validator testnet.

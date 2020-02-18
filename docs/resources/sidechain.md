@@ -1,5 +1,5 @@
 ---
-id: matic-sidechain
+id: sidechain
 title: Sidechains and Plasma
 ---
 Sidechain is an alternate blockchain to a parent chain. Plasma is a framework of child chains - it is a scaling solution for Ethereum (or any blockchain for that matter). 

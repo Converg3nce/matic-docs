@@ -1,3 +1,8 @@
+---
+id: swap-assets
+title: Swap Assets
+---
+
 # Swap ERC20 and ERC721 tokens atomically using Plasma Asset Swaps
 
 This document will help you understand the Plasma asset swaps that can be performed while using Matic. This allows you to create applications such as decentralized exchanges, NFT marketplaces and similar while using our Plasma construction, which piggybacks on the security of Ethereum.

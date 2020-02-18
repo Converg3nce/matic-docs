@@ -1,6 +1,6 @@
 ---
 id: tutorial-getting-started
-title: 📖 Tutorials
+title: Tutorials
 sidebar_label: Getting Started
 ---
 

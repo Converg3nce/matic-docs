@@ -1,5 +1,5 @@
 ---
-id: matic-architecture
+id: architecture
 title: Matic Architecture 
 ---
 

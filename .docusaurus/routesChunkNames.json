@@ -82,6 +82,30 @@
     "component": "component---theme-doc-page-1-be-9be",
     "docsMetadata": "docsMetadata---docs-route-20-a-f24"
   },
+  "/docs/advanced/calling-plasma-contracts": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-calling-plasma-contracts-293-fc0"
+  },
+  "/docs/advanced/custom-restrictions": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-custom-restrictions-857-ab7"
+  },
+  "/docs/advanced/deploy-your-own-matic-testnet": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-tutorial-oraclese-48-67c"
+  },
+  "/docs/advanced/moving-assets": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-moving-assetsc-4-c-217"
+  },
+  "/docs/advanced/security-models": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-security-models-116-b0a"
+  },
+  "/docs/advanced/swap-assets": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-swap-assetsd-09-767"
+  },
   "/docs/dagger/getting-started": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-dagger-getting-started-95-b-83a"
@@ -126,6 +150,10 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-quickstart-metamaskf-4-a-e5e"
   },
+  "/docs/resources/architecture": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-matic-architectureeac-343"
+  },
   "/docs/resources/blockchain-basics/accounts": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-resources-blockchain-basics-accounts-66-a-404"
@@ -158,25 +186,21 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-resources-blockchain-basics-transactions-903-171"
   },
-  "/docs/resources/matic-architecture": {
+  "/docs/resources/faq": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-matic-architecture-8-ce-064"
+    "content": "content---docs-resources-faqb-66-0ee"
   },
-  "/docs/resources/matic-moving-assets": {
+  "/docs/resources/mapped-tokens": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-matic-moving-assets-8-ec-ff0"
-  },
-  "/docs/resources/matic-security-models": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-matic-security-modelsc-59-56e"
-  },
-  "/docs/resources/matic-sidechain": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-matic-sidechain-1-b-8-5b9"
+    "content": "content---docs-resources-mapped-tokens-279-04c"
   },
   "/docs/resources/new-to-matic": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-resources-new-to-matic-4-d-9-f62"
+  },
+  "/docs/resources/sidechain": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-resources-matic-sidechaind-02-758"
   },
   "/docs/resources/tutorial-ethindia-workshop-dapp": {
     "component": "component---theme-doc-item-178-a40",
@@ -185,6 +209,14 @@
   "/docs/resources/tutorial-ethindia-workshop-solidity": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-resources-tutorial-ethindia-workshop-solidity-0-d-6-e57"
+  },
+  "/docs/sdk/api-reference": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-sdk-api-reference-3-c-4-ca5"
+  },
+  "/docs/sdk/matic-js": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-sdk-matic-js-57-a-47e"
   },
   "/docs/staking/counter-stake-stage-1/getting-started": {
     "component": "component---theme-doc-item-178-a40",
@@ -202,6 +234,10 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-counter-stake-stage-1-running-with-binaries-075-916"
   },
+  "/docs/staking/counter-stake-stage-1/running-with-docker": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-counter-stake-stage-1-running-with-dockere-35-006"
+  },
   "/docs/staking/counter-stake-stage-1/stake-on-matic": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-counter-stake-stage-1-stake-on-maticf-53-c61"
@@ -218,17 +254,9 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-faqs-113-d80"
   },
-  "/docs/staking/running-with-docker": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-running-with-docker-9-e-4-f91"
-  },
   "/docs/staking/technical-requirements": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-technical-requirementsfc-1-481"
-  },
-  "/docs/staking/tutorial-oracles": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-tutorial-oracles-520-aa9"
   },
   "/docs/tutorial-fiat-on-ramp": {
     "component": "component---theme-doc-item-178-a40",

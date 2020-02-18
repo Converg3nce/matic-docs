@@ -1,6 +1,9 @@
-# API
+---
+id: api-reference
+title: API
+---
 
-- <a href="#initialize"><code>new Matic()</code></a>
+- <a href="#initialize"><code><b>new Matic()</b></code></a>
 - <a href="#getMappedTokenAddress"><code>matic.<b>getMappedTokenAddress()</b></code></a>
 - <a href="#balanceOfERC721"><code>matic.<b>balanceOfERC721()</b></code></a>
 - <a href="#tokenOfOwnerByIndexERC721"><code>matic.<b>tokenOfOwnerByIndexERC721()</b></code></a>
@@ -26,7 +29,7 @@
 
 <a name="initialize"></a>
 
-#### new Matic(options)
+## new Matic(options)
 
 Creates Matic SDK instance with give options. It returns a MaticSDK object.
 
@@ -54,7 +57,7 @@ const matic = new Matic(options)
 
 <a name="getMappedTokenAddress"></a>
 
-#### matic.getMappedTokenAddress(tokenAddress)
+## matic.getMappedTokenAddress(tokenAddress)
 
 get matic token `address` mapped with mainchain `tokenAddress`.
 
@@ -76,7 +79,7 @@ matic
 <a name="balanceOfERC721"></a>
 
 
-#### matic.balanceOfERC721(address, token, options)
+## matic.balanceOfERC721(address, token, options)
 
 get balance of ERC721 `token` for `address`.
 
@@ -99,7 +102,7 @@ matic
 <a name="tokenOfOwnerByIndexERC721"></a>
 
 
-#### matic.tokenOfOwnerByIndexERC721(address, token, index, options)
+## matic.tokenOfOwnerByIndexERC721(address, token, index, options)
 
 get ERC721 tokenId at `index` for `token` and for `address`.
 
@@ -125,7 +128,7 @@ matic
 ---
 <a name="approveERC20TokensForDeposit"></a>
 
-#### matic.approveERC20TokensForDeposit(token, amount, options)
+## matic.approveERC20TokensForDeposit(token, amount, options)
 
 Approves given `amount` of `token` to `rootChainContract`.
 
@@ -160,7 +163,7 @@ matic
 
 <a name="depositERC20Tokens"></a>
 
-#### matic.depositERC20Tokens(token, user, amount, options)
+## matic.depositERC20Tokens(token, user, amount, options)
 
 Deposit given `amount` of `token` with user `user`.
 
@@ -185,7 +188,7 @@ matic.depositToken('0x718Ca123...', user, '1000000000000000000', {
 
 <a name="safeTransferFrom"></a>
 
-#### matic.safeTransferFrom(token, tokenId, options)
+## matic.safeTransferFrom(token, tokenId, options)
 
 Deposit given `tokenId` of `token`.
 
@@ -208,7 +211,7 @@ matic.safeTransferFrom('0x718Ca123...', '21', {
 
 <a name="depositERC721Tokens"></a>
 
-#### matic.approveERC721TokenForDeposit(token, tokenId, options)
+## matic.approveERC721TokenForDeposit(token, tokenId, options)
 
 Approves given `amount` of `token` to `rootChainContract`.
 
@@ -243,7 +246,7 @@ matic
 
 <a name="depositERC20Tokens"></a>
 
-#### matic.depositERC721Tokens(token, user, tokenId, options)
+## matic.depositERC721Tokens(token, user, tokenId, options)
 
 Deposit given `tokenId` of `token` with user `user`.
 
@@ -268,7 +271,7 @@ matic.depositERC721Tokens('0x718Ca123...', user, tokenId, {
 
 <a name="depositEthers"></a>
 
-#### matic.depositEthers(options)
+## matic.depositEthers(options)
 
 Deposit `options.value`
 
@@ -291,7 +294,7 @@ matic.depositEthers({
 
 <a name="transferTokens"></a>
 
-#### matic.transferTokens(token, user, amount, options)
+## matic.transferTokens(token, user, amount, options)
 
 Transfer given `amount` of `token` to `user`.
 
@@ -320,7 +323,7 @@ matic.transferERC20Tokens('0x718Ca123...', user, '1000000000000000000', {
 
 <a name="transferERC721Tokens"></a>
 
-#### matic.transferERC721Tokens(token, user, tokenId, options)
+## matic.transferERC721Tokens(token, user, tokenId, options)
 
 Transfer ownership `tokenId` of `token` to `user`.
 
@@ -349,7 +352,7 @@ matic.transferERC721Tokens('0x718Ca123...', user, tokenId, {
 
 <a name="transferEthers"></a>
 
-#### matic.transferEthers(user, amount, options)
+## matic.transferEthers(user, amount, options)
 
 Transfer given `amount` of ethers to `user`.
 
@@ -377,7 +380,7 @@ matic.transferEthers(user, '1000000000000000000', {
 
 <a name="startWithdraw"></a>
 
-#### matic.startWithdraw(token, amount, options)
+## matic.startWithdraw(token, amount, options)
 
 Start withdraw process with given `amount` for `token`.
 
@@ -405,7 +408,7 @@ matic
 
 
 
-#### matic.startERC721Withdraw(token, tokenId, options)
+## matic.startERC721Withdraw(token, tokenId, options)
 
 Start withdraw process with given `tokenId` for `token`.
 
@@ -431,7 +434,7 @@ matic
 
 <a name="getHeaderObject"></a>
 
-#### matic.getHeaderObject(blockNumber)
+## matic.getHeaderObject(blockNumber)
 
 Fetch header/checkpoint corresponding to `blockNumber`
 
@@ -454,7 +457,7 @@ matic.getHeaderObject(673874).then(header => {
 
 <a name="withdraw"></a>
 
-#### matic.withdraw(txId, options)
+## matic.withdraw(txId, options)
 
 Withdraw tokens on mainchain using `txId` from `startWithdraw` method after header has been submitted to mainchain.
 
@@ -475,7 +478,7 @@ matic.withdraw("0xabcd...789", {
 
 <a name="processExits"></a>
 
-#### matic.processExits(rootTokenAddress, options)
+## matic.processExits(rootTokenAddress, options)
 
 Call processExits after completion of challenge period, after that withdrawn funds get transfered to your account on mainchain
 
@@ -496,7 +499,7 @@ matic.processExits("0xabcd...789", {
 
 <a name="getTx"></a>
 
-#### matic.getTx(txId)
+## matic.getTx(txId)
 
 Get transaction object using `txId` from Matic chain.
 
@@ -518,7 +521,7 @@ matic
 
 <a name="getReceipt"></a>
 
-#### matic.getReceipt(txId)
+## matic.getReceipt(txId)
 
 Get receipt object using `txId` from Matic chain.
 
@@ -538,10 +541,10 @@ matic
   })
 ```
 
-### Support
+## Support
 
 Please post your queries to https://stack.matic.network for integration support. If you have any queries, feedback or feature requests, feel free to reach out to us on telegram: [t.me/maticnetwork](https://t.me/maticnetwork)
 
-### License
+## License
 
 MIT

@@ -1,0 +1,17 @@
+{
+  "id": "sdk/matic-js",
+  "title": "Matic.js",
+  "description": "# Beginner-friendly tutorial to Matic.js",
+  "source": "@site/docs/sdk/matic-js.md",
+  "permalink": "/docs/sdk/matic-js",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/sdk/matic-js.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Deploying a DApp on Matic",
+    "permalink": "/docs/resources/tutorial-ethindia-workshop-dapp"
+  },
+  "next": {
+    "title": "API",
+    "permalink": "/docs/sdk/api-reference"
+  }
+}

@@ -1,3 +1,8 @@
+---
+id: custom-restrictions
+title: Adding Custom Restrictions (ERC20/ERC721)
+# sidebar_label: Adding
+---
 **How to add custom restrictions to your ERC20 token on Matic Network**
 
 ERC20 tokens on the Matic chain are standard contracts, auto-deployed by the Plasma root chain contracts, while registering a new ERC20 token on the Matic Network. These cannot be modified, in order to ensure all state transitions are mapped to fraud proofs in the root chain contracts, which basically allow these contracts to maintain the same security as the Ethereum network - this is a key component of the Plasma framework (fraud proofs).

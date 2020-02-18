@@ -1,5 +1,5 @@
 ---
-id: matic-security-models
+id: security-models
 title: Security Models
 ---
 
