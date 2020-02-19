@@ -335,6 +335,38 @@ Error: `* '' has invalid keys: clerk_polling_interval, matic_token, span_polling
 
 This occurs mostly because when there are typos, or some missing parts or an old config file which is still a remnant. You will need to clear all the remnants and then try setting it up again.
 
+### 26. To stop Heimdall and Bor services
+
+**For Linux packages**:
+
+Stop Heimdall: `sudo service heimdalld stop`
+
+Stop Bor: `sudo service bor stop` or 
+
+1. `ps -aux | grep bor`. Get the PID for Bor and then run the following command.
+2. `sudo kill -9 PID`
+
+**For Binaries**:
+
+Stop Heimdall: `pkill heimdalld`
+
+Stop Bridge: `pkill heimdalld-bridge`
+
+Stop Bor: Go to CS-2001/bor and then run, `bash stop.sh`
+
+### 27. To remove Heimdall and Bor directories
+
+**For Linux packages**:
+Delete Heimdall: `sudo rm -rf /etc/heimdall/*`
+
+Delete Bor: `sudo rm -rf /etc/bor/*`
+
+**For Binaries**:
+
+Delete Heimdall: `sudo rm -rf ~/.heimdall/`
+
+Delete Bor: `sudo rm -rm ./bor`
+
 
 
 
