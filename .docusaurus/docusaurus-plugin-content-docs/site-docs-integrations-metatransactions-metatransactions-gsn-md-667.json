@@ -1,0 +1,17 @@
+{
+  "id": "integrations/metatransactions/metatransactions-gsn",
+  "title": "GSN",
+  "description": "Writing a GSN compatible application requires the following changes/workarounds on your application:",
+  "source": "@site/docs/integrations/metatransactions/metatransactions-gsn.md",
+  "permalink": "/docs/integrations/metatransactions/metatransactions-gsn",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/metatransactions/metatransactions-gsn.md",
+  "sidebar": "Tutorials",
+  "previous": {
+    "title": "Biconomy",
+    "permalink": "/docs/integrations/metatransactions/metatransactions-biconomy"
+  },
+  "next": {
+    "title": "Getting Started with Oracles",
+    "permalink": "/docs/integrations/oracles"
+  }
+}

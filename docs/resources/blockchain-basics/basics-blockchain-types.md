@@ -17,7 +17,7 @@ In consortium blockchain, the consensus process in handled by a group of people.
 4. Public Blockchain Network <br></br>
 Anyone can read, write transaction to the network, or participate in the consensus process. They are considered to be "permissionless". Every transaction is public, and user can remain anonymous.
 
-### Resources
+### **:scroll:Resources**
 
 :page_facing_up: [Public vs Private Blockchain: A comprehensive comparison](https://www.blockchain-council.org/blockchain/public-vs-private-blockchain-a-comprehensive-comparison/)<br></br>
 :book: [On Public and Private Blockchain, Vitalik Buterin](https://blog.ethereum.org/2015/08/07/on-public-and-private-blockchains/)

@@ -17,22 +17,22 @@ module.exports = {
     {
       type: 'category',
       label: 'Advanced Concepts',
-      items: ['advanced/security-models', 'advanced/calling-plasma-contracts', 'advanced/swap-assets', 'advanced/moving-assets', 'advanced/deploy-your-own-matic-testnet', 'advanced/custom-restrictions', 'resources/tutorial-ethindia-workshop-solidity', 'resources/tutorial-ethindia-workshop-dapp']
+      items: ['advanced/security-models', 'advanced/calling-plasma-contracts', 'advanced/swap-assets', 'advanced/moving-assets', 'advanced/deploy-your-own-matic-testnet', 'advanced/custom-restrictions']
     },
     {
       type: 'category',
-      label: 'SDK',
+      label: 'Matic SDK',
       items: ['sdk/matic-js', 'sdk/api-reference']
     },
     'resources/faq'
 
   ],
   Tutorials: [
-    'tutorial-getting-started',
+    'getting-started',
     {
       type: 'category',
       label: 'QuickStart',
-      items: ['quickstart', 'quickstart-helloworld', 'quickstart-metamask']
+      items: ['quickstart-helloworld', 'quickstart-metamask']
     },
     {
       type: 'category',
@@ -46,9 +46,9 @@ module.exports = {
         {
           type: 'category',
           label: 'Meta Transactions',
-          items: ['tutorial-metatransactions', 'tutorial-metatransactions-biconomy', 'tutorial-metatransactions-gsn']
+          items: ['integrations/metatransactions/metatransactions', 'integrations/metatransactions/metatransactions-biconomy', 'integrations/metatransactions/metatransactions-gsn']
         },
-        'tutorial-oracles',
+        'integrations/oracles',
         'tutorial-fiat-on-ramp',
         {
           type: 'category',
@@ -66,6 +66,11 @@ module.exports = {
       type: 'category',
       label: 'Dagger',
       items: ['dagger/getting-started']
+    },
+    {
+      type: 'category',
+      label: 'Advanced',
+      items: ['tutorial-advanced/full-stack-dapp-with-pos']
     },
   ],
   Staking: [

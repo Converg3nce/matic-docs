@@ -36,4 +36,6 @@ These can be differentiated as follows:
 3. is controlled by private keys
 4. has no associated code
 
+### **:scroll:Resources**
+
 [Read more about accounts](https://github.com/ethereum/homestead-guide/blob/master/source/contracts-and-transactions/account-types-gas-and-transactions.rst#externally-owned-accounts-eoas)

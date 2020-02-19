@@ -1,5 +1,15 @@
 export default {
-  "plugins": [],
+  "plugins": [
+    [
+      "@docusaurus/plugin-ideal-image",
+      {
+        "quality": 70,
+        "max": 1030,
+        "min": 640,
+        "steps": 2
+      }
+    ]
+  ],
   "themes": [],
   "customFields": {},
   "themeConfig": {
@@ -15,7 +25,7 @@ export default {
           "position": "left"
         },
         {
-          "to": "docs/tutorial-getting-started",
+          "to": "docs/getting-started",
           "label": "Tutorials",
           "position": "left"
         },
@@ -25,11 +35,21 @@ export default {
           "position": "left"
         },
         {
+          "to": "showcase",
+          "label": "Showcase",
+          "position": "right"
+        },
+        {
           "href": "https://github.com/facebook/docusaurus",
           "label": "GitHub",
           "position": "right"
         }
       ]
+    },
+    "algolia": {
+      "apiKey": "25626fae796133dc1e734c6bcaaeac3c",
+      "indexName": "docsearch",
+      "algoliaOptions": {}
     },
     "footer": {
       "style": "dark",

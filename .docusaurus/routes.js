@@ -65,6 +65,12 @@ export default [
   
 },
 {
+  path: '/showcase/',
+  component: ComponentCreator('/showcase/'),
+  exact: true,
+  
+},
+{
   path: '/docs/:route',
   component: ComponentCreator('/docs/:route'),
   
@@ -112,6 +118,12 @@ export default [
   
 },
 {
+  path: '/docs/getting-started',
+  component: ComponentCreator('/docs/getting-started'),
+  exact: true,
+  
+},
+{
   path: '/docs/integrations/decentralised-storage/moibit',
   component: ComponentCreator('/docs/integrations/decentralised-storage/moibit'),
   exact: true,
@@ -142,6 +154,30 @@ export default [
   
 },
 {
+  path: '/docs/integrations/metatransactions/metatransactions',
+  component: ComponentCreator('/docs/integrations/metatransactions/metatransactions'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrations/metatransactions/metatransactions-biconomy',
+  component: ComponentCreator('/docs/integrations/metatransactions/metatransactions-biconomy'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrations/metatransactions/metatransactions-gsn',
+  component: ComponentCreator('/docs/integrations/metatransactions/metatransactions-gsn'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrations/oracles',
+  component: ComponentCreator('/docs/integrations/oracles'),
+  exact: true,
+  
+},
+{
   path: '/docs/integrations/zapier/about',
   component: ComponentCreator('/docs/integrations/zapier/about'),
   exact: true,
@@ -150,12 +186,6 @@ export default [
 {
   path: '/docs/integrations/zapier/getting-started',
   component: ComponentCreator('/docs/integrations/zapier/getting-started'),
-  exact: true,
-  
-},
-{
-  path: '/docs/quickstart',
-  component: ComponentCreator('/docs/quickstart'),
   exact: true,
   
 },
@@ -250,18 +280,6 @@ export default [
   
 },
 {
-  path: '/docs/resources/tutorial-ethindia-workshop-dapp',
-  component: ComponentCreator('/docs/resources/tutorial-ethindia-workshop-dapp'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/tutorial-ethindia-workshop-solidity',
-  component: ComponentCreator('/docs/resources/tutorial-ethindia-workshop-solidity'),
-  exact: true,
-  
-},
-{
   path: '/docs/sdk/api-reference',
   component: ComponentCreator('/docs/sdk/api-reference'),
   exact: true,
@@ -334,6 +352,12 @@ export default [
   
 },
 {
+  path: '/docs/tutorial-advanced/full-stack-dapp-with-pos',
+  component: ComponentCreator('/docs/tutorial-advanced/full-stack-dapp-with-pos'),
+  exact: true,
+  
+},
+{
   path: '/docs/tutorial-fiat-on-ramp',
   component: ComponentCreator('/docs/tutorial-fiat-on-ramp'),
   exact: true,
@@ -342,30 +366,6 @@ export default [
 {
   path: '/docs/tutorial-getting-started',
   component: ComponentCreator('/docs/tutorial-getting-started'),
-  exact: true,
-  
-},
-{
-  path: '/docs/tutorial-metatransactions',
-  component: ComponentCreator('/docs/tutorial-metatransactions'),
-  exact: true,
-  
-},
-{
-  path: '/docs/tutorial-metatransactions-biconomy',
-  component: ComponentCreator('/docs/tutorial-metatransactions-biconomy'),
-  exact: true,
-  
-},
-{
-  path: '/docs/tutorial-metatransactions-gsn',
-  component: ComponentCreator('/docs/tutorial-metatransactions-gsn'),
-  exact: true,
-  
-},
-{
-  path: '/docs/tutorial-oracles',
-  component: ComponentCreator('/docs/tutorial-oracles'),
   exact: true,
   
 }],

@@ -14,6 +14,7 @@
     }
   ],
   "title": "Hello",
+  "truncated": true,
   "prevItem": {
     "title": "Welcome",
     "permalink": "/blog/welcome"

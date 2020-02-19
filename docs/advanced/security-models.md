@@ -34,6 +34,8 @@ Proof of Stake security is provided by the Heimdall layer which is built on top 
 
 As a DApp developer, to build on PoS security, the procedure is as simple as taking your smart contract and deploying it on Matic. This is possible because of the account based architecture enabling an EVM-compatible sidechain.
 
+[Here is a Full Stack Dapp build on POS security](../tutorial-advanced/full-stack-dapp-with-pos).
+
 ### Hybrid
 
 Apart from pure Plasma security and pure Proof of Stake security that is possible in DApps deployed on Matic, there is a Hybrid approach that developers can follow - which simply means having both plasma and proof of stake guarantees on some particular workflows of the DApp. 

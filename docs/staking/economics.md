@@ -27,7 +27,7 @@ Below is a sample snapshot of the expected annual rewards for the first 5 years 
 
 |% of circulating supply staked|5%|10%|15%|20%|25%|30%|35%|40%|
 |---|---|---|---|---|---|---|---|---|
-|Annual reward for year
+|Annual reward for year|
 |First|120%|60%|40%|30%|24%|20%|17.14%|15%|
 |Second|72%|36%|24%|18%|14.4%|12%|10.29%|9%|
 |Third|54%|27%|18%|13.5%|10.8%|9%|7.71%|6.75%|

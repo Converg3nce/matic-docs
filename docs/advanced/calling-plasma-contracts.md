@@ -45,30 +45,30 @@ Link to the explorer - https://testnetv3-explorer.matic.network/
 Let the required amount of tokens be **X**.
 
 1. The Plasma Root Contract is approved to spend **X** on behalf of msg.sender
-    - **Contract**: `StandardToken.sol`
-    - **Network**: Ropsten
-    - **Function**: 
-        ```javascript
-        /**
-         * @dev Approve the passed address to spend the specified amount of tokens on behalf of msg.sender.
-         * @param _rootContract address of plasma root contract
-         * @param _amount amount of tokens to approve
-         **/
-        approve(address _rootContract, uint256 _amount)
-        ```
+- **Contract**: `StandardToken.sol`
+- **Network**: Ropsten
+- **Function**: 
+  ```javascript
+  /**
+   * @dev Approve the passed address to spend the specified amount of tokens on behalf of msg.sender.
+    * @param _rootContract address of plasma root contract
+    * @param _amount amount of tokens to approve
+    **/
+  approve(address _rootContract, uint256 _amount)
+  ```
 2. **X** tokens are deposited from msg.sender to the Plasma Root   Contract
-    - **Contract**: `RootChain.sol`
-    - **Network**: Ropsten
-    - **Function**:
-      ```javascript
-      /**
-       * @dev deposit tokens for another user. transfers tokens to current contract and generates a deposit block
-       * @param _token address of mainchain erc20 token
-       * @param _user address of the user
-       * @param _amount amount of tokens to be deposited
-       **/
-      deposit(address _token, address _user, uint256 _amount)
-      ```
+- **Contract**: `RootChain.sol`
+- **Network**: Ropsten
+- **Function**:
+  ```javascript
+  /**
+   * @dev deposit tokens for another user. transfers tokens to current contract and generates a deposit block
+    * @param _token address of mainchain erc20 token
+    * @param _user address of the user
+    * @param _amount amount of tokens to be deposited
+    **/
+  deposit(address _token, address _user, uint256 _amount)
+  ```
 
 **Sample code**:
 
@@ -114,14 +114,14 @@ async depositToken(tokenAddress, amount) {
 - **Contract**: `StandardToken.sol`
 - **Network**: Matic
 - **Function**: 
-      ```javascript
-      /**
-        * @dev Transfer token to a specified address
-        * @param to The address to transfer to.
-        * @param value The amount to be transferred.
-        */
-      transfer (address _to, uint256 _amount)
-      ```
+  ```javascript
+  /**
+    * @dev Transfer token to a specified address
+    * @param to The address to transfer to.
+    * @param value The amount to be transferred.
+    */
+  transfer (address _to, uint256 _amount)
+  ```
 
 **Sample code**:
 
@@ -142,14 +142,14 @@ async transferTokens(tokenAddress, to, amount) {
 - **Contract**: `StandardToken.sol`
 - **Network**: Matic
 - **Function**: 
-      ```javascript
-      /**
-       * @dev Gets the balance of the specified address.
-       * @param owner The address to query the balance of.
-       * @return A uint256 representing the amount owned by the passed address.
-       */
-      balanceOf (address _to, uint256 _amount)
-      ```
+  ```javascript
+  /**
+   * @dev Gets the balance of the specified address.
+    * @param owner The address to query the balance of.
+    * @return A uint256 representing the amount owned by the passed address.
+    */
+  balanceOf (address _to, uint256 _amount)
+  ```
 
 
 **Sample code for Balance on Matic testnet**:
@@ -199,38 +199,38 @@ Let **X** be the amount of tokens to be withdrawn.
     - **Contract**: `Rootchain.sol`
     - **Network**: Ropsten
     - **Function**:
-      ```javascript
-      /**
-       * @dev withdraws the tokens burnt on matic  
-       * @param headerNumber header block
-       * @param headerProof proof
-       * @param blockNumber block number
-       * @param blockTime Timestamp of Plasma block creation
-       * @param txRoot tx root 
-       * @param receiptRoot receipt root
-       * @param path Key for the Trie 
-       * @param txBytes tx bytes
-       * @param txProof tx proof nodes
-       * @param receiptBytes receipt bytes
-       * @param receiptProof receipt proof nodes
-      **/
-      function withdrawBurntTokens(
-        uint256 headerNumber,
-        bytes headerProof,
+        ```javascript
+        /**
+        * @dev withdraws the tokens burnt on matic  
+        * @param headerNumber header block
+        * @param headerProof proof
+        * @param blockNumber block number
+        * @param blockTime Timestamp of Plasma block creation
+        * @param txRoot tx root 
+        * @param receiptRoot receipt root
+        * @param path Key for the Trie 
+        * @param txBytes tx bytes
+        * @param txProof tx proof nodes
+        * @param receiptBytes receipt bytes
+        * @param receiptProof receipt proof nodes
+        **/
+        function withdrawBurntTokens(
+          uint256 headerNumber,
+          bytes headerProof,
 
-        uint256 blockNumber,
-        uint256 blockTime,
-        bytes32 txRoot,
-        bytes32 receiptRoot,
-        bytes path,
+          uint256 blockNumber,
+          uint256 blockTime,
+          bytes32 txRoot,
+          bytes32 receiptRoot,
+          bytes path,
 
-        bytes txBytes,
-        bytes txProof,
+          bytes txBytes,
+          bytes txProof,
 
-        bytes receiptBytes,
-        bytes receiptProof
-      )
-      ```
+          bytes receiptBytes,
+          bytes receiptProof
+        )
+        ```
 3. Process Exits
     - **Contract**: `RootChain.sol`
     - **Network**: Ropsten

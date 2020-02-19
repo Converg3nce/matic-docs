@@ -16,7 +16,7 @@ Proof-of-Stake algorithms achieve consensus by requiring users to stake an amoun
 3. DPoS: Delegated Proof of Stake <br></br>
 This forms of consensus mirrors the election of members in governing bodies. Witnesses, those who validate transactions, are elected. 
 
-### Resources
+### **:scroll:Resources**
 
 :page_facing_up: [Type of Consensus Mechanisms](https://www.codementor.io/blog/consensus-algorithms-5lr8exfi0s#types-of-consensus-algorithms) <br></br>
 :page_facing_up: [Review of Blockchain Consensus Mechanisms](https://blog.wavesplatform.com/review-of-blockchain-consensus-mechanisms-f575afae38f2) <br></br>

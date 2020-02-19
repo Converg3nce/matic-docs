@@ -78,6 +78,9 @@
     "component": "component---theme-blog-post-pageccc-cab",
     "content": "content---blog-welcome-286-e55"
   },
+  "/showcase/": {
+    "component": "component---site-src-pages-showcase-index-js-2-a-6-874"
+  },
   "/docs/:route": {
     "component": "component---theme-doc-page-1-be-9be",
     "docsMetadata": "docsMetadata---docs-route-20-a-f24"
@@ -92,7 +95,7 @@
   },
   "/docs/advanced/deploy-your-own-matic-testnet": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-advanced-tutorial-oraclese-48-67c"
+    "content": "content---docs-advanced-deploy-your-own-matic-testnete-48-df3"
   },
   "/docs/advanced/moving-assets": {
     "component": "component---theme-doc-item-178-a40",
@@ -109,6 +112,10 @@
   "/docs/dagger/getting-started": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-dagger-getting-started-95-b-83a"
+  },
+  "/docs/getting-started": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-getting-startede-5-a-988"
   },
   "/docs/integrations/decentralised-storage/moibit": {
     "component": "component---theme-doc-item-178-a40",
@@ -130,6 +137,22 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-integrations-key-management-walletconnect-80-f-bef"
   },
+  "/docs/integrations/metatransactions/metatransactions": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-metatransactions-metatransactions-5-e-0-a76"
+  },
+  "/docs/integrations/metatransactions/metatransactions-biconomy": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-metatransactions-metatransactions-biconomydc-4-a0f"
+  },
+  "/docs/integrations/metatransactions/metatransactions-gsn": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-metatransactions-metatransactions-gsn-667-bdc"
+  },
+  "/docs/integrations/oracles": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-oraclesf-92-09c"
+  },
   "/docs/integrations/zapier/about": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-integrations-zapier-about-027-450"
@@ -137,10 +160,6 @@
   "/docs/integrations/zapier/getting-started": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-integrations-zapier-getting-startedb-22-79d"
-  },
-  "/docs/quickstart": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-quickstart-30-f-132"
   },
   "/docs/quickstart-helloworld": {
     "component": "component---theme-doc-item-178-a40",
@@ -152,7 +171,7 @@
   },
   "/docs/resources/architecture": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-matic-architectureeac-343"
+    "content": "content---docs-resources-architectureeac-b91"
   },
   "/docs/resources/blockchain-basics/accounts": {
     "component": "component---theme-doc-item-178-a40",
@@ -200,15 +219,7 @@
   },
   "/docs/resources/sidechain": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-matic-sidechaind-02-758"
-  },
-  "/docs/resources/tutorial-ethindia-workshop-dapp": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-tutorial-ethindia-workshop-dapp-423-d8c"
-  },
-  "/docs/resources/tutorial-ethindia-workshop-solidity": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-tutorial-ethindia-workshop-solidity-0-d-6-e57"
+    "content": "content---docs-resources-sidechaind-02-866"
   },
   "/docs/sdk/api-reference": {
     "component": "component---theme-doc-item-178-a40",
@@ -258,28 +269,16 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-technical-requirementsfc-1-481"
   },
+  "/docs/tutorial-advanced/full-stack-dapp-with-pos": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-advanced-full-stack-dapp-with-posfaa-d9e"
+  },
   "/docs/tutorial-fiat-on-ramp": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-tutorial-fiat-on-ramp-4-a-7-62c"
   },
   "/docs/tutorial-getting-started": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-getting-startede-5-a-718"
-  },
-  "/docs/tutorial-metatransactions": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-metatransactions-515-71b"
-  },
-  "/docs/tutorial-metatransactions-biconomy": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-metatransactions-biconomya-08-8d6"
-  },
-  "/docs/tutorial-metatransactions-gsn": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-metatransactions-gsnc-00-18e"
-  },
-  "/docs/tutorial-oracles": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-oracles-1-bb-510"
+    "content": "content---docs-tutorial-getting-started-608-400"
   }
 }

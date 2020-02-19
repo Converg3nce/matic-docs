@@ -100,22 +100,12 @@
             "type": "link",
             "label": "Adding Custom Restrictions (ERC20/ERC721)",
             "href": "/docs/advanced/custom-restrictions"
-          },
-          {
-            "type": "link",
-            "label": "Getting Started with Solidity",
-            "href": "/docs/resources/tutorial-ethindia-workshop-solidity"
-          },
-          {
-            "type": "link",
-            "label": "Deploying a DApp on Matic",
-            "href": "/docs/resources/tutorial-ethindia-workshop-dapp"
           }
         ]
       },
       {
         "type": "category",
-        "label": "SDK",
+        "label": "Matic SDK",
         "items": [
           {
             "type": "link",
@@ -139,17 +129,12 @@
       {
         "type": "link",
         "label": "Getting Started",
-        "href": "/docs/tutorial-getting-started"
+        "href": "/docs/getting-started"
       },
       {
         "type": "category",
         "label": "QuickStart",
         "items": [
-          {
-            "type": "link",
-            "label": "Getting Started",
-            "href": "/docs/quickstart"
-          },
           {
             "type": "link",
             "label": "Hello World",
@@ -199,24 +184,24 @@
               {
                 "type": "link",
                 "label": "Getting Started",
-                "href": "/docs/tutorial-metatransactions"
+                "href": "/docs/integrations/metatransactions/metatransactions"
               },
               {
                 "type": "link",
                 "label": "Biconomy",
-                "href": "/docs/tutorial-metatransactions-biconomy"
+                "href": "/docs/integrations/metatransactions/metatransactions-biconomy"
               },
               {
                 "type": "link",
                 "label": "GSN",
-                "href": "/docs/tutorial-metatransactions-gsn"
+                "href": "/docs/integrations/metatransactions/metatransactions-gsn"
               }
             ]
           },
           {
             "type": "link",
             "label": "Oracles",
-            "href": "/docs/tutorial-oracles"
+            "href": "/docs/integrations/oracles"
           },
           {
             "type": "link",
@@ -260,6 +245,17 @@
             "type": "link",
             "label": "Getting Started",
             "href": "/docs/dagger/getting-started"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Advanced",
+        "items": [
+          {
+            "type": "link",
+            "label": "Full Stack DApp with POS Security",
+            "href": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
           }
         ]
       }
@@ -331,14 +327,18 @@
     "/docs/advanced/security-models": "Resources",
     "/docs/advanced/swap-assets": "Resources",
     "/docs/dagger/getting-started": "Tutorials",
+    "/docs/getting-started": "Tutorials",
     "/docs/integrations/decentralised-storage/moibit": "Tutorials",
     "/docs/integrations/key-management/getting-started": "Tutorials",
     "/docs/integrations/key-management/metamask": "Tutorials",
     "/docs/integrations/key-management/portis": "Tutorials",
     "/docs/integrations/key-management/walletconnect": "Tutorials",
+    "/docs/integrations/metatransactions/metatransactions": "Tutorials",
+    "/docs/integrations/metatransactions/metatransactions-biconomy": "Tutorials",
+    "/docs/integrations/metatransactions/metatransactions-gsn": "Tutorials",
+    "/docs/integrations/oracles": "Tutorials",
     "/docs/integrations/zapier/about": "Tutorials",
     "/docs/integrations/zapier/getting-started": "Tutorials",
-    "/docs/quickstart": "Tutorials",
     "/docs/quickstart-helloworld": "Tutorials",
     "/docs/quickstart-metamask": "Tutorials",
     "/docs/resources/architecture": "Resources",
@@ -354,8 +354,6 @@
     "/docs/resources/mapped-tokens": "Resources",
     "/docs/resources/new-to-matic": "Resources",
     "/docs/resources/sidechain": "Resources",
-    "/docs/resources/tutorial-ethindia-workshop-dapp": "Resources",
-    "/docs/resources/tutorial-ethindia-workshop-solidity": "Resources",
     "/docs/sdk/api-reference": "Resources",
     "/docs/sdk/matic-js": "Resources",
     "/docs/staking/counter-stake-stage-1/getting-started": "Staking",
@@ -368,11 +366,7 @@
     "/docs/staking/economics": "Staking",
     "/docs/staking/faqs": "Staking",
     "/docs/staking/technical-requirements": "Staking",
-    "/docs/tutorial-fiat-on-ramp": "Tutorials",
-    "/docs/tutorial-getting-started": "Tutorials",
-    "/docs/tutorial-metatransactions": "Tutorials",
-    "/docs/tutorial-metatransactions-biconomy": "Tutorials",
-    "/docs/tutorial-metatransactions-gsn": "Tutorials",
-    "/docs/tutorial-oracles": "Tutorials"
+    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "Tutorials",
+    "/docs/tutorial-fiat-on-ramp": "Tutorials"
   }
 }

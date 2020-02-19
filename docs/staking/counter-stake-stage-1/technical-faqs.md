@@ -60,63 +60,63 @@ We currently have an easy to dive-in list for you for the Linux packages. We wil
 
 **For Linux packages**
 
-####A. Where to find heimdall genesis file
+#### A. Where to find heimdall genesis file
 
 `$CONFIGPATH/heimdall/config/genesis.json`
 
-####B. Where to find heimdall-config.toml
+#### B. Where to find heimdall-config.toml
 
 `/etc/heimdall/config/heimdall-config.toml`
 
-####C. Where to find config.toml
+#### C. Where to find config.toml
 
 `/etc/heimdall/config/config.toml`
 
-####D. Where to find heimdall-seeds.txt
+#### D. Where to find heimdall-seeds.txt
 
 `$CONFIGPATH/heimdall/heimdall-seeds.txt`
 
-####E. Start Heimdall
+#### E. Start Heimdall
 
 `$ sudo service heimdalld start`
 
-####F. Start Heimdall rest-server
+#### F. Start Heimdall rest-server
 
 `$ sudo service heimdalld-rest-server start`
 
-####G. Start Heimdall bridge-server
+#### G. Start Heimdall bridge-server
 
 `$ sudo service heimdalld-bridge start`
 
-####H. Heimdall logs
+#### H. Heimdall logs
 
 `/var/log/matic-logs/`
 
-####I. Where to find Bor genesis file
+#### I. Where to find Bor genesis file
 
 `$CONFIGPATH/bor/genesis.json`
 
-####J. Start Bor
+#### J. Start Bor
 
 `sudo service bor start`
 
-####K Check heimdall logs
+#### K Check heimdall logs
 
 `tail -f heimdalld.log`
 
-####L. Check Heimdall rest-server
+#### L. Check Heimdall rest-server
 
 `tail -f heimdalld-rest-server.log`
 
-####M. Check Heimdall bridge logs
+#### M. Check Heimdall bridge logs
 
 `tail -f heimdalld-bridge.log`
 
-####N. Check bor logs
+#### N. Check bor logs
 
 `tail -f bor.log`
 
-####O. Kill Bor process
+#### O. Kill Bor process
 
 **For linux**:
 

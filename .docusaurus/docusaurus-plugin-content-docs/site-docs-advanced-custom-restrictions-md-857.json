@@ -11,7 +11,7 @@
     "permalink": "/docs/advanced/deploy-your-own-matic-testnet"
   },
   "next": {
-    "title": "Getting Started with Solidity",
-    "permalink": "/docs/resources/tutorial-ethindia-workshop-solidity"
+    "title": "Matic.js",
+    "permalink": "/docs/sdk/matic-js"
   }
 }

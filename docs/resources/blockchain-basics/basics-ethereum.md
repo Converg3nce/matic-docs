@@ -8,7 +8,7 @@ Like other blockchains, Ethereum has a native cryptocurrency called Ether (ETH).
 
 But unlike other blockchains, Ethereum can do much more. Ethereum is programmable, which means that developers can use it to build new kinds of applications.
 
-**:scroll:Resources**
+### **:scroll:Resources**
 
-:blue_books: [What is Ethereum?](https://ethereum.org/what-is-ethereum/) <br/>
+:book: [What is Ethereum?](https://ethereum.org/what-is-ethereum/) <br/>
 :books: [Ethereum](https://ethereum.org/)

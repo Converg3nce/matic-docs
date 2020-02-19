@@ -18,6 +18,7 @@
     }
   ],
   "title": "Welcome",
+  "truncated": false,
   "nextItem": {
     "title": "Hello",
     "permalink": "/blog/hello-world"

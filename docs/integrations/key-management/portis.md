@@ -12,37 +12,38 @@ Portis is a web-based wallet built keeping easy user-onboarding in mind. It come
 ### 1. Setup Web3
 
 Install the following in your DApp:
-
-    npm install --save @portis/web3
-
+```js
+npm install --save @portis/web3
+```
 And register your DApp with Portis to obtain a Dapp ID: > [Portis Dashboard](https://dashboard.portis.io/)
 
 Import `portis` and `web3` object:
-
-    import Portis from '@portis/web3';import Web3 from 'web3';
-
+```js
+import Portis from '@portis/web3';import Web3 from 'web3';
+```
 Portis constructor takes first argument as the DApp ID (we got from the previous step) and second argument as the network you’d like to connect to. This can either be a string or an object.
-
-    const portis = new Portis('YOUR_DAPP_ID', 'maticTestnet');const web3 = new Web3(portis.provider);
-
+```js
+const portis = new Portis('YOUR_DAPP_ID', 'maticTestnet');const web3 = new Web3(portis.provider);
+```
 ### 2. Set up account
 
 If the installation and instantiation of web3 was successful, the following should successfully return the connected account:
-
-    this.web3.eth.getAccounts().then((accounts) => {this.account = accounts[0];})
-
+```js
+this.web3.eth.getAccounts().then((accounts) => {this.account = accounts[0];})
+```
 ### 3. Instantiating Contracts
 
 Instantiation of contracts would remain the same, as discussed above:
-
-    const myContractInstance = new this.web3.eth.Contract(myContractAbi, myContractAddress)
-
+```js
+const myContractInstance = new this.web3.eth.Contract(myContractAbi, myContractAddress)
+```
 ### 4. Calling functions
 
 Calling functions would remain the same as discussed above: #### Calling `call()` Functions
-
-    this.myContractInstance.methods.myMethod(myParams).call().then (// do stuff with returned values)
-
+```js
+this.myContractInstance.methods.myMethod(myParams).call().then (// do stuff with returned values)
+```
 ### Calling `send()` Functions
-
-    this.myContractInstance.methods.myMethod(myParams).send({from: this.account,gasPrice: 0}).then ((receipt) => {// returns a transaction receipt})
+```js
+this.myContractInstance.methods.myMethod(myParams).send({from: this.account,gasPrice: 0}).then ((receipt) => {// returns a transaction receipt})
+```

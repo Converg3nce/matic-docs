@@ -1,0 +1,18 @@
+{
+  "id": "integrations/metatransactions/metatransactions",
+  "title": "Getting started",
+  "description": "Meta Transactions are also known as \"Gasless Transactions\". The concept of meta transactions allows users to interact with the decentralized applications having ONLY a public/private keys pair.",
+  "source": "@site/docs/integrations/metatransactions/metatransactions.md",
+  "permalink": "/docs/integrations/metatransactions/metatransactions",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/metatransactions/metatransactions.md",
+  "sidebar_label": "Getting Started",
+  "sidebar": "Tutorials",
+  "previous": {
+    "title": "Portis",
+    "permalink": "/docs/integrations/key-management/portis"
+  },
+  "next": {
+    "title": "Biconomy",
+    "permalink": "/docs/integrations/metatransactions/metatransactions-biconomy"
+  }
+}

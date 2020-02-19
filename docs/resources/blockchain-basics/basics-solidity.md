@@ -25,4 +25,4 @@ Essentially the following points need to be kept in mind always:
 - Reading data is free
 - Each write operation has a cost associated with it - you pay it with ether. The cost is measured in gas.
 
-Now that you have a strong foundation of the concepts you can go ahead with building your first smart contract [here](tutorial-getting-started).
+Now that you have a strong foundation of the concepts you can go ahead with building your first smart contract [here](quickstart-helloworld).

@@ -6,6 +6,17 @@ module.exports = {
   favicon: 'img/favicon.png',
   organizationName: 'Matic Network',
   projectName: 'Matic Docs', // Usually your repo name.
+  plugins: [
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1030, // max resized image's size.
+        min: 640, // min resized image's size. if original is lower, use that size.
+        steps: 2, // the max number of images generated between min and max (inclusive)
+      },
+    ],
+  ],
   themeConfig: {
     navbar: {
       // title: 'Matic Network',
@@ -14,9 +25,10 @@ module.exports = {
         src: 'img/logo.png',
       },
       links: [
-        {to: 'docs/resources/new-to-matic', label: 'Resources', position: 'left'},
-        {to: 'docs/tutorial-getting-started', label: 'Tutorials', position: 'left'},
-        {to: 'docs/staking/economics', label: 'Staking', position: 'left'},
+        { to: 'docs/resources/new-to-matic', label: 'Resources', position: 'left' },
+        { to: 'docs/getting-started', label: 'Tutorials', position: 'left' },
+        { to: 'docs/staking/economics', label: 'Staking', position: 'left' },
+        { to: 'showcase', label: 'Showcase', position: 'right' },
         // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
@@ -24,6 +36,11 @@ module.exports = {
           position: 'right',
         },
       ],
+    },
+    algolia: {
+      apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+      indexName: 'docsearch',
+      algoliaOptions: {},
     },
     footer: {
       style: 'dark',

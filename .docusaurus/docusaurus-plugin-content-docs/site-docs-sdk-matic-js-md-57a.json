@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/sdk/matic-js.md",
   "sidebar": "Resources",
   "previous": {
-    "title": "Deploying a DApp on Matic",
-    "permalink": "/docs/resources/tutorial-ethindia-workshop-dapp"
+    "title": "Adding Custom Restrictions (ERC20/ERC721)",
+    "permalink": "/docs/advanced/custom-restrictions"
   },
   "next": {
     "title": "API",

@@ -18,6 +18,6 @@ Once a block is sealed cryptographically or added to main chain. It is impossibl
 4. Transparency <br></br>
 It is possible for user to verify and track transactions, with the entire the record of the transaction.
 
-### Resources
+### **:scroll:Resources**
 
 :orange_book: [Blockchain 101](https://www.coindesk.com/learn/blockchain-101/what-is-blockchain-technology)

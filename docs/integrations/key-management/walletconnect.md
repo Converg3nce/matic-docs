@@ -7,29 +7,29 @@ Wallet Connect is an open protocol - not a wallet - built to create a communicat
 ### 1. Set up Web3
 
 To set up your DApp to connect to user’s Matic Wallet we can use Wallet Connect’s provider to directly connect to Matic Network. Install the following in your DApp:
-
-    npm install --save @maticnetwork/walletconnect-providernpm install --save maticjs
-
+```js
+npm install --save @maticnetwork/walletconnect-providernpm install --save maticjs
+```
 And add the following code in your App,
-
-    import WalletConnectProvider from "@maticnetwork/walletconnect-provider"import Web3 from "web3"import Matic from "maticjs"
-
+```js
+import WalletConnectProvider from "@maticnetwork/walletconnect-provider"import Web3 from "web3"import Matic from "maticjs"
+```
 Next, we set up Matic and Ropsten provider via Wallet Connect’s object:
-
-    const maticProvider = new WalletConnectProvider({host: `https://testnet2.matic.network`,callbacks: {onConnect: console.log('connected'),onDisconnect: console.log('disconnected!')}})const ropstenProvider = new WalletConnectProvider({host: `https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc`,callbacks: {onConnect: console.log('connected'),onDisconnect: console.log('disconnected')}})
-
+```js
+const maticProvider = new WalletConnectProvider({host: `https://testnet2.matic.network`,callbacks: {onConnect: console.log('connected'),onDisconnect: console.log('disconnected!')}})const ropstenProvider = new WalletConnectProvider({host: `https://ropsten.infura.io/v3/70645f042c3a409599c60f96f6dd9fbc`,callbacks: {onConnect: console.log('connected'),onDisconnect: console.log('disconnected')}})
+```
 We created the above two provider objects to instantiate our Web3 object with:
-
-    const maticWeb3 = new Web3(maticProvider)const ropstenWeb3 = new Web3(ropstenProvider)
-
+```js
+const maticWeb3 = new Web3(maticProvider)const ropstenWeb3 = new Web3(ropstenProvider)
+```
 ### 2. Instantiating contracts
 
 Once we have our web3 object, the instantiating of contracts involves the same steps we followed for metamask.
 
 > Again, assuming you have your contract ABI and address already in place :)
-
-    const myContractInstance = new this.maticWeb3.eth.Contract(myContractAbi, myContractAddress)
-
+```js
+const myContractInstance = new this.maticWeb3.eth.Contract(myContractAbi, myContractAddress)
+```
 ### 3. Calling functions
 
 Like discussed above, we have two types of functions in Ethereum, depending upon the interaction with the blockchain. We `call()` when we read data and `send()` when we write data.
@@ -37,19 +37,19 @@ Like discussed above, we have two types of functions in Ethereum, depending upon
 ### Calling `call()` Functions
 
 Now reading data doesn’t require a signature, therefore the process is the same as discussed above:
-
-    this.myContractInstance.methods.myMethod(myParams).call().then (// do stuff with returned values)
-
+```js
+this.myContractInstance.methods.myMethod(myParams).call().then (// do stuff with returned values)
+```
 ### Calling `send()` Functions
 
 Since writing to the blockchain requires a signature, we prompt the user on their wallet (that supports wallet connect) to sign the transaction. This involves two steps: 1. Constructing a transaction 2. Getting a signature on the transaction 3. Sending signed transaction
-
-    const tx = {from: this.account,to: myContractAddress,gas: 800000,gasPrice: 0, // for matic testnetdata: this.myContractInstance.methods.myMethod(myParams).encodeABI(),gasPrice: "0x0",}
-
+```js
+const tx = {from: this.account,to: myContractAddress,gas: 800000,gasPrice: 0, // for matic testnetdata: this.myContractInstance.methods.myMethod(myParams).encodeABI(),gasPrice: "0x0",}
+```
 The above code creates a transaction object which is then sent to user’s wallet for signature:
-
-    maticWeb3.eth.signTransaction(tx).then((result) =>{maticWeb3.eth.sendSignedTransaction(result).then((receipt) => console.log (receipt))})
-
+```js
+maticWeb3.eth.signTransaction(tx).then((result) =>{maticWeb3.eth.sendSignedTransaction(result).then((receipt) => console.log (receipt))})
+```
 `signTransaction()` function prompts the user for their signature and `sendSignedTransaction()` sends the signed transaction over (returns a transaction receipt on success).
 
 > NOTE: all this while, the private key is in user’s wallet and the app does not access it any way. :)
