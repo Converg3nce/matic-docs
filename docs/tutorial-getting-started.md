@@ -54,13 +54,25 @@ For developers who want to learn about building on Matic or Ethereum. The Tutori
 
 Hackathons take place at blockchain conferences and meetups all over the world. Chances are you can’t hop on a plane on a moment’s notice, but some conferences or projects host virtual hackathons open to anyone with an internet connection.
 
-- 
+<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
+        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#2BBDF7', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
+          <a href="https://discord.gg/yCj3gc" target="_blank" style={{color: 'inherit'}}>
+            Matic Hackathons Discord Channel
+          </a>
+        </button>
+      </div>
 
 ### **Meet-ups**
 
 Some meetups are more about trading “investment” advice but a good technical meetup in your area is an excellent way to meet other people interested in Dapp development.
 
-- 
+<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
+        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#2BBDF7', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
+          <a href="t.me/EthereumIndiaOfficial" target="_blank" style={{color: 'inherit'}}>
+          Ethereum India Official
+          </a>
+        </button>
+      </div>
 
 # **Keeping Up with Development**
 
@@ -70,6 +82,7 @@ Dapp development encourages network decentralization, and it also embodies it. D
 
 Reddit:
 
+- /r/maticnetwork
 - /r/ethereum
 - /r/ethdev
 - /r/ethfinance
