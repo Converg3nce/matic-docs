@@ -27,8 +27,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/CS-2001/matic-heimdall_1.0.0_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/CS-2001/matic-bor_1.0.0_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/CS-2001/matic-heimdall_1.2.0_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/CS-2001/matic-bor_1.2.0_amd64.deb
 ```
 
     
@@ -39,8 +39,8 @@ This will setup needed service for the validator node; Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_1.0.0_amd64.deb
-$ sudo dpkg -i matic-bor_1.0.0_amd64.deb
+$ sudo dpkg -i matic-heimdall_1.2.0_amd64.deb
+$ sudo dpkg -i matic-bor_1.2.0_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -200,6 +200,6 @@ If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Co
 
 Once you are done checking the logs or querying the data, you may stop all services and restart again soon as we start staking in the next stage.
 
-#### Query data
+<!-- #### Query data
 
-To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/
+To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/ -->

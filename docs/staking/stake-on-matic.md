@@ -88,7 +88,7 @@ To check the status of the transaction, you paste the `txHash` on this link: [ht
 
 To check the balance of your address:
 
-You can find details regarding chain id over here: https://github.com/maticnetwork/public-testnets/tree/master/CS-2001
+You can find details regarding chain id over here: https://github.com/maticnetwork/public-testnets/tree/master/CS-2002
 
     heimdallcli query auth account <signer-address> --chain-id <chain-id>
 
