@@ -171,15 +171,15 @@ For this, we use the Remix IDE - an online IDE to develop smart contracts.
 
 - Head over to https://remix.ethereum.org If you’re new to Remix, You’ll first need to activate two modules: Solidity Compiler and Deploy and Run Transactions.
 
-![../../static/img/solidity/remix-ethereum.png](../../static/img/solidity/remix-ethereum.png)
+![../../img/solidity/remix-ethereum.png](../../img/solidity/remix-ethereum.png)
 
-![../../static/img/solidity/remix-plugin-manager.png](../../static/img/solidity/remix-plugin-manager.png)
+![../../img/solidity/remix-plugin-manager.png](../../img/solidity/remix-plugin-manager.png)
 
 If not already activated, you will need to activate plugins such as `Deploy & Run Transactions` and `Solidity Complier`
 
 Your left menu should look something like this:
 
-![../../static/img/solidity/remix-left-menu.png](../../static/img/solidity/remix-left-menu.png)
+![../../img/solidity/remix-left-menu.png](../../img/solidity/remix-left-menu.png)
 
 - Create a new file, Airbnb.sol
 - Copy the entire smart contract code and paste it in the editor
@@ -324,17 +324,17 @@ contract Airbnb {
 - Once compiled, the smart contract is ready to be deployed onto the testnet/mainnet. For this tutorial
 - Copy the generated ABI - we would be needing that for our next steps
 
-![../../static/img/solidity/remix-abi.png](../../static/img/solidity/remix-abi.png)
+![../../img/solidity/remix-abi.png](../../img/solidity/remix-abi.png)
 
 - Select Javascript VM as the environment in the dropdown -  this connects remix to a simple blockchain environment via your browser - we'll learn more about deploying on Matic's test network in the next tutorial [link]
 
-![../../static/img/solidity/remix-contract-test-functions.png](../../static/img/solidity/remix-contract-test-functions.png)
+![../../img/solidity/remix-contract-test-functions.png](../../img/solidity/remix-contract-test-functions.png)
 
-![../../static/img/solidity/remix-metamask-connect-request.png](../../static/img/solidity/remix-metamask-connect-request.png)
+![../../img/solidity/remix-metamask-connect-request.png](../../img/solidity/remix-metamask-connect-request.png)
 
 Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 
-![../../static/img/solidity/remix-metamask-tx-confirm.png](../../static/img/solidity/remix-metamask-tx-confirm.png)
+![../../img/solidity/remix-metamask-tx-confirm.png](../../img/solidity/remix-metamask-tx-confirm.png)
 
 - Click Deploy
 - And once the contract is deployed you can test the functions
@@ -403,7 +403,7 @@ With metamask connected and contract initiated we can go forward with interactin
 
 The `dapp-ui` folder structure looks something like this:
 
-![../../static/img/dapp/folder-structure.png](../../static/img/dapp/folder-structure.png)
+![../../img/dapp/folder-structure.png](../../img/dapp/folder-structure.png)
 
 Inside the `dapp-ui/components` directory, we have the separate components that make up our app interface.
 
@@ -467,20 +467,20 @@ Aaand this marks the end of our DApp tutorial! We know it’s been a long one.
 
 Execute `npm run dev` to view and interact with your decentralized application!
 
-![../../static/img/dapp/rent-your-property.png](../../static/img/dapp/rent-your-property.png)
+![../../img/dapp/rent-your-property.png](../../img/dapp/rent-your-property.png)
 
 Click on ‘Rent your Property’ button on top right, it displays a dialogue box requiring title, description and price. The submit button sends these values to the function ‘rentOutProperty’ on the smart contract in the form of a transaction. Since it ‘transacts’ with the blockchain it would create a metamask popup requiring you to sign the transaction, shown below.
 
-![../../static/img/dapp/dapp-metamask-tx-confirm.png](../../static/img/dapp/dapp-metamask-tx-confirm.png)
+![../../img/dapp/dapp-metamask-tx-confirm.png](../../img/dapp/dapp-metamask-tx-confirm.png)
 
 The Metamask popup displays the gas price for the transaction.
 
-![../../static/img/dapp/rent-out-success.png](../../static/img/dapp/rent-out-success.png)
+![../../img/dapp/rent-out-success.png](../../img/dapp/rent-out-success.png)
 
-![../../static/img/dapp/dapp-rent-success.png](../../static/img/dapp/dapp-rent-success.png)
+![../../img/dapp/dapp-rent-success.png](../../img/dapp/dapp-rent-success.png)
 
 After the transaction is confirmed, the property lives on the blockchain and since it is available to be booked, it is displayed on the homepage.
 
-![../../static/img/dapp/dapp-property-details.png](../../static/img/dapp/dapp-property-details.png)
+![../../img/dapp/dapp-property-details.png](../../img/dapp/dapp-property-details.png)
 
-![../../static/img/dapp/dapp-rent-success%201.png](../../static/img/dapp/dapp-rent-success%201.png)
+![../../img/dapp/dapp-rent-success%201.png](../../img/dapp/dapp-rent-success%201.png)

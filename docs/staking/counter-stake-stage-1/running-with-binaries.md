@@ -270,7 +270,7 @@ Your `heimdall-node` should be syncing now! Checkout `$GOPATH/src/github.com/mat
 
 If everything's well, then your logs should look something like this:
 
-![Screenshot](../../../static/img/staking/expected-heimdall.png)
+![Screenshot](../../../img/staking/expected-heimdall.png)
 
 #### 6.4: Initialise genesis block for Bor
 
@@ -353,7 +353,7 @@ Your `bor-node` should be syncing now! Checkout `~/.bor/logs/bor.log` to get to 
 
 If everything's well, then your logs should look something like this:
 
-![Screenshot](../../../static/img/staking/expected-bor.png)
+![Screenshot](../../../img/staking/expected-bor.png)
 
 **Ta-Da**
 

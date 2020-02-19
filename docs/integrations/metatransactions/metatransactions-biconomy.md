@@ -9,7 +9,7 @@ Biconomy uses a proxy contract approach to enable meta-transactions on your DApp
 - Biconomy runs the relayers and pays Gas fee upfront which is recovered from the DApp on monthly basis
 - The smart contract accepting signed transactions will require no changes in the smart contract code whatsoever
 
-![../../../static/img/biconomy/Untitled.png](../../../static/img/biconomy/Untitled.png)
+![../../../img/biconomy/Untitled.png](../../../img/biconomy/Untitled.png)
 
 from [https://docs.biconomy.io/](https://docs.biconomy.io/)
 
@@ -69,9 +69,9 @@ Follow the steps **[here](https://docs.biconomy.io/biconomy-dashboard)**, to reg
 
 For now, we'll set `rentOutProperty` function to accept meta transactions
 
-![../../../static/img/biconomy/Screenshot_2020-01-07_at_12.49.59_PM.png](../../../static/img/biconomy/Screenshot_2020-01-07_at_12.49.59_PM.png)
+![../../../img/biconomy/Screenshot_2020-01-07_at_12.49.59_PM.png](../../../img/biconomy/Screenshot_2020-01-07_at_12.49.59_PM.png)
 
-![../../../static/img/biconomy/Screenshot_2020-01-07_at_12.50.12_PM.png](../../../static/img/biconomy/Screenshot_2020-01-07_at_12.50.12_PM.png)
+![../../../img/biconomy/Screenshot_2020-01-07_at_12.50.12_PM.png](../../../img/biconomy/Screenshot_2020-01-07_at_12.50.12_PM.png)
 
 ## Integrate Mexa SDK in your DApp client code
 

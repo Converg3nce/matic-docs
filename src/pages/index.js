@@ -71,7 +71,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/new-to-matic')}>
+              to={useBaseUrl('docs/resources/new-to-matic')}>
               Get Started
             </Link>
           </div>

@@ -42,7 +42,7 @@ A bird’s eye view of the process can be explained as:
 
 The plasma contract on ethereum records the order in which plasma blocks are committed by the operator, and prevents commitments from ever being overwritten.
 
-### Resources
+### **:scroll:Resources**
 
 :paperclip: Bor Architecture: [https://forum.matic.network/t/matic-system-overview-bor/126](https://forum.matic.network/t/matic-system-overview-bor/126) <br/>
 :paperclip: Heimdall Architecture: [https://forum.matic.network/t/matic-system-overview-heimdall/125](https://forum.matic.network/t/matic-system-overview-heimdall/125) <br/>

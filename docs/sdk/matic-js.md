@@ -24,8 +24,6 @@ In order to make any transactions, you will also need some Ether in the test acc
 
 Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `TEST` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below
 
-#### ERC20
-
 <div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
         <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#000', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
           <a href="https://wallet.matic.today/faucet" target="_blank" style={{color: 'inherit'}}>
@@ -34,23 +32,11 @@ Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten
         </button>
       </div>
 
-
-#### ERC721
-
-To get `TEST` ERC721 tokens, you'd need to submit a request via this
-<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
-        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#1E90FF', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSekAoPK5dKecoYpNQ9YKMycNoegY39Oujy7mvLF23fsammRoQ/viewform?usp=sf_link" target="_blank" style={{color: 'inherit'}}>
-            Fill the Form
-          </a>
-        </button>
-      </div>
-
 ## Using Matic JS
 
 We will be showcasing the flow for asset transfers on the Matic Network in this tutorial and how you can do the same using Matic.js:
 
-![Workflow](../../static/img/matic/Matic-Workflow-2.jpg)
+![Workflow](../../img/matic/Matic-Workflow-2.jpg)
 
 1. User deposits crypto assets in Matic contract on mainchain
 2. Once deposited tokens get confirmed on the mainchain, the corresponding tokens will get reflected on the Matic chain
@@ -250,11 +236,11 @@ For reference purposes, the screenshots below will provide context during the ac
 
 We currently have `100 TEST` tokens and `9` ETH at our address `0x1a06816065731fcBD7296f9B2400d632816b070B` on Ropsten Network,
 
-![Arch](../../static/img/maticjs/before-deposit-balance-ropsten.png)
+![Arch](../../img/maticjs/before-deposit-balance-ropsten.png)
 
 while on Matic Network we have `0 TEST` tokens.
 
-![Arch](../../static/img/maticjs/before-deposit-balance-matic.png)
+![Arch](../../img/maticjs/before-deposit-balance-matic.png)
 
 We will be depositing `1 TEST` tokens to Matic Testnet.
 
@@ -266,17 +252,17 @@ or `$ node deposit-ERC721.js`
 
 We have added console logging for both events, which when run successfully will display the Transaction Hash as well as a message `“Deposit Tokens from Ropsten/Ethereum to Matic — Transaction Approved.”.` Once deposit is complete, you will see the Transaction Hash and message `”Tokens deposited from Ropsten/Ethereum to Matic.”` Since this is only for illustration purposes, the message can be customized to anything of your choice. By default it will only display the Transaction Hash.
 
-![Arch](../../static/img/maticjs/run-deposit-erc20.png)
+![Arch](../../img/maticjs/run-deposit-erc20.png)
 
 Let’s verify our account balances on Metamask.
 
 Our Balance on Ropsten now shows `99 TEST` which means our Deposit transaction of `1 TEST` was successful.
 
-![Arch](../../static/img/maticjs/after-deposit-balance-update-ropsten.png)
+![Arch](../../img/maticjs/after-deposit-balance-update-ropsten.png)
 
 Verifying our balance on Matic Testnet also shows that our balance is increased by `1 TEST`.
 
-![Arch](../../static/img/maticjs/after-deposit-balance-update-matic.png)
+![Arch](../../img/maticjs/after-deposit-balance-update-matic.png)
 
 Congratulations! You have successfully deposited funds from Ropsten to Matic.
 
@@ -367,13 +353,13 @@ Account 1–`0x1a06816065731fcBD7296f9B2400d632816b070B`. This account currently
 
 Account 2–`0xf66f409086647591e0c2f122C1945554b8e0e74F`. This account currently holds `0 TEST` tokens.
 
-![Arch](../../static/img/maticjs/account2-transfer1-balance.png)
+![Arch](../../img/maticjs/account2-transfer1-balance.png)
 
 Now we will run the transfer function. Run this on the terminal:
 
 `$ node transfer-ERC20.js`
 
-![Arch](../../static/img/maticjs/run-transfer-erc20-1.png)
+![Arch](../../img/maticjs/run-transfer-erc20-1.png)
 
 Once the code has run successfully, it will display a message of `"Transfer done!"`
 
@@ -381,11 +367,11 @@ Let’s verify our balances on Metamask.
 
 Our balance on account address — `0x1a06816065731fcBD7296f9B2400d632816b070B` is now updated to `10 TEST` tokens.
 
-![Arch](../../static/img/maticjs/account1-transfer1-update.png)
+![Arch](../../img/maticjs/account1-transfer1-update.png)
 
 And to confirm that on our receiver’s account, our balance is now updated to `1 TEST` tokens.
 
-![Arch](../../static/img/maticjs/account2-transfer1-update.png)
+![Arch](../../img/maticjs/account2-transfer1-update.png)
 
 You can also check the transaction on the Matic Explorer by searching the transaction hash.
 
@@ -400,19 +386,19 @@ From — `0x1a06816065731fcBD7296f9B2400d632816b070B`
 
 To — `0xbFF81BA6Fa6593F0467592ACcF770A120f740552`. Account 3 currently has `0 TEST` tokens.
 
-![Arch](../../static/img/maticjs/account3-transfer2-balance.png)
+![Arch](../../img/maticjs/account3-transfer2-balance.png)
 
 We will again run `$ node transfer-ERC20.js` from the terminal. Once we get the `‘Transfer done!’` message, we will check our balances.
 
-![Arch](../../static/img/maticjs/run-transfer-erc20-2.png)
+![Arch](../../img/maticjs/run-transfer-erc20-2.png)
 
 Balance on Account 1 now shows a balance of `9.900TEST`,
 
-![Arch](../../static/img/maticjs/account1-transfer2-update.png)
+![Arch](../../img/maticjs/account1-transfer2-update.png)
 
 whereas the balance on Account 3 shows us `0.100 TEST`.
 
-![Arch](../../static/img/maticjs/account3-transfer2-update.png)
+![Arch](../../img/maticjs/account3-transfer2-update.png)
 
 
 ### Withdraw funds from Matic
@@ -581,19 +567,19 @@ I’ll add the transaction hash to the code — `0x1b12ae634c7538adfcbddd502
 
 Once the initiate process is complete, we will wait for ~5 minutes, before running the second script `$ node confirm-withdraw.js`.
 
-![Arch](../../static/img/maticjs/run-confirm-withdraw-erc20.png)
+![Arch](../../img/maticjs/run-confirm-withdraw-erc20.png)
 
 To verify, we will also check the account balances on Metamask.
 
 The balance on Account 1 on Matic Network now shows `8.900 TEST` Tokens.
 
-![Arch](../../static/img/maticjs/confirm-withdraw-balance-update.png)
+![Arch](../../img/maticjs/confirm-withdraw-balance-update.png)
 
 Now, in order to claim your funds after the challenge period is complete, you will need to run the `process-exit-ERC20.js`
 
 So let's run `$ process-exit-ERC20.js`
 
-![Arch](../../static/img/maticjs/run-process-exit-ERC20.png)
+![Arch](../../img/maticjs/run-process-exit-ERC20.png)
 
 Once this is complete, you will see the funds in your Ropsten account.
 
