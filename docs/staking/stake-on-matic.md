@@ -88,7 +88,7 @@ To check the status of the transaction, you paste the `txHash` on this link: [ht
 
 To check the balance of your address:
 
-You can find details regarding chain id over here: https://github.com/maticnetwork/public-testnets/tree/master/CS-2002
+You can find details regarding chain id over here: https://github.com/maticnetwork/public-testnets/blob/master/CS-2002/heimdall/config/genesis.json#L3
 
     heimdallcli query auth account <signer-address> --chain-id <chain-id>
 
@@ -112,7 +112,7 @@ Once you have adequate balance to pay fees on Heimdall, you can join the network
 
 You can view your `pub-key` by running the command `heimdalld show-account` 
 
-The chain-id required here is the heimdall chain-id - heimdall-lXaaU9
+The chain-id required here is the heimdall chain-id - `heimdall-cs2002`
 
 ### Validator information
 
