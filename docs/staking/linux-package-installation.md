@@ -27,8 +27,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/CS-2001/matic-heimdall_1.2.0_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/CS-2001/matic-bor_1.2.0_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/CS-2002/matic-heimdall_1.2.0_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/CS-2002/matic-bor_1.2.0_amd64.deb
 ```
 
     
