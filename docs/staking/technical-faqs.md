@@ -20,35 +20,50 @@ Yes, the private key used for generating Validator keys and Bor Keystore is the 
 
 ```js
 {
-  "root": {
-    "tokens": {
-      "TestToken": "0xA68e9e5dde3f80057fe639952e4acfD28D6d871B"
-    },
-    "BytesLib": "0xD1177eC040bCEF1eab7c9d8fA92c296d63838184",
-    "Common": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
-    "ECVerify": "0x46eD7904137e6ABA7c879D8dD676A3f57191Fdac",
-    "Merkle": "0xf52E92A81Ad4f242Df4E8426178c9Ddc0F2191C8",
-    "MerklePatriciaProof": "0xd179E9A09Eb434A092dEB3EBcCB0dd6133A91712",
-    "PriorityQueue": "0x224de567f24C111bF98b04Cb875682815aA9ED8A",
-    "RLPEncode": "0x4f9C5Abe93E48EA087a423aDcB38aF349b18dcdD",
-    "RLPReader": "0x2285aa1cdD3Ed51A1b052A17a58ab0F0aaf4a5Bc",
-    "SafeMath": "0x25bdaA6Ff67014572Ba33b76a158c095B15DFcad",
-    "Registry": "0x6eD25faaa5F38d626f2c2E93d683C09dD04d74e7",
-    "RootChain": "0xb26C687D70Df7c463B4E6b459560E4c50734BeCf",
-    "RootChainProxy": "0xe029642119840f4866F0A77B67e641AA3c20D764",
-    "ValidatorShareFactory": "0xc6CbeA9CC9075eBD484F75DA79c3B1EFf246dfC0",
-    "StakingInfo": "0xD0D89C9bc21b088e74fC9c7c7ff793a11498d316",
-    "StakingNFT": "0x1851F36BA0C7F82FE5a9D32ECfb4834BBcF2547b",
-    "StakeManager": "0xC4701aCE05B5D8A821D00f790f7Bee532d5F3C61",
-    "SlashingManager": "0x45331b78Ecfe13C916842ae8b494A97F2db0F5cD",
-    "StateSender": "0x0E4Bb4ed32D330FAd5EBDf185841047d88d3c409",
-    "DepositManager": "0x7CC755B4e715d9d17e227365406771DC7F90fcd1",
-    "DepositManagerProxy": "0xfE8e44e55714746Ef85Caa62DBE65A1F90535CF7",
-    "WithdrawManager": "0x91c6868A8072740479175513d1CFd2cdd30e1118",
-    "ExitNFT": "0x3849735A8049Cc89f0e2F0b04DFD4b2EcE2db091",
-    "WithdrawManagerProxy": "0xD7963e35BdCbdFF9EB6fAD6fA8576610af182931"
-  }
-}
+      "root": {
+        "tokens": {
+          "TestToken": "0x6bAA90c411945C2fE93f1D336fb5787b6531a67C",
+    			"Matic": "0xF1a4509105a888933C72464C5f5F8ED45f54f1b0"
+        },
+        "BytesLib": "0xdb596dA720dFc70545BaeC90FbFBf5220cEaba3E",
+        "Common": "0x3816Dee51ED4AFb42f2D865177747b15A874884f",
+        "ECVerify": "0x760F11060a15579F8dfF66f1b3f3bf956D46fF17",
+        "Merkle": "0x6b898Fb688020217FC7a5a8941D5051aCb7cbA24",
+        "MerklePatriciaProof": "0x9fcc0465469cC8F1648E56b64C5BE5A46154CAFC",
+        "PriorityQueue": "0xA70af15BC10738DDaDE437aa276D93eB5D5886D4",
+        "RLPEncode": "0x9134D1fFE4672aF4DBd965b6E822C086C7a539d8",
+        "RLPReader": "0x109241f8fBF90BEF52ca3b860A4554db096383E5",
+        "SafeMath": "0xCDA425e4B2E20b91B731B7A203e75e58A1655D84",
+        "Governance": "0x7aa387ACB997E81008fFA7b1753165883bd9B627",
+        "GovernanceProxy": "0x355558a09e8cD893E4d2f0A4AB1C153a2c69e911",
+        "Registry": "0xa5C789F57A83623c0E6aFBeB1431e84499174c29",
+        "RootChain": "0xB8d5548FF080fc99eec38B276B27d5CB2F020300",
+    		// Use this
+        "RootChainProxy": "0x12c1d34135bee2745AD930647F54D36c9dD6Cbe3",
+        "ValidatorShareFactory": "0x4f72f033FFf36542fC183302282405a91fB57171",
+        "StakingInfo": "0x4A77108eA2380217553dcc77C7Aa62f58C5b04a2",
+        "StakingNFT": "0x99897ab637dE021EA5394295c59ae02d2054c440",
+        "StakeManager": "0xDED60C3cD705cC9fa6FdE82277757843a7664F96",
+    		// use this
+        "StakeManagerProxy": "0x228DF261D960d48bDBF50BDC8dc00ba20358aCea",
+        "SlashingManager": "0x90f2cB83e97223f97EE4B07553749a5Ce390d8c0",
+        "StateSender": "0x061b9fE56513BBa078d509C2377e3E5be9219FeB",
+        "DepositManager": "0x2B6514f3C883f61c2A13fF36401700C3467a1a83",
+    		// Use this
+        "DepositManagerProxy": "0x2e44c551376CD13f4EE0dBa330A47893f12F410D",
+        "WithdrawManager": "0x93D5082f07a9334dcd08c6F161e70fb01C3fC8B3",
+        "ExitNFT": "0xE360B8E5A69077dee2101C2E0778Be3a38a9122b",
+    		// Use this
+        "WithdrawManagerProxy": "0x6318313B42f81b0AEFF2Fb58dd467935561DfC47"
+      },
+    	"child": {
+        "ChildChain": "0x4f9C5Abe93E48EA087a423aDcB38aF349b18dcdD",
+        "tokens": {
+          "TestToken": "0xd72A0495684fb7B489b8089EA2317c1d68e5a8c9",
+    			"Matic": "0x0000000000000000000000000000000000001010"
+        }
+      }
+    }
 ```
 
 ### 2b. List of Common Commands
