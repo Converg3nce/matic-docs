@@ -9,7 +9,7 @@ Yes, the private key used for generating Validator keys and Bor Keystore is the 
 **Heimdall Chain ID**: heimdall-cs2002 
 
 **Bor Chain ID**: 2002
-
+ 
 **Tag**: CS-2001
 
 **Bor Block Time**: 5 secs
