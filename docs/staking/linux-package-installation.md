@@ -131,6 +131,8 @@ $ sudo service heimdalld-bridge start
 **Expected Output**
 
 Your `heimdall-node` should be syncing now! You can see logs of the above services under `/var/log/matic-logs/` 🤩
+
+**You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
     
 ### Step 8: Configure Bor
 
