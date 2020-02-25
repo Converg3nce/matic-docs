@@ -1,6 +1,6 @@
 ---
-id: tutorial-getting-started
-title: Tutorials
+id: getting-started
+title: Integrations
 sidebar_label: Getting Started
 ---
 

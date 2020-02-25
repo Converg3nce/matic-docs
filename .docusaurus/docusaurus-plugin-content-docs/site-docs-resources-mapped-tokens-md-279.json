@@ -4,14 +4,5 @@
   "description": "# Registered Tokens with Ropsten and Matic Testnet",
   "source": "@site/docs/resources/mapped-tokens.md",
   "permalink": "/docs/resources/mapped-tokens",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/mapped-tokens.md",
-  "sidebar": "Resources",
-  "previous": {
-    "title": "Matic Architecture",
-    "permalink": "/docs/resources/architecture"
-  },
-  "next": {
-    "title": "Security Models",
-    "permalink": "/docs/advanced/security-models"
-  }
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/mapped-tokens.md"
 }

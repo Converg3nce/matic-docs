@@ -12,7 +12,7 @@
     "permalink": "/docs/quickstart-helloworld"
   },
   "next": {
-    "title": "Key Management Strategies",
-    "permalink": "/docs/integrations/key-management/getting-started"
+    "title": "Dagger",
+    "permalink": "/docs/dagger/getting-started"
   }
 }

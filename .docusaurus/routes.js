@@ -124,8 +124,20 @@ export default [
   
 },
 {
+  path: '/docs/helloworld',
+  component: ComponentCreator('/docs/helloworld'),
+  exact: true,
+  
+},
+{
   path: '/docs/integrations/decentralised-storage/moibit',
   component: ComponentCreator('/docs/integrations/decentralised-storage/moibit'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrations/getting-started',
+  component: ComponentCreator('/docs/integrations/getting-started'),
   exact: true,
   
 },
@@ -190,14 +202,14 @@ export default [
   
 },
 {
-  path: '/docs/quickstart-helloworld',
-  component: ComponentCreator('/docs/quickstart-helloworld'),
+  path: '/docs/metamask',
+  component: ComponentCreator('/docs/metamask'),
   exact: true,
   
 },
 {
-  path: '/docs/quickstart-metamask',
-  component: ComponentCreator('/docs/quickstart-metamask'),
+  path: '/docs/network-config',
+  component: ComponentCreator('/docs/network-config'),
   exact: true,
   
 },
@@ -360,12 +372,6 @@ export default [
 {
   path: '/docs/tutorial-fiat-on-ramp',
   component: ComponentCreator('/docs/tutorial-fiat-on-ramp'),
-  exact: true,
-  
-},
-{
-  path: '/docs/tutorial-getting-started',
-  component: ComponentCreator('/docs/tutorial-getting-started'),
   exact: true,
   
 }],

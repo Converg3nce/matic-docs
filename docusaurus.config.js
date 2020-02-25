@@ -26,8 +26,9 @@ module.exports = {
       },
       links: [
         { to: 'docs/resources/new-to-matic', label: 'Resources', position: 'left' },
-        { to: 'docs/getting-started', label: 'Tutorials', position: 'left' },
-        { to: 'docs/staking/economics', label: 'Staking', position: 'left' },
+        { to: 'docs/getting-started', label: 'Development', position: 'left' },
+        { to: 'docs/integrations/getting-started', label: 'Integrations', position: 'left' },
+        { to: 'docs/staking/economics', label: 'Validators', position: 'left' },
         { to: 'showcase', label: 'Showcase', position: 'right' },
         // {to: 'blog', label: 'Blog', position: 'left'},
         {

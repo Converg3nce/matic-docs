@@ -6,10 +6,10 @@
   "permalink": "/docs/integrations/key-management/getting-started",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/key-management/getting-started.md",
   "sidebar_label": "Getting Started",
-  "sidebar": "Tutorials",
+  "sidebar": "Integrations",
   "previous": {
-    "title": "How to create a MetaMask Wallet?",
-    "permalink": "/docs/quickstart-metamask"
+    "title": "Integrations",
+    "permalink": "/docs/integrations/getting-started"
   },
   "next": {
     "title": "Metamask",

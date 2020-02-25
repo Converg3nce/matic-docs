@@ -1,7 +1,7 @@
 ---
-id: quickstart-metamask
+id: metamask
 title: How to create a MetaMask Wallet?
-sidebar_label: Metamask Wallet
+sidebar_label: Hello Metamask
 ---
 If you are wondering how to create a new cryptocurrency wallet, consider creating one by installing the MetaMask extension.
 

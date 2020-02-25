@@ -26,12 +26,17 @@ export default {
         },
         {
           "to": "docs/getting-started",
-          "label": "Tutorials",
+          "label": "Development",
+          "position": "left"
+        },
+        {
+          "to": "docs/integrations/getting-started",
+          "label": "Integrations",
           "position": "left"
         },
         {
           "to": "docs/staking/economics",
-          "label": "Staking",
+          "label": "Validators",
           "position": "left"
         },
         {

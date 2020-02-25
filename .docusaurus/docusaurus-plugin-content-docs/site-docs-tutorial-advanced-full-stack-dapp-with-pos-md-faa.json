@@ -5,9 +5,9 @@
   "source": "@site/docs/tutorial-advanced/full-stack-dapp-with-pos.md",
   "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-advanced/full-stack-dapp-with-pos.md",
-  "sidebar": "Tutorials",
+  "sidebar": "Development",
   "previous": {
-    "title": "Dagger",
-    "permalink": "/docs/dagger/getting-started"
+    "title": "Network Config",
+    "permalink": "/docs/network-config"
   }
 }

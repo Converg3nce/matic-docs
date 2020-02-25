@@ -6,9 +6,9 @@
   "permalink": "/docs/getting-started",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-getting-started.md",
   "sidebar_label": "Getting Started",
-  "sidebar": "Tutorials",
+  "sidebar": "Development",
   "next": {
     "title": "Hello World",
-    "permalink": "/docs/quickstart-helloworld"
+    "permalink": "/docs/helloworld"
   }
 }

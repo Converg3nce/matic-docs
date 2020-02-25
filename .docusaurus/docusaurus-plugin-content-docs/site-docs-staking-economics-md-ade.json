@@ -6,7 +6,7 @@
   "permalink": "/docs/staking/economics",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/economics.md",
   "sidebar_label": "Economics",
-  "sidebar": "Staking",
+  "sidebar": "Validators",
   "next": {
     "title": "Minimum Technical Requirements",
     "permalink": "/docs/staking/technical-requirements"

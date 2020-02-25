@@ -63,11 +63,6 @@
         "href": "/docs/resources/architecture"
       },
       {
-        "type": "link",
-        "label": "Mapped Tokens",
-        "href": "/docs/resources/mapped-tokens"
-      },
-      {
         "type": "category",
         "label": "Advanced Concepts",
         "items": [
@@ -104,153 +99,62 @@
         ]
       },
       {
-        "type": "category",
-        "label": "Matic SDK",
-        "items": [
-          {
-            "type": "link",
-            "label": "Matic.js",
-            "href": "/docs/sdk/matic-js"
-          },
-          {
-            "type": "link",
-            "label": "API",
-            "href": "/docs/sdk/api-reference"
-          }
-        ]
-      },
-      {
         "type": "link",
         "label": "FAQ",
         "href": "/docs/resources/faq"
       }
     ],
-    "Tutorials": [
+    "Development": [
       {
         "type": "link",
         "label": "Getting Started",
         "href": "/docs/getting-started"
       },
       {
-        "type": "category",
-        "label": "QuickStart",
-        "items": [
-          {
-            "type": "link",
-            "label": "Hello World",
-            "href": "/docs/quickstart-helloworld"
-          },
-          {
-            "type": "link",
-            "label": "Metamask Wallet",
-            "href": "/docs/quickstart-metamask"
-          }
-        ]
+        "type": "link",
+        "label": "Hello Remix",
+        "href": "/docs/helloworld"
+      },
+      {
+        "type": "link",
+        "label": "Hello Metamask",
+        "href": "/docs/metamask"
       },
       {
         "type": "category",
-        "label": "Integrations",
-        "items": [
-          {
-            "type": "category",
-            "label": "Key Management Strategies",
-            "items": [
-              {
-                "type": "link",
-                "label": "Getting Started",
-                "href": "/docs/integrations/key-management/getting-started"
-              },
-              {
-                "type": "link",
-                "label": "Metamask",
-                "href": "/docs/integrations/key-management/metamask"
-              },
-              {
-                "type": "link",
-                "label": "Wallet Connect",
-                "href": "/docs/integrations/key-management/walletconnect"
-              },
-              {
-                "type": "link",
-                "label": "Portis",
-                "href": "/docs/integrations/key-management/portis"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "Meta Transactions",
-            "items": [
-              {
-                "type": "link",
-                "label": "Getting Started",
-                "href": "/docs/integrations/metatransactions/metatransactions"
-              },
-              {
-                "type": "link",
-                "label": "Biconomy",
-                "href": "/docs/integrations/metatransactions/metatransactions-biconomy"
-              },
-              {
-                "type": "link",
-                "label": "GSN",
-                "href": "/docs/integrations/metatransactions/metatransactions-gsn"
-              }
-            ]
-          },
-          {
-            "type": "link",
-            "label": "Oracles",
-            "href": "/docs/integrations/oracles"
-          },
-          {
-            "type": "link",
-            "label": "Fiat-on-Ramp",
-            "href": "/docs/tutorial-fiat-on-ramp"
-          },
-          {
-            "type": "category",
-            "label": "Dagger on Ethereum",
-            "items": [
-              {
-                "type": "link",
-                "label": "Zapier",
-                "href": "/docs/integrations/zapier/about"
-              },
-              {
-                "type": "link",
-                "label": "Getting Started",
-                "href": "/docs/integrations/zapier/getting-started"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "Decentralised Storage",
-            "items": [
-              {
-                "type": "link",
-                "label": "MóiBit",
-                "href": "/docs/integrations/decentralised-storage/moibit"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "Dagger",
+        "label": "Tools",
         "items": [
           {
             "type": "link",
-            "label": "Getting Started",
+            "label": "Dagger",
             "href": "/docs/dagger/getting-started"
+          },
+          {
+            "type": "category",
+            "label": "Matic SDK",
+            "items": [
+              {
+                "type": "link",
+                "label": "Matic.js",
+                "href": "/docs/sdk/matic-js"
+              },
+              {
+                "type": "link",
+                "label": "API",
+                "href": "/docs/sdk/api-reference"
+              }
+            ]
           }
         ]
       },
       {
+        "type": "link",
+        "label": "Network Config",
+        "href": "/docs/network-config"
+      },
+      {
         "type": "category",
-        "label": "Advanced",
+        "label": "Advanced Tutorials",
         "items": [
           {
             "type": "link",
@@ -260,7 +164,98 @@
         ]
       }
     ],
-    "Staking": [
+    "Integrations": [
+      {
+        "type": "link",
+        "label": "Getting Started",
+        "href": "/docs/integrations/getting-started"
+      },
+      {
+        "type": "category",
+        "label": "Connect to Web3",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/integrations/key-management/getting-started"
+          },
+          {
+            "type": "link",
+            "label": "Metamask",
+            "href": "/docs/integrations/key-management/metamask"
+          },
+          {
+            "type": "link",
+            "label": "Wallet Connect",
+            "href": "/docs/integrations/key-management/walletconnect"
+          },
+          {
+            "type": "link",
+            "label": "Portis",
+            "href": "/docs/integrations/key-management/portis"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Meta Transactions",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/integrations/metatransactions/metatransactions"
+          },
+          {
+            "type": "link",
+            "label": "Biconomy",
+            "href": "/docs/integrations/metatransactions/metatransactions-biconomy"
+          },
+          {
+            "type": "link",
+            "label": "GSN",
+            "href": "/docs/integrations/metatransactions/metatransactions-gsn"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Oracles",
+        "href": "/docs/integrations/oracles"
+      },
+      {
+        "type": "link",
+        "label": "Fiat-on-Ramp",
+        "href": "/docs/tutorial-fiat-on-ramp"
+      },
+      {
+        "type": "category",
+        "label": "Dagger on Ethereum",
+        "items": [
+          {
+            "type": "link",
+            "label": "Zapier",
+            "href": "/docs/integrations/zapier/about"
+          },
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/integrations/zapier/getting-started"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Decentralised Storage",
+        "items": [
+          {
+            "type": "link",
+            "label": "MóiBit",
+            "href": "/docs/integrations/decentralised-storage/moibit"
+          }
+        ]
+      }
+    ],
+    "Validators": [
       {
         "type": "link",
         "label": "Economics",
@@ -326,21 +321,23 @@
     "/docs/advanced/moving-assets": "Resources",
     "/docs/advanced/security-models": "Resources",
     "/docs/advanced/swap-assets": "Resources",
-    "/docs/dagger/getting-started": "Tutorials",
-    "/docs/getting-started": "Tutorials",
-    "/docs/integrations/decentralised-storage/moibit": "Tutorials",
-    "/docs/integrations/key-management/getting-started": "Tutorials",
-    "/docs/integrations/key-management/metamask": "Tutorials",
-    "/docs/integrations/key-management/portis": "Tutorials",
-    "/docs/integrations/key-management/walletconnect": "Tutorials",
-    "/docs/integrations/metatransactions/metatransactions": "Tutorials",
-    "/docs/integrations/metatransactions/metatransactions-biconomy": "Tutorials",
-    "/docs/integrations/metatransactions/metatransactions-gsn": "Tutorials",
-    "/docs/integrations/oracles": "Tutorials",
-    "/docs/integrations/zapier/about": "Tutorials",
-    "/docs/integrations/zapier/getting-started": "Tutorials",
-    "/docs/quickstart-helloworld": "Tutorials",
-    "/docs/quickstart-metamask": "Tutorials",
+    "/docs/dagger/getting-started": "Development",
+    "/docs/getting-started": "Development",
+    "/docs/helloworld": "Development",
+    "/docs/integrations/decentralised-storage/moibit": "Integrations",
+    "/docs/integrations/getting-started": "Integrations",
+    "/docs/integrations/key-management/getting-started": "Integrations",
+    "/docs/integrations/key-management/metamask": "Integrations",
+    "/docs/integrations/key-management/portis": "Integrations",
+    "/docs/integrations/key-management/walletconnect": "Integrations",
+    "/docs/integrations/metatransactions/metatransactions": "Integrations",
+    "/docs/integrations/metatransactions/metatransactions-biconomy": "Integrations",
+    "/docs/integrations/metatransactions/metatransactions-gsn": "Integrations",
+    "/docs/integrations/oracles": "Integrations",
+    "/docs/integrations/zapier/about": "Integrations",
+    "/docs/integrations/zapier/getting-started": "Integrations",
+    "/docs/metamask": "Development",
+    "/docs/network-config": "Development",
     "/docs/resources/architecture": "Resources",
     "/docs/resources/blockchain-basics/accounts": "Resources",
     "/docs/resources/blockchain-basics/blockchain": "Resources",
@@ -351,22 +348,21 @@
     "/docs/resources/blockchain-basics/solidity": "Resources",
     "/docs/resources/blockchain-basics/transactions": "Resources",
     "/docs/resources/faq": "Resources",
-    "/docs/resources/mapped-tokens": "Resources",
     "/docs/resources/new-to-matic": "Resources",
     "/docs/resources/sidechain": "Resources",
-    "/docs/sdk/api-reference": "Resources",
-    "/docs/sdk/matic-js": "Resources",
-    "/docs/staking/counter-stake-stage-1/getting-started": "Staking",
-    "/docs/staking/counter-stake-stage-1/introduction": "Staking",
-    "/docs/staking/counter-stake-stage-1/linux-package-installation": "Staking",
-    "/docs/staking/counter-stake-stage-1/running-with-binaries": "Staking",
-    "/docs/staking/counter-stake-stage-1/running-with-docker": "Staking",
-    "/docs/staking/counter-stake-stage-1/stake-on-matic": "Staking",
-    "/docs/staking/counter-stake-stage-1/technical-faqs": "Staking",
-    "/docs/staking/economics": "Staking",
-    "/docs/staking/faqs": "Staking",
-    "/docs/staking/technical-requirements": "Staking",
-    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "Tutorials",
-    "/docs/tutorial-fiat-on-ramp": "Tutorials"
+    "/docs/sdk/api-reference": "Development",
+    "/docs/sdk/matic-js": "Development",
+    "/docs/staking/counter-stake-stage-1/getting-started": "Validators",
+    "/docs/staking/counter-stake-stage-1/introduction": "Validators",
+    "/docs/staking/counter-stake-stage-1/linux-package-installation": "Validators",
+    "/docs/staking/counter-stake-stage-1/running-with-binaries": "Validators",
+    "/docs/staking/counter-stake-stage-1/running-with-docker": "Validators",
+    "/docs/staking/counter-stake-stage-1/stake-on-matic": "Validators",
+    "/docs/staking/counter-stake-stage-1/technical-faqs": "Validators",
+    "/docs/staking/economics": "Validators",
+    "/docs/staking/faqs": "Validators",
+    "/docs/staking/technical-requirements": "Validators",
+    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "Development",
+    "/docs/tutorial-fiat-on-ramp": "Integrations"
   }
 }

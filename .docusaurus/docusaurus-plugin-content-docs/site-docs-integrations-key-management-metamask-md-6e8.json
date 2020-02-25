@@ -5,7 +5,7 @@
   "source": "@site/docs/integrations/key-management/metamask.md",
   "permalink": "/docs/integrations/key-management/metamask",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/key-management/metamask.md",
-  "sidebar": "Tutorials",
+  "sidebar": "Integrations",
   "previous": {
     "title": "Key Management Strategies",
     "permalink": "/docs/integrations/key-management/getting-started"

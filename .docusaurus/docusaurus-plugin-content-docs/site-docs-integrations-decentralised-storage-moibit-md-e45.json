@@ -5,13 +5,9 @@
   "source": "@site/docs/integrations/decentralised-storage/moibit.md",
   "permalink": "/docs/integrations/decentralised-storage/moibit",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/decentralised-storage/moibit.md",
-  "sidebar": "Tutorials",
+  "sidebar": "Integrations",
   "previous": {
     "title": "Getting Started",
     "permalink": "/docs/integrations/zapier/getting-started"
-  },
-  "next": {
-    "title": "Dagger",
-    "permalink": "/docs/dagger/getting-started"
   }
 }

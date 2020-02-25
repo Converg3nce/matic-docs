@@ -6,7 +6,7 @@
   "permalink": "/docs/staking/counter-stake-stage-1/running-with-binaries",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/counter-stake-stage-1/running-with-binaries.md",
   "sidebar_label": "Running with Binaries",
-  "sidebar": "Staking",
+  "sidebar": "Validators",
   "previous": {
     "title": "Setup Matic Validator Node",
     "permalink": "/docs/staking/counter-stake-stage-1/linux-package-installation"

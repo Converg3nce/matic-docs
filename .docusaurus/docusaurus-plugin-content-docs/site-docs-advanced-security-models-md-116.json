@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/advanced/security-models.md",
   "sidebar": "Resources",
   "previous": {
-    "title": "Mapped Tokens",
-    "permalink": "/docs/resources/mapped-tokens"
+    "title": "Matic Architecture",
+    "permalink": "/docs/resources/architecture"
   },
   "next": {
     "title": "Calling Plasma Contracts",

@@ -5,7 +5,7 @@
   "source": "@site/docs/staking/counter-stake-stage-1/getting-started.md",
   "permalink": "/docs/staking/counter-stake-stage-1/getting-started",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/counter-stake-stage-1/getting-started.md",
-  "sidebar": "Staking",
+  "sidebar": "Validators",
   "previous": {
     "title": "Minimum Technical Requirements",
     "permalink": "/docs/staking/technical-requirements"

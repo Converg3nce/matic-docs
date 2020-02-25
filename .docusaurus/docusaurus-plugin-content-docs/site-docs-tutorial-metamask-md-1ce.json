@@ -1,0 +1,18 @@
+{
+  "id": "metamask",
+  "title": "How to create a MetaMask Wallet?",
+  "description": "If you are wondering how to create a new cryptocurrency wallet, consider creating one by installing the MetaMask extension.",
+  "source": "@site/docs/tutorial-metamask.md",
+  "permalink": "/docs/metamask",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-metamask.md",
+  "sidebar_label": "Hello Metamask",
+  "sidebar": "Development",
+  "previous": {
+    "title": "Hello World",
+    "permalink": "/docs/helloworld"
+  },
+  "next": {
+    "title": "Dagger",
+    "permalink": "/docs/dagger/getting-started"
+  }
+}

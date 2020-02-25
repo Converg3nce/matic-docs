@@ -1,0 +1,17 @@
+{
+  "id": "network-config",
+  "title": "Network Config",
+  "description": "- To view current status and RPC health: https://status.matic.today",
+  "source": "@site/docs/network-config.md",
+  "permalink": "/docs/network-config",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/network-config.md",
+  "sidebar": "Development",
+  "previous": {
+    "title": "API",
+    "permalink": "/docs/sdk/api-reference"
+  },
+  "next": {
+    "title": "Full Stack DApp with POS Security",
+    "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
+  }
+}

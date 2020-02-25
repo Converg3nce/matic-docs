@@ -5,14 +5,14 @@
   "source": "@site/docs/dagger/getting-started.md",
   "permalink": "/docs/dagger/getting-started",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/dagger/getting-started.md",
-  "sidebar_label": "Getting Started",
-  "sidebar": "Tutorials",
+  "sidebar_label": "Dagger",
+  "sidebar": "Development",
   "previous": {
-    "title": "MóiBit",
-    "permalink": "/docs/integrations/decentralised-storage/moibit"
+    "title": "How to create a MetaMask Wallet?",
+    "permalink": "/docs/metamask"
   },
   "next": {
-    "title": "Full Stack DApp with POS Security",
-    "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
+    "title": "Matic.js",
+    "permalink": "/docs/sdk/matic-js"
   }
 }

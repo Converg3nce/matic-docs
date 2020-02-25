@@ -5,7 +5,7 @@
   "source": "@site/docs/tutorial-fiat-on-ramp.md",
   "permalink": "/docs/tutorial-fiat-on-ramp",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-fiat-on-ramp.md",
-  "sidebar": "Tutorials",
+  "sidebar": "Integrations",
   "previous": {
     "title": "Getting Started with Oracles",
     "permalink": "/docs/integrations/oracles"

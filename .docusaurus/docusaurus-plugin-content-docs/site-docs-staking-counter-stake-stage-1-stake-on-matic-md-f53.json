@@ -5,7 +5,7 @@
   "source": "@site/docs/staking/counter-stake-stage-1/stake-on-matic.md",
   "permalink": "/docs/staking/counter-stake-stage-1/stake-on-matic",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/counter-stake-stage-1/stake-on-matic.md",
-  "sidebar": "Staking",
+  "sidebar": "Validators",
   "previous": {
     "title": "Setup Matic Validator Node",
     "permalink": "/docs/staking/counter-stake-stage-1/running-with-docker"

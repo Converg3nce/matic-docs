@@ -7,7 +7,7 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/faq.md",
   "sidebar": "Resources",
   "previous": {
-    "title": "API",
-    "permalink": "/docs/sdk/api-reference"
+    "title": "Adding Custom Restrictions (ERC20/ERC721)",
+    "permalink": "/docs/advanced/custom-restrictions"
   }
 }
