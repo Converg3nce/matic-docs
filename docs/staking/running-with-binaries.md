@@ -268,6 +268,10 @@ If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-heimdall.png)
 
+
+**You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
+
+
 #### 6.4: Initialise genesis block for Bor
 
 ```js
