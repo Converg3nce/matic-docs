@@ -27,7 +27,7 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/CS-2002/matic-heimdall_1.2.0_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/cs-2002-1/matic-heimdall_1.2.0_amd64.deb
 $ wget https://matic-public.s3.amazonaws.com/CS-2002/matic-bor_1.2.0_amd64.deb
 ```
 
@@ -200,7 +200,7 @@ You can see logs of Bor service under `/var/log/matic-logs/bor.log` 🤩
 
 If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
 
-Once you are done checking the logs or querying the data, you may stop all services and restart again soon as we start staking in the next stage.
+Once you are done checking the logs or querying the data, you may proceed to staking tokens.
 
 <!-- #### Query data
 
