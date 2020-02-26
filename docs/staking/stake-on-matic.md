@@ -66,6 +66,36 @@ To check the status of the transaction, you paste the `txHash` on this link: [ht
 
 **Stake**
 
+You can stake on Matic 2 different ways, Using the Validator Dashboard or by CLI
+
+**Stake using validator dashboard**
+
+In order to stake using the Validator Dashboard, you can use the following link to access the dashboard: https://wallet.matic.today
+
+You will be able to login using Metamask or any WalletConnect enabled wallet. We recommend using Metamask
+
+You have to make sure that you login using the same address where your tokens are present.
+
+Once you login you will see the landing page and an option to become a Validator
+
+![Arch](./images/become-a-validator.png)
+
+Clicking on **Become a validator** will navigate you to a separate page to initiate the process.
+
+You will first be asked to setup your node. If you haven't already setup your node by now, you will need to do so, else if you proceed ahead you will error out.
+
+![Arch](./images/setup-node.png)
+
+Clicking on Next will proceed you to next step where you add Validator details and staking amount. If you are instead taking to **Connect Wallet** or **Add Fund** screens, this means that you are either not connected to your wallet or you have not connected to the account that contains the staking tokens.
+
+![Arch](./images/stake.png)
+
+Once you enter all the required details such as Signer Address and Stake amount, you can then click on **Stake Now**.
+
+Once the transaction is completed you will have staked successfully to become a validator. You will be asked thrice to confirm the transaction.
+
+**Stake using CLI**
+
 Once `approve` transaction gets confirmed, send `stake` transaction on Ethereum.
 
 `--validator` is owner address of validator node. Your owner address is the same address as your wallet address from which you initiated your staking transaction.
