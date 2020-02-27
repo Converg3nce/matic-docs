@@ -10,7 +10,7 @@ Yes, the private key used for generating Validator keys and Bor Keystore is the 
 
 **Bor Chain ID**: 2002
  
-**Tag**: CS-2001
+**Tag**: CS-2002-1
 
 **Bor Block Time**: 5 secs
 
