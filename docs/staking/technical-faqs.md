@@ -6,11 +6,11 @@ Yes, the private key used for generating Validator keys and Bor Keystore is the 
 
 **Network Details**
 
-**Heimdall Chain ID**: heimdall-cs2002 
+**Heimdall Chain ID**: heimdall-cs2003 
 
-**Bor Chain ID**: 2002
+**Bor Chain ID**: 2003
  
-**Tag**: CS-2002-1
+**Tag**: CS-2003
 
 **Bor Block Time**: 5 secs
 
@@ -20,50 +20,39 @@ Yes, the private key used for generating Validator keys and Bor Keystore is the 
 
 ```js
 {
-      "root": {
-        "tokens": {
-          "TestToken": "0x6bAA90c411945C2fE93f1D336fb5787b6531a67C",
-    			"Matic": "0xF1a4509105a888933C72464C5f5F8ED45f54f1b0"
-        },
-        "BytesLib": "0xdb596dA720dFc70545BaeC90FbFBf5220cEaba3E",
-        "Common": "0x3816Dee51ED4AFb42f2D865177747b15A874884f",
-        "ECVerify": "0x760F11060a15579F8dfF66f1b3f3bf956D46fF17",
-        "Merkle": "0x6b898Fb688020217FC7a5a8941D5051aCb7cbA24",
-        "MerklePatriciaProof": "0x9fcc0465469cC8F1648E56b64C5BE5A46154CAFC",
-        "PriorityQueue": "0xA70af15BC10738DDaDE437aa276D93eB5D5886D4",
-        "RLPEncode": "0x9134D1fFE4672aF4DBd965b6E822C086C7a539d8",
-        "RLPReader": "0x109241f8fBF90BEF52ca3b860A4554db096383E5",
-        "SafeMath": "0xCDA425e4B2E20b91B731B7A203e75e58A1655D84",
-        "Governance": "0x7aa387ACB997E81008fFA7b1753165883bd9B627",
-        "GovernanceProxy": "0x355558a09e8cD893E4d2f0A4AB1C153a2c69e911",
-        "Registry": "0xa5C789F57A83623c0E6aFBeB1431e84499174c29",
-        "RootChain": "0xB8d5548FF080fc99eec38B276B27d5CB2F020300",
-    		// Use this
-        "RootChainProxy": "0x12c1d34135bee2745AD930647F54D36c9dD6Cbe3",
-        "ValidatorShareFactory": "0x4f72f033FFf36542fC183302282405a91fB57171",
-        "StakingInfo": "0x4A77108eA2380217553dcc77C7Aa62f58C5b04a2",
-        "StakingNFT": "0x99897ab637dE021EA5394295c59ae02d2054c440",
-        "StakeManager": "0xDED60C3cD705cC9fa6FdE82277757843a7664F96",
-    		// use this
-        "StakeManagerProxy": "0x228DF261D960d48bDBF50BDC8dc00ba20358aCea",
-        "SlashingManager": "0x90f2cB83e97223f97EE4B07553749a5Ce390d8c0",
-        "StateSender": "0x061b9fE56513BBa078d509C2377e3E5be9219FeB",
-        "DepositManager": "0x2B6514f3C883f61c2A13fF36401700C3467a1a83",
-    		// Use this
-        "DepositManagerProxy": "0x2e44c551376CD13f4EE0dBa330A47893f12F410D",
-        "WithdrawManager": "0x93D5082f07a9334dcd08c6F161e70fb01C3fC8B3",
-        "ExitNFT": "0xE360B8E5A69077dee2101C2E0778Be3a38a9122b",
-    		// Use this
-        "WithdrawManagerProxy": "0x6318313B42f81b0AEFF2Fb58dd467935561DfC47"
-      },
-    	"child": {
-        "ChildChain": "0x4f9C5Abe93E48EA087a423aDcB38aF349b18dcdD",
-        "tokens": {
-          "TestToken": "0xd72A0495684fb7B489b8089EA2317c1d68e5a8c9",
-    			"Matic": "0x0000000000000000000000000000000000001010"
-        }
-      }
-    }
+  "root": {
+    "tokens": {
+      "TestToken": "0xF256c3383c80117706efa018C07f31C6cf958fdF",
+      "MaticWeth": "0x1dB33ceccA19d5EfF69a1353269443a543c56CD0"
+    },
+    "BytesLib": "0xB1b650e6E19a46b43C5D77071177B53b883ADB74",
+    "Common": "0x23bdFf3322f5968171a879BCa57105b8b94147E6",
+    "ECVerify": "0x9F34ebBB67389aa44fFdA98A44Ecc923DF8a5A2e",
+    "Merkle": "0x144916dca029BfA6B3fB428c3e8CD8151c217EFe",
+    "MerklePatriciaProof": "0xa1dedb7274785945119748b7cd545eC0D23508D6",
+    "PriorityQueue": "0xf9eA7d0E7a78a3Af3e05D6217D04087969fEE50B",
+    "RLPEncode": "0x3FDB54c1F71Dd29FF42218DC80c3700e26F98118",
+    "RLPReader": "0x205DD96043283cc5280A54099f5ce0cD6089Ce50",
+    "SafeMath": "0xe587833A653D2b628cC1EcB283037fF4111a7a0D",
+    "Governance": "0x7fd27258D03e7bC8Abef97aD8a61C22deE3b050b",
+    "GovernanceProxy": "0x483a67747bbB7A12cE9c209f5b15a92fE1728165",
+    "Registry": "0xd5820A5D5252aA5a37bc518aE5fC2A9F499d9896",
+    "RootChain": "0x93dDd2aEF930320eb53932a83FE9C6Ad72fB3591",
+    "RootChainProxy": "0x7cc6b9556C5900cF990e0CE9eE733D44CcC3F62e",
+    "ValidatorShareFactory": "0x888E368DDcA308a343b62CA21261Cb4D098AAa2D",
+    "StakingInfo": "0xF1B137992B253dc8aB85C932cE06818a071461d7",
+    "StakingNFT": "0xc3E6099b2d98CBfCD8543B8a6856701332135D2F",
+    "StakeManager": "0x90b7B77c3Af6038cBb25A37361cF95C56BADFc93",
+    "StakeManagerProxy": "0xf7Fc9C6003C24CD799117f26959a958C3093B8d0",
+    "SlashingManager": "0xc60Fe54754d391d5812E885a3F89D7d968248AE7",
+    "StateSender": "0x122c31B5Da88583420B07b8cbc69435bBdc1838C",
+    "DepositManager": "0xf3c68898fB3a614F6DF4df2Cf923c04F1c79157a",
+    "DepositManagerProxy": "0xFEafbcC92488D16a7D6B36151F80fC4d0Db67956",
+    "WithdrawManager": "0x32eDFA67b4f4d128D26F2Bf44F2d138f623038c1",
+    "ExitNFT": "0x31D999F6f02aB0e5D3745fBdc57b8948eB445539",
+    "WithdrawManagerProxy": "0x87796c231cA7aB8dB93251BEb795F461B6Dd8F66"
+  }
+}
 ```
 
 ### 2b. List of Common Commands
@@ -137,7 +126,7 @@ We currently have an easy to dive-in list for you for the Linux packages. We wil
 
 **For Binaries**:
 
-Go to `CS-2001/bor` and then run, `bash stop.sh`
+Go to `CS-2003/bor` and then run, `bash stop.sh`
 
 ### 3. Error: Failed to unlock account (0x...) No key for given address or file
 

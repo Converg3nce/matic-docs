@@ -67,7 +67,7 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout cs-2002-1
+// For eg: git checkout cs-2003
 $ git checkout <TAG OR BRANCH>
 $ make install
 ```
@@ -86,7 +86,7 @@ $ echo "export HEIMDALLDIR=~/.heimdalld" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
-This will emit the following output which shows your node id and chain id, these can be changed before starting a chain from the genesis file.
+This will emit an output which shows your node id and chain id, these can be changed before starting a chain from the genesis file.
 
 ```bash
 {
@@ -104,7 +104,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-2002
+// For eg: git checkout CS-2003
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
@@ -123,8 +123,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2002
-// Example: $ cd public-testnets/CS-2002
+// Current testnet version is CS-2003
+// Example: $ cd public-testnets/CS-2003
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
