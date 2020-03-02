@@ -28,7 +28,7 @@ $ sudo service rabbitmq-server start
 
 ```js
 $ wget https://matic-public.s3.amazonaws.com/cs-2003/matic-heimdall_1.2.0_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/CS-2003/matic-bor_1.2.0_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/cs-2003/matic-bor_1.2.0_amd64.deb
 ```
 
     
