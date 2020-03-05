@@ -146,13 +146,15 @@ Once you have adequate balance to pay fees on Heimdall, you can join the network
 
 You can view your `pub-key` by running the command `heimdalld show-account` 
 
-The chain-id required here is the heimdall chain-id - `heimdall-cs2002`
+The chain-id required here is the heimdall chain-id - `heimdall-cs2003`
 
 ### Validator information
 
 **By signer address**
 
-    heimdallcli query staking validator-info --validator=0x6c468cf8c9879006e22ec4029696e005c2319c9d --chain-id <chain-id>
+    heimdallcli query staking validator-info --validator=<signer address> --chain-id <chain-id>
+
+Here the signer address is the same as your wallet address which holds the staking tokens. And the chain id is the Heimdall chain-id for a a particular testnet, for example `heimdall-cs2003`
 
 This command should display the following output:
 
@@ -170,5 +172,9 @@ This command should display the following output:
 **By validator id**
 
     heimdallcli query staking validator-info --id=1 --chain-id=<chain-id>
+
+Here the valude in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://ropsten.etherscan.com and check your transaction hash there. You would see your `id` present there.
+
+![Arch](./images/validator-id.png)
 
 This command will print output in format as "validator by signer address" command.
