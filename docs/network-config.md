@@ -3,9 +3,10 @@ id: network-config
 title: Network Config
 ---
 
-- To view current status and RPC health: https://status.matic.today
-- To view checkpoint status: https://status.matic.today/#/checkpoints
+- To view current status and RPC health: [https://status.matic.today](https://status.matic.today)
+- To view checkpoint status: [https://status.matic.today/#/checkpoints](https://status.matic.today/#/checkpoints)
 - Network config: https://static.matic.network/network/"network_name"/"version"/index.json
+> Example - For TestnetV3: https://static.matic.network/network/testnet/v3/index.json
 
 ## Testnets
 | Network   | Link | Status         | Description                                                                                                   |

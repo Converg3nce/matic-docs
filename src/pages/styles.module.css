@@ -6,148 +6,217 @@
  */
 
 .section {
-  padding: 72px 0;
+    padding: 72px 0;
 }
 
 .sectionAlt {
-  background-color: var(--ifm-color-emphasis-inverse-alpha-30);
+    background-color: var(--ifm-color-emphasis-inverse-alpha-30);
 }
 
 .sectionInner {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .featureImage {
-  max-width: 60%;
-  max-height: 128px;
-  margin: 0 auto;
+    max-width: 60%;
+    max-height: 128px;
+    margin: 0 auto;
 }
 
 .announcement {
-  font-weight: bold;
-  font-size: 24px;
-  padding: 48px;
-  margin: 0 auto;
-  text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 48px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .announcementDark {
-  background-color: #20232a;
-  color: #fff;
+    background-color: #20232a;
+    color: #fff;
 }
 
 .announcementInner {
-  margin: 0 auto;
-  max-width: 768px;
+    margin: 0 auto;
+    max-width: 768px;
 }
 
 .hero {
-  background-color: #2b3137;
-  padding: 48px;
+    background-color: #2b3137;
+    padding: 48px;
 }
 
 .heroInner {
-  margin: 0 auto;
-  max-width: 1100px;
-  padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 20px;
 }
 
 .heroProjectTagline {
-  color: #fff;
-  font-size: 60px;
-  margin: 0;
+    color: #fff;
+    font-size: 60px;
+    margin: 0;
 }
 
 .heroProjectKeywords {
-  color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary);
 }
 
 @keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    transform: scale(0.1) rotate(30deg);
-    transform-origin: center bottom;
-  }
-
-  50% {
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.1) rotate(30deg);
+        transform-origin: center bottom;
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    70% {
+        transform: rotate(3deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .heroLogo {
-  animation-duration: 2s;
-  animation-name: jackInTheBox;
-  float: right;
-  margin-top: 20px;
-  padding: 20px;
+    animation-duration: 2s;
+    animation-name: jackInTheBox;
+    float: right;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 .indexCtas {
-  display: flex;
-  align-items: center;
-  margin-top: 24px;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
 }
 
 .indexCtasGetStartedButton {
-  border: 1px solid var(--ifm-color-primary);
-  display: inline-block;
-  line-height: 1.2em;
-  text-decoration: none !important;
-  text-transform: uppercase;
-  transition: background 0.3s, color 0.3s;
-  border-radius: 8px;
-  border-width: 2px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 18px 36px;
+    border: 1px solid var(--ifm-color-primary);
+    display: inline-block;
+    line-height: 1.2em;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 8px;
+    border-width: 2px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 18px 36px;
 }
 
 .indexCtasGitHubButtonWrapper {
-  display: flex;
+    display: flex;
 }
 
 .indexCtasGitHubButton {
-  border: none;
-  margin-left: 24px;
-  overflow: hidden;
+    border: none;
+    margin-left: 24px;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 768px) {
-  .hero {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .heroInner {
+        padding: 0;
+    }
+    .heroProjectTagline {
+        font-size: 36px;
+        text-align: center;
+    }
+    .heroLogo {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .indexCtas {
+        justify-content: center;
+    }
+    .indexCtasGitHubButton {
+        display: none;
+    }
+}
 
-  .heroInner {
-    padding: 0;
-  }
+.gettingStarted {
+    /* Getting Started */
+    position: absolute;
+    width: 1136px;
+    height: 53px;
+    left: 152px;
+    top: 716px;
+    /* 💻/Display Medium */
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 110%;
+    /* identical to box height, or 53px */
+    letter-spacing: -0.01em;
+    /* Dark_Gray_700 */
+    color: #061024;
+}
 
-  .heroProjectTagline {
-    font-size: 36px;
-    text-align: center;
-  }
+.description {
+    /* Here a few easy ways to quickly get started, each one appealing to a different use case */
+    position: absolute;
+    width: 1136px;
+    height: 24px;
+    left: 152px;
+    top: 773px;
+    /* 💻/Body Medium */
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    /* Dark_Gray_500 */
+    color: #3B465C;
+}
 
-  .heroLogo {
-    display: block;
-    float: none;
-    margin: 0 auto;
-  }
+.headline {
+    /* Welcome to Matic Developer Documentation */
+    position: absolute;
+    width: 615px;
+    height: 106px;
+    left: 152px;
+    top: 257px;
+    /* 💻/Display Medium */
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 110%;
+    /* or 53px */
+    letter-spacing: -0.01em;
+    /* Light_Gray_700 */
+    color: #FFFFFF;
+}
 
-  .indexCtas {
-    justify-content: center;
-  }
-
-  .indexCtasGitHubButton {
-    display: none;
-  }
+.headlineDescription {
+    /* Start Exploring */
+    position: absolute;
+    width: 168px;
+    height: 32px;
+    left: 152px;
+    top: 386px;
+    /* 💻/Heading Large */
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    /* Light_Gray_700 */
+    color: #FFFFFF;
 }

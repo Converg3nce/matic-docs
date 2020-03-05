@@ -1,5 +1,5 @@
 ---
-id: tutorial-fiat-on-ramp
+id: fiat-on-ramp
 title: Fiat-on-Ramp
 ---
 
@@ -16,9 +16,10 @@ Formally said, you hand in your fiat via your credit card (having completed rele
 
 To integrate your DApp with fiat on ramp solution on Matic, you can choose to go with either the following or spin up with a custom solution:
 
-1. [MoonPay]([https://www.moonpay.io/](https://www.moonpay.io/))
-2. [Sendwyre]([https://www.sendwyre.com/](https://www.sendwyre.com/))
-3. [CarbonMoney]([https://www.carbon.money/](https://www.carbon.money/))
+1. [MoonPay](https://www.moonpay.io/)
+2. [Sendwyre](https://www.sendwyre.com/)
+3. [CarbonMoney](https://www.carbon.money/)
+4. [Transak](https://transak.com/)
 
 To allow crypto purchasing from your DApp became partner with the above services which we'd recommend most as it keeps the user in your dapp and means the user won't have to send crypto from an exchange. The service's available above will allow you to integrate a crypto purchasing flow directly into your dapp.
 

@@ -1,8 +1,8 @@
 ---
 id: metatransactions-gsn
-title: GSN
+title: Gas Station Network
+sidebar_label: Gas Station Network
 ---
-
 
 Writing a GSN compatible application requires the following changes/workarounds on your application:
 
@@ -13,7 +13,7 @@ Writing a GSN compatible application requires the following changes/workarounds 
     - Instead of talking directly to the blockchain, the client now talks to a Relayer/a network of relayers
     - Calls from such clients need to be directed via a relayer
 
-The following tutorial builds upon a previous tutorial [[link](https://docs.matic.network/newbies/getting-started-solidity/)], where we built an Airbnb smart contract, followed by [[link](https://docs.matic.network/newbies/deploy-dapp-on-matic/)], where we deployed the complete DApp.
+The following tutorial builds upon a full stack dapp [tutorial](tutorial-advanced/full-stack-dapp-with-pos), where we built an Airbnb smart contract, followed by [[link](https://docs.matic.network/newbies/deploy-dapp-on-matic/)], where we deployed the complete DApp.
 
 In this tutorial, we will edit the client side code and contracts to make it GSN-compatible.
 

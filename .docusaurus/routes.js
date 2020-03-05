@@ -65,6 +65,12 @@ export default [
   
 },
 {
+  path: '/card/',
+  component: ComponentCreator('/card/'),
+  exact: true,
+  
+},
+{
   path: '/showcase/',
   component: ComponentCreator('/showcase/'),
   exact: true,
@@ -132,6 +138,12 @@ export default [
 {
   path: '/docs/integrations/decentralised-storage/moibit',
   component: ComponentCreator('/docs/integrations/decentralised-storage/moibit'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrations/fiat-on-ramp',
+  component: ComponentCreator('/docs/integrations/fiat-on-ramp'),
   exact: true,
   
 },
@@ -366,12 +378,6 @@ export default [
 {
   path: '/docs/tutorial-advanced/full-stack-dapp-with-pos',
   component: ComponentCreator('/docs/tutorial-advanced/full-stack-dapp-with-pos'),
-  exact: true,
-  
-},
-{
-  path: '/docs/tutorial-fiat-on-ramp',
-  component: ComponentCreator('/docs/tutorial-fiat-on-ramp'),
   exact: true,
   
 }],

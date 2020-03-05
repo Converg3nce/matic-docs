@@ -10,8 +10,8 @@ A user with an account can craft a transaction in a similar way to how the ‘no
 
 To integrate your DApp with Meta Transactions on Matic, you can choose to go with either the following two relayers or spin up a custom solution:
 
-1. Biconomy
-2. [Gas Station Network](https://gsn.openzeppelin.com/)
+1. [Biconomy](metatransactions-biconomy)
+2. [Gas Station Network(GSN)](metatransactions-gsn)
 3. Custom solutions
 
 ## Biconomy
@@ -34,7 +34,7 @@ To integrate your DApp with Meta Transactions on Matic, you can choose to go wit
 
 - [Biconomy SDK](https://docs.biconomy.io/biconomy-sdk-mexa)
 
-## Gas Station Network
+## Gas Station Network (GSN)
 
 - As described in the previous post, GSN uses a RelayHub to keep track of the decentralised network of Relayers and acts as their point of discovery
 - The entire mechanism is decentralized

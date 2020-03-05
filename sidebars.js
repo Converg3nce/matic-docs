@@ -57,7 +57,7 @@ module.exports = {
       items: ['integrations/metatransactions/metatransactions', 'integrations/metatransactions/metatransactions-biconomy', 'integrations/metatransactions/metatransactions-gsn']
     },
     'integrations/oracles',
-    'tutorial-fiat-on-ramp',
+    'integrations/fiat-on-ramp',
     {
       type: 'category',
       label: 'Dagger on Ethereum',

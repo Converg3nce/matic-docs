@@ -78,6 +78,9 @@
     "component": "component---theme-blog-post-pageccc-cab",
     "content": "content---blog-welcome-286-e55"
   },
+  "/card/": {
+    "component": "component---site-src-pages-card-index-js-9-ee-401"
+  },
   "/showcase/": {
     "component": "component---site-src-pages-showcase-index-js-2-a-6-874"
   },
@@ -124,6 +127,10 @@
   "/docs/integrations/decentralised-storage/moibit": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-integrations-decentralised-storage-moibite-45-66d"
+  },
+  "/docs/integrations/fiat-on-ramp": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrations-fiat-on-ramp-0-f-8-0bf"
   },
   "/docs/integrations/getting-started": {
     "component": "component---theme-doc-item-178-a40",
@@ -279,10 +286,6 @@
   },
   "/docs/tutorial-advanced/full-stack-dapp-with-pos": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-advanced-full-stack-dapp-with-posfaa-d9e"
-  },
-  "/docs/tutorial-fiat-on-ramp": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-fiat-on-ramp-4-a-7-62c"
+    "content": "content---docs-tutorial-advanced-full-stack-dapp-with-pos-3-a-3-d11"
   }
 }

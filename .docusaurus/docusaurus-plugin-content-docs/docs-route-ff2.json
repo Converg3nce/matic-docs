@@ -158,7 +158,7 @@
         "items": [
           {
             "type": "link",
-            "label": "Full Stack DApp with POS Security",
+            "label": "Full Stack DApp",
             "href": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
           }
         ]
@@ -212,7 +212,7 @@
           },
           {
             "type": "link",
-            "label": "GSN",
+            "label": "Gas Station Network",
             "href": "/docs/integrations/metatransactions/metatransactions-gsn"
           }
         ]
@@ -225,7 +225,7 @@
       {
         "type": "link",
         "label": "Fiat-on-Ramp",
-        "href": "/docs/tutorial-fiat-on-ramp"
+        "href": "/docs/integrations/fiat-on-ramp"
       },
       {
         "type": "category",
@@ -325,6 +325,7 @@
     "/docs/getting-started": "Development",
     "/docs/helloworld": "Development",
     "/docs/integrations/decentralised-storage/moibit": "Integrations",
+    "/docs/integrations/fiat-on-ramp": "Integrations",
     "/docs/integrations/getting-started": "Integrations",
     "/docs/integrations/key-management/getting-started": "Integrations",
     "/docs/integrations/key-management/metamask": "Integrations",
@@ -362,7 +363,6 @@
     "/docs/staking/economics": "Validators",
     "/docs/staking/faqs": "Validators",
     "/docs/staking/technical-requirements": "Validators",
-    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "Development",
-    "/docs/tutorial-fiat-on-ramp": "Integrations"
+    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "Development"
   }
 }

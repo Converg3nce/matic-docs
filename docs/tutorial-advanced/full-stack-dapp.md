@@ -1,6 +1,6 @@
 ---
 id: full-stack-dapp-with-pos
-title: Full Stack DApp with POS Security
+title: Full Stack DApp
 ---
 ## What this tutorial covers
 
