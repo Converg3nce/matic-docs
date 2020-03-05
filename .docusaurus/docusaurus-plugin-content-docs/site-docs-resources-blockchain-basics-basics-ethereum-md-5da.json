@@ -1,18 +1,18 @@
 {
   "id": "resources/blockchain-basics/ethereum",
   "title": "What is Ethereum?",
-  "description": "Like other blockchains, Ethereum has a native cryptocurrency called Ether (ETH). ETH is digital money. If you’ve heard of Bitcoin, ETH has many of the same features. It is purely digital, and can be sent to anyone anywhere in the world instantly. The supply of ETH isn’t controlled by any government or company - it is decentralized, and it is scarce. People all over the world use ETH to make payments, as a store of value, or as collateral.",
+  "description": "Ethereum is the foundation for a new era of the internet:",
   "source": "@site/docs/resources/blockchain-basics/basics-ethereum.md",
   "permalink": "/docs/resources/blockchain-basics/ethereum",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/blockchain-basics/basics-ethereum.md",
   "sidebar_label": "Ethereum",
-  "sidebar": "Resources",
+  "sidebar": "introduction",
   "previous": {
     "title": "Consensus Mechanism",
     "permalink": "/docs/resources/blockchain-basics/consensus-mechanism"
   },
   "next": {
-    "title": "What is Solidity?",
-    "permalink": "/docs/resources/blockchain-basics/solidity"
+    "title": "What is Matic?",
+    "permalink": "/docs/resources/blockchain-basics/matic"
   }
 }

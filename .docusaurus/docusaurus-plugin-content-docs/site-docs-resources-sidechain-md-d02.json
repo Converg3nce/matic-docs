@@ -5,7 +5,7 @@
   "source": "@site/docs/resources/sidechain.md",
   "permalink": "/docs/resources/sidechain",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/sidechain.md",
-  "sidebar": "Resources",
+  "sidebar": "introduction",
   "previous": {
     "title": "What are Accounts?",
     "permalink": "/docs/resources/blockchain-basics/accounts"

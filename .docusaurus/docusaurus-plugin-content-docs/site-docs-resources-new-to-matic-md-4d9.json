@@ -5,9 +5,9 @@
   "source": "@site/docs/resources/new-to-matic.md",
   "permalink": "/docs/resources/new-to-matic",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/new-to-matic.md",
-  "sidebar": "Resources",
+  "sidebar": "introduction",
   "next": {
-    "title": "Blockchain",
+    "title": "What is Blockchain?",
     "permalink": "/docs/resources/blockchain-basics/blockchain"
   }
 }

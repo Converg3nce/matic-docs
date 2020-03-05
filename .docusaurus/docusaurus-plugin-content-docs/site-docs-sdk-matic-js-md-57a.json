@@ -5,7 +5,7 @@
   "source": "@site/docs/sdk/matic-js.md",
   "permalink": "/docs/sdk/matic-js",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/sdk/matic-js.md",
-  "sidebar": "Development",
+  "sidebar": "development",
   "previous": {
     "title": "Dagger",
     "permalink": "/docs/dagger/getting-started"

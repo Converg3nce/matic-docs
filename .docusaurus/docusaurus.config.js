@@ -21,17 +21,12 @@ export default {
       "links": [
         {
           "to": "docs/resources/new-to-matic",
-          "label": "Resources",
+          "label": "Introduction",
           "position": "left"
         },
         {
           "to": "docs/getting-started",
           "label": "Development",
-          "position": "left"
-        },
-        {
-          "to": "docs/integrations/getting-started",
-          "label": "Integrations",
           "position": "left"
         },
         {

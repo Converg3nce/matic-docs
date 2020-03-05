@@ -6,26 +6,43 @@
  */
 
 module.exports = {
-  Resources: [
+  introduction: [
     'resources/new-to-matic',
     {
       type: 'category',
       label: 'Blockchain Basics',
-      items: ['resources/blockchain-basics/blockchain', 'resources/blockchain-basics/blockchain-types', 'resources/blockchain-basics/consensus-mechanism', 'resources/blockchain-basics/ethereum', 'resources/blockchain-basics/solidity', 'resources/blockchain-basics/transactions', 'resources/blockchain-basics/gas', 'resources/blockchain-basics/accounts'],
+      items: ['resources/blockchain-basics/blockchain', 'resources/blockchain-basics/blockchain-types', 'resources/blockchain-basics/consensus-mechanism', 'resources/blockchain-basics/ethereum', 'resources/blockchain-basics/matic', 'resources/blockchain-basics/solidity', 'resources/blockchain-basics/transactions', 'resources/blockchain-basics/gas', 'resources/blockchain-basics/accounts'],
     },
-    'resources/sidechain', 'resources/architecture',
-    {
-      type: 'category',
-      label: 'Advanced Concepts',
-      items: ['advanced/security-models', 'advanced/calling-plasma-contracts', 'advanced/swap-assets', 'advanced/moving-assets', 'advanced/deploy-your-own-matic-testnet', 'advanced/custom-restrictions']
-    },
+    'resources/sidechain', 'resources/architecture','advanced/security-models',
     'resources/faq'
 
   ],
-  Development: [
+  development: [
     'getting-started',
     'helloworld',
     'metamask',
+    {
+      type: 'category',
+    label: 'Connect to Web3',
+    items: ['integrations/key-management/getting-started', 'integrations/key-management/metamask', 'integrations/key-management/walletconnect', 'integrations/key-management/portis']
+  },
+  {
+    type: 'category',
+    label: 'Meta Transactions',
+    items: ['integrations/metatransactions/metatransactions', 'integrations/metatransactions/metatransactions-biconomy', 'integrations/metatransactions/metatransactions-gsn']
+  },
+  'integrations/oracles',
+  'integrations/fiat-on-ramp',
+  {
+    type: 'category',
+    label: 'Dagger on Ethereum',
+    items: ['integrations/zapier/about', 'integrations/zapier/getting-started']
+  },
+  {
+    type: 'category',
+    label: 'Decentralised Storage',
+    items: ['integrations/decentralised-storage/moibit']
+  },
     {
       type: 'category',
       label: 'Tools',
@@ -40,35 +57,12 @@ module.exports = {
     'network-config',
     {
       type: 'category',
-      label: 'Advanced Tutorials',
-      items: ['tutorial-advanced/full-stack-dapp-with-pos']
+      label: 'Advanced',
+      items: ['tutorial-advanced/full-stack-dapp-with-pos', 'advanced/calling-plasma-contracts', 'advanced/swap-assets', 'advanced/moving-assets', 'advanced/deploy-your-own-matic-testnet', 'advanced/custom-restrictions']
     },
   ],
   Integrations: [
     'integrations/getting-started',
-    {
-      type: 'category',
-      label: 'Connect to Web3',
-      items: ['integrations/key-management/getting-started', 'integrations/key-management/metamask', 'integrations/key-management/walletconnect', 'integrations/key-management/portis']
-    },
-    {
-      type: 'category',
-      label: 'Meta Transactions',
-      items: ['integrations/metatransactions/metatransactions', 'integrations/metatransactions/metatransactions-biconomy', 'integrations/metatransactions/metatransactions-gsn']
-    },
-    'integrations/oracles',
-    'integrations/fiat-on-ramp',
-    {
-      type: 'category',
-      label: 'Dagger on Ethereum',
-      items: ['integrations/zapier/about', 'integrations/zapier/getting-started']
-    },
-    {
-      type: 'category',
-      label: 'Decentralised Storage',
-      items: ['integrations/decentralised-storage/moibit']
-    },
-    
   ],
   Validators: [
     'staking/economics',

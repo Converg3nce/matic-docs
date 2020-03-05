@@ -6,10 +6,10 @@
   "permalink": "/docs/dagger/getting-started",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/dagger/getting-started.md",
   "sidebar_label": "Dagger",
-  "sidebar": "Development",
+  "sidebar": "development",
   "previous": {
-    "title": "How to create a MetaMask Wallet?",
-    "permalink": "/docs/metamask"
+    "title": "MóiBit",
+    "permalink": "/docs/integrations/decentralised-storage/moibit"
   },
   "next": {
     "title": "Matic.js",

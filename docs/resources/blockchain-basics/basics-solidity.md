@@ -4,9 +4,7 @@ title: What is Solidity?
 sidebar_label: Solidity
 ---
 
-Solidity is an object oriented, high-level programming language for implementing smart contracts. Smart contracts are programs which govern the behavior of accounts within the Ethereum state. To familiarize with Ethereum it is important to discuss about the two main components of the ecosystem: Accounts and Transactions.
-
-Solidity is just like any other programming language. Comprised of: 
+Solidity is an object oriented, high-level programming language for implementing smart contracts. It programs, which governs the behavior of accounts within blockhain network. It is just like any other programming language. Comprised of: 
 - loops 
 - conditionals 
 - variables 
@@ -14,8 +12,7 @@ Solidity is just like any other programming language. Comprised of:
 - objects and types 
 - and handles money transactions!
 
-Before we get to coding with Solidity it is important to familiarize oneself with Ethereum mental models - these are essential because of the contrasting difference in a blockchain application architecture and a common web application architecture.
-
+Before jumping to coding with Solidity it is important to familiarize oneself with blokchain's mental models - these are essential because of the contrasting difference in a blockchain application architecture and a common web application architecture.
 Where we want to go is Web 3.0, where servers and databases are as decentralized as the clients. In other words, clients can also act as servers or databases or both (aka, peer-to-peer). With many-to-many relationships at all levels of the stack, there are no concentrations of control and a single point of failure. The network is maximally distributed.
 
 Essentially the following points need to be kept in mind always:
@@ -25,4 +22,6 @@ Essentially the following points need to be kept in mind always:
 - Reading data is free
 - Each write operation has a cost associated with it - you pay it with ether. The cost is measured in gas.
 
-Now that you have a strong foundation of the concepts you can go ahead with building your first smart contract [here](quickstart-helloworld).
+### **:scroll:Resources**
+
+:books: [Solidity Docs](https://solidity.readthedocs.io/)

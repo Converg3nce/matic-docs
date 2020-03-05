@@ -6,13 +6,13 @@
   "permalink": "/docs/metamask",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-metamask.md",
   "sidebar_label": "Hello Metamask",
-  "sidebar": "Development",
+  "sidebar": "development",
   "previous": {
     "title": "Hello World",
     "permalink": "/docs/helloworld"
   },
   "next": {
-    "title": "Dagger",
-    "permalink": "/docs/dagger/getting-started"
+    "title": "Key Management Strategies",
+    "permalink": "/docs/integrations/key-management/getting-started"
   }
 }

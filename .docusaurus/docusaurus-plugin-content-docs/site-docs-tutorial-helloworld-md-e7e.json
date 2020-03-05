@@ -6,7 +6,7 @@
   "permalink": "/docs/helloworld",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-helloworld.md",
   "sidebar_label": "Hello Remix",
-  "sidebar": "Development",
+  "sidebar": "development",
   "previous": {
     "title": "Welcome to Matic's DApp Development",
     "permalink": "/docs/getting-started"

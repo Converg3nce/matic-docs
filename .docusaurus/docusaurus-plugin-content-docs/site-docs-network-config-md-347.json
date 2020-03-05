@@ -5,7 +5,7 @@
   "source": "@site/docs/network-config.md",
   "permalink": "/docs/network-config",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/network-config.md",
-  "sidebar": "Development",
+  "sidebar": "development",
   "previous": {
     "title": "API",
     "permalink": "/docs/sdk/api-reference"

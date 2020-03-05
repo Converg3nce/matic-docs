@@ -6,7 +6,7 @@
   "permalink": "/docs/advanced/deploy-your-own-matic-testnet",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/advanced/deploy-your-own-matic-testnet.md",
   "sidebar_label": "Deploying Matic Locally",
-  "sidebar": "Resources",
+  "sidebar": "development",
   "previous": {
     "title": "Moving Assets",
     "permalink": "/docs/advanced/moving-assets"

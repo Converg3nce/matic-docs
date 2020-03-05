@@ -5,7 +5,7 @@
   "source": "@site/docs/resources/blockchain-basics/basics-consensus-mechanism.md",
   "permalink": "/docs/resources/blockchain-basics/consensus-mechanism",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/blockchain-basics/basics-consensus-mechanism.md",
-  "sidebar": "Resources",
+  "sidebar": "introduction",
   "previous": {
     "title": "Types of Blockchain",
     "permalink": "/docs/resources/blockchain-basics/blockchain-types"

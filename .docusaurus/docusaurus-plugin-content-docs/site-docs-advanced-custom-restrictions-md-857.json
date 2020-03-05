@@ -5,13 +5,9 @@
   "source": "@site/docs/advanced/custom-restrictions.md",
   "permalink": "/docs/advanced/custom-restrictions",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/advanced/custom-restrictions.md",
-  "sidebar": "Resources",
+  "sidebar": "development",
   "previous": {
     "title": "Deploy your own Matic Testnet",
     "permalink": "/docs/advanced/deploy-your-own-matic-testnet"
-  },
-  "next": {
-    "title": "FAQ",
-    "permalink": "/docs/resources/faq"
   }
 }

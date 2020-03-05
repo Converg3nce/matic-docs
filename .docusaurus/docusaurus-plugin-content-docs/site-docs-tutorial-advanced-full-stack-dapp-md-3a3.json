@@ -5,9 +5,13 @@
   "source": "@site/docs/tutorial-advanced/full-stack-dapp.md",
   "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-advanced/full-stack-dapp.md",
-  "sidebar": "Development",
+  "sidebar": "development",
   "previous": {
     "title": "Network Config",
     "permalink": "/docs/network-config"
+  },
+  "next": {
+    "title": "Calling Plasma Contracts",
+    "permalink": "/docs/advanced/calling-plasma-contracts"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/advanced/moving-assets.md",
   "permalink": "/docs/advanced/moving-assets",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/advanced/moving-assets.md",
-  "sidebar": "Resources",
+  "sidebar": "development",
   "previous": {
     "title": "Swap Assets",
     "permalink": "/docs/advanced/swap-assets"

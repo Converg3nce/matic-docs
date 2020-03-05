@@ -6,9 +6,5 @@
   "permalink": "/docs/integrations/getting-started",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/getting-started.md",
   "sidebar_label": "Getting Started",
-  "sidebar": "Integrations",
-  "next": {
-    "title": "Key Management Strategies",
-    "permalink": "/docs/integrations/key-management/getting-started"
-  }
+  "sidebar": "Integrations"
 }

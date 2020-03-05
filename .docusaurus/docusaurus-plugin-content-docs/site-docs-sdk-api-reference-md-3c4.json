@@ -5,7 +5,7 @@
   "source": "@site/docs/sdk/api-reference.md",
   "permalink": "/docs/sdk/api-reference",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/sdk/api-reference.md",
-  "sidebar": "Development",
+  "sidebar": "development",
   "previous": {
     "title": "Matic.js",
     "permalink": "/docs/sdk/matic-js"

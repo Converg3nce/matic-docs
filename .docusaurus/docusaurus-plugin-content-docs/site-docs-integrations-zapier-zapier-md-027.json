@@ -5,7 +5,7 @@
   "source": "@site/docs/integrations/zapier/zapier.md",
   "permalink": "/docs/integrations/zapier/about",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/zapier/zapier.md",
-  "sidebar": "Integrations",
+  "sidebar": "development",
   "previous": {
     "title": "Fiat-on-Ramp",
     "permalink": "/docs/integrations/fiat-on-ramp"

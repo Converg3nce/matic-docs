@@ -268,6 +268,12 @@ export default [
   
 },
 {
+  path: '/docs/resources/blockchain-basics/matic',
+  component: ComponentCreator('/docs/resources/blockchain-basics/matic'),
+  exact: true,
+  
+},
+{
   path: '/docs/resources/blockchain-basics/solidity',
   component: ComponentCreator('/docs/resources/blockchain-basics/solidity'),
   exact: true,

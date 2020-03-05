@@ -1,11 +1,12 @@
 {
   "id": "resources/blockchain-basics/blockchain",
-  "title": "Blockchain",
+  "title": "What is Blockchain?",
   "description": "Blockchain is a shared, immutable ledger for recording transactions, tracking assets and building trust. It is a distributed ledger technology, which securely records information across a peer-to-peer network. Although it was created for financial service, blockchain's potential for beyond cryptocurrency. These ledger can include into Health sector, Land Registry, eSports, Enterprise Records, logistics Manifests, identities - almost anything that holds value.",
   "source": "@site/docs/resources/blockchain-basics/basics-blockchain.md",
   "permalink": "/docs/resources/blockchain-basics/blockchain",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/blockchain-basics/basics-blockchain.md",
-  "sidebar": "Resources",
+  "sidebar_label": "Blockchain",
+  "sidebar": "introduction",
   "previous": {
     "title": "New to Matic?",
     "permalink": "/docs/resources/new-to-matic"
