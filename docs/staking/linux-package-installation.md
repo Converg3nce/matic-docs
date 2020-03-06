@@ -27,8 +27,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/cs-2003/matic-heimdall_1.2.0_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/cs-2003/matic-bor_1.2.0_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/cs-2003-1/matic-heimdall_1.2.3_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/cs-2003-1/matic-bor_1.2.3_amd64.deb
 ```
 
     
@@ -39,8 +39,8 @@ This will setup needed service for the validator node; Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_1.2.0_amd64.deb
-$ sudo dpkg -i matic-bor_1.2.0_amd64.deb
+$ sudo dpkg -i matic-heimdall_1.2.3_amd64.deb
+$ sudo dpkg -i matic-bor_1.2.3_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -67,8 +67,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2003
-// Example: $ cd public-testnets/CS-2003
+// Current testnet version is CS-2003-1
+// Example: $ cd public-testnets/CS-2003-1
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
