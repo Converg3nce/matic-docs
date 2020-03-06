@@ -367,7 +367,7 @@ Delete Bor: `sudo rm -rf /etc/bor/*`
 
 **For Binaries**:
 
-Delete Heimdall: `sudo rm -rf ~/.heimdall/`
+Delete Heimdall: `sudo rm -rf ~/.heimdalld/`
 
 Delete Bor: `sudo rm -rf ~/.bor`
 
