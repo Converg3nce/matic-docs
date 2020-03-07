@@ -157,9 +157,9 @@ Move this validator key file to heimdall config folder.
 
 #### 6.2: Configure peers for Heimdall
 
-Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas in file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
+Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers in the file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
-Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`.
+Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`. All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
 
 #### 6.3: Start & sync Heimdall
 
