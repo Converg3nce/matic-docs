@@ -5,10 +5,10 @@ title: Metamask
 
 Metamask is a browser add-on that manages a user’s Ethereum wallet by storing their private key on their browser’s data store and the seed phrase encrypted with their password. It is a non-custodial wallet, meaning, the user has full access and responsibility their private key. Once lost, the user can no longer control the savings or restore access to the wallet.
 
-**Type**: Non-custodial/HD 
-**Private Key Storage**: User’s local browser storage 
-**Communication to Ethereum Ledger**: Infura 
-**Private key encoding**: Mnemonic
+**Type**: Non-custodial/HD <br/>
+**Private Key Storage**: User’s local browser storage <br/>
+**Communication to Ethereum Ledger**: Infura <br/>
+**Private key encoding**: Mnemonic <br/>
 
 ### 1. Set up Web3
 

@@ -1,53 +1,53 @@
 export const firstRow = [
     {
         title: "Blockchain Basics",
-        imageUrl: ["../../img/basic.svg" , "../../img/basic.svg"],
-        description: "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
+        // imageUrl: ["../../img/basic.svg" , "../../img/basic.svg"],
+        description: "Learn about Blockchain and Matic, Learn How Blockchain Works With A Useful Explanation From the Internet Society."
     },
     {
-        title: "Focus on What Matters",
-        imageUrl: ["../../img/basic.svg" ,"../../img/basic.svg"],
-        description: "Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your docs into the <code>docs</code> directory."
+        title: "DApp Developers",
+        // imageUrl: ["../../img/basic.svg" ,"../../img/basic.svg"],
+        description: "All the infrastructure and integrations you need to build, deploy, and manage dApps on Matic."
     },
     {
-        title: "Powered by React",
-        imageUrl: [ "../../img/basic.svg" , "../../img/basic.svg"],
-        description: 'Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.'
+        title: "Validators",
+        // imageUrl: [ "../../img/basic.svg" , "../../img/basic.svg"],
+        description: 'Learn How to stake with Matic, And Setup you own Environment to earn Rewards.'
     },
 ];
 
 export const secondRow = [
     {
-        title: "Easy to Use",
+        title: "Blog",
         // imageUrl: [{card:"../../img/basic.svg" , basic:"../../img/basic.svg"}],
-        description: "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
+        description: "The Matic blog hosts news, interviews, conversations, stories, and opinions from the blockchain community, inside and outside of Matic."
     },
     {
-        title: "Focus on What Matters",
+        title: "Showcase",
         // imageUrl: [{card:"../../img/basic.svg" , basic:"../../img/basic.svg"}],
-        description: "Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your docs into the <code>docs</code> directory."
+        description: "Explore Decentralized Applications... Checkout the Latest DApps deployed on the Matic Network."
     }
 ];
 
 export const thirdRow = [
     {
-        title: "Easy to Use",
+        title: "Key Management",
         // imageUrl: [{card:"../../img/basic.svg" , basic:"../../img/basic.svg"}],
-        description: "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
+        description: "Connect to Web3!!!"
     },
     {
-        title: "Focus on What Matters",
+        title: "Meta Transactions",
         // imageUrl: [{card:"../../img/basic.svg" , basic:"../../img/basic.svg"}],
-        description: "Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your docs into the <code>docs</code> directory."
+        description: "Gasless Transactions on Matic Chain!!!"
     },
     {
-        title: "Powered by React",
+        title: "Realtime Updates",
         // imageUrl: [{card:"../../img/basic.svg" , basic:"../../img/basic.svg"}],
-        description: 'Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.'
+        description: 'Realtime updates from Ethereum Blockchain'
     },
     {
-        title: "Easy to Use",
+        title: "Ethereum ↔️ Matic",
         // imageUrl: [{card:"../../img/basic.svg" , basic:"../../img/basic.svg"}],
-        description: "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
+        description: "Interact with Ethereum and Matic Chain"
     },
 ];
