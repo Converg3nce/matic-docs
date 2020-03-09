@@ -14,9 +14,10 @@ export default {
   "customFields": {},
   "themeConfig": {
     "navbar": {
+      "title": "Developer",
       "logo": {
         "alt": "My Site Logo",
-        "src": "img/logo.png"
+        "src": "img/logo.svg"
       },
       "links": [
         {

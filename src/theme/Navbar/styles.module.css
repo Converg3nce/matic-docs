@@ -24,13 +24,3 @@
 .navbarHidden {
   top: calc(var(--ifm-navbar-height) * -1) !important;
 }
-
-.navbar{
-  height: 80px;
-}
-.navbarLeft{
-  left: 136px;
-}
-.navbarRight{
-  margin-right: 136px;
-}

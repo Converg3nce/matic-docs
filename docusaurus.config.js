@@ -19,10 +19,10 @@ module.exports = {
   ],
   themeConfig: {
     navbar: {
-      // title: 'Developer',
+      title: 'Developer',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.png',
+        src: 'img/logo.svg',
       },
       links: [
         { to: 'docs/resources/new-to-matic', label: 'Introduction', position: 'left' },
