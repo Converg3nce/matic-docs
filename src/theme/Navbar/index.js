@@ -117,10 +117,10 @@ function Navbar() {
         [styles.navbarHideable]: hideOnScroll,
         [styles.navbarHidden]: !isNavbarVisible
       })}
-      style={{ height: "80px", fontSize: "16px" }}
+      style={{fontSize: "16px" }}
     >
       <div className="navbar__inner">
-        <div className="navbar__items" style={{ marginLeft: "100px" }}>
+        <div className="navbar__items" style={{ marginLeft: "30px" }}>
           <div
             aria-label="Navigation bar toggle"
             className="navbar__toggle"
@@ -154,7 +154,7 @@ function Navbar() {
             {title != null && (
               <strong
                 className={isSearchBarExpanded ? styles.hideLogoText : ""}
-                style={{fontSize: "22px", color: "#9FA8BA", fontWeight:"normal"}}
+                style={{fontSize: "22px", color: "#9FA8BA", fontWeight:"normal", marginRight:"300px"}}
               >
                 {title}
               </strong>
@@ -167,7 +167,7 @@ function Navbar() {
             ))
             }
         </div>
-        <div className="navbar__items navbar__items--right" style={{marginRight: "40px"}}>
+        <div className="navbar__items navbar__items--right" style={{marginRight: "10px"}}>
           {links
             .filter(linkItem => linkItem.position === "right")
             .map((linkItem, i) => (
