@@ -7,11 +7,11 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/network-config.md",
   "sidebar": "development",
   "previous": {
-    "title": "API",
-    "permalink": "/docs/sdk/api-reference"
+    "title": "MóiBit",
+    "permalink": "/docs/integrations/decentralised-storage/moibit"
   },
   "next": {
-    "title": "Full Stack DApp",
+    "title": "PoS (Full Stack DApp)",
     "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
   }
 }

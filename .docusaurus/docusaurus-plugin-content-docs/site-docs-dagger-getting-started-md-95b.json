@@ -5,14 +5,14 @@
   "source": "@site/docs/dagger/getting-started.md",
   "permalink": "/docs/dagger/getting-started",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/dagger/getting-started.md",
-  "sidebar_label": "Dagger",
+  "sidebar_label": "Dagger - Single App",
   "sidebar": "development",
   "previous": {
-    "title": "MóiBit",
-    "permalink": "/docs/integrations/decentralised-storage/moibit"
+    "title": "Fiat-on-Ramp",
+    "permalink": "/docs/integrations/fiat-on-ramp"
   },
   "next": {
-    "title": "Matic.js",
-    "permalink": "/docs/sdk/matic-js"
+    "title": "Zapier",
+    "permalink": "/docs/integrations/zapier/about"
   }
 }

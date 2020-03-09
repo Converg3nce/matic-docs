@@ -8,8 +8,8 @@
   "sidebar_label": "Getting Started",
   "sidebar": "development",
   "previous": {
-    "title": "Portis",
-    "permalink": "/docs/integrations/key-management/portis"
+    "title": "Moving Assets",
+    "permalink": "/docs/advanced/moving-assets"
   },
   "next": {
     "title": "Biconomy",

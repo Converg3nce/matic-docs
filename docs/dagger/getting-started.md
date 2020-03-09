@@ -1,7 +1,7 @@
 ---
 id: getting-started
 title: Dagger
-sidebar_label: Dagger
+sidebar_label: Dagger - Single App
 ---
 Dagger is the best way to get realtime updates from Ethereum Blockchain.
 It provides a way for your DApps and Backend system to get ethereum blockchain events, like transactions, receipts and logs in realtime over websocket or socket.

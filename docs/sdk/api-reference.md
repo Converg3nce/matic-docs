@@ -1,6 +1,6 @@
 ---
 id: api-reference
-title: API
+title: Matic.js API
 ---
 
 - <a href="#initialize"><code><b>new Matic()</b></code></a>

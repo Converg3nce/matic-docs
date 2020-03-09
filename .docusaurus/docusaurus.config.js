@@ -50,55 +50,6 @@ export default {
       "apiKey": "25626fae796133dc1e734c6bcaaeac3c",
       "indexName": "docsearch",
       "algoliaOptions": {}
-    },
-    "footer": {
-      "style": "dark",
-      "links": [
-        {
-          "title": "Docs",
-          "items": [
-            {
-              "label": "Style Guide",
-              "to": "docs/doc1"
-            },
-            {
-              "label": "Second Doc",
-              "to": "docs/doc2"
-            }
-          ]
-        },
-        {
-          "title": "Community",
-          "items": [
-            {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            }
-          ]
-        },
-        {
-          "title": "Social",
-          "items": [
-            {
-              "label": "Blog",
-              "to": "blog"
-            },
-            {
-              "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
-            },
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/docusaurus"
-            }
-          ]
-        }
-      ],
-      "copyright": "Copyright © 2020 My Project, Inc. Built with Docusaurus."
     }
   },
   "title": "Matic Network",

@@ -1,6 +1,7 @@
 ---
 id: about
 title: Zapier
+sidebar_label: Zapier - Multiple Apps
 ---
 
 Zapier is a web automation app and it gives you the power to integrate Dagger For Ethereum with hundreds of other apps to automate your work. 

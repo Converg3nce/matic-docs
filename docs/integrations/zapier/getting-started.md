@@ -1,6 +1,7 @@
 ---
 id: getting-started
 title: Getting Started
+sidebar_label: Zapier - Getting Started
 ---
 
 ### Setting Up Dagger for Ethereum with Zapier

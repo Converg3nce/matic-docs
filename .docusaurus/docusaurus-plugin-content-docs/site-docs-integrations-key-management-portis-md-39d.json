@@ -11,7 +11,7 @@
     "permalink": "/docs/integrations/key-management/walletconnect"
   },
   "next": {
-    "title": "Getting started",
-    "permalink": "/docs/integrations/metatransactions/metatransactions"
+    "title": "Matic.js",
+    "permalink": "/docs/sdk/matic-js"
   }
 }

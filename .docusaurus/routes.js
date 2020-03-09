@@ -65,12 +65,6 @@ export default [
   
 },
 {
-  path: '/card/',
-  component: ComponentCreator('/card/'),
-  exact: true,
-  
-},
-{
   path: '/showcase/',
   component: ComponentCreator('/showcase/'),
   exact: true,

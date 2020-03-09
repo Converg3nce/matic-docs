@@ -1,6 +1,6 @@
 ---
 id: full-stack-dapp-with-pos
-title: Full Stack DApp
+title: PoS (Full Stack DApp)
 ---
 ## What this tutorial covers
 

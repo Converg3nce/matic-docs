@@ -1,6 +1,6 @@
 {
   "id": "sdk/api-reference",
-  "title": "API",
+  "title": "Matic.js API",
   "description": "- <a href=\"#initialize\"><code><b>new Matic()</b></code></a>",
   "source": "@site/docs/sdk/api-reference.md",
   "permalink": "/docs/sdk/api-reference",
@@ -11,7 +11,7 @@
     "permalink": "/docs/sdk/matic-js"
   },
   "next": {
-    "title": "Network Config",
-    "permalink": "/docs/network-config"
+    "title": "Moving Assets",
+    "permalink": "/docs/advanced/moving-assets"
   }
 }

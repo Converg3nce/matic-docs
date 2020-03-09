@@ -1,7 +1,7 @@
 ---
 id: helloworld
 title: Hello World
-sidebar_label: Hello Remix
+sidebar_label: Smart Contract on Matic
 ---
 A Hello World style starter project. Deploys a smart contract with a message, and renders it in the front-end. You can change the message using the interact panel!
 

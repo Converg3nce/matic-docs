@@ -1,295 +1,292 @@
 {
   "/": {
-    "component": "component---site-src-pages-index-jsc-4-f-f99"
+    "component": "c4f5d8e4"
   },
   "/blog": {
-    "component": "component---theme-blog-list-pagea-6-a-7ba",
+    "component": "a6aa9e1f",
     "items": [
       {
-        "content": "content---blogaf-1-856"
+        "content": "af172acd"
       },
       {
-        "content": "content---blog-357-22b"
+        "content": "3570154c"
       },
       {
-        "content": "content---blog-8-e-9-35c"
+        "content": "8e9f0a8a"
       }
     ],
-    "metadata": "metadata---blogbbb-5f9"
+    "metadata": "bbb4ffb5"
   },
   "/blog/hello-world": {
-    "component": "component---theme-blog-post-pageccc-cab",
-    "content": "content---blog-hello-worldd-61-086"
+    "component": "ccc49370",
+    "content": "d610846f"
   },
   "/blog/hola": {
-    "component": "component---theme-blog-post-pageccc-cab",
-    "content": "content---blog-holabdd-150"
+    "component": "ccc49370",
+    "content": "bdd709f1"
   },
   "/blog/tags": {
-    "component": "component---theme-blog-tags-list-page-01-a-d0b",
-    "tags": "tags---blog-tags-8-be-13d"
+    "component": "01a85c17",
+    "tags": "8be5b89e"
   },
   "/blog/tags/docusaurus": {
-    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "component": "6875c492",
     "items": [
       {
-        "content": "content---blogaf-1-856"
+        "content": "af172acd"
       },
       {
-        "content": "content---blog-357-22b"
+        "content": "3570154c"
       },
       {
-        "content": "content---blog-8-e-9-35c"
+        "content": "8e9f0a8a"
       }
     ],
-    "metadata": "metadata---blog-tags-docusaurus-6-ca-f43"
+    "metadata": "6ca375e2"
   },
   "/blog/tags/facebook": {
-    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "component": "6875c492",
     "items": [
       {
-        "content": "content---blogaf-1-856"
+        "content": "af172acd"
       }
     ],
-    "metadata": "metadata---blog-tags-facebookeec-618"
+    "metadata": "eec15bdb"
   },
   "/blog/tags/hello": {
-    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "component": "6875c492",
     "items": [
       {
-        "content": "content---blogaf-1-856"
+        "content": "af172acd"
       },
       {
-        "content": "content---blog-357-22b"
+        "content": "3570154c"
       }
     ],
-    "metadata": "metadata---blog-tags-hello-3-a-6-b36"
+    "metadata": "3a6eb64e"
   },
   "/blog/tags/hola": {
-    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "component": "6875c492",
     "items": [
       {
-        "content": "content---blog-8-e-9-35c"
+        "content": "8e9f0a8a"
       }
     ],
-    "metadata": "metadata---blog-tags-hola-31-d-e2f"
+    "metadata": "31d49d87"
   },
   "/blog/welcome": {
-    "component": "component---theme-blog-post-pageccc-cab",
-    "content": "content---blog-welcome-286-e55"
-  },
-  "/card/": {
-    "component": "component---site-src-pages-card-index-js-9-ee-401"
+    "component": "ccc49370",
+    "content": "2868cdab"
   },
   "/showcase/": {
-    "component": "component---site-src-pages-showcase-index-js-2-a-6-874"
+    "component": "2a64589e"
   },
   "/docs/:route": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "docsMetadata": "docsMetadata---docs-route-20-a-f24"
+    "component": "1be78505",
+    "docsMetadata": "20ac7829"
   },
   "/docs/advanced/calling-plasma-contracts": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-advanced-calling-plasma-contracts-293-fc0"
+    "component": "17896441",
+    "content": "29322dca"
   },
   "/docs/advanced/custom-restrictions": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-advanced-custom-restrictions-857-ab7"
+    "component": "17896441",
+    "content": "857fc3be"
   },
   "/docs/advanced/deploy-your-own-matic-testnet": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-advanced-deploy-your-own-matic-testnete-48-df3"
+    "component": "17896441",
+    "content": "e4877edf"
   },
   "/docs/advanced/moving-assets": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-advanced-moving-assetsc-4-c-217"
+    "component": "17896441",
+    "content": "c4ce85dd"
   },
   "/docs/advanced/security-models": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-advanced-security-models-116-b0a"
+    "component": "17896441",
+    "content": "116a4a94"
   },
   "/docs/advanced/swap-assets": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-advanced-swap-assetsd-09-767"
+    "component": "17896441",
+    "content": "d091bdf0"
   },
   "/docs/dagger/getting-started": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-dagger-getting-started-95-b-83a"
+    "component": "17896441",
+    "content": "95b867d3"
   },
   "/docs/getting-started": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-getting-startede-5-a-988"
+    "component": "17896441",
+    "content": "e5a94b8b"
   },
   "/docs/helloworld": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-helloworlde-7-e-9a4"
+    "component": "17896441",
+    "content": "e7ece52b"
   },
   "/docs/integrations/decentralised-storage/moibit": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-decentralised-storage-moibite-45-66d"
+    "component": "17896441",
+    "content": "e45ae614"
   },
   "/docs/integrations/fiat-on-ramp": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-fiat-on-ramp-0-f-8-0bf"
+    "component": "17896441",
+    "content": "0f843778"
   },
   "/docs/integrations/getting-started": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-getting-started-097-d91"
+    "component": "17896441",
+    "content": "09708aa6"
   },
   "/docs/integrations/key-management/getting-started": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-key-management-getting-started-29-c-6d3"
+    "component": "17896441",
+    "content": "29c41e33"
   },
   "/docs/integrations/key-management/metamask": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-key-management-metamask-6-e-8-901"
+    "component": "17896441",
+    "content": "6e8343a7"
   },
   "/docs/integrations/key-management/portis": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-key-management-portis-39-d-37c"
+    "component": "17896441",
+    "content": "39d666b6"
   },
   "/docs/integrations/key-management/walletconnect": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-key-management-walletconnect-80-f-bef"
+    "component": "17896441",
+    "content": "80f82650"
   },
   "/docs/integrations/metatransactions/metatransactions": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-metatransactions-metatransactions-5-e-0-a76"
+    "component": "17896441",
+    "content": "5e0c4c79"
   },
   "/docs/integrations/metatransactions/metatransactions-biconomy": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-metatransactions-metatransactions-biconomydc-4-a0f"
+    "component": "17896441",
+    "content": "dc441a59"
   },
   "/docs/integrations/metatransactions/metatransactions-gsn": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-metatransactions-metatransactions-gsn-667-bdc"
+    "component": "17896441",
+    "content": "667f9620"
   },
   "/docs/integrations/oracles": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-oraclesf-92-09c"
+    "component": "17896441",
+    "content": "f92d08a3"
   },
   "/docs/integrations/zapier/about": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-zapier-about-027-450"
+    "component": "17896441",
+    "content": "027da977"
   },
   "/docs/integrations/zapier/getting-started": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrations-zapier-getting-startedb-22-79d"
+    "component": "17896441",
+    "content": "b22ad0af"
   },
   "/docs/metamask": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-metamask-1-ce-cc5"
+    "component": "17896441",
+    "content": "1ce65493"
   },
   "/docs/network-config": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-network-config-347-2f3"
+    "component": "17896441",
+    "content": "347326d1"
   },
   "/docs/resources/architecture": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-architectureeac-b91"
+    "component": "17896441",
+    "content": "eac9ea66"
   },
   "/docs/resources/blockchain-basics/accounts": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-accounts-66-a-404"
+    "component": "17896441",
+    "content": "66af6e74"
   },
   "/docs/resources/blockchain-basics/blockchain": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-blockchain-9-c-8-fd2"
+    "component": "17896441",
+    "content": "9c8b23e6"
   },
   "/docs/resources/blockchain-basics/blockchain-types": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-blockchain-types-677-bec"
+    "component": "17896441",
+    "content": "677de4ac"
   },
   "/docs/resources/blockchain-basics/consensus-mechanism": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-consensus-mechanismf-06-ff7"
+    "component": "17896441",
+    "content": "f06401fa"
   },
   "/docs/resources/blockchain-basics/ethereum": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-ethereum-5-da-4eb"
+    "component": "17896441",
+    "content": "5da61562"
   },
   "/docs/resources/blockchain-basics/gas": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-gasb-93-895"
+    "component": "17896441",
+    "content": "b93fca3f"
   },
   "/docs/resources/blockchain-basics/matic": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-matic-37-e-757"
+    "component": "17896441",
+    "content": "37e4b612"
   },
   "/docs/resources/blockchain-basics/solidity": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-soliditye-91-a75"
+    "component": "17896441",
+    "content": "e91f07e3"
   },
   "/docs/resources/blockchain-basics/transactions": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-blockchain-basics-transactions-903-171"
+    "component": "17896441",
+    "content": "903f71ca"
   },
   "/docs/resources/faq": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-faqb-66-0ee"
+    "component": "17896441",
+    "content": "b66a831f"
   },
   "/docs/resources/mapped-tokens": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-mapped-tokens-279-04c"
+    "component": "17896441",
+    "content": "279fdf7f"
   },
   "/docs/resources/new-to-matic": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-new-to-matic-4-d-9-f62"
+    "component": "17896441",
+    "content": "4d925d68"
   },
   "/docs/resources/sidechain": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-resources-sidechaind-02-866"
+    "component": "17896441",
+    "content": "d02da4aa"
   },
   "/docs/sdk/api-reference": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-sdk-api-reference-3-c-4-ca5"
+    "component": "17896441",
+    "content": "3c4e62bf"
   },
   "/docs/sdk/matic-js": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-sdk-matic-js-57-a-47e"
+    "component": "17896441",
+    "content": "57a41e19"
   },
   "/docs/staking/counter-stake-stage-1/getting-started": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-counter-stake-stage-1-getting-startedc-66-21d"
+    "component": "17896441",
+    "content": "c6610c7a"
   },
   "/docs/staking/counter-stake-stage-1/introduction": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-counter-stake-stage-1-introduction-294-dd7"
+    "component": "17896441",
+    "content": "29483b10"
   },
   "/docs/staking/counter-stake-stage-1/linux-package-installation": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-counter-stake-stage-1-linux-package-installation-99-d-b09"
+    "component": "17896441",
+    "content": "99d06655"
   },
   "/docs/staking/counter-stake-stage-1/running-with-binaries": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-counter-stake-stage-1-running-with-binaries-075-916"
+    "component": "17896441",
+    "content": "0757c9bc"
   },
   "/docs/staking/counter-stake-stage-1/running-with-docker": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-counter-stake-stage-1-running-with-dockere-35-006"
+    "component": "17896441",
+    "content": "e350531c"
   },
   "/docs/staking/counter-stake-stage-1/stake-on-matic": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-counter-stake-stage-1-stake-on-maticf-53-c61"
+    "component": "17896441",
+    "content": "f53e53e0"
   },
   "/docs/staking/counter-stake-stage-1/technical-faqs": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-counter-stake-stage-1-technical-faqsd-35-68a"
+    "component": "17896441",
+    "content": "d3535b5d"
   },
   "/docs/staking/economics": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-economicsade-7de"
+    "component": "17896441",
+    "content": "ade51330"
   },
   "/docs/staking/faqs": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-faqs-113-d80"
+    "component": "17896441",
+    "content": "1132a54f"
   },
   "/docs/staking/technical-requirements": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-staking-technical-requirementsfc-1-481"
+    "component": "17896441",
+    "content": "fc1abc49"
   },
   "/docs/tutorial-advanced/full-stack-dapp-with-pos": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-advanced-full-stack-dapp-with-pos-3-a-3-d11"
+    "component": "17896441",
+    "content": "3a37b31e"
   }
 }

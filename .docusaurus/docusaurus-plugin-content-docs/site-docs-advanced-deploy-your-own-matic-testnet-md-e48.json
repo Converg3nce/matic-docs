@@ -8,8 +8,8 @@
   "sidebar_label": "Deploying Matic Locally",
   "sidebar": "development",
   "previous": {
-    "title": "Moving Assets",
-    "permalink": "/docs/advanced/moving-assets"
+    "title": "Swap Assets",
+    "permalink": "/docs/advanced/swap-assets"
   },
   "next": {
     "title": "Adding Custom Restrictions (ERC20/ERC721)",

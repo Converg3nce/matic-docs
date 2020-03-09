@@ -54,13 +54,13 @@
             "type": "link",
             "label": "Accounts",
             "href": "/docs/resources/blockchain-basics/accounts"
+          },
+          {
+            "type": "link",
+            "label": "Sidechains and Plasma",
+            "href": "/docs/resources/sidechain"
           }
         ]
-      },
-      {
-        "type": "link",
-        "label": "Sidechains and Plasma",
-        "href": "/docs/resources/sidechain"
       },
       {
         "type": "link",
@@ -86,7 +86,7 @@
       },
       {
         "type": "link",
-        "label": "Hello Remix",
+        "label": "Smart Contract on Matic",
         "href": "/docs/helloworld"
       },
       {
@@ -117,6 +117,27 @@
             "type": "link",
             "label": "Portis",
             "href": "/docs/integrations/key-management/portis"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Main Chain ↔️ Matic Chain",
+        "items": [
+          {
+            "type": "link",
+            "label": "Matic.js",
+            "href": "/docs/sdk/matic-js"
+          },
+          {
+            "type": "link",
+            "label": "Matic.js API",
+            "href": "/docs/sdk/api-reference"
+          },
+          {
+            "type": "link",
+            "label": "Moving Assets",
+            "href": "/docs/advanced/moving-assets"
           }
         ]
       },
@@ -153,16 +174,21 @@
       },
       {
         "type": "category",
-        "label": "Dagger on Ethereum",
+        "label": "Realtime Updates",
         "items": [
           {
             "type": "link",
-            "label": "Zapier",
+            "label": "Dagger - Single App",
+            "href": "/docs/dagger/getting-started"
+          },
+          {
+            "type": "link",
+            "label": "Zapier - Multiple Apps",
             "href": "/docs/integrations/zapier/about"
           },
           {
             "type": "link",
-            "label": "Getting Started",
+            "label": "Zapier - Getting Started",
             "href": "/docs/integrations/zapier/getting-started"
           }
         ]
@@ -179,33 +205,6 @@
         ]
       },
       {
-        "type": "category",
-        "label": "Tools",
-        "items": [
-          {
-            "type": "link",
-            "label": "Dagger",
-            "href": "/docs/dagger/getting-started"
-          },
-          {
-            "type": "category",
-            "label": "Matic SDK",
-            "items": [
-              {
-                "type": "link",
-                "label": "Matic.js",
-                "href": "/docs/sdk/matic-js"
-              },
-              {
-                "type": "link",
-                "label": "API",
-                "href": "/docs/sdk/api-reference"
-              }
-            ]
-          }
-        ]
-      },
-      {
         "type": "link",
         "label": "Network Config",
         "href": "/docs/network-config"
@@ -216,7 +215,7 @@
         "items": [
           {
             "type": "link",
-            "label": "Full Stack DApp",
+            "label": "PoS (Full Stack DApp)",
             "href": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
           },
           {
@@ -228,11 +227,6 @@
             "type": "link",
             "label": "Swap Assets",
             "href": "/docs/advanced/swap-assets"
-          },
-          {
-            "type": "link",
-            "label": "Moving Assets",
-            "href": "/docs/advanced/moving-assets"
           },
           {
             "type": "link",
