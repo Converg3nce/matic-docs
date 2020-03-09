@@ -1,0 +1,17 @@
+{
+  "id": "validator/proposers-producers-selection",
+  "title": "Proposers & Producers Selection",
+  "description": "Block Producers for the BOR layer, Are a committee selected from the Validators pool on the basis of their stake which happens at regular intervals. These intervals are decided by the Validator's governance with regards to dynasty and network.",
+  "source": "@site/docs/validator/proposers-producers-selection.md",
+  "permalink": "/docs/validator/proposers-producers-selection",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/proposers-producers-selection.md",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "Who is a Validator?",
+    "permalink": "/docs/validator/validator"
+  },
+  "next": {
+    "title": "State Sync Mechanism",
+    "permalink": "/docs/validator/state-sync"
+  }
+}

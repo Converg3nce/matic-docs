@@ -25,48 +25,12 @@
   top: calc(var(--ifm-navbar-height) * -1) !important;
 }
 
-.navbar {
-  /* Rectangle 48 */
-  position: absolute;
-  width: 1440px;
+.navbar{
   height: 80px;
-  left: 0px;
-  top: -1px;
-
-  /* Light_Gray_700 */
-
-  background: #ffffff;
 }
-
-.logo {
-  position: absolute;
-  height: 25px;
-  width: 104px;
-  left: 10.56%;
-  right: 82.22%;
-  top: 0.75%;
-  bottom: 98.55%;
+.navbarLeft{
+  left: 136px;
 }
-
-.subHeading{
-  /* Developer */
-
-
-position: absolute;
-width: 106px;
-height: 28px;
-left: 264px;
-top: 27px;
-
-font-family: Graphik;
-font-style: normal;
-font-weight: normal;
-font-size: 22px;
-line-height: 28px;
-/* identical to box height, or 127% */
-
-
-/* Dark_Gray_100 */
-
-color: #9FA8BA;
+.navbarRight{
+  margin-right: 136px;
 }

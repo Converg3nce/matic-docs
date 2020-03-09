@@ -161,7 +161,7 @@
   left: 152px;
   top: 257px;
   /* 💻/Display Medium */
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -180,7 +180,7 @@
   left: 152px;
   top: 386px;
   /* 💻/Heading Large */
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -195,8 +195,8 @@
 
 .vector {
   position: absolute;
-  left: 22%;
-  top: 76.6%;
+  left: 22.5%;
+  top: 77%;
 }
 
 .head {
@@ -208,7 +208,7 @@
 
   /* 💻/Display Medium */
 
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -233,7 +233,7 @@
 
   /* 💻/Body Medium */
 
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -321,18 +321,17 @@
 
   /* Primary_200 */
 
-  background: #d5e2fc;
+  /* background: #d5e2fc; */
   border-radius: 12px;
 }
-.cardImageThird{
+.cardImageThird {
+  position: absolute;
+  width: 193.93px;
+  height: 146.85px;
+  /* Yellow_200 */
 
-position: absolute;
-width: 193.93px;
-height: 146.85px;
-/* Yellow_200 */
-
-background: #FEF8DB;
-border-radius: 12px;
+  background: #fef8db;
+  border-radius: 12px;
 }
 .heading {
   /* Blockchain basics */
@@ -345,7 +344,7 @@ border-radius: 12px;
 
   /* 💻/Heading Large */
 
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -369,7 +368,7 @@ border-radius: 12px;
 
   /* 💻/Body Medium */
 
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -391,7 +390,7 @@ border-radius: 12px;
 
   /* 💻/Body Medium */
 
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -422,16 +421,16 @@ border-radius: 12px;
   left: 30px;
   top: 90px;
 
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
 }
-.basicThird{
-position: absolute;
-width: 111.72px;
-height: 83.58px;
-left: 30px;
-top: 63px;
+.basicThird {
+  position: absolute;
+  width: 111.72px;
+  height: 83.58px;
+  left: 30px;
+  top: 63px;
 
-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 .arrow {
   /* Vector */
@@ -484,7 +483,7 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
 
   /* 💻/Heading Large */
 
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -506,7 +505,7 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
 
   /* 💻/Body small */
 
-  font-family: Graphik;
+  
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -516,4 +515,151 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
   /* Dark_Gray_500 */
 
   color: #3b465c;
+}
+
+.anyQuestion {
+  position: absolute;
+  width: 1137px;
+  height: 327px;
+  left: 152px;
+  top: 2050px;
+
+  /* Primary_600 */
+
+  background: #003cb2;
+  border-radius: 20px;
+}
+.anyQuestionHeading {
+  position: absolute;
+  width: 1017px;
+  height: 53px;
+  left: 60px;
+  top: 60px;
+
+  /* 💻/Display Medium */
+
+  
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 110%;
+  /* identical to box height, or 53px */
+
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  /* Light_Gray_700 */
+
+  color: #ffffff;
+}
+.anyQuestionDesc {
+  position: absolute;
+  width: 1017px;
+  height: 28px;
+  left: 60px;
+  top: 121px;
+
+  /* 💻/Body Large */
+
+  
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+
+  text-align: center;
+
+  /* Light_Gray_700 */
+
+  color: #ffffff;
+}
+
+.forum {
+  position: absolute;
+  width: 162px;
+  height: 50px;
+  left: 383px;
+  top: 205px;
+
+  background: #2b6def;
+  border: #2b6def;
+  border-radius: 5px;
+}
+.forumImage {
+  position: absolute;
+  width: 24px;
+  height: 20.31px;
+  left: 15px;
+  top: 14px;
+}
+.forumContent {
+  position: absolute;
+  width: 50px;
+  height: 24px;
+  left: 46px;
+  top: 13px;
+
+  /* 💻/Body Medium 500 */
+
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #ffffff;
+}
+.discord {
+  position: absolute;
+  width: 161px;
+  height: 50px;
+  left: 567px;
+  top: 205px;
+
+  background: #2b6def;
+  border: #2b6def;
+  border-radius: 5px;
+}
+.discordImage {
+  /* surface1 */
+
+  position: absolute;
+  width: 24px;
+  height: 18px;
+  left: 16px;
+  top: 16px;
+}
+.discordContent {
+  /* Apply now */
+
+  position: absolute;
+  width: 95px;
+  height: 24px;
+  left: 50px;
+  top: 13px;
+
+  /* 💻/Body Medium 500 */
+
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #ffffff;
+}
+
+.anyQuestionBackground{
+
+position: absolute;
+width: 1439px;
+height: 351px;
+left: 1px;
+top: 2215px;
+
+background: #0B1746;
+
 }

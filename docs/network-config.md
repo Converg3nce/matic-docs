@@ -11,15 +11,13 @@ title: Network Config
 ## Testnets
 | Network   | Link | Status         | Description                                                                                                   |
 |-----------|------|----------------|----------------------------------------------------------------------------------------------------------------|
-| TestnetV4 |      | Coming Soon... | Coming Soon...                                                                                                 |
-| TestnetV3 |      | Running        | With new contracts, withdrawals will work for new deposits only; old deposits will not be able to be withdrawn |
-| TestnetV2 |      | Running        | With old contracts; Withdrawals working                                                                        |
-| CS-2002   |      | Running        | staking testnet; only for Counter Stake                                                                        |
-| CS-2001   |      | Deprecated     | staking testnet; only for Counter Stake                                                                        |
+| TestnetV3 | https://testnetv3.matic.network | Running        | With new contracts, withdrawals will work for new deposits only; old deposits will not be able to be withdrawn |
+| TestnetV2 | https://testnet2.matic.network | Running        | With old contracts; Withdrawals working                                                                        |
+
 
 ## Mainnets
-| Network       | Status     | Network Status                                                               |
-|---------------|------------|------------------------------------------------------------------------------|
-| Alpha-mainnet | Running    | With old contracts; withdrawals not working                                  |
-| BetaV1        | Deprecated | With old contracts                                                           |
-| BetaV2        | Running    | with old contracts: withdrawals working (new DApps should be sent here only) |
+| Network       | Link | Status     | Network Status                                                               |
+|---------------|------|------------|------------------------------------------------------------------------------|
+| Alpha-mainnet | https://alpha.ethereum.matic.network | Running    | With old contracts; withdrawals not working                                  |
+| BetaV1        | https://beta.matic.network | Deprecated | With old contracts                                                           |
+| BetaV2        |  https://betav2.matic.network | Running    | with old contracts: withdrawals working (new DApps should be sent here only) |

@@ -63,6 +63,73 @@
         ]
       },
       {
+        "type": "category",
+        "label": "Validator",
+        "items": [
+          {
+            "type": "link",
+            "label": "Staking",
+            "href": "/docs/validator/staking"
+          },
+          {
+            "type": "link",
+            "label": "Validator",
+            "href": "/docs/validator/validator"
+          },
+          {
+            "type": "link",
+            "label": "Proposers & Producers Selection",
+            "href": "/docs/validator/proposers-producers-selection"
+          },
+          {
+            "type": "link",
+            "label": "State Sync Mechanism",
+            "href": "/docs/validator/state-sync"
+          },
+          {
+            "type": "link",
+            "label": "Heimdall Chain",
+            "href": "/docs/validator/heimdall-chain"
+          },
+          {
+            "type": "link",
+            "label": "BOR Chain",
+            "href": "/docs/validator/bor-chain"
+          },
+          {
+            "type": "link",
+            "label": "Delegator",
+            "href": "/docs/validator/delegator"
+          },
+          {
+            "type": "link",
+            "label": "Checkpoint Mechanism",
+            "href": "/docs/validator/checkpoint-mechanism"
+          },
+          {
+            "type": "link",
+            "label": "Liquid Delegation in Matic",
+            "href": "/docs/validator/liquid-delegation"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Bor Specs",
+        "items": [
+          {
+            "type": "link",
+            "label": "Bor",
+            "href": "/docs/bor-spec/bor"
+          },
+          {
+            "type": "link",
+            "label": "Setup Bor",
+            "href": "/docs/bor-spec/setup-bor"
+          }
+        ]
+      },
+      {
         "type": "link",
         "label": "Matic Architecture",
         "href": "/docs/resources/architecture"
@@ -122,7 +189,7 @@
       },
       {
         "type": "category",
-        "label": "Main Chain ↔️ Matic Chain",
+        "label": "Ethereum ↔️ Matic",
         "items": [
           {
             "type": "link",
@@ -211,13 +278,19 @@
       },
       {
         "type": "category",
-        "label": "Advanced",
+        "label": "Tutorials",
         "items": [
           {
             "type": "link",
             "label": "PoS (Full Stack DApp)",
             "href": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
-          },
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Advanced",
+        "items": [
           {
             "type": "link",
             "label": "Calling Plasma Contracts",
@@ -314,6 +387,8 @@
     "/docs/advanced/moving-assets": "development",
     "/docs/advanced/security-models": "introduction",
     "/docs/advanced/swap-assets": "development",
+    "/docs/bor-spec/bor": "introduction",
+    "/docs/bor-spec/setup-bor": "introduction",
     "/docs/dagger/getting-started": "development",
     "/docs/getting-started": "development",
     "/docs/helloworld": "development",
@@ -357,6 +432,15 @@
     "/docs/staking/economics": "Validators",
     "/docs/staking/faqs": "Validators",
     "/docs/staking/technical-requirements": "Validators",
-    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "development"
+    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "development",
+    "/docs/validator/bor-chain": "introduction",
+    "/docs/validator/checkpoint-mechanism": "introduction",
+    "/docs/validator/delegator": "introduction",
+    "/docs/validator/heimdall-chain": "introduction",
+    "/docs/validator/liquid-delegation": "introduction",
+    "/docs/validator/proposers-producers-selection": "introduction",
+    "/docs/validator/staking": "introduction",
+    "/docs/validator/state-sync": "introduction",
+    "/docs/validator/validator": "introduction"
   }
 }

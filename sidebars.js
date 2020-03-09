@@ -24,6 +24,26 @@ module.exports = {
         "resources/sidechain"
       ]
     },
+    {
+      type: "category",
+      label: "Validator",
+      items: [
+        "validator/staking",
+        "validator/validator",
+        "validator/proposers-producers-selection",
+        "validator/state-sync",
+        "validator/heimdall-chain",
+        "validator/bor-chain",
+        "validator/delegator",
+        "validator/checkpoint-mechanism",
+        "validator/liquid-delegation"
+      ]
+    },
+    {
+      type: "category",
+      label: "Bor Specs",
+      items: ["bor-spec/bor","bor-spec/setup-bor"]
+    },
     "resources/architecture",
     "advanced/security-models",
     "resources/faq"
@@ -44,8 +64,8 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Main Chain ↔️ Matic Chain",
-      items: ["sdk/matic-js", "sdk/api-reference","advanced/moving-assets",]
+      label: "Ethereum ↔️ Matic",
+      items: ["sdk/matic-js", "sdk/api-reference", "advanced/moving-assets"]
     },
     {
       type: "category",
@@ -76,12 +96,17 @@ module.exports = {
     "network-config",
     {
       type: "category",
+      label: "Tutorials",
+      items: ["tutorial-advanced/full-stack-dapp-with-pos"]
+    },
+    {
+      type: "category",
       label: "Advanced",
       items: [
-        "tutorial-advanced/full-stack-dapp-with-pos",
+        
         "advanced/calling-plasma-contracts",
         "advanced/swap-assets",
-        
+
         "advanced/deploy-your-own-matic-testnet",
         "advanced/custom-restrictions"
       ]

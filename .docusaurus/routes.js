@@ -112,6 +112,18 @@ export default [
   
 },
 {
+  path: '/docs/bor-spec/bor',
+  component: ComponentCreator('/docs/bor-spec/bor'),
+  exact: true,
+  
+},
+{
+  path: '/docs/bor-spec/setup-bor',
+  component: ComponentCreator('/docs/bor-spec/setup-bor'),
+  exact: true,
+  
+},
+{
   path: '/docs/dagger/getting-started',
   component: ComponentCreator('/docs/dagger/getting-started'),
   exact: true,
@@ -378,6 +390,60 @@ export default [
 {
   path: '/docs/tutorial-advanced/full-stack-dapp-with-pos',
   component: ComponentCreator('/docs/tutorial-advanced/full-stack-dapp-with-pos'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/bor-chain',
+  component: ComponentCreator('/docs/validator/bor-chain'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/checkpoint-mechanism',
+  component: ComponentCreator('/docs/validator/checkpoint-mechanism'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/delegator',
+  component: ComponentCreator('/docs/validator/delegator'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/heimdall-chain',
+  component: ComponentCreator('/docs/validator/heimdall-chain'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/liquid-delegation',
+  component: ComponentCreator('/docs/validator/liquid-delegation'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/proposers-producers-selection',
+  component: ComponentCreator('/docs/validator/proposers-producers-selection'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/staking',
+  component: ComponentCreator('/docs/validator/staking'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/state-sync',
+  component: ComponentCreator('/docs/validator/state-sync'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validator/validator',
+  component: ComponentCreator('/docs/validator/validator'),
   exact: true,
   
 }],

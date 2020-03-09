@@ -43,6 +43,11 @@ export default {
           "href": "https://github.com/facebook/docusaurus",
           "label": "GitHub",
           "position": "right"
+        },
+        {
+          "href": "https://blog.matic.network/",
+          "label": "Blog",
+          "position": "left"
         }
       ]
     },
