@@ -7,39 +7,39 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 import { firstRow, secondRow, thirdRow } from "../data/features";
 
-function FirstRow({ title, description }) {
+function FirstRow( title, description ) {
   // const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={styles.card}>
-      <img className={styles.cardImage} src={"../img/cardImage.svg"} />
-      <img className={styles.basic} src={"../img/basic.svg"} />
-      <img className={styles.arrow} src={"../img/arrow.svg"} />
+      <img className={styles.cardImage} src={useBaseUrl("../img/cardImage.svg")} />
+      <img className={styles.basic} src={useBaseUrl("../img/basic.svg")} />
+      <img className={styles.arrow} src={useBaseUrl("../img/arrow.svg")} />
       <h1 className={styles.heading}>{title}</h1>
       <p className={styles.description}>{description}</p>
     </div>
   );
 }
 
-function SecondRow({ title, description }) {
+function SecondRow( title, description ) {
   // const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={styles.cardSecond}>
-      <img className={styles.cardImage} src={"../img/cardImage.svg"} />
-      <img className={styles.basic} src={"../img/basic.svg"} />
-      <img className={styles.secondArrow} src={"../img/arrow.svg"} />
+      <img className={styles.cardImage} src={useBaseUrl("../img/cardImage.svg")} />
+      <img className={styles.basic} src={useBaseUrl("../img/basic.svg")} />
+      <img className={styles.secondArrow} src={useBaseUrl("../img/arrow.svg")} />
       <h1 className={styles.heading}>{title}</h1>
       <p className={styles.secondDescription}>{description}</p>
     </div>
   );
 }
 
-function ThirdRow({ imageUrl, title, description }) {
+function ThirdRow( imageUrl, title, description ) {
   // const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={styles.cardThird}>
-      <img className={styles.cardImage} src={"../img/cardImage.svg"} />
-      <img className={styles.basic} src={"../img/basic.svg"} />
-      <img className={styles.thirdArrow} src={"../img/arrow.svg"} />
+      <img className={styles.cardImage} src={useBaseUrl("../img/cardImage.svg")} />
+      <img className={styles.basic} src={useBaseUrl("../img/basic.svg")} />
+      <img className={styles.thirdArrow} src={useBaseUrl("../img/arrow.svg")} />
       <h1 className={styles.thirdHeading}>{title}</h1>
       <p className={styles.thirdDescription}>{description}</p>
     </div>
@@ -59,10 +59,10 @@ function Home() {
         <div>
           <Link to={useBaseUrl("docs/resources/new-to-matic")}>
             <h2 className={styles.headlineDescription}>Start Exploring </h2>
-            <img className={styles.vector} src={"../img/vector.svg"} />{" "}
+            <img className={styles.vector} src={useBaseUrl("../img/vector.svg")} />{" "}
           </Link>{" "}
           <div>
-            <img className={styles.headerImage} src={"../img/header.svg"} />{" "}
+            <img className={styles.headerImage} src={useBaseUrl("../img/header.svg")} />{" "}
           </div>
         </div>
       </header>{" "}
@@ -114,11 +114,11 @@ function Home() {
             different use case
           </p>
           <button className={styles.forum} href="#">
-            <img className={styles.forumImage} src={"../img/forum.svg"} />
+            <img className={styles.forumImage} src={useBaseUrl("../img/forum.svg")} />
             <div className={styles.forumContent}>Forum</div>
           </button>
           <button className={styles.discord} href="#">
-            <img className={styles.discordImage} src={"../img/discord.svg"} />
+            <img className={styles.discordImage} src={useBaseUrl("../img/discord.svg")} />
             <div className={styles.discordContent}>Chat with us</div>
           </button>
         </div>

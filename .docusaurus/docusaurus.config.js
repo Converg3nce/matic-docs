@@ -17,7 +17,7 @@ export default {
       "title": "Developer",
       "logo": {
         "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "src": "/img/logo.svg"
       },
       "links": [
         {

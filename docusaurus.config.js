@@ -22,7 +22,7 @@ module.exports = {
       title: 'Developer',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: '/img/logo.svg',
       },
       links: [
         { to: 'docs/resources/new-to-matic', label: 'Introduction', position: 'left' },
