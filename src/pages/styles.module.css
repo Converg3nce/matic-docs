@@ -219,7 +219,7 @@
 
   /* Dark_Gray_700 */
 
-  color: #061024;
+  color: var(--ifm-navbar-link-color);
 }
 
 .subHead {
@@ -399,7 +399,7 @@
 
   /* Dark_Gray_500 */
 
-  color: #3b465c;
+  color: #9FA8BA;
 }
 
 .headerImage {
@@ -564,7 +564,7 @@
   
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   /* identical to box height, or 156% */
 

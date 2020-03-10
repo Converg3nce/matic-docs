@@ -4,7 +4,7 @@ title: Welcome to Matic's DApp Development
 sidebar_label: Getting Started
 ---
 
-Welcome to the most exciting, ingenious invention and fasting growing technology ever, "Blockchain". Blockchain technology is poised to revolutionise the way the digital world handles data and does business. Be a part of this revolution and head start with Decentralise-App development.
+Welcome to the most exciting, ingenious invention and fasting growing technology ever, "Matic Blockchain". Blockchain technology is poised to revolutionise the way the digital world handles data and does business. Be a part of this revolution and head start with Decentralise-App development.
 
 If this is overwhelming, that’s okay! You can jump right into the fire and start hacking. Here are a few pointers before you start diving into resources, repositories, and documentation.
 

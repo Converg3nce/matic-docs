@@ -1,7 +1,7 @@
 {
   "id": "getting-started",
   "title": "Welcome to Matic's DApp Development",
-  "description": "Welcome to the most exciting, ingenious invention and fasting growing technology ever, \"Blockchain\". Blockchain technology is poised to revolutionise the way the digital world handles data and does business. Be a part of this revolution and head start with Decentralise-App development.",
+  "description": "Welcome to the most exciting, ingenious invention and fasting growing technology ever, \"Matic Blockchain\". Blockchain technology is poised to revolutionise the way the digital world handles data and does business. Be a part of this revolution and head start with Decentralise-App development.",
   "source": "@site/docs/tutorial-getting-started.md",
   "permalink": "/docs/getting-started",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-getting-started.md",
