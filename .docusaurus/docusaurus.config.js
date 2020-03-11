@@ -61,7 +61,7 @@ export default {
   },
   "title": "Matic Network",
   "tagline": "Welcome to Matic Developer Documentation",
-  "url": "docs.matic.network",
+  "url": "https://docs.matic.network/",
   "baseUrl": "/",
   "favicon": "img/favicon.png",
   "organizationName": "Matic Network",
