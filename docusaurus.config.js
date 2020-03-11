@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Matic Network',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  tagline: 'Welcome to Matic Developer Documentation',
+  url: 'docs.matic.network',
   baseUrl: '/',
   favicon: 'img/favicon.png',
   organizationName: 'Matic Network',
@@ -23,6 +23,7 @@ module.exports = {
       logo: {
         alt: 'My Site Logo',
         src: '/img/logo.svg',
+        srcDark: '/img/logo-white.svg'
       },
       links: [
         { to: 'docs/resources/new-to-matic', label: 'Introduction', position: 'left' },

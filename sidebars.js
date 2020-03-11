@@ -51,7 +51,24 @@ module.exports = {
   development: [
     "getting-started",
     "helloworld",
-    "metamask",
+    
+    {
+      type: "category",
+      label: "Using Metamask",
+      items: [
+        "metamask",
+        "metamask/conf-custom-tokens-metamask",
+        "metamask/conf-testnet-metamask",
+        "metamask/gas-fees",
+        "metamask/multiple-accounts",
+      ]
+    },
+    {
+      type: "category",
+      label: "Deploying on Matic",
+      items: ["config-truffle"]
+
+    },
     {
       type: "category",
       label: "Connect to Web3",

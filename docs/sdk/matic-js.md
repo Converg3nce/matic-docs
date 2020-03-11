@@ -14,24 +14,6 @@ The process followed here is:
 
 In this tutorial we use ERC-20 assets to be transferred from Ropsten to Matic. The flow discussed below remains similar for ERC-721 assets with minor changes that will be mentioned wherever required.
 
-### Prerequisites:
-
-### Some ETH in your Ropsten account
-
-In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Ropsten, you can use the faucet links given here — https://faucet.metamask.io/ or https://faucet.ropsten.be/.
-
-### Matic Faucet
-
-Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `TEST` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below
-
-<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
-        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#000', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
-          <a href="https://faucet.matic.network/" target="_blank" style={{color: 'inherit'}}>
-            Get Test Tokens
-          </a>
-        </button>
-      </div>
-
 ## Using Matic JS
 
 We will be showcasing the flow for asset transfers on the Matic Network in this tutorial and how you can do the same using Matic.js:
@@ -46,6 +28,24 @@ We will be showcasing the flow for asset transfers on the Matic Network in this 
 5. Users need to wait for a 7 day challenge period
 6. Once the challenge period is complete, the withdrawn funds can be claimed back to your Ethereum acccount from the mainchain contract using a process-exit procedure.
     - User can also get a fast exit via 0x or Dharma (coming soon!)
+
+### Prerequisites:
+
+### Ropsten Faucet
+
+In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Ropsten, you can use the faucet links given here — https://faucet.metamask.io/ or https://faucet.ropsten.be/.
+
+### Matic Faucet
+
+Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `TEST` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below
+
+<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
+        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#000', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
+          <a href="https://faucet.matic.network/" target="_blank" style={{color: 'inherit'}}>
+            Get Test Tokens
+          </a>
+        </button>
+      </div>
 
 ### Basic setup for the tutorial
 

@@ -17,7 +17,8 @@ export default {
       "title": "Developer",
       "logo": {
         "alt": "My Site Logo",
-        "src": "/img/logo.svg"
+        "src": "/img/logo.svg",
+        "srcDark": "/img/logo-white.svg"
       },
       "links": [
         {
@@ -59,8 +60,8 @@ export default {
     }
   },
   "title": "Matic Network",
-  "tagline": "The tagline of my site",
-  "url": "https://your-docusaurus-test-site.com",
+  "tagline": "Welcome to Matic Developer Documentation",
+  "url": "docs.matic.network",
   "baseUrl": "/",
   "favicon": "img/favicon.png",
   "organizationName": "Matic Network",

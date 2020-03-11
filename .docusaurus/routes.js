@@ -76,6 +76,12 @@ export default [
   
   routes: [
 {
+  path: '/docs/2-min-guide-to-matic',
+  component: ComponentCreator('/docs/2-min-guide-to-matic'),
+  exact: true,
+  
+},
+{
   path: '/docs/advanced/calling-plasma-contracts',
   component: ComponentCreator('/docs/advanced/calling-plasma-contracts'),
   exact: true,
@@ -120,6 +126,12 @@ export default [
 {
   path: '/docs/bor-spec/setup-bor',
   component: ComponentCreator('/docs/bor-spec/setup-bor'),
+  exact: true,
+  
+},
+{
+  path: '/docs/config-truffle',
+  component: ComponentCreator('/docs/config-truffle'),
   exact: true,
   
 },
@@ -222,6 +234,30 @@ export default [
 {
   path: '/docs/metamask',
   component: ComponentCreator('/docs/metamask'),
+  exact: true,
+  
+},
+{
+  path: '/docs/metamask/conf-custom-tokens-metamask',
+  component: ComponentCreator('/docs/metamask/conf-custom-tokens-metamask'),
+  exact: true,
+  
+},
+{
+  path: '/docs/metamask/conf-testnet-metamask',
+  component: ComponentCreator('/docs/metamask/conf-testnet-metamask'),
+  exact: true,
+  
+},
+{
+  path: '/docs/metamask/gas-fees',
+  component: ComponentCreator('/docs/metamask/gas-fees'),
+  exact: true,
+  
+},
+{
+  path: '/docs/metamask/multiple-accounts',
+  component: ComponentCreator('/docs/metamask/multiple-accounts'),
   exact: true,
   
 },

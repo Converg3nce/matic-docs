@@ -1,0 +1,17 @@
+{
+  "id": "metamask/conf-custom-tokens-metamask",
+  "title": "Config Custom Tokens",
+  "description": "This page demonstrates the process of configuring/adding custom tokens to Metamask. Specifically, we have demonstrated adding the example `TEST` token to the Ropsten testnet as well as the Matic testnet. ",
+  "source": "@site/docs/metamask/conf-custom-tokens-metamask.md",
+  "permalink": "/docs/metamask/conf-custom-tokens-metamask",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/metamask/conf-custom-tokens-metamask.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "How to create a MetaMask Wallet?",
+    "permalink": "/docs/metamask"
+  },
+  "next": {
+    "title": "Config Matic on Metamask",
+    "permalink": "/docs/metamask/conf-testnet-metamask"
+  }
+}

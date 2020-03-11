@@ -8,8 +8,8 @@
   "sidebar_label": "Getting Started",
   "sidebar": "development",
   "previous": {
-    "title": "How to create a MetaMask Wallet?",
-    "permalink": "/docs/metamask"
+    "title": "Using Truffle",
+    "permalink": "/docs/config-truffle"
   },
   "next": {
     "title": "Metamask",

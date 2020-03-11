@@ -157,9 +157,46 @@
         "href": "/docs/helloworld"
       },
       {
-        "type": "link",
-        "label": "Hello Metamask",
-        "href": "/docs/metamask"
+        "type": "category",
+        "label": "Using Metamask",
+        "items": [
+          {
+            "type": "link",
+            "label": "Hello Metamask",
+            "href": "/docs/metamask"
+          },
+          {
+            "type": "link",
+            "label": "Config Custom Tokens",
+            "href": "/docs/metamask/conf-custom-tokens-metamask"
+          },
+          {
+            "type": "link",
+            "label": "Config Matic on Metamask",
+            "href": "/docs/metamask/conf-testnet-metamask"
+          },
+          {
+            "type": "link",
+            "label": "Changin Gas Fees",
+            "href": "/docs/metamask/gas-fees"
+          },
+          {
+            "type": "link",
+            "label": "Multiple Accounts",
+            "href": "/docs/metamask/multiple-accounts"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Deploying on Matic",
+        "items": [
+          {
+            "type": "link",
+            "label": "Using Truffle",
+            "href": "/docs/config-truffle"
+          }
+        ]
       },
       {
         "type": "category",
@@ -389,6 +426,7 @@
     "/docs/advanced/swap-assets": "development",
     "/docs/bor-spec/bor": "introduction",
     "/docs/bor-spec/setup-bor": "introduction",
+    "/docs/config-truffle": "development",
     "/docs/dagger/getting-started": "development",
     "/docs/getting-started": "development",
     "/docs/helloworld": "development",
@@ -406,6 +444,10 @@
     "/docs/integrations/zapier/about": "development",
     "/docs/integrations/zapier/getting-started": "development",
     "/docs/metamask": "development",
+    "/docs/metamask/conf-custom-tokens-metamask": "development",
+    "/docs/metamask/conf-testnet-metamask": "development",
+    "/docs/metamask/gas-fees": "development",
+    "/docs/metamask/multiple-accounts": "development",
     "/docs/network-config": "development",
     "/docs/resources/architecture": "introduction",
     "/docs/resources/blockchain-basics/accounts": "introduction",
