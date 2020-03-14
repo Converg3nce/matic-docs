@@ -32,7 +32,11 @@ $ bash install_go.sh
 
 > NOTE: You do not need rabbit-mq for stage-0 so you can choose to skip.
 
-A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions [here](https://www.rabbitmq.com/download.html).
+**Why do you need RabbitMq?**
+
+RabbitMQ is a message-queueing software also known as a message broker or queue manager. Simply said; it is software where queues are defined, to which applications connect in order to transfer a message or messages.
+
+A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions here: https://www.rabbitmq.com/download.html.
 
 ```js
 
@@ -145,7 +149,7 @@ Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the ke
 
 If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
 
-To generate a private key for your validator, run the following command:
+To generate a validator key for your validator, you can the following command. The private key required as the input is your Wallet's Private key.
 
     heimdallcli generate-validatorkey <private-key>
 
@@ -262,7 +266,7 @@ The key called `catching_up` will show your sync status, if it's not catching up
 
 **Expected Output**
 
-Your `heimdall-node` should be syncing now! Checkout `$GOPATH/src/github.com/maticnetwork/heimdall/logs/heimdalld.log` to get to the logs 🤩
+Your `heimdall-node` should be syncing now! You can check the logs `tail -f ~/.heimdalld/logs/heimdall.log`
 
 If everything's well, then your logs should look something like this:
 
@@ -306,13 +310,11 @@ For more info on how to connect to peers see [this](https://geth.ethereum.org/do
 
 **Generate Bor keystore file**
 
-To generate the keystore file for Bor, run the following command:
+To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Wallet's Private key. This would be the same private key that yo used for generating your `validator-key`
 
 ```bash
 heimdallcli generate-keystore <private-key>
 ```
-
-The private key required over here is the address of the one which has the tokens that you're going to stake. 
 
 Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
 
@@ -351,6 +353,8 @@ $ bash start.sh <Your address>
 
 Your `bor-node` should be syncing now! Checkout `~/.bor/logs/bor.log` to get to the logs 🤩
 
+`tail -f ~/.bor/logs/bor.log`
+
 If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-bor.png)
@@ -361,3 +365,12 @@ If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Co
 
 Once you are done checking the logs or querying the data, you may proceed to staking tokens.
 
+In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
+
+For an issue you have encountered specifically with Heimdall or Heimdall related, you can create an issue in the Heimdall repository: https://github.com/maticnetwork/heimdall/issues
+
+For issues, you have encountered specifically with Bor or Bor related, you can create an issue in the Bor repository: https://github.com/maticnetwork/bor/issues
+
+For clear identification, you can also use labels to tag the issues reported.
+
+Upon reporting an issue, the Matic Project team will review and update/comment on the status of the issue. Depending on the severity of the issue, the Matic project team may request you to create a PR to provide a fix. Bounties and incentives would be provided for such issues.

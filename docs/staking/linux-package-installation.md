@@ -102,6 +102,10 @@ $ sudo vi /etc/heimdall/config/config.toml
 
 ### Step 6: Generate Heimdall private key
 
+If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
+
+To generate a validator key for your validator, you can the following command. The private key required as the input is your Wallet's Private key.
+
 ```js
 $ heimdallcli generate-validatorkey <private-key>
 
@@ -151,6 +155,10 @@ $ sudo cp $CONFIGPATH/bor/static-nodes.json /etc/bor/dataDir/bor/static-nodes.js
    
 ```
 ### Step 9: Generate Bor keystore file
+
+If you have received Matic tokens as part of Counter-stake. You need to generate a keystore for BOR here.
+
+To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Wallet's Private key. This would be the same private key that yo used for generating your `validator-key`
 
 ```js
  heimdallcli generate-keystore <private-key>
@@ -205,3 +213,13 @@ Once you are done checking the logs or querying the data, you may proceed to sta
 <!-- #### Query data
 
 To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/ -->
+
+In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
+
+For an issue you have encountered specifically with Heimdall or Heimdall related, you can create an issue in the Heimdall repository: https://github.com/maticnetwork/heimdall/issues
+
+For issues, you have encountered specifically with Bor or Bor related, you can create an issue in the Bor repository: https://github.com/maticnetwork/bor/issues
+
+For clear identification, you can also use labels to tag the issues reported.
+
+Upon reporting an issue, the Matic Project team will review and update/comment on the status of the issue. Depending on the severity of the issue, the Matic project team may request you to create a PR to provide a fix. Bounties and incentives would be provided for such issues.

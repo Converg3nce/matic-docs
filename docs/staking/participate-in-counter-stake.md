@@ -18,6 +18,8 @@ To participate in the public testnet event, you need to first setup your Full No
 
 ~~Please note that this stage is only for you to setup your Full Node and checkout the network status. You may stop all services later and restart again to participate in later stages of Counter Stake.~~
 
+Please note that if you were not part of Stage 0 or were unable to participate or register for Counter Stake during Stage 0, don't worry. You can still participate in Stage 1. You will need to join our [discord server](https://discord.gg/XvpHAxZ) and send us additional details on [this form](https://t.co/Ft80ZDdt6d)
+
 **Stage 1 - Stake on the Beach (On-going)**
 
 * **Step 1:** Setup your Full Node 
