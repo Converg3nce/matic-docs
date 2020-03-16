@@ -1,0 +1,100 @@
+site_name: "Matic"
+site_url: "https://docs.matic.network"
+
+theme:
+  language: "en"
+  feature:
+    tabs: true
+  palette:
+    primary: "white"
+    accent: "indigo"
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  name: "material"
+
+markdown_extensions:
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"
+
+extra:
+  social:
+    - type: "github"
+      link: "https://github.com/maticnetwork"
+    - type: "twitter"
+      link: "https://twitter.com/maticnetwork"
+    - type: "linkedin"
+      link: "https://www.linkedin.com/company/matic-network"
+    - type: "telegram"
+      link: "https://t.me/maticnetwork"
+    - type: "medium"
+      link: "https://medium.com/matic-network"
+
+nav:
+  - Matic Testnet:
+      - Home: index.md
+      - Quick start: 2-min-guide-to-matic.md
+      - Getting started: getting-started.md
+      - Deploying contracts on testnet: deploy-contracts-remix.md
+      - Calling Plasma Contracts: calling-matic-plasma-contracts.md
+      - Matic.js SDK tutorial: matic-js-tutorial.md
+      - Adding custom restrictions (ERC20/ERC721): custom-restrictions.md
+      - Swapping ERC20/ERC721: swap-assets.md
+      - API Reference: api-reference.md
+      - Registered Tokens (ERC20): mapped-tokens.md
+      - Moibit - Decentralized Storage: integrate-with-moibit.md
+      - FAQ: faq.md
+
+  - Dagger:
+      - Getting started: dagger/getting-started.md
+  - Zapier:
+      - Introduction: zapier/introduction.md
+      - Getting started: zapier/getting-started.md
+  - For newbies:
+      - Home: newbies/introduction.md
+      - Create accounts on Metamask: newbies/create-accounts-metamask.md
+      - Configure Matic testnet on Metamask: newbies/conf-testnet-metamask.md
+      - Configure custom tokens on Metamask: newbies/conf-custom-tokens-metamask.md
+      - Changing Gas fees on Metamask: newbies/how-to-change-gas-fees.md
+      - Getting Started with Solidity: newbies/getting-started-solidity.md
+      - Deploying a DApp on Matic Network: newbies/deploy-dapp-on-matic.md
+  - Matic Alpha-Mainnet:
+      - Introduction: alpha-mainnet/introduction.md
+      - Deploying contracts on Matic Alpha-mainnet: alpha-mainnet/deploy-contracts-remix-alpha-mainnet.md
+      - Calling Matic Plasma Contracts: alpha-mainnet/calling-matic-plasma-contracts-alpha.md
+      - Matic.js tutorial: alpha-mainnet/matic-js-alpha-mainnet.md
+      - Configure Matic Alpha-mainnet on Metamask: alpha-mainnet/conf-alpha-mainnet-metamask.md
+      - Registered Tokens (ERC20): alpha-mainnet/mapped-tokens-alpha.md
+  - Staking:
+      - Economics: staking/economics.md
+      - Staking FAQs: staking/faqs.md
+      - Technical Requirements: staking/technical-requirements.md
+      - 'Node Setup Guide': 
+        - 'Overview': staking/node-setup-guide.md
+        - 'Heimdall':
+          - 'Install Heimdall': staking/heimdall/install-heimdall.md
+          - 'Running Heimdall': staking/heimdall/run-heimdall.md
+          - 'Configuring Heimdall': staking/heimdall/configure-heimdall.md
+        - 'Bor':
+          - 'Install Bor': staking/bor/install-bor.md
+          - 'Running Bor': staking/bor/run-bor.md
+        - 'Public Testnet': staking/join-public-testnet.md
+        - 'Examples': staking/examples.md
+        - 'Deploy Matic Testnet': staking/deploy-your-own-matic-testnet.md
