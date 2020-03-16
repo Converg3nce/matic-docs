@@ -60,6 +60,8 @@ $ sudo apt-get install build-essential
 $ brew install make
 ```
 
+Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
+
 ### Step 4: Install Heimdall
 
 Next, let's install the latest version of Heimdall. Here, we'll use the master branch, which contains the latest stable release. If necessary, make sure you `git checkout` the correct [released version](https://github.com/maticnetwork/heimdall/releases)
@@ -71,7 +73,7 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout cs-2003-1
+// For eg: git checkout cs-2004
 $ git checkout <TAG OR BRANCH>
 $ make install
 ```
@@ -108,7 +110,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-2003
+// For eg: git checkout CS-2004
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
@@ -127,8 +129,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2003
-// Example: $ cd public-testnets/CS-2003
+// Current testnet version is CS-2004
+// Example: $ cd public-testnets/CS-2004
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -141,17 +143,17 @@ $ cp $CONFIGPATH/heimdall/config/genesis.json  $HEIMDALLDIR/config/genesis.json
 $ cp $CONFIGPATH/heimdall/config/heimdall-config.toml $HEIMDALLDIR/config/heimdall-config.toml
 ```
 
-> NOTE: In case you do not have a ropsten API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
+> NOTE: In case you do not have a Goerli API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
 
 Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
 
 **Generate Heimdall private key**
 
-If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
+If you have received Matic tokens as part of Counter-stake, you need to generate validator key on Heimdall to participate.
 
-To generate a validator key for your validator, you can the following command. The private key required as the input is your Wallet's Private key.
+The private key required as the input is your Ethereum/Goerli wallet's Private key, where you received the test Matic tokens. You will be able to locate it in the wallet settings, depending on the Ethereum wallet you use.
 
-    heimdallcli generate-validatorkey <private-key>
+    heimdallcli generate-validatorkey <Your Ethereum/Goerli wallet private key>
 
 This will create **priv_validator_key.json** in the same folder.
 
@@ -163,7 +165,13 @@ Move this validator key file to heimdall config folder.
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers in the file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
-Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`. All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
+To see the list of peers, run the following command, you could do so by running the command `cat /public-testnets/CS-2004/heimdall/heimdall-seeds.txt`.
+
+All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
+
+```js
+vi ~/.heimdalld/config/config.toml
+```
 
 #### 6.3: Start & sync Heimdall
 
@@ -218,9 +226,10 @@ $ rm -rf $HEIMDALLDIR/bridge
 
 To check the sync status you can run the follwing command on your node
 
-```bash
+```js
 $ curl http://localhost:26657/status
-
+```
+```js
 // Output
 {
   "jsonrpc": "2.0",
@@ -266,11 +275,17 @@ The key called `catching_up` will show your sync status, if it's not catching up
 
 **Expected Output**
 
-Your `heimdall-node` should be syncing now! You can check the logs `tail -f ~/.heimdalld/logs/heimdall.log`
+Your `heimdall-node` should be syncing now! You can check the logs by running the command
+
+```js
+tail -f ~/.heimdalld/logs/heimdall.log
+```
 
 If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-heimdall.png)
+
+If you're running into any issues while setting up your Heimdall node, you can refer the Technical FAQs for solutions: https://docs.matic.network/staking/technical-faqs/
 
 
 **You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
@@ -310,10 +325,10 @@ For more info on how to connect to peers see [this](https://geth.ethereum.org/do
 
 **Generate Bor keystore file**
 
-To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Wallet's Private key. This would be the same private key that yo used for generating your `validator-key`
+To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Ethereum/Goerli's wallet Private key. This would be the same private key that yo used for generating your `validator-key`
 
 ```bash
-heimdallcli generate-keystore <private-key>
+heimdallcli generate-keystore <Your Ethereum/>Goerli wallet private key>
 ```
 
 Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
@@ -351,19 +366,23 @@ $ bash start.sh <Your address>
 
 **Expected Output**
 
-Your `bor-node` should be syncing now! Checkout `~/.bor/logs/bor.log` to get to the logs 🤩
+Your `bor-node` should be syncing now! Checkout `~/.bor/logs/bor.log` to get to the logs 🤩 or you could run the following command:
 
-`tail -f ~/.bor/logs/bor.log`
+```js
+tail -f ~/.bor/logs/bor.log
+```
 
 If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-bor.png)
 
+If you're running into any issues while setting up your Bor node, you can refer the Technical FAQs for solutions: https://docs.matic.network/staking/technical-faqs/
+
 **Ta-Da**
 
 If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
 
-Once you are done checking the logs or querying the data, you may proceed to staking tokens.
+Once you are done checking the logs or querying the data, you may proceed to staking tokens. Here is you can stake on Matic: [How to Stake](https://docs.matic.network/staking/stake-on-matic/)
 
 In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
 

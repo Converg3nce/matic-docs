@@ -21,7 +21,7 @@ First you do a basic check on your account information by running the below comm
 
     heimdalld show-account
 
-The following output should appear:
+Your output should appear in the following format:
 
     {
         "address": "0x6c468CF8c9879006E22EC4029696E005C2319C9D",
@@ -96,7 +96,7 @@ Once you run the approve command you should see the following response along wit
 
     Sent approve tx sucessfully txHash=0x987aa9a319de34f61b768e4bbac160212055d8e5e9b813b2fc520dc650488943
 
-To check the status of the transaction, you paste the `txHash` on this link: [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
+To check the status of the transaction, you paste the `txHash` on this link: [https://goerli.etherscan.io/](https://goerli.etherscan.io/)
 
 
 
@@ -116,7 +116,7 @@ You should see the following response once you run the above command
 
     Submitted stake sucessfully txHash=0x987aa9a319de34f61b768e4bbac160212055d8e5e9b813b2fc520dc650488943
 
-To check the status of the transaction, you paste the `txHash` on this link: [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
+To check the status of the transaction, you paste the `txHash` on this link: [https://goerlie.etherscan.io/](https://goerli.etherscan.io/)
 
 ### Balance
 
@@ -146,7 +146,9 @@ Once you have adequate balance to pay fees on Heimdall, you can join the network
 
 You can view your `pub-key` by running the command `heimdalld show-account` 
 
-The chain-id required here is the heimdall chain-id - `heimdall-cs2003`
+The chain-id required here is the heimdall chain-id - `heimdall-cs2004`
+
+By running the above command, you're essentially sending a request to join the pool of validators that are running the network. Once you have successfully run this command you can then check the status on the validator dashboard: https://wallet.matic.today/staking/validators/<validator-id>
 
 ### Validator information
 
@@ -154,7 +156,7 @@ The chain-id required here is the heimdall chain-id - `heimdall-cs2003`
 
     heimdallcli query staking validator-info --validator=<signer address> --chain-id <chain-id>
 
-Here the signer address is the same as your wallet address which holds the staking tokens. And the chain id is the Heimdall chain-id for a a particular testnet, for example `heimdall-cs2003`
+Here the signer address is the same as your wallet address which holds the staking tokens. And the chain id is the Heimdall chain-id for a a particular testnet, for example `heimdall-cs2004`
 
 This command should display the following output:
 
@@ -173,8 +175,18 @@ This command should display the following output:
 
     heimdallcli query staking validator-info --id=1 --chain-id=<chain-id>
 
-Here the valude in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://ropsten.etherscan.com and check your transaction hash there. You would see your `id` present there.
+Here the value in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://goerli.etherscan.io and check your stake transaction hash there. You would see your `id` present there.
 
 ![Arch](./images/validator-id.png)
 
-This command will print output in format as "validator by signer address" command.
+    {
+    	"ID":1,
+    	"startEpoch":0,
+    	"endEpoch":0,
+    	"power":10,
+    	"pubKey":"0x04b12d8b2f6e3d45a7ace12c4b2158f79b95e4c28ebe5ad54c439be9431d7fc9dc1164210bf6a5c3b8523528b931e772c86a307e8cff4b725e6b4a77d21417bf19",
+    	"signer":"0x6c468cf8c9879006e22ec4029696e005c2319c9d",
+    	"last_updated":0,
+    	"accum":0
+    }
+
