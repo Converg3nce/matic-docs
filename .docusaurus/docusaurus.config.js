@@ -37,16 +37,6 @@ export default {
           "position": "left"
         },
         {
-          "to": "showcase",
-          "label": "Showcase",
-          "position": "right"
-        },
-        {
-          "href": "https://github.com/facebook/docusaurus",
-          "label": "GitHub",
-          "position": "right"
-        },
-        {
           "href": "https://blog.matic.network/",
           "label": "Blog",
           "position": "left"

@@ -30,12 +30,7 @@ module.exports = {
         { to: 'docs/getting-started', label: 'Development', position: 'left' },
         { to: 'docs/staking/economics', label: 'Validators', position: 'left' },
         // { to: 'docs/integrations/getting-started', label: 'Integrate', position: 'left' },
-        { to: 'showcase', label: 'Showcase', position: 'right' },
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        // { to: 'showcase', label: 'Showcase', position: 'right' },
         {
           href: 'https://blog.matic.network/',
           label: 'Blog',
