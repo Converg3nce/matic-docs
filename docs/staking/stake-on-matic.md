@@ -175,8 +175,18 @@ This command should display the following output:
 
     heimdallcli query staking validator-info --id=1 --chain-id=<chain-id>
 
-Here the valude in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://goerli.etherscan.io and check your transaction hash there. You would see your `id` present there.
+Here the value in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://goerli.etherscan.io and check your stake transaction hash there. You would see your `id` present there.
 
 ![Arch](./images/validator-id.png)
 
-This command will print output in format as "validator by signer address" command.
+    {
+    	"ID":1,
+    	"startEpoch":0,
+    	"endEpoch":0,
+    	"power":10,
+    	"pubKey":"0x04b12d8b2f6e3d45a7ace12c4b2158f79b95e4c28ebe5ad54c439be9431d7fc9dc1164210bf6a5c3b8523528b931e772c86a307e8cff4b725e6b4a77d21417bf19",
+    	"signer":"0x6c468cf8c9879006e22ec4029696e005c2319c9d",
+    	"last_updated":0,
+    	"accum":0
+    }
+
