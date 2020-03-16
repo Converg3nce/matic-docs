@@ -21,7 +21,7 @@ First you do a basic check on your account information by running the below comm
 
     heimdalld show-account
 
-The following output should appear:
+Your output should appear in the following format:
 
     {
         "address": "0x6c468CF8c9879006E22EC4029696E005C2319C9D",
@@ -146,7 +146,7 @@ Once you have adequate balance to pay fees on Heimdall, you can join the network
 
 You can view your `pub-key` by running the command `heimdalld show-account` 
 
-The chain-id required here is the heimdall chain-id - `heimdall-cs2003`
+The chain-id required here is the heimdall chain-id - `heimdall-cs2004`
 
 ### Validator information
 
@@ -154,7 +154,7 @@ The chain-id required here is the heimdall chain-id - `heimdall-cs2003`
 
     heimdallcli query staking validator-info --validator=<signer address> --chain-id <chain-id>
 
-Here the signer address is the same as your wallet address which holds the staking tokens. And the chain id is the Heimdall chain-id for a a particular testnet, for example `heimdall-cs2003`
+Here the signer address is the same as your wallet address which holds the staking tokens. And the chain id is the Heimdall chain-id for a a particular testnet, for example `heimdall-cs2004`
 
 This command should display the following output:
 
