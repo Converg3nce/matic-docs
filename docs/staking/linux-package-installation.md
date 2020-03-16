@@ -89,7 +89,7 @@ $ sudo cp $CONFIGPATH/heimdall/config/genesis.json /etc/heimdall/config/genesis.
 $ sudo cp $CONFIGPATH/heimdall/config/heimdall-config.toml /etc/heimdall/config/heimdall-config.toml
 ```
 
-> NOTE: In case you do not have a Görli API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
+> NOTE: In case you do not have a Goerli API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
 
 Add your API key in file `/etc/heimdall/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
 
