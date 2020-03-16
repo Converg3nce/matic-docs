@@ -35,7 +35,7 @@ Please note that if you were not part of Stage 0 or were unable to participate o
 * **Step 2:** Stake tokens to become a validator - follow this guide - [https://docs.matic.network/staking/stake-on-matic/](../stake-on-matic)
 
 
-We will be testing all features incrementally here; rewards, slashing, replacement and more. You will need to maintain your uptime and earn rewards as per your performance.
+We will be testing all features incrementally here; rewards, slashing, replacement and more. You will need to maintain your uptime and earn rewards as per your performance. For more details on rewards, you can read here: https://docs.matic.network/rewards
 
 **Stage 2 - The Grand Staking League**
 
