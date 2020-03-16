@@ -149,9 +149,9 @@ Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the ke
 
 **Generate Heimdall private key**
 
-If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
+If you have received Matic tokens as part of Counter-stake, you need to generate validator key on Heimdall to participate.
 
-To generate a validator key for your validator, you can run the following command. The private key required as the input is your Wallet's Private key.
+The private key required as the input is your Ethereum/Goerli wallet's Private key, where you received the test Matic tokens. You will be able to locate it in the wallet settings, depending on the Ethereum wallet you use.
 
     heimdallcli generate-validatorkey <Your Ethereum/Goerli wallet private key>
 

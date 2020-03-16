@@ -113,9 +113,9 @@ $ sudo vi /etc/heimdall/config/config.toml
 
 ### Step 6: Generate Heimdall private key
 
-If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
+If you have received Matic tokens as part of Counter-stake, you need to generate validator key on Heimdall to participate.
 
-To generate a validator key for your validator, you can run the following command. The private key required as the input is your Wallet's Private key.
+The private key required as the input is your Ethereum/Goerli wallet's Private key, where you received the test Matic tokens. You will be able to locate it in the wallet settings, depending on the Ethereum wallet you use.
 
 ```js
 $ heimdallcli generate-validatorkey <Your Ethereum/Goerli wallet private key>
@@ -240,7 +240,7 @@ If you're running into any issues while setting up your Bor node, you can refer 
 
 If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
 
-Once you are done checking the logs or querying the data, you may proceed to staking tokens. Once you are done checking the logs or querying the data, you may proceed to staking tokens. Here is you can stake on Matic: [How to Stake](https://docs.matic.network/staking/stake-on-matic/)
+Once you are done checking the logs or querying the data, you may proceed to staking tokens. Here is you can stake on Matic: [How to Stake](https://docs.matic.network/staking/stake-on-matic/)
 
 <!-- #### Query data
 
