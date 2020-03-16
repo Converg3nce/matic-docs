@@ -16,6 +16,12 @@ Please note that if you do have a previous setup of Heimdall and Bor installed o
 
 ### Step 1: Install rabbit-mq
 
+**Why do you need RabbitMq?**
+
+RabbitMQ is a message-queueing software also known as a message broker or queue manager. Simply said; it is software where queues are defined, to which applications connect in order to transfer a message or messages.
+
+A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions here: https://www.rabbitmq.com/download.html.
+
 **For Ubuntu/Debian**
 
 ```js
@@ -112,7 +118,7 @@ If you have received Matic tokens as part of Counter-stake. You need to generate
 To generate a validator key for your validator, you can run the following command. The private key required as the input is your Wallet's Private key.
 
 ```js
-$ heimdallcli generate-validatorkey <private-key>
+$ heimdallcli generate-validatorkey <Your Ethereum/Goerli wallet private key>
 
 $ sudo mv ./priv_validator_key.json /etc/heimdall/config/
 ```
@@ -139,7 +145,18 @@ $ sudo service heimdalld-bridge start
 
 **Expected Output**
 
-Your `heimdall-node` should be syncing now! You can see logs of the above services under `/var/log/matic-logs/` 🤩
+Your `heimdall-node` should be syncing now! You can see logs of the above services under `/var/log/matic-logs/` 🤩 or you could also run the command
+
+```js
+tail -f /var/log/matic-logs/heimdalld.log
+```
+
+If everything's well, then your logs should look something like this:
+
+![Screenshot](./images/expected-heimdall.png)
+
+If you're running into any issues while setting up your Heimdall node, you can refer the Technical FAQ's for solutions: https://docs.matic.network/staking/technical-faqs/
+
 
 **You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
     
@@ -166,7 +183,7 @@ If you have received Matic tokens as part of Counter-stake. You need to generate
 To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Wallet's Private key. This would be the same private key that yo used for generating your `validator-key`
 
 ```js
- heimdallcli generate-keystore <private-key>
+ heimdallcli generate-keystore <Your Ethereum/Goerli wallet private key>
 ```
 
 Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
@@ -207,7 +224,17 @@ $ sudo vi  /etc/bor/metadata
 ```
 **Expected Output**
 
-You can see logs of Bor service under `/var/log/matic-logs/bor.log` 🤩
+You can see logs of Bor service under `/var/log/matic-logs/bor.log` 🤩 or you could run the following command:
+
+```js
+tail -f /var/log/matic-logs/bor.log
+```
+
+If everything's well, then your logs should look something like this:
+
+![Screenshot](./images/expected-bor.png)
+
+If you're running into any issues while setting up your Bor node, you can refer the Technical FAQ's for solutions: https://docs.matic.network/staking/technical-faqs/
 
 **Ta-Da**
 

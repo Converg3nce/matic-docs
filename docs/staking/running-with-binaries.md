@@ -153,7 +153,7 @@ If you have received Matic tokens as part of Counter-stake. You need to generate
 
 To generate a validator key for your validator, you can run the following command. The private key required as the input is your Wallet's Private key.
 
-    heimdallcli generate-validatorkey <private-key>
+    heimdallcli generate-validatorkey <Your Ethereum/Goerli wallet private key>
 
 This will create **priv_validator_key.json** in the same folder.
 
@@ -284,6 +284,8 @@ tail -f ~/.heimdalld/logs/heimdall.log
 If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-heimdall.png)
+
+If you're running into any issues while setting up your Heimdall node, you can refer the Technical FAQ's for solutions: https://docs.matic.network/staking/technical-faqs/
 
 
 **You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
