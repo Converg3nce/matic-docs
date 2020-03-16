@@ -1,6 +1,14 @@
-# Website
+# Matic-Docs
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+- To add a new document, please add your files under the Dir: ./docs
+- Add this to top of your Markdown file. 
+``` 
+---
+id: <Add-you-docId-Here>
+title: <Title of the Doc>
+---
+``` 
+- And update the Sidebar.js.
 
 ### Installation
 

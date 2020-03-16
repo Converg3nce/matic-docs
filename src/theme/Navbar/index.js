@@ -117,7 +117,7 @@ function Navbar() {
         [styles.navbarHideable]: hideOnScroll,
         [styles.navbarHidden]: !isNavbarVisible
       })}
-      style={{fontSize: "16px" }}
+      style={{ fontSize: "16px" }}
     >
       <div className="navbar__inner">
         <div className="navbar__items" style={{ marginLeft: "30px" }}>
@@ -149,12 +149,22 @@ function Navbar() {
           </div>
           <Link className="navbar__brand" to={logoLink} {...logoLinkProps}>
             {logo != null && (
-              <img className="navbar__logo" style={{ height:"25px", width:"104px"}} src={logoImageUrl} alt={logo.alt} />
+              <img
+                className="navbar__logo"
+                style={{ height: "25px", width: "104px" }}
+                src={logoImageUrl}
+                alt={logo.alt}
+              />
             )}
             {title != null && (
               <strong
                 className={isSearchBarExpanded ? styles.hideLogoText : ""}
-                style={{fontSize: "22px", color: "#9FA8BA", fontWeight:"normal", marginRight:"300px"}}
+                style={{
+                  fontSize: "22px",
+                  color: "#9FA8BA",
+                  fontWeight: "normal",
+                  marginRight: "100px"
+                }}
               >
                 {title}
               </strong>
@@ -164,10 +174,12 @@ function Navbar() {
             .filter(linkItem => linkItem.position !== "right")
             .map((linkItem, i) => (
               <NavLink {...linkItem} key={i} />
-            ))
-            }
+            ))}
         </div>
-        <div className="navbar__items navbar__items--right" style={{marginRight: "10px"}}>
+        <div
+          className="navbar__items navbar__items--right"
+          style={{ marginRight: "10px" }}
+        >
           {links
             .filter(linkItem => linkItem.position === "right")
             .map((linkItem, i) => (
@@ -227,6 +239,10 @@ function Navbar() {
                 </li>
               ))}
             </ul>
+            <SearchBar
+                handleSearchBarToggle={setIsSearchBarExpanded}
+                isSearchBarExpanded={isSearchBarExpanded}
+              />
           </div>
         </div>
       </div>

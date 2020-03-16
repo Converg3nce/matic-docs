@@ -16,7 +16,7 @@ export default {
     "navbar": {
       "title": "Developer",
       "logo": {
-        "alt": "My Site Logo",
+        "alt": "Matic",
         "src": "/img/logo.svg",
         "srcDark": "/img/logo-white.svg"
       },

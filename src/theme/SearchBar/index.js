@@ -87,7 +87,7 @@ const Search = props => {
   });
 
   return (
-    <div className="navbar__search" key="search-box">
+    <div className={classnames("navbar__search", "displayOnlyInLargeViewport")} key="search-box">
       <span
         aria-label="expand searchbar"
         role="button"
