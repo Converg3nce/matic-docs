@@ -89,7 +89,7 @@ nav:
       - Technical Requirements: staking/technical-requirements.md
       - 'Counter Stake - Stage 1': 
         - 'Getting Started': staking/participate-in-counter-stake.md
-        - 'Introduction': staking/introduction.md
+        - 'Core Components': staking/core-components.md
         - 'Linux Package Installation': staking/linux-package-installation.md
         - 'Running with Binaries': staking/running-with-binaries.md
         - 'Stake on Matic': staking/stake-on-matic.md

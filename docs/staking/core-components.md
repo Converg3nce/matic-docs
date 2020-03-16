@@ -15,3 +15,12 @@ The core responsibility of Heimdall is to verify all state transitions happening
 
 Bor is the EVM compatible Matic Side chain which currently is built on top of `geth` using `bor` consensus mechanism.
 
+**Staking Contracts**
+
+To enable the PoS mechanism on our platform, we employ a set of staking management contracts on Ethereum, as well as a set of incentivized validators running Heimdall and Bor nodes. These implement the following features:
+
+* The ability for anyone to stake MATIC tokens on the Ethereum smart contract and join the system as a Validator.
+* Earn staking rewards for validating state transitions on Matic Network.
+* Enable penalties/slashing for activities such as double signing, validator downtime, etc.
+
+The PoS mechanism also acts as a mitigation to the data unavailability problem for our sidechains in terms of Plasma.
