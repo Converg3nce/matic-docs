@@ -1,0 +1,17 @@
+{
+  "id": "matic-security-models",
+  "title": "Security Models",
+  "description": "Matic provides three types of security models for a developer to build their DApp upon:",
+  "source": "@site/docs/matic-security-models.md",
+  "permalink": "/docs/matic-security-models",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/matic-security-models.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Ethereum to Matic",
+    "permalink": "/docs/matic-moving-assets"
+  },
+  "next": {
+    "title": "Getting Started with Solidity",
+    "permalink": "/docs/tutorial-ethindia-workshop-solidity"
+  }
+}

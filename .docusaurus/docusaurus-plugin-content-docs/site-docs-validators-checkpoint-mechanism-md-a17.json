@@ -1,0 +1,8 @@
+{
+  "id": "validators/checkpoint-mechanism",
+  "title": "Checkpoint Mechanism",
+  "description": "The main difference between Matic’s PoS system and that of others is that Matic is not a Layer 1 platform, and it depends on Ethereum as a Layer-1 settlement layer. Therefore, all staking mechanics also need to be in sync with the Ethereum chain smart contracts.",
+  "source": "@site/docs/validators/checkpoint-mechanism.md",
+  "permalink": "/docs/validators/checkpoint-mechanism",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validators/checkpoint-mechanism.md"
+}

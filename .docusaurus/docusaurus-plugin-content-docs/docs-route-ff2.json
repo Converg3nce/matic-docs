@@ -1,0 +1,488 @@
+{
+  "docsSidebars": {
+    "introduction": [
+      {
+        "type": "link",
+        "label": "New to Matic?",
+        "href": "/docs/resources/new-to-matic"
+      },
+      {
+        "type": "category",
+        "label": "Blockchain Basics",
+        "items": [
+          {
+            "type": "link",
+            "label": "Blockchain",
+            "href": "/docs/resources/blockchain-basics/blockchain"
+          },
+          {
+            "type": "link",
+            "label": "Types of Blockchain",
+            "href": "/docs/resources/blockchain-basics/blockchain-types"
+          },
+          {
+            "type": "link",
+            "label": "Consensus Mechanism",
+            "href": "/docs/resources/blockchain-basics/consensus-mechanism"
+          },
+          {
+            "type": "link",
+            "label": "Ethereum",
+            "href": "/docs/resources/blockchain-basics/ethereum"
+          },
+          {
+            "type": "link",
+            "label": "Matic",
+            "href": "/docs/resources/blockchain-basics/matic"
+          },
+          {
+            "type": "link",
+            "label": "Solidity",
+            "href": "/docs/resources/blockchain-basics/solidity"
+          },
+          {
+            "type": "link",
+            "label": "Transactions",
+            "href": "/docs/resources/blockchain-basics/transactions"
+          },
+          {
+            "type": "link",
+            "label": "Gas",
+            "href": "/docs/resources/blockchain-basics/gas"
+          },
+          {
+            "type": "link",
+            "label": "Accounts",
+            "href": "/docs/resources/blockchain-basics/accounts"
+          },
+          {
+            "type": "link",
+            "label": "Sidechains and Plasma",
+            "href": "/docs/resources/sidechain"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Validator",
+        "items": [
+          {
+            "type": "link",
+            "label": "Staking",
+            "href": "/docs/validator/staking"
+          },
+          {
+            "type": "link",
+            "label": "Validator",
+            "href": "/docs/validator/validator"
+          },
+          {
+            "type": "link",
+            "label": "Proposers & Producers Selection",
+            "href": "/docs/validator/proposers-producers-selection"
+          },
+          {
+            "type": "link",
+            "label": "State Sync Mechanism",
+            "href": "/docs/validator/state-sync"
+          },
+          {
+            "type": "link",
+            "label": "Heimdall Chain",
+            "href": "/docs/validator/heimdall-chain"
+          },
+          {
+            "type": "link",
+            "label": "BOR Chain",
+            "href": "/docs/validator/bor-chain"
+          },
+          {
+            "type": "link",
+            "label": "Delegator",
+            "href": "/docs/validator/delegator"
+          },
+          {
+            "type": "link",
+            "label": "Checkpoint Mechanism",
+            "href": "/docs/validator/checkpoint-mechanism"
+          },
+          {
+            "type": "link",
+            "label": "Liquid Delegation in Matic",
+            "href": "/docs/validator/liquid-delegation"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Bor Specs",
+        "items": [
+          {
+            "type": "link",
+            "label": "Bor",
+            "href": "/docs/bor-spec/bor"
+          },
+          {
+            "type": "link",
+            "label": "Setup Bor",
+            "href": "/docs/bor-spec/setup-bor"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Matic Architecture",
+        "href": "/docs/resources/architecture"
+      },
+      {
+        "type": "link",
+        "label": "Security Models",
+        "href": "/docs/advanced/security-models"
+      },
+      {
+        "type": "link",
+        "label": "FAQ",
+        "href": "/docs/resources/faq"
+      }
+    ],
+    "development": [
+      {
+        "type": "link",
+        "label": "Getting Started",
+        "href": "/docs/getting-started"
+      },
+      {
+        "type": "link",
+        "label": "Smart Contract on Matic",
+        "href": "/docs/helloworld"
+      },
+      {
+        "type": "category",
+        "label": "Using Metamask",
+        "items": [
+          {
+            "type": "link",
+            "label": "Hello Metamask",
+            "href": "/docs/metamask"
+          },
+          {
+            "type": "link",
+            "label": "Config Custom Tokens",
+            "href": "/docs/metamask/conf-custom-tokens-metamask"
+          },
+          {
+            "type": "link",
+            "label": "Config Matic on Metamask",
+            "href": "/docs/metamask/conf-testnet-metamask"
+          },
+          {
+            "type": "link",
+            "label": "Changin Gas Fees",
+            "href": "/docs/metamask/gas-fees"
+          },
+          {
+            "type": "link",
+            "label": "Multiple Accounts",
+            "href": "/docs/metamask/multiple-accounts"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Deploying on Matic",
+        "items": [
+          {
+            "type": "link",
+            "label": "Using Truffle",
+            "href": "/docs/config-truffle"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Connect to Web3",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/integrations/key-management/getting-started"
+          },
+          {
+            "type": "link",
+            "label": "Metamask",
+            "href": "/docs/integrations/key-management/metamask"
+          },
+          {
+            "type": "link",
+            "label": "Wallet Connect",
+            "href": "/docs/integrations/key-management/walletconnect"
+          },
+          {
+            "type": "link",
+            "label": "Portis",
+            "href": "/docs/integrations/key-management/portis"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Ethereum ↔️ Matic",
+        "items": [
+          {
+            "type": "link",
+            "label": "Matic.js",
+            "href": "/docs/sdk/matic-js"
+          },
+          {
+            "type": "link",
+            "label": "Matic.js API",
+            "href": "/docs/sdk/api-reference"
+          },
+          {
+            "type": "link",
+            "label": "Moving Assets",
+            "href": "/docs/advanced/moving-assets"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Meta Transactions",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/integrations/metatransactions/metatransactions"
+          },
+          {
+            "type": "link",
+            "label": "Biconomy",
+            "href": "/docs/integrations/metatransactions/metatransactions-biconomy"
+          },
+          {
+            "type": "link",
+            "label": "Gas Station Network",
+            "href": "/docs/integrations/metatransactions/metatransactions-gsn"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Oracles",
+        "href": "/docs/integrations/oracles"
+      },
+      {
+        "type": "link",
+        "label": "Fiat-on-Ramp",
+        "href": "/docs/integrations/fiat-on-ramp"
+      },
+      {
+        "type": "category",
+        "label": "Realtime Updates",
+        "items": [
+          {
+            "type": "link",
+            "label": "Dagger - Single App",
+            "href": "/docs/dagger/getting-started"
+          },
+          {
+            "type": "link",
+            "label": "Zapier - Multiple Apps",
+            "href": "/docs/integrations/zapier/about"
+          },
+          {
+            "type": "link",
+            "label": "Zapier - Getting Started",
+            "href": "/docs/integrations/zapier/getting-started"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Decentralised Storage",
+        "items": [
+          {
+            "type": "link",
+            "label": "MóiBit",
+            "href": "/docs/integrations/decentralised-storage/moibit"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Network Config",
+        "href": "/docs/network-config"
+      },
+      {
+        "type": "category",
+        "label": "Tutorials",
+        "items": [
+          {
+            "type": "link",
+            "label": "PoS (Full Stack DApp)",
+            "href": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Advanced",
+        "items": [
+          {
+            "type": "link",
+            "label": "Calling Plasma Contracts",
+            "href": "/docs/advanced/calling-plasma-contracts"
+          },
+          {
+            "type": "link",
+            "label": "Swap Assets",
+            "href": "/docs/advanced/swap-assets"
+          },
+          {
+            "type": "link",
+            "label": "Deploying Matic Locally",
+            "href": "/docs/advanced/deploy-your-own-matic-testnet"
+          },
+          {
+            "type": "link",
+            "label": "Adding Custom Restrictions (ERC20/ERC721)",
+            "href": "/docs/advanced/custom-restrictions"
+          }
+        ]
+      }
+    ],
+    "Integrations": [
+      {
+        "type": "link",
+        "label": "Getting Started",
+        "href": "/docs/integrations/getting-started"
+      }
+    ],
+    "Validators": [
+      {
+        "type": "link",
+        "label": "Economics",
+        "href": "/docs/staking/economics"
+      },
+      {
+        "type": "link",
+        "label": "Minimum Technical Requirements",
+        "href": "/docs/staking/technical-requirements"
+      },
+      {
+        "type": "category",
+        "label": "Counter Stake: Stage 1",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started",
+            "href": "/docs/staking/counter-stake-stage-1/getting-started"
+          },
+          {
+            "type": "link",
+            "label": "Introduction",
+            "href": "/docs/staking/counter-stake-stage-1/introduction"
+          },
+          {
+            "type": "link",
+            "label": "Linux Package Installation",
+            "href": "/docs/staking/counter-stake-stage-1/linux-package-installation"
+          },
+          {
+            "type": "link",
+            "label": "Running with Binaries",
+            "href": "/docs/staking/counter-stake-stage-1/running-with-binaries"
+          },
+          {
+            "type": "link",
+            "label": "Running with Docker",
+            "href": "/docs/staking/counter-stake-stage-1/running-with-docker"
+          },
+          {
+            "type": "link",
+            "label": "Stake on Matic",
+            "href": "/docs/staking/counter-stake-stage-1/stake-on-matic"
+          },
+          {
+            "type": "link",
+            "label": "Technical FAQs",
+            "href": "/docs/staking/counter-stake-stage-1/technical-faqs"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "FAQs",
+        "href": "/docs/staking/faqs"
+      }
+    ]
+  },
+  "permalinkToSidebar": {
+    "/docs/advanced/calling-plasma-contracts": "development",
+    "/docs/advanced/custom-restrictions": "development",
+    "/docs/advanced/deploy-your-own-matic-testnet": "development",
+    "/docs/advanced/moving-assets": "development",
+    "/docs/advanced/security-models": "introduction",
+    "/docs/advanced/swap-assets": "development",
+    "/docs/bor-spec/bor": "introduction",
+    "/docs/bor-spec/setup-bor": "introduction",
+    "/docs/config-truffle": "development",
+    "/docs/dagger/getting-started": "development",
+    "/docs/getting-started": "development",
+    "/docs/helloworld": "development",
+    "/docs/integrations/decentralised-storage/moibit": "development",
+    "/docs/integrations/fiat-on-ramp": "development",
+    "/docs/integrations/getting-started": "Integrations",
+    "/docs/integrations/key-management/getting-started": "development",
+    "/docs/integrations/key-management/metamask": "development",
+    "/docs/integrations/key-management/portis": "development",
+    "/docs/integrations/key-management/walletconnect": "development",
+    "/docs/integrations/metatransactions/metatransactions": "development",
+    "/docs/integrations/metatransactions/metatransactions-biconomy": "development",
+    "/docs/integrations/metatransactions/metatransactions-gsn": "development",
+    "/docs/integrations/oracles": "development",
+    "/docs/integrations/zapier/about": "development",
+    "/docs/integrations/zapier/getting-started": "development",
+    "/docs/metamask": "development",
+    "/docs/metamask/conf-custom-tokens-metamask": "development",
+    "/docs/metamask/conf-testnet-metamask": "development",
+    "/docs/metamask/gas-fees": "development",
+    "/docs/metamask/multiple-accounts": "development",
+    "/docs/network-config": "development",
+    "/docs/resources/architecture": "introduction",
+    "/docs/resources/blockchain-basics/accounts": "introduction",
+    "/docs/resources/blockchain-basics/blockchain": "introduction",
+    "/docs/resources/blockchain-basics/blockchain-types": "introduction",
+    "/docs/resources/blockchain-basics/consensus-mechanism": "introduction",
+    "/docs/resources/blockchain-basics/ethereum": "introduction",
+    "/docs/resources/blockchain-basics/gas": "introduction",
+    "/docs/resources/blockchain-basics/matic": "introduction",
+    "/docs/resources/blockchain-basics/solidity": "introduction",
+    "/docs/resources/blockchain-basics/transactions": "introduction",
+    "/docs/resources/faq": "introduction",
+    "/docs/resources/new-to-matic": "introduction",
+    "/docs/resources/sidechain": "introduction",
+    "/docs/sdk/api-reference": "development",
+    "/docs/sdk/matic-js": "development",
+    "/docs/staking/counter-stake-stage-1/getting-started": "Validators",
+    "/docs/staking/counter-stake-stage-1/introduction": "Validators",
+    "/docs/staking/counter-stake-stage-1/linux-package-installation": "Validators",
+    "/docs/staking/counter-stake-stage-1/running-with-binaries": "Validators",
+    "/docs/staking/counter-stake-stage-1/running-with-docker": "Validators",
+    "/docs/staking/counter-stake-stage-1/stake-on-matic": "Validators",
+    "/docs/staking/counter-stake-stage-1/technical-faqs": "Validators",
+    "/docs/staking/economics": "Validators",
+    "/docs/staking/faqs": "Validators",
+    "/docs/staking/technical-requirements": "Validators",
+    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "development",
+    "/docs/validator/bor-chain": "introduction",
+    "/docs/validator/checkpoint-mechanism": "introduction",
+    "/docs/validator/delegator": "introduction",
+    "/docs/validator/heimdall-chain": "introduction",
+    "/docs/validator/liquid-delegation": "introduction",
+    "/docs/validator/proposers-producers-selection": "introduction",
+    "/docs/validator/staking": "introduction",
+    "/docs/validator/state-sync": "introduction",
+    "/docs/validator/validator": "introduction"
+  }
+}

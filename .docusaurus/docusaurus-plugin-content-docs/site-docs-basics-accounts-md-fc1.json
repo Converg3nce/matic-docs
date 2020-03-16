@@ -1,0 +1,18 @@
+{
+  "id": "basics-accounts",
+  "title": "What are Accounts?",
+  "description": "The global state of Ethereum is comprised of accounts that interact with one another through a message-passing framework. The most basic interaction is that of sending some value - like ether - the native cryptocurrency of Ethereum blockchain.",
+  "source": "@site/docs/basics-accounts.md",
+  "permalink": "/docs/basics-accounts",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/basics-accounts.md",
+  "sidebar_label": "Accounts",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "What is Gas?",
+    "permalink": "/docs/basics-gas"
+  },
+  "next": {
+    "title": "Sidechains and Plasma",
+    "permalink": "/docs/matic-sidechain"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "tutorial-advanced/full-stack-dapp-with-pos",
+  "title": "PoS (Full Stack DApp)",
+  "description": "## What this tutorial covers",
+  "source": "@site/docs/tutorial-advanced/full-stack-dapp.md",
+  "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-advanced/full-stack-dapp.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Network Config",
+    "permalink": "/docs/network-config"
+  },
+  "next": {
+    "title": "Calling Plasma Contracts",
+    "permalink": "/docs/advanced/calling-plasma-contracts"
+  }
+}

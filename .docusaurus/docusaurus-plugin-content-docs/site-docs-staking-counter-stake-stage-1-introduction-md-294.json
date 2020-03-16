@@ -1,0 +1,17 @@
+{
+  "id": "staking/counter-stake-stage-1/introduction",
+  "title": "Introduction",
+  "description": "**Heimdall**",
+  "source": "@site/docs/staking/counter-stake-stage-1/introduction.md",
+  "permalink": "/docs/staking/counter-stake-stage-1/introduction",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/counter-stake-stage-1/introduction.md",
+  "sidebar": "Validators",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/staking/counter-stake-stage-1/getting-started"
+  },
+  "next": {
+    "title": "Setup Matic Validator Node",
+    "permalink": "/docs/staking/counter-stake-stage-1/linux-package-installation"
+  }
+}

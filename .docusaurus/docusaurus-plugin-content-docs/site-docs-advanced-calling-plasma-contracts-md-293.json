@@ -1,0 +1,17 @@
+{
+  "id": "advanced/calling-plasma-contracts",
+  "title": "Calling Plasma Contracts",
+  "description": "# Calling the Matic Plasma contracts directly",
+  "source": "@site/docs/advanced/calling-plasma-contracts.md",
+  "permalink": "/docs/advanced/calling-plasma-contracts",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/advanced/calling-plasma-contracts.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "PoS (Full Stack DApp)",
+    "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
+  },
+  "next": {
+    "title": "Swap Assets",
+    "permalink": "/docs/advanced/swap-assets"
+  }
+}

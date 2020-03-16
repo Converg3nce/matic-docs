@@ -1,0 +1,17 @@
+{
+  "id": "metamask/multiple-accounts",
+  "title": "Multiple Accounts",
+  "description": "In case you are new to Ethereum and Metamask, here is a guide on how to create multiple accounts:",
+  "source": "@site/docs/metamask/multiple-accounts.md",
+  "permalink": "/docs/metamask/multiple-accounts",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/metamask/multiple-accounts.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Changin Gas Fees",
+    "permalink": "/docs/metamask/gas-fees"
+  },
+  "next": {
+    "title": "Using Truffle",
+    "permalink": "/docs/config-truffle"
+  }
+}

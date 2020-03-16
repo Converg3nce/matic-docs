@@ -1,0 +1,18 @@
+{
+  "id": "staking/counter-stake-stage-1/linux-package-installation",
+  "title": "Setup Matic Validator Node",
+  "description": "> The following has been tested to work with: Ubuntu 16.04 or later, CentOS 7 or later, RHEL 7 or later,  Debian  8 or later.",
+  "source": "@site/docs/staking/counter-stake-stage-1/linux-package-installation.md",
+  "permalink": "/docs/staking/counter-stake-stage-1/linux-package-installation",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/counter-stake-stage-1/linux-package-installation.md",
+  "sidebar_label": "Linux Package Installation",
+  "sidebar": "Validators",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/staking/counter-stake-stage-1/introduction"
+  },
+  "next": {
+    "title": "Setup Matic Validator Node",
+    "permalink": "/docs/staking/counter-stake-stage-1/running-with-binaries"
+  }
+}

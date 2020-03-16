@@ -1,0 +1,17 @@
+{
+  "id": "integrations/key-management/metamask",
+  "title": "Metamask",
+  "description": "Metamask is a browser add-on that manages a user’s Ethereum wallet by storing their private key on their browser’s data store and the seed phrase encrypted with their password. It is a non-custodial wallet, meaning, the user has full access and responsibility their private key. Once lost, the user can no longer control the savings or restore access to the wallet.",
+  "source": "@site/docs/integrations/key-management/metamask.md",
+  "permalink": "/docs/integrations/key-management/metamask",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/key-management/metamask.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Key Management Strategies",
+    "permalink": "/docs/integrations/key-management/getting-started"
+  },
+  "next": {
+    "title": "Wallet Connect",
+    "permalink": "/docs/integrations/key-management/walletconnect"
+  }
+}

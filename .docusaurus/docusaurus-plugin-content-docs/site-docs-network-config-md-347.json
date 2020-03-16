@@ -1,0 +1,17 @@
+{
+  "id": "network-config",
+  "title": "Network Config",
+  "description": "- To view current status and RPC health: [https://status.matic.today](https://status.matic.today)",
+  "source": "@site/docs/network-config.md",
+  "permalink": "/docs/network-config",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/network-config.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "MóiBit",
+    "permalink": "/docs/integrations/decentralised-storage/moibit"
+  },
+  "next": {
+    "title": "PoS (Full Stack DApp)",
+    "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
+  }
+}

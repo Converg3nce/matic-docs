@@ -1,0 +1,9 @@
+{
+  "id": "staking/tutorial-oracles",
+  "title": "Getting Started with Oracles",
+  "description": "Step by step instructions on how to create a single and multiple (soon to be added) validator testnet.",
+  "source": "@site/docs/staking/deploy-your-own-matic-testnet.md",
+  "permalink": "/docs/staking/tutorial-oracles",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/deploy-your-own-matic-testnet.md",
+  "sidebar_label": "Oracles"
+}

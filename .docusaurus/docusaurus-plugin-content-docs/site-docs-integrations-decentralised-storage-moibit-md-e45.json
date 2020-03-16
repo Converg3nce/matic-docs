@@ -1,0 +1,17 @@
+{
+  "id": "integrations/decentralised-storage/moibit",
+  "title": "MóiBit",
+  "description": "Matic Network now has a integration live with [MóiBit](https://www.moibit.io/). MóiBit is a personal decentralized secure storage network with the power of immutability and provenance of blockchain systems.",
+  "source": "@site/docs/integrations/decentralised-storage/moibit.md",
+  "permalink": "/docs/integrations/decentralised-storage/moibit",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/decentralised-storage/moibit.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/integrations/zapier/getting-started"
+  },
+  "next": {
+    "title": "Network Config",
+    "permalink": "/docs/network-config"
+  }
+}

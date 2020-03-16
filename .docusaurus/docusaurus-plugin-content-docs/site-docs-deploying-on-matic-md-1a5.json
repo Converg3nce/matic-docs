@@ -1,0 +1,17 @@
+{
+  "id": "config-truffle",
+  "title": "Using Truffle",
+  "description": "1. **Setting up the development environment**",
+  "source": "@site/docs/deploying-on-matic.md",
+  "permalink": "/docs/config-truffle",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/deploying-on-matic.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Multiple Accounts",
+    "permalink": "/docs/metamask/multiple-accounts"
+  },
+  "next": {
+    "title": "Key Management Strategies",
+    "permalink": "/docs/integrations/key-management/getting-started"
+  }
+}
