@@ -96,7 +96,7 @@ Once you run the approve command you should see the following response along wit
 
     Sent approve tx sucessfully txHash=0x987aa9a319de34f61b768e4bbac160212055d8e5e9b813b2fc520dc650488943
 
-To check the status of the transaction, you paste the `txHash` on this link: [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
+To check the status of the transaction, you paste the `txHash` on this link: [https://goerli.etherscan.io/](https://goerli.etherscan.io/)
 
 
 
@@ -116,7 +116,7 @@ You should see the following response once you run the above command
 
     Submitted stake sucessfully txHash=0x987aa9a319de34f61b768e4bbac160212055d8e5e9b813b2fc520dc650488943
 
-To check the status of the transaction, you paste the `txHash` on this link: [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
+To check the status of the transaction, you paste the `txHash` on this link: [https://goerlie.etherscan.io/](https://goerli.etherscan.io/)
 
 ### Balance
 
@@ -148,6 +148,8 @@ You can view your `pub-key` by running the command `heimdalld show-account`
 
 The chain-id required here is the heimdall chain-id - `heimdall-cs2004`
 
+By running the above command, you're essentially sending a request to join the pool of validators that are running the network. Once you have successfully run this command you can then check the status on the validator dashboard: https://wallet.matic.today/staking/validators/<validator-id>
+
 ### Validator information
 
 **By signer address**
@@ -173,7 +175,7 @@ This command should display the following output:
 
     heimdallcli query staking validator-info --id=1 --chain-id=<chain-id>
 
-Here the valude in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://ropsten.etherscan.com and check your transaction hash there. You would see your `id` present there.
+Here the valude in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://goerli.etherscan.io and check your transaction hash there. You would see your `id` present there.
 
 ![Arch](./images/validator-id.png)
 
