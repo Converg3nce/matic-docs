@@ -165,7 +165,13 @@ Move this validator key file to heimdall config folder.
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers in the file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
-Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`. All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
+Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`. You could do by running the command `cat /public-testnets/CS-2004/heimdall/heimdall-seeds.txt`
+
+All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
+
+```js
+vi ~/.heimdalld/config/config.toml
+```
 
 #### 6.3: Start & sync Heimdall
 
@@ -220,9 +226,10 @@ $ rm -rf $HEIMDALLDIR/bridge
 
 To check the sync status you can run the follwing command on your node
 
-```bash
+```js
 $ curl http://localhost:26657/status
-
+```
+```js
 // Output
 {
   "jsonrpc": "2.0",
@@ -268,7 +275,11 @@ The key called `catching_up` will show your sync status, if it's not catching up
 
 **Expected Output**
 
-Your `heimdall-node` should be syncing now! You can check the logs `tail -f ~/.heimdalld/logs/heimdall.log`
+Your `heimdall-node` should be syncing now! You can check the logs by running the command
+
+```js
+tail -f ~/.heimdalld/logs/heimdall.log
+```
 
 If everything's well, then your logs should look something like this:
 
@@ -315,7 +326,7 @@ For more info on how to connect to peers see [this](https://geth.ethereum.org/do
 To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Wallet's Private key. This would be the same private key that yo used for generating your `validator-key`
 
 ```bash
-heimdallcli generate-keystore <private-key>
+heimdallcli generate-keystore <Your Ethereum/>Goerli wallet private key>
 ```
 
 Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
@@ -353,13 +364,17 @@ $ bash start.sh <Your address>
 
 **Expected Output**
 
-Your `bor-node` should be syncing now! Checkout `~/.bor/logs/bor.log` to get to the logs 🤩
+Your `bor-node` should be syncing now! Checkout `~/.bor/logs/bor.log` to get to the logs 🤩 or you could run the following command:
 
-`tail -f ~/.bor/logs/bor.log`
+```js
+tail -f ~/.bor/logs/bor.log
+```
 
 If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-bor.png)
+
+If you're running into any issues while setting up your Bor node, you can refer the Technical FAQ's for solutions: https://docs.matic.network/staking/technical-faqs/
 
 **Ta-Da**
 

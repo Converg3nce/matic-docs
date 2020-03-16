@@ -92,11 +92,14 @@ $ sudo vi /etc/heimdall/config/heimdall-config.toml
 ```
 
     
-### Step 5: Add Peers
+### Step 5: Configure peers for Heimdall
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers at `/etc/heimdall/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
 
 Open the config.toml file from `$CONFIGPATH/heimdall/heimdall-seeds.txt`. All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
+
+
+To copy peers run the following command `cat $CONFIGPATH/heimdall/heimdall-seeds.txt` and then paste in the `config.toml` file by running this command:
 
 ``` js
 $ sudo vi /etc/heimdall/config/config.toml 
