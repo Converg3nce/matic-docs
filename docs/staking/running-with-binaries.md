@@ -71,7 +71,7 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout cs-2003-1
+// For eg: git checkout cs-2004
 $ git checkout <TAG OR BRANCH>
 $ make install
 ```
@@ -108,7 +108,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-2003
+// For eg: git checkout CS-2004
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
@@ -127,8 +127,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2003
-// Example: $ cd public-testnets/CS-2003
+// Current testnet version is CS-2004
+// Example: $ cd public-testnets/CS-2004
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -149,7 +149,7 @@ Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the ke
 
 If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
 
-To generate a validator key for your validator, you can the following command. The private key required as the input is your Wallet's Private key.
+To generate a validator key for your validator, you can run the following command. The private key required as the input is your Wallet's Private key.
 
     heimdallcli generate-validatorkey <private-key>
 
@@ -363,7 +363,7 @@ If everything's well, then your logs should look something like this:
 
 If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
 
-Once you are done checking the logs or querying the data, you may proceed to staking tokens.
+Once you are done checking the logs or querying the data, you may proceed to staking tokens. Here is you can stake on Matic: [How to Stake](https://docs.matic.network/staking/stake-on-matic/)
 
 In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
 

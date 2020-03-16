@@ -27,8 +27,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/cs-2003-1/matic-heimdall_1.2.3_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/cs-2003-1/matic-bor_1.2.3_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/cs-2004/matic-heimdall_0.1.4_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/cs-2004/matic-bor_0.1.4_amd64.deb
 ```
 
     
@@ -39,8 +39,8 @@ This will setup needed service for the validator node; Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_1.2.3_amd64.deb
-$ sudo dpkg -i matic-bor_1.2.3_amd64.deb
+$ sudo dpkg -i matic-heimdall_0.1.4_amd64.deb
+$ sudo dpkg -i matic-bor_0.1.4_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -67,8 +67,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2003
-// Example: $ cd public-testnets/CS-2003
+// Current testnet version is CS-2004
+// Example: $ cd public-testnets/CS-2004
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -104,7 +104,7 @@ $ sudo vi /etc/heimdall/config/config.toml
 
 If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
 
-To generate a validator key for your validator, you can the following command. The private key required as the input is your Wallet's Private key.
+To generate a validator key for your validator, you can run the following command. The private key required as the input is your Wallet's Private key.
 
 ```js
 $ heimdallcli generate-validatorkey <private-key>
@@ -208,7 +208,7 @@ You can see logs of Bor service under `/var/log/matic-logs/bor.log` 🤩
 
 If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
 
-Once you are done checking the logs or querying the data, you may proceed to staking tokens.
+Once you are done checking the logs or querying the data, you may proceed to staking tokens. Once you are done checking the logs or querying the data, you may proceed to staking tokens. Here is you can stake on Matic: [How to Stake](https://docs.matic.network/staking/stake-on-matic/)
 
 <!-- #### Query data
 
