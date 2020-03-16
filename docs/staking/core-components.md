@@ -23,4 +23,3 @@ To enable the PoS mechanism on our platform, we employ a set of staking manageme
 * Earn staking rewards for validating state transitions on Matic Network.
 * Enable penalties/slashing for activities such as double signing, validator downtime, etc.
 
-The PoS mechanism also acts as a mitigation to the data unavailability problem for our sidechains in terms of Plasma.

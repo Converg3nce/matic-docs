@@ -105,7 +105,7 @@ Peers are the other nodes you want to sync to in order to maintain your full nod
 Open the config.toml file from `$CONFIGPATH/heimdall/heimdall-seeds.txt`. All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
 
 
-To copy peers run the following command `cat $CONFIGPATH/heimdall/heimdall-seeds.txt` and then paste in the `config.toml` file by running this command:
+To see the list of peers, run the following command `cat $CONFIGPATH/heimdall/heimdall-seeds.txt`. Copy any 1 peer from the list and paste it in the `config.toml` file. You can open `config.toml` by running this command:
 
 ``` js
 $ sudo vi /etc/heimdall/config/config.toml 
@@ -155,7 +155,7 @@ If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-heimdall.png)
 
-If you're running into any issues while setting up your Heimdall node, you can refer the Technical FAQ's for solutions: https://docs.matic.network/staking/technical-faqs/
+If you're running into any issues while setting up your Heimdall node, you can refer the Technical FAQs for solutions: https://docs.matic.network/staking/technical-faqs/
 
 
 **You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**

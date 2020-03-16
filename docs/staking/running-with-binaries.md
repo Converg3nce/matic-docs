@@ -165,7 +165,7 @@ Move this validator key file to heimdall config folder.
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers in the file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
-Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`. You could do by running the command `cat /public-testnets/CS-2004/heimdall/heimdall-seeds.txt`
+To see the list of peers, run the following command, you could do so by running the command `cat /public-testnets/CS-2004/heimdall/heimdall-seeds.txt`.
 
 All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
 
@@ -285,7 +285,7 @@ If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-heimdall.png)
 
-If you're running into any issues while setting up your Heimdall node, you can refer the Technical FAQ's for solutions: https://docs.matic.network/staking/technical-faqs/
+If you're running into any issues while setting up your Heimdall node, you can refer the Technical FAQs for solutions: https://docs.matic.network/staking/technical-faqs/
 
 
 **You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
@@ -325,7 +325,7 @@ For more info on how to connect to peers see [this](https://geth.ethereum.org/do
 
 **Generate Bor keystore file**
 
-To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Wallet's Private key. This would be the same private key that yo used for generating your `validator-key`
+To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Ethereum/Goerli's wallet Private key. This would be the same private key that yo used for generating your `validator-key`
 
 ```bash
 heimdallcli generate-keystore <Your Ethereum/>Goerli wallet private key>
@@ -376,7 +376,7 @@ If everything's well, then your logs should look something like this:
 
 ![Screenshot](./images/expected-bor.png)
 
-If you're running into any issues while setting up your Bor node, you can refer the Technical FAQ's for solutions: https://docs.matic.network/staking/technical-faqs/
+If you're running into any issues while setting up your Bor node, you can refer the Technical FAQs for solutions: https://docs.matic.network/staking/technical-faqs/
 
 **Ta-Da**
 
