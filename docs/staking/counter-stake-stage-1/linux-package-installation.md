@@ -3,7 +3,6 @@ id: linux-package-installation
 title: Setup Matic Validator Node
 sidebar_label: Linux Package Installation
 ---
-
 > The following has been tested to work with: Ubuntu 16.04 or later, CentOS 7 or later, RHEL 7 or later,  Debian  8 or later.
 
 **TL;DR** - We have made a video demonstrating step by step on how to setup your Heimdall and Bor nodes
@@ -30,8 +29,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/CS-2001/matic-heimdall_1.0.0_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/CS-2001/matic-bor_1.0.0_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/cs-2003-1/matic-heimdall_1.2.3_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/cs-2003-1/matic-bor_1.2.3_amd64.deb
 ```
 
     
@@ -42,8 +41,8 @@ This will setup needed service for the validator node; Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_1.0.0_amd64.deb
-$ sudo dpkg -i matic-bor_1.0.0_amd64.deb
+$ sudo dpkg -i matic-heimdall_1.2.3_amd64.deb
+$ sudo dpkg -i matic-bor_1.2.3_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -70,8 +69,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2001
-// Example: $ cd public-testnets/CS-2001
+// Current testnet version is CS-2003
+// Example: $ cd public-testnets/CS-2003
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -95,15 +94,19 @@ $ sudo vi /etc/heimdall/config/heimdall-config.toml
     
 ### Step 5: Add Peers
 
-Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas at `/etc/heimdall/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
+Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers at `/etc/heimdall/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
 
-Open the config.toml file and copy paste the peer address from `$CONFIGPATH/heimdall/heimdall-seeds.txt`
+Open the config.toml file from `$CONFIGPATH/heimdall/heimdall-seeds.txt`. All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
 
 ``` js
 $ sudo vi /etc/heimdall/config/config.toml 
 ```
 
 ### Step 6: Generate Heimdall private key
+
+If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
+
+To generate a validator key for your validator, you can the following command. The private key required as the input is your Wallet's Private key.
 
 ```js
 $ heimdallcli generate-validatorkey <private-key>
@@ -134,6 +137,8 @@ $ sudo service heimdalld-bridge start
 **Expected Output**
 
 Your `heimdall-node` should be syncing now! You can see logs of the above services under `/var/log/matic-logs/` 🤩
+
+**You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
     
 ### Step 8: Configure Bor
 
@@ -152,6 +157,10 @@ $ sudo cp $CONFIGPATH/bor/static-nodes.json /etc/bor/dataDir/bor/static-nodes.js
    
 ```
 ### Step 9: Generate Bor keystore file
+
+If you have received Matic tokens as part of Counter-stake. You need to generate a keystore for BOR here.
+
+To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Wallet's Private key. This would be the same private key that yo used for generating your `validator-key`
 
 ```js
  heimdallcli generate-keystore <private-key>
@@ -201,8 +210,18 @@ You can see logs of Bor service under `/var/log/matic-logs/bor.log` 🤩
 
 If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
 
-Once you are done checking the logs or querying the data, you may stop all services and restart again soon as we start staking in the next stage.
+Once you are done checking the logs or querying the data, you may proceed to staking tokens.
 
-#### Query data
+<!-- #### Query data
 
-To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/
+To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/ -->
+
+In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
+
+For an issue you have encountered specifically with Heimdall or Heimdall related, you can create an issue in the Heimdall repository: https://github.com/maticnetwork/heimdall/issues
+
+For issues, you have encountered specifically with Bor or Bor related, you can create an issue in the Bor repository: https://github.com/maticnetwork/bor/issues
+
+For clear identification, you can also use labels to tag the issues reported.
+
+Upon reporting an issue, the Matic Project team will review and update/comment on the status of the issue. Depending on the severity of the issue, the Matic project team may request you to create a PR to provide a fix. Bounties and incentives would be provided for such issues.

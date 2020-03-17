@@ -76,12 +76,6 @@ export default [
   
   routes: [
 {
-  path: '/docs/2-min-guide-to-matic',
-  component: ComponentCreator('/docs/2-min-guide-to-matic'),
-  exact: true,
-  
-},
-{
   path: '/docs/advanced/calling-plasma-contracts',
   component: ComponentCreator('/docs/advanced/calling-plasma-contracts'),
   exact: true,
@@ -150,6 +144,18 @@ export default [
 {
   path: '/docs/helloworld',
   component: ComponentCreator('/docs/helloworld'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrate/flow-of-token',
+  component: ComponentCreator('/docs/integrate/flow-of-token'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrate/getting-started',
+  component: ComponentCreator('/docs/integrate/getting-started'),
   exact: true,
   
 },
@@ -364,6 +370,18 @@ export default [
   
 },
 {
+  path: '/docs/staking/bor/install-bor',
+  component: ComponentCreator('/docs/staking/bor/install-bor'),
+  exact: true,
+  
+},
+{
+  path: '/docs/staking/bor/run-bor',
+  component: ComponentCreator('/docs/staking/bor/run-bor'),
+  exact: true,
+  
+},
+{
   path: '/docs/staking/counter-stake-stage-1/getting-started',
   component: ComponentCreator('/docs/staking/counter-stake-stage-1/getting-started'),
   exact: true,
@@ -406,14 +424,62 @@ export default [
   
 },
 {
+  path: '/docs/staking/deploy-your-own-matic-testnet',
+  component: ComponentCreator('/docs/staking/deploy-your-own-matic-testnet'),
+  exact: true,
+  
+},
+{
   path: '/docs/staking/economics',
   component: ComponentCreator('/docs/staking/economics'),
   exact: true,
   
 },
 {
+  path: '/docs/staking/examples',
+  component: ComponentCreator('/docs/staking/examples'),
+  exact: true,
+  
+},
+{
   path: '/docs/staking/faqs',
   component: ComponentCreator('/docs/staking/faqs'),
+  exact: true,
+  
+},
+{
+  path: '/docs/staking/heimdall/configure-heimdall',
+  component: ComponentCreator('/docs/staking/heimdall/configure-heimdall'),
+  exact: true,
+  
+},
+{
+  path: '/docs/staking/heimdall/install-heimdall',
+  component: ComponentCreator('/docs/staking/heimdall/install-heimdall'),
+  exact: true,
+  
+},
+{
+  path: '/docs/staking/heimdall/run-heimdall',
+  component: ComponentCreator('/docs/staking/heimdall/run-heimdall'),
+  exact: true,
+  
+},
+{
+  path: '/docs/staking/join-public-testnet',
+  component: ComponentCreator('/docs/staking/join-public-testnet'),
+  exact: true,
+  
+},
+{
+  path: '/docs/staking/node-setup-guide',
+  component: ComponentCreator('/docs/staking/node-setup-guide'),
+  exact: true,
+  
+},
+{
+  path: '/docs/staking/reporting-issues',
+  component: ComponentCreator('/docs/staking/reporting-issues'),
   exact: true,
   
 },

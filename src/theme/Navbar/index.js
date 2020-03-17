@@ -163,7 +163,7 @@ function Navbar() {
                   fontSize: "22px",
                   color: "#9FA8BA",
                   fontWeight: "normal",
-                  marginRight: "100px"
+                  marginRight: "135px"
                 }}
               >
                 {title}

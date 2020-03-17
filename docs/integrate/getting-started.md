@@ -1,3 +1,7 @@
+---
+id: getting-started
+title: Integrate with Matic
+---
 # 2-min guide to get started on Matic
 
 Block time on the Matic testnet is ~1s.

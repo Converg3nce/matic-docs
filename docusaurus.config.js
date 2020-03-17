@@ -28,8 +28,8 @@ module.exports = {
       links: [
         { to: 'docs/resources/new-to-matic', label: 'Introduction', position: 'left' },
         { to: 'docs/getting-started', label: 'Development', position: 'left' },
+        { to: 'docs/integrate/getting-started', label: 'Integrate', position: 'left' },
         { to: 'docs/staking/economics', label: 'Validators', position: 'left' },
-        // { to: 'docs/integrations/getting-started', label: 'Integrate', position: 'left' },
         // { to: 'showcase', label: 'Showcase', position: 'right' },
         {
           href: 'https://blog.matic.network/',

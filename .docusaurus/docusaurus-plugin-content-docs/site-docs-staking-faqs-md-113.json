@@ -9,5 +9,9 @@
   "previous": {
     "title": "Technical FAQs",
     "permalink": "/docs/staking/counter-stake-stage-1/technical-faqs"
+  },
+  "next": {
+    "title": "Reporting Issues",
+    "permalink": "/docs/staking/reporting-issues"
   }
 }

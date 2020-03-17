@@ -309,11 +309,6 @@
         ]
       },
       {
-        "type": "link",
-        "label": "Network Config",
-        "href": "/docs/network-config"
-      },
-      {
         "type": "category",
         "label": "Tutorials",
         "items": [
@@ -351,11 +346,21 @@
         ]
       }
     ],
-    "Integrations": [
+    "Integrate": [
       {
         "type": "link",
-        "label": "Getting Started",
-        "href": "/docs/integrations/getting-started"
+        "label": "Integrate with Matic",
+        "href": "/docs/integrate/getting-started"
+      },
+      {
+        "type": "link",
+        "label": "Flow of Tokens on Matic",
+        "href": "/docs/integrate/flow-of-token"
+      },
+      {
+        "type": "link",
+        "label": "Network Config",
+        "href": "/docs/network-config"
       }
     ],
     "Validators": [
@@ -414,6 +419,11 @@
         "type": "link",
         "label": "FAQs",
         "href": "/docs/staking/faqs"
+      },
+      {
+        "type": "link",
+        "label": "Reporting Issues",
+        "href": "/docs/staking/reporting-issues"
       }
     ]
   },
@@ -430,9 +440,10 @@
     "/docs/dagger/getting-started": "development",
     "/docs/getting-started": "development",
     "/docs/helloworld": "development",
+    "/docs/integrate/flow-of-token": "Integrate",
+    "/docs/integrate/getting-started": "Integrate",
     "/docs/integrations/decentralised-storage/moibit": "development",
     "/docs/integrations/fiat-on-ramp": "development",
-    "/docs/integrations/getting-started": "Integrations",
     "/docs/integrations/key-management/getting-started": "development",
     "/docs/integrations/key-management/metamask": "development",
     "/docs/integrations/key-management/portis": "development",
@@ -448,7 +459,7 @@
     "/docs/metamask/conf-testnet-metamask": "development",
     "/docs/metamask/gas-fees": "development",
     "/docs/metamask/multiple-accounts": "development",
-    "/docs/network-config": "development",
+    "/docs/network-config": "Integrate",
     "/docs/resources/architecture": "introduction",
     "/docs/resources/blockchain-basics/accounts": "introduction",
     "/docs/resources/blockchain-basics/blockchain": "introduction",
@@ -473,6 +484,7 @@
     "/docs/staking/counter-stake-stage-1/technical-faqs": "Validators",
     "/docs/staking/economics": "Validators",
     "/docs/staking/faqs": "Validators",
+    "/docs/staking/reporting-issues": "Validators",
     "/docs/staking/technical-requirements": "Validators",
     "/docs/tutorial-advanced/full-stack-dapp-with-pos": "development",
     "/docs/validator/bor-chain": "introduction",

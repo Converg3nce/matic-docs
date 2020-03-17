@@ -5,13 +5,9 @@
   "source": "@site/docs/network-config.md",
   "permalink": "/docs/network-config",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/network-config.md",
-  "sidebar": "development",
+  "sidebar": "Integrate",
   "previous": {
-    "title": "MóiBit",
-    "permalink": "/docs/integrations/decentralised-storage/moibit"
-  },
-  "next": {
-    "title": "PoS (Full Stack DApp)",
-    "permalink": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
+    "title": "Flow of Tokens on Matic",
+    "permalink": "/docs/integrate/flow-of-token"
   }
 }

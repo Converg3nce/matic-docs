@@ -109,8 +109,6 @@ module.exports = {
       label: "Decentralised Storage",
       items: ["integrations/decentralised-storage/moibit"]
     },
-
-    "network-config",
     {
       type: "category",
       label: "Tutorials",
@@ -120,16 +118,14 @@ module.exports = {
       type: "category",
       label: "Advanced",
       items: [
-        
         "advanced/calling-plasma-contracts",
         "advanced/swap-assets",
-
         "advanced/deploy-your-own-matic-testnet",
         "advanced/custom-restrictions"
       ]
     }
   ],
-  Integrations: ["integrations/getting-started"],
+  Integrate: ["integrate/getting-started",'integrate/flow-of-token',"network-config"],
   Validators: [
     "staking/economics",
     "staking/technical-requirements",
@@ -146,6 +142,7 @@ module.exports = {
         "staking/counter-stake-stage-1/technical-faqs"
       ]
     },
-    "staking/faqs"
+    "staking/faqs",
+    "staking/reporting-issues"
   ]
 };

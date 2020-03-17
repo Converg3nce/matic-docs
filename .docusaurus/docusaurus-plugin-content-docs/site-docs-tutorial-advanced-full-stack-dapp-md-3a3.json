@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-advanced/full-stack-dapp.md",
   "sidebar": "development",
   "previous": {
-    "title": "Network Config",
-    "permalink": "/docs/network-config"
+    "title": "MóiBit",
+    "permalink": "/docs/integrations/decentralised-storage/moibit"
   },
   "next": {
     "title": "Calling Plasma Contracts",

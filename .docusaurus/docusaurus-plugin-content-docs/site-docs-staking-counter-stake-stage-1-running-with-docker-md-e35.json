@@ -1,7 +1,7 @@
 {
   "id": "staking/counter-stake-stage-1/running-with-docker",
   "title": "Setup Matic Validator Node",
-  "description": "### Step 1: Install docker",
+  "description": "# Setup Matic Validator Node",
   "source": "@site/docs/staking/counter-stake-stage-1/running-with-docker.md",
   "permalink": "/docs/staking/counter-stake-stage-1/running-with-docker",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/counter-stake-stage-1/running-with-docker.md",

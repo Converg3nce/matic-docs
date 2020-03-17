@@ -3,7 +3,6 @@ id: running-with-binaries
 title: Setup Matic Validator Node
 sidebar_label: Running with Binaries
 ---
-
 ## We strongly recommend not using a laptop if you are running a full node.
 
 ### Step 1: Install GO
@@ -36,7 +35,11 @@ $ bash install_go.sh
 
 > NOTE: You do not need rabbit-mq for stage-0 so you can choose to skip.
 
-A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions [here](https://www.rabbitmq.com/download.html).
+**Why do you need RabbitMq?**
+
+RabbitMQ is a message-queueing software also known as a message broker or queue manager. Simply said; it is software where queues are defined, to which applications connect in order to transfer a message or messages.
+
+A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions here: https://www.rabbitmq.com/download.html.
 
 ```js
 
@@ -71,7 +74,7 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-2001
+// For eg: git checkout cs-2003-1
 $ git checkout <TAG OR BRANCH>
 $ make install
 ```
@@ -90,7 +93,7 @@ $ echo "export HEIMDALLDIR=~/.heimdalld" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
-This will emit the following output which shows your node id and chain id, these can be changed before starting a chain from the genesis file.
+This will emit an output which shows your node id and chain id, these can be changed before starting a chain from the genesis file.
 
 ```bash
 {
@@ -108,7 +111,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-2001
+// For eg: git checkout CS-2003
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
@@ -127,8 +130,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2001
-// Example: $ cd public-testnets/CS-2001
+// Current testnet version is CS-2003
+// Example: $ cd public-testnets/CS-2003
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -149,7 +152,7 @@ Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the ke
 
 If you have received Matic tokens as part of Counter-stake. You need to generate validator key to participate.
 
-To generate a private key for your validator, run the following command:
+To generate a validator key for your validator, you can the following command. The private key required as the input is your Wallet's Private key.
 
     heimdallcli generate-validatorkey <private-key>
 
@@ -161,9 +164,9 @@ Move this validator key file to heimdall config folder.
 
 #### 6.2: Configure peers for Heimdall
 
-Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers separated by commas in file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
+Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers in the file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
-Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`.
+Refer to `heimdall/heimdall-seeds.txt` for peer info in your testnet folder, i.e. `$CONFIGPATH/heimdall`. All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
 
 #### 6.3: Start & sync Heimdall
 
@@ -266,11 +269,15 @@ The key called `catching_up` will show your sync status, if it's not catching up
 
 **Expected Output**
 
-Your `heimdall-node` should be syncing now! Checkout `$GOPATH/src/github.com/maticnetwork/heimdall/logs/heimdalld.log` to get to the logs 🤩
+Your `heimdall-node` should be syncing now! You can check the logs `tail -f ~/.heimdalld/logs/heimdall.log`
 
 If everything's well, then your logs should look something like this:
 
-![Screenshot](../../../img/staking/expected-heimdall.png)
+![Screenshot](./images/expected-heimdall.png)
+
+
+**You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
+
 
 #### 6.4: Initialise genesis block for Bor
 
@@ -306,13 +313,11 @@ For more info on how to connect to peers see [this](https://geth.ethereum.org/do
 
 **Generate Bor keystore file**
 
-To generate the keystore file for Bor, run the following command:
+To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Wallet's Private key. This would be the same private key that yo used for generating your `validator-key`
 
 ```bash
 heimdallcli generate-keystore <private-key>
 ```
-
-The private key required over here is the address of the one which has the tokens that you're going to stake. 
 
 Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
 
@@ -351,16 +356,24 @@ $ bash start.sh <Your address>
 
 Your `bor-node` should be syncing now! Checkout `~/.bor/logs/bor.log` to get to the logs 🤩
 
+`tail -f ~/.bor/logs/bor.log`
+
 If everything's well, then your logs should look something like this:
 
-![Screenshot](../../../img/staking/expected-bor.png)
+![Screenshot](./images/expected-bor.png)
 
 **Ta-Da**
 
 If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
 
-Once you are done checking the logs or querying the data, you may stop all services and restart again soon as we start staking in the next stage.
+Once you are done checking the logs or querying the data, you may proceed to staking tokens.
 
-#### 6.8: Query data
+In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
 
-To see examples on how to query your full node and get network status, please refer here: https://api.matic.network/staking/cs1001/swagger-ui/
+For an issue you have encountered specifically with Heimdall or Heimdall related, you can create an issue in the Heimdall repository: https://github.com/maticnetwork/heimdall/issues
+
+For issues, you have encountered specifically with Bor or Bor related, you can create an issue in the Bor repository: https://github.com/maticnetwork/bor/issues
+
+For clear identification, you can also use labels to tag the issues reported.
+
+Upon reporting an issue, the Matic Project team will review and update/comment on the status of the issue. Depending on the severity of the issue, the Matic project team may request you to create a PR to provide a fix. Bounties and incentives would be provided for such issues.

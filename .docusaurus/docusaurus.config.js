@@ -32,6 +32,11 @@ export default {
           "position": "left"
         },
         {
+          "to": "docs/integrate/getting-started",
+          "label": "Integrate",
+          "position": "left"
+        },
+        {
           "to": "docs/staking/economics",
           "label": "Validators",
           "position": "left"

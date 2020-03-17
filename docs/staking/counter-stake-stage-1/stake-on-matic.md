@@ -50,6 +50,40 @@ Now that you have done a basic health check and generated the keystore and priva
 
 ## Stake on Ethereum chain
 
+You can stake on Matic 2 different ways, Using the Validator Dashboard or by CLI
+
+**Stake using validator dashboard**
+
+In order to stake using the Validator Dashboard, you can use the following link to access the dashboard: https://wallet.matic.today/staking
+
+You will be able to login using Metamask or any WalletConnect enabled wallet. We recommend using Metamask.
+
+You have to make sure that you login using the same address where your tokens are present.
+
+Once you login you will see the landing page and an option to become a Validator.
+
+![Arch](./images/become-a-validator.png)
+
+Clicking on **Become a validator** will navigate you to a separate page to initiate the process.
+
+You will first be asked to setup your node. If you haven't already setup your node by now, you will need to do so, else if you proceed ahead you will receive an error when you attempt to stake.
+
+![Arch](./images/setup-node.png)
+
+Clicking on Next will proceed you to next step where you add Validator details and staking amount. If you are instead taken to the **Connect Wallet** or **Add Fund** screens, this means that you are either not connected to your wallet or you have not connected to the account that contains the staking tokens.
+
+![Arch](./images/stake.png)
+
+Once you enter all the required details such as Signer Address and Stake amount, you can then click on **Stake Now**.
+
+Once the transaction is completed you will have staked successfully to become a validator. You will be asked thrice to confirm the transaction. 
+
+* Approve Transaction - This will approve your stake transaction.
+* Stake - This will confirm your stake transaction.
+* Save -  This will save your validator details.
+
+**Stake using CLI**
+
 **Approve**
 
 The `approve` command will initiate your transaction towards staking on Matic.
@@ -68,7 +102,7 @@ Once you run the approve command you should see the following response along wit
 
 To check the status of the transaction, you paste the `txHash` on this link: [https://ropsten.etherscan.io/](https://ropsten.etherscan.io/)
 
-**Stake**
+
 
 Once `approve` transaction gets confirmed, send `stake` transaction on Ethereum.
 
@@ -92,7 +126,7 @@ To check the status of the transaction, you paste the `txHash` on this link: [ht
 
 To check the balance of your address:
 
-You can find details regarding chain id over here: https://github.com/maticnetwork/public-testnets/tree/master/CS-2001
+You can find details regarding chain id over here: https://github.com/maticnetwork/public-testnets/blob/master/CS-2002/heimdall/config/genesis.json#L3
 
     heimdallcli query auth account <signer-address> --chain-id <chain-id>
 
@@ -116,13 +150,15 @@ Once you have adequate balance to pay fees on Heimdall, you can join the network
 
 You can view your `pub-key` by running the command `heimdalld show-account` 
 
-The chain-id required here is the heimdall chain-id - heimdall-lXaaU9
+The chain-id required here is the heimdall chain-id - `heimdall-cs2003`
 
 ### Validator information
 
 **By signer address**
 
-    heimdallcli query staking validator-info --validator=0x6c468cf8c9879006e22ec4029696e005c2319c9d --chain-id <chain-id>
+    heimdallcli query staking validator-info --validator=<signer address> --chain-id <chain-id>
+
+Here the signer address is the same as your wallet address which holds the staking tokens. And the chain id is the Heimdall chain-id for a a particular testnet, for example `heimdall-cs2003`
 
 This command should display the following output:
 
@@ -140,5 +176,9 @@ This command should display the following output:
 **By validator id**
 
     heimdallcli query staking validator-info --id=1 --chain-id=<chain-id>
+
+Here the valude in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://ropsten.etherscan.com and check your transaction hash there. You would see your `id` present there.
+
+![Arch](./images/validator-id.png)
 
 This command will print output in format as "validator by signer address" command.

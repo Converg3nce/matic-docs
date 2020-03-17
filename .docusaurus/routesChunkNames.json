@@ -85,10 +85,6 @@
     "component": "component---theme-doc-page-1-be-9be",
     "docsMetadata": "docsMetadata---docs-route-20-a-f24"
   },
-  "/docs/2-min-guide-to-matic": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-2-min-guide-to-matic-84-f-a16"
-  },
   "/docs/advanced/calling-plasma-contracts": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-advanced-calling-plasma-contracts-293-fc0"
@@ -136,6 +132,14 @@
   "/docs/helloworld": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-helloworlde-7-e-9a4"
+  },
+  "/docs/integrate/flow-of-token": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrate-flow-of-tokena-8-a-e7d"
+  },
+  "/docs/integrate/getting-started": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrate-getting-started-5-de-4b1"
   },
   "/docs/integrations/decentralised-storage/moibit": {
     "component": "component---theme-doc-item-178-a40",
@@ -277,6 +281,14 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-sdk-matic-js-57-a-47e"
   },
+  "/docs/staking/bor/install-bor": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-bor-install-bora-1-b-627"
+  },
+  "/docs/staking/bor/run-bor": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-bor-run-borcb-5-cb0"
+  },
   "/docs/staking/counter-stake-stage-1/getting-started": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-counter-stake-stage-1-getting-startedc-66-21d"
@@ -305,13 +317,45 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-counter-stake-stage-1-technical-faqsd-35-68a"
   },
+  "/docs/staking/deploy-your-own-matic-testnet": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-deploy-your-own-matic-testnet-520-d49"
+  },
   "/docs/staking/economics": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-economicsade-7de"
   },
+  "/docs/staking/examples": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-examples-65-f-c7e"
+  },
   "/docs/staking/faqs": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-staking-faqs-113-d80"
+  },
+  "/docs/staking/heimdall/configure-heimdall": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-heimdall-configure-heimdall-23-c-6de"
+  },
+  "/docs/staking/heimdall/install-heimdall": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-heimdall-install-heimdalla-6-b-f51"
+  },
+  "/docs/staking/heimdall/run-heimdall": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-heimdall-run-heimdall-682-4ec"
+  },
+  "/docs/staking/join-public-testnet": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-join-public-testnete-34-f94"
+  },
+  "/docs/staking/node-setup-guide": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-node-setup-guide-5-c-8-062"
+  },
+  "/docs/staking/reporting-issues": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-staking-reporting-issues-502-6e9"
   },
   "/docs/staking/technical-requirements": {
     "component": "component---theme-doc-item-178-a40",

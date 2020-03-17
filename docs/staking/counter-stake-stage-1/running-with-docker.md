@@ -3,6 +3,8 @@ id: running-with-docker
 title: Setup Matic Validator Node
 sidebar_label: Running with Docker
 ---
+# Setup Matic Validator Node
+
 ### Step 1: Install docker
 
 You can install docker from the official website or you can run the commands provided below.
