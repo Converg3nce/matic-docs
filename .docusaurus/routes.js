@@ -65,12 +65,6 @@ export default [
   
 },
 {
-  path: '/showcase/',
-  component: ComponentCreator('/showcase/'),
-  exact: true,
-  
-},
-{
   path: '/docs/:route',
   component: ComponentCreator('/docs/:route'),
   
