@@ -100,26 +100,8 @@ export default [
   
 },
 {
-  path: '/docs/advanced/security-models',
-  component: ComponentCreator('/docs/advanced/security-models'),
-  exact: true,
-  
-},
-{
   path: '/docs/advanced/swap-assets',
   component: ComponentCreator('/docs/advanced/swap-assets'),
-  exact: true,
-  
-},
-{
-  path: '/docs/bor-spec/bor',
-  component: ComponentCreator('/docs/bor-spec/bor'),
-  exact: true,
-  
-},
-{
-  path: '/docs/bor-spec/setup-bor',
-  component: ComponentCreator('/docs/bor-spec/setup-bor'),
   exact: true,
   
 },
@@ -144,6 +126,180 @@ export default [
 {
   path: '/docs/helloworld',
   component: ComponentCreator('/docs/helloworld'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/architecture/bor',
+  component: ComponentCreator('/docs/home/architecture/bor'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/architecture/contracts/staking',
+  component: ComponentCreator('/docs/home/architecture/contracts/staking'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/architecture/overview',
+  component: ComponentCreator('/docs/home/architecture/overview'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/architecture/security-models',
+  component: ComponentCreator('/docs/home/architecture/security-models'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/architecture/setup-bor',
+  component: ComponentCreator('/docs/home/architecture/setup-bor'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/accounts',
+  component: ComponentCreator('/docs/home/blockchain-basics/accounts'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/blockchain',
+  component: ComponentCreator('/docs/home/blockchain-basics/blockchain'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/blockchain-types',
+  component: ComponentCreator('/docs/home/blockchain-basics/blockchain-types'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/consensus-mechanism',
+  component: ComponentCreator('/docs/home/blockchain-basics/consensus-mechanism'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/ethereum',
+  component: ComponentCreator('/docs/home/blockchain-basics/ethereum'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/gas',
+  component: ComponentCreator('/docs/home/blockchain-basics/gas'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/matic',
+  component: ComponentCreator('/docs/home/blockchain-basics/matic'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/sidechain',
+  component: ComponentCreator('/docs/home/blockchain-basics/sidechain'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/solidity',
+  component: ComponentCreator('/docs/home/blockchain-basics/solidity'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/blockchain-basics/transactions',
+  component: ComponentCreator('/docs/home/blockchain-basics/transactions'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/faq',
+  component: ComponentCreator('/docs/home/faq'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/mapped-tokens',
+  component: ComponentCreator('/docs/home/mapped-tokens'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/new-to-matic',
+  component: ComponentCreator('/docs/home/new-to-matic'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/encoder',
+  component: ComponentCreator('/docs/home/specifications/heimdall/encoder'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/modules/auth',
+  component: ComponentCreator('/docs/home/specifications/heimdall/modules/auth'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/modules/bank',
+  component: ComponentCreator('/docs/home/specifications/heimdall/modules/bank'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/modules/bor',
+  component: ComponentCreator('/docs/home/specifications/heimdall/modules/bor'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/modules/checkpoints',
+  component: ComponentCreator('/docs/home/specifications/heimdall/modules/checkpoints'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/modules/clerk',
+  component: ComponentCreator('/docs/home/specifications/heimdall/modules/clerk'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/modules/governance',
+  component: ComponentCreator('/docs/home/specifications/heimdall/modules/governance'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/modules/staking',
+  component: ComponentCreator('/docs/home/specifications/heimdall/modules/staking'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/modules/topup',
+  component: ComponentCreator('/docs/home/specifications/heimdall/modules/topup'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/heimdall/stdtx',
+  component: ComponentCreator('/docs/home/specifications/heimdall/stdtx'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/specifications/peppermint',
+  component: ComponentCreator('/docs/home/specifications/peppermint'),
   exact: true,
   
 },
@@ -274,224 +430,140 @@ export default [
   
 },
 {
-  path: '/docs/resources/architecture',
-  component: ComponentCreator('/docs/resources/architecture'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/accounts',
-  component: ComponentCreator('/docs/resources/blockchain-basics/accounts'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/blockchain',
-  component: ComponentCreator('/docs/resources/blockchain-basics/blockchain'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/blockchain-types',
-  component: ComponentCreator('/docs/resources/blockchain-basics/blockchain-types'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/consensus-mechanism',
-  component: ComponentCreator('/docs/resources/blockchain-basics/consensus-mechanism'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/ethereum',
-  component: ComponentCreator('/docs/resources/blockchain-basics/ethereum'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/gas',
-  component: ComponentCreator('/docs/resources/blockchain-basics/gas'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/matic',
-  component: ComponentCreator('/docs/resources/blockchain-basics/matic'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/solidity',
-  component: ComponentCreator('/docs/resources/blockchain-basics/solidity'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/blockchain-basics/transactions',
-  component: ComponentCreator('/docs/resources/blockchain-basics/transactions'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/faq',
-  component: ComponentCreator('/docs/resources/faq'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/mapped-tokens',
-  component: ComponentCreator('/docs/resources/mapped-tokens'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/new-to-matic',
-  component: ComponentCreator('/docs/resources/new-to-matic'),
-  exact: true,
-  
-},
-{
-  path: '/docs/resources/sidechain',
-  component: ComponentCreator('/docs/resources/sidechain'),
-  exact: true,
-  
-},
-{
   path: '/docs/sdk/api-reference',
   component: ComponentCreator('/docs/sdk/api-reference'),
   exact: true,
   
 },
 {
-  path: '/docs/sdk/matic-js',
-  component: ComponentCreator('/docs/sdk/matic-js'),
+  path: '/docs/sdk/deposit',
+  component: ComponentCreator('/docs/sdk/deposit'),
   exact: true,
   
 },
 {
-  path: '/docs/staking/bor/install-bor',
-  component: ComponentCreator('/docs/staking/bor/install-bor'),
+  path: '/docs/sdk/getting-started',
+  component: ComponentCreator('/docs/sdk/getting-started'),
   exact: true,
   
 },
 {
-  path: '/docs/staking/bor/run-bor',
-  component: ComponentCreator('/docs/staking/bor/run-bor'),
+  path: '/docs/sdk/transfer',
+  component: ComponentCreator('/docs/sdk/transfer'),
   exact: true,
   
 },
 {
-  path: '/docs/staking/counter-stake-stage-1/getting-started',
-  component: ComponentCreator('/docs/staking/counter-stake-stage-1/getting-started'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/counter-stake-stage-1/introduction',
-  component: ComponentCreator('/docs/staking/counter-stake-stage-1/introduction'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/counter-stake-stage-1/linux-package-installation',
-  component: ComponentCreator('/docs/staking/counter-stake-stage-1/linux-package-installation'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/counter-stake-stage-1/running-with-binaries',
-  component: ComponentCreator('/docs/staking/counter-stake-stage-1/running-with-binaries'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/counter-stake-stage-1/running-with-docker',
-  component: ComponentCreator('/docs/staking/counter-stake-stage-1/running-with-docker'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/counter-stake-stage-1/stake-on-matic',
-  component: ComponentCreator('/docs/staking/counter-stake-stage-1/stake-on-matic'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/counter-stake-stage-1/technical-faqs',
-  component: ComponentCreator('/docs/staking/counter-stake-stage-1/technical-faqs'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/deploy-your-own-matic-testnet',
-  component: ComponentCreator('/docs/staking/deploy-your-own-matic-testnet'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/economics',
-  component: ComponentCreator('/docs/staking/economics'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/examples',
-  component: ComponentCreator('/docs/staking/examples'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/faqs',
-  component: ComponentCreator('/docs/staking/faqs'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/heimdall/configure-heimdall',
-  component: ComponentCreator('/docs/staking/heimdall/configure-heimdall'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/heimdall/install-heimdall',
-  component: ComponentCreator('/docs/staking/heimdall/install-heimdall'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/heimdall/run-heimdall',
-  component: ComponentCreator('/docs/staking/heimdall/run-heimdall'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/join-public-testnet',
-  component: ComponentCreator('/docs/staking/join-public-testnet'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/node-setup-guide',
-  component: ComponentCreator('/docs/staking/node-setup-guide'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/reporting-issues',
-  component: ComponentCreator('/docs/staking/reporting-issues'),
-  exact: true,
-  
-},
-{
-  path: '/docs/staking/technical-requirements',
-  component: ComponentCreator('/docs/staking/technical-requirements'),
+  path: '/docs/sdk/withdraw',
+  component: ComponentCreator('/docs/sdk/withdraw'),
   exact: true,
   
 },
 {
   path: '/docs/tutorial-advanced/full-stack-dapp-with-pos',
   component: ComponentCreator('/docs/tutorial-advanced/full-stack-dapp-with-pos'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/basics/delegator',
+  component: ComponentCreator('/docs/validate/basics/delegator'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/basics/validator',
+  component: ComponentCreator('/docs/validate/basics/validator'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/getting-started',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/getting-started'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/introduction',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/introduction'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/linux-package-installation',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/linux-package-installation'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/running-with-binaries',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/running-with-binaries'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/running-with-docker',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/running-with-docker'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/stake-on-matic',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/stake-on-matic'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/technical-faqs',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/technical-faqs'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/deploy-your-own-matic-testnet',
+  component: ComponentCreator('/docs/validate/deploy-your-own-matic-testnet'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/economics',
+  component: ComponentCreator('/docs/validate/economics'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/faqs',
+  component: ComponentCreator('/docs/validate/faqs'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/heimdall/configure-heimdall',
+  component: ComponentCreator('/docs/validate/heimdall/configure-heimdall'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/heimdall/install-heimdall',
+  component: ComponentCreator('/docs/validate/heimdall/install-heimdall'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/heimdall/run-heimdall',
+  component: ComponentCreator('/docs/validate/heimdall/run-heimdall'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/reporting-issues',
+  component: ComponentCreator('/docs/validate/reporting-issues'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/technical-requirements',
+  component: ComponentCreator('/docs/validate/technical-requirements'),
   exact: true,
   
 },
@@ -504,12 +576,6 @@ export default [
 {
   path: '/docs/validator/checkpoint-mechanism',
   component: ComponentCreator('/docs/validator/checkpoint-mechanism'),
-  exact: true,
-  
-},
-{
-  path: '/docs/validator/delegator',
-  component: ComponentCreator('/docs/validator/delegator'),
   exact: true,
   
 },
@@ -532,20 +598,8 @@ export default [
   
 },
 {
-  path: '/docs/validator/staking',
-  component: ComponentCreator('/docs/validator/staking'),
-  exact: true,
-  
-},
-{
   path: '/docs/validator/state-sync',
   component: ComponentCreator('/docs/validator/state-sync'),
-  exact: true,
-  
-},
-{
-  path: '/docs/validator/validator',
-  component: ComponentCreator('/docs/validator/validator'),
   exact: true,
   
 }],

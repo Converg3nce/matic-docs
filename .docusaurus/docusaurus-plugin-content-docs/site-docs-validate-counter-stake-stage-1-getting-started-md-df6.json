@@ -1,0 +1,17 @@
+{
+  "id": "validate/counter-stake-stage-1/getting-started",
+  "title": "Getting Started",
+  "description": "Hey everyone! Counter Stake is here - Get ready to run Validator nodes on the Matic testnet!",
+  "source": "@site/docs/validate/counter-stake-stage-1/getting-started.md",
+  "permalink": "/docs/validate/counter-stake-stage-1/getting-started",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/counter-stake-stage-1/getting-started.md",
+  "sidebar": "Validators",
+  "previous": {
+    "title": "Minimum Technical Requirements",
+    "permalink": "/docs/validate/technical-requirements"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/validate/counter-stake-stage-1/introduction"
+  }
+}

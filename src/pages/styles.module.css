@@ -516,16 +516,15 @@
 
   color: #3b465c;
 }
-
+.footer{
+  position: absolute;
+  left: 152px;
+  top: 1550px;
+}
 .anyQuestion {
   position: absolute;
   width: 1137px;
   height: 327px;
-  left: 152px;
-  top: 2050px;
-
-  /* Primary_600 */
-
   background: #003cb2;
   border-radius: 20px;
 }
@@ -656,9 +655,9 @@
 
 position: absolute;
 width: 1439px;
-height: 351px;
-left: 1px;
-top: 2215px;
+height: 250px;
+left: -152px;
+top: 150px;
 
 background: #0B1746;
 

@@ -1,7 +1,7 @@
 ---
 id: helloworld
 title: Hello World
-sidebar_label: Smart Contract on Matic
+sidebar_label: Using Remix
 ---
 A Hello World style starter project. Deploys a smart contract with a message, and renders it in the front-end. You can change the message using the interact panel!
 
@@ -135,7 +135,7 @@ The `string public message` function is another public function that is simila
         <img src={'../img/helloworld/Screenshot_2020-02-14_at_1.45.23_PM.png'} alt="RemixIDE_Step1"/>
 </div>
 
-**Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract.
+**Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract. Check the deployement status here: https://testnetv3-explorer.matic.network/.
 
 <div
         style={{

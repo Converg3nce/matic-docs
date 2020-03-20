@@ -5,14 +5,14 @@
   "source": "@site/docs/tutorial-helloworld.md",
   "permalink": "/docs/helloworld",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-helloworld.md",
-  "sidebar_label": "Smart Contract on Matic",
+  "sidebar_label": "Using Remix",
   "sidebar": "development",
   "previous": {
     "title": "Welcome to Matic's DApp Development",
     "permalink": "/docs/getting-started"
   },
   "next": {
-    "title": "How to create a MetaMask Wallet?",
-    "permalink": "/docs/metamask"
+    "title": "Using Truffle",
+    "permalink": "/docs/config-truffle"
   }
 }

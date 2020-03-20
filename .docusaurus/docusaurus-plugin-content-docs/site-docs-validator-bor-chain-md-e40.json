@@ -12,7 +12,7 @@
     "permalink": "/docs/validator/heimdall-chain"
   },
   "next": {
-    "title": "Who is a Delegator?",
-    "permalink": "/docs/validator/delegator"
+    "title": "Checkpoint Mechanism",
+    "permalink": "/docs/validator/checkpoint-mechanism"
   }
 }

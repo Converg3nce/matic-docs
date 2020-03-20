@@ -7,11 +7,11 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/advanced/security-models.md",
   "sidebar": "introduction",
   "previous": {
-    "title": "Matic Architecture",
-    "permalink": "/docs/resources/architecture"
+    "title": "Liquid Delegation in Matic",
+    "permalink": "/docs/validator/liquid-delegation"
   },
   "next": {
     "title": "FAQ",
-    "permalink": "/docs/resources/faq"
+    "permalink": "/docs/home/faq"
   }
 }

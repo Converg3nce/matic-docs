@@ -1,0 +1,17 @@
+{
+  "id": "home/blockchain-basics/blockchain-types",
+  "title": "Types of Blockchain",
+  "description": "Following are the major types of blockchain networks:",
+  "source": "@site/docs/home/blockchain-basics/basics-blockchain-types.md",
+  "permalink": "/docs/home/blockchain-basics/blockchain-types",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/blockchain-basics/basics-blockchain-types.md",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "What is Blockchain?",
+    "permalink": "/docs/home/blockchain-basics/blockchain"
+  },
+  "next": {
+    "title": "Consensus Mechanism",
+    "permalink": "/docs/home/blockchain-basics/consensus-mechanism"
+  }
+}

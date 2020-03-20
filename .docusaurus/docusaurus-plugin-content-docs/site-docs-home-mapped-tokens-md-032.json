@@ -1,0 +1,8 @@
+{
+  "id": "home/mapped-tokens",
+  "title": "Mapped Tokens",
+  "description": "# Registered Tokens with Ropsten and Matic Testnet",
+  "source": "@site/docs/home/mapped-tokens.md",
+  "permalink": "/docs/home/mapped-tokens",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/mapped-tokens.md"
+}

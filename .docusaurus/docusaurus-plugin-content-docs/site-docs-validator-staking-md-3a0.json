@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/Staking.md",
   "sidebar": "introduction",
   "previous": {
-    "title": "Sidechains and Plasma",
-    "permalink": "/docs/resources/sidechain"
+    "title": "Setup Bor",
+    "permalink": "/docs/home/architecture/setup-bor"
   },
   "next": {
     "title": "Who is a Validator?",

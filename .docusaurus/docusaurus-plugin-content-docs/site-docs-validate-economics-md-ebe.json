@@ -1,0 +1,18 @@
+{
+  "id": "validate/economics",
+  "title": "Staking Economics",
+  "description": "Matic is a Layer 2 scaling solution for public blockchains. It uses an account based variant of More Viable Plasma to guarantee the security of assets on the main-chain and it ensures the security of generic transactions by using a decentralized network of Proof-of-Stake validators. The system is designed to enable quicker partial confirmations for better user experience while the final confirmation is attained periodically as the checkpoints are committed on the main-chain.  ",
+  "source": "@site/docs/validate/economics.md",
+  "permalink": "/docs/validate/economics",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/economics.md",
+  "sidebar_label": "Economics",
+  "sidebar": "Validators",
+  "previous": {
+    "title": "Who is a Delegator?",
+    "permalink": "/docs/validate/basics/delegator"
+  },
+  "next": {
+    "title": "Minimum Technical Requirements",
+    "permalink": "/docs/validate/technical-requirements"
+  }
+}

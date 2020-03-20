@@ -7,51 +7,117 @@
 
 module.exports = {
   introduction: [
-    "resources/new-to-matic",
+    "home/new-to-matic",
     {
       type: "category",
       label: "Blockchain Basics",
       items: [
-        "resources/blockchain-basics/blockchain",
-        "resources/blockchain-basics/blockchain-types",
-        "resources/blockchain-basics/consensus-mechanism",
-        "resources/blockchain-basics/ethereum",
-        "resources/blockchain-basics/matic",
-        "resources/blockchain-basics/solidity",
-        "resources/blockchain-basics/transactions",
-        "resources/blockchain-basics/gas",
-        "resources/blockchain-basics/accounts",
-        "resources/sidechain"
+        "home/blockchain-basics/blockchain",
+        "home/blockchain-basics/blockchain-types",
+        "home/blockchain-basics/consensus-mechanism",
+        "home/blockchain-basics/ethereum",
+        "home/blockchain-basics/matic",
+        "home/blockchain-basics/solidity",
+        "home/blockchain-basics/transactions",
+        "home/blockchain-basics/gas",
+        "home/blockchain-basics/accounts",
+        "home/blockchain-basics/sidechain"
       ]
     },
     {
       type: "category",
-      label: "Validator",
+      label: "Architecture",
       items: [
-        "validator/staking",
-        "validator/validator",
-        "validator/proposers-producers-selection",
-        "validator/state-sync",
-        "validator/heimdall-chain",
-        "validator/bor-chain",
-        "validator/delegator",
-        "validator/checkpoint-mechanism",
-        "validator/liquid-delegation"
+        "home/architecture/overview",
+        "home/architecture/security-models",
+        {
+          type: "category",
+          label: "Bor",
+          items: ["home/architecture/bor", "home/architecture/setup-bor"]
+        },
+        {
+          type: "category",
+          label: "Heimdall",
+          items: []
+        },
+        {
+          type: "category",
+          label: "Contracts",
+          items: ["home/architecture/contracts/staking",]
+        },
+        {
+          type: "category",
+          label: "Plasma Contracts",
+          items: []
+        },
+        {
+          type: "category",
+          label: "State Sync Mechanism",
+          items: []
+        },
+        {
+          type: "category",
+          label: "Validator",
+          items: [
+            "validator/proposers-producers-selection",
+            "validator/state-sync",
+            "validator/heimdall-chain",
+            "validator/bor-chain",
+            "validator/checkpoint-mechanism",
+            "validator/liquid-delegation"
+          ]
+        }
       ]
     },
     {
       type: "category",
-      label: "Bor Specs",
-      items: ["bor-spec/bor","bor-spec/setup-bor"]
+      label: "Specifications",
+      items: [
+        {
+          type: "category",
+          label: "Heimdall",
+          items: [
+            "home/specifications/heimdall/encoder",
+            "home/specifications/heimdall/stdtx",
+            {
+              type: "category",
+              label: "Modules",
+              items: [
+                "home/specifications/heimdall/modules/auth",
+                "home/specifications/heimdall/modules/governance",
+              ]
+            },
+          ]
+        },
+        {
+          type: "category",
+          label: "Bor",
+          items: []
+        },
+        {
+          type: "category",
+          label: "Contracts",
+          items: []
+        },
+        {
+          type: "category",
+          label: "Plasma Contracts",
+          items: []
+        },
+        "home/specifications/peppermint",
+
+      ]
     },
-    "resources/architecture",
-    "advanced/security-models",
-    "resources/faq"
+    
+    "home/faq"
   ],
   development: [
     "getting-started",
-    "helloworld",
-    
+    {
+      type: "category",
+      label: "Deploying on Matic",
+      items: ["helloworld", "config-truffle"]
+    },
     {
       type: "category",
       label: "Using Metamask",
@@ -60,15 +126,10 @@ module.exports = {
         "metamask/conf-custom-tokens-metamask",
         "metamask/conf-testnet-metamask",
         "metamask/gas-fees",
-        "metamask/multiple-accounts",
+        "metamask/multiple-accounts"
       ]
     },
-    {
-      type: "category",
-      label: "Deploying on Matic",
-      items: ["config-truffle"]
 
-    },
     {
       type: "category",
       label: "Connect to Web3",
@@ -82,7 +143,20 @@ module.exports = {
     {
       type: "category",
       label: "Ethereum ↔️ Matic",
-      items: ["sdk/matic-js", "sdk/api-reference", "advanced/moving-assets"]
+      items: [
+        {
+          type: "category",
+          label: "Matic.js",
+          items: [
+            "sdk/getting-started",
+            "sdk/deposit",
+            "sdk/transfer",
+            "sdk/withdraw",
+            "sdk/api-reference"
+          ]
+        },
+        "advanced/moving-assets"
+      ]
     },
     {
       type: "category",
@@ -125,24 +199,57 @@ module.exports = {
       ]
     }
   ],
-  Integrate: ["integrate/getting-started",'integrate/flow-of-token',"network-config"],
+  Integrate: [
+    "integrate/getting-started",
+    "integrate/flow-of-token",
+    "network-config",
+    {
+      type: "category",
+      label: "Support",
+      items: [
+        {
+          type: "link",
+          label: "Matic Faucet",
+          href: "https://faucet.matic.network/"
+        },
+        {
+          type: "link",
+          label: "RPC Health",
+          href: "https://status.matic.today"
+        },
+        {
+          type: "link",
+          label: "Checkpoint Status",
+          href: "https://status.matic.today/#/checkpoints"
+        }
+      ]
+    }
+  ],
   Validators: [
-    "staking/economics",
-    "staking/technical-requirements",
+    {
+      type: "category",
+      label: "Basics",
+      items: [
+      "validate/basics/validator",
+      "validate/basics/delegator",
+    ]
+    },
+    "validate/economics",
+    "validate/technical-requirements",
     {
       type: "category",
       label: "Counter Stake: Stage 1",
       items: [
-        "staking/counter-stake-stage-1/getting-started",
-        "staking/counter-stake-stage-1/introduction",
-        "staking/counter-stake-stage-1/linux-package-installation",
-        "staking/counter-stake-stage-1/running-with-binaries",
-        "staking/counter-stake-stage-1/running-with-docker",
-        "staking/counter-stake-stage-1/stake-on-matic",
-        "staking/counter-stake-stage-1/technical-faqs"
+        "validate/counter-stake-stage-1/getting-started",
+        "validate/counter-stake-stage-1/introduction",
+        "validate/counter-stake-stage-1/linux-package-installation",
+        "validate/counter-stake-stage-1/running-with-binaries",
+        "validate/counter-stake-stage-1/running-with-docker",
+        "validate/counter-stake-stage-1/stake-on-matic",
+        "validate/counter-stake-stage-1/technical-faqs"
       ]
     },
-    "staking/faqs",
-    "staking/reporting-issues"
+    "validate/faqs",
+    "validate/reporting-issues"
   ]
 };

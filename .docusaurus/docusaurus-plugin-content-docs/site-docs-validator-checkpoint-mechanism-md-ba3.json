@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/checkpoint-mechanism.md",
   "sidebar": "introduction",
   "previous": {
-    "title": "Who is a Delegator?",
-    "permalink": "/docs/validator/delegator"
+    "title": "What is BOR Chain?",
+    "permalink": "/docs/validator/bor-chain"
   },
   "next": {
     "title": "Liquid Delegation in Matic",

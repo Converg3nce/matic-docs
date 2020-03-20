@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/bor-spec/bor.md",
   "sidebar": "introduction",
   "previous": {
-    "title": "Liquid Delegation in Matic",
-    "permalink": "/docs/validator/liquid-delegation"
+    "title": "Matic Architecture",
+    "permalink": "/docs/home/architecture/overview"
   },
   "next": {
     "title": "Setup Bor",

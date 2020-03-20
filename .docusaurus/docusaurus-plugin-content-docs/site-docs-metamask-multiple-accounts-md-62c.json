@@ -11,7 +11,7 @@
     "permalink": "/docs/metamask/gas-fees"
   },
   "next": {
-    "title": "Using Truffle",
-    "permalink": "/docs/config-truffle"
+    "title": "Key Management Strategies",
+    "permalink": "/docs/integrations/key-management/getting-started"
   }
 }

@@ -7,11 +7,11 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/config-truffle.md",
   "sidebar": "development",
   "previous": {
-    "title": "Multiple Accounts",
-    "permalink": "/docs/metamask/multiple-accounts"
+    "title": "Hello World",
+    "permalink": "/docs/helloworld"
   },
   "next": {
-    "title": "Key Management Strategies",
-    "permalink": "/docs/integrations/key-management/getting-started"
+    "title": "How to create a MetaMask Wallet?",
+    "permalink": "/docs/metamask"
   }
 }

@@ -1,16 +1,19 @@
 export const firstRow = [
     {
         title: "Blockchain Basics",
+        linkUrl: "docs/home/new-to-matic",
         // imageUrl: ["../../img/basic.svg" , "../../img/basic.svg"],
-        description: "Learn about Blockchain and Matic, Learn How Blockchain Works With A Useful Explanation From the Internet Society."
+        description: "Learn about Blockchain and Matic"
     },
     {
         title: "DApp Developers",
+        linkUrl: "docs/getting-started",
         // imageUrl: ["../../img/basic.svg" ,"../../img/basic.svg"],
         description: "All the infrastructure and integrations you need to build, deploy, and manage dApps on Matic."
     },
     {
         title: "Validators",
+        linkUrl: "docs/staking/economics",
         // imageUrl: [ "../../img/basic.svg" , "../../img/basic.svg"],
         description: 'Learn How to stake with Matic, And Setup you own Environment to earn Rewards.'
     },
@@ -19,13 +22,15 @@ export const firstRow = [
 export const secondRow = [
     {
         title: "Blog",
+        linkUrl: "https://blog.matic.network/",
         // imageUrl: [{card:"../../img/basic.svg" , basic:"../../img/basic.svg"}],
         description: "The Matic blog hosts news, interviews, conversations, stories, and opinions from the blockchain community, inside and outside of Matic."
     },
     {
-        title: "Showcase",
+        title: "Integrate",
+        linkUrl: "docs/integrate/getting-started",
         // imageUrl: [{card:"../../img/basic.svg" , basic:"../../img/basic.svg"}],
-        description: "Explore Decentralized Applications... Checkout the Latest DApps deployed on the Matic Network."
+        description: "Easy Guide for Partners to Integarte to Matic Chain"
     }
 ];
 

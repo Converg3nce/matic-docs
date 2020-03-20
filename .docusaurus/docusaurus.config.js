@@ -22,13 +22,13 @@ export default {
       },
       "links": [
         {
-          "to": "docs/resources/new-to-matic",
-          "label": "Introduction",
+          "to": "docs/home/new-to-matic",
+          "label": "Home",
           "position": "left"
         },
         {
           "to": "docs/getting-started",
-          "label": "Development",
+          "label": "Develop",
           "position": "left"
         },
         {
@@ -37,8 +37,8 @@ export default {
           "position": "left"
         },
         {
-          "to": "docs/staking/economics",
-          "label": "Validators",
+          "to": "docs/validate/validator",
+          "label": "Validate",
           "position": "left"
         },
         {

@@ -8,8 +8,8 @@
   "sidebar_label": "Hello Metamask",
   "sidebar": "development",
   "previous": {
-    "title": "Hello World",
-    "permalink": "/docs/helloworld"
+    "title": "Using Truffle",
+    "permalink": "/docs/config-truffle"
   },
   "next": {
     "title": "Config Custom Tokens",

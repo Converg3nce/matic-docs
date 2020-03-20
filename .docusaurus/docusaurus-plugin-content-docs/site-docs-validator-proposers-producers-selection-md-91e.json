@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/proposers-producers-selection.md",
   "sidebar": "introduction",
   "previous": {
-    "title": "Who is a Validator?",
-    "permalink": "/docs/validator/validator"
+    "title": "Staking",
+    "permalink": "/docs/home/architecture/contracts/staking"
   },
   "next": {
     "title": "State Sync Mechanism",

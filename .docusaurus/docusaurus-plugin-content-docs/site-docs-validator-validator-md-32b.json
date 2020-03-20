@@ -9,7 +9,7 @@
   "sidebar": "introduction",
   "previous": {
     "title": "Staking",
-    "permalink": "/docs/validator/staking"
+    "permalink": "/docs/home/architecture/contracts/staking"
   },
   "next": {
     "title": "Proposers & Producers Selection",

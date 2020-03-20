@@ -108,3 +108,6 @@ Summary
 
 > Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
 
+**Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract.
+
+You can check the deplyement status here: https://testnetv3-explorer.matic.network/

@@ -7,11 +7,11 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/architecture.md",
   "sidebar": "introduction",
   "previous": {
-    "title": "Setup Bor",
-    "permalink": "/docs/bor-spec/setup-bor"
+    "title": "Sidechains and Plasma",
+    "permalink": "/docs/resources/sidechain"
   },
   "next": {
-    "title": "Security Models",
-    "permalink": "/docs/advanced/security-models"
+    "title": "Staking",
+    "permalink": "/docs/validator/staking"
   }
 }

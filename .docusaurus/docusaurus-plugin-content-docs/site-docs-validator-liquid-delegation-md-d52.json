@@ -11,7 +11,7 @@
     "permalink": "/docs/validator/checkpoint-mechanism"
   },
   "next": {
-    "title": "Bor",
-    "permalink": "/docs/bor-spec/bor"
+    "title": "Encoder (Pulp)",
+    "permalink": "/docs/home/specifications/heimdall/encoder"
   }
 }

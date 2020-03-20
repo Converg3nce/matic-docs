@@ -1,0 +1,18 @@
+{
+  "id": "home/specifications/heimdall/modules/governance",
+  "title": "Heimdall governance",
+  "description": "Heimdall governance works exactly as Cosmos-sdk `x/gov` module. [https://docs.cosmos.network/master/modules/gov/](https://docs.cosmos.network/master/modules/gov/) ",
+  "source": "@site/docs/home/specifications/heimdall/modules/ governance.md",
+  "permalink": "/docs/home/specifications/heimdall/modules/governance",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/heimdall/modules/ governance.md",
+  "sidebar_label": "Governance",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "Auth/Account",
+    "permalink": "/docs/home/specifications/heimdall/modules/auth"
+  },
+  "next": {
+    "title": "Peppermint",
+    "permalink": "/docs/home/specifications/peppermint"
+  }
+}

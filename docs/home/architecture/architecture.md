@@ -1,6 +1,6 @@
 ---
-id: architecture
-title: Matic Architecture 
+id: overview
+title: Matic
 ---
 
 Matic’s plasma chain builds upon Plasma MoreVP with an account based implementation. In the account model, transactions are interpreted as events to the blockchain state machine and the Ethereum Virtual Machine computes the state transition result of these events based on prior blockchain state. The two main components that set apart Matic’s implementation from other Plasma implementations are:

@@ -1,0 +1,13 @@
+{
+  "id": "home/faq",
+  "title": "FAQ",
+  "description": "## What is Matic Network?",
+  "source": "@site/docs/home/faq.md",
+  "permalink": "/docs/home/faq",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/faq.md",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "Peppermint",
+    "permalink": "/docs/home/specifications/peppermint"
+  }
+}

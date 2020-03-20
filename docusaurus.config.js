@@ -26,10 +26,10 @@ module.exports = {
         srcDark: '/img/logo-white.svg'
       },
       links: [
-        { to: 'docs/resources/new-to-matic', label: 'Introduction', position: 'left' },
-        { to: 'docs/getting-started', label: 'Development', position: 'left' },
+        { to: 'docs/home/new-to-matic', label: 'Home', position: 'left' },
+        { to: 'docs/getting-started', label: 'Develop', position: 'left' },
         { to: 'docs/integrate/getting-started', label: 'Integrate', position: 'left' },
-        { to: 'docs/staking/economics', label: 'Validators', position: 'left' },
+        { to: 'docs/validate/validator', label: 'Validate', position: 'left' },
         // { to: 'showcase', label: 'Showcase', position: 'right' },
         {
           href: 'https://blog.matic.network/',
