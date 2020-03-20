@@ -1,7 +1,7 @@
 {
   "id": "helloworld",
   "title": "Hello World",
-  "description": "A Hello World style starter project. Deploys a smart contract with a message, and renders it in the front-end. You can change the message using the interact panel!",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/tutorial-helloworld.md",
   "permalink": "/docs/helloworld",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-helloworld.md",

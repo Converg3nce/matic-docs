@@ -2,6 +2,8 @@
 id: proposers-producers-selection
 title: Proposers & Producers Selection
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 Block Producers for the BOR layer, Are a committee selected from the Validators pool on the basis of their stake which happens at regular intervals. These intervals are decided by the Validator's governance with regards to dynasty and network.
 
 Ratio of Stake specifies the probability to be selected as a member of block producer's committee. 
@@ -24,7 +26,7 @@ Ratio of Stake specifies the probability to be selected as a member of block pro
 - Sprint: Time interval for which the Block Producers committee is Selected.
 - Span: Number of Blocks Produced by a single producer.
 
-![Proposers%20Producer](../../img/validators/bor.png)
+<img src={useBaseUrl("img/validators/bor.png")} />
 
 References:
 

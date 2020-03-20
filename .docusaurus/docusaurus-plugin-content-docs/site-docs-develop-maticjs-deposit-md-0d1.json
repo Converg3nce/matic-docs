@@ -1,0 +1,17 @@
+{
+  "id": "develop/maticjs/deposit",
+  "title": "Deposit (Ethereum→Matic)",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/develop/maticjs/deposit.md",
+  "permalink": "/docs/develop/maticjs/deposit",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/maticjs/deposit.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/develop/maticjs/getting-started"
+  },
+  "next": {
+    "title": "Transfer (Matic↔Matic)",
+    "permalink": "/docs/develop/maticjs/transfer"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "develop/metamask/multiple-accounts",
+  "title": "Multiple Accounts",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl'; ",
+  "source": "@site/docs/develop/metamask/multiple-accounts.md",
+  "permalink": "/docs/develop/metamask/multiple-accounts",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metamask/multiple-accounts.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Changing Gas Fees",
+    "permalink": "/docs/develop/metamask/gas-fees"
+  },
+  "next": {
+    "title": "Key Management Strategies",
+    "permalink": "/docs/develop/key-management/getting-started"
+  }
+}

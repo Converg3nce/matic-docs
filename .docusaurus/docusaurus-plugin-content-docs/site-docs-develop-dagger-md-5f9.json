@@ -1,0 +1,18 @@
+{
+  "id": "develop/dagger",
+  "title": "Dagger",
+  "description": "Dagger is the best way to get realtime updates from Ethereum Blockchain.",
+  "source": "@site/docs/develop/dagger.md",
+  "permalink": "/docs/develop/dagger",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/dagger.md",
+  "sidebar_label": "Dagger - Single App",
+  "sidebar": "development",
+  "previous": {
+    "title": "Fiat-on-Ramp",
+    "permalink": "/docs/develop/fiat-on-ramp"
+  },
+  "next": {
+    "title": "Zapier",
+    "permalink": "/docs/develop/zapier/about"
+  }
+}

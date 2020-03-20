@@ -1,0 +1,17 @@
+{
+  "id": "develop/fiat-on-ramp",
+  "title": "Fiat-on-Ramp",
+  "description": "Cryptocurrency is the element that adds 'value' to the ecosystem that is blockchain. But to use it, you'd require some way of getting inside the ecosystem. ",
+  "source": "@site/docs/develop/fiat-on-ramp.md",
+  "permalink": "/docs/develop/fiat-on-ramp",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/fiat-on-ramp.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Getting Started with Oracles",
+    "permalink": "/docs/develop/oracles"
+  },
+  "next": {
+    "title": "Dagger",
+    "permalink": "/docs/develop/dagger"
+  }
+}

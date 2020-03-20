@@ -76,44 +76,188 @@ export default [
   
   routes: [
 {
-  path: '/docs/advanced/calling-plasma-contracts',
-  component: ComponentCreator('/docs/advanced/calling-plasma-contracts'),
-  exact: true,
-  
-},
-{
-  path: '/docs/advanced/custom-restrictions',
-  component: ComponentCreator('/docs/advanced/custom-restrictions'),
-  exact: true,
-  
-},
-{
-  path: '/docs/advanced/deploy-your-own-matic-testnet',
-  component: ComponentCreator('/docs/advanced/deploy-your-own-matic-testnet'),
-  exact: true,
-  
-},
-{
-  path: '/docs/advanced/moving-assets',
-  component: ComponentCreator('/docs/advanced/moving-assets'),
-  exact: true,
-  
-},
-{
-  path: '/docs/advanced/swap-assets',
-  component: ComponentCreator('/docs/advanced/swap-assets'),
-  exact: true,
-  
-},
-{
   path: '/docs/config-truffle',
   component: ComponentCreator('/docs/config-truffle'),
   exact: true,
   
 },
 {
-  path: '/docs/dagger/getting-started',
-  component: ComponentCreator('/docs/dagger/getting-started'),
+  path: '/docs/develop/advanced/calling-plasma-contracts',
+  component: ComponentCreator('/docs/develop/advanced/calling-plasma-contracts'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/advanced/custom-restrictions',
+  component: ComponentCreator('/docs/develop/advanced/custom-restrictions'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/advanced/deploy-your-own-matic-testnet',
+  component: ComponentCreator('/docs/develop/advanced/deploy-your-own-matic-testnet'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/advanced/moving-assets',
+  component: ComponentCreator('/docs/develop/advanced/moving-assets'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/advanced/swap-assets',
+  component: ComponentCreator('/docs/develop/advanced/swap-assets'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/dagger',
+  component: ComponentCreator('/docs/develop/dagger'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/decentralised-storage/moibit',
+  component: ComponentCreator('/docs/develop/decentralised-storage/moibit'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/fiat-on-ramp',
+  component: ComponentCreator('/docs/develop/fiat-on-ramp'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/full-stack-dapp-with-pos',
+  component: ComponentCreator('/docs/develop/full-stack-dapp-with-pos'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/getting-started',
+  component: ComponentCreator('/docs/develop/getting-started'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/key-management/getting-started',
+  component: ComponentCreator('/docs/develop/key-management/getting-started'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/key-management/metamask',
+  component: ComponentCreator('/docs/develop/key-management/metamask'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/key-management/portis',
+  component: ComponentCreator('/docs/develop/key-management/portis'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/key-management/walletconnect',
+  component: ComponentCreator('/docs/develop/key-management/walletconnect'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/maticjs/api-reference',
+  component: ComponentCreator('/docs/develop/maticjs/api-reference'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/maticjs/deposit',
+  component: ComponentCreator('/docs/develop/maticjs/deposit'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/maticjs/getting-started',
+  component: ComponentCreator('/docs/develop/maticjs/getting-started'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/maticjs/transfer',
+  component: ComponentCreator('/docs/develop/maticjs/transfer'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/maticjs/withdraw',
+  component: ComponentCreator('/docs/develop/maticjs/withdraw'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metamask',
+  component: ComponentCreator('/docs/develop/metamask'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metamask/custom-tokens',
+  component: ComponentCreator('/docs/develop/metamask/custom-tokens'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metamask/gas-fees',
+  component: ComponentCreator('/docs/develop/metamask/gas-fees'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metamask/multiple-accounts',
+  component: ComponentCreator('/docs/develop/metamask/multiple-accounts'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metamask/testnet',
+  component: ComponentCreator('/docs/develop/metamask/testnet'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metatransactions/metatransactions',
+  component: ComponentCreator('/docs/develop/metatransactions/metatransactions'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metatransactions/metatransactions-biconomy',
+  component: ComponentCreator('/docs/develop/metatransactions/metatransactions-biconomy'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metatransactions/metatransactions-gsn',
+  component: ComponentCreator('/docs/develop/metatransactions/metatransactions-gsn'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/oracles',
+  component: ComponentCreator('/docs/develop/oracles'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/zapier/about',
+  component: ComponentCreator('/docs/develop/zapier/about'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/zapier/getting-started',
+  component: ComponentCreator('/docs/develop/zapier/getting-started'),
   exact: true,
   
 },
@@ -316,152 +460,8 @@ export default [
   
 },
 {
-  path: '/docs/integrations/decentralised-storage/moibit',
-  component: ComponentCreator('/docs/integrations/decentralised-storage/moibit'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/fiat-on-ramp',
-  component: ComponentCreator('/docs/integrations/fiat-on-ramp'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/getting-started',
-  component: ComponentCreator('/docs/integrations/getting-started'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/key-management/getting-started',
-  component: ComponentCreator('/docs/integrations/key-management/getting-started'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/key-management/metamask',
-  component: ComponentCreator('/docs/integrations/key-management/metamask'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/key-management/portis',
-  component: ComponentCreator('/docs/integrations/key-management/portis'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/key-management/walletconnect',
-  component: ComponentCreator('/docs/integrations/key-management/walletconnect'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/metatransactions/metatransactions',
-  component: ComponentCreator('/docs/integrations/metatransactions/metatransactions'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/metatransactions/metatransactions-biconomy',
-  component: ComponentCreator('/docs/integrations/metatransactions/metatransactions-biconomy'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/metatransactions/metatransactions-gsn',
-  component: ComponentCreator('/docs/integrations/metatransactions/metatransactions-gsn'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/oracles',
-  component: ComponentCreator('/docs/integrations/oracles'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/zapier/about',
-  component: ComponentCreator('/docs/integrations/zapier/about'),
-  exact: true,
-  
-},
-{
-  path: '/docs/integrations/zapier/getting-started',
-  component: ComponentCreator('/docs/integrations/zapier/getting-started'),
-  exact: true,
-  
-},
-{
-  path: '/docs/metamask',
-  component: ComponentCreator('/docs/metamask'),
-  exact: true,
-  
-},
-{
-  path: '/docs/metamask/conf-custom-tokens-metamask',
-  component: ComponentCreator('/docs/metamask/conf-custom-tokens-metamask'),
-  exact: true,
-  
-},
-{
-  path: '/docs/metamask/conf-testnet-metamask',
-  component: ComponentCreator('/docs/metamask/conf-testnet-metamask'),
-  exact: true,
-  
-},
-{
-  path: '/docs/metamask/gas-fees',
-  component: ComponentCreator('/docs/metamask/gas-fees'),
-  exact: true,
-  
-},
-{
-  path: '/docs/metamask/multiple-accounts',
-  component: ComponentCreator('/docs/metamask/multiple-accounts'),
-  exact: true,
-  
-},
-{
   path: '/docs/network-config',
   component: ComponentCreator('/docs/network-config'),
-  exact: true,
-  
-},
-{
-  path: '/docs/sdk/api-reference',
-  component: ComponentCreator('/docs/sdk/api-reference'),
-  exact: true,
-  
-},
-{
-  path: '/docs/sdk/deposit',
-  component: ComponentCreator('/docs/sdk/deposit'),
-  exact: true,
-  
-},
-{
-  path: '/docs/sdk/getting-started',
-  component: ComponentCreator('/docs/sdk/getting-started'),
-  exact: true,
-  
-},
-{
-  path: '/docs/sdk/transfer',
-  component: ComponentCreator('/docs/sdk/transfer'),
-  exact: true,
-  
-},
-{
-  path: '/docs/sdk/withdraw',
-  component: ComponentCreator('/docs/sdk/withdraw'),
-  exact: true,
-  
-},
-{
-  path: '/docs/tutorial-advanced/full-stack-dapp-with-pos',
-  component: ComponentCreator('/docs/tutorial-advanced/full-stack-dapp-with-pos'),
   exact: true,
   
 },

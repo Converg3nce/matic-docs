@@ -1,0 +1,17 @@
+{
+  "id": "develop/maticjs/getting-started",
+  "title": "Getting Started",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/develop/maticjs/getting-started.md",
+  "permalink": "/docs/develop/maticjs/getting-started",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/maticjs/getting-started.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Portis",
+    "permalink": "/docs/develop/key-management/portis"
+  },
+  "next": {
+    "title": "Deposit (Ethereum→Matic)",
+    "permalink": "/docs/develop/maticjs/deposit"
+  }
+}

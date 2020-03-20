@@ -249,27 +249,27 @@
           {
             "type": "link",
             "label": "Hello Metamask",
-            "href": "/docs/metamask"
+            "href": "/docs/develop/metamask"
           },
           {
             "type": "link",
             "label": "Config Custom Tokens",
-            "href": "/docs/metamask/conf-custom-tokens-metamask"
+            "href": "/docs/develop/metamask/custom-tokens"
           },
           {
             "type": "link",
             "label": "Config Matic on Metamask",
-            "href": "/docs/metamask/conf-testnet-metamask"
+            "href": "/docs/develop/metamask/testnet"
           },
           {
             "type": "link",
-            "label": "Changin Gas Fees",
-            "href": "/docs/metamask/gas-fees"
+            "label": "Changing Gas Fees",
+            "href": "/docs/develop/metamask/gas-fees"
           },
           {
             "type": "link",
             "label": "Multiple Accounts",
-            "href": "/docs/metamask/multiple-accounts"
+            "href": "/docs/develop/metamask/multiple-accounts"
           }
         ]
       },
@@ -280,22 +280,22 @@
           {
             "type": "link",
             "label": "Getting Started",
-            "href": "/docs/integrations/key-management/getting-started"
+            "href": "/docs/develop/key-management/getting-started"
           },
           {
             "type": "link",
             "label": "Metamask",
-            "href": "/docs/integrations/key-management/metamask"
+            "href": "/docs/develop/key-management/metamask"
           },
           {
             "type": "link",
             "label": "Wallet Connect",
-            "href": "/docs/integrations/key-management/walletconnect"
+            "href": "/docs/develop/key-management/walletconnect"
           },
           {
             "type": "link",
             "label": "Portis",
-            "href": "/docs/integrations/key-management/portis"
+            "href": "/docs/develop/key-management/portis"
           }
         ]
       },
@@ -310,34 +310,34 @@
               {
                 "type": "link",
                 "label": "Getting Started",
-                "href": "/docs/sdk/getting-started"
+                "href": "/docs/develop/maticjs/getting-started"
               },
               {
                 "type": "link",
                 "label": "Deposit (Ethereum→Matic)",
-                "href": "/docs/sdk/deposit"
+                "href": "/docs/develop/maticjs/deposit"
               },
               {
                 "type": "link",
                 "label": "Transfer (Matic↔Matic)",
-                "href": "/docs/sdk/transfer"
+                "href": "/docs/develop/maticjs/transfer"
               },
               {
                 "type": "link",
                 "label": "Withdraw (Matic→Ethereum)",
-                "href": "/docs/sdk/withdraw"
+                "href": "/docs/develop/maticjs/withdraw"
               },
               {
                 "type": "link",
                 "label": "API",
-                "href": "/docs/sdk/api-reference"
+                "href": "/docs/develop/maticjs/api-reference"
               }
             ]
           },
           {
             "type": "link",
             "label": "Moving Assets",
-            "href": "/docs/advanced/moving-assets"
+            "href": "/docs/develop/advanced/moving-assets"
           }
         ]
       },
@@ -348,29 +348,29 @@
           {
             "type": "link",
             "label": "Getting Started",
-            "href": "/docs/integrations/metatransactions/metatransactions"
+            "href": "/docs/develop/metatransactions/metatransactions"
           },
           {
             "type": "link",
             "label": "Biconomy",
-            "href": "/docs/integrations/metatransactions/metatransactions-biconomy"
+            "href": "/docs/develop/metatransactions/metatransactions-biconomy"
           },
           {
             "type": "link",
             "label": "Gas Station Network",
-            "href": "/docs/integrations/metatransactions/metatransactions-gsn"
+            "href": "/docs/develop/metatransactions/metatransactions-gsn"
           }
         ]
       },
       {
         "type": "link",
         "label": "Oracles",
-        "href": "/docs/integrations/oracles"
+        "href": "/docs/develop/oracles"
       },
       {
         "type": "link",
         "label": "Fiat-on-Ramp",
-        "href": "/docs/integrations/fiat-on-ramp"
+        "href": "/docs/develop/fiat-on-ramp"
       },
       {
         "type": "category",
@@ -379,17 +379,23 @@
           {
             "type": "link",
             "label": "Dagger - Single App",
-            "href": "/docs/dagger/getting-started"
+            "href": "/docs/develop/dagger"
           },
           {
-            "type": "link",
-            "label": "Zapier - Multiple Apps",
-            "href": "/docs/integrations/zapier/about"
-          },
-          {
-            "type": "link",
-            "label": "Zapier - Getting Started",
-            "href": "/docs/integrations/zapier/getting-started"
+            "type": "category",
+            "label": "Zapier - Mulitple Apps",
+            "items": [
+              {
+                "type": "link",
+                "label": "About",
+                "href": "/docs/develop/zapier/about"
+              },
+              {
+                "type": "link",
+                "label": "Setting Up",
+                "href": "/docs/develop/zapier/getting-started"
+              }
+            ]
           }
         ]
       },
@@ -400,7 +406,7 @@
           {
             "type": "link",
             "label": "MóiBit",
-            "href": "/docs/integrations/decentralised-storage/moibit"
+            "href": "/docs/develop/decentralised-storage/moibit"
           }
         ]
       },
@@ -411,7 +417,7 @@
           {
             "type": "link",
             "label": "PoS (Full Stack DApp)",
-            "href": "/docs/tutorial-advanced/full-stack-dapp-with-pos"
+            "href": "/docs/develop/full-stack-dapp-with-pos"
           }
         ]
       },
@@ -422,22 +428,22 @@
           {
             "type": "link",
             "label": "Calling Plasma Contracts",
-            "href": "/docs/advanced/calling-plasma-contracts"
+            "href": "/docs/develop/advanced/calling-plasma-contracts"
           },
           {
             "type": "link",
             "label": "Swap Assets",
-            "href": "/docs/advanced/swap-assets"
+            "href": "/docs/develop/advanced/swap-assets"
           },
           {
             "type": "link",
             "label": "Deploying Matic Locally",
-            "href": "/docs/advanced/deploy-your-own-matic-testnet"
+            "href": "/docs/develop/advanced/deploy-your-own-matic-testnet"
           },
           {
             "type": "link",
             "label": "Adding Custom Restrictions (ERC20/ERC721)",
-            "href": "/docs/advanced/custom-restrictions"
+            "href": "/docs/develop/advanced/custom-restrictions"
           }
         ]
       }
@@ -561,13 +567,36 @@
     ]
   },
   "permalinkToSidebar": {
-    "/docs/advanced/calling-plasma-contracts": "development",
-    "/docs/advanced/custom-restrictions": "development",
-    "/docs/advanced/deploy-your-own-matic-testnet": "development",
-    "/docs/advanced/moving-assets": "development",
-    "/docs/advanced/swap-assets": "development",
     "/docs/config-truffle": "development",
-    "/docs/dagger/getting-started": "development",
+    "/docs/develop/advanced/calling-plasma-contracts": "development",
+    "/docs/develop/advanced/custom-restrictions": "development",
+    "/docs/develop/advanced/deploy-your-own-matic-testnet": "development",
+    "/docs/develop/advanced/moving-assets": "development",
+    "/docs/develop/advanced/swap-assets": "development",
+    "/docs/develop/dagger": "development",
+    "/docs/develop/decentralised-storage/moibit": "development",
+    "/docs/develop/fiat-on-ramp": "development",
+    "/docs/develop/full-stack-dapp-with-pos": "development",
+    "/docs/develop/key-management/getting-started": "development",
+    "/docs/develop/key-management/metamask": "development",
+    "/docs/develop/key-management/portis": "development",
+    "/docs/develop/key-management/walletconnect": "development",
+    "/docs/develop/maticjs/api-reference": "development",
+    "/docs/develop/maticjs/deposit": "development",
+    "/docs/develop/maticjs/getting-started": "development",
+    "/docs/develop/maticjs/transfer": "development",
+    "/docs/develop/maticjs/withdraw": "development",
+    "/docs/develop/metamask": "development",
+    "/docs/develop/metamask/custom-tokens": "development",
+    "/docs/develop/metamask/gas-fees": "development",
+    "/docs/develop/metamask/multiple-accounts": "development",
+    "/docs/develop/metamask/testnet": "development",
+    "/docs/develop/metatransactions/metatransactions": "development",
+    "/docs/develop/metatransactions/metatransactions-biconomy": "development",
+    "/docs/develop/metatransactions/metatransactions-gsn": "development",
+    "/docs/develop/oracles": "development",
+    "/docs/develop/zapier/about": "development",
+    "/docs/develop/zapier/getting-started": "development",
     "/docs/getting-started": "development",
     "/docs/helloworld": "development",
     "/docs/home/architecture/bor": "introduction",
@@ -594,30 +623,7 @@
     "/docs/home/specifications/peppermint": "introduction",
     "/docs/integrate/flow-of-token": "Integrate",
     "/docs/integrate/getting-started": "Integrate",
-    "/docs/integrations/decentralised-storage/moibit": "development",
-    "/docs/integrations/fiat-on-ramp": "development",
-    "/docs/integrations/key-management/getting-started": "development",
-    "/docs/integrations/key-management/metamask": "development",
-    "/docs/integrations/key-management/portis": "development",
-    "/docs/integrations/key-management/walletconnect": "development",
-    "/docs/integrations/metatransactions/metatransactions": "development",
-    "/docs/integrations/metatransactions/metatransactions-biconomy": "development",
-    "/docs/integrations/metatransactions/metatransactions-gsn": "development",
-    "/docs/integrations/oracles": "development",
-    "/docs/integrations/zapier/about": "development",
-    "/docs/integrations/zapier/getting-started": "development",
-    "/docs/metamask": "development",
-    "/docs/metamask/conf-custom-tokens-metamask": "development",
-    "/docs/metamask/conf-testnet-metamask": "development",
-    "/docs/metamask/gas-fees": "development",
-    "/docs/metamask/multiple-accounts": "development",
     "/docs/network-config": "Integrate",
-    "/docs/sdk/api-reference": "development",
-    "/docs/sdk/deposit": "development",
-    "/docs/sdk/getting-started": "development",
-    "/docs/sdk/transfer": "development",
-    "/docs/sdk/withdraw": "development",
-    "/docs/tutorial-advanced/full-stack-dapp-with-pos": "development",
     "/docs/validate/basics/delegator": "Validators",
     "/docs/validate/basics/validator": "Validators",
     "/docs/validate/counter-stake-stage-1/getting-started": "Validators",

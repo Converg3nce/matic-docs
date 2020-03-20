@@ -1,0 +1,17 @@
+{
+  "id": "develop/metatransactions/metatransactions-biconomy",
+  "title": "Biconomy",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/develop/metatransactions/metatransactions-biconomy.md",
+  "permalink": "/docs/develop/metatransactions/metatransactions-biconomy",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metatransactions/metatransactions-biconomy.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Getting started",
+    "permalink": "/docs/develop/metatransactions/metatransactions"
+  },
+  "next": {
+    "title": "Gas Station Network",
+    "permalink": "/docs/develop/metatransactions/metatransactions-gsn"
+  }
+}

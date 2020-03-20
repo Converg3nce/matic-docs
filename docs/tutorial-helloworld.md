@@ -3,6 +3,8 @@ id: helloworld
 title: Hello World
 sidebar_label: Using Remix
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 A Hello World style starter project. Deploys a smart contract with a message, and renders it in the front-end. You can change the message using the interact panel!
 
 This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE]([https://remix.ethereum.org/](https://remix.ethereum.org/)).
@@ -19,8 +21,8 @@ This dapp implements a "Hello World" style application that echoes a message pas
           alignItems: "center"
         }}
       >
-        <img src={'../img/helloworld/RemixIDE_Step1.png'} alt="RemixIDE_Step1"/>
-      </div>
+        <img src={useBaseUrl("img/helloworld/RemixIDE_Step1.png")} alt="RemixIDE_Step1"/>
+</div>
 
 - ![../img/helloworld/Screenshot_2020-02-14_at_12.52.45_PM.png](../img/helloworld/Screenshot_2020-02-14_at_12.52.45_PM.png) Go to File Explorers, And Create a new file ![../img/helloworld/Screenshot_2020-02-14_at_12.51.59_PM.png](../img/helloworld/Screenshot_2020-02-14_at_12.51.59_PM.png), Name it ```HelloWorld.sol```
 
@@ -79,7 +81,7 @@ The `string public message` function is another public function that is simila
           alignItems: "center"
         }}
       >
-        <img src={'../img/helloworld/metamask-custom-rpc.png'} alt="RemixIDE_Step1"/>
+        <img src={useBaseUrl("img/helloworld/metamask-custom-rpc.png")} alt="RemixIDE_Step1"/>
 </div>
 
 - Put in a Network name - “Matic Testnet v3”
@@ -93,7 +95,7 @@ The `string public message` function is another public function that is simila
           alignItems: "center"
         }}
       >
-        <img src={'../img/helloworld/Screenshot_2020-01-09_at_1.24.49_PM.png'} alt="RemixIDE_Step1"/>
+        <img src={useBaseUrl("img/helloworld/Screenshot_2020-01-09_at_1.24.49_PM.png")} alt="RemixIDE_Step1"/>
 </div>
 
 - Head over to [Faucet](https://faucet.matic.network/) and request test ether - if you'd like. (the gas fee can also be safely set to 0 on testnet.
@@ -108,7 +110,7 @@ The `string public message` function is another public function that is simila
           alignItems: "center"
         }}
       >
-        <img src={'../img/helloworld/Screenshot_2020-02-14_at_1.39.04_PM.png'} alt="RemixIDE_Step1"/>
+        <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.39.04_PM.png")} alt="RemixIDE_Step1"/>
 </div>
 
 - Accept the Connection Request!
@@ -120,7 +122,7 @@ The `string public message` function is another public function that is simila
           alignItems: "center"
         }}
       >
-        <img src={'../img/helloworld/Screenshot_2020-02-14_at_1.59.10_PM.png'} alt="RemixIDE_Step1"/>
+        <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.59.10_PM.png")} alt="RemixIDE_Step1"/>
 </div>
 
 - Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
@@ -132,7 +134,7 @@ The `string public message` function is another public function that is simila
           alignItems: "center"
         }}
       >
-        <img src={'../img/helloworld/Screenshot_2020-02-14_at_1.45.23_PM.png'} alt="RemixIDE_Step1"/>
+        <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.45.23_PM.png")} alt="RemixIDE_Step1"/>
 </div>
 
 **Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract. Check the deployement status here: https://testnetv3-explorer.matic.network/.
@@ -144,5 +146,5 @@ The `string public message` function is another public function that is simila
           alignItems: "center"
         }}
       >
-        <img src={'../img/helloworld/Screenshot_2020-02-14_at_2.00.19_PM.png'} alt="RemixIDE_Step1"/>
+        <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_2.00.19_PM.png")} alt="RemixIDE_Step1"/>
 </div>

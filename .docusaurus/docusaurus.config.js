@@ -37,7 +37,7 @@ export default {
           "position": "left"
         },
         {
-          "to": "docs/validate/validator",
+          "to": "docs/validate/basics/validator",
           "label": "Validate",
           "position": "left"
         },

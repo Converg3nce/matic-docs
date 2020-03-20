@@ -122,11 +122,11 @@ module.exports = {
       type: "category",
       label: "Using Metamask",
       items: [
-        "metamask",
-        "metamask/conf-custom-tokens-metamask",
-        "metamask/conf-testnet-metamask",
-        "metamask/gas-fees",
-        "metamask/multiple-accounts"
+        "develop/metamask",
+        "develop/metamask/custom-tokens",
+        "develop/metamask/testnet",
+        "develop/metamask/gas-fees",
+        "develop/metamask/multiple-accounts"
       ]
     },
 
@@ -134,10 +134,10 @@ module.exports = {
       type: "category",
       label: "Connect to Web3",
       items: [
-        "integrations/key-management/getting-started",
-        "integrations/key-management/metamask",
-        "integrations/key-management/walletconnect",
-        "integrations/key-management/portis"
+        "develop/key-management/getting-started",
+        "develop/key-management/metamask",
+        "develop/key-management/walletconnect",
+        "develop/key-management/portis"
       ]
     },
     {
@@ -148,54 +148,60 @@ module.exports = {
           type: "category",
           label: "Matic.js",
           items: [
-            "sdk/getting-started",
-            "sdk/deposit",
-            "sdk/transfer",
-            "sdk/withdraw",
-            "sdk/api-reference"
+            "develop/maticjs/getting-started",
+            "develop/maticjs/deposit",
+            "develop/maticjs/transfer",
+            "develop/maticjs/withdraw",
+            "develop/maticjs/api-reference"
           ]
         },
-        "advanced/moving-assets"
+        "develop/advanced/moving-assets"
       ]
     },
     {
       type: "category",
       label: "Meta Transactions",
       items: [
-        "integrations/metatransactions/metatransactions",
-        "integrations/metatransactions/metatransactions-biconomy",
-        "integrations/metatransactions/metatransactions-gsn"
+        "develop/metatransactions/metatransactions",
+        "develop/metatransactions/metatransactions-biconomy",
+        "develop/metatransactions/metatransactions-gsn"
       ]
     },
-    "integrations/oracles",
-    "integrations/fiat-on-ramp",
+    "develop/oracles",
+    "develop/fiat-on-ramp",
     {
       type: "category",
       label: "Realtime Updates",
       items: [
-        "dagger/getting-started",
-        "integrations/zapier/about",
-        "integrations/zapier/getting-started"
+        "develop/dagger",
+        {
+          type: "category",
+          label: "Zapier - Mulitple Apps",
+          items: [
+            "develop/zapier/about",
+            "develop/zapier/getting-started"
+          ]
+        },
       ]
     },
     {
       type: "category",
       label: "Decentralised Storage",
-      items: ["integrations/decentralised-storage/moibit"]
+      items: ["develop/decentralised-storage/moibit"]
     },
     {
       type: "category",
       label: "Tutorials",
-      items: ["tutorial-advanced/full-stack-dapp-with-pos"]
+      items: ["develop/full-stack-dapp-with-pos"]
     },
     {
       type: "category",
       label: "Advanced",
       items: [
-        "advanced/calling-plasma-contracts",
-        "advanced/swap-assets",
-        "advanced/deploy-your-own-matic-testnet",
-        "advanced/custom-restrictions"
+        "develop/advanced/calling-plasma-contracts",
+        "develop/advanced/swap-assets",
+        "develop/advanced/deploy-your-own-matic-testnet",
+        "develop/advanced/custom-restrictions"
       ]
     }
   ],

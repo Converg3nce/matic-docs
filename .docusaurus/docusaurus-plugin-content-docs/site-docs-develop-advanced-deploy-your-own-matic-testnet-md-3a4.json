@@ -1,0 +1,18 @@
+{
+  "id": "develop/advanced/deploy-your-own-matic-testnet",
+  "title": "Deploy your own Matic Testnet",
+  "description": "Step by step instructions on how to create a single and multiple (soon to be added) validator testnet.",
+  "source": "@site/docs/develop/advanced/deploy-your-own-matic-testnet.md",
+  "permalink": "/docs/develop/advanced/deploy-your-own-matic-testnet",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/advanced/deploy-your-own-matic-testnet.md",
+  "sidebar_label": "Deploying Matic Locally",
+  "sidebar": "development",
+  "previous": {
+    "title": "Swap Assets",
+    "permalink": "/docs/develop/advanced/swap-assets"
+  },
+  "next": {
+    "title": "Adding Custom Restrictions (ERC20/ERC721)",
+    "permalink": "/docs/develop/advanced/custom-restrictions"
+  }
+}

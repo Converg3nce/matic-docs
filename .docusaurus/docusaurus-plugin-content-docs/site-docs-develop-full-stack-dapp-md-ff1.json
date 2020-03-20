@@ -1,0 +1,17 @@
+{
+  "id": "develop/full-stack-dapp-with-pos",
+  "title": "PoS (Full Stack DApp)",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/develop/full-stack-dapp.md",
+  "permalink": "/docs/develop/full-stack-dapp-with-pos",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/full-stack-dapp.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "MóiBit",
+    "permalink": "/docs/develop/decentralised-storage/moibit"
+  },
+  "next": {
+    "title": "Calling Plasma Contracts",
+    "permalink": "/docs/develop/advanced/calling-plasma-contracts"
+  }
+}

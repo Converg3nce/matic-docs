@@ -29,7 +29,7 @@ module.exports = {
         { to: 'docs/home/new-to-matic', label: 'Home', position: 'left' },
         { to: 'docs/getting-started', label: 'Develop', position: 'left' },
         { to: 'docs/integrate/getting-started', label: 'Integrate', position: 'left' },
-        { to: 'docs/validate/validator', label: 'Validate', position: 'left' },
+        { to: 'docs/validate/basics/validator', label: 'Validate', position: 'left' },
         // { to: 'showcase', label: 'Showcase', position: 'right' },
         {
           href: 'https://blog.matic.network/',

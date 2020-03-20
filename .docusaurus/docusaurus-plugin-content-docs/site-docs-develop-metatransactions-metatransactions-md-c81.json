@@ -1,0 +1,18 @@
+{
+  "id": "develop/metatransactions/metatransactions",
+  "title": "Getting started",
+  "description": "Meta Transactions are also known as \"Gasless Transactions\". The concept of meta transactions allows users to interact with the decentralized applications having ONLY a public/private keys pair.",
+  "source": "@site/docs/develop/metatransactions/metatransactions.md",
+  "permalink": "/docs/develop/metatransactions/metatransactions",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metatransactions/metatransactions.md",
+  "sidebar_label": "Getting Started",
+  "sidebar": "development",
+  "previous": {
+    "title": "Moving Assets",
+    "permalink": "/docs/develop/advanced/moving-assets"
+  },
+  "next": {
+    "title": "Biconomy",
+    "permalink": "/docs/develop/metatransactions/metatransactions-biconomy"
+  }
+}

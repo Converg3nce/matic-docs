@@ -1,0 +1,17 @@
+{
+  "id": "develop/key-management/walletconnect",
+  "title": "Wallet Connect",
+  "description": "Wallet Connect is an open protocol - not a wallet - built to create a communication link between DApps and Wallets. A wallet and an application supporting this protocol will enable a secure link through a shared key between the two peers. A connection is initiated by the DApp displaying a QR code with a standard WalletConnect URI and the connection is established when the wallet application approves the connection request. Further requests regarding funds transfer are confirmed on the wallet application itself.",
+  "source": "@site/docs/develop/key-management/walletconnect.md",
+  "permalink": "/docs/develop/key-management/walletconnect",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/key-management/walletconnect.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Metamask",
+    "permalink": "/docs/develop/key-management/metamask"
+  },
+  "next": {
+    "title": "Portis",
+    "permalink": "/docs/develop/key-management/portis"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "develop/metatransactions/metatransactions-gsn",
+  "title": "Gas Station Network",
+  "description": "Writing a GSN compatible application requires the following changes/workarounds on your application:",
+  "source": "@site/docs/develop/metatransactions/metatransactions-gsn.md",
+  "permalink": "/docs/develop/metatransactions/metatransactions-gsn",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metatransactions/metatransactions-gsn.md",
+  "sidebar_label": "Gas Station Network",
+  "sidebar": "development",
+  "previous": {
+    "title": "Biconomy",
+    "permalink": "/docs/develop/metatransactions/metatransactions-biconomy"
+  },
+  "next": {
+    "title": "Getting Started with Oracles",
+    "permalink": "/docs/develop/oracles"
+  }
+}

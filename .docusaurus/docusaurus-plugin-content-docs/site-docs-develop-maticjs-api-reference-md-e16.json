@@ -1,0 +1,17 @@
+{
+  "id": "develop/maticjs/api-reference",
+  "title": "API",
+  "description": "- <a href=\"#initialize\"><code><b>new Matic()</b></code></a>",
+  "source": "@site/docs/develop/maticjs/api-reference.md",
+  "permalink": "/docs/develop/maticjs/api-reference",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/maticjs/api-reference.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Withdraw (Matic→Ethereum)",
+    "permalink": "/docs/develop/maticjs/withdraw"
+  },
+  "next": {
+    "title": "Moving Assets",
+    "permalink": "/docs/develop/advanced/moving-assets"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "develop/maticjs/withdraw",
+  "title": "Withdraw (Matic→Ethereum)",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/develop/maticjs/withdraw.md",
+  "permalink": "/docs/develop/maticjs/withdraw",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/maticjs/withdraw.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Transfer (Matic↔Matic)",
+    "permalink": "/docs/develop/maticjs/transfer"
+  },
+  "next": {
+    "title": "API",
+    "permalink": "/docs/develop/maticjs/api-reference"
+  }
+}
