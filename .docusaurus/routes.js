@@ -76,6 +76,12 @@ export default [
   
 },
 {
+  path: '/docs/contribute/orientation',
+  component: ComponentCreator('/docs/contribute/orientation'),
+  exact: true,
+  
+},
+{
   path: '/docs/develop/advanced/calling-plasma-contracts',
   component: ComponentCreator('/docs/develop/advanced/calling-plasma-contracts'),
   exact: true,
@@ -220,8 +226,8 @@ export default [
   
 },
 {
-  path: '/docs/develop/metatransactions/metatransactions',
-  component: ComponentCreator('/docs/develop/metatransactions/metatransactions'),
+  path: '/docs/develop/metatransactions/getting-started',
+  component: ComponentCreator('/docs/develop/metatransactions/getting-started'),
   exact: true,
   
 },
@@ -238,8 +244,20 @@ export default [
   
 },
 {
-  path: '/docs/develop/oracles',
-  component: ComponentCreator('/docs/develop/oracles'),
+  path: '/docs/develop/oracles/bandchain',
+  component: ComponentCreator('/docs/develop/oracles/bandchain'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/oracles/getting-started',
+  component: ComponentCreator('/docs/develop/oracles/getting-started'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/oracles/razor',
+  component: ComponentCreator('/docs/develop/oracles/razor'),
   exact: true,
   
 },
@@ -448,8 +466,8 @@ export default [
   
 },
 {
-  path: '/docs/integrate/getting-started',
-  component: ComponentCreator('/docs/integrate/getting-started'),
+  path: '/docs/integrate/quickstart',
+  component: ComponentCreator('/docs/integrate/quickstart'),
   exact: true,
   
 },

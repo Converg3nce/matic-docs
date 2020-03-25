@@ -1,0 +1,18 @@
+<svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="25" height="25" rx="5" fill="#B8B2F9"/>
+<rect x="37" width="25" height="25" rx="5" fill="#7165F3"/>
+<rect y="37" width="25" height="25" rx="5" fill="#7165F3"/>
+<rect x="37" y="37" width="25" height="25" rx="5" fill="#B8B2F9"/>
+<line x1="13" y1="12" x2="50" y2="12" stroke="#493AF0" stroke-width="2"/>
+<line x1="15" y1="10" x2="52" y2="10" stroke="white" stroke-width="2"/>
+<line x1="13" y1="49" x2="50" y2="49" stroke="#493AF0" stroke-width="2"/>
+<line x1="15" y1="51" x2="52" y2="51" stroke="white" stroke-width="2"/>
+<line x1="13" y1="13" x2="13" y2="50" stroke="#493AF0" stroke-width="2"/>
+<line x1="11" y1="13" x2="11" y2="50" stroke="white" stroke-width="2"/>
+<line x1="50" y1="13" x2="50" y2="50" stroke="#493AF0" stroke-width="2"/>
+<line x1="52" y1="13" x2="52" y2="50" stroke="white" stroke-width="2"/>
+<circle cx="12.5" cy="12.5" r="4.5" fill="#493AF0"/>
+<circle cx="12.5" cy="49.5" r="4.5" fill="#493AF0"/>
+<circle cx="49.5" cy="12.5" r="4.5" fill="#493AF0"/>
+<circle cx="49.5" cy="49.5" r="4.5" fill="#493AF0"/>
+</svg>

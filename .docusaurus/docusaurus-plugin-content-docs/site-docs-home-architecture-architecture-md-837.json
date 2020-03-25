@@ -5,10 +5,10 @@
   "source": "@site/docs/home/architecture/architecture.md",
   "permalink": "/docs/home/architecture/overview",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/architecture.md",
-  "sidebar": "introduction",
+  "sidebar": "Contributors",
   "previous": {
-    "title": "Sidechains and Plasma",
-    "permalink": "/docs/home/blockchain-basics/sidechain"
+    "title": "Guidlines to Contribute",
+    "permalink": "/docs/contribute/orientation"
   },
   "next": {
     "title": "Security Models",

@@ -69,46 +69,6 @@ module.exports = {
         }
       ]
     },
-    {
-      type: "category",
-      label: "Specifications",
-      items: [
-        {
-          type: "category",
-          label: "Heimdall",
-          items: [
-            "home/specifications/heimdall/encoder",
-            "home/specifications/heimdall/stdtx",
-            {
-              type: "category",
-              label: "Modules",
-              items: [
-                "home/specifications/heimdall/modules/auth",
-                "home/specifications/heimdall/modules/governance",
-              ]
-            },
-          ]
-        },
-        {
-          type: "category",
-          label: "Bor",
-          items: []
-        },
-        {
-          type: "category",
-          label: "Contracts",
-          items: []
-        },
-        {
-          type: "category",
-          label: "Plasma Contracts",
-          items: []
-        },
-        "home/specifications/peppermint",
-
-      ]
-    },
-    
     "home/faq"
   ],
   development: [
@@ -162,12 +122,20 @@ module.exports = {
       type: "category",
       label: "Meta Transactions",
       items: [
-        "develop/metatransactions/metatransactions",
+        "develop/metatransactions/getting-started",
         "develop/metatransactions/metatransactions-biconomy",
         "develop/metatransactions/metatransactions-gsn"
       ]
     },
-    "develop/oracles",
+    {
+      type: "category",
+      label: "Oracles",
+      items: [
+        "develop/oracles/getting-started",
+        "develop/oracles/bandchain",
+        "develop/oracles/razor"
+      ]
+    },
     "develop/fiat-on-ramp",
     {
       type: "category",
@@ -206,7 +174,7 @@ module.exports = {
     }
   ],
   Integrate: [
-    "integrate/getting-started",
+    "integrate/quickstart",
     "integrate/flow-of-token",
     "network-config",
     {
@@ -257,5 +225,92 @@ module.exports = {
     },
     "validate/faqs",
     "validate/reporting-issues"
+  ],
+  Contributors: [
+    "contribute/orientation",
+        {
+          type: "category",
+          label: "Architecture",
+          items: [
+            "home/architecture/overview",
+            "home/architecture/security-models",
+            {
+              type: "category",
+              label: "Bor",
+              items: ["home/architecture/bor", "home/architecture/setup-bor"]
+            },
+            {
+              type: "category",
+              label: "Heimdall",
+              items: []
+            },
+            {
+              type: "category",
+              label: "Contracts",
+              items: ["home/architecture/contracts/staking",]
+            },
+            {
+              type: "category",
+              label: "Plasma Contracts",
+              items: []
+            },
+            {
+              type: "category",
+              label: "State Sync Mechanism",
+              items: []
+            },
+            {
+              type: "category",
+              label: "Validator",
+              items: [
+                "validator/proposers-producers-selection",
+                "validator/state-sync",
+                "validator/heimdall-chain",
+                "validator/bor-chain",
+                "validator/checkpoint-mechanism",
+                "validator/liquid-delegation"
+              ]
+            }
+          ]
+        },
+        {
+          type: "category",
+          label: "Specifications",
+          items: [
+            {
+              type: "category",
+              label: "Heimdall",
+              items: [
+                "home/specifications/heimdall/encoder",
+                "home/specifications/heimdall/stdtx",
+                {
+                  type: "category",
+                  label: "Modules",
+                  items: [
+                    "home/specifications/heimdall/modules/auth",
+                    "home/specifications/heimdall/modules/governance",
+                  ]
+                },
+              ]
+            },
+            {
+              type: "category",
+              label: "Bor",
+              items: []
+            },
+            {
+              type: "category",
+              label: "Contracts",
+              items: []
+            },
+            {
+              type: "category",
+              label: "Plasma Contracts",
+              items: []
+            },
+            "home/specifications/peppermint",
+    
+          ]
+        },
   ]
 };

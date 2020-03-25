@@ -1,0 +1,13 @@
+{
+  "id": "integrate/quickstart",
+  "title": "Quickstart",
+  "description": "# 2-min guide to get started on Matic",
+  "source": "@site/docs/integrate/orientation.md",
+  "permalink": "/docs/integrate/quickstart",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/orientation.md",
+  "sidebar": "Integrate",
+  "next": {
+    "title": "Flow of Tokens on Matic",
+    "permalink": "/docs/integrate/flow-of-token"
+  }
+}

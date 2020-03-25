@@ -5,7 +5,7 @@
   "source": "@site/docs/home/architecture/setup-bor.md",
   "permalink": "/docs/home/architecture/setup-bor",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/setup-bor.md",
-  "sidebar": "introduction",
+  "sidebar": "Contributors",
   "previous": {
     "title": "Bor",
     "permalink": "/docs/home/architecture/bor"

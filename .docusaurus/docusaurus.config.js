@@ -23,16 +23,16 @@ export default {
       "links": [
         {
           "to": "docs/home/new-to-matic",
-          "label": "Home",
+          "label": "Basics",
           "position": "left"
         },
         {
           "to": "docs/getting-started",
-          "label": "Develop",
+          "label": "DAppDev",
           "position": "left"
         },
         {
-          "to": "docs/integrate/getting-started",
+          "to": "docs/integrate/quickstart",
           "label": "Integrate",
           "position": "left"
         },
@@ -42,9 +42,14 @@ export default {
           "position": "left"
         },
         {
+          "to": "docs/contribute/orientation",
+          "label": "Contribute",
+          "position": "left"
+        },
+        {
           "href": "https://blog.matic.network/",
           "label": "Blog",
-          "position": "left"
+          "position": "right"
         }
       ]
     },

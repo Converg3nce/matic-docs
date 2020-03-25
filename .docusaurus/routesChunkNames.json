@@ -86,6 +86,10 @@
     "component": "17896441",
     "content": "b14a3038"
   },
+  "/docs/contribute/orientation": {
+    "component": "17896441",
+    "content": "f41ba8a2"
+  },
   "/docs/develop/advanced/calling-plasma-contracts": {
     "component": "17896441",
     "content": "2d856840"
@@ -182,7 +186,7 @@
     "component": "17896441",
     "content": "33a8f985"
   },
-  "/docs/develop/metatransactions/metatransactions": {
+  "/docs/develop/metatransactions/getting-started": {
     "component": "17896441",
     "content": "c81c2e41"
   },
@@ -194,9 +198,17 @@
     "component": "17896441",
     "content": "64457e10"
   },
-  "/docs/develop/oracles": {
+  "/docs/develop/oracles/bandchain": {
     "component": "17896441",
-    "content": "d3969cff"
+    "content": "cc6e02bf"
+  },
+  "/docs/develop/oracles/getting-started": {
+    "component": "17896441",
+    "content": "6bf23224"
+  },
+  "/docs/develop/oracles/razor": {
+    "component": "17896441",
+    "content": "f322945a"
   },
   "/docs/develop/zapier/about": {
     "component": "17896441",
@@ -334,9 +346,9 @@
     "component": "17896441",
     "content": "a8a58f6d"
   },
-  "/docs/integrate/getting-started": {
+  "/docs/integrate/quickstart": {
     "component": "17896441",
-    "content": "5de9a1a7"
+    "content": "797469cf"
   },
   "/docs/network-config": {
     "component": "17896441",

@@ -1,6 +1,6 @@
 ---
-id: getting-started
-title: Integrate with Matic
+id: quickstart
+title: Quickstart
 ---
 # 2-min guide to get started on Matic
 

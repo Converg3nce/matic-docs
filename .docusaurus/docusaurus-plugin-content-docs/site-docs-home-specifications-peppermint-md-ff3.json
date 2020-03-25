@@ -5,13 +5,9 @@
   "source": "@site/docs/home/specifications/peppermint.md",
   "permalink": "/docs/home/specifications/peppermint",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/peppermint.md",
-  "sidebar": "introduction",
+  "sidebar": "Contributors",
   "previous": {
     "title": "Heimdall governance",
     "permalink": "/docs/home/specifications/heimdall/modules/governance"
-  },
-  "next": {
-    "title": "FAQ",
-    "permalink": "/docs/home/faq"
   }
 }

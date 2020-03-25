@@ -1,10 +1,10 @@
 ---
-id: metatransactions
+id: getting-started
 title: Getting started
 sidebar_label: Getting Started
 ---
 
-Meta Transactions are also known as "Gasless Transactions". The concept of meta transactions allows users to interact with the decentralized applications having ONLY a public/private keys pair.
+**Meta Transactions are also known as "Gasless Transactions". The concept of meta transactions allows users to interact with the decentralized applications having ONLY a public/private keys pair.**
 
 A user with an account can craft a transaction in a similar way to how the ‘normal’ transaction is created, sign it with the own private key, but instead of sending it on-chain (which is usually the last step that requires paying ETH for gas), they send it to so-called a ‘relayer’, or the actual ‘sender’.
 

@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/flow-of-token.md",
   "sidebar": "Integrate",
   "previous": {
-    "title": "Integrate with Matic",
-    "permalink": "/docs/integrate/getting-started"
+    "title": "Quickstart",
+    "permalink": "/docs/integrate/quickstart"
   },
   "next": {
     "title": "Network Config",

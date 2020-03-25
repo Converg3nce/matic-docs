@@ -26,14 +26,15 @@ module.exports = {
         srcDark: '/img/logo-white.svg'
       },
       links: [
-        { to: 'docs/home/new-to-matic', label: 'Home', position: 'left' },
-        { to: 'docs/getting-started', label: 'Develop', position: 'left' },
-        { to: 'docs/integrate/getting-started', label: 'Integrate', position: 'left' },
+        { to: 'docs/home/new-to-matic', label: 'Basics', position: 'left' },
+        { to: 'docs/getting-started', label: 'DAppDev', position: 'left' },
+        { to: 'docs/integrate/quickstart', label: 'Integrate', position: 'left' },
         { to: 'docs/validate/basics/validator', label: 'Validate', position: 'left' },
+        { to: 'docs/contribute/orientation', label: 'Contribute', position: 'left' }, 
         {
           href: 'https://blog.matic.network/',
           label: 'Blog',
-          position: 'left',
+          position: 'right',
         },
       ],
     },

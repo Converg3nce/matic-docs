@@ -5,7 +5,7 @@
   "source": "@site/docs/validator/liquid-delegation.md",
   "permalink": "/docs/validator/liquid-delegation",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/liquid-delegation.md",
-  "sidebar": "introduction",
+  "sidebar": "Contributors",
   "previous": {
     "title": "Checkpoint Mechanism",
     "permalink": "/docs/validator/checkpoint-mechanism"

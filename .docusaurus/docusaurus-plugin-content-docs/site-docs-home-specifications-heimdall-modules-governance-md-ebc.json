@@ -6,7 +6,7 @@
   "permalink": "/docs/home/specifications/heimdall/modules/governance",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/heimdall/modules/ governance.md",
   "sidebar_label": "Governance",
-  "sidebar": "introduction",
+  "sidebar": "Contributors",
   "previous": {
     "title": "Auth/Account",
     "permalink": "/docs/home/specifications/heimdall/modules/auth"

@@ -7,8 +7,8 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/fiat-on-ramp.md",
   "sidebar": "development",
   "previous": {
-    "title": "Getting Started with Oracles",
-    "permalink": "/docs/develop/oracles"
+    "title": "Razor",
+    "permalink": "/docs/develop/oracles/razor"
   },
   "next": {
     "title": "Dagger",

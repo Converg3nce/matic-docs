@@ -5,7 +5,7 @@
   "source": "@site/docs/validator/checkpoint-mechanism.md",
   "permalink": "/docs/validator/checkpoint-mechanism",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/checkpoint-mechanism.md",
-  "sidebar": "introduction",
+  "sidebar": "Contributors",
   "previous": {
     "title": "What is BOR Chain?",
     "permalink": "/docs/validator/bor-chain"

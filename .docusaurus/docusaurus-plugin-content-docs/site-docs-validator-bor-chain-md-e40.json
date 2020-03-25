@@ -6,7 +6,7 @@
   "permalink": "/docs/validator/bor-chain",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/bor-chain.md",
   "sidebar_label": "BOR Chain",
-  "sidebar": "introduction",
+  "sidebar": "Contributors",
   "previous": {
     "title": "What is Heimdall Chain?",
     "permalink": "/docs/validator/heimdall-chain"

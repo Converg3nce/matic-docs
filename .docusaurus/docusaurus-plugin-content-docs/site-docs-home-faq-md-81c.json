@@ -7,7 +7,7 @@
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/faq.md",
   "sidebar": "introduction",
   "previous": {
-    "title": "Peppermint",
-    "permalink": "/docs/home/specifications/peppermint"
+    "title": "Liquid Delegation in Matic",
+    "permalink": "/docs/validator/liquid-delegation"
   }
 }
