@@ -1,7 +1,7 @@
 export const firstRow = [
     {
         title: "Blockchain Basics",
-        linkUrl: "img/home/new-to-matic",
+        linkUrl: "docs/home/new-to-matic",
         imageUrl: "img/home/blockchain-basics.svg",
         description: "Learn about Blockchain and Matic"
     },
@@ -13,7 +13,7 @@ export const firstRow = [
     },
     {
         title: "Validators",
-        linkUrl: "docs/staking/economics",
+        linkUrl: "docs/validate/basics/validator",
         imageUrl: "img/home/core-contribution.svg",
         description: 'Learn How to stake with Matic, And Setup you own Environment to earn Rewards.'
     },
@@ -28,7 +28,7 @@ export const secondRow = [
     },
     {
         title: "Integrate",
-        linkUrl: "docs/integrate/getting-started",
+        linkUrl: "docs/integrate/quickstart",
         imageUrl: "img/home/integration.svg",
         description: "Easy Guide for Partners to Integarte to Matic Chain"
     }
