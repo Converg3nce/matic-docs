@@ -10,35 +10,35 @@ import { firstRow, secondRow } from "../data/features";
 function FirstRow({ title, description, linkUrl, imageUrl }) {
   // const imgUrl = useBaseUrl(imageUrl);
   return (
-    
-    <div className="col-md-4">
+
+    <div className="col-md-4 p-8">
       <Link to={useBaseUrl(linkUrl)} activeClassName="active">
-      <div className="show-card">
-        <div className="icon-wrapper">
-          <img src={useBaseUrl(imageUrl)} alt={title} className="icon" />
+        <div className="show-card">
+          <div className="icon-wrapper">
+            <img src={useBaseUrl(imageUrl)} alt={title} className="icon" />
+          </div>
+          <div className="title">{title}</div>
+          <div className="descriptions">{description}</div>
         </div>
-        <div className="title">{title}</div>
-        <div className="descriptions">{description}</div>
-      </div>
       </Link>
     </div>
-    
+
   );
 }
 
 function SecondRow({ title, description, linkUrl, imageUrl }) {
   // const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className="col-md-6">
-    <Link to={useBaseUrl(linkUrl)}>
-      <div className="show-card">
-        <div className="icon-wrapper">
-          <img src={useBaseUrl(imageUrl)} alt={title} className="icon" />
+    <div className="col-md-6 p-8">
+      <Link to={useBaseUrl(linkUrl)}>
+        <div className="show-card">
+          <div className="icon-wrapper">
+            <img src={useBaseUrl(imageUrl)} alt={title} className="icon" />
+          </div>
+          <div className="title">{title}</div>
+          <div className="descriptions">{description}</div>
         </div>
-        <div className="title">{title}</div>
-        <div className="descriptions">{description}</div>
-      </div>
-    </Link>
+      </Link>
     </div>
   );
 }
@@ -51,8 +51,8 @@ function Home() {
       <div
         className="bootstrap-wrapper"
       >
-        <img src={useBaseUrl("img/home/background-mockup.svg")} className="background-img left"/>
-        <img src={useBaseUrl("img/home/background-mockup.svg")} className="background-img right"/> 
+        <img src={useBaseUrl("img/home/background-mockup-left.svg")} className="background-img left" />
+        <img src={useBaseUrl("img/home/background-mockup-right.svg")} className="background-img right" />
         <div className="container">
           <div className="row pt-40">
             {firstRow &&
