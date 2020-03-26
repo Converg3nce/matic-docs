@@ -1,7 +1,8 @@
 ---
-id: overview
-title: Matic
+id: components
+title: Components
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Matic’s plasma chain builds upon Plasma MoreVP with an account based implementation. In the account model, transactions are interpreted as events to the blockchain state machine and the Ethereum Virtual Machine computes the state transition result of these events based on prior blockchain state. The two main components that set apart Matic’s implementation from other Plasma implementations are:
 
@@ -13,6 +14,8 @@ Matic works as a three layer architecture
 1. Plasma smart contract on the Root Chain 
 2. Heimdall (Proof of Stake checkpointing layer) 
 3. Bor (Block producer layer)
+
+<img src={useBaseUrl("img/matic/Architecture.png")} />
 
 ### Bor (Block Producer Layer)
 

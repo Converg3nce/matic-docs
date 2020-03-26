@@ -6,13 +6,13 @@
   "permalink": "/docs/validate/basics/delegator",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/basics/delegator.md",
   "sidebar_label": "Delegator",
-  "sidebar": "Validators",
+  "sidebar": "Validate",
   "previous": {
     "title": "Who is a Validator?",
     "permalink": "/docs/validate/basics/validator"
   },
   "next": {
-    "title": "Staking Economics",
-    "permalink": "/docs/validate/economics"
+    "title": "Proposers & Producers Selection",
+    "permalink": "/docs/validate/basics/proposers-producers-selection"
   }
 }

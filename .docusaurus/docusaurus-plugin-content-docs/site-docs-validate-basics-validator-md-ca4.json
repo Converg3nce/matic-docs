@@ -6,7 +6,7 @@
   "permalink": "/docs/validate/basics/validator",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/basics/validator.md",
   "sidebar_label": "Validator",
-  "sidebar": "Validators",
+  "sidebar": "Validate",
   "next": {
     "title": "Who is a Delegator?",
     "permalink": "/docs/validate/basics/delegator"

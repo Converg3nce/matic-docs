@@ -4,14 +4,5 @@
   "description": "For Matic Network, any participant can be qualified to became a Matic's validator by running a full-node. The primary incentive to run a full node for validators is to earn Rewards and Transaction fee. Validator participating in consensus for Matic incentivise to participate as they receives block rewards and transaction fee. ",
   "source": "@site/docs/home/architecture/contracts/staking.md",
   "permalink": "/docs/home/architecture/contracts/staking",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/contracts/staking.md",
-  "sidebar": "Contributors",
-  "previous": {
-    "title": "Setup Bor",
-    "permalink": "/docs/home/architecture/setup-bor"
-  },
-  "next": {
-    "title": "Proposers & Producers Selection",
-    "permalink": "/docs/validator/proposers-producers-selection"
-  }
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/contracts/staking.md"
 }

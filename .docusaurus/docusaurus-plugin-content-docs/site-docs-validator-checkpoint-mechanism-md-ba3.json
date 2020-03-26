@@ -5,10 +5,10 @@
   "source": "@site/docs/validator/checkpoint-mechanism.md",
   "permalink": "/docs/validator/checkpoint-mechanism",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/checkpoint-mechanism.md",
-  "sidebar": "Contributors",
+  "sidebar": "Validators",
   "previous": {
-    "title": "What is BOR Chain?",
-    "permalink": "/docs/validator/bor-chain"
+    "title": "State Sync Mechanism",
+    "permalink": "/docs/validator/state-sync"
   },
   "next": {
     "title": "Liquid Delegation in Matic",

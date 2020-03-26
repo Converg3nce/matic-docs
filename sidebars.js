@@ -28,43 +28,19 @@ module.exports = {
       type: "category",
       label: "Architecture",
       items: [
-        "home/architecture/overview",
+        "home/architecture/components",
+        "home/architecture/matic-flow",
         "home/architecture/security-models",
         {
           type: "category",
           label: "Bor",
-          items: ["home/architecture/bor", "home/architecture/setup-bor"]
+          items: ["home/architecture/bor-chain","home/architecture/bor", "home/architecture/setup-bor"]
         },
         {
           type: "category",
           label: "Heimdall",
-          items: []
-        },
-        {
-          type: "category",
-          label: "Contracts",
-          items: ["home/architecture/contracts/staking",]
-        },
-        {
-          type: "category",
-          label: "Plasma Contracts",
-          items: []
-        },
-        {
-          type: "category",
-          label: "State Sync Mechanism",
-          items: []
-        },
-        {
-          type: "category",
-          label: "Validator",
           items: [
-            "validator/proposers-producers-selection",
-            "validator/state-sync",
-            "validator/heimdall-chain",
-            "validator/bor-chain",
-            "validator/checkpoint-mechanism",
-            "validator/liquid-delegation"
+            "home/architecture/heimdall-chain",
           ]
         }
       ]
@@ -76,13 +52,13 @@ module.exports = {
     {
       type: "category",
       label: "Deploying on Matic",
-      items: ["helloworld", "config-truffle"]
+      items: ["develop/remix", "develop/truffle"]
     },
     {
       type: "category",
       label: "Using Metamask",
       items: [
-        "develop/metamask",
+        "develop/metamask/hello",
         "develop/metamask/custom-tokens",
         "develop/metamask/testnet",
         "develop/metamask/gas-fees",
@@ -175,12 +151,39 @@ module.exports = {
   ],
   Integrate: [
     "integrate/quickstart",
-    "integrate/flow-of-token",
-    "network-config",
     {
       type: "category",
-      label: "Support",
+      label: "Network Information",
       items: [
+        "integrate/network",
+        {
+          type: "category",
+          label: "Network Details",
+          items: ["integrate/network-detail",
+          {
+            type: "link",
+            label: "TestNetV3",
+            href: "https://static.matic.network/network/testnet/v3/index.json"
+          },
+          {
+            type: "link",
+            label: "TestNetV2",
+            href: "https://static.matic.network/network/testnet/v2/index.json"
+          },
+          {
+            type: "link",
+            label: "BetaV2",
+            href: "https://static.matic.network/network/beta/v2/index.json"
+          },
+          {
+            type: "link",
+            label: "Alpha-Mainnet",
+            href: "https://static.matic.network/network/alpha/v1/index.json"
+          },
+
+
+        ]
+        },
         {
           type: "link",
           label: "Matic Faucet",
@@ -195,17 +198,23 @@ module.exports = {
           type: "link",
           label: "Checkpoint Status",
           href: "https://status.matic.today/#/checkpoints"
-        }
+        },
       ]
-    }
+      
+    },
+    "integrate/ethereum-matic" 
   ],
-  Validators: [
+  Validate: [
     {
       type: "category",
       label: "Basics",
       items: [
       "validate/basics/validator",
       "validate/basics/delegator",
+      "validate/basics/proposers-producers-selection",
+      "validate/basics/state-sync",
+      "validate/basics/checkpoint-mechanism",
+      "validate/basics/liquid-delegation"
     ]
     },
     "validate/economics",
@@ -215,102 +224,91 @@ module.exports = {
       label: "Counter Stake: Stage 1",
       items: [
         "validate/counter-stake-stage-1/getting-started",
-        "validate/counter-stake-stage-1/introduction",
+        "validate/counter-stake-stage-1/core-components",
         "validate/counter-stake-stage-1/linux-package-installation",
         "validate/counter-stake-stage-1/running-with-binaries",
-        "validate/counter-stake-stage-1/running-with-docker",
+        //"validate/counter-stake-stage-1/running-with-docker",
         "validate/counter-stake-stage-1/stake-on-matic",
+        "validate/counter-stake-stage-1/rewards",
         "validate/counter-stake-stage-1/technical-faqs"
       ]
     },
     "validate/faqs",
     "validate/reporting-issues"
   ],
-  Contributors: [
-    "contribute/orientation",
-        {
-          type: "category",
-          label: "Architecture",
-          items: [
-            "home/architecture/overview",
-            "home/architecture/security-models",
-            {
-              type: "category",
-              label: "Bor",
-              items: ["home/architecture/bor", "home/architecture/setup-bor"]
-            },
-            {
-              type: "category",
-              label: "Heimdall",
-              items: []
-            },
-            {
-              type: "category",
-              label: "Contracts",
-              items: ["home/architecture/contracts/staking",]
-            },
-            {
-              type: "category",
-              label: "Plasma Contracts",
-              items: []
-            },
-            {
-              type: "category",
-              label: "State Sync Mechanism",
-              items: []
-            },
-            {
-              type: "category",
-              label: "Validator",
-              items: [
-                "validator/proposers-producers-selection",
-                "validator/state-sync",
-                "validator/heimdall-chain",
-                "validator/bor-chain",
-                "validator/checkpoint-mechanism",
-                "validator/liquid-delegation"
-              ]
-            }
-          ]
-        },
-        {
-          type: "category",
-          label: "Specifications",
-          items: [
-            {
-              type: "category",
-              label: "Heimdall",
-              items: [
-                "home/specifications/heimdall/encoder",
-                "home/specifications/heimdall/stdtx",
-                {
-                  type: "category",
-                  label: "Modules",
-                  items: [
-                    "home/specifications/heimdall/modules/auth",
-                    "home/specifications/heimdall/modules/governance",
-                  ]
-                },
-              ]
-            },
-            {
-              type: "category",
-              label: "Bor",
-              items: []
-            },
-            {
-              type: "category",
-              label: "Contracts",
-              items: []
-            },
-            {
-              type: "category",
-              label: "Plasma Contracts",
-              items: []
-            },
-            "home/specifications/peppermint",
+  // Contributors: [
+  //   "contribute/orientation",
+  //       {
+  //         type: "category",
+  //         label: "Architecture",
+  //         items: [
+  //           "home/architecture/overview",
+  //           "home/architecture/security-models",
+  //           {
+  //             type: "category",
+  //             label: "Bor",
+  //             items: ["home/architecture/bor", "home/architecture/setup-bor"]
+  //           },
+  //           {
+  //             type: "category",
+  //             label: "Heimdall",
+  //             items: []
+  //           },
+  //           {
+  //             type: "category",
+  //             label: "Contracts",
+  //             items: ["home/architecture/contracts/staking",]
+  //           },
+  //           {
+  //             type: "category",
+  //             label: "Plasma Contracts",
+  //             items: []
+  //           },
+  //           {
+  //             type: "category",
+  //             label: "State Sync Mechanism",
+  //             items: ["validate/basics/state-sync",]
+  //           },
+  //         ]
+  //       },
+  //       {
+  //         type: "category",
+  //         label: "Specifications",
+  //         items: [
+  //           {
+  //             type: "category",
+  //             label: "Heimdall",
+  //             items: [
+  //               "home/specifications/heimdall/encoder",
+  //               "home/specifications/heimdall/stdtx",
+  //               {
+  //                 type: "category",
+  //                 label: "Modules",
+  //                 items: [
+  //                   "home/specifications/heimdall/modules/auth",
+  //                   "home/specifications/heimdall/modules/governance",
+  //                 ]
+  //               },
+  //             ]
+  //           },
+  //           {
+  //             type: "category",
+  //             label: "Bor",
+  //             items: []
+  //           },
+  //           {
+  //             type: "category",
+  //             label: "Contracts",
+  //             items: []
+  //           },
+  //           {
+  //             type: "category",
+  //             label: "Plasma Contracts",
+  //             items: []
+  //           },
+  //           "home/specifications/peppermint",
     
-          ]
-        },
-  ]
+  //         ]
+  //       },
+  // ]
 };

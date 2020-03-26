@@ -1,17 +1,17 @@
 {
   "id": "validate/counter-stake-stage-1/stake-on-matic",
   "title": "Stake on Matic",
-  "description": "# How to Stake and Become a Validator on Matic (Stage 1 Counter Stake)",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/validate/counter-stake-stage-1/stake-on-matic.md",
   "permalink": "/docs/validate/counter-stake-stage-1/stake-on-matic",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/counter-stake-stage-1/stake-on-matic.md",
-  "sidebar": "Validators",
+  "sidebar": "Validate",
   "previous": {
     "title": "Setup Matic Validator Node",
-    "permalink": "/docs/validate/counter-stake-stage-1/running-with-docker"
+    "permalink": "/docs/validate/counter-stake-stage-1/running-with-binaries"
   },
   "next": {
-    "title": "Technical FAQs",
-    "permalink": "/docs/validate/counter-stake-stage-1/technical-faqs"
+    "title": "Rewards",
+    "permalink": "/docs/validate/counter-stake-stage-1/rewards"
   }
 }

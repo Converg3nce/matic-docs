@@ -5,13 +5,13 @@
   "source": "@site/docs/validator/liquid-delegation.md",
   "permalink": "/docs/validator/liquid-delegation",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/liquid-delegation.md",
-  "sidebar": "Contributors",
+  "sidebar": "Validators",
   "previous": {
     "title": "Checkpoint Mechanism",
     "permalink": "/docs/validator/checkpoint-mechanism"
   },
   "next": {
-    "title": "Encoder (Pulp)",
-    "permalink": "/docs/home/specifications/heimdall/encoder"
+    "title": "Staking Economics",
+    "permalink": "/docs/validate/economics"
   }
 }

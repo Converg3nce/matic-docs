@@ -6,6 +6,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 This tutorial will act as a guide for step-by-step process to understand and use [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. 
 
+<img src={useBaseUrl("img/maticjs/maticjs.png")} />
+
 The process followed here is:
 
 1. Deposit assets from root chain to Matic [(Ethereum → Matic)](deposit)

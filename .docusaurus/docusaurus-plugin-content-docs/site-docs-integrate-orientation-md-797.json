@@ -1,13 +1,13 @@
 {
   "id": "integrate/quickstart",
   "title": "Quickstart",
-  "description": "# 2-min guide to get started on Matic",
+  "description": "Matic Network is a scaling solution for public blockchains. With EVM and account based implementation [read more here](/docs/home/architecture/overview), **Matic supports all the existing Ethereum tooling along with faster and cheaper transactions**.",
   "source": "@site/docs/integrate/orientation.md",
   "permalink": "/docs/integrate/quickstart",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/orientation.md",
   "sidebar": "Integrate",
   "next": {
-    "title": "Flow of Tokens on Matic",
-    "permalink": "/docs/integrate/flow-of-token"
+    "title": "Ethereum ↔️ Matic",
+    "permalink": "/docs/integrate/ethereum-matic"
   }
 }

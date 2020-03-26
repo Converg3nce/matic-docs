@@ -1,0 +1,17 @@
+{
+  "id": "develop/truffle",
+  "title": "Using Truffle",
+  "description": "## **Setting up the development environment**",
+  "source": "@site/docs/develop/truffle.md",
+  "permalink": "/docs/develop/truffle",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/truffle.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Hello World",
+    "permalink": "/docs/develop/remix"
+  },
+  "next": {
+    "title": "How to create a MetaMask Wallet?",
+    "permalink": "/docs/develop/metamask/hello"
+  }
+}

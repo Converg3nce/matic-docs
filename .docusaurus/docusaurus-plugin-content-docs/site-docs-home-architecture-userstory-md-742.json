@@ -1,0 +1,17 @@
+{
+  "id": "home/architecture/matic-flow",
+  "title": "How Matic Works?",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/home/architecture/userstory.md",
+  "permalink": "/docs/home/architecture/matic-flow",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/userstory.md",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "Components",
+    "permalink": "/docs/home/architecture/components"
+  },
+  "next": {
+    "title": "Security Models",
+    "permalink": "/docs/home/architecture/security-models"
+  }
+}

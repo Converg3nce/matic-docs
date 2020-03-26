@@ -5,7 +5,7 @@
   "source": "@site/docs/validate/faqs.md",
   "permalink": "/docs/validate/faqs",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/faqs.md",
-  "sidebar": "Validators",
+  "sidebar": "Validate",
   "previous": {
     "title": "Technical FAQs",
     "permalink": "/docs/validate/counter-stake-stage-1/technical-faqs"

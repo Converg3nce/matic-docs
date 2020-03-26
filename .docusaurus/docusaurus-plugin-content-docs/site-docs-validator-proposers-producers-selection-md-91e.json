@@ -5,10 +5,10 @@
   "source": "@site/docs/validator/proposers-producers-selection.md",
   "permalink": "/docs/validator/proposers-producers-selection",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/proposers-producers-selection.md",
-  "sidebar": "Contributors",
+  "sidebar": "Validators",
   "previous": {
-    "title": "Staking",
-    "permalink": "/docs/home/architecture/contracts/staking"
+    "title": "Who is a Delegator?",
+    "permalink": "/docs/validate/basics/delegator"
   },
   "next": {
     "title": "State Sync Mechanism",

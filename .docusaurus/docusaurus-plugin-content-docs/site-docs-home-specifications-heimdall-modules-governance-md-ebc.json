@@ -5,14 +5,5 @@
   "source": "@site/docs/home/specifications/heimdall/modules/ governance.md",
   "permalink": "/docs/home/specifications/heimdall/modules/governance",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/heimdall/modules/ governance.md",
-  "sidebar_label": "Governance",
-  "sidebar": "Contributors",
-  "previous": {
-    "title": "Auth/Account",
-    "permalink": "/docs/home/specifications/heimdall/modules/auth"
-  },
-  "next": {
-    "title": "Peppermint",
-    "permalink": "/docs/home/specifications/peppermint"
-  }
+  "sidebar_label": "Governance"
 }

@@ -4,14 +4,5 @@
   "description": "It manages address, coins and nonce for transactions. It also signs and validates transactions. ",
   "source": "@site/docs/home/specifications/heimdall/modules/auth.md",
   "permalink": "/docs/home/specifications/heimdall/modules/auth",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/heimdall/modules/auth.md",
-  "sidebar": "Contributors",
-  "previous": {
-    "title": "StdTx",
-    "permalink": "/docs/home/specifications/heimdall/stdtx"
-  },
-  "next": {
-    "title": "Heimdall governance",
-    "permalink": "/docs/home/specifications/heimdall/modules/governance"
-  }
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/heimdall/modules/auth.md"
 }

@@ -6,13 +6,13 @@
   "permalink": "/docs/validator/bor-chain",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/bor-chain.md",
   "sidebar_label": "BOR Chain",
-  "sidebar": "Contributors",
+  "sidebar": "introduction",
   "previous": {
-    "title": "What is Heimdall Chain?",
-    "permalink": "/docs/validator/heimdall-chain"
+    "title": "Security Models",
+    "permalink": "/docs/home/architecture/security-models"
   },
   "next": {
-    "title": "Checkpoint Mechanism",
-    "permalink": "/docs/validator/checkpoint-mechanism"
+    "title": "Bor",
+    "permalink": "/docs/home/architecture/bor"
   }
 }

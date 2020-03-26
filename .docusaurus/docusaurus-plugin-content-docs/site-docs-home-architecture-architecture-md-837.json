@@ -1,14 +1,14 @@
 {
-  "id": "home/architecture/overview",
-  "title": "Matic",
-  "description": "Matic’s plasma chain builds upon Plasma MoreVP with an account based implementation. In the account model, transactions are interpreted as events to the blockchain state machine and the Ethereum Virtual Machine computes the state transition result of these events based on prior blockchain state. The two main components that set apart Matic’s implementation from other Plasma implementations are:",
+  "id": "home/architecture/userstory",
+  "title": "Architecture",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/home/architecture/architecture.md",
-  "permalink": "/docs/home/architecture/overview",
+  "permalink": "/docs/home/architecture/userstory",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/architecture.md",
-  "sidebar": "Contributors",
+  "sidebar": "introduction",
   "previous": {
-    "title": "Guidlines to Contribute",
-    "permalink": "/docs/contribute/orientation"
+    "title": "Matic",
+    "permalink": "/docs/home/architecture/overview"
   },
   "next": {
     "title": "Security Models",

@@ -82,10 +82,6 @@
     "component": "component---theme-doc-page-1-be-9be",
     "docsMetadata": "docsMetadata---docs-route-20-a-f24"
   },
-  "/docs/config-truffle": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-config-truffleb-14-00d"
-  },
   "/docs/contribute/orientation": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-contribute-orientationf-41-186"
@@ -166,10 +162,6 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-develop-maticjs-withdraw-08-e-5f1"
   },
-  "/docs/develop/metamask": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-develop-metamaskd-60-14c"
-  },
   "/docs/develop/metamask/custom-tokens": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-develop-metamask-custom-tokensfa-4-e6c"
@@ -177,6 +169,10 @@
   "/docs/develop/metamask/gas-fees": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-develop-metamask-gas-fees-552-6a8"
+  },
+  "/docs/develop/metamask/hello": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-develop-metamask-hello-9-bc-953"
   },
   "/docs/develop/metamask/multiple-accounts": {
     "component": "component---theme-doc-item-178-a40",
@@ -210,6 +206,14 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-develop-oracles-razorf-32-56f"
   },
+  "/docs/develop/remix": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-develop-remix-9-ea-2d2"
+  },
+  "/docs/develop/truffle": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-develop-trufflea-3-e-25f"
+  },
   "/docs/develop/zapier/about": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-develop-zapier-about-128-c32"
@@ -222,21 +226,29 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-getting-startede-5-a-988"
   },
-  "/docs/helloworld": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-helloworlde-7-e-9a4"
-  },
   "/docs/home/architecture/bor": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-home-architecture-bor-125-b99"
+  },
+  "/docs/home/architecture/bor-chain": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-home-architecture-bor-chain-38-e-044"
+  },
+  "/docs/home/architecture/components": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-home-architecture-overview-85-e-a92"
   },
   "/docs/home/architecture/contracts/staking": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-home-architecture-contracts-staking-243-470"
   },
-  "/docs/home/architecture/overview": {
+  "/docs/home/architecture/heimdall-chain": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-home-architecture-overview-837-1c9"
+    "content": "content---docs-home-architecture-heimdall-chaine-54-1c4"
+  },
+  "/docs/home/architecture/matic-flow": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-home-architecture-userstory-742-83b"
   },
   "/docs/home/architecture/security-models": {
     "component": "component---theme-doc-item-178-a40",
@@ -342,37 +354,61 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-home-specifications-peppermintff-3-586"
   },
-  "/docs/integrate/flow-of-token": {
+  "/docs/integrate/ethereum-matic": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrate-flow-of-tokena-8-a-e7d"
+    "content": "content---docs-integrate-ethereum-maticf-04-07c"
+  },
+  "/docs/integrate/network": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrate-network-68-c-216"
+  },
+  "/docs/integrate/network-detail": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-integrate-network-detail-97-a-8c0"
   },
   "/docs/integrate/quickstart": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-integrate-quickstart-797-91c"
+    "content": "content---docs-integrate-quickstart-240-8cc"
   },
-  "/docs/network-config": {
+  "/docs/validate/basics/checkpoint-mechanism": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-network-config-347-2f3"
+    "content": "content---docs-validate-basics-checkpoint-mechanism-14-f-07d"
   },
   "/docs/validate/basics/delegator": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-basics-delegatord-26-bba"
   },
+  "/docs/validate/basics/liquid-delegation": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-basics-liquid-delegation-76-d-356"
+  },
+  "/docs/validate/basics/proposers-producers-selection": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-basics-proposers-producers-selectionc-47-260"
+  },
+  "/docs/validate/basics/state-sync": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-basics-state-sync-41-a-ce9"
+  },
   "/docs/validate/basics/validator": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-basics-validatorca-4-997"
+  },
+  "/docs/validate/counter-stake-stage-1/core-components": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-counter-stake-stage-1-core-components-048-347"
   },
   "/docs/validate/counter-stake-stage-1/getting-started": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-counter-stake-stage-1-getting-starteddf-6-d06"
   },
-  "/docs/validate/counter-stake-stage-1/introduction": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-validate-counter-stake-stage-1-introduction-8-d-7-38c"
-  },
   "/docs/validate/counter-stake-stage-1/linux-package-installation": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-counter-stake-stage-1-linux-package-installationc-5-c-056"
+  },
+  "/docs/validate/counter-stake-stage-1/rewards": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-counter-stake-stage-1-rewards-261-914"
   },
   "/docs/validate/counter-stake-stage-1/running-with-binaries": {
     "component": "component---theme-doc-item-178-a40",
@@ -421,29 +457,5 @@
   "/docs/validate/technical-requirements": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-technical-requirements-11-c-2b0"
-  },
-  "/docs/validator/bor-chain": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-validator-bor-chaine-40-096"
-  },
-  "/docs/validator/checkpoint-mechanism": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-validator-checkpoint-mechanismba-3-2ad"
-  },
-  "/docs/validator/heimdall-chain": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-validator-heimdall-chain-88-e-40e"
-  },
-  "/docs/validator/liquid-delegation": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-validator-liquid-delegationd-52-b91"
-  },
-  "/docs/validator/proposers-producers-selection": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-validator-proposers-producers-selection-91-e-bd1"
-  },
-  "/docs/validator/state-sync": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-validator-state-sync-1-f-7-223"
   }
 }

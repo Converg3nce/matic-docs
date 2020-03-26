@@ -199,7 +199,7 @@ Once this process is initiated, you will receive the transaction hash. The trans
 
 I’ll add the transaction hash to the code — `0x1b12ae634c7538adfcbddd5028ea47aa97fd8d07c0e3aeffd0caa2fff80cc365`. Note that in your case, this transaction hash will be different.
 
-Once the initiate process is complete, we will wait for ~5 minutes, before running the second script `$ node confirm-withdraw.js`.
+Once the initiate process is complete, we will **wait for ~5 minutes**, before running the second script `$ node confirm-withdraw.js`.
 
 <img src={useBaseUrl("img/maticjs/run-confirm-withdraw-erc20.png")} />
 

@@ -5,7 +5,7 @@
   "source": "@site/docs/validate/reporting-issues.md",
   "permalink": "/docs/validate/reporting-issues",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/reporting-issues.md",
-  "sidebar": "Validators",
+  "sidebar": "Validate",
   "previous": {
     "title": "FAQs",
     "permalink": "/docs/validate/faqs"

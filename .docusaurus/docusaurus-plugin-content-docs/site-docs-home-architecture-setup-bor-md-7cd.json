@@ -5,13 +5,13 @@
   "source": "@site/docs/home/architecture/setup-bor.md",
   "permalink": "/docs/home/architecture/setup-bor",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/setup-bor.md",
-  "sidebar": "Contributors",
+  "sidebar": "introduction",
   "previous": {
     "title": "Bor",
     "permalink": "/docs/home/architecture/bor"
   },
   "next": {
-    "title": "Staking",
-    "permalink": "/docs/home/architecture/contracts/staking"
+    "title": "What is Heimdall Chain?",
+    "permalink": "/docs/home/architecture/heimdall-chain"
   }
 }

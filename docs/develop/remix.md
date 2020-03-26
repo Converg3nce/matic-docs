@@ -1,5 +1,5 @@
 ---
-id: helloworld
+id: remix
 title: Hello World
 sidebar_label: Using Remix
 ---

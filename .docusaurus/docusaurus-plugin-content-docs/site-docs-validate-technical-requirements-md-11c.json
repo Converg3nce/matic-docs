@@ -5,7 +5,7 @@
   "source": "@site/docs/validate/technical-requirements.md",
   "permalink": "/docs/validate/technical-requirements",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/technical-requirements.md",
-  "sidebar": "Validators",
+  "sidebar": "Validate",
   "previous": {
     "title": "Staking Economics",
     "permalink": "/docs/validate/economics"

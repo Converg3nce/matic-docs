@@ -4,14 +4,5 @@
   "description": "Source: [https://github.com/maticnetwork/heimdall/blob/master/auth/types/stdtx.go](https://github.com/maticnetwork/heimdall/blob/master/auth/types/stdtx.go)",
   "source": "@site/docs/home/specifications/heimdall/stdtx.md",
   "permalink": "/docs/home/specifications/heimdall/stdtx",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/heimdall/stdtx.md",
-  "sidebar": "Contributors",
-  "previous": {
-    "title": "Encoder (Pulp)",
-    "permalink": "/docs/home/specifications/heimdall/encoder"
-  },
-  "next": {
-    "title": "Auth/Account",
-    "permalink": "/docs/home/specifications/heimdall/modules/auth"
-  }
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/heimdall/stdtx.md"
 }

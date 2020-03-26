@@ -70,12 +70,6 @@ export default [
   
   routes: [
 {
-  path: '/docs/config-truffle',
-  component: ComponentCreator('/docs/config-truffle'),
-  exact: true,
-  
-},
-{
   path: '/docs/contribute/orientation',
   component: ComponentCreator('/docs/contribute/orientation'),
   exact: true,
@@ -196,12 +190,6 @@ export default [
   
 },
 {
-  path: '/docs/develop/metamask',
-  component: ComponentCreator('/docs/develop/metamask'),
-  exact: true,
-  
-},
-{
   path: '/docs/develop/metamask/custom-tokens',
   component: ComponentCreator('/docs/develop/metamask/custom-tokens'),
   exact: true,
@@ -210,6 +198,12 @@ export default [
 {
   path: '/docs/develop/metamask/gas-fees',
   component: ComponentCreator('/docs/develop/metamask/gas-fees'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/metamask/hello',
+  component: ComponentCreator('/docs/develop/metamask/hello'),
   exact: true,
   
 },
@@ -262,6 +256,18 @@ export default [
   
 },
 {
+  path: '/docs/develop/remix',
+  component: ComponentCreator('/docs/develop/remix'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/truffle',
+  component: ComponentCreator('/docs/develop/truffle'),
+  exact: true,
+  
+},
+{
   path: '/docs/develop/zapier/about',
   component: ComponentCreator('/docs/develop/zapier/about'),
   exact: true,
@@ -280,14 +286,20 @@ export default [
   
 },
 {
-  path: '/docs/helloworld',
-  component: ComponentCreator('/docs/helloworld'),
+  path: '/docs/home/architecture/bor',
+  component: ComponentCreator('/docs/home/architecture/bor'),
   exact: true,
   
 },
 {
-  path: '/docs/home/architecture/bor',
-  component: ComponentCreator('/docs/home/architecture/bor'),
+  path: '/docs/home/architecture/bor-chain',
+  component: ComponentCreator('/docs/home/architecture/bor-chain'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/architecture/components',
+  component: ComponentCreator('/docs/home/architecture/components'),
   exact: true,
   
 },
@@ -298,8 +310,14 @@ export default [
   
 },
 {
-  path: '/docs/home/architecture/overview',
-  component: ComponentCreator('/docs/home/architecture/overview'),
+  path: '/docs/home/architecture/heimdall-chain',
+  component: ComponentCreator('/docs/home/architecture/heimdall-chain'),
+  exact: true,
+  
+},
+{
+  path: '/docs/home/architecture/matic-flow',
+  component: ComponentCreator('/docs/home/architecture/matic-flow'),
   exact: true,
   
 },
@@ -460,8 +478,20 @@ export default [
   
 },
 {
-  path: '/docs/integrate/flow-of-token',
-  component: ComponentCreator('/docs/integrate/flow-of-token'),
+  path: '/docs/integrate/ethereum-matic',
+  component: ComponentCreator('/docs/integrate/ethereum-matic'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrate/network',
+  component: ComponentCreator('/docs/integrate/network'),
+  exact: true,
+  
+},
+{
+  path: '/docs/integrate/network-detail',
+  component: ComponentCreator('/docs/integrate/network-detail'),
   exact: true,
   
 },
@@ -472,8 +502,8 @@ export default [
   
 },
 {
-  path: '/docs/network-config',
-  component: ComponentCreator('/docs/network-config'),
+  path: '/docs/validate/basics/checkpoint-mechanism',
+  component: ComponentCreator('/docs/validate/basics/checkpoint-mechanism'),
   exact: true,
   
 },
@@ -484,8 +514,32 @@ export default [
   
 },
 {
+  path: '/docs/validate/basics/liquid-delegation',
+  component: ComponentCreator('/docs/validate/basics/liquid-delegation'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/basics/proposers-producers-selection',
+  component: ComponentCreator('/docs/validate/basics/proposers-producers-selection'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/basics/state-sync',
+  component: ComponentCreator('/docs/validate/basics/state-sync'),
+  exact: true,
+  
+},
+{
   path: '/docs/validate/basics/validator',
   component: ComponentCreator('/docs/validate/basics/validator'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/core-components',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/core-components'),
   exact: true,
   
 },
@@ -496,14 +550,14 @@ export default [
   
 },
 {
-  path: '/docs/validate/counter-stake-stage-1/introduction',
-  component: ComponentCreator('/docs/validate/counter-stake-stage-1/introduction'),
+  path: '/docs/validate/counter-stake-stage-1/linux-package-installation',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/linux-package-installation'),
   exact: true,
   
 },
 {
-  path: '/docs/validate/counter-stake-stage-1/linux-package-installation',
-  component: ComponentCreator('/docs/validate/counter-stake-stage-1/linux-package-installation'),
+  path: '/docs/validate/counter-stake-stage-1/rewards',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/rewards'),
   exact: true,
   
 },
@@ -576,42 +630,6 @@ export default [
 {
   path: '/docs/validate/technical-requirements',
   component: ComponentCreator('/docs/validate/technical-requirements'),
-  exact: true,
-  
-},
-{
-  path: '/docs/validator/bor-chain',
-  component: ComponentCreator('/docs/validator/bor-chain'),
-  exact: true,
-  
-},
-{
-  path: '/docs/validator/checkpoint-mechanism',
-  component: ComponentCreator('/docs/validator/checkpoint-mechanism'),
-  exact: true,
-  
-},
-{
-  path: '/docs/validator/heimdall-chain',
-  component: ComponentCreator('/docs/validator/heimdall-chain'),
-  exact: true,
-  
-},
-{
-  path: '/docs/validator/liquid-delegation',
-  component: ComponentCreator('/docs/validator/liquid-delegation'),
-  exact: true,
-  
-},
-{
-  path: '/docs/validator/proposers-producers-selection',
-  component: ComponentCreator('/docs/validator/proposers-producers-selection'),
-  exact: true,
-  
-},
-{
-  path: '/docs/validator/state-sync',
-  component: ComponentCreator('/docs/validator/state-sync'),
   exact: true,
   
 }],

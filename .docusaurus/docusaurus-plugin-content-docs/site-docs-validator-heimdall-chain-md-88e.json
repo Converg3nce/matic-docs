@@ -6,13 +6,13 @@
   "permalink": "/docs/validator/heimdall-chain",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/heimdall-chain.md",
   "sidebar_label": "Heimdall Chain",
-  "sidebar": "Contributors",
+  "sidebar": "introduction",
   "previous": {
-    "title": "State Sync Mechanism",
-    "permalink": "/docs/validator/state-sync"
+    "title": "Setup Bor",
+    "permalink": "/docs/home/architecture/setup-bor"
   },
   "next": {
-    "title": "What is BOR Chain?",
-    "permalink": "/docs/validator/bor-chain"
+    "title": "FAQ",
+    "permalink": "/docs/home/faq"
   }
 }

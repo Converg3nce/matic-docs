@@ -28,12 +28,7 @@ export default {
         },
         {
           "to": "docs/getting-started",
-          "label": "DAppDev",
-          "position": "left"
-        },
-        {
-          "to": "docs/integrate/quickstart",
-          "label": "Integrate",
+          "label": "Develop",
           "position": "left"
         },
         {
@@ -42,9 +37,14 @@ export default {
           "position": "left"
         },
         {
-          "to": "docs/contribute/orientation",
-          "label": "Contribute",
+          "to": "docs/integrate/quickstart",
+          "label": "Integrate",
           "position": "left"
+        },
+        {
+          "href": "https://t.me/joinchat/HkoSvlDKW0qKs_kK4Ow0hQ",
+          "label": "Support",
+          "position": "right"
         },
         {
           "href": "https://blog.matic.network/",
@@ -71,11 +71,11 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/mnthn/Documents/matic-docs/sidebars.js",
+          "sidebarPath": "/Users/sanchaymittal/matic/matic-docs/sidebars.js",
           "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/"
         },
         "theme": {
-          "customCss": "/Users/mnthn/Documents/matic-docs/src/css/custom.css"
+          "customCss": "/Users/sanchaymittal/matic/matic-docs/src/css/custom.css"
         }
       }
     ]

@@ -4,10 +4,5 @@
   "description": "",
   "source": "@site/docs/contribute/orientation.md",
   "permalink": "/docs/contribute/orientation",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/contribute/orientation.md",
-  "sidebar": "Contributors",
-  "next": {
-    "title": "Matic",
-    "permalink": "/docs/home/architecture/overview"
-  }
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/contribute/orientation.md"
 }

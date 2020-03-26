@@ -1,0 +1,18 @@
+{
+  "id": "develop/remix",
+  "title": "Hello World",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/develop/remix.md",
+  "permalink": "/docs/develop/remix",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/remix.md",
+  "sidebar_label": "Using Remix",
+  "sidebar": "development",
+  "previous": {
+    "title": "Welcome to Matic's DApp Development",
+    "permalink": "/docs/getting-started"
+  },
+  "next": {
+    "title": "Using Truffle",
+    "permalink": "/docs/develop/truffle"
+  }
+}

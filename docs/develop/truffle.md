@@ -1,5 +1,5 @@
 ---
-id: config-truffle
+id: truffle
 title: Using Truffle
 ---
 

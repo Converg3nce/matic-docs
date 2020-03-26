@@ -27,10 +27,15 @@ module.exports = {
       },
       links: [
         { to: 'docs/home/new-to-matic', label: 'Basics', position: 'left' },
-        { to: 'docs/getting-started', label: 'DAppDev', position: 'left' },
-        { to: 'docs/integrate/quickstart', label: 'Integrate', position: 'left' },
+        { to: 'docs/getting-started', label: 'Develop', position: 'left' },
         { to: 'docs/validate/basics/validator', label: 'Validate', position: 'left' },
-        { to: 'docs/contribute/orientation', label: 'Contribute', position: 'left' }, 
+        { to: 'docs/integrate/quickstart', label: 'Integrate', position: 'left' },
+        // { to: 'docs/contribute/orientation', label: 'Contribute', position: 'left' },
+        {
+          href: 'https://t.me/joinchat/HkoSvlDKW0qKs_kK4Ow0hQ',
+          label: 'Support',
+          position: 'right',
+        }, 
         {
           href: 'https://blog.matic.network/',
           label: 'Blog',
@@ -43,55 +48,6 @@ module.exports = {
       indexName: 'docsearch',
       algoliaOptions: {},
     },
-    // footer: {
-    //   style: 'dark',
-    //   links: [
-    //     {
-    //       title: 'Docs',
-    //       items: [
-    //         {
-    //           label: 'Style Guide',
-    //           to: 'docs/doc1',
-    //         },
-    //         {
-    //           label: 'Second Doc',
-    //           to: 'docs/doc2',
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: 'Community',
-    //       items: [
-    //         {
-    //           label: 'Stack Overflow',
-    //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-    //         },
-    //         {
-    //           label: 'Discord',
-    //           href: 'https://discordapp.com/invite/docusaurus',
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: 'Social',
-    //       items: [
-    //         {
-    //           label: 'Blog',
-    //           to: 'blog',
-    //         },
-    //         {
-    //           label: 'GitHub',
-    //           href: 'https://github.com/facebook/docusaurus',
-    //         },
-    //         {
-    //           label: 'Twitter',
-    //           href: 'https://twitter.com/docusaurus',
-    //         },
-    //       ],
-    //     },
-    //   ],
-    //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    // },
   },
   presets: [
     [

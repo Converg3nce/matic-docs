@@ -10,8 +10,15 @@ To deploy contracts on the Matic Network, you can read our tutorial on [How to 
 
 If you are Ethereum Developer then you are already a Matic Developer. You don't have to worry about anything. Just deploy your contracts on Matic within Two simple steps.
 
-First: Update our Network credential
-Second: Deploy Contracts on Matic.
+### Deploy smart contracts
+
+<!-- ### Are you an Experience Blockchain Developer? -->
+
+* Deploy your Contracts on Matic Network
+    - [Using Remix](/docs/develop/remix)
+    - [Using Truffle](/docs/develop/truffle)
+* Configure the Web3 RPC-URL to https://testnetv3.matic.network, *Everything else remains the same*
+>  Matic Mainnet will have PoS security, with greater Plasma guarantees being added
 
 **And Volla!!! Enjoy the Scalable and Instant Solutions with almost no cost with the security of Blockchain.**
 

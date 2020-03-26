@@ -5,13 +5,13 @@
   "source": "@site/docs/home/architecture/security-models.md",
   "permalink": "/docs/home/architecture/security-models",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/security-models.md",
-  "sidebar": "Contributors",
+  "sidebar": "introduction",
   "previous": {
-    "title": "Matic",
-    "permalink": "/docs/home/architecture/overview"
+    "title": "How Matic Works?",
+    "permalink": "/docs/home/architecture/matic-flow"
   },
   "next": {
-    "title": "Bor",
-    "permalink": "/docs/home/architecture/bor"
+    "title": "What is BOR Chain?",
+    "permalink": "/docs/home/architecture/bor-chain"
   }
 }

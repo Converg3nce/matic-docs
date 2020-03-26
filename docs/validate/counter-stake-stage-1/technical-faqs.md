@@ -2,18 +2,19 @@
 id: technical-faqs
 title: Technical FAQs
 ---
+
 ### 1. Are the private keys same for Heimdall and Bor keystore?
 Yes, the private key used for generating Validator keys and Bor Keystore is the same. The private key used in this instance is your Wallet's ETH address where your Matic testnet tokens are stored.
 
-### 2(a). Basic Details of Stage 1
+### 2a. Basic Details of Stage 1
 
 **Network Details**
 
-**Heimdall Chain ID**: heimdall-lXaaU9
+**Heimdall Chain ID**: heimdall-cs2003 
 
-**Bor Chain ID**: 2001
-
-**Tag**: CS-2001
+**Bor Chain ID**: 2003
+ 
+**Tag**: CS-2003
 
 **Bor Block Time**: 5 secs
 
@@ -25,98 +26,102 @@ Yes, the private key used for generating Validator keys and Bor Keystore is the 
 {
   "root": {
     "tokens": {
-      "TestToken": "0xA68e9e5dde3f80057fe639952e4acfD28D6d871B"
+      "TestToken": "0xF256c3383c80117706efa018C07f31C6cf958fdF",
+      "MaticWeth": "0x1dB33ceccA19d5EfF69a1353269443a543c56CD0"
     },
-    "BytesLib": "0xD1177eC040bCEF1eab7c9d8fA92c296d63838184",
-    "Common": "0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e",
-    "ECVerify": "0x46eD7904137e6ABA7c879D8dD676A3f57191Fdac",
-    "Merkle": "0xf52E92A81Ad4f242Df4E8426178c9Ddc0F2191C8",
-    "MerklePatriciaProof": "0xd179E9A09Eb434A092dEB3EBcCB0dd6133A91712",
-    "PriorityQueue": "0x224de567f24C111bF98b04Cb875682815aA9ED8A",
-    "RLPEncode": "0x4f9C5Abe93E48EA087a423aDcB38aF349b18dcdD",
-    "RLPReader": "0x2285aa1cdD3Ed51A1b052A17a58ab0F0aaf4a5Bc",
-    "SafeMath": "0x25bdaA6Ff67014572Ba33b76a158c095B15DFcad",
-    "Registry": "0x6eD25faaa5F38d626f2c2E93d683C09dD04d74e7",
-    "RootChain": "0xb26C687D70Df7c463B4E6b459560E4c50734BeCf",
-    "RootChainProxy": "0xe029642119840f4866F0A77B67e641AA3c20D764",
-    "ValidatorShareFactory": "0xc6CbeA9CC9075eBD484F75DA79c3B1EFf246dfC0",
-    "StakingInfo": "0xD0D89C9bc21b088e74fC9c7c7ff793a11498d316",
-    "StakingNFT": "0x1851F36BA0C7F82FE5a9D32ECfb4834BBcF2547b",
-    "StakeManager": "0xC4701aCE05B5D8A821D00f790f7Bee532d5F3C61",
-    "SlashingManager": "0x45331b78Ecfe13C916842ae8b494A97F2db0F5cD",
-    "StateSender": "0x0E4Bb4ed32D330FAd5EBDf185841047d88d3c409",
-    "DepositManager": "0x7CC755B4e715d9d17e227365406771DC7F90fcd1",
-    "DepositManagerProxy": "0xfE8e44e55714746Ef85Caa62DBE65A1F90535CF7",
-    "WithdrawManager": "0x91c6868A8072740479175513d1CFd2cdd30e1118",
-    "ExitNFT": "0x3849735A8049Cc89f0e2F0b04DFD4b2EcE2db091",
-    "WithdrawManagerProxy": "0xD7963e35BdCbdFF9EB6fAD6fA8576610af182931"
+    "BytesLib": "0xB1b650e6E19a46b43C5D77071177B53b883ADB74",
+    "Common": "0x23bdFf3322f5968171a879BCa57105b8b94147E6",
+    "ECVerify": "0x9F34ebBB67389aa44fFdA98A44Ecc923DF8a5A2e",
+    "Merkle": "0x144916dca029BfA6B3fB428c3e8CD8151c217EFe",
+    "MerklePatriciaProof": "0xa1dedb7274785945119748b7cd545eC0D23508D6",
+    "PriorityQueue": "0xf9eA7d0E7a78a3Af3e05D6217D04087969fEE50B",
+    "RLPEncode": "0x3FDB54c1F71Dd29FF42218DC80c3700e26F98118",
+    "RLPReader": "0x205DD96043283cc5280A54099f5ce0cD6089Ce50",
+    "SafeMath": "0xe587833A653D2b628cC1EcB283037fF4111a7a0D",
+    "Governance": "0x7fd27258D03e7bC8Abef97aD8a61C22deE3b050b",
+    "GovernanceProxy": "0x483a67747bbB7A12cE9c209f5b15a92fE1728165",
+    "Registry": "0xd5820A5D5252aA5a37bc518aE5fC2A9F499d9896",
+    "RootChain": "0x93dDd2aEF930320eb53932a83FE9C6Ad72fB3591",
+    "RootChainProxy": "0x7cc6b9556C5900cF990e0CE9eE733D44CcC3F62e",
+    "ValidatorShareFactory": "0x888E368DDcA308a343b62CA21261Cb4D098AAa2D",
+    "StakingInfo": "0xF1B137992B253dc8aB85C932cE06818a071461d7",
+    "StakingNFT": "0xc3E6099b2d98CBfCD8543B8a6856701332135D2F",
+    "StakeManager": "0x90b7B77c3Af6038cBb25A37361cF95C56BADFc93",
+    "StakeManagerProxy": "0xf7Fc9C6003C24CD799117f26959a958C3093B8d0",
+    "SlashingManager": "0xc60Fe54754d391d5812E885a3F89D7d968248AE7",
+    "StateSender": "0x122c31B5Da88583420B07b8cbc69435bBdc1838C",
+    "DepositManager": "0xf3c68898fB3a614F6DF4df2Cf923c04F1c79157a",
+    "DepositManagerProxy": "0xFEafbcC92488D16a7D6B36151F80fC4d0Db67956",
+    "WithdrawManager": "0x32eDFA67b4f4d128D26F2Bf44F2d138f623038c1",
+    "ExitNFT": "0x31D999F6f02aB0e5D3745fBdc57b8948eB445539",
+    "WithdrawManagerProxy": "0x87796c231cA7aB8dB93251BEb795F461B6Dd8F66"
   }
 }
 ```
 
-### 2(b). List of Common Commands
+### 2b. List of Common Commands
 
 We currently have an easy to dive-in list for you for the Linux packages. We will keep updating this list regularly for more convenience.
 
 **For Linux packages**
 
-#### A. Where to find heimdall genesis file
+####A. Where to find heimdall genesis file
 
 `$CONFIGPATH/heimdall/config/genesis.json`
 
-#### B. Where to find heimdall-config.toml
+####B. Where to find heimdall-config.toml
 
 `/etc/heimdall/config/heimdall-config.toml`
 
-#### C. Where to find config.toml
+####C. Where to find config.toml
 
 `/etc/heimdall/config/config.toml`
 
-#### D. Where to find heimdall-seeds.txt
+####D. Where to find heimdall-seeds.txt
 
 `$CONFIGPATH/heimdall/heimdall-seeds.txt`
 
-#### E. Start Heimdall
+####E. Start Heimdall
 
 `$ sudo service heimdalld start`
 
-#### F. Start Heimdall rest-server
+####F. Start Heimdall rest-server
 
 `$ sudo service heimdalld-rest-server start`
 
-#### G. Start Heimdall bridge-server
+####G. Start Heimdall bridge-server
 
 `$ sudo service heimdalld-bridge start`
 
-#### H. Heimdall logs
+####H. Heimdall logs
 
 `/var/log/matic-logs/`
 
-#### I. Where to find Bor genesis file
+####I. Where to find Bor genesis file
 
 `$CONFIGPATH/bor/genesis.json`
 
-#### J. Start Bor
+####J. Start Bor
 
 `sudo service bor start`
 
-#### K Check heimdall logs
+####K Check heimdall logs
 
 `tail -f heimdalld.log`
 
-#### L. Check Heimdall rest-server
+####L. Check Heimdall rest-server
 
 `tail -f heimdalld-rest-server.log`
 
-#### M. Check Heimdall bridge logs
+####M. Check Heimdall bridge logs
 
 `tail -f heimdalld-bridge.log`
 
-#### N. Check bor logs
+####N. Check bor logs
 
 `tail -f bor.log`
 
-#### O. Kill Bor process
+####O. Kill Bor process
 
 **For linux**:
 
@@ -125,7 +130,7 @@ We currently have an easy to dive-in list for you for the Linux packages. We wil
 
 **For Binaries**:
 
-Go to `CS-2001/bor` and then run, `bash stop.sh`
+Go to `CS-2003/bor` and then run, `bash stop.sh`
 
 ### 3. Error: Failed to unlock account (0x...) No key for given address or file
 
@@ -162,7 +167,7 @@ run
 
     heimdalld unsafe-reset-all 
 
-and start again.
+and start Heimdall services again. You can refer to Step 7 in the setup guide - https://docs.matic.network/staking/linux-package-installation/#step-7-run-heimdall
 
 ### 5. From where do I create the API key?
 
@@ -206,7 +211,7 @@ There will be upto 100 active validators at a time. We will bring in more partic
 
 ### 9. How much should I stake?
 
-stake-amount and heimdall-fee-amount - how much it should be?
+"stake-amount" and "heimdall-fee-amount" - how much it should be?
 
 A minimum of 10 Matic tokens is required for the stake amount whereas heimdall fee should be greater than 10. For example, your stake amount is 400 then the heimdall fee should be 20. We suggest to keep the Heimdall fee as 20.
 
@@ -338,7 +343,34 @@ Error: `* '' has invalid keys: clerk_polling_interval, matic_token, span_polling
 
 This occurs mostly because when there are typos, or some missing parts or an old config file which is still a remnant. You will need to clear all the remnants and then try setting it up again.
 
+### 26. To stop Heimdall and Bor services
 
+**For Linux packages**:
 
+Stop Heimdall: `sudo service heimdalld stop`
 
+Stop Bor: `sudo service bor stop` or 
 
+1. `ps -aux | grep bor`. Get the PID for Bor and then run the following command.
+2. `sudo kill -9 PID`
+
+**For Binaries**:
+
+Stop Heimdall: `pkill heimdalld`
+
+Stop Bridge: `pkill heimdalld-bridge`
+
+Stop Bor: Go to CS-2001/bor and then run, `bash stop.sh`
+
+### 27. To remove Heimdall and Bor directories
+
+**For Linux packages**:
+Delete Heimdall: `sudo rm -rf /etc/heimdall/*`
+
+Delete Bor: `sudo rm -rf /etc/bor/*`
+
+**For Binaries**:
+
+Delete Heimdall: `sudo rm -rf ~/.heimdalld/`
+
+Delete Bor: `sudo rm -rf ~/.bor`

@@ -6,10 +6,10 @@ export const firstRow = [
         description: "Learn about Blockchain and Matic"
     },
     {
-        title: "DApp Developers",
+        title: "Application Developers",
         linkUrl: "docs/getting-started",
         imageUrl: "img/home/dapp-developers.svg",
-        description: "All the infrastructure and integrations you need to build, deploy, and manage dApps on Matic."
+        description: "All the infrastructure and integrations you need to build, deploy, and manage Apps on Matic."
     },
     {
         title: "Validators",
@@ -30,7 +30,7 @@ export const secondRow = [
         title: "Integrate",
         linkUrl: "docs/integrate/quickstart",
         imageUrl: "img/home/integration.svg",
-        description: "Easy Guide for Partners to Integarte to Matic Chain"
+        description: "Easy Guide for Partners to Integrate to Matic Chain"
     }
 ];
 
