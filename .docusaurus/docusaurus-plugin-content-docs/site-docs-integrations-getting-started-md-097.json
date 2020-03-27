@@ -1,0 +1,9 @@
+{
+  "id": "integrations/getting-started",
+  "title": "Integrations",
+  "description": "**Novice:** If you are new to Blockchain Development then follow our [Tutorial: Getting Started with Solidity](solidity.md).",
+  "source": "@site/docs/integrations/getting-started.md",
+  "permalink": "/docs/integrations/getting-started",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/getting-started.md",
+  "sidebar_label": "Getting Started"
+}

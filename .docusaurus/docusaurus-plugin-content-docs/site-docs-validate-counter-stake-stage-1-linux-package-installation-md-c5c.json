@@ -1,0 +1,18 @@
+{
+  "id": "validate/counter-stake-stage-1/linux-package-installation",
+  "title": "Setup Matic Validator Node",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/validate/counter-stake-stage-1/linux-package-installation.md",
+  "permalink": "/docs/validate/counter-stake-stage-1/linux-package-installation",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/counter-stake-stage-1/linux-package-installation.md",
+  "sidebar_label": "Linux Package Installation",
+  "sidebar": "Validate",
+  "previous": {
+    "title": "Core Components",
+    "permalink": "/docs/validate/counter-stake-stage-1/core-components"
+  },
+  "next": {
+    "title": "Setup Matic Validator Node",
+    "permalink": "/docs/validate/counter-stake-stage-1/running-with-binaries"
+  }
+}

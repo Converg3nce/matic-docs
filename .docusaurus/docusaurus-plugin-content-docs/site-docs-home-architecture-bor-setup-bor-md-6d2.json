@@ -1,0 +1,17 @@
+{
+  "id": "home/architecture/bor/setup-bor",
+  "title": "Setup Bor",
+  "description": "### Setup Bor",
+  "source": "@site/docs/home/architecture/bor/setup-bor.md",
+  "permalink": "/docs/home/architecture/bor/setup-bor",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/bor/setup-bor.md",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/home/architecture/bor/overview"
+  },
+  "next": {
+    "title": "Staking",
+    "permalink": "/docs/validator/staking"
+  }
+}

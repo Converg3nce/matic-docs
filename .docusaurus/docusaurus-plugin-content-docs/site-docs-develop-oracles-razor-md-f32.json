@@ -1,0 +1,18 @@
+{
+  "id": "develop/oracles/razor",
+  "title": "Razor",
+  "description": "Razor Network consists of validators who lock in their tokens as a “Stake” and provide data to the network. The honest validators are rewarded and those who report incoherently are penalised.",
+  "source": "@site/docs/develop/oracles/razor.md",
+  "permalink": "/docs/develop/oracles/razor",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/oracles/razor.md",
+  "sidebar_label": "Razor",
+  "sidebar": "development",
+  "previous": {
+    "title": "BandChain",
+    "permalink": "/docs/develop/oracles/bandchain"
+  },
+  "next": {
+    "title": "Fiat-on-Ramp",
+    "permalink": "/docs/develop/fiat-on-ramp"
+  }
+}

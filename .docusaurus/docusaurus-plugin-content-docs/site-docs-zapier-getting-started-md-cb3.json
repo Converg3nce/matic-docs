@@ -1,0 +1,8 @@
+{
+  "id": "zapier/getting-started",
+  "title": "getting-started",
+  "description": "### Setting Up Dagger for Ethereum with Zapier",
+  "source": "@site/docs/zapier/getting-started.md",
+  "permalink": "/docs/zapier/getting-started",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/zapier/getting-started.md"
+}

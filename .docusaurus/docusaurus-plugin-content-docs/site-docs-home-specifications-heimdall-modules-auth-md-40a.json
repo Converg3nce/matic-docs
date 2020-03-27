@@ -1,0 +1,8 @@
+{
+  "id": "home/specifications/heimdall/modules/auth",
+  "title": "Auth/Account",
+  "description": "It manages address, coins and nonce for transactions. It also signs and validates transactions. ",
+  "source": "@site/docs/home/specifications/heimdall/modules/auth.md",
+  "permalink": "/docs/home/specifications/heimdall/modules/auth",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/specifications/heimdall/modules/auth.md"
+}

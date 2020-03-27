@@ -1,0 +1,17 @@
+{
+  "id": "validator/liquid-delegation",
+  "title": "Liquid Delegation in Matic",
+  "description": "In a traditional Proof of Stake Mechanism, the blockchain keeps track of a set of validators, And anyone can join this rank or right to validate transactions by sending a special type of transaction which stake their coins(in Ethereum's case, ether) and locks up into a deposit. The process of creating and agreeing to new blocks is then done through a consensus algorithm by all current validators.",
+  "source": "@site/docs/validator/liquid-delegation.md",
+  "permalink": "/docs/validator/liquid-delegation",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/liquid-delegation.md",
+  "sidebar": "Validators",
+  "previous": {
+    "title": "Checkpoint Mechanism",
+    "permalink": "/docs/validator/checkpoint-mechanism"
+  },
+  "next": {
+    "title": "Staking Economics",
+    "permalink": "/docs/validate/economics"
+  }
+}

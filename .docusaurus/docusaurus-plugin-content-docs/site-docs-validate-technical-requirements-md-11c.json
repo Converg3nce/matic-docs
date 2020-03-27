@@ -1,0 +1,17 @@
+{
+  "id": "validate/technical-requirements",
+  "title": "Minimum Technical Requirements",
+  "description": "For the upcoming testnet event, this is the minimal hardware configuration:",
+  "source": "@site/docs/validate/technical-requirements.md",
+  "permalink": "/docs/validate/technical-requirements",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/technical-requirements.md",
+  "sidebar": "Validate",
+  "previous": {
+    "title": "Staking Economics",
+    "permalink": "/docs/validate/economics"
+  },
+  "next": {
+    "title": "Getting Started",
+    "permalink": "/docs/validate/counter-stake-stage-1/getting-started"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "resources/matic-moving-assets",
+  "title": "Ethereum to Matic",
+  "description": "# Moving Assets",
+  "source": "@site/docs/resources/matic-moving-assets.md",
+  "permalink": "/docs/resources/matic-moving-assets",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/matic-moving-assets.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Swap Assets",
+    "permalink": "/docs/advanced/swap-assets"
+  },
+  "next": {
+    "title": "Getting Started with Solidity",
+    "permalink": "/docs/resources/tutorial-ethindia-workshop-solidity"
+  }
+}

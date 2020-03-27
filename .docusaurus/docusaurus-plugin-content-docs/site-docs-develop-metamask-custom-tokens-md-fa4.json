@@ -1,0 +1,17 @@
+{
+  "id": "develop/metamask/custom-tokens",
+  "title": "Config Custom Tokens",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/develop/metamask/custom-tokens.md",
+  "permalink": "/docs/develop/metamask/custom-tokens",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metamask/custom-tokens.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "How to create a MetaMask Wallet?",
+    "permalink": "/docs/develop/metamask/hello"
+  },
+  "next": {
+    "title": "Config Matic on Metamask",
+    "permalink": "/docs/develop/metamask/testnet"
+  }
+}

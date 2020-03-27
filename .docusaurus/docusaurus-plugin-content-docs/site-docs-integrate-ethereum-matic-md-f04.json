@@ -1,0 +1,13 @@
+{
+  "id": "integrate/ethereum-matic",
+  "title": "Ethereum ↔️ Matic",
+  "description": "Plasma Secured Solution to transfer your assets from Ethereum to Matic and vice-versa.",
+  "source": "@site/docs/integrate/ethereum-matic.md",
+  "permalink": "/docs/integrate/ethereum-matic",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/ethereum-matic.md",
+  "sidebar": "Integrate",
+  "previous": {
+    "title": "How to read Network Details?",
+    "permalink": "/docs/integrate/network-detail"
+  }
+}

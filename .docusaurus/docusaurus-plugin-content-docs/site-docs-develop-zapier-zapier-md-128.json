@@ -1,0 +1,18 @@
+{
+  "id": "develop/zapier/about",
+  "title": "Zapier",
+  "description": "Zapier is a web automation app and it gives you the power to integrate Dagger For Ethereum with hundreds of other apps to automate your work. ",
+  "source": "@site/docs/develop/zapier/zapier.md",
+  "permalink": "/docs/develop/zapier/about",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/zapier/zapier.md",
+  "sidebar_label": "About",
+  "sidebar": "development",
+  "previous": {
+    "title": "Dagger",
+    "permalink": "/docs/develop/dagger"
+  },
+  "next": {
+    "title": "Setting Up Dagger for Ethereum with Zapier",
+    "permalink": "/docs/develop/zapier/getting-started"
+  }
+}

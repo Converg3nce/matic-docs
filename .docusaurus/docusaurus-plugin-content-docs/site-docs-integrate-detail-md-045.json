@@ -1,0 +1,13 @@
+{
+  "id": "integrate/network-detail",
+  "title": "How to read network Network Details?",
+  "description": "You can have the network details by visting the below shared support links.",
+  "source": "@site/docs/integrate/detail.md",
+  "permalink": "/docs/integrate/network-detail",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/detail.md",
+  "sidebar": "Integrate",
+  "previous": {
+    "title": "Networks",
+    "permalink": "/docs/integrate/network"
+  }
+}

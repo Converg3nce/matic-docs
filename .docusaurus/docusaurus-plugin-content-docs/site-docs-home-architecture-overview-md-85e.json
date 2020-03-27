@@ -1,0 +1,17 @@
+{
+  "id": "home/architecture/components",
+  "title": "Components",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/home/architecture/overview.md",
+  "permalink": "/docs/home/architecture/components",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/overview.md",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "Sidechains and Plasma",
+    "permalink": "/docs/home/blockchain-basics/sidechain"
+  },
+  "next": {
+    "title": "How Matic Works?",
+    "permalink": "/docs/home/architecture/matic-flow"
+  }
+}

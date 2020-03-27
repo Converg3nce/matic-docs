@@ -1,0 +1,17 @@
+{
+  "id": "resources/tutorial-ethindia-workshop-dapp",
+  "title": "Deploying a DApp on Matic",
+  "description": "## What this tutorial covers",
+  "source": "@site/docs/resources/tutorial-ethindia-workshop-dapp.md",
+  "permalink": "/docs/resources/tutorial-ethindia-workshop-dapp",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/resources/tutorial-ethindia-workshop-dapp.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "Full Stack DApp with POS Security",
+    "permalink": "/docs/resources/tutorial-ethindia-workshop-solidity"
+  },
+  "next": {
+    "title": "Matic.js",
+    "permalink": "/docs/sdk/matic-js"
+  }
+}

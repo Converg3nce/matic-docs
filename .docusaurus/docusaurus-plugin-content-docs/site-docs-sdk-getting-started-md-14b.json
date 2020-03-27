@@ -1,0 +1,17 @@
+{
+  "id": "sdk/getting-started",
+  "title": "Getting Started",
+  "description": "This tutorial will act as a guide for step-by-step process to understand and use [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. ",
+  "source": "@site/docs/sdk/getting-started.md",
+  "permalink": "/docs/sdk/getting-started",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/sdk/getting-started.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Portis",
+    "permalink": "/docs/integrations/key-management/portis"
+  },
+  "next": {
+    "title": "Deposit (Ethereum→Matic)",
+    "permalink": "/docs/sdk/deposit"
+  }
+}

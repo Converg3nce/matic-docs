@@ -1,0 +1,17 @@
+{
+  "id": "staking/faqs",
+  "title": "FAQs",
+  "description": "### What is Matic Network?",
+  "source": "@site/docs/staking/faqs.md",
+  "permalink": "/docs/staking/faqs",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/faqs.md",
+  "sidebar": "Validators",
+  "previous": {
+    "title": "Technical FAQs",
+    "permalink": "/docs/staking/counter-stake-stage-1/technical-faqs"
+  },
+  "next": {
+    "title": "Reporting Issues",
+    "permalink": "/docs/staking/reporting-issues"
+  }
+}

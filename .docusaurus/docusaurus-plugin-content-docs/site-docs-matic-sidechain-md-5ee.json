@@ -1,0 +1,17 @@
+{
+  "id": "matic-sidechain",
+  "title": "Sidechains and Plasma",
+  "description": "Sidechain is an alternate blockchain to a parent chain. Plasma is a framework of child chains - it is a scaling solution for Ethereum (or any blockchain for that matter). ",
+  "source": "@site/docs/matic-sidechain.md",
+  "permalink": "/docs/matic-sidechain",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/matic-sidechain.md",
+  "sidebar": "Resources",
+  "previous": {
+    "title": "What are Accounts?",
+    "permalink": "/docs/blockchain-basics/accounts"
+  },
+  "next": {
+    "title": "Matic Architecture",
+    "permalink": "/docs/matic-architecture"
+  }
+}

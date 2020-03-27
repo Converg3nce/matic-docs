@@ -1,0 +1,13 @@
+{
+  "id": "validate/reporting-issues",
+  "title": "Reporting Issues",
+  "description": "In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.",
+  "source": "@site/docs/validate/reporting-issues.md",
+  "permalink": "/docs/validate/reporting-issues",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/reporting-issues.md",
+  "sidebar": "Validate",
+  "previous": {
+    "title": "FAQs",
+    "permalink": "/docs/validate/faqs"
+  }
+}

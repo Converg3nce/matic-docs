@@ -1,0 +1,17 @@
+{
+  "id": "validator/proposers-producers-selection",
+  "title": "Proposers & Producers Selection",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/validator/proposers-producers-selection.md",
+  "permalink": "/docs/validator/proposers-producers-selection",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validator/proposers-producers-selection.md",
+  "sidebar": "Validators",
+  "previous": {
+    "title": "Who is a Delegator?",
+    "permalink": "/docs/validate/basics/delegator"
+  },
+  "next": {
+    "title": "State Sync Mechanism",
+    "permalink": "/docs/validator/state-sync"
+  }
+}

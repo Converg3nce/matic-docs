@@ -1,0 +1,17 @@
+{
+  "id": "home/architecture/bor/overview",
+  "title": "Overview",
+  "description": "Matic is a hybrid Plasma + Proof-of-Stake (PoS) platform. We use a dual-consensus architecture on the Matic Network to optimise for speed and decentralisation. We consciously architected the system to support arbitrary state transitions on our sidechains, which are EVM-enabled.",
+  "source": "@site/docs/home/architecture/bor/bor.md",
+  "permalink": "/docs/home/architecture/bor/overview",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/bor/bor.md",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "Matic",
+    "permalink": "/docs/home/architecture/overview"
+  },
+  "next": {
+    "title": "Setup Bor",
+    "permalink": "/docs/home/architecture/bor/setup-bor"
+  }
+}

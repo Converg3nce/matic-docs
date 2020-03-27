@@ -1,0 +1,18 @@
+{
+  "id": "tutorial-key-management",
+  "title": "Key Management Strategies",
+  "description": "The following article aims to be a guide through integration of a key management strategy on client side of your Decentralised Application on Matic Network.",
+  "source": "@site/docs/tutorial-key-management.md",
+  "permalink": "/docs/tutorial-key-management",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/tutorial-key-management.md",
+  "sidebar_label": "Getting Started",
+  "sidebar": "Tutorials",
+  "previous": {
+    "title": "How to create a MetaMask Wallet?",
+    "permalink": "/docs/quickstart-metamask"
+  },
+  "next": {
+    "title": "Metamask",
+    "permalink": "/docs/tutorial-key-management-metamask"
+  }
+}

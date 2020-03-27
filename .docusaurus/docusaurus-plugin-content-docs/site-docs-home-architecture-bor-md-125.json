@@ -1,0 +1,17 @@
+{
+  "id": "home/architecture/bor",
+  "title": "Bor",
+  "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
+  "source": "@site/docs/home/architecture/bor.md",
+  "permalink": "/docs/home/architecture/bor",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/bor.md",
+  "sidebar": "introduction",
+  "previous": {
+    "title": "What is BOR Chain?",
+    "permalink": "/docs/home/architecture/bor-chain"
+  },
+  "next": {
+    "title": "Setup Bor",
+    "permalink": "/docs/home/architecture/setup-bor"
+  }
+}

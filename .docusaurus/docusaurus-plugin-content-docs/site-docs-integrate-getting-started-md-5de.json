@@ -1,0 +1,13 @@
+{
+  "id": "integrate/getting-started",
+  "title": "Integrate with Matic",
+  "description": "# 2-min guide to get started on Matic",
+  "source": "@site/docs/integrate/getting-started.md",
+  "permalink": "/docs/integrate/getting-started",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/getting-started.md",
+  "sidebar": "Integrate",
+  "next": {
+    "title": "Flow of Tokens on Matic",
+    "permalink": "/docs/integrate/flow-of-token"
+  }
+}

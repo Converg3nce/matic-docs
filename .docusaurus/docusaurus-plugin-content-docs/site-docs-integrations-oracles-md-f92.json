@@ -1,0 +1,18 @@
+{
+  "id": "integrations/oracles",
+  "title": "Getting Started with Oracles",
+  "description": "Blockchains or Smart contracts can't access data from outside of their network and there is often needs to access information from the outside world that is relevant to the contractual agreement. An oracle is a way for a blockchain or smart contract to interact with external data. ",
+  "source": "@site/docs/integrations/oracles.md",
+  "permalink": "/docs/integrations/oracles",
+  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrations/oracles.md",
+  "sidebar_label": "Oracles",
+  "sidebar": "development",
+  "previous": {
+    "title": "Gas Station Network",
+    "permalink": "/docs/integrations/metatransactions/metatransactions-gsn"
+  },
+  "next": {
+    "title": "Fiat-on-Ramp",
+    "permalink": "/docs/integrations/fiat-on-ramp"
+  }
+}
