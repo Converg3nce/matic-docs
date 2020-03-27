@@ -1,7 +1,3 @@
----
-id: reporting-issues
-title: Reporting Issues
----
 In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
 
 For an issue you have encountered specifically with Heimdall or Heimdall related, you can create an issue in the Heimdall repository: https://github.com/maticnetwork/heimdall/issues
