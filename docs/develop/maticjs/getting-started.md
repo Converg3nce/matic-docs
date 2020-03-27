@@ -14,7 +14,9 @@ The process followed here is:
 2. Transfer assets between accounts on Matic [(Matic ↔ Matic)](transfer)
 3. Withdraw assets from Matic on to root chain [(Matic → Ethereum)](withdraw)
 
-In this tutorial we use ERC-20 assets to be transferred from Ropsten to Matic. The flow discussed below remains similar for ERC-721 assets with minor changes that will be mentioned wherever required.
+- ERC20: In this tutorial we use ERC-20 assets to be transferred from Ropsten to Matic. 
+- ERC721: The flow discussed below remains similar for ERC-721 assets with minor changes that will be mentioned wherever required. 
+- Ether: The flow discussed below is simliar for transfer and withdraw, The only difference is at deposit, it's only one step by using ```matic.depositEthers```. For transfer and withdraw you can find the Ropsten_ERC20Address & Matic_ERC20Address in [network detail](/docs/integrate/network-detail)
 
 ## Using Matic JS
 

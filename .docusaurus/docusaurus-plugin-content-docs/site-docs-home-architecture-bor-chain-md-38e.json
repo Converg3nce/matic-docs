@@ -5,7 +5,6 @@
   "source": "@site/docs/home/architecture/bor-chain.md",
   "permalink": "/docs/home/architecture/bor-chain",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/bor-chain.md",
-  "sidebar_label": "Bor Chain",
   "sidebar": "introduction",
   "previous": {
     "title": "Security Models",

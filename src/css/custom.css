@@ -725,13 +725,13 @@ a:after {
 }
 
 :root {
-  --ifm-color-primary: #003cb2;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary: #2b6def;
+  --ifm-color-primary-dark: #125bec;
+  --ifm-color-primary-darker: #1156df;
+  --ifm-color-primary-darkest: #0e47b8;
+  --ifm-color-primary-light: #457ff1;
+  --ifm-color-primary-lighter: #5288f2;
+  --ifm-color-primary-lightest: #7aa3f5;
   --ifm-code-font-size: 95%;
 }
 

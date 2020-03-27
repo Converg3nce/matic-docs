@@ -52,7 +52,7 @@ const matic = new Matic({
     registry: MainNetwork.Contracts.Registry
 })
 ```
-The above setup code remains the same for ERC20/ERC721
+The above setup code remains the same for ERC20/ERC721/Eth. 
 
 Now, depending upon your asset, add the following code:
 
@@ -223,4 +223,4 @@ Hope you have understood now that interacting with the Matic Network is quite ea
 
 Similarly, as an exercise you can Deposit, transfer and withdraw ERC721 and Ether using Matic.js following the same steps as above.
 
-Feel free to reach out to us at https://stack.matic.network/ in case you face any issues.
+Feel free to reach out to us at https://forum.matic.network/ in case you face any issues.

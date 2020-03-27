@@ -27,7 +27,7 @@ module.exports = {
       },
       links: [
         { to: 'docs/home/new-to-matic', label: 'Basics', position: 'left' },
-        { to: 'docs/getting-started', label: 'Develop', position: 'left' },
+        { to: 'docs/develop/getting-started', label: 'Develop', position: 'left' },
         { to: 'docs/validate/basics/validator', label: 'Validate', position: 'left' },
         { to: 'docs/integrate/quickstart', label: 'Integrate', position: 'left' },
         // { to: 'docs/contribute/orientation', label: 'Contribute', position: 'left' },

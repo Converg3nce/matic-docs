@@ -1,7 +1,7 @@
 {
   "id": "integrate/network",
   "title": "Networks",
-  "description": "- [RPC Health](https://status.matic.today) -> To view current status and RPC health",
+  "description": "- [RPC Health](https://status.matic.today) -> To view current status and rpc health",
   "source": "@site/docs/integrate/network.md",
   "permalink": "/docs/integrate/network",
   "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/network.md",

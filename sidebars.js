@@ -48,7 +48,7 @@ module.exports = {
     "home/faq"
   ],
   development: [
-    "getting-started",
+    "develop/getting-started",
     {
       type: "category",
       label: "Deploying on Matic",
@@ -78,7 +78,7 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Ethereum ↔️ Matic",
+      label: "Ethereum ↔ Matic",
       items: [
         {
           type: "category",

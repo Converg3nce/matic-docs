@@ -9,7 +9,7 @@
   "sidebar": "development",
   "previous": {
     "title": "Welcome to Matic's DApp Development",
-    "permalink": "/docs/getting-started"
+    "permalink": "/docs/develop/getting-started"
   },
   "next": {
     "title": "Using Truffle",

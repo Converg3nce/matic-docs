@@ -27,7 +27,7 @@ export default {
           "position": "left"
         },
         {
-          "to": "docs/getting-started",
+          "to": "docs/develop/getting-started",
           "label": "Develop",
           "position": "left"
         },
@@ -71,11 +71,11 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/sanchaymittal/matic/matic-docs/sidebars.js",
+          "sidebarPath": "/Users/sanchaymittal/Documents/GitHub/matic-docs/sidebars.js",
           "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/"
         },
         "theme": {
-          "customCss": "/Users/sanchaymittal/matic/matic-docs/src/css/custom.css"
+          "customCss": "/Users/sanchaymittal/Documents/GitHub/matic-docs/src/css/custom.css"
         }
       }
     ]

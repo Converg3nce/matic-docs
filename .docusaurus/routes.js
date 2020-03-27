@@ -280,12 +280,6 @@ export default [
   
 },
 {
-  path: '/docs/getting-started',
-  component: ComponentCreator('/docs/getting-started'),
-  exact: true,
-  
-},
-{
   path: '/docs/home/architecture/bor',
   component: ComponentCreator('/docs/home/architecture/bor'),
   exact: true,
@@ -502,6 +496,12 @@ export default [
   
 },
 {
+  path: '/docs/staking/linux-package-installation',
+  component: ComponentCreator('/docs/staking/linux-package-installation'),
+  exact: true,
+  
+},
+{
   path: '/docs/validate/basics/checkpoint-mechanism',
   component: ComponentCreator('/docs/validate/basics/checkpoint-mechanism'),
   exact: true,
@@ -534,6 +534,12 @@ export default [
 {
   path: '/docs/validate/basics/validator',
   component: ComponentCreator('/docs/validate/basics/validator'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/core-components',
+  component: ComponentCreator('/docs/validate/core-components'),
   exact: true,
   
 },
@@ -624,6 +630,12 @@ export default [
 {
   path: '/docs/validate/reporting-issues',
   component: ComponentCreator('/docs/validate/reporting-issues'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/rewards',
+  component: ComponentCreator('/docs/validate/rewards'),
   exact: true,
   
 },

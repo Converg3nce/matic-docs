@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Depositing Funds from Ropsten to Matic
 
-Within the `matic-js-test` folder, create a new file and name it `deposit-ERC20.js`. (or `deposit-ERC721.js`) and add the following code
+Within the `matic-js-test` folder, create a new file and name it `deposit-ERC20.js`. (or `deposit-ERC721.js`/ `deposit-Ether.js`) and add the following code
 
 ```js
 const Network = require("@maticnetwork/meta/network")
@@ -37,13 +37,16 @@ const matic = new Matic({
 
 > **Never store your private key in code on production** — this is added in the `config.js` file for illustration purposes. Typically a user’s private key will be stored in a browser wallet such as Metamask or a mobile wallet such as the Matic wallet, Status or a hardware wallet.
 
-**Deposit is a 2 step process**
+**Deposit for ERC20/ERC721 is a 2 step process**
 
 1. The tokens need to be first approved to the Matic rootchain contract on Ethereum.
 2. Once approved, the deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
 
-Once matic object has been instantiated and wallet set up in place, add the following code, depending upon the type of token you're depositing: 
+**Deposit for Ether is a 1 step process**
 
+1. The deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network. 
+
+Once matic object has been instantiated and wallet set up in place, add the following code, depending upon the type of token you're depositing: 
 
 ### ERC20
 ```js
@@ -103,6 +106,24 @@ matic
 
 ```
 Here, instead of `amount` we mention the `tokenId` to be deposited.
+
+### Ether
+
+```js
+// const amount = config.value
+const amount = '1000000000000000000' // amount in wei
+// Deposit is a 1 step process
+// Deposit Ether into Matic chain
+// Deposit tokens : The deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
+matic
+.depositEthers(amount, {
+    from,
+    onTransactionHash: (hash) => {
+      // action on Transaction success
+      console.log(hash) // eslint-disable-line
+    },
+  })
+```
 
 ### Config.js
 
