@@ -87,7 +87,7 @@
             "items": [
               {
                 "type": "link",
-                "label": "Bor Chain",
+                "label": "What is BOR Chain?",
                 "href": "/docs/home/architecture/bor-chain"
               },
               {
@@ -125,7 +125,7 @@
       {
         "type": "link",
         "label": "Getting Started",
-        "href": "/docs/getting-started"
+        "href": "/docs/develop/getting-started"
       },
       {
         "type": "category",
@@ -202,7 +202,7 @@
       },
       {
         "type": "category",
-        "label": "Ethereum ↔️ Matic",
+        "label": "Ethereum ↔ Matic",
         "items": [
           {
             "type": "category",
@@ -227,6 +227,27 @@
                 "type": "link",
                 "label": "Withdraw (Matic→Ethereum)",
                 "href": "/docs/develop/maticjs/withdraw"
+              },
+              {
+                "type": "category",
+                "label": "Demo",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "ERC20 (Ethereum ↔ Matic)",
+                    "href": "/docs/develop/maticjs/demo-erc20"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Ether (Ethereum ↔ Matic)",
+                    "href": "/docs/develop/maticjs/demo-eth"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Erc721 (Ethereum ↔ Matic)",
+                    "href": "/docs/develop/maticjs/demo-erc721"
+                  }
+                ]
               },
               {
                 "type": "link",
@@ -430,7 +451,7 @@
       },
       {
         "type": "link",
-        "label": "Ethereum ↔️ Matic",
+        "label": "Ethereum ↔ Matic",
         "href": "/docs/integrate/ethereum-matic"
       }
     ],
@@ -529,7 +550,7 @@
       },
       {
         "type": "link",
-        "label": "Reporting Issues",
+        "label": "reporting-issues",
         "href": "/docs/validate/reporting-issues"
       }
     ]
@@ -544,11 +565,15 @@
     "/docs/develop/decentralised-storage/moibit": "development",
     "/docs/develop/fiat-on-ramp": "development",
     "/docs/develop/full-stack-dapp-with-pos": "development",
+    "/docs/develop/getting-started": "development",
     "/docs/develop/key-management/getting-started": "development",
     "/docs/develop/key-management/metamask": "development",
     "/docs/develop/key-management/portis": "development",
     "/docs/develop/key-management/walletconnect": "development",
     "/docs/develop/maticjs/api-reference": "development",
+    "/docs/develop/maticjs/demo-erc20": "development",
+    "/docs/develop/maticjs/demo-erc721": "development",
+    "/docs/develop/maticjs/demo-eth": "development",
     "/docs/develop/maticjs/deposit": "development",
     "/docs/develop/maticjs/getting-started": "development",
     "/docs/develop/maticjs/transfer": "development",
@@ -568,7 +593,6 @@
     "/docs/develop/truffle": "development",
     "/docs/develop/zapier/about": "development",
     "/docs/develop/zapier/getting-started": "development",
-    "/docs/getting-started": "development",
     "/docs/home/architecture/bor": "introduction",
     "/docs/home/architecture/bor-chain": "introduction",
     "/docs/home/architecture/components": "introduction",

@@ -14,7 +14,7 @@ Can be categorised into two main categories:
 **Execution of Contracts**
 
 - Here, a function/method call is made from an externally owned account to a contract account. These types of transactions can be further chained eg., the contract account can make several internal transactions before calling another contract account or returning back.
-Any type of transaction execution on Ethereum costs money - or [gas](gas).
+Any type of transaction execution on Ethereum costs money - or [gas](/docs/home/blockchain-basics/gas).
 
 ### **:scroll:Resources**
 

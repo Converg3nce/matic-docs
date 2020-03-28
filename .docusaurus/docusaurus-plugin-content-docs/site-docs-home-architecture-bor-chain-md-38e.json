@@ -4,8 +4,7 @@
   "description": "The Bor node or the Block Producer implementation is basically the sidechain operator. The sidechain VM is EVM-compatible. Currently, it is a basic Geth implementation with custom changes done to the consensus algorithm. However, this will be built from the ground up to make it lightweight and focused.",
   "source": "@site/docs/home/architecture/bor-chain.md",
   "permalink": "/docs/home/architecture/bor-chain",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/bor-chain.md",
-  "sidebar_label": "Bor Chain",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/home/architecture/bor-chain.md",
   "sidebar": "introduction",
   "previous": {
     "title": "Security Models",

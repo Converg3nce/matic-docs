@@ -6,129 +6,64 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Depositing Funds from Ropsten to Matic
 
-Within the `matic-js-test` folder, create a new file and name it `deposit-ERC20.js`. (or `deposit-ERC721.js`) and add the following code
-
-```js
-const Network = require("@maticnetwork/meta/network")
-const Matic = require("@maticnetwork/maticjs").default
-const config = require('../config.json')
-
-const network = new Network(config.network, config.version)
-const MaticNetwork = network.Matic 
-const MainNetwork = network.Main 
-
-const Ropsten_Erc20Address = config.Ropsten_Erc20Address
-const Matic_Erc20Address = config.Matic_Erc20Address
-
-const Ropsten_Erc721Address = config.Ropsten_Erc721Address
-const Matic_Erc721Address = config.Matic_Erc721Address
-
-const from = config.from // from address
-
-const matic = new Matic({
-    maticProvider: MaticNetwork.RPC,
-    parentProvider: MainNetwork.RPC,
-    rootChain: MainNetwork.Contracts.RootChain,
-    withdrawManager: MainNetwork.Contracts.WithdrawManagerProxy,
-    depositManager: MainNetwork.Contracts.DepositManagerProxy,
-    registry: MainNetwork.Contracts.Registry
-})
-```
-
-> **Never store your private key in code on production** — this is added in the `config.js` file for illustration purposes. Typically a user’s private key will be stored in a browser wallet such as Metamask or a mobile wallet such as the Matic wallet, Status or a hardware wallet.
-
-**Deposit is a 2 step process**
+### ERC20
+**Deposit for ERC20 is a 2 step process**
 
 1. The tokens need to be first approved to the Matic rootchain contract on Ethereum.
 2. Once approved, the deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
 
-Once matic object has been instantiated and wallet set up in place, add the following code, depending upon the type of token you're depositing: 
-
-
-### ERC20
 ```js
-const token = Ropsten_Erc20Address
-// const amount = config.value
-const amount = '1000000000000000000' // amount in wei
-
-// Deposit is a 2 step process
-// Approve token : The tokens need to be first approved to the Matic rootchain contract on Ethereum.
-matic
-  .approveERC20TokensForDeposit(token, amount, {
-    from,
-    onTransactionHash: (hash) => {
-      // action on Transaction success
-      console.log(hash) // eslint-disable-line
-    },
+const amount = "1000000000000000000"; // amount in wei
+const token = Ropsten_Erc20Address;
+  // const amount = config.value
+  init();
+  matic
+    .approveERC20TokensForDeposit(token, amount, {
+  from
   })
-  .then(() => {
-    // Deposit tokens : Once approved, the deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
-    matic.depositERC20Tokens(token, from, amount, {
-      from,
-      onTransactionHash: (hash) => {
-        // action on Transaction success
-        console.log(hash) // eslint-disable-line
-      },
-    })
+  .then(logs => console.log(logs.transactionHash))
+    .then(() => {
+      matic.depositERC20ForUser(token, from, amount, {
+  from
   })
+  .then(logs => console.log(logs.transactionHash));
+})
 ```
 `amount` is the amount that is to be deposited. Amount is mentioned in `wei` . To those new to the field, `1 TEST` token is equivalent to 10¹⁸ `wei` . In the code snippet, `0.01 TEST` = 10¹⁶ `wei`.
 
 ### ERC721
+**Deposit for ERC721 is a 1 step process**
+
+1. The deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network. 
+
 ```js
-const token = Ropsten_Erc721Address
+const token = Ropsten_Erc721Address;
 // const tokenId = config.value
-const tokenId = '1' // ERC721 token Id
-
-// Deposit is a 2 step process
-// Approve token : The tokens need to be first approved to the Matic rootchain contract on Ethereum.
-matic
-  .approveERC721TokenForDeposit(token, tokenId, {
-    from,
-    onTransactionHash: (hash) => {
-      // action on Transaction success
-      console.log(hash) // eslint-disable-line      
-    },
-  })
-  .then(() => {
-    // Deposit tokens : Once approved, the deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
-    matic.depositERC721Tokens(token, from, tokenId, {
-      from,
-      onTransactionHash: (hash) => {
-        // action on Transaction success
-        console.log(hash) // eslint-disable-line
-      },
-    })
-  })
-
+const tokenId = "746"; // ERC721 token Id
+init();
+// Deposit ERC721 into Matic chain
+matic.safeDepositERC721Tokens(token, tokenId, {
+  from
+})
+.then(logs => console.log(logs.transactionHash));
 ```
 Here, instead of `amount` we mention the `tokenId` to be deposited.
 
-### Config.js
+### Ether
+**Deposit for Ether is a 1 step process**
 
-You will also need to create another file `config.js`. This will contain all configuration related to Matic.js.
+1. The deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network. 
+
 ```js
-{
-    "network":'testnet',
-    "version": "v3",
-
-    "privateKey": '<paste your private key here>', // A sample private key prefix with `0x`
-    "from": '<paste address corresponding to the private key>',
-    
-    "Ropsten_Erc20Address": "",
-    "Matic_Erc20Address": "",
-    
-    "Ropsten_Erc721Address": "",
-    "Matic_Erc721Address": "",
-
-    "value": "" 
-}
+// const amount = config.value
+const amount = "1000000000000000000"; // amount in wei
+// Deposit Ether into Matic chain
+init();
+matic.depositEther(amount, {
+  from
+})
+.then(logs => console.log(logs.transactionHash));
 ```
-For now, don’t worry about these values — just keep them as is.
-
-> You will need to add your private key here. Signing of transactions will require your private key. Again, it is **NOT ADVISABLE** to hard code your private key when on production. Later, you can build keeping in mind that the user will be handling their keys at their end with MetaMask, Matic Wallet or any other compatible user wallet.
-
-> Make sure you prefix `0x` to your private key.
 
 ## Expected Flow
 

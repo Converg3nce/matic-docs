@@ -4,14 +4,14 @@
   "description": "You can have the network details by visting the below shared support links.",
   "source": "@site/docs/integrate/network-detail.md",
   "permalink": "/docs/integrate/network-detail",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/network-detail.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/integrate/network-detail.md",
   "sidebar": "Integrate",
   "previous": {
     "title": "Networks",
     "permalink": "/docs/integrate/network"
   },
   "next": {
-    "title": "Ethereum ↔️ Matic",
+    "title": "Ethereum ↔ Matic",
     "permalink": "/docs/integrate/ethereum-matic"
   }
 }

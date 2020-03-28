@@ -27,7 +27,7 @@ export default {
           "position": "left"
         },
         {
-          "to": "docs/getting-started",
+          "to": "docs/develop/getting-started",
           "label": "Develop",
           "position": "left"
         },
@@ -54,8 +54,8 @@ export default {
       ]
     },
     "algolia": {
-      "apiKey": "25626fae796133dc1e734c6bcaaeac3c",
-      "indexName": "docsearch",
+      "apiKey": "c3ad4eabc5af314ea3ed331efbe0a5c4",
+      "indexName": "matic_developer",
       "algoliaOptions": {}
     }
   },
@@ -71,11 +71,11 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/sanchaymittal/matic/matic-docs/sidebars.js",
-          "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/"
+          "sidebarPath": "/Users/sanchaymittal/Documents/GitHub/matic-docs/sidebars.js",
+          "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/"
         },
         "theme": {
-          "customCss": "/Users/sanchaymittal/matic/matic-docs/src/css/custom.css"
+          "customCss": "/Users/sanchaymittal/Documents/GitHub/matic-docs/src/css/custom.css"
         }
       }
     ]

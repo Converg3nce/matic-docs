@@ -27,7 +27,7 @@ module.exports = {
       },
       links: [
         { to: 'docs/home/new-to-matic', label: 'Basics', position: 'left' },
-        { to: 'docs/getting-started', label: 'Develop', position: 'left' },
+        { to: 'docs/develop/getting-started', label: 'Develop', position: 'left' },
         { to: 'docs/validate/basics/validator', label: 'Validate', position: 'left' },
         { to: 'docs/integrate/quickstart', label: 'Integrate', position: 'left' },
         // { to: 'docs/contribute/orientation', label: 'Contribute', position: 'left' },
@@ -44,8 +44,8 @@ module.exports = {
       ],
     },
     algolia: {
-      apiKey: '25626fae796133dc1e734c6bcaaeac3c',
-      indexName: 'docsearch',
+      apiKey: 'c3ad4eabc5af314ea3ed331efbe0a5c4',
+      indexName: 'matic_developer',
       algoliaOptions: {},
     },
   },
@@ -56,7 +56,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/sanchaymittal/docusaurus-docs/blob/master/',
+            'https://github.com/maticnetwork/matic-docs/tree/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

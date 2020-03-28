@@ -4,7 +4,7 @@
   "description": "Matic Network now has a integration live with [MóiBit](https://www.moibit.io/). MóiBit is a personal decentralized secure storage network with the power of immutability and provenance of blockchain systems.",
   "source": "@site/docs/develop/decentralised-storage/moibit.md",
   "permalink": "/docs/develop/decentralised-storage/moibit",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/decentralised-storage/moibit.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/decentralised-storage/moibit.md",
   "sidebar": "development",
   "previous": {
     "title": "Setting Up Dagger for Ethereum with Zapier",

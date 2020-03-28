@@ -1,0 +1,17 @@
+{
+  "id": "develop/maticjs/demo-erc20",
+  "title": "ERC20 (Ethereum ↔ Matic)",
+  "description": "This is a demo for ERC20 token, where all the process are running step-by-step.",
+  "source": "@site/docs/develop/maticjs/demo-erc20.md",
+  "permalink": "/docs/develop/maticjs/demo-erc20",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/maticjs/demo-erc20.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "Withdraw (Matic→Ethereum)",
+    "permalink": "/docs/develop/maticjs/withdraw"
+  },
+  "next": {
+    "title": "Ether (Ethereum ↔ Matic)",
+    "permalink": "/docs/develop/maticjs/demo-eth"
+  }
+}

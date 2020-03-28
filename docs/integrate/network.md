@@ -3,9 +3,9 @@ id: network
 title: Networks
 ---
 
-- [RPC Health](https://status.matic.today) -> To view current status and RPC health
-- [Network Details](network-detail) -> To view Network Details
-- [Matic Faucet](https://faucet.matic.network/) -> Get Test Tokens at Matic Faucet
+- [RPC Health](https://status.matic.today) -> To view current status and rpc health
+- [Network Details](/docs/integrate/network-detail) -> To view network details
+- [Matic Faucet](https://faucet.matic.network/) -> Get TestTokens at matic faucet
 - [Checkpoint Status](https://status.matic.today/#/checkpoints) -> To view checkpoint status
 
 ## Testnets

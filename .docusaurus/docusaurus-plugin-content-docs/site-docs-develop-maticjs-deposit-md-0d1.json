@@ -4,7 +4,7 @@
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/develop/maticjs/deposit.md",
   "permalink": "/docs/develop/maticjs/deposit",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/maticjs/deposit.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/maticjs/deposit.md",
   "sidebar": "development",
   "previous": {
     "title": "Getting Started",

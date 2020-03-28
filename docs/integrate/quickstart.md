@@ -20,7 +20,7 @@ Matic Network is a scaling solution for public blockchains. With EVM and account
 
 - [Network Details](network) -> Information on all Matic Testnets and Beta-Mainnet.
 - [Connect to Web3](/docs/develop/key-management/getting-started) -> Integration of a key management strategy on client side of your Decentralised Application on Matic Network.
-- [Ethereum ↔️ Matic](ethereum-matic) -> Plasma Secured Solution to transfer your assets from Ethereum to Matic and vice-versa.
+- [Ethereum ↔ Matic](ethereum-matic) -> Plasma Secured Solution to transfer your assets from Ethereum to Matic and vice-versa.
 - [Meta-Transactions](/docs/develop/metatransactions/getting-started) -> Gasless Transactions to allow user interact with your DApp without paying any fee.
 - [Oracles](/docs/develop/oracles/getting-started) -> A way for a blockchain or smart contract to interact with external data.
 - [Fiat on Ramp](/docs/develop/fiat-on-ramp) -> Allow crypto purchasing from your DApp.

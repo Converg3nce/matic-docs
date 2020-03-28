@@ -4,7 +4,7 @@
   "description": "**How to add custom restrictions to your ERC20 token on Matic Network**",
   "source": "@site/docs/develop/advanced/custom-restrictions.md",
   "permalink": "/docs/develop/advanced/custom-restrictions",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/advanced/custom-restrictions.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/advanced/custom-restrictions.md",
   "sidebar": "development",
   "previous": {
     "title": "Deploy your own Matic Testnet",

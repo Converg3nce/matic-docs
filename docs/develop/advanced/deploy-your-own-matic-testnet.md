@@ -12,7 +12,7 @@ Running a testnet with a single validator is recommended if you want to understa
 
 <!-- #CHECK steps numbers -->
 ### Step 1: Installing Heimdall and Bor
-Before we start with the steps make sure you have either installed `heimdall` and `bor` [binaries](../running-with-binaries) (make sure to follow only the installation steps numbered 1 to 6) or have the [docker image](../running-with-docker) (only steps 1 to 3) running.
+Before we start with the steps make sure you have either installed `heimdall` and `bor` [binaries](/docs/validate/counter-stake-stage-1/running-with-binaries) (make sure to follow only the installation steps numbered 1 to 6).
 
 ### Step 2: Verify commit ids
 

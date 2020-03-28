@@ -11,60 +11,6 @@ export default [
   
 },
 {
-  path: '/blog',
-  component: ComponentCreator('/blog'),
-  exact: true,
-  
-},
-{
-  path: '/blog/hello-world',
-  component: ComponentCreator('/blog/hello-world'),
-  exact: true,
-  
-},
-{
-  path: '/blog/hola',
-  component: ComponentCreator('/blog/hola'),
-  exact: true,
-  
-},
-{
-  path: '/blog/tags',
-  component: ComponentCreator('/blog/tags'),
-  exact: true,
-  
-},
-{
-  path: '/blog/tags/docusaurus',
-  component: ComponentCreator('/blog/tags/docusaurus'),
-  exact: true,
-  
-},
-{
-  path: '/blog/tags/facebook',
-  component: ComponentCreator('/blog/tags/facebook'),
-  exact: true,
-  
-},
-{
-  path: '/blog/tags/hello',
-  component: ComponentCreator('/blog/tags/hello'),
-  exact: true,
-  
-},
-{
-  path: '/blog/tags/hola',
-  component: ComponentCreator('/blog/tags/hola'),
-  exact: true,
-  
-},
-{
-  path: '/blog/welcome',
-  component: ComponentCreator('/blog/welcome'),
-  exact: true,
-  
-},
-{
   path: '/docs/:route',
   component: ComponentCreator('/docs/:route'),
   
@@ -162,6 +108,24 @@ export default [
 {
   path: '/docs/develop/maticjs/api-reference',
   component: ComponentCreator('/docs/develop/maticjs/api-reference'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/maticjs/demo-erc20',
+  component: ComponentCreator('/docs/develop/maticjs/demo-erc20'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/maticjs/demo-erc721',
+  component: ComponentCreator('/docs/develop/maticjs/demo-erc721'),
+  exact: true,
+  
+},
+{
+  path: '/docs/develop/maticjs/demo-eth',
+  component: ComponentCreator('/docs/develop/maticjs/demo-eth'),
   exact: true,
   
 },
@@ -276,12 +240,6 @@ export default [
 {
   path: '/docs/develop/zapier/getting-started',
   component: ComponentCreator('/docs/develop/zapier/getting-started'),
-  exact: true,
-  
-},
-{
-  path: '/docs/getting-started',
-  component: ComponentCreator('/docs/getting-started'),
   exact: true,
   
 },
@@ -502,6 +460,12 @@ export default [
   
 },
 {
+  path: '/docs/staking/linux-package-installation',
+  component: ComponentCreator('/docs/staking/linux-package-installation'),
+  exact: true,
+  
+},
+{
   path: '/docs/validate/basics/checkpoint-mechanism',
   component: ComponentCreator('/docs/validate/basics/checkpoint-mechanism'),
   exact: true,
@@ -534,6 +498,12 @@ export default [
 {
   path: '/docs/validate/basics/validator',
   component: ComponentCreator('/docs/validate/basics/validator'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/core-components',
+  component: ComponentCreator('/docs/validate/core-components'),
   exact: true,
   
 },
@@ -624,6 +594,12 @@ export default [
 {
   path: '/docs/validate/reporting-issues',
   component: ComponentCreator('/docs/validate/reporting-issues'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/rewards',
+  component: ComponentCreator('/docs/validate/rewards'),
   exact: true,
   
 },
