@@ -4,7 +4,7 @@
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/develop/maticjs/transfer.md",
   "permalink": "/docs/develop/maticjs/transfer",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/maticjs/transfer.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/maticjs/transfer.md",
   "sidebar": "development",
   "previous": {
     "title": "Deposit (Ethereum→Matic)",

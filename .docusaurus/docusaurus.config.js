@@ -54,8 +54,8 @@ export default {
       ]
     },
     "algolia": {
-      "apiKey": "25626fae796133dc1e734c6bcaaeac3c",
-      "indexName": "docsearch",
+      "apiKey": "c3ad4eabc5af314ea3ed331efbe0a5c4",
+      "indexName": "matic_developer",
       "algoliaOptions": {}
     }
   },
@@ -72,7 +72,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "/Users/sanchaymittal/Documents/GitHub/matic-docs/sidebars.js",
-          "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/"
+          "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/"
         },
         "theme": {
           "customCss": "/Users/sanchaymittal/Documents/GitHub/matic-docs/src/css/custom.css"

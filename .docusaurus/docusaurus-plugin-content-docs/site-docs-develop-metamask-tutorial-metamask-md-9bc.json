@@ -4,7 +4,7 @@
   "description": "If you are wondering how to create a new cryptocurrency wallet, consider creating one by installing the MetaMask extension.",
   "source": "@site/docs/develop/metamask/tutorial-metamask.md",
   "permalink": "/docs/develop/metamask/hello",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metamask/tutorial-metamask.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/metamask/tutorial-metamask.md",
   "sidebar_label": "Hello Metamask",
   "sidebar": "development",
   "previous": {

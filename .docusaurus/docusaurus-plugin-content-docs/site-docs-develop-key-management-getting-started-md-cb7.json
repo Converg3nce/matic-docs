@@ -4,7 +4,7 @@
   "description": "The following article aims to be a guide through integration of a key management strategy on client side of your Decentralised Application on Matic Network.",
   "source": "@site/docs/develop/key-management/getting-started.md",
   "permalink": "/docs/develop/key-management/getting-started",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/key-management/getting-started.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/key-management/getting-started.md",
   "sidebar_label": "Getting Started",
   "sidebar": "development",
   "previous": {

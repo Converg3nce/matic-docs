@@ -88,6 +88,15 @@ module.exports = {
             "develop/maticjs/deposit",
             "develop/maticjs/transfer",
             "develop/maticjs/withdraw",
+            {
+              type: "category",
+              label: "Demo",
+              items: [
+                "develop/maticjs/demo-erc20",
+                "develop/maticjs/demo-eth",
+                "develop/maticjs/demo-erc721",
+              ]
+            },
             "develop/maticjs/api-reference"
           ]
         },
@@ -180,8 +189,6 @@ module.exports = {
             label: "Alpha-Mainnet",
             href: "https://static.matic.network/network/alpha/v1/index.json"
           },
-
-
         ]
         },
         {

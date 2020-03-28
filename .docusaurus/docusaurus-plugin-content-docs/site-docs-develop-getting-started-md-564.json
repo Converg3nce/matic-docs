@@ -1,10 +1,10 @@
 {
   "id": "develop/getting-started",
-  "title": "Welcome to Matic's DApp Development",
-  "description": "Welcome to the most exciting, ingenious invention and fasting growing technology ever, \"Matic Blockchain\". Blockchain technology is poised to revolutionise the way the digital world handles data and does business. Be a part of this revolution and head start with Decentralise-App development.",
+  "title": "Application development on Matic",
+  "description": "Welcome to the most exciting and innovative platform to build your blockchain application on **Matic Blockchain**. Blockchain technology is poised to revolutionise the way the digital world handles data and does business. Be a part of this revolution and get a head start with decentralised application development on Matic.",
   "source": "@site/docs/develop/getting-started.md",
   "permalink": "/docs/develop/getting-started",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/getting-started.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/getting-started.md",
   "sidebar_label": "Getting Started",
   "sidebar": "development",
   "next": {

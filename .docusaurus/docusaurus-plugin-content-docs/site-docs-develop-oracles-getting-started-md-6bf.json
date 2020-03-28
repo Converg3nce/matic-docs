@@ -4,7 +4,7 @@
   "description": "**Blockchains or Smart contracts can't access data from outside of their network and there is often needs to access information from the outside world that is relevant to the contractual agreement. An oracle is a way for a blockchain or smart contract to interact with external data.**",
   "source": "@site/docs/develop/oracles/getting-started.md",
   "permalink": "/docs/develop/oracles/getting-started",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/oracles/getting-started.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/oracles/getting-started.md",
   "sidebar_label": "Oracle",
   "sidebar": "development",
   "previous": {

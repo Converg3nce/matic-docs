@@ -4,7 +4,7 @@
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/home/architecture/matic-flow.md",
   "permalink": "/docs/home/architecture/matic-flow",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/matic-flow.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/home/architecture/matic-flow.md",
   "sidebar": "introduction",
   "previous": {
     "title": "Components",

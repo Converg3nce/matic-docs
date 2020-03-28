@@ -1,6 +1,6 @@
 ---
-id: erc20
-title: ERC20 (Ethereum→Matic)
+id: demo-erc20
+title: ERC20 (Ethereum ↔ Matic)
 ---
 
 This is a demo for ERC20 token, where all the process are running step-by-step.

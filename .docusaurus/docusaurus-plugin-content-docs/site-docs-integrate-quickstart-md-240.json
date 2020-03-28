@@ -4,7 +4,7 @@
   "description": "Matic Network is a scaling solution for public blockchains. With EVM and account based implementation [read more here](/docs/home/architecture/overview), **Matic supports all the existing Ethereum tooling along with faster and cheaper transactions**.",
   "source": "@site/docs/integrate/quickstart.md",
   "permalink": "/docs/integrate/quickstart",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/integrate/quickstart.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/integrate/quickstart.md",
   "sidebar": "Integrate",
   "next": {
     "title": "Networks",

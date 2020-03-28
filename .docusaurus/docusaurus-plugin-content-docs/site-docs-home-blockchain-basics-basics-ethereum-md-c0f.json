@@ -4,7 +4,7 @@
   "description": "Ethereum is the foundation for a new era of the internet:",
   "source": "@site/docs/home/blockchain-basics/basics-ethereum.md",
   "permalink": "/docs/home/blockchain-basics/ethereum",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/blockchain-basics/basics-ethereum.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/home/blockchain-basics/basics-ethereum.md",
   "sidebar_label": "Ethereum",
   "sidebar": "introduction",
   "previous": {

@@ -4,7 +4,7 @@
   "description": "Heimdall is Matic Network Proof-of-Stake Verifier layer, which is responsible for checkpointing a representation of the Plasma blocks to the main chain in our architecture. We have implemented this by building on top of the Tendermint consensus engine with changes to the signature scheme and various data structures.",
   "source": "@site/docs/home/architecture/heimdall-chain.md",
   "permalink": "/docs/home/architecture/heimdall-chain",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/heimdall-chain.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/home/architecture/heimdall-chain.md",
   "sidebar_label": "Heimdall Chain",
   "sidebar": "introduction",
   "previous": {

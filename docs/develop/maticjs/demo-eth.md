@@ -1,6 +1,6 @@
 ---
-id: eth
-title: Ether (Ethereum→Matic)
+id: demo-eth
+title: Ether (Ethereum ↔ Matic)
 ---
 
 This is a demo for ether, where all the process are running step-by-step.

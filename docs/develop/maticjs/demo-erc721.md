@@ -1,6 +1,6 @@
 ---
-id: eth
-title: Ether (Ethereum→Matic)
+id: demo-erc721
+title: Erc721 (Ethereum ↔ Matic)
 ---
 
 This is a demo for ether, where all the process are running step-by-step.
@@ -117,7 +117,6 @@ async function demoErc721() {
         });
     });
 }
-
 demoErc721();
 ```
 

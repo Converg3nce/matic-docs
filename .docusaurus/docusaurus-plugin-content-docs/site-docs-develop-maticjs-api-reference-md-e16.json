@@ -4,11 +4,11 @@
   "description": "- <a href=\"#initialize\"><code><b>new Matic()</b></code></a>",
   "source": "@site/docs/develop/maticjs/api-reference.md",
   "permalink": "/docs/develop/maticjs/api-reference",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/maticjs/api-reference.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/maticjs/api-reference.md",
   "sidebar": "development",
   "previous": {
-    "title": "Withdraw (Matic→Ethereum)",
-    "permalink": "/docs/develop/maticjs/withdraw"
+    "title": "Erc721 (Ethereum ↔ Matic)",
+    "permalink": "/docs/develop/maticjs/demo-erc721"
   },
   "next": {
     "title": "Moving Assets",

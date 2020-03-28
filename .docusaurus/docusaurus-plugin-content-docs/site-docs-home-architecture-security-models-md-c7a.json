@@ -4,7 +4,7 @@
   "description": "Matic provides three types of security models for a developer to build their DApp upon:",
   "source": "@site/docs/home/architecture/security-models.md",
   "permalink": "/docs/home/architecture/security-models",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/home/architecture/security-models.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/home/architecture/security-models.md",
   "sidebar": "introduction",
   "previous": {
     "title": "How Matic Works?",

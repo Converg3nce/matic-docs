@@ -4,11 +4,11 @@
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/develop/remix.md",
   "permalink": "/docs/develop/remix",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/remix.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/remix.md",
   "sidebar_label": "Using Remix",
   "sidebar": "development",
   "previous": {
-    "title": "Welcome to Matic's DApp Development",
+    "title": "Application development on Matic",
     "permalink": "/docs/develop/getting-started"
   },
   "next": {

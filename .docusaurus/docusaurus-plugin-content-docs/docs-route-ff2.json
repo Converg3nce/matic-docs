@@ -229,6 +229,27 @@
                 "href": "/docs/develop/maticjs/withdraw"
               },
               {
+                "type": "category",
+                "label": "Demo",
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "ERC20 (Ethereum ↔ Matic)",
+                    "href": "/docs/develop/maticjs/demo-erc20"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Ether (Ethereum ↔ Matic)",
+                    "href": "/docs/develop/maticjs/demo-eth"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Erc721 (Ethereum ↔ Matic)",
+                    "href": "/docs/develop/maticjs/demo-erc721"
+                  }
+                ]
+              },
+              {
                 "type": "link",
                 "label": "API",
                 "href": "/docs/develop/maticjs/api-reference"
@@ -550,6 +571,9 @@
     "/docs/develop/key-management/portis": "development",
     "/docs/develop/key-management/walletconnect": "development",
     "/docs/develop/maticjs/api-reference": "development",
+    "/docs/develop/maticjs/demo-erc20": "development",
+    "/docs/develop/maticjs/demo-erc721": "development",
+    "/docs/develop/maticjs/demo-eth": "development",
     "/docs/develop/maticjs/deposit": "development",
     "/docs/develop/maticjs/getting-started": "development",
     "/docs/develop/maticjs/transfer": "development",

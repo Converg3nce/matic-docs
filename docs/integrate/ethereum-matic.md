@@ -4,12 +4,11 @@ title: Ethereum ↔ Matic
 ---
 
 Plasma Secured Solution to transfer your assets from Ethereum to Matic and vice-versa.
+* Use [matic.js](https://github.com/maticnetwork/matic.js) to interact with the Matic Plasma contracts.
 
 1. Deposit assets from root chain to Matic [(Ethereum → Matic)](/docs/develop/maticjs/deposit)
 2. Transfer assets between accounts on Matic [(Matic ↔ Matic)](/docs/develop/maticjs/transfer)
 3. Withdraw assets from Matic on to root chain [(Matic → Ethereum)](/docs/develop/maticjs/withdraw)
-
-* Use [matic.js](https://github.com/maticnetwork/matic.js) to interact with the Matic Plasma contracts. Go to  the [maticjs walkthrough](https://docs.matic.network/matic-js-tutorial/).
 
 ## Flow
 Here is the Flow with the deployement of your contracts on Matic and Support for Ethereum↔Matic. 

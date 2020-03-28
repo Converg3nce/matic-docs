@@ -4,7 +4,7 @@
   "description": "Moving assets to and fro matic chain involves first depositing tokens onto matic's plasma contract on mainchain (Ethereum), the token is then minted onto Matic chain into the user's address. Once the user wants to withdraw tokens, the process is to burn tokens on matic chain, submit a proof of burn on main chain, and claim deposited tokens on the main chain.",
   "source": "@site/docs/develop/advanced/moving-assets.md",
   "permalink": "/docs/develop/advanced/moving-assets",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/advanced/moving-assets.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/advanced/moving-assets.md",
   "sidebar": "development",
   "previous": {
     "title": "API",
