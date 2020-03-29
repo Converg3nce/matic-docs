@@ -7,7 +7,7 @@ export const firstRow = [
     },
     {
         title: "Application Developers",
-        linkUrl: "docs/getting-started",
+        linkUrl: "docs/develop/getting-started",
         imageUrl: "img/home/dapp-developers.svg",
         description: "All the infrastructure and integrations you need to build, deploy, and manage Apps on Matic."
     },
