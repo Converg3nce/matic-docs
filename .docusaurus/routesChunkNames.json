@@ -236,7 +236,7 @@
   },
   "/docs/home/architecture/components": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-home-architecture-overview-85-e-a92"
+    "content": "content---docs-home-architecture-components-85-e-28a"
   },
   "/docs/home/architecture/contracts/staking": {
     "component": "component---theme-doc-item-178-a40",
@@ -248,7 +248,7 @@
   },
   "/docs/home/architecture/matic-flow": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-home-architecture-userstory-742-83b"
+    "content": "content---docs-home-architecture-matic-flow-742-7ce"
   },
   "/docs/home/architecture/security-models": {
     "component": "component---theme-doc-item-178-a40",
@@ -394,9 +394,17 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-basics-validatorca-4-997"
   },
+  "/docs/validate/core-components": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-core-components-4-de-1b0"
+  },
   "/docs/validate/counter-stake-stage-1/core-components": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-counter-stake-stage-1-core-components-048-347"
+  },
+  "/docs/validate/counter-stake-stage-1/delegate-on-matic": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-counter-stake-stage-1-delegate-on-maticbd-5-9b6"
   },
   "/docs/validate/counter-stake-stage-1/getting-started": {
     "component": "component---theme-doc-item-178-a40",
@@ -453,6 +461,10 @@
   "/docs/validate/reporting-issues": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-reporting-issuesba-4-120"
+  },
+  "/docs/validate/rewards": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-rewardse-81-29d"
   },
   "/docs/validate/technical-requirements": {
     "component": "component---theme-doc-item-178-a40",

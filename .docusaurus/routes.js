@@ -538,8 +538,20 @@ export default [
   
 },
 {
+  path: '/docs/validate/core-components',
+  component: ComponentCreator('/docs/validate/core-components'),
+  exact: true,
+  
+},
+{
   path: '/docs/validate/counter-stake-stage-1/core-components',
   component: ComponentCreator('/docs/validate/counter-stake-stage-1/core-components'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/counter-stake-stage-1/delegate-on-matic',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/delegate-on-matic'),
   exact: true,
   
 },
@@ -624,6 +636,12 @@ export default [
 {
   path: '/docs/validate/reporting-issues',
   component: ComponentCreator('/docs/validate/reporting-issues'),
+  exact: true,
+  
+},
+{
+  path: '/docs/validate/rewards',
+  component: ComponentCreator('/docs/validate/rewards'),
   exact: true,
   
 },
