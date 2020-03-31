@@ -14,13 +14,6 @@ This is a step-by-step guide to help you become a validator on Matic's incentivi
 You should have Heimdall and Bor setups up and running on your machine. If you haven't yet set it up, you can do so by reading this guide: [https://docs.matic.network/staking/participate-in-counter-stake/](https://docs.matic.network/staking/participate-in-counter-stake/)
 
 
-**TL;DR** - We have made a short video demonstrating the staking process to become a validator. This video takes you through all the steps on how to stake and join the validator list successfully. 
-
-<center>
-    <iframe width="700" height="480" src="https://matic-public.s3.amazonaws.com/CS-2001/how-to-stake.mp4">
-    </iframe>
-</center>
-
 ### Account information
 
 First you do a basic check on your account information by running the below command:

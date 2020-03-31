@@ -514,6 +514,12 @@ export default [
   
 },
 {
+  path: '/docs/validate/counter-stake-stage-1/delegate-on-matic',
+  component: ComponentCreator('/docs/validate/counter-stake-stage-1/delegate-on-matic'),
+  exact: true,
+  
+},
+{
   path: '/docs/validate/counter-stake-stage-1/getting-started',
   component: ComponentCreator('/docs/validate/counter-stake-stage-1/getting-started'),
   exact: true,

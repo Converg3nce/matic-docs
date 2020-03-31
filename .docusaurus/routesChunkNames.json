@@ -180,7 +180,7 @@
   },
   "/docs/home/architecture/matic-flow": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-home-architecture-matic-flow-1-ea-108"
+    "content": "content---docs-home-architecture-matic-flow-742-7ce"
   },
   "/docs/home/architecture/security-models": {
     "component": "component---theme-doc-item-178-a40",
@@ -337,6 +337,10 @@
   "/docs/validate/counter-stake-stage-1/core-components": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-validate-counter-stake-stage-1-core-components-048-347"
+  },
+  "/docs/validate/counter-stake-stage-1/delegate-on-matic": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-validate-counter-stake-stage-1-delegate-on-maticbd-5-9b6"
   },
   "/docs/validate/counter-stake-stage-1/getting-started": {
     "component": "component---theme-doc-item-178-a40",

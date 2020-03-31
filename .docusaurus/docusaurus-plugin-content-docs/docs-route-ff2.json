@@ -538,6 +538,11 @@
           },
           {
             "type": "link",
+            "label": "Delegate on Matic",
+            "href": "/docs/validate/counter-stake-stage-1/delegate-on-matic"
+          },
+          {
+            "type": "link",
             "label": "Technical FAQs",
             "href": "/docs/validate/counter-stake-stage-1/technical-faqs"
           }
@@ -623,6 +628,7 @@
     "/docs/validate/basics/state-sync": "Validate",
     "/docs/validate/basics/validator": "Validate",
     "/docs/validate/counter-stake-stage-1/core-components": "Validate",
+    "/docs/validate/counter-stake-stage-1/delegate-on-matic": "Validate",
     "/docs/validate/counter-stake-stage-1/getting-started": "Validate",
     "/docs/validate/counter-stake-stage-1/linux-package-installation": "Validate",
     "/docs/validate/counter-stake-stage-1/rewards": "Validate",

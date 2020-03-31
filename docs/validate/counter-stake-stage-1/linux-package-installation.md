@@ -9,14 +9,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 > The following has been tested to work with: Ubuntu 16.04 or later, CentOS 7 or later, RHEL 7 or later,  Debian  8 or later.
 
-**TL;DR** - We have made a video demonstrating step by step on how to setup your Heimdall and Bor nodes
-
-
-<center>
-    <iframe width="700" height="480" src="https://matic-public.s3.amazonaws.com/CS-2001/mat-full-node-setup.mp4">
-    </iframe>
-</center>
-
 
 Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
 
