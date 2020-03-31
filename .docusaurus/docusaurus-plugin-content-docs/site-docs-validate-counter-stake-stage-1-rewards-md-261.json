@@ -4,7 +4,7 @@
   "description": "Rewards for Stage 1 will be distributed for the following sub-categories:",
   "source": "@site/docs/validate/counter-stake-stage-1/rewards.md",
   "permalink": "/docs/validate/counter-stake-stage-1/rewards",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/counter-stake-stage-1/rewards.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/validate/counter-stake-stage-1/rewards.md",
   "sidebar": "Validate",
   "previous": {
     "title": "Stake on Matic",

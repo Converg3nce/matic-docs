@@ -8,4 +8,4 @@ A Blockchain Validator is someone who is responsible for verifying transactions 
 
 Validators in Matic Network are selected via an on-chain auction process which happens at regular intervals. These selected validators, participates as block producers and verifiers. Once a Checkpoint(set of blocks) is validated by the participants, then updates are made on Parent Chain(Ethereum Main Chain) which releases rewards for validators depending on their stake in network.
 
-Those who are interested but can't run a full node all the time, don't worry you can always participate as a [delegator](deligator). As a delegator participate in staking and gain rewards, increase network security.
+Those who are interested but can't run a full node all the time, don't worry you can always participate as a [delegator](delegator). As a delegator participate in staking and gain rewards, increase network security.

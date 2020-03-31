@@ -4,7 +4,7 @@
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/validate/counter-stake-stage-1/running-with-binaries.md",
   "permalink": "/docs/validate/counter-stake-stage-1/running-with-binaries",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/counter-stake-stage-1/running-with-binaries.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/validate/counter-stake-stage-1/running-with-binaries.md",
   "sidebar_label": "Running with Binaries",
   "sidebar": "Validate",
   "previous": {

@@ -4,7 +4,7 @@
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl'; ",
   "source": "@site/docs/develop/metamask/multiple-accounts.md",
   "permalink": "/docs/develop/metamask/multiple-accounts",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metamask/multiple-accounts.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/metamask/multiple-accounts.md",
   "sidebar": "development",
   "previous": {
     "title": "Changing Gas Fees",

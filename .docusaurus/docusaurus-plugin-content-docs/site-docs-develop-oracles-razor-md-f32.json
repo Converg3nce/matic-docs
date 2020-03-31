@@ -4,7 +4,7 @@
   "description": "Razor Network consists of validators who lock in their tokens as a “Stake” and provide data to the network. The honest validators are rewarded and those who report incoherently are penalised.",
   "source": "@site/docs/develop/oracles/razor.md",
   "permalink": "/docs/develop/oracles/razor",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/oracles/razor.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/oracles/razor.md",
   "sidebar_label": "Razor",
   "sidebar": "development",
   "previous": {

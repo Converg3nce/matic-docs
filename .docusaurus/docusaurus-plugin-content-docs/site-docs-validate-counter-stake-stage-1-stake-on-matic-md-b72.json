@@ -4,7 +4,7 @@
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/validate/counter-stake-stage-1/stake-on-matic.md",
   "permalink": "/docs/validate/counter-stake-stage-1/stake-on-matic",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/counter-stake-stage-1/stake-on-matic.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/validate/counter-stake-stage-1/stake-on-matic.md",
   "sidebar": "Validate",
   "previous": {
     "title": "Setup Matic Validator Node",

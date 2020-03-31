@@ -18,6 +18,6 @@ To integrate your DApp with Oracles on Matic, you can choose to go with either t
 
 ### **:scroll:Resources**
 
-1. [What is Blockchain Oracle]([https://cryptobriefing.com/what-is-blockchain-oracle/](https://cryptobriefing.com/what-is-blockchain-oracle/))
-2. [Types of Blockchain Oracle]([https://blockchainhub.net/blockchain-oracles/](https://blockchainhub.net/blockchain-oracles/))
-3. [Tutorial: How to integrate Razor on Matic Network]([https://docs.razor.network/tutorial/matic/](https://docs.razor.network/tutorial/matic/))
+1. [What is Blockchain Oracle](https://cryptobriefing.com/what-is-blockchain-oracle/)
+2. [Types of Blockchain Oracle](https://blockchainhub.net/blockchain-oracles/)
+3. [Tutorial: How to integrate Razor on Matic Network](https://docs.razor.network/tutorial/matic/)

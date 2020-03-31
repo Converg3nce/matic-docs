@@ -29,7 +29,7 @@ We have a fast finality layer that finalizes the sidechain state periodically vi
 
 As a DApp developer, to build on PoS security, the procedure is as simple as taking your smart contract and deploying it on Matic. This is possible because of the account based architecture enabling an EVM-compatible sidechain.
 
-[Here is a Full Stack Dapp build on POS security](../tutorial-advanced/full-stack-dapp-with-pos).
+[Here is a Full Stack Dapp build on POS security](/docs/develop/full-stack-dapp-with-pos).
 
 ### Plasma Security
 
@@ -38,7 +38,7 @@ Matic provides Plasma Guarantees with respect to various attack scenarios. Two m
 - Chain operator (or in Matic, the Heimdall layer) is corrupt
 - The user is corrupt
 
-In either case, if a user’s assets on the plasma chain have been compromised, they’d need to start mass exiting. Matic provides constructions on the rootchain smart contract that can be leveraged. (For more details and technical specifications regarding this construction and attack vectors considered, read [here](https://ethresear.ch/t/account-based-plasma-morevp/5480.))
+In either case, if a user’s assets on the plasma chain have been compromised, they’d need to start mass exiting. Matic provides constructions on the rootchain smart contract that can be leveraged. (For more details and technical specifications regarding this construction and attack vectors considered, read [here](https://ethresear.ch/t/account-based-plasma-morevp/5480)).
 
 Effectively, security offered by Matic’s Plasma contracts piggybacks on Ethereum’s security. Users’ funds are only ever at risk if Ethereum fails. Put simply, a plasma chain is as secure as the main chain consensus mechanism. (This can be extrapolated to say that the plasma chain can use really simple consensus mechanisms and still be safe.) 
 

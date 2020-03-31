@@ -7,110 +7,42 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 # Transferring funds within Matic
 
 Once you have funds on Matic, you can use those funds to send to others instantly.
+> `recipient` is the receiver’s address, to whom the funds are supposed to be sent.
 
-Create a new file — `transfer-ERC20.js` —  in your code directory. (or `transfer-ERC721.js`)
-```js
-const Network = require("@maticnetwork/meta/network")
-const Matic = require("@maticnetwork/maticjs").default
-const config = require('../config.json')
-
-const network = new Network(config.network, config.version)
-const MaticNetwork = network.Matic 
-const MainNetwork = network.Main 
-
-const Ropsten_Erc20Address = config.Ropsten_Erc20Address
-const Matic_Erc20Address = config.Matic_Erc20Address
-
-const Ropsten_Erc721Address = config.Ropsten_Erc721Address
-const Matic_Erc721Address = config.Matic_Erc721Address
-
-const from = config.from // from address
-
-const recipient = 'Paste Your receipent address here ...' // receipent address
-
-const matic = new Matic({
-    maticProvider: MaticNetwork.RPC,
-    parentProvider: MainNetwork.RPC,
-    rootChain: MainNetwork.Contracts.RootChain,
-    withdrawManager: MainNetwork.Contracts.WithdrawManagerProxy,
-    depositManager: MainNetwork.Contracts.DepositManagerProxy,
-    registry: MainNetwork.Contracts.Registry
-})
-```
-
-`recipient` is the receiver’s address, to whom the funds are supposed to be sent.
+### ERC20/ETH
+Now, depending upon your asset, add the following code:
 
 ```js
-const recipient = "0xf66f409086647591e0c2f122C1945554b8e0e74F" // to address
-```
-
-Once the above setup is in place, now depending upon the asset you are transferring, add the following code:
-
-### ERC20
-```js
-const token = Matic_Erc20Address
+// const token = Matic_Erc20Address;   // For ERC20
+// const token = Matic_WEthAddress;    // For ETH
+const recipient = "<enter the recipient address>" // to address
 // const amount = config.value
-const amount = '1000000000000000000' // amount in wei
-
+const amount = "1000000000000000000"; // amount in wei
+init();
 // Send Tokens
-matic.transferTokens(token, recipient, amount, {
-  from,
-  // parent: true, // For token transfer on Main network (false for Matic Network)
-  onTransactionHash: (hash) => {
-    // action on Transaction success
-    console.log(hash) // eslint-disable-line
-  },
+matic.transferERC20Tokens(token, recipient, amount, {
+  from
 })
+.then(logs => console.log(logs.transactionHash));
 ```
 
 ### ERC721
 ```js
-const token = Matic_Erc721Address
-// const tokenId = config.value
-const tokenId = '1' // ERC721 token Id
-
+const token = Matic_Erc721Address;
+const recipient = "<enter the recipient address>" // to address
+// const amount = config.value
+const tokenId = "746"; // ERC721 token Id
+init();
 // Send Tokens
-matic.transferERC721Tokens(token, receipent, tokenId, {
-  from,
-  // parent: true, // For token transfer on Main network (false for Matic Network)
-  onTransactionHash: (hash) => {
-    // action on Transaction success
-    console.log(hash) // eslint-disable-line
-  },
+matic.transferERC721Tokens(token, recipient, tokenId, {
+  from
 })
+.then(logs => console.log(logs.transactionHash));
 ```
-
-The config details are then mentioned appropriately. You need not make any changes to it.
 
 > **Sidenote** — you can change the `parent` parameter to TRUE if you are using Matic.js to transfer funds on the main Ethereum network.
 
 We have added console logging on both events, which when run successfully will display `“Transfer done!”` to assure that the transaction was completed successfully. These messages are completely customized for this tutorial, by default only the Transaction Hash will be displayed.
-
-### Config.js
-
-You will also need to create another file `config.js`. This will contain all configuration related to Matic.js.
-```js
-{
-    "network":'testnet',
-    "version": "v3",
-
-    "privateKey": '<paste your private key here>', // A sample private key prefix with `0x`
-    "from": '<paste address corresponding to the private key>',
-    
-    "Ropsten_Erc20Address": "",
-    "Matic_Erc20Address": "",
-    
-    "Ropsten_Erc721Address": "",
-    "Matic_Erc721Address": "",
-
-    "value": "" 
-}
-```
-For now, don’t worry about these values — just keep them as is.
-
-> You will need to add your private key here. Signing of transactions will require your private key. Again, it is **NOT ADVISABLE** to hard code your private key when on production. Later, you can build keeping in mind that the user will be handling their keys at their end with MetaMask, Matic Wallet or any other compatible user wallet.
-
-> Make sure you prefix `0x` to your private key.
 
 ## Expected Flow
 

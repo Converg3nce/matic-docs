@@ -4,6 +4,6 @@
   "description": "# Setup Matic Validator Node",
   "source": "@site/docs/validate/counter-stake-stage-1/running-with-docker.md",
   "permalink": "/docs/validate/counter-stake-stage-1/running-with-docker",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validate/counter-stake-stage-1/running-with-docker.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/validate/counter-stake-stage-1/running-with-docker.md",
   "sidebar_label": "Running with Docker"
 }

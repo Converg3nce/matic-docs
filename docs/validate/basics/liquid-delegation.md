@@ -75,9 +75,9 @@ linked directly to primary assets
 
 Things like interchain/cross-chain and all via cosmos hub and everett B-harvest design.
 
-## References
+### **:scroll:Resources**
 
-- [PoS Design by Vitalik]([Vitalik's pos design](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51))
-- [Intro to Staking Derivatives]([https://medium.com/lemniscap/an-intro-to-staking-derivatives-i-a43054efd51c](https://medium.com/lemniscap/an-intro-to-staking-derivatives-i-a43054efd51c))
-- [Staking Pools]([https://slideslive.com/38920085/ethereum-20-trustless-staking-pools](https://slideslive.com/38920085/ethereum-20-trustless-staking-pools))
-- [Inflation in Proof of Stake]([https://medium.com/figment-networks/mis-understanding-yield-and-inflation-in-proof-of-stake-networks-6fea7e7c0e41](https://medium.com/figment-networks/mis-understanding-yield-and-inflation-in-proof-of-stake-networks-6fea7e7c0e41))
+- [Vitalik's pos design](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
+- [Intro to Staking Derivatives](https://medium.com/lemniscap/an-intro-to-staking-derivatives-i-a43054efd51c)
+- [Staking Pools](https://slideslive.com/38920085/ethereum-20-trustless-staking-pools)
+- [Inflation in Proof of Stake](https://medium.com/figment-networks/mis-understanding-yield-and-inflation-in-proof-of-stake-networks-6fea7e7c0e41)

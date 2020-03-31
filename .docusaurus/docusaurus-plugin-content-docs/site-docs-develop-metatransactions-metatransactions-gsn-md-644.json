@@ -4,7 +4,7 @@
   "description": "Writing a GSN compatible application requires the following changes/workarounds on your application:",
   "source": "@site/docs/develop/metatransactions/metatransactions-gsn.md",
   "permalink": "/docs/develop/metatransactions/metatransactions-gsn",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metatransactions/metatransactions-gsn.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/metatransactions/metatransactions-gsn.md",
   "sidebar_label": "Gas Station Network",
   "sidebar": "development",
   "previous": {

@@ -4,7 +4,7 @@
   "description": "## **Setting up the development environment**",
   "source": "@site/docs/develop/truffle.md",
   "permalink": "/docs/develop/truffle",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/truffle.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/truffle.md",
   "sidebar": "development",
   "previous": {
     "title": "Hello World",

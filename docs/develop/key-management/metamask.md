@@ -52,7 +52,7 @@ Create a new file, name it `web3.js` and insert the following code in it:
   export default getWeb3;
   ```
 
-The above file exports a function called `getWeb3()` - the purpose of which is to request metamask account’s access via detecting a global object (`ethereum` or `web3`) injected by Metamask. According to [Metamask’s API documentation](https://metamask.github.io/metamask-docs/API_Reference/Ethereum_Provider#api-reference): > MetaMask injects a global API into websites visited by its users at window.ethereum (Also available at window.web3.currentProvider for legacy reasons). This API allows websites to request user login, load data from blockchains the user has a connection to, and suggest the user sign messages and transactions. You can use this API to detect the user of a web3 browser.
+The above file exports a function called `getWeb3()` - the purpose of which is to request metamask account’s access via detecting a global object (`ethereum` or `web3`) injected by Metamask. According to [Metamask’s API documentation](https://docs.metamask.io/guide/ethereum-provider.html#upcoming-provider-changes): > MetaMask injects a global API into websites visited by its users at window.ethereum (Also available at window.web3.currentProvider for legacy reasons). This API allows websites to request user login, load data from blockchains the user has a connection to, and suggest the user sign messages and transactions. You can use this API to detect the user of a web3 browser.
 
 In simpler terms, it basically means, having Metamask’s extension/add-on installed in your browser, you’d have a global variable defined, called `ethereum` (`web3` for older versions) - using this variable we instantiate our web3 object.
 

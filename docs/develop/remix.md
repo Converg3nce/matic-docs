@@ -7,9 +7,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 A Hello World style starter project. Deploys a smart contract with a message, and renders it in the front-end. You can change the message using the interact panel!
 
-This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE]([https://remix.ethereum.org/](https://remix.ethereum.org/)).
+This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE](https://remix.ethereum.org/).
 
-### Setting up [Remix IDE]([https://remix.ethereum.org/](https://remix.ethereum.org/))
+### Setting up [Remix IDE](https://remix.ethereum.org/)
 
 - Remix IDE - an online IDE to develop smart contracts.
 - If you’re new to Remix, You’ll first need to activate two modules: Solidity Compiler and Deploy and Run Transactions.
@@ -23,8 +23,9 @@ This dapp implements a "Hello World" style application that echoes a message pas
       >
         <img src={useBaseUrl("img/helloworld/RemixIDE_Step1.png")} alt="RemixIDE_Step1"/>
 </div>
-
-- ![../img/helloworld/Screenshot_2020-02-14_at_12.52.45_PM.png](../img/helloworld/Screenshot_2020-02-14_at_12.52.45_PM.png) Go to File Explorers, And Create a new file ![../img/helloworld/Screenshot_2020-02-14_at_12.51.59_PM.png](../img/helloworld/Screenshot_2020-02-14_at_12.51.59_PM.png), Name it ```HelloWorld.sol```
+-
+<img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_12.52.45_PM.png")} alt="RemixIDE_Step2"/> 
+Go to File Explorers, And Create a new file <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_12.51.59_PM.png")} />, Name it HelloWorld.sol
 
 - Copy/Paste the Smart contract below into the newly created file ```HelloWorld.sol```
 
@@ -67,11 +68,14 @@ The `string public message` function is another public function that is simila
 
 ### Compile Smart Contract
 
-- ![../img/helloworld/Screenshot_2020-02-14_at_1.00.03_PM.png](../img/helloworld/Screenshot_2020-02-14_at_1.00.03_PM.png) Go to Solidity Compiler
+- 
+<img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.00.03_PM.png")} />
+Go to Solidity Compiler
 - Select Compiler Version to 0.5.10
 - Now, ```Compile HelloWorld.sol```
-- After Successful Compilation, it will show ![../img/helloworld/Screenshot_2020-02-14_at_1.08.22_PM.png](../img/helloworld/Screenshot_2020-02-14_at_1.08.22_PM.png)
-- Now, We have to deploy our smart contract on Matic Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](quickstart-metamask).
+- After Successful Compilation, it will show 
+<img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.08.22_PM.png")} />
+- Now, We have to deploy our smart contract on Matic Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](metamask/hello).
 - Open Metamask and select Custom RPC from the networks dropdown
 
 <div
@@ -85,7 +89,7 @@ The `string public message` function is another public function that is simila
 </div>
 
 - Put in a Network name - “Matic Testnet v3”
-- In URL field you can add the URL as - “https://testnetv3.matic.network”
+- In URL field you can add the URL as - https://testnetv3.matic.network
 - Go ahead and click save
 - Copy your address from Metamask
 <div
@@ -99,7 +103,8 @@ The `string public message` function is another public function that is simila
 </div>
 
 - Head over to [Faucet](https://faucet.matic.network/) and request test ether - if you'd like. (the gas fee can also be safely set to 0 on testnet.
-- Now, Let's Deploy ![../img/helloworld/Screenshot_2020-02-14_at_1.08.37_PM.png](../img/helloworld/Screenshot_2020-02-14_at_1.08.37_PM.png)
+- Now, <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.08.37_PM.png")} alt="RemixIDE_Step1"/>
+Let's Deploy
 - the Smart Contract on Matic Network
 - Select Injected Web3 in the Environment dropdown and your contract
 

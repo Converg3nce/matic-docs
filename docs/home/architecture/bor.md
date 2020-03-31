@@ -139,7 +139,7 @@ Bor Protocol
 
 ## Resources:
 
-- :ledger: [Bor]([https://github.com/maticnetwork/bor](https://github.com/maticnetwork/bor))
-- :blue_book: [EVM]([https://www.bitrates.com/guides/ethereum/what-is-the-unstoppable-world-computer](https://www.bitrates.com/guides/ethereum/what-is-the-unstoppable-world-computer))
-- :green_book: [How EVM Works?]([https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e))
-- :books: [Tendermint Proposer Selection]([https://docs.tendermint.com/master/spec/reactors/consensus/proposer-selection.html](https://docs.tendermint.com/master/spec/reactors/consensus/proposer-selection.html))
+- :ledger: [Bor](https://github.com/maticnetwork/bor)
+- :blue_book: [EVM](https://www.bitrates.com/guides/ethereum/what-is-the-unstoppable-world-computer)
+- :green_book: [How EVM Works?](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e)
+- :books: [Tendermint Proposer Selection](https://docs.tendermint.com/master/spec/reactors/consensus/proposer-selection.html)

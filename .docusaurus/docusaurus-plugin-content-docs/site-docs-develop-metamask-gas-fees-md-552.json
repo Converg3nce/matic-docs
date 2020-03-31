@@ -4,7 +4,7 @@
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/develop/metamask/gas-fees.md",
   "permalink": "/docs/develop/metamask/gas-fees",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/develop/metamask/gas-fees.md",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/metamask/gas-fees.md",
   "sidebar": "development",
   "previous": {
     "title": "Config Matic on Metamask",

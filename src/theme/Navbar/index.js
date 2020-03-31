@@ -151,7 +151,7 @@ function Navbar() {
             {logo != null && (
               <img
                 className="navbar__logo"
-                style={{ height: "25px", width: "104px" }}
+                style={{ marginTop: "-4px", width: "104px" }}
                 src={logoImageUrl}
                 alt={logo.alt}
               />
@@ -161,7 +161,6 @@ function Navbar() {
                 className={isSearchBarExpanded ? styles.hideLogoText : ""}
                 style={{
                   fontSize: "22px",
-                  color: "#9FA8BA",
                   fontWeight: "normal",
                   marginRight: "135px"
                 }}
@@ -213,9 +212,23 @@ function Navbar() {
             {...logoLinkProps}
           >
             {logo != null && (
-              <img className="navbar__logo" src={logoImageUrl} alt={logo.alt} />
+              <img
+                className="navbar__logo"
+                style={{ marginTop: "-3px", width: "104px" }}
+                src={logoImageUrl}
+                alt={logo.alt}
+              />
             )}
-            {title != null && <strong>{title}</strong>}
+            {title != null && (
+              <strong
+                style={{
+                  fontSize: "22px",
+                  fontWeight: "normal"
+                }}
+              >
+                {title}
+              </strong>
+            )}
           </Link>
           <Github />
           {!disableDarkMode && sidebarShown && (
@@ -240,9 +253,9 @@ function Navbar() {
               ))}
             </ul>
             <SearchBar
-                handleSearchBarToggle={setIsSearchBarExpanded}
-                isSearchBarExpanded={isSearchBarExpanded}
-              />
+              handleSearchBarToggle={setIsSearchBarExpanded}
+              isSearchBarExpanded={isSearchBarExpanded}
+            />
           </div>
         </div>
       </div>

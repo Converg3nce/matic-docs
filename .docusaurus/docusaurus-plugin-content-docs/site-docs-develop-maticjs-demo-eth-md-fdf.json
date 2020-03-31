@@ -1,0 +1,17 @@
+{
+  "id": "develop/maticjs/demo-eth",
+  "title": "Ether (Ethereum ↔ Matic)",
+  "description": "This is a demo for ether, where all the process are running step-by-step.",
+  "source": "@site/docs/develop/maticjs/demo-eth.md",
+  "permalink": "/docs/develop/maticjs/demo-eth",
+  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/maticjs/demo-eth.md",
+  "sidebar": "development",
+  "previous": {
+    "title": "ERC20 (Ethereum ↔ Matic)",
+    "permalink": "/docs/develop/maticjs/demo-erc20"
+  },
+  "next": {
+    "title": "Erc721 (Ethereum ↔ Matic)",
+    "permalink": "/docs/develop/maticjs/demo-erc721"
+  }
+}
