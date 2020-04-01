@@ -15,21 +15,29 @@ Install the following in your DApp:
 ```js
 npm install --save @portis/web3
 ```
-And register your DApp with Portis to obtain a Dapp ID: > [Portis Dashboard](https://dashboard.portis.io/)
+
+And register your DApp with Portis to obtain a Dapp ID: 
+> [Portis Dashboard](https://dashboard.portis.io/)
 
 Import `portis` and `web3` object:
+
 ```js
-import Portis from '@portis/web3';import Web3 from 'web3';
+import Portis from '@portis/web3';
+import Web3 from 'web3';
 ```
 Portis constructor takes first argument as the DApp ID (we got from the previous step) and second argument as the network you’d like to connect to. This can either be a string or an object.
 ```js
-const portis = new Portis('YOUR_DAPP_ID', 'maticTestnet');const web3 = new Web3(portis.provider);
+const portis = new Portis('YOUR_DAPP_ID', 'maticTestnet');
+const web3 = new Web3(portis.provider);
 ```
 ### 2. Set up account
 
 If the installation and instantiation of web3 was successful, the following should successfully return the connected account:
 ```js
-this.web3.eth.getAccounts().then((accounts) => {this.account = accounts[0];})
+this.web3.eth.getAccounts()
+.then((accounts) => {
+  this.account = accounts[0];
+})
 ```
 ### 3. Instantiating Contracts
 
@@ -41,9 +49,19 @@ const myContractInstance = new this.web3.eth.Contract(myContractAbi, myContractA
 
 Calling functions would remain the same as discussed above: #### Calling `call()` Functions
 ```js
-this.myContractInstance.methods.myMethod(myParams).call().then (// do stuff with returned values)
+this.myContractInstance.methods.myMethod(myParams)
+.call()
+.then (
+  // do stuff with returned values
+)
 ```
 ### Calling `send()` Functions
 ```js
-this.myContractInstance.methods.myMethod(myParams).send({from: this.account,gasPrice: 0}).then ((receipt) => {// returns a transaction receipt})
+this.myContractInstance.methods.myMethod(myParams)
+.send({
+  from: this.account,gasPrice: 0
+})
+.then ((receipt) => {
+  // returns a transaction receipt
+})
 ```

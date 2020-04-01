@@ -68,7 +68,7 @@ module.exports = {
 
     {
       type: "category",
-      label: "Connect to Web3",
+      label: "Key Management on Web3",
       items: [
         "develop/key-management/getting-started",
         "develop/key-management/metamask",
