@@ -6,3 +6,4 @@ venv
 site/
 node_modules
 build
+.docusaurus

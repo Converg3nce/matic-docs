@@ -94,11 +94,6 @@
                 "type": "link",
                 "label": "Bor",
                 "href": "/docs/home/architecture/bor"
-              },
-              {
-                "type": "link",
-                "label": "Setup Bor",
-                "href": "/docs/home/architecture/setup-bor"
               }
             ]
           },
@@ -453,6 +448,17 @@
         "type": "link",
         "label": "Ethereum ↔ Matic",
         "href": "/docs/integrate/ethereum-matic"
+      },
+      {
+        "type": "category",
+        "label": "Advanced",
+        "items": [
+          {
+            "type": "link",
+            "label": "Setup Full Node TestnetV3",
+            "href": "/docs/integrate/advanced/setup-full-node-testnetv3"
+          }
+        ]
       }
     ],
     "Validate": [
@@ -599,7 +605,6 @@
     "/docs/home/architecture/heimdall-chain": "introduction",
     "/docs/home/architecture/matic-flow": "introduction",
     "/docs/home/architecture/security-models": "introduction",
-    "/docs/home/architecture/setup-bor": "introduction",
     "/docs/home/blockchain-basics/accounts": "introduction",
     "/docs/home/blockchain-basics/blockchain": "introduction",
     "/docs/home/blockchain-basics/blockchain-types": "introduction",
@@ -612,6 +617,7 @@
     "/docs/home/blockchain-basics/transactions": "introduction",
     "/docs/home/faq": "introduction",
     "/docs/home/new-to-matic": "introduction",
+    "/docs/integrate/advanced/setup-full-node-testnetv3": "Integrate",
     "/docs/integrate/ethereum-matic": "Integrate",
     "/docs/integrate/network": "Integrate",
     "/docs/integrate/network-detail": "Integrate",

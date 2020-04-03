@@ -436,6 +436,12 @@ export default [
   
 },
 {
+  path: '/docs/integrate/advanced/setup-full-node-testnetv3',
+  component: ComponentCreator('/docs/integrate/advanced/setup-full-node-testnetv3'),
+  exact: true,
+  
+},
+{
   path: '/docs/integrate/ethereum-matic',
   component: ComponentCreator('/docs/integrate/ethereum-matic'),
   exact: true,

@@ -8,8 +8,8 @@
   "sidebar_label": "Heimdall Chain",
   "sidebar": "introduction",
   "previous": {
-    "title": "Setup Bor",
-    "permalink": "/docs/home/architecture/setup-bor"
+    "title": "Bor",
+    "permalink": "/docs/home/architecture/bor"
   },
   "next": {
     "title": "FAQ",

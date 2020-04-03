@@ -2,7 +2,7 @@
 
 - To add a new document, please add your files under the Dir: ./docs
 - Add this to top of your Markdown file. 
-``` 
+```
 ---
 id: <Add-you-docId-Here>
 title: <Title of the Doc>
@@ -12,13 +12,13 @@ title: <Title of the Doc>
 
 ### Installation
 
-```
+```bash
 $ yarn
 ```
 
 ### Local Development
 
-```
+```bash
 $ yarn start
 ```
 
@@ -26,7 +26,7 @@ This command starts a local development server and open up a browser window. Mos
 
 ### Build
 
-```
+```bash
 $ yarn build
 ```
 
@@ -34,7 +34,7 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-```
+```bash
 $ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
 

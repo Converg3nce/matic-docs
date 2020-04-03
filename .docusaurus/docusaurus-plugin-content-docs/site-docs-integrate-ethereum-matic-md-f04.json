@@ -9,5 +9,9 @@
   "previous": {
     "title": "How to read Network Details?",
     "permalink": "/docs/integrate/network-detail"
+  },
+  "next": {
+    "title": "Setup Full Node TestnetV3",
+    "permalink": "/docs/integrate/advanced/setup-full-node-testnetv3"
   }
 }

@@ -1,8 +1,0 @@
-{
-  "id": "staking/running-with-binaries",
-  "title": "running-with-binaries",
-  "description": "# Setup Matic Validator Node",
-  "source": "@site/docs/staking/running-with-binaries.md",
-  "permalink": "/docs/staking/running-with-binaries",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/running-with-binaries.md"
-}
