@@ -1,6 +1,6 @@
 {
   "id": "develop/remix",
-  "title": "Hello World",
+  "title": "Using Remix",
   "description": "import useBaseUrl from '@docusaurus/useBaseUrl';",
   "source": "@site/docs/develop/remix.md",
   "permalink": "/docs/develop/remix",

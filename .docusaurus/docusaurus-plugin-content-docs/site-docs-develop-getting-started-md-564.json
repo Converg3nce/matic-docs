@@ -8,7 +8,7 @@
   "sidebar_label": "Getting Started",
   "sidebar": "development",
   "next": {
-    "title": "Hello World",
+    "title": "Using Remix",
     "permalink": "/docs/develop/remix"
   }
 }

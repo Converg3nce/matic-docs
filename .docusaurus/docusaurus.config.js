@@ -71,12 +71,11 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-
-          "sidebarPath": "/Users/delroy/code/matic-docs/sidebars.js",
-          "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/"
+          "sidebarPath": "/Users/anurag-a/code/matic/matic-docs/sidebars.js",
+          "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/"
         },
         "theme": {
-          "customCss": "/Users/delroy/code/matic-docs/src/css/custom.css"
+          "customCss": "/Users/anurag-a/code/matic/matic-docs/src/css/custom.css"
         }
       }
     ]

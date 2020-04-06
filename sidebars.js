@@ -237,7 +237,7 @@ module.exports = {
         //"validate/counter-stake-stage-1/running-with-docker",
         "validate/counter-stake-stage-1/stake-on-matic",
         "validate/counter-stake-stage-1/rewards",
-        "validate/counter-stake-stage-1/delegate-on-matic",
+        //"validate/counter-stake-stage-1/delegate-on-matic",
         "validate/counter-stake-stage-1/technical-faqs"
       ]
     },

@@ -7,7 +7,7 @@
   "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/develop/truffle.md",
   "sidebar": "development",
   "previous": {
-    "title": "Hello World",
+    "title": "Using Remix",
     "permalink": "/docs/develop/remix"
   },
   "next": {
