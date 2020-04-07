@@ -1,8 +1,0 @@
-{
-  "id": "home/specifications/heimdall/stdtx",
-  "title": "StdTx",
-  "description": "Source: [https://github.com/maticnetwork/heimdall/blob/master/auth/types/stdtx.go](https://github.com/maticnetwork/heimdall/blob/master/auth/types/stdtx.go)",
-  "source": "@site/docs/home/specifications/heimdall/stdtx.md",
-  "permalink": "/docs/home/specifications/heimdall/stdtx",
-  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/home/specifications/heimdall/stdtx.md"
-}

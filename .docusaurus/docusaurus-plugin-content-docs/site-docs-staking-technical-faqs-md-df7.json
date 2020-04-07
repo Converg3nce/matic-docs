@@ -1,8 +1,0 @@
-{
-  "id": "staking/technical-faqs",
-  "title": "technical-faqs",
-  "description": "### 1. Are the private keys same for Heimdall and Bor keystore?",
-  "source": "@site/docs/staking/technical-faqs.md",
-  "permalink": "/docs/staking/technical-faqs",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/staking/technical-faqs.md"
-}

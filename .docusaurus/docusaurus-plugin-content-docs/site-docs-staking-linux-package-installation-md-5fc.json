@@ -1,8 +1,0 @@
-{
-  "id": "staking/linux-package-installation",
-  "title": "linux-package-installation",
-  "description": "# Setup Matic Validator Node",
-  "source": "@site/docs/staking/linux-package-installation.md",
-  "permalink": "/docs/staking/linux-package-installation",
-  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/staking/linux-package-installation.md"
-}
