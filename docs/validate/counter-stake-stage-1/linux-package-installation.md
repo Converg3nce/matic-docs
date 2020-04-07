@@ -9,18 +9,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 > The following has been tested to work with: Ubuntu 16.04 or later, CentOS 7 or later, RHEL 7 or later,  Debian  8 or later.
 
-**TL;DR** - We have made a video demonstrating step by step on how to setup your Heimdall and Bor nodes
-
-
-<center>
-    <iframe width="700" height="480" src="https://matic-public.s3.amazonaws.com/CS-2001/mat-full-node-setup.mp4">
-    </iframe>
-</center>
-
 
 Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
 
-### Step 1: Install rabbit-mq
+### Step 1: Install rabbit-mq (ignore if already installed)
 
 **Why do you need RabbitMq?**
 
@@ -41,20 +33,20 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/cs-2004/matic-heimdall_0.1.4_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/cs-2004/matic-bor_0.1.4_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.5/matic-heimdall_0.1.5_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.5/matic-bor_0.1.5_amd64.deb
 ```
 
     
 ### Step 3: Install Heimdall And Bor
     
-This will setup needed service for the validator node; Heimdall and Bor
+This will setup needed services for the validator nodes - Heimdall and Bor
 
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_0.1.4_amd64.deb
-$ sudo dpkg -i matic-bor_0.1.4_amd64.deb
+$ sudo dpkg -i matic-heimdall_0.1.5_amd64.deb
+$ sudo dpkg -i matic-bor_0.1.5_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -81,8 +73,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2004
-// Example: $ cd public-testnets/CS-2004
+// Current testnet version is CS-2005
+// Example: $ cd public-testnets/CS-2005
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -251,7 +243,7 @@ Store the passphrase in file named
 password.txt
 ```
 
-This will create a keystore file in UTC format. For example:
+The previous step will create a keystore file in UTC format. For example:
 
 ```js 
  UTC--2020-02-10T10-11-48.027180000Z--6c468cf8c9879006e22ec4029696e005c2319c9d
@@ -265,12 +257,14 @@ sudo mv ./UTC-<time>-<address> /etc/bor/dataDir/keystore/
 sudo mv password.txt /etc/bor/dataDir/
 ```
 
-### Step 9: Add your address to `/etc/bor/metadata`
+### Step 9: Add NETWORK_ID and VALIDATOR_ADDRESS to `/etc/bor/metadata`
 
 ```js
 $ sudo vi  /etc/bor/metadata
 
-// eg: add the address in following format VALIDATOR_ADDRESS=0xasdasklhemwlmasdsad3ewwew 
+// eg: add the NETWORK_ID and VALIDATOR_ADDRESS in the following format:
+NETWORK_ID=2005
+VALIDATOR_ADDRESS=<your Ethereum/Goerli wallet address> 
 ```
 
 

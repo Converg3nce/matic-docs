@@ -21,7 +21,7 @@ We divided learning dapp development into two sections: learning and keeping up 
 
 For developers who want to learn about building on Matic or Ethereum. The Tutorials available will teach you how to write a smart contract, deploy it to Matic or Ethereum, and interact with the contracts through a web-based application.
 
-- [Setup Metamask Wallet](develop/metamask/hello)
+- [Setup Metamask Wallet](/docs/develop/metamask/hello)
 * Deploy your Contracts on Matic Network
     - [Using Remix](/docs/develop/remix)
     - [Using Truffle](/docs/develop/truffle)

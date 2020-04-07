@@ -1,6 +1,6 @@
 ---
 id: remix
-title: Hello World
+title: Using Remix
 sidebar_label: Using Remix
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -13,6 +13,26 @@ This dapp implements a "Hello World" style application that echoes a message pas
 
 - Remix IDE - an online IDE to develop smart contracts.
 - If you’re new to Remix, You’ll first need to activate two modules: Solidity Compiler and Deploy and Run Transactions.
+- search for 'Solidity Compiler' and 'Deploy and Run Transactions' plugins in the plugin tab in Remix
+<div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <img src={useBaseUrl("img/helloworld/search-plugins.png")} alt="RemixIDE_Step1"/>
+</div>
+- Activate the two plugins
+<div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <img src={useBaseUrl("img/helloworld/add-plugins.png")} alt="RemixIDE_Step1"/>
+</div>
 - Select Solidity Environment
 <div
         style={{
@@ -75,7 +95,7 @@ Go to Solidity Compiler
 - Now, ```Compile HelloWorld.sol```
 - After Successful Compilation, it will show 
 <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.08.22_PM.png")} />
-- Now, We have to deploy our smart contract on Matic Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](metamask/hello).
+- Now, We have to deploy our smart contract on Matic Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](/docs/develop/metamask/hello).
 - Open Metamask and select Custom RPC from the networks dropdown
 
 <div
@@ -102,7 +122,9 @@ Go to Solidity Compiler
         <img src={useBaseUrl("img/helloworld/Screenshot_2020-01-09_at_1.24.49_PM.png")} alt="RemixIDE_Step1"/>
 </div>
 
-- Head over to [Faucet](https://faucet.matic.network/) and request test ether - if you'd like. (the gas fee can also be safely set to 0 on testnet.
+- Head over to [Faucet](https://faucet.matic.network/) and request test ether - if you'd like. 
+Select 'Testnet3' and 'Test ERC20' token
+(the gas fee can also be safely set to 0 on testnet.)
 - Now, <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.08.37_PM.png")} alt="RemixIDE_Step1"/>
 Let's Deploy
 - the Smart Contract on Matic Network

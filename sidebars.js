@@ -68,7 +68,7 @@ module.exports = {
 
     {
       type: "category",
-      label: "Connect to Web3",
+      label: "Key Management on Web3",
       items: [
         "develop/key-management/getting-started",
         "develop/key-management/metamask",
@@ -242,6 +242,7 @@ module.exports = {
         //"validate/counter-stake-stage-1/running-with-docker",
         "validate/counter-stake-stage-1/stake-on-matic",
         "validate/counter-stake-stage-1/rewards",
+        //"validate/counter-stake-stage-1/delegate-on-matic",
         "validate/counter-stake-stage-1/technical-faqs"
       ]
     },

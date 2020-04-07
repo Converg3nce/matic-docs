@@ -78,7 +78,7 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout cs-2004
+// For eg: git checkout cs-2005
 $ git checkout <TAG OR BRANCH>
 $ make install
 ```
@@ -115,7 +115,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-2004
+// For eg: git checkout CS-2005
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
@@ -134,8 +134,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2004
-// Example: $ cd public-testnets/CS-2004
+// Current testnet version is CS-2005
+// Example: $ cd public-testnets/CS-2005
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 

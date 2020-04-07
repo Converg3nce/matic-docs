@@ -52,7 +52,11 @@ Create a new file, name it `web3.js` and insert the following code in it:
   export default getWeb3;
   ```
 
-The above file exports a function called `getWeb3()` - the purpose of which is to request metamask account’s access via detecting a global object (`ethereum` or `web3`) injected by Metamask. According to [Metamask’s API documentation](https://docs.metamask.io/guide/ethereum-provider.html#upcoming-provider-changes): > MetaMask injects a global API into websites visited by its users at window.ethereum (Also available at window.web3.currentProvider for legacy reasons). This API allows websites to request user login, load data from blockchains the user has a connection to, and suggest the user sign messages and transactions. You can use this API to detect the user of a web3 browser.
+The above file exports a function called `getWeb3()` - the purpose of which is to request metamask account’s access via detecting a global object (`ethereum` or `web3`) injected by Metamask.
+
+According to [Metamask’s API documentation](https://docs.metamask.io/guide/ethereum-provider.html#upcoming-provider-changes): 
+
+> MetaMask injects a global API into websites visited by its users at window.ethereum (Also available at window.web3.currentProvider for legacy reasons). This API allows websites to request user login, load data from blockchains the user has a connection to, and suggest the user sign messages and transactions. You can use this API to detect the user of a web3 browser.
 
 In simpler terms, it basically means, having Metamask’s extension/add-on installed in your browser, you’d have a global variable defined, called `ethereum` (`web3` for older versions) - using this variable we instantiate our web3 object.
 
@@ -64,13 +68,19 @@ Now, in your client code, import the above file,
 ```
 and call the function:
 ```js
-  getWeb3().then((result) => {this.web3 = result;// we instantiate our contract next});
+  getWeb3()
+    .then((result) => {
+      this.web3 = result;// we instantiate our contract next
+    });
 ```
 ### 2. Set up account
 
 Now to send transactions (specifically those that alter the state of the blockchain) we’ll need an account to sign those transactions from We instantiate our contract instance from the web3 object we created above:
 ```js
-  this.web3.eth.getAccounts().then((accounts) => {this.account = accounts[0];})
+  this.web3.eth.getAccounts()
+  .then((accounts) => {
+    this.account = accounts[0];
+  })
 ```
 The `getAccounts()` function returns an array of all the accounts on user’s metamask, and `accounts[0]` is the one currently selected by the user.
 
@@ -88,10 +98,22 @@ A quick review: - Functions that alter the state of the contract are called `sen
 
 **Calling `call()` Functions**
 ```js
-  this.myContractInstance.methods.myMethod(myParams).call().then (// do stuff with returned values)
+  this.myContractInstance.methods.myMethod(myParams)
+  .call()
+  .then (
+    // do stuff with returned values
+  )
 ```
 **Calling `send()` Functions**
 ```js
-  this.myContractInstance.methods.myMethod(myParams).send({from: this.account,gasPrice: 0}).then ((receipt) => {// returns a transaction receipt})
+  this.myContractInstance.methods.myMethod(myParams)
+  .send({
+    from: this.account,gasPrice: 0
+  })
+  .then (
+    (receipt) => {
+      // returns a transaction receipt}
+    )
 ```
+
 > For any transactions you make on Matic’s testnet, the gas price can be safely set to 0. :)

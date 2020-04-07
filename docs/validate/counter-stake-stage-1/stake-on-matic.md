@@ -14,13 +14,6 @@ This is a step-by-step guide to help you become a validator on Matic's incentivi
 You should have Heimdall and Bor setups up and running on your machine. If you haven't yet set it up, you can do so by reading this guide: [https://docs.matic.network/staking/participate-in-counter-stake/](https://docs.matic.network/staking/participate-in-counter-stake/)
 
 
-**TL;DR** - We have made a short video demonstrating the staking process to become a validator. This video takes you through all the steps on how to stake and join the validator list successfully. 
-
-<center>
-    <iframe width="700" height="480" src="https://matic-public.s3.amazonaws.com/CS-2001/how-to-stake.mp4">
-    </iframe>
-</center>
-
 ### Account information
 
 First you do a basic check on your account information by running the below command:
@@ -124,28 +117,36 @@ heimdallcli stake --staked-amount 100000000000000000000 --fee-amount 20000000000
 ```
 You should see the following response once you run the above command
 ```bash
-Submitted stake sucessfully txHash=0x987aa9a319de34f61b768e4bbac160212055d8e5e9b813b2fc520dc650488943
+    Submitted stake sucessfully txHash=0x987aa9a319de34f61b768e4bbac160212055d8e5e9b813b2fc520dc650488943
 ```
-To check the status of the transaction, you paste the `txHash` on this link: [https://goerlie.etherscan.io/](https://goerli.etherscan.io/)
+To check the status of the transaction, you paste the `txHash` on this link: [https://goerli.etherscan.io/](https://goerli.etherscan.io/)
 
 ### Balance
 
 To check the balance of your address:
 
-You can find details regarding chain id over here: https://github.com/maticnetwork/public-testnets/blob/master/CS-2002/heimdall/config/genesis.json#L3
+You can find details regarding chain-id over here: https://github.com/maticnetwork/public-testnets/blob/master/CS-2005/heimdall/config/genesis.json#L3
+
 ```bash
     heimdallcli query auth account <signer-address> --chain-id <chain-id>
 ```
+
 The following output should appear:
+
 ```json
 address: 0x6c468cf8c9879006e22ec4029696e005c2319c9d
-    coins:
-    - denom: matic
-    amount:
-        i: "1000000000000000000000"
-    accountnumber: 0
-    sequence: 0
+coins:
+- denom: matic
+amount:
+    i: "1000000000000000000000"
+accountnumber: 0
+sequence: 0
 ```
+
+**Note**: A new bridge implementation has been implemented in this testnet and `validator-join` no longer needs to be run explicitly. You can directly check if the validator information has been synced from Goerli to CS-2005.
+
+<!--
+
 Please note that you need to keep checking if you balance has been updated with tokens or not. If you initiate Validator Join before without any tokens, you will error out. 
 
 ### Validator join
@@ -159,6 +160,8 @@ You can view your `pub-key` by running the command `heimdalld show-account`
 The chain-id required here is the heimdall chain-id - `heimdall-cs2004`
 
 By running the above command, you're essentially sending a request to join the pool of validators that are running the network. Once you have successfully run this command you can then check the status on the validator dashboard: https://wallet.matic.today/staking/validators/"validator-id"
+
+-->
 
 ### Validator information
 
