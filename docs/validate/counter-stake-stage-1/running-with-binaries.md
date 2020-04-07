@@ -43,7 +43,7 @@ RabbitMQ is a message-queueing software also known as a message broker or queue 
 
 A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions here: https://www.rabbitmq.com/download.html.
 
-```js
+```nash
 
 $ rabbitmq-server
 
@@ -55,13 +55,13 @@ You need to install `make` to run some commands. Using the below commands you ca
 
 **For Ubuntu**
 
-```
+```bash
 $ sudo apt-get install build-essential
 ```
 
 **For MacOS**
 
-```
+```bash
 $ brew install make
 ```
 
@@ -99,7 +99,7 @@ $ source ~/.bashrc
 
 This will emit an output which shows your node id and chain id, these can be changed before starting a chain from the genesis file.
 
-```bash
+```json
 {
   "chain_id": "heimdall-pldzov",
   "node_id": "ae8fd49c192f39a400c00b328d4fd109d5bcb71d"
