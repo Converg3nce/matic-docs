@@ -1,8 +1,0 @@
-{
-  "id": "home/specifications/heimdall/encoder",
-  "title": "Encoder (Pulp)",
-  "description": "Source: [https://github.com/maticnetwork/heimdall/blob/master/auth/types/pulp.go](https://github.com/maticnetwork/heimdall/blob/master/auth/types/pulp.go)",
-  "source": "@site/docs/home/specifications/heimdall/encoder.md",
-  "permalink": "/docs/home/specifications/heimdall/encoder",
-  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/home/specifications/heimdall/encoder.md"
-}

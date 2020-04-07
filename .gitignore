@@ -1,9 +1,24 @@
-# OSX
-#
 .DS_Store
+.vscode
+.idea
+*.iml
+*.code-workspace
+.changelog
 
-venv
-site/
 node_modules
+
+.eslintcache
+
+yarn-error.log
 build
 .docusaurus
+.cache-loader
+types
+packages/docusaurus-utils/lib/
+packages/docusaurus/lib/
+packages/docusaurus-init/lib/
+packages/docusaurus-plugin-content-blog/lib/
+packages/docusaurus-plugin-content-docs/lib/
+packages/docusaurus-plugin-content-pages/lib/
+packages/docusaurus-plugin-sitemap/lib/
+packages/docusaurus-plugin-ideal-image/lib/

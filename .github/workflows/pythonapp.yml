@@ -12,15 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v1
+    - name: Set up Node v11.0
+      uses: actions/setup-node
       with:
-        python-version: 3.8
+        node-version: 11.0
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        npm install
     - name: Test build
       run: |
-        mkdocs build
+        npm run build
