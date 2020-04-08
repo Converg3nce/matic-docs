@@ -1,9 +1,0 @@
-{
-  "id": "validators/delegator",
-  "title": "Who is a Delegator?",
-  "description": "Delegator's participates in validation without hosting a full node. But by staking with validators, they can earn reward and strengthen the network by paying a small commission fee(depends on Validator) to a validator of their choice. ",
-  "source": "@site/docs/validators/delegator.md",
-  "permalink": "/docs/validators/delegator",
-  "editUrl": "https://github.com/sanchaymittal/docusaurus-docs/blob/master/docs/validators/delegator.md",
-  "sidebar_label": "Delegator"
-}

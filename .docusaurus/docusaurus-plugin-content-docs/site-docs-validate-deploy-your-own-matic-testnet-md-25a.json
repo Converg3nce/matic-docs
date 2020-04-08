@@ -1,8 +1,0 @@
-{
-  "id": "validate/deploy-your-own-matic-testnet",
-  "title": "deploy-your-own-matic-testnet",
-  "description": "Step by step instructions on how to create a single and multiple (soon to be added) validator testnet.",
-  "source": "@site/docs/validate/deploy-your-own-matic-testnet.md",
-  "permalink": "/docs/validate/deploy-your-own-matic-testnet",
-  "editUrl": "https://github.com/maticnetwork/matic-docs/tree/master/docs/validate/deploy-your-own-matic-testnet.md"
-}
