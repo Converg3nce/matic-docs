@@ -16,8 +16,9 @@ If you are Ethereum Developer then you are already a Matic Developer. You don't 
     - [Using Remix](/docs/develop/remix)
     - [Using Truffle](/docs/develop/truffle)
 * Configure the Web3 RPC-URL to https://testnetv3.matic.network, *Everything else remains the same*
->  Matic Mainnet will have PoS security, with greater Plasma guarantees being added
-
+:::info
+Matic Mainnet will have PoS security, with greater Plasma guarantees being added
+:::
 **And Volla!!! Enjoy the Scalable and Instant Solutions with almost no cost with the security of Blockchain.**
 
 ### What is a Blockchain?

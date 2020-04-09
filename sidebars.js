@@ -34,7 +34,7 @@ module.exports = {
         {
           type: "category",
           label: "Bor",
-          items: ["home/architecture/bor-chain","home/architecture/bor", "home/architecture/setup-bor"]
+          items: ["home/architecture/bor-chain","home/architecture/bor"]
         },
         {
           type: "category",
@@ -209,7 +209,12 @@ module.exports = {
       ]
       
     },
-    "integrate/ethereum-matic" 
+    "integrate/ethereum-matic", 
+    {
+      type: "category",
+      label: "Advanced",
+      items: ["integrate/advanced/setup-full-node-testnetv3"]
+    }
   ],
   Validate: [
     {

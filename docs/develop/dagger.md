@@ -26,7 +26,7 @@ npm install eth-dagger --save
 
 **Mainnet**
 
-```
+```sh
 Websocket: wss://mainnet.dagger.matic.network
 Socket: mqtts://mainnet.dagger.matic.network (You can also use `ssl://` protocol)
 ```
