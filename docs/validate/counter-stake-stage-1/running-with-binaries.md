@@ -43,7 +43,7 @@ RabbitMQ is a message-queueing software also known as a message broker or queue 
 
 A helper service called `bridge` which is embedded into heimdall codebase requires `rabbit-mq` to queue transactions to multiple networks. Installing it should be pretty straightforward. Checkout the download instructions here: https://www.rabbitmq.com/download.html.
 
-```nash
+```bash
 
 $ rabbitmq-server
 
