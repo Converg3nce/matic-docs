@@ -76,7 +76,7 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-2006
+// For eg: git checkout cs-2006
 $ git checkout <TAG OR BRANCH>
 $ make install
 ```
@@ -113,7 +113,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout CS-2006
+// For eg: git checkout cs-2006
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
