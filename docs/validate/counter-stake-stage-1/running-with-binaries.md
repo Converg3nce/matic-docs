@@ -35,8 +35,6 @@ $ bash install_go.sh
 
 ### Step 2: Install RabbitMq
 
-> NOTE: You do not need rabbit-mq for stage-0 so you can choose to skip.
-
 **Why do you need RabbitMq?**
 
 RabbitMQ is a message-queueing software also known as a message broker or queue manager. Simply said; it is software where queues are defined, to which applications connect in order to transfer a message or messages.
