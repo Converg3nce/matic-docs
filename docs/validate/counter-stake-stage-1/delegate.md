@@ -68,7 +68,7 @@ As a Delegator, you earn rewards as long as the Validator is earning rewards. Cl
 
 ### Restake Rewards
 
-Restaking your rewards is an easy way to increase your delegation stake to your validator. Clicking on `Restake Reward` will ask you for confirmation from your Wallet. However, this will 2 confirmations, as it will first `Claim your Reward` and then `Restake` it.
+Restaking your rewards is an easy way to increase your delegation stake to your validator. Clicking on `Restake Reward` will ask you for confirmation from your Wallet. However, this will be 2 confirmations, as it will first `Claim your Reward` and then `Restake` it.
 
 Once the `Restake` is complete, after 12 Block confirmations you would see an update on your Dashboard with the stake amount getting higher for the validator you had selected.
 
