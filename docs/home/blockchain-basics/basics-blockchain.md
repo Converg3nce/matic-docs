@@ -29,5 +29,5 @@ It is possible for user to verify and track transactions, with the entire the re
 
 ### **:scroll:Resources**
 
-:green_book: [Newbei Guide to Blockchain](https://medium.com/ethindia/newbie-guide-to-blockchain-programming-a64f5186a57f)<br></br>
+:green_book: [Newbie Guide to Blockchain](https://medium.com/ethindia/newbie-guide-to-blockchain-programming-a64f5186a57f)<br></br>
 :orange_book: [Blockchain 101](https://www.coindesk.com/learn/blockchain-101/what-is-blockchain-technology)
