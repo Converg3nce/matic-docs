@@ -321,3 +321,7 @@ Delete Bor: `sudo rm -rf /etc/bor/*`
 Delete Heimdall: `sudo rm -rf ~/.heimdalld/`
 
 Delete Bor: `sudo rm -rf ~/.bor`
+
+### 28. What to do when you get "Wrong Block.Header.AppHash." error
+
+This error usually occurs due to Infura requests getting exhausted. When setting up a node, you add an Infura Key to the Config file. By default you are allowed to 100k Requests per day, If this limit is crossed then you would face such problems. To resolve this you can create a new API key and add it to the `config.toml` file.
