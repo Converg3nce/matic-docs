@@ -2,6 +2,11 @@
 id: getting-started
 title: Getting started
 sidebar_label: Getting Started
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 **Meta Transactions are also known as "Gasless Transactions". The concept of meta transactions allows users to interact with the decentralized applications having ONLY a public/private keys pair.**

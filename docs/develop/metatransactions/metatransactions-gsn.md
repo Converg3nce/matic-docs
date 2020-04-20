@@ -2,6 +2,11 @@
 id: metatransactions-gsn
 title: Gas Station Network
 sidebar_label: Gas Station Network
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Writing a GSN compatible application requires the following changes/workarounds on your application:

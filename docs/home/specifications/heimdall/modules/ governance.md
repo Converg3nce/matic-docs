@@ -2,6 +2,11 @@
 id: governance
 title: Heimdall governance
 sidebar_label: Governance
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 Heimdall governance works exactly as Cosmos-sdk `x/gov` module. [https://docs.cosmos.network/master/modules/gov/](https://docs.cosmos.network/master/modules/gov/) 
 

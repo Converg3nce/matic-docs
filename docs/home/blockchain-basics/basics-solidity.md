@@ -2,6 +2,11 @@
 id: solidity
 title: What is Solidity?
 sidebar_label: Solidity
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Solidity is an object oriented, high-level programming language for implementing smart contracts. It programs, which governs the behavior of accounts within blockhain network. It is just like any other programming language. Comprised of: 

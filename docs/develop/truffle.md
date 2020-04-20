@@ -1,6 +1,11 @@
 ---
 id: truffle
 title: Using Truffle
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 ## **Setting up the development environment**

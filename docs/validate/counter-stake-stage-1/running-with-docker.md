@@ -2,6 +2,11 @@
 id: running-with-docker
 title: Setup Matic Validator Node
 sidebar_label: Running with Docker
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 # Setup Matic Validator Node
 

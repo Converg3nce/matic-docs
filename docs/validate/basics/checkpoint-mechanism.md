@@ -1,6 +1,11 @@
 ---
 id: checkpoint-mechanism
 title: Checkpoint Mechanism
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 The main difference between Matic’s PoS system and that of others is that Matic is not a Layer 1 platform, and it depends on Ethereum as a Layer-1 settlement layer. Therefore, all staking mechanics also need to be in sync with the Ethereum chain smart contracts.

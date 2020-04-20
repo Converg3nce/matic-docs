@@ -1,6 +1,11 @@
 ---
 id: reporting-issues
 title: Reporting Issues
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.

@@ -1,6 +1,11 @@
 ---
 id: blockchain-types
 title: Types of Blockchain
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Following are the major types of blockchain networks:

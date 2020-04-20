@@ -1,6 +1,11 @@
 ---
 id: mapped-tokens
 title: Mapped Tokens 
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 # Registered Tokens with Ropsten and Matic Testnet
 

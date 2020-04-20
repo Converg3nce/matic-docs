@@ -2,6 +2,11 @@
 id: hello
 title: How to create a MetaMask Wallet?
 sidebar_label: Hello Metamask
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 If you are wondering how to create a new cryptocurrency wallet, consider creating one by installing the MetaMask extension.
 

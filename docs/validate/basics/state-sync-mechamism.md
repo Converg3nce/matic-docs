@@ -1,6 +1,11 @@
 ---
 id: state-sync
 title: State Sync Mechanism
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 The mechanism to natively read Ethereum data from Matic EVM chain is that of ‘State Sync’. 
 
@@ -8,6 +13,11 @@ Validators on the Heimdall layer pickup the [StateSynced](https://github.com/mat
 
 The receiver contract inherits [IStateReceiver](https://github.com/maticnetwork/genesis-contracts/blob/master/contracts/IStateReceiver.sol), and custom logic sits inside [onStateReceive](https://github.com/maticnetwork/genesis-contracts/blob/05556cfd91a6879a8190a6828428f50e4912ee1a/contracts/IStateReceiver.sol#L5) function.
 
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Things required from dapps/users to work with state-sync:

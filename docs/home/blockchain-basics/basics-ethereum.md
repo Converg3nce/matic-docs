@@ -2,6 +2,11 @@
 id: ethereum
 title: What is Ethereum?
 sidebar_label: Ethereum
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Ethereum is the foundation for a new era of the internet:

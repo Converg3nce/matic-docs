@@ -2,6 +2,11 @@
 id: custom-restrictions
 title: Adding Custom Restrictions (ERC20/ERC721)
 # sidebar_label: Adding
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 **How to add custom restrictions to your ERC20 token on Matic Network**
 

@@ -1,6 +1,11 @@
 ---
 id: staking
 title: Staking
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 For Matic Network, any participant can be qualified to became a Matic's validator by running a full-node. The primary incentive to run a full node for validators is to earn Rewards and Transaction fee. Validator participating in consensus for Matic incentivise to participate as they receives block rewards and transaction fee. 

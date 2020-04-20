@@ -1,6 +1,11 @@
 ---
 id: rewards
 title: Rewards
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 Rewards for Stage 1 will be distributed for the following sub-categories:
 

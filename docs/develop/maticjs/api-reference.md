@@ -1,6 +1,11 @@
 ---
 id: api-reference
 title: API
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 - <a href="#initialize"><code><b>new Matic()</b></code></a>
