@@ -243,7 +243,7 @@ module.exports = {
         "validate/counter-stake-stage-1/stake-on-matic",
         "validate/counter-stake-stage-1/rewards",
         "validate/counter-stake-stage-1/delegate",
-        "validate/counter-staek-stage-1/validator-replacement",
+        "validate/counter-stake-stage-1/validator-replacement",
         "validate/counter-stake-stage-1/technical-faqs"
       ]
     },
