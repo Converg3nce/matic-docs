@@ -324,4 +324,4 @@ Delete Bor: `sudo rm -rf ~/.bor`
 
 ### 28. What to do when you get "Wrong Block.Header.AppHash." error
 
-This error usually occurs due to Infura requests getting exhausted. When you setup a node on Matic, you add an Infura Key to the Config file (Heimdall). By default you are allowed 100k Requests per day, ff this limit is crossed, then you would face such problems. To resolve this you can create a new API key and add it to the `config.toml` file.
+This error usually occurs due to Infura requests getting exhausted. When you setup a node on Matic, you add an Infura Key to the Config file (Heimdall). By default you are allowed 100k Requests per day, if this limit is crossed, then you would face such problems. To resolve this you can create a new API key and add it to the `config.toml` file.

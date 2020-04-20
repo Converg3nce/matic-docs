@@ -49,7 +49,7 @@ You will need to add basic details such as Name of the your validator and the si
 
 Without these mandatory information, you will not able to proceed ahead.
 
-**Note:** In order to get your pubkey info, you can runn the command `heimdalld show-account`
+**Note:** In order to get your pubkey info, you can run the command `heimdalld show-account`
 
 <img src={useBaseUrl("img/staking/bid-stake.png")} />
 
