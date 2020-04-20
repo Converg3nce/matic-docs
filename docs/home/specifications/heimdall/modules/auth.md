@@ -1,6 +1,11 @@
 ---
 id: auth
 title: Auth/Account
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 It manages address, coins and nonce for transactions. It also signs and validates transactions. 

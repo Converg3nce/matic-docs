@@ -1,9 +1,12 @@
 ---
 id: new-to-matic
 title: New to Matic?
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
-
-
 Matic Network is a scaling solution for public blockchains. Based on an adapted implementation of Plasma framework (Plasma MoreVP) - with an account based implementation (read more [here](https://ethresear.ch/t/account-based-plasma-morevp/5480)), Matic supports all the existing Ethereum tooling along with faster and cheaper transactions.
 
 If you are Ethereum Developer then you are already a Matic Developer. You don't have to worry about anything. Just deploy your contracts on Matic within Two simple steps.

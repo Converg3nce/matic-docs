@@ -1,6 +1,11 @@
 ---
 id: fiat-on-ramp
 title: Fiat-on-Ramp
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Cryptocurrency is the element that adds 'value' to the ecosystem that is blockchain. But to use it, you'd require some way of getting inside the ecosystem. 

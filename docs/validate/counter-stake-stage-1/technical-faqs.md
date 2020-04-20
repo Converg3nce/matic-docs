@@ -1,6 +1,11 @@
 ---
 id: technical-faqs
 title: Technical FAQs
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 ### 1. Are the private keys same for Heimdall and Bor keystore?

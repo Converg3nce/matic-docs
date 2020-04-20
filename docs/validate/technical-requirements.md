@@ -1,6 +1,11 @@
 ---
 id: technical-requirements
 title: Minimum Technical Requirements
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 For the upcoming testnet event, this is the minimal hardware configuration:

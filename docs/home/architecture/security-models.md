@@ -1,6 +1,11 @@
 ---
 id: security-models
 title: Security Models
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Matic provides three types of security models for a developer to build their DApp upon:

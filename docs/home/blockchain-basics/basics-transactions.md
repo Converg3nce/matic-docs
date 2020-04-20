@@ -2,6 +2,11 @@
 id: transactions
 title: What are Transactions?
 sidebar_label: Transactions
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 The term “transaction” is used to refer to the signed data package that stores a message to be sent from an externally owned account to another account on the blockchain.

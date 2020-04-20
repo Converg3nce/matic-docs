@@ -2,6 +2,11 @@
 id: getting-started
 title: Getting Started
 sidebar_label: Oracle
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 **Blockchains or Smart contracts can't access data from outside of their network and there is often needs to access information from the outside world that is relevant to the contractual agreement. An oracle is a way for a blockchain or smart contract to interact with external data.**

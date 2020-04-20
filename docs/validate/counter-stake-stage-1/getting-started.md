@@ -1,6 +1,11 @@
 ---
 id: getting-started
 title: Getting Started
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 Hey everyone! Counter Stake is here - Get ready to run Validator nodes on the Matic testnet!
 

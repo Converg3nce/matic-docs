@@ -1,6 +1,11 @@
 ---
 id: faqs
 title: FAQs
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 ### What is Matic Network?
 

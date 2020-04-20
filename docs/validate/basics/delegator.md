@@ -2,6 +2,11 @@
 id: delegator
 title: Who is a Delegator?
 sidebar_label: Delegator
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 Delegator's participates in validation without hosting a full node. But by staking with validators, they can earn reward and strengthen the network by paying a small commission fee(depends on Validator) to a validator of their choice. 
 

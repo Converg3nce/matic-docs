@@ -1,6 +1,11 @@
 ---
 id: getting-started
 title: Getting Started
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
@@ -64,8 +69,8 @@ These Test tokens needs to be added (depending upon the type of asset you are us
 
 |  |Ropsten  |Matic  |
 |---|---|---|
-|TEST (ERC20)  | `0x70459e550254b9d3520a56ee95b78ee4f2dbd846` | `0xc82c13004c06e4c627cf2518612a55ce7a3db699` |
-|TEST (ERC721)  | `0x07d799252cf13c01f602779b4dce24f4e5b08bbd` | `0x9f289a264b6db56d69ad53f363d06326b984e637` |
+|TEST (ERC20)  | `0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec` | `0x9a93c912F4eFf0254d178a18ACD980C1B05b57b0` |
+|TEST (ERC721)  | `0x07d799252cf13c01f602779b4dce24f4e5b08bbd` | `0x8D5231e0B79edD9331e0CF0d4B9f3F30d05C47A5` |
 |Wrapped ETH(WETH)   | `0x7BdDd37621186f1382FD59e1cCAE0316F979a866` | `0x8567184E6F9b1B77f24AfF6168453419AD22f90e` |
 
 ## Introducing Matic.js

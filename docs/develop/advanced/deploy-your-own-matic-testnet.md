@@ -2,6 +2,11 @@
 id: deploy-your-own-matic-testnet
 title: Deploy your own Matic Testnet
 sidebar_label: Deploying Matic Locally
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Step by step instructions on how to create a single and multiple (soon to be added) validator testnet.

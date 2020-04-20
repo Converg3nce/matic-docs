@@ -1,6 +1,11 @@
 ---
 id: demo-eth
 title: Ether (Ethereum ↔ Matic)
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 This is a demo for ether, where all the process are running step-by-step.

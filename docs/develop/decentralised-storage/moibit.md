@@ -1,6 +1,11 @@
 ---
 id: moibit
 title: MóiBit
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 Matic Network now has a integration live with [MóiBit](https://www.moibit.io/). MóiBit is a personal decentralized secure storage network with the power of immutability and provenance of blockchain systems.
 

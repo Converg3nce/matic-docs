@@ -5,7 +5,12 @@ module.exports = {
   baseUrl: '/',
   favicon: 'img/favicon.png',
   organizationName: 'Matic Network',
-  projectName: 'Matic Docs', // Usually your repo name.
+  projectName: 'matic-docs',
+  customFields: {
+    description:
+      'Build your next blockchain app on Matic.',
+  },
+  themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
     [
       '@docusaurus/plugin-ideal-image',

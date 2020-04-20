@@ -2,6 +2,11 @@
 id: dagger
 title: Dagger
 sidebar_label: Dagger - Single App
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 Dagger is the best way to get realtime updates from Ethereum Blockchain.
 It provides a way for your DApps and Backend system to get ethereum blockchain events, like transactions, receipts and logs in realtime over websocket or socket.

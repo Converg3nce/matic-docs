@@ -1,6 +1,11 @@
 ---
 id: network-detail
 title: How to read Network Details?
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 You can have the network details by visting the below shared support links.

@@ -2,6 +2,11 @@
 id: getting-started
 title: Key Management Strategies
 sidebar_label: Getting Started
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 The following article aims to be a guide through integration of a key management strategy on client side of your Decentralised Application on Matic Network.

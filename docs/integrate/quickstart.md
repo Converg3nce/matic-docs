@@ -1,6 +1,11 @@
 ---
 id: quickstart
 title: Integrate with Matic
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 Matic Network is a scaling solution for public blockchains. With EVM and account based implementation [read more here](/docs/home/architecture/overview), **Matic supports all the existing Ethereum tooling along with faster and cheaper transactions**.

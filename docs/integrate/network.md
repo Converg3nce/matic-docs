@@ -1,6 +1,11 @@
 ---
 id: network
 title: Networks
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
 - [RPC Health](https://status.matic.today) -> To view current status and rpc health
