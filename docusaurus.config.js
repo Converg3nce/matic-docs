@@ -32,7 +32,7 @@ module.exports = {
         { to: 'docs/integrate/quickstart', label: 'Integrate', position: 'left' },
         // { to: 'docs/contribute/orientation', label: 'Contribute', position: 'left' },
         {
-          href: 'https://t.me/joinchat/HkoSvlDKW0qKs_kK4Ow0hQ',
+          href: 'https://forum.matic.network',
           label: 'Support',
           position: 'right',
         }, 
