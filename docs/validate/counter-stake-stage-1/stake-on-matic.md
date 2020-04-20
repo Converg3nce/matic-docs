@@ -213,3 +213,28 @@ Here the value in `id` needs to be inserted based on the staking transaction. On
     "accum":0
 }
 ```
+
+### Claiming Rewards as a Validator
+
+Once you are setup and staked as a validator, you will earn rewards for performing validator duties. When you perform validator duties dutifully, you get rewarded however, if your node uptime is not 100% and/or if you attempt to do any malicious activity, your stake gets slashed.
+
+In order to claim rewards you can go to your Validator Profile.
+
+You will see 2 buttons on your profile:
+
+* Claim Rewards
+* Restake Rewards
+
+<img src={useBaseUrl("img/staking/validator-rewards.png")} />
+
+#### Claim Rewards
+
+As a Validator, you earn rewards as long as your performing your validator correctly. Clicking on Claim Rewards will ask you for a confirmation from your Wallet. Confirming the transaction will get your rewards back to your wallet and your account should be updated.
+
+#### Restake Rewards
+
+Restaking your rewards is an easy way to increase your stake as a validator. Clicking on `Restake Rewards` will ask you for confirmation from your Wallet. However, this will be 2 confirmations, as it will first `Claim your Reward` and then `Restake` it.
+
+Once the `Restake` is complete, after 12 Block confirmations you would see an update on your Dashboard with the stake amount getting higher for the validator you had selected.
+
+**Note:** You can `restake rewards` to individual validators only. You cannot restake your entire rewards to all validators at once.
