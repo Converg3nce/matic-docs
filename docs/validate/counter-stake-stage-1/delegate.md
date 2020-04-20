@@ -47,7 +47,7 @@ You can then access your Dashboard by clicking on the `Go to my Account` button.
 
 Clicking on the Dashboard you will be able to see your details such as `Balance`, `Total Stake`, & `Rewards`
 
-You will also see a section of your Delegations. In this section you would be able to view all your delegations. 
+You will also see a section of your Delegations. In this section, you will be able to view a list of all your delegations across validators. 
 
 <img src={useBaseUrl("img/staking/delegator-profile.png")} />
 
@@ -55,7 +55,7 @@ You will also see a section of your Delegations. In this section you would be ab
 
 Clicking on the Rewards Card will navigate you to the Rewards page. 
 
-You will see a list of Delegators that you have delegated to and next to each delegator would be 2 buttons
+You will see a list of Validators that you have delegated to and next to each delegator would be 2 buttons
 
 * Withdraw Reward
 * Restake Rewards

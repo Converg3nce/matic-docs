@@ -211,7 +211,7 @@ Here the value in `id` needs to be inserted based on the staking transaction. On
 
 ### Claiming Rewards as a Validator
 
-Once you are setup and staked as a validator, you will earn rewards for performing validator duties. When you perform validator duties dutifully, you get rewarded however, if you attempt to do any malicious activity, your stake gets slashed.
+Once you are setup and staked as a validator, you will earn rewards for performing validator duties. When you perform validator duties dutifully, you get rewarded however, if your node uptime is not 100% and/or if you attempt to do any malicious activity, your stake gets slashed.
 
 In order to claim rewards you can go to your Validator Profile.
 

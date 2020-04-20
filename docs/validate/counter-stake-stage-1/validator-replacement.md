@@ -45,7 +45,11 @@ Once you initiate a bid, it goes into an auction period. For Counter-Stake the p
 
 Once the Auction period is over, if your bid is still on top, you would be notified about it and then you would be requested to confirm the transaction to finalize your validator process.
 
-You will need to add basic details such as Name of the your validator and the signer address details so that the transaction is successful.
+You will need to add basic details such as Name of the your validator and the signer address and, pubkey details so that the transaction is successful.
+
+Without these mandatory information, you will not able to proceed ahead.
+
+**Note:** In order to get your pubkey info, you can runn the command `heimdalld show-account`
 
 <img src={useBaseUrl("img/staking/bid-stake.png")} />
 
@@ -66,9 +70,9 @@ If someone's outbid you in the auction then you will be notified about it.
 Here, you will have 2 options to choose from:
 
 - You could either **Bid Higher** and stay in contention to gain that slot
-- You could **View Other Validators** will less staked amount and initiate a bid on them
+- You could **View Other Validators** with less staked amount and initiate a new bid on them
 
-If you choose not to bid further, your account will be credited back with the bid amount
+If a validator bids higher, the amount of all the other bidders gets credited back to their account immediately.
 
 If you choose to Bid Higher, you see the current Top Bid. When you click on Bid Higher it takes you back to the screen where you can enter your Bid amount and re-initiate your bid toward that validator slot.
 
