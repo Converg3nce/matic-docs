@@ -5,7 +5,7 @@ title: Delegate on Matic
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
-This is a step-by-step guide to help you become a delegator on Matic's incentivised testnet program. There are no pre-requisites required to become a delegator on Matic. All you have to do have an Ethereum account.
+This is a step-by-step guide to help you become a delegator on Matic's incentivised testnet program. There are no pre-requisites required to become a delegator on Matic. All you have to do is have an Ethereum account.
 
 ## What is a Delegator?
 
