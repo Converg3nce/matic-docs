@@ -30,16 +30,24 @@ This separation of responsibilities has been done to ensure an efficient tradeof
 
 ## How to Change Signer Address
 
-**Pre-requisite**: You will need to make sure that you are already running a separate machine where Heimdall and Bor nodes are synced & working appropriately. You also need to run this new node with a different address, different than your current node.
+**Step 1** 
+You will need to make sure that you are already running a separate machine where Heimdall and Bor nodes are synced & working appropriately. You also need to run this new node with a different address, different than your current node.
 
-For ease of this document, we will refer to your Current Node as Node 1 and your new node as Node 2
+If you haven't setup your node, you can do so by using either of these options:
 
+**Linux packages**: https://docs.matic.network/docs/validate/counter-stake-stage-1/linux-package-installation
+**Binaries**: https://docs.matic.network/docs/validate/counter-stake-stage-1/running-with-binaries
+
+For ease of this document, we will refer to your Current Node as Node 1 and your new node as Node 2.
+
+**Step 2**
 In order to change your Signer address, first you need to login to your validator profile on the Staking Dashboard with Node 1. Once you login you need to navigate to your profile page and there you would see a button for **Edit Profile**.
 
 <img src={useBaseUrl("img/staking/edit-profile.png")} />
 
 Clicking on Edit Profile will navigate you to a page which will show you all your basic details such as Validator Name, Signer Address and Signer Address Pubkey.
 
+**Step 3**
 Here is where you can go ahead and change your Signer Address and Signer Address Pubkey.
 
 In the Signer Address field, you can add the add the address that you used while setting up Node 2. Also you can also keep the Pubkey handy with your for Node 2.
