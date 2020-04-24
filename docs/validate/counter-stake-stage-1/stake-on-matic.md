@@ -19,6 +19,8 @@ This is a step-by-step guide to help you become a validator on Matic's incentivi
 You should have Heimdall and Bor setups up and running on your machine. If you haven't yet set it up, you can do so by reading this guide: [https://docs.matic.network/staking/participate-in-counter-stake/](https://docs.matic.network/staking/participate-in-counter-stake/)
 
 
+**Note:** You need to make sure you have the Staking Token added to your Metamask. For CS-2006, the staking token contract addres is: 0x6c568a7F87886491CDd9CC43858dA3F9B47199E4
+
 ### Account information
 
 First you do a basic check on your account information by running the below command:
@@ -84,6 +86,8 @@ Once the transaction is completed you will have staked successfully to become a 
 * Stake - This will confirm your stake transaction.
 * Save -  This will save your validator details.
 
+**Note:** For the changes to take effect on the Staking Dashboard, it requires a minimum of 12 Block Confirmations to verify and finalize. After 12 Block Confirmations, you can refresh your page and you would see the updated details on the Dashboard.
+
 **Stake using CLI**
 
 **Approve**
@@ -130,7 +134,7 @@ To check the status of the transaction, you paste the `txHash` on this link: [ht
 
 To check the balance of your address:
 
-You can find details regarding chain-id over here: https://github.com/maticnetwork/public-testnets/blob/master/CS-2005/heimdall/config/genesis.json#L3
+You can find details regarding chain-id over here: https://github.com/maticnetwork/public-testnets/blob/master/CS-2006/heimdall/config/genesis.json#L3
 
 ```bash
     heimdallcli query auth account <signer-address> --chain-id <chain-id>
@@ -148,7 +152,7 @@ accountnumber: 0
 sequence: 0
 ```
 
-**Note**: A new bridge implementation has been implemented in this testnet and `validator-join` no longer needs to be run explicitly. You can directly check if the validator information has been synced from Goerli to CS-2005.
+**Note**: A new bridge implementation has been implemented in this testnet and `validator-join` no longer needs to be run explicitly. You can directly check if the validator information has been synced from Goerli to CS-2006.
 
 <!--
 
@@ -209,3 +213,28 @@ Here the value in `id` needs to be inserted based on the staking transaction. On
     "accum":0
 }
 ```
+
+### Claiming Rewards as a Validator
+
+Once you are setup and staked as a validator, you will earn rewards for performing validator duties. When you perform validator duties dutifully, you get rewarded however, if your node uptime is not 100% and/or if you attempt to do any malicious activity, your stake gets slashed.
+
+In order to claim rewards you can go to your Validator Profile.
+
+You will see 2 buttons on your profile:
+
+* Claim Rewards
+* Restake Rewards
+
+<img src={useBaseUrl("img/staking/validator-rewards.png")} />
+
+#### Claim Rewards
+
+As a Validator, you earn rewards as long as your performing your validator correctly. Clicking on Claim Rewards will ask you for a confirmation from your Wallet. Confirming the transaction will get your rewards back to your wallet and your account should be updated.
+
+#### Restake Rewards
+
+Restaking your rewards is an easy way to increase your stake as a validator. Clicking on `Restake Rewards` will ask you for confirmation from your Wallet. However, this will be 2 confirmations, as it will first `Claim your Reward` and then `Restake` it.
+
+Once the `Restake` is complete, after 12 Block confirmations you would see an update on your Dashboard with the stake amount getting higher for the validator you had selected.
+
+**Note:** You can `restake rewards` to individual validators only. You cannot restake your entire rewards to all validators at once.

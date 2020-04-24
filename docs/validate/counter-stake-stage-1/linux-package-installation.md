@@ -38,8 +38,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/v0.1.5/matic-heimdall_0.1.5_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/v0.1.5/matic-bor_0.1.5_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.6/matic-heimdall_0.1.6_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.6/matic-bor_0.1.6_amd64.deb
 ```
 
     
@@ -50,8 +50,8 @@ This will setup needed services for the validator nodes - Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_0.1.5_amd64.deb
-$ sudo dpkg -i matic-bor_0.1.5_amd64.deb
+$ sudo dpkg -i matic-heimdall_0.1.6_amd64.deb
+$ sudo dpkg -i matic-bor_0.1.6_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -78,8 +78,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2005
-// Example: $ cd public-testnets/CS-2005
+// Current testnet version is CS-2006
+// Example: $ cd public-testnets/CS-2006
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -143,7 +143,7 @@ $ sudo service heimdalld-rest-server start
 **Start Heimdall bridge-server**
     
 ```js
-$ sudo service heimdalld-bridge start
+sudo service heimdalld-bridge start
 ``` 
 
 **Check sync status**
@@ -211,6 +211,18 @@ If everything's well, then your logs should look something like this:
 
 If you're running into any issues while setting up your Heimdall node, you can refer the [Technical FAQs](technical-faqs) for solutions.
 
+Tip: If you are getting any errors during Heimdall start or logs, you can run the Unsafe Reset command and then start heimdall again
+
+```js
+heimdalld unsafe-reset-all
+```
+
+And then Heimdall start
+
+```js
+sudo service heimdalld start
+```
+
 
 **You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
     
@@ -268,7 +280,7 @@ sudo mv password.txt /etc/bor/dataDir/
 $ sudo vi  /etc/bor/metadata
 
 // eg: add the NETWORK_ID and VALIDATOR_ADDRESS in the following format:
-NETWORK_ID=2005
+NETWORK_ID=2006
 VALIDATOR_ADDRESS=<your Ethereum/Goerli wallet address> 
 ```
 
