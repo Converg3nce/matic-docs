@@ -48,9 +48,9 @@ Link to the explorer - https://testnetv3-explorer.matic.network/
 Let the required amount of tokens be **X**.
 
 1. The Deposit Manager Contract is approved to spend **X** on behalf of `msg.sender`
-- **Contract**: `ERC20.sol` and `DepositManager.sol`
-- **Network**: Ropsten
-- **Function**: `approve`
+   - **Contract**: `ERC20.sol` and `DepositManager.sol`
+   - **Network**: Ropsten
+   - **Function**: `approve`
 
   Call the standard `approve` function in ERC20 contract, approving `DepositManager` to transfer the amount of tokens.
   
@@ -64,9 +64,9 @@ Let the required amount of tokens be **X**.
 
 2. The Deposit Manager transfers the amount from `msg.sender` to itself
 
-- Contract: `DepositManager.sol`
-- Network: Ropsten
-- Function: [`despositERC20ForUser()`](https://github.com/maticnetwork/contracts/blob/6413308db75ecdbf8ab9ec2beee1db0d362acea3/contracts/root/depositManager/DepositManager.sol#L129)
+   - **Contract**: `DepositManager.sol`
+   - **Network**: Ropsten
+   - **Function**: [`despositERC20ForUser()`](https://github.com/maticnetwork/contracts/blob/6413308db75ecdbf8ab9ec2beee1db0d362acea3/contracts/root/depositManager/DepositManager.sol#L129)
 
   Transfers the amount of tokens from msg.sender to DepositManager. Emits [NewDepositBlock](https://github.com/maticnetwork/contracts/blob/6413308db75ecdbf8ab9ec2beee1db0d362acea3/contracts/root/depositManager/DepositManager.sol#L223) event.
 
@@ -79,46 +79,47 @@ Let the required amount of tokens be **X**.
     )
   ```
 
-Depositing tokens on Matic, mints new tokens for ChildERC20 contract on Matic network. ChildERC20 contract is the contract that is deployed with the process of mapping, which is representative of the token present on main network.
+> Depositing tokens on Matic, mints new tokens for ChildERC20 contract on Matic network. ChildERC20 contract is the contract that is deployed with the process of mapping, which is representative of the token present on main network.
 
 ### 2. Transfer tokens on Matic
 
 **Description**: To transfer tokens on Matic testnet
 
-- **Contract**: `ChildERC20.sol`
-- **Network**: Matic
-- **Function**: `transfer`
-
-  Invokes the standard `transfer` function of ERC20 contract.
-
-  ```javascript
-  ChildERC20.methods
-    .transfer(
-      recipientAddress,
-      this.encode(amount)
-    )
-  ```
+  1. Invokes the standard `transfer` function of ERC20 contract.
+      - **Contract**: `ChildERC20.sol`
+      - **Network**: Matic
+      - **Function**: `transfer`
+    ```javascript
+    ChildERC20.methods
+      .transfer(
+        recipientAddress,
+        this.encode(amount)
+      )
+    ```
 
 ### 3. Display account balances for users on Matic
 
 **Description**: Query ERC20 token balances for user on Matic and Ropsten
 
-- **Contract**: `ChildERC20.sol`
-- **Network**: Matic
-- **Function**: `balanceOf` 
-  ```javascript
-  // ERC20TokenContract can be either on Ropsten or Matic
-  ERC20TokenContract.methods
-    .balanceOf(
-      owner
-    )
-  ```
+  1. Invokes the standard `balanceOf` function of ERC20 contract.
+      - **Contract**: `ChildERC20.sol`
+      - **Network**: Matic
+      - **Function**: `balanceOf` 
+        ```javascript
+        // ERC20TokenContract can be either on Ropsten or Matic
+        ERC20TokenContract.methods
+          .balanceOf(
+            owner
+          )
+        ```
 
 ### 4. Withdraw ERC20 tokens from Matic to Ropsten
 
 **Description**: To withdraw assets (ERC20) from Matic testnet to Ropsten
 
 Procedure of Withdrawal:
+
+
 1. Burn tokens on Matic sidechain
 2. Submit proof of burn (the receipt of burn tx) on Root Chain
    1. This step is executed only after the block consisting of the burn tx has been included in a checkpoint on the Root Chain.
@@ -130,31 +131,30 @@ Procedure of Withdrawal:
 Let **X** be the amount of tokens to be withdrawn.
 
 1. Submit withdraw request of **X** tokens on Matic - burns the tokens and returns a tx ID.
-- **Contract**: `ChildERC20.sol`
-- **Network**: Matic
-- **Function**: `withdraw`
+      - **Contract**: `ChildERC20.sol`
+      - **Network**: Matic
+      - **Function**: `withdraw`
 
-  Burns tokens on Matic and emits [Withdraw](https://github.com/maticnetwork/contracts/blob/6413308db75ecdbf8ab9ec2beee1db0d362acea3/contracts/child/ChildERC20.sol#L52) event
-  ```javascript
-  ChildToken.methods
-    .withdraw(
-      amount
-    )
-  ```
-2. Use tx ID from previous step to create a withdraw transaction on Ropsten
- - **Contract**: `ERC20Predicate.sol`
- - **Network**: Ropsten
- - **Function**: `startExitWithBurntTokens`
-
-    The function accepts payload data, which is the proof of burn of tokens performed in the previous transaction. This payload is generated off-chain.
-
+    Burns tokens on Matic and emits [Withdraw](https://github.com/maticnetwork/contracts/blob/6413308db75ecdbf8ab9ec2beee1db0d362acea3/contracts/child/ChildERC20.sol#L52) event
     ```javascript
-    payload = await _buildPayloadForExit(burnTxHash)
-    erc20PredicateContract.methods
-      .startExitWithBurntTokens(
-        payload,
+    ChildToken.methods
+      .withdraw(
+        amount
       )
     ```
+2. Use tx ID from previous step to create a withdraw transaction on Ropsten
+       - **Contract**: `ERC20Predicate.sol`
+       - **Network**: Ropsten
+       - **Function**: `startExitWithBurntTokens`
+
+    The function accepts payload data, which is the proof of burn of tokens performed in the previous transaction. This payload is generated off-chain.
+      ```javascript
+      payload = await _buildPayloadForExit(burnTxHash)
+      erc20PredicateContract.methods
+        .startExitWithBurntTokens(
+          payload,
+        )
+      ```
 
     To build payload for the exit: 
       1. Get last child block from RootChain.sol - this is the number of block which was checkpointed last on the root chain
@@ -166,7 +166,6 @@ Let **X** be the amount of tokens to be withdrawn.
          2. Build Block Proof, sample: https://github.com/maticnetwork/contracts/blob/fa6862dc6ddae97351aa1b4d16c087861b5a489e/contracts-core/helpers/proofs.js#L24
          3. Build Receipt Proof, sample: https://github.com/maticnetwork/contracts/blob/fa6862dc6ddae97351aa1b4d16c087861b5a489e/contracts-core/helpers/proofs.js#L106
       4. Return hex encoded string of bytes: `headernumber`, `blockProof`, `block number of burn transaction`, `timestamp of the burn tx block`, `root of block`, `root of receipts`, `RLP encoded receipt bytes`, `receipt parent nodes`, `receipt path`, `logIndex`
-
 
       ```javascript
       private async _buildPayloadForExit(burnTxHash) {
@@ -185,77 +184,77 @@ Let **X** be the amount of tokens to be withdrawn.
           new BN(lastChildBlock).gte(new BN(burnTx.blockNumber)),
           'Burn transaction has not been checkpointed as yet',
         )
+          // if the block has been checkpointed, move ahead
 
+          const headerBlockNumber = await rootChainContract.findHeaderBlockNumber(burnTx.blockNumber)
+          const headerBlock = await web3.call(
+            rootChainContract
+              .getRawContract()
+              .methods.headerBlocks(this.encode(headerBlockNumber)),
+          )
+          logger.info({ 'headerBlockNumber': headerBlockNumber.toString(), headerBlock })
 
-        // if the block has been checkpointed, move ahead
+            // build block proof
+            const blockProof = await Proofs.buildBlockProof(
+              this.web3Client.getMaticWeb3(),
+              headerBlock.start,
+              headerBlock.end,
+              burnTx.blockNumber,
+            )
+            // build receipt proof
+            const receiptProof = await Proofs.getReceiptProof(
+              receipt,
+              block,
+              this.web3Client.getMaticWeb3(),
+            )
+            return this._encodePayload(
+              headerBlockNumber,
+              blockProof,
+              burnTx.blockNumber,
+              block.timestamp,
+              Buffer.from(block.transactionsRoot.slice(2), 'hex'),
+              Buffer.from(block.receiptsRoot.slice(2), 'hex'),
+              Proofs.getReceiptBytes(receipt), // rlp encoded
+              receiptProof.parentNodes,
+              receiptProof.path,
+              // @todo logIndex can vary
+              1, // logIndex
+            )
+          }
+        ```
 
-        const headerBlockNumber = await rootChainContract.findHeaderBlockNumber(burnTx.blockNumber)
-        const headerBlock = await web3.call(
-          rootChainContract
-            .getRawContract()
-            .methods.headerBlocks(this.encode(headerBlockNumber)),
-        )
-        logger.info({ 'headerBlockNumber': headerBlockNumber.toString(), headerBlock })
+        To encode payload (returned in the previous function)
 
-        // build block proof
-        const blockProof = await Proofs.buildBlockProof(
-          this.web3Client.getMaticWeb3(),
-          headerBlock.start,
-          headerBlock.end,
-          burnTx.blockNumber,
-        )
-        // build receipt proof
-        const receiptProof = await Proofs.getReceiptProof(
-          receipt,
-          block,
-          this.web3Client.getMaticWeb3(),
-        )
-        return this._encodePayload(
-          headerBlockNumber,
-          blockProof,
-          burnTx.blockNumber,
-          block.timestamp,
-          Buffer.from(block.transactionsRoot.slice(2), 'hex'),
-          Buffer.from(block.receiptsRoot.slice(2), 'hex'),
-          Proofs.getReceiptBytes(receipt), // rlp encoded
-          receiptProof.parentNodes,
-          receiptProof.path,
-          // @todo logIndex can vary
-          1, // logIndex
-        )
-      }
-    ```
-    To encode payload (returned in the previous function)
-    ```javascript
-      private _encodePayload(
-        headerNumber,
-        buildBlockProof,
-        blockNumber,
-        timestamp,
-        transactionsRoot,
-        receiptsRoot,
-        receipt,
-        receiptParentNodes,
-        path,
-        logIndex,
-      ) {
-        return ethUtils.bufferToHex(
-          ethUtils.rlp.encode([
+        ```javascript
+          function _encodePayload(
             headerNumber,
             buildBlockProof,
             blockNumber,
             timestamp,
-            ethUtils.bufferToHex(transactionsRoot),
-            ethUtils.bufferToHex(receiptsRoot),
-            ethUtils.bufferToHex(receipt),
-            ethUtils.bufferToHex(ethUtils.rlp.encode(receiptParentNodes)),
-            ethUtils.bufferToHex(ethUtils.rlp.encode(path)),
+            transactionsRoot,
+            receiptsRoot,
+            receipt,
+            receiptParentNodes,
+            path,
             logIndex,
-          ]),
-        )
-      }
-      ```
+          ) {
+            return ethUtils.bufferToHex(
+              ethUtils.rlp.encode([
+                headerNumber,
+                buildBlockProof,
+                blockNumber,
+                timestamp,
+                ethUtils.bufferToHex(transactionsRoot),
+                ethUtils.bufferToHex(receiptsRoot),
+                ethUtils.bufferToHex(receipt),
+                ethUtils.bufferToHex(ethUtils.rlp.encode(receiptParentNodes)),
+                ethUtils.bufferToHex(ethUtils.rlp.encode(path)),
+                logIndex,
+              ]),
+            )
+          }
 
+          ```
 
 3. Process Exits
 

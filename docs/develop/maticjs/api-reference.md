@@ -2,8 +2,7 @@
 id: api-reference
 title: API
 ---
-
-- <a href="#initialize"><code>new Matic()</code></a>
+- <a href="#initialize"><code><b>new Matic()</b></code></a>
 - <a href="#balanceOfERC20"><code>matic.<b>balanceOfERC20()</b></code></a>
 - <a href="#balanceOfERC721"><code>matic.<b>balanceOfERC721()</b></code></a>
 - <a href="#tokenOfOwnerByIndexERC721"><code>matic.<b>tokenOfOwnerByIndexERC721()</b></code></a>
@@ -16,10 +15,10 @@ title: API
 - <a href="#startWithdraw"><code>matic.<b>startWithdraw()</b></code></a>
 - <a href="#startWithdrawForNFT"><code>matic.<b>startWithdrawForNFT()</b></code></a>
 - <a href="#withdraw"><code>matic.<b>withdraw()</b></code></a>
-- <a href="#withdrawNFT"><code>matic.<b>withdrawNFT()</b></code><a>
-- <a href="#getTransferSignature"><code>matic.<b>getTransferSignature()</b></code><a>
-- <a href="#transferWithSignature"><code>matic.<b>transferWithSignature()</b></code><a>
-- <a href="#processExits"><code>matic.<b>processExits()</b></code><a>
+- <a href="#withdrawNFT"><code>matic.<b>withdrawNFT()</b></code></a>
+- <a href="#getTransferSignature"><code>matic.<b>getTransferSignature()</b></code></a>
+- <a href="#transferWithSignature"><code>matic.<b>transferWithSignature()</b></code></a>
+- <a href="#processExits"><code>matic.<b>processExits()</b></code></a>
 
 ##### **WithdrawManager**
 
@@ -56,9 +55,6 @@ matic.initialize()
   - `depositManager` must be valid Ethereum contract address.
 
 ---
-
----
-
 <a name="balanceOfERC20"></a>
 
 #### matic.balanceOfERC20(userAddress, token, options)
