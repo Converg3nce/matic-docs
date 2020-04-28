@@ -1,7 +1,7 @@
 ---
-id: bor-chain
+id: overview
 title: Overview
-description: Build your next blockchain app on Matic.
+description: The Bor node or the Block Producer implementation is basically the sidechain operator. The sidechain VM is EVM-compatible. Currently, it is a basic Geth implementation with custom changes done to the consensus algorithm. However, this will be built from the ground up to make it lightweight and focused.
 keywords:
   - docs
   - matic
