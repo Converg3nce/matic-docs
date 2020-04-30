@@ -15,7 +15,7 @@ As Validators slots are limited for network, the process to get selected as one 
 Validator's has two addresses:
 
 1. **`owner` address:**  This address is from which validator can handle admin related functionalities like un-stake, take rewards, set delegation params.
-2. `**signer` address :**  This address is from which validator signs checkpoints and runs the node.
+2. **`signer` address :**  This address is from which validator signs checkpoints and runs the node.
 
 ## Stake
 

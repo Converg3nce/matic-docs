@@ -1,7 +1,7 @@
 ---
 id: delegator
-title: Delegation
-sidebar_label: Delegation
+title: Delegator
+sidebar_label: Delegator
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
