@@ -22,3 +22,26 @@ When a validator gets rewarded with more `MATIC` tokens, new tokens are added to
 `VATIC`: Validator specific minted validator share tokens (ERC20 tokens)
 
 ## Workflow of items
+
+**`buyVoucher`**: This function is attributed when performing a delegation process toward a Validator. The delegation `_amount` is first transferred to the `stakeManager` where upon confirmation delegation shares are `Mint` using the current `exchangeRate`
+
+Exchange rate is calculated as per below formula:
+
+```ExchangeRate = (totalDelegatedPower + delegatorRewardPool) / totalDelegatorShares```
+
+**`sellVoucher`**: This is function that is called when a delegator is `unbonding` from a validator. This function basically initiates the process of selling the vouchers which was bought during delegation. There is a withdrawal period that is taken into consideration before the delegators can `claim` their tokens.
+
+**`withdrawRewards`**: As a delegator, you can Claim your rewards by invoking the `withdrawRewards` function.  
+
+**`reStake`**: Restake can work in two ways delegator can buy more shares using buyVoucher or reStake rewards. You can restake by staking more tokens toward a validator or you can restake your accumulated rewards as a delegator. Purpose of `reStaking` is that since delegator's validator has now more active stake and she will earn more rewards for that so will the delegator.
+
+**`unStakeClaimTokens`**: Once withdrawal period is over delegators who've sold their shares can claim their matic tokens.
+
+**`updateCommissionRate`**: Updates commission % for the validator.
+
+**`updateRewards`**: When a validator gets rewards for submitting checkpoint this function is called for disbursements of rewards between validator and delegators.
+
+
+
+
+
