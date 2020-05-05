@@ -206,7 +206,6 @@ module.exports = {
         },
       ],
     },
-    "integrate/ethereum-matic",
     {
       type: "category",
       label: "Advanced",
