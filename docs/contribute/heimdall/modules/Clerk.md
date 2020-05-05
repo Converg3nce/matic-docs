@@ -11,7 +11,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 Clerk manages generic state-sync from Ethereum chain to Bor chain. Heimdall agrees on state sync, which is initiated on the Ethereum chain using this module.
 
-More details: [https://www.notion.so/maticnetwork/Overview-c8bdb110cd4d4090a7e1589ac1006bab#4432e1c41a714c3da7dc4a7c3111c2ec](https://www.notion.so/maticnetwork/Overview-c8bdb110cd4d4090a7e1589ac1006bab#4432e1c41a714c3da7dc4a7c3111c2ec)
+More details: [State sync mechanism](/docs/contribute/bor/core_concepts#state-management-state-sync)
 
 ## Messages
 
@@ -54,4 +54,7 @@ heimdallcli query clerk record --id <state-record-id>
 
 ## REST APIs
 
-[Query APIs](https://www.notion.so/2d5b344aeea8455b82cd6f001331f367)
+|Name                  |Method|Endpoint          |
+|----------------------|------|------------------|
+|Event record details  |GET   |/clerk/event-record/<record-id\>|
+|All event records     |GET   |/clerk/event-record/list|
