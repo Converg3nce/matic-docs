@@ -1,6 +1,6 @@
 ---
 id: orientation
-title: Guidelines to Contribute
+title: How to contribute
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
@@ -12,10 +12,10 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 There are several ways to identify an area where you can contribute to Matic:
 
-- The easiest is just to message one of the [Community Maintainers](https://docs.corda.net/docs/corda-os/4.4/contributing-philosophy.html#community-maintainers) saying “I want to help!”. They’ll work with you to find an area for you to contribute
-- If you have a specific contribution in mind, confirm whether the contribution is appropriate first by reaching out in the the Matic Telegram group or contacting one of the [Community Maintainers](https://docs.corda.net/docs/corda-os/4.4/contributing-philosophy.html#community-maintainers) directly
-- If you do not have a specific contribution in mind, you can also browse the issues labelled as `help wanted` on the [Matic GitHub issues](https://github.com/maticnetwork) page
-    - Issues that additionally have the `good first issue` label are considered ideal for first-timers
+- The easiest is just to email one of the [Community Maintainers](/docs/contribute/community-maintainers) saying “I want to help!”. They’ll work with you to find an area for you to contribute
+- If you have a specific contribution in mind, confirm whether the contribution is appropriate first by reaching out in the the Matic Telegram group or contacting one of the [Community Maintainers](/docs/contribute/community-maintainers) directly
+- If you do not have a specific contribution in mind, you can also browse the issues labelled as `help wanted` on the [Matic GitHub repos](https://github.com/maticnetwork)
+- Issues that additionally have the `good first issue` label are considered ideal for first-timers
 
 ## **Contribution guidelines**
 
@@ -27,7 +27,11 @@ We believe one of the things that makes Matic special is its coherent design and
 
 ### Git Rules
 
-We will be using `gitchangelog` going forward for all of our repos for change logs. For that, we need to follow following convention for commit message. There will be no merge if you are not following this convention.**Commit message convention**The following are suggestions to what might be useful to think about adding in your commit messages.You might want to separate roughly your commits into big sections:
+We use `gitchangelog` for all of our repos for change logs. For that, we need to follow the following convention for commit message. There will be no merge if you are not following this convention.
+
+**Commit message convention**
+
+The following are suggestions to what might be useful to think about adding in your commit messages. You might want to separate roughly your commits into big sections:
 
 - by intent (for example: new, fix, change ...)
 - by object (for example: doc, packaging, code ...)
@@ -35,12 +39,15 @@ We will be using `gitchangelog` going forward for all of our repos for change lo
 
 Additionally, you could want to tag some commits:
 
-- as “minor” commits that shouldn’t get outputed to your changelog (cosmetic changes, small typo in comments...)
+- as “minor” commits that shouldn’t get output to your changelog (cosmetic changes, small typo in comments...)
 - as “refactor” if you don’t really have any significative feature changes. Thus this should not also be part of the changelog displayed to final user for instance, but might be of some interest if you have a developer changelog.
-- you could tag also with “api” to mark API changes or new API stuff...
-- ...etc...
+- you could tag also with “api” to mark API changes or if it's a new API or similar
 
-Try to write your commit message by targeting users (functionality) as often as you can.**Example**This is standard git log `--oneline` to show how these information could be stored::
+Try writing your commit message by targeting user functionality as often as you can.
+
+**Example**
+
+This is a standard git log `--oneline` to show how these information could be stored:
 
 ```
 * 5a39f73 fix: encoding issues with non-ascii chars.
@@ -53,4 +60,4 @@ Try to write your commit message by targeting users (functionality) as often as 
 
 For more info please refer here ⇒ [https://stackoverflow.com/questions/3523534/good-ways-to-manage-a-changelog-using-git/23047890#23047890](https://stackoverflow.com/questions/3523534/good-ways-to-manage-a-changelog-using-git/23047890#23047890)
 
-Source: [https://chris.beams.io/posts/git-commit/](https://chris.beams.io/posts/git-commit/)
+Refer this link for more details: [https://chris.beams.io/posts/git-commit/](https://chris.beams.io/posts/git-commit/)

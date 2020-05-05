@@ -28,7 +28,7 @@ module.exports = {
       type: "category",
       label: "Architecture",
       items: [
-        "home/architecture/components",
+        "home/architecture/matic-architecture",
         "home/architecture/matic-flow",
         "home/architecture/security-models",
         {
@@ -285,7 +285,7 @@ module.exports = {
       label: "Architecture",
       items: [
         // "home/architecture/overview",
-        "home/architecture/security-models",
+        
         "home/architecture/bor",
         {
           type: "category",
@@ -302,7 +302,7 @@ module.exports = {
           label: "Plasma Contracts",
           items: [],
         },
-        "contribute/state-sync",
+        "home/architecture/security-models"
       ],
     },
     {
@@ -354,8 +354,8 @@ module.exports = {
       type: "category",
       label: "Contracts",
       items: [
-        "contribute/contracts/delegation",
         "contribute/contracts/stakingmanager",
+        "contribute/contracts/delegation",
       ],
     },
     {
@@ -368,5 +368,7 @@ module.exports = {
       ],
     },
     "contribute/peppermint",
+    "contribute/state-sync",
+    "contribute/community-maintainers"
   ],
 };
