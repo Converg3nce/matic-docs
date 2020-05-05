@@ -1,7 +1,7 @@
 ---
-id: matic
+id: what-is-matic
 title: What is Matic?
-sidebar_label: Matic
+sidebar_label: What is Matic
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
@@ -25,4 +25,3 @@ Matic strives to solve the scalability and usability issues while not compromisi
 - **Public Sidechains:** Matic sidechains are public in nature (vs. individual DApp chains), permissionless and capable of supporting multiple protocols
 
 The Matic system was consciously architected to support arbitrary state transitions on MATIC sidechains, which are EVM-enabled.
-x

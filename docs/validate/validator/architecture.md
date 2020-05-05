@@ -16,7 +16,7 @@ The Matic network is broadly divided into 3 layers (see figure below):
 2. Heimdall (Proof of Stake validation layer) 
 3. Bor (Block producer layer)
 
-<img src={useBaseUrl("img/Architecture/flowchart.png")} />
+<img src={useBaseUrl("img/staking/architecture.png")} />
 
 ### Staking and Plasma smart contracts on Ethereum
 

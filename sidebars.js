@@ -219,7 +219,7 @@ module.exports = {
       type: "category",
       label: "Basics",
       items: [
-        "validate/basics/matic",
+        "validate/basics/what-is-matic",
         "validate/basics/validator",
         "validate/basics/delegator",
         "validate/basics/pos_staking_delegation",
