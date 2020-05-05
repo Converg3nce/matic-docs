@@ -9,7 +9,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# How to Stake and Become a Validator on Matic (Stage 1 Counter Stake)
+# How to Stake and Become a Validator on Matic
 
 This is a step-by-step guide to help you become a validator on Matic's incentivised testnet program. The following list of commands will help you setup your heimdall and bor nodes for staking and performing validator duties.
 
