@@ -106,7 +106,7 @@ function updateCommissionRate(uint256 newCommissionRate)
 
 - updates commission % for the validator.
 
-### udpateRewards
+### updateRewards
 
 - When a validator gets rewards for submitting checkpoint this function is called for disbursements of rewards between validator and delegators.
 

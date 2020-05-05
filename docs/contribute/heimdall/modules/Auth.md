@@ -9,8 +9,9 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 ## Overview
 
-This document specifies the auth module of the Heimdall.
-The auth module is responsible for specifying the base transaction and account types for an application. It contains the ante handler, where all basic transaction validity checks (signatures, nonces, auxiliary fields) are performed, and exposes the account keeper, which allows other modules to read, write, and modify accounts.
+This document specifies the `auth` module of Heimdall.
+
+The `auth` module is responsible for specifying the base transaction and account types for an application. It contains the ante handler, where all basic transaction validity checks (signatures, nonces, auxiliary fields) are performed, and exposes the account keeper, which allows other modules to read, write, and modify accounts.
 
 ## Gas and Fees
 
@@ -20,9 +21,7 @@ Fees limit the growth of the state stored by every full node and allow for gener
 
 **Since Heimdall doesn't support custom contract or code for any transaction, it uses fixed cost transactions.**
 
-For fixed cost transactions, the validator can top up their accounts on the Ethereum chain and get tokens on Heimdall using Topup Module.
-
-[Topup](https://www.notion.so/Topup-d288ce13f81c4b4886e64e48827e077f)
+For fixed cost transactions, the validator can top up their accounts on the Ethereum chain and get tokens on Heimdall using the [Topup](topup) module.
 
 ## Types
 
@@ -88,7 +87,16 @@ type BaseAccount struct {
 
 The auth module contains the following parameters:
 
-[Params](https://www.notion.so/863bc90d22724f28b048ff9c083be4c6)
+|Key                   |Type  |Default value     |
+|----------------------|------|------------------|
+|MaxMemoCharacters     |uint64|256               |
+|TxSigLimit            |uint64|7                 |
+|TxSizeCostPerByte     |uint64|10                |
+|SigVerifyCostED25519  |uint64|590               |
+|SigVerifyCostSecp256k1|uint64|1000              |
+|DefaultMaxTxGas       |uint64|1000000           |
+|DefaultTxFees         |string|"1000000000000000"|
+
 
 ## CLI Commands
 
@@ -152,4 +160,8 @@ tx_fees: "1000000000000000"
 
 ## REST APIs
 
-[Query APIs](https://www.notion.so/4c08e09c9dd94c96bacc20c5140cc70a)
+|Name                  |Endpoint|Description       |
+|----------------------|--------|------------------|
+|Account details       |/auth/accounts/{address}|Returns all details for an address|
+|Account sequence dtails|/auth/accounts/{address}/sequence|Returns only necessary details for signing|
+|Auth params           |/auth/params|Returns all params auth module uses|
