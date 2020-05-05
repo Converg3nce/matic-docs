@@ -1,8 +1,8 @@
 ---
 id: governance
-title: Heimdall governance
+title: Governance
 sidebar_label: Governance
-description: Heimdall governance works exactly as Cosmos-sdk `x/gov` module. [https://docs.cosmos.network/master/modules/gov/](https://docs.cosmos.network/master/modules/gov/). In this system, holders of the native staking token of the chain can vote on proposals on a 1 token - 1 vote basis.
+description: Heimdall governance works exactly the same as Cosmos-sdk `x/gov` module. [https://docs.cosmos.network/master/modules/gov/](https://docs.cosmos.network/master/modules/gov/). In this system, holders of the native staking token of the chain can vote on proposals on a 1 token - 1 vote basis.
 keywords:
   - docs
   - matic
@@ -10,7 +10,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 ## Overview
 
-Heimdall governance works exactly as Cosmos-sdk `x/gov` module. [https://docs.cosmos.network/master/modules/gov/](https://docs.cosmos.network/master/modules/gov/) 
+Heimdall governance works exactly the same as Cosmos-sdk `x/gov` module. [https://docs.cosmos.network/master/modules/gov/](https://docs.cosmos.network/master/modules/gov/) 
 
 In this system, holders of the native staking token of the chain can vote on proposals on a 1 token - 1 vote basis. Next is a list of features the module currently supports:
 
@@ -19,9 +19,11 @@ In this system, holders of the native staking token of the chain can vote on pro
 
 There are deposit period and voting period as params in `gov` module. Minimum deposit has be achieved before deposit period ends, otherwise proposal will be automatically rejected. 
 
-Once minimum deposits reached within deposit period, voting period starts. In voting period, all validators should vote their choices for the proposal. After voting period ends, `gov/Endblocker.go` executes `tally`  function and accepts or rejects proposal based on `tally_params` — `quorum` , `threshold` and `veto`. Source: [https://github.com/maticnetwork/heimdall/blob/develop/gov/endblocker.go](https://github.com/maticnetwork/heimdall/blob/develop/gov/endblocker.go)
+Once minimum deposits reached within deposit period, voting period starts. In voting period, all validators should vote their choices for the proposal. After voting period ends, `gov/Endblocker.go` executes `tally`  function and accepts or rejects proposal based on `tally_params` — `quorum`, `threshold` and `veto`. 
 
-There are different  types of proposals that can be implemented in Heimdall but as of now, it supports only one proposal:
+Source: [https://github.com/maticnetwork/heimdall/blob/develop/gov/endblocker.go](https://github.com/maticnetwork/heimdall/blob/develop/gov/endblocker.go)
+
+There are different types of proposals that can be implemented in Heimdall but as of now, it supports only one proposal:
 
 - Param change proposal
 
@@ -100,7 +102,7 @@ heimdallcli query gov proposals 1 --trust-node
 
 ### Vote on proposal
 
-To vote on particular proposal 
+To vote on a particular proposal 
 
 ```bash
 heimdallcli tx gov vote 1 "Yes" --validator-id 1  --chain-id <heimdal-chain-id>
@@ -110,4 +112,8 @@ Proposal will be automatically tallied after voting period.
 
 ## REST APIs
 
-[Query APIs](https://www.notion.so/0fb1bd4752d64ad199e44d8b016ddf49)
+|Name                  |Method|Endpoint          |
+|----------------------|------|------------------|
+|Get all proposals     |GET   |/gov/proposals    |
+|Get proposal details  |GET   |/gov/proposals/`proposal-id`|
+|Get all votes for the proposal|GET   |/gov/proposals/`proposal-id`/votes|

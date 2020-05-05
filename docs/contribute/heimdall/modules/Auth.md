@@ -163,5 +163,5 @@ tx_fees: "1000000000000000"
 |Name                  |Endpoint|Description       |
 |----------------------|--------|------------------|
 |Account details       |/auth/accounts/{address}|Returns all details for an address|
-|Account sequence dtails|/auth/accounts/{address}/sequence|Returns only necessary details for signing|
+|Account sequence details|/auth/accounts/{address}/sequence|Returns only necessary details for signing|
 |Auth params           |/auth/params|Returns all params auth module uses|
