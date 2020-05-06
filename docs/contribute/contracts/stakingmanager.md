@@ -196,7 +196,7 @@ struct State {
 mapping(uint256 => State) public validatorState;
 ```
 
-<img src={useBaseUrl("img/staking_manager/staking_manager.svg")} />
+<img src={useBaseUrl("img/staking_manager/staking_manager.png")} />
 
 Diagram trying to explain timeline data structure 
 
