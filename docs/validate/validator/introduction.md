@@ -66,3 +66,5 @@ Setting up a validator node is a job that comes with responsibilities. To better
 3. A selected proposer from the validator set is responsible for collecting all signatures for a particular checkpoint and committing the same on the main-chain.
 
 The responsibility of creating blocks and also proposing checkpoints is variably dependent on a validator’s stake ratio in the overall pool.
+
+To setup your node you can follow the instructions from [here](https://docs.matic.network/docs/validate/counter-stake-stage-2/getting-started) 
