@@ -7,35 +7,32 @@ keywords:
   - matic
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 ## Overview
 
 Staking module manages validator related transactions and state for Heimdall. Note that a validator stakes their tokens on the Ethereum chain and becomes a validator. Respective validators send the transactions on Heimdall using necessary parameters to acknowledge the Ethereum stake change. Once the majority of the validators agree on the change on the stake, this module saves the validator information on Heimdall state.
 
 ## Key management
 
-For key management, please refer to 
-
-[Validator key management](https://www.notion.so/Validator-key-management-b73e76e7834746c99ccb0122fa97db61)
+For key management, please refer to [Validator key management](/docs/contribute/heimdall/validator-key-management)
 
 ## Delegation
 
 This module only manages validator staking on Heimdall. The delegation is only available on smart contracts on the Ethereum chain. To optimize the delegation rewards calculation on smart contracts, we are using validator shares (ERC20 per validator). 
 
-More details here: 
-
-[Delegation (Validator shares)](https://www.notion.so/Delegation-Validator-shares-a41e9e428b6a4ff58ec85061e4bcc7e1)
+More details here: [Delegation (Validator shares)](/docs/contribute/contracts/delegation)
 
 ## Rewards
 
 All rewards are distributed on the Ethereum chain. The validators and delegators claim their rewards or re-stake by simply sending the transaction on `StakeManager.sol` 
 
-More details here: 
-
-[Rewards](https://www.notion.so/Rewards-5546fe0c0e354c708b07dc0be05ca856)
+More details here: [Rewards](/docs/validate/economics#what-is-the-incentive)
 
 ## Messages
 
-![Staking/stake-managment-flow.svg](Staking/stake-managment-flow.svg)
+
+<img src={useBaseUrl('img/staking/stake-management-flow.svg')} />
 
 ### MsgValidatorJoin
 
@@ -241,7 +238,11 @@ heimdallcli tx staking validator-join \
 
 ## REST APIs
 
-[Query APIs](https://www.notion.so/17b7bfdb61994d3daddd8885695caabb)
+|Name                  |Method|Endpoint          |
+|----------------------|------|------------------|
+|Get Heimdall validator set|GET   |/staking/validator-set|
+|Get validator details |GET   |/staking/validator/validator-id|
+
 
 All query APIs will result in following format:
 

@@ -77,4 +77,7 @@ heimdallcli query auth account <validator-address> --trust-node
 
 ## REST APIs
 
-[Tx APIs](https://www.notion.so/637fd315d366439d8a1549b808489760)
+|Name                  |Method|URL               |Body Params                                                                                                                                      |
+|----------------------|------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+|Topup Fee             |POST  |/topup/fee        |`id` Validator id, `tx_hash` Transaction hash of successful topup event on Ethereum chain, `log_index` Log index of topup event emitted on Ethereum chain|
+|Withdraw Fee          |POST  |/topup/withdraw   |`amount` Withdraw amount|

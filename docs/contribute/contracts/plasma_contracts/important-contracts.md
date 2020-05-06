@@ -1,6 +1,6 @@
 ---
-id: basics
-title: Plasma for Dummies
+id: important-contracts
+title: Important contracts
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
