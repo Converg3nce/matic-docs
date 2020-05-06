@@ -35,8 +35,8 @@ You will need to make sure that you are already running a separate machine where
 
 If you haven't setup your node, you can do so by using either of these options:
 
-**Linux packages**: https://docs.matic.network/docs/validate/counter-stake-stage-1/linux-package-installation
-**Binaries**: https://docs.matic.network/docs/validate/counter-stake-stage-1/running-with-binaries
+**Linux packages**: https://docs.matic.network/docs/validate/counter-stake-stage-2/linux-package-installation
+**Binaries**: https://docs.matic.network/docs/validate/counter-stake-stage-2/running-with-binaries
 
 For ease of this document, we will refer to your Current Node as Node 1 and your new node as Node 2.
 

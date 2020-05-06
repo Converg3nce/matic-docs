@@ -51,12 +51,12 @@ Stage 2 is the final and last stage of Counter Stake, Matic's incentivized testn
 
 Setup your Full Node 
 
-> * **Option 1:** [Linux Package Installation](linux-package-installation) (Recommended; lightweight, native)
-> * **Option 2:** [Running with Binaries](running-with-binaries) (Relatively complex to setup, but offers advanced 
+> * **Option 1:** [Linux Package Installation](https://docs.matic.network/docs/validate/counter-stake-stage-2/linux-package-installation) (Recommended; lightweight, native)
+> * **Option 2:** [Running with Binaries](https://docs.matic.network/docs/validate/counter-stake-stage-2/running-with-binaries) (Relatively complex to setup, but offers advanced 
 
 Stake on Matic
 
-Stake tokens to become a validator - [follow this guide](stake-on-matic)
+Stake tokens to become a validator - [follow this guide](https://docs.matic.network/docs/validate/counter-stake-stage-2/stake-on-matic)
 
 
 **Queries, any?**
