@@ -44,18 +44,24 @@ Article: https://docs.matic.network/docs/validate/counter-stake-stage-2/rewards
 
 [Matic Network](https://matic.network/) is a Layer 2 scaling solution that achieves scale by utilizing sidechains for off-chain computation while ensuring asset security using the Plasma framework and a decentralized network of Proof-of-Stake (PoS) validators.
 
-Article: https://docs.matic.network/docs/validate/basics/what-is-matic
+You can dive into the details with [this link](/docs/validate/basics/what-is-matic). 
+
 
 #### Architecture
 
 In order to perform attacks (correctly) we would encourage Validators and community members to understand Matic's Architecture and Code thoroughly. Without the thorough understanding of Core Components such as Heimdall and Bor, it would be difficult to perform attacks correctly on the network. 
 
-Article: https://docs.matic.networ/docs/validate/validator/architecture
+Please refer [this link](/docs/validate/validator/architecture) for more details. 
+
 
 #### Specs
 In order to understand the granular information about core components such as Heimdall, Bor and Contracts you can head over to the link below. This will not only help you understand how Matic works under-the-hood but also help you to execute attacks correctly
 
-Article: https://docs.matic.network/docs/contribute/heimdall/overview
+You can navigate to the specs with these links:
+
+- [Heimdall](/docs/contribute/heimdall/overview)
+- [Bor](/docs/contribute/bor/overview)
+- [Contracts](https://docs.matic.today/docs/contribute/contracts/stakingmanager)
 
 #### Codebases
 
