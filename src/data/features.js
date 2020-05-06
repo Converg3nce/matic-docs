@@ -20,12 +20,12 @@ export const firstRow = [
 ];
 
 export const secondRow = [
-    {
+    /*{
         title: "Blog",
         linkUrl: "https://blog.matic.network/",
         imageUrl: "img/home/validators.svg",
         description: "The Matic blog hosts news, interviews, conversations, stories, and opinions from the blockchain community, inside and outside of Matic"
-    },
+    },*/
     {
         title: "Integration Partners",
         linkUrl: "docs/integrate/quickstart",
@@ -35,7 +35,7 @@ export const secondRow = [
     {
         title: "Core Contributors",
         linkUrl: "docs/contribute/orientation",
-        imageUrl: "img/home/integration.svg",
+        imageUrl: "img/home/blockchain-basics.svg",
         description: "Contribute and get involved with the Matic Network code base. Spin up a local testnet, or just submit a Pull Request on one of our repos"
     }
 ];
