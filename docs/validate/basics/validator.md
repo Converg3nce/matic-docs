@@ -1,7 +1,7 @@
 ---
 id: validator
 title: Who is a Validator?
-sidebar_label: Validator
+sidebar_label: Who is a Validator
 description: Build your next blockchain app on Matic.
 keywords:
   - docs

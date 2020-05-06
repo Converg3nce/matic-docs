@@ -64,9 +64,9 @@ Post: https://docs.matic.network/docs/contribute/heimdall/overview
 
 Codebase of Matic to understand the granular interaction of how Matic's core components work.
 
-Heimdall: https://github.com/maticnetwork/heimdall
-Bor: https://github.com/maticnetwork/bor
-Contracts: https://github.com/maticnetwork/contracts
+- Heimdall: https://github.com/maticnetwork/heimdall
+- Bor: https://github.com/maticnetwork/bor
+- Contracts: https://github.com/maticnetwork/contracts
 
 
 #### Where to report bugs?
