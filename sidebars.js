@@ -28,7 +28,7 @@ module.exports = {
       type: "category",
       label: "Architecture",
       items: [
-        "home/architecture/components",
+        "home/architecture/matic-architecture",
         "home/architecture/matic-flow",
         "home/architecture/security-models",
         {
@@ -206,7 +206,6 @@ module.exports = {
         },
       ],
     },
-    "integrate/ethereum-matic",
     {
       type: "category",
       label: "Advanced",
@@ -284,25 +283,7 @@ module.exports = {
       type: "category",
       label: "Architecture",
       items: [
-        // "home/architecture/overview",
-        "home/architecture/security-models",
-        "home/architecture/bor",
-        {
-          type: "category",
-          label: "Heimdall",
-          items: [],
-        },
-        {
-          type: "category",
-          label: "Contracts",
-          items: ["home/architecture/contracts/staking"],
-        },
-        {
-          type: "category",
-          label: "Plasma Contracts",
-          items: [],
-        },
-        "contribute/state-sync",
+        "contribute/matic-architecture"
       ],
     },
     {
@@ -339,6 +320,7 @@ module.exports = {
             "contribute/heimdall/modules/chainmanager",
           ],
         },
+        "contribute/peppermint",
       ],
     },
     {
@@ -346,6 +328,7 @@ module.exports = {
       label: "Bor",
       items: [
         "contribute/bor/overview",
+        "contribute/bor/bor",
         "contribute/bor/core_concepts",
         "contribute/bor/consensus",
       ],
@@ -354,19 +337,21 @@ module.exports = {
       type: "category",
       label: "Contracts",
       items: [
-        "contribute/contracts/delegation",
         "contribute/contracts/stakingmanager",
+        "contribute/contracts/delegation",
+        {
+          type: "category",
+          label: "Plasma Contracts",
+          items: [
+            "contribute/contracts/plasma_contracts/account_based_plasma",
+            "contribute/contracts/plasma_contracts/predicates",
+            "contribute/contracts/plasma_contracts/important-contracts",
+          ],
+        }
       ],
-    },
-    {
-      type: "category",
-      label: "Plasma Contracts",
-      items: [
-        "contribute/plasma_contracts/basics",
-        "contribute/plasma_contracts/account_based_plasma",
-        "contribute/plasma_contracts/predicates",
-      ],
-    },
-    "contribute/peppermint",
+    },  
+    "contribute/state-sync",
+    "home/architecture/security-models",
+    "contribute/community-maintainers"
   ],
 };
