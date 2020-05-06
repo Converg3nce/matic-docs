@@ -505,7 +505,6 @@ There are two way to commit span in Bor.
 
     Once the `span` proposed on Heimdall, the validator can force push span if span needs to be changed before the current span ends. A transaction to propose a `span` must be committed to Bor by any validator. Bor then updates and commits the proposed span at end of the current sprint using a system call.
 
-    ~~Force commit `span` happens when the current producers lose more than `FORCE_COMMITEE_UPDATE_THRESHOLD`.~~
 
 ## State management (State-sync)
 

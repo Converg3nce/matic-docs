@@ -9,28 +9,34 @@ export const firstRow = [
         title: "Application Developers",
         linkUrl: "docs/develop/getting-started",
         imageUrl: "img/home/dapp-developers.svg",
-        description: "All the infrastructure and integrations you need to build, deploy, and manage Apps on Matic."
+        description: "Complete information including easy tutorials you need to build, deploy, and manage apps on Matic"
     },
     {
         title: "Validators",
         linkUrl: "docs/validate/basics/validator",
         imageUrl: "img/home/core-contribution.svg",
-        description: 'Learn How to stake with Matic, And Setup you own Environment to earn Rewards.'
+        description: 'Learn how to stake with Matic, and setup you own nodes to maintain the network and earn rewards'
     },
 ];
 
 export const secondRow = [
-    {
+    /*{
         title: "Blog",
         linkUrl: "https://blog.matic.network/",
         imageUrl: "img/home/validators.svg",
-        description: "The Matic blog hosts news, interviews, conversations, stories, and opinions from the blockchain community, inside and outside of Matic."
-    },
+        description: "The Matic blog hosts news, interviews, conversations, stories, and opinions from the blockchain community, inside and outside of Matic"
+    },*/
     {
-        title: "Integrate",
+        title: "Integration Partners",
         linkUrl: "docs/integrate/quickstart",
         imageUrl: "img/home/integration.svg",
-        description: "Easy Guide for Partners to Integrate to Matic Chain"
+        description: "Key information for partners looking to integrate with Matic. Wallets, developer tools, oracles and more - get all the info you need"
+    },
+    {
+        title: "Core Contributors",
+        linkUrl: "docs/contribute/orientation",
+        imageUrl: "img/home/blockchain-basics.svg",
+        description: "Contribute and get involved with the Matic Network code base. Spin up a local testnet, or just submit a Pull Request on one of our repos"
     }
 ];
 

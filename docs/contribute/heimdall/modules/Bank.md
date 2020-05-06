@@ -9,7 +9,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 ## Overview
 
-Bank module handles account balance transfers for Heimdall. This module is from `bank` module from cosmos-sdk.
+The `bank` module handles account balance transfers for Heimdall. This module corresponds to the `bank` module from cosmos-sdk.
 
 ## Messages
 
@@ -42,7 +42,9 @@ type MsgMultiSend struct {
 
 The bank module contains the following parameters:
 
-[Params](https://www.notion.so/9c2ec6793f34463e89cee1e658ebb55d)
+|Key                  |Type|Default value       |
+|----------------------|--------|------------------|
+|`sendenabled`       |bool|true|
 
 ## CLI commands
 

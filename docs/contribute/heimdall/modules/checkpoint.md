@@ -113,7 +113,10 @@ This transaction gives the timeout period for the current proposer to send check
 
 The checkpoint module contains the following parameters:
 
-[Params](https://www.notion.so/c14dbc8912b54a429d9f57b063b505d9)
+|Key                   |Type  |Default value     |
+|----------------------|------|------------------|
+|CheckpointBufferTime  |uint64|1000 * time.Second|
+
 
 ## CLI commands
 
@@ -166,7 +169,18 @@ heimdallcli tx checkpoint send-noack --chain-id <chain-id>
 
 ## REST APIs
 
-[Query APIs](https://www.notion.so/43cab164a54c4785adda6963c46e44ce)
+|Name                  |Method|Endpoint          |
+|----------------------|------|------------------|
+|Get current checkpoint buffer state|GET   |/checkpoint/buffer|
+|Get checkpoint counts |GET   |/checkpoint/count |
+|Get checkpoint details by block index|GET   |/checkpoint/headers/<header-block-index\>|
+|Get latest checkpoint |GET   |/checkpoint/latest-checkpoint|
+|Get last no-ack details|GET   |/checkpoint/last-no-ack|
+|Checkpoint details for given start and end block|GET   |/checkpoint/<start\>/<end\>|
+|Checkpoint by number  |GET   |/checkpoint/<checkpoint-number\>|
+|All checkpoints       |GET   |/checkpoint/list  |
+|Get ack count, buffer, validator set, validator count and last-no-ack details|GET   |/overview         |
+
 
 All query APIs will result in following format:
 

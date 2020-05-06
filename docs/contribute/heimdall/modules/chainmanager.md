@@ -9,15 +9,15 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 ## Overview
 
-This document specifies overview of the chain manager module of heimdall
+This document specifies an overview of the chain manager module of Heimdall
 
 This module provides all necessary dependencies like `contract-addresses`, `bor_chain_id,` and `tx_confirmation_time`. Other parameters can be added to this later on.
 
-Params are updated through `gov` module.
+Params are updated through the `gov` module.
 
 ## Types
 
-Chainmanager structure on Heimdall looks like following
+Chainmanager structure on Heimdall looks like the following:
 
 ```go
 type ChainParams struct {
@@ -73,9 +73,14 @@ chain_params:
   validator_set_address: "0x0000000000000000000000000000000000000000"
 ```
 
-[REST APIs](https://www.notion.so/f59f63a9115d4e6b90392fedba647449)
+### REST APIs
 
-All query APIs will result in following format:
+|Name                  |Method|URL               |
+|----------------------|------|------------------|
+|Params                |GET   |chainmanager/params|
+
+
+All query APIs will result in the following format:
 
 ```json
 {

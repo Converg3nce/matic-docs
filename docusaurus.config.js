@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Matic Network',
-  tagline: 'Welcome to Matic Developer Documentation',
+  title: 'Matic Network | Documentation',
+  tagline: 'Welcome to Matic developer documentation',
   url: 'https://docs.matic.network/',
   baseUrl: '/',
   favicon: 'img/favicon.png',
@@ -65,7 +65,7 @@ module.exports = {
     announcementBar: {
       id: 'support_us',
       content:
-        '⭐️ Validators, we are moving to the <a target="_blank" rel="noopener noreferrer" href="/docs/validate/orientation">Counter Stage-2</a>! ⭐️',
+        '⭐️ Validators, we are moving to <a target="_blank" rel="noopener noreferrer" href="/docs/validate/counter_stake">Counter Stake Stage 2</a>! ⭐️',
       backgroundColor: '#2b6def', // Defaults to `#fff`
       textColor: '#fff', // Defaults to `#000`
     },

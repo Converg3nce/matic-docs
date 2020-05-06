@@ -9,7 +9,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 ## Overview
 
-Bor module handles span management on Heimdall. Given Bor chain's current block number `n`, current span `span`, if `span.StartBlock <= n < span.EndBlock` , new span is proposed on Heimdall by any validator.
+Bor module handles span management on Heimdall. Given Bor chain's current block number `n`, current span `span`, if `span.StartBlock <= n < span.EndBlock`, new span is proposed on Heimdall by any validator.
 
 ## Messages
 
@@ -86,7 +86,12 @@ type Span struct {
 
 The Bor module contains the following parameters:
 
-[Params](https://www.notion.so/347d70205ab8452ebb62e68239bbdfa5)
+|Key                   |Type  |Default value     |
+|----------------------|------|------------------|
+|SprintDuration        |uint64|64                |
+|SpanDuration          |uint64|100 * SprintDuration|
+|ProducerCount         |uint64|4                 |
+
 
 ## CLI commands
 
@@ -177,4 +182,8 @@ producer_count: 4
 
 ## REST APIs
 
-[Query APIs](https://www.notion.so/01624c3ae5e948eb97fac054d9f71ac5)
+|Name                  |Method|Endpoint          |
+|----------------------|------|------------------|
+|Span details          |GET   |/bor/span/<span-id\>|
+|Get latest span       |GET   |/bor/latest-span  |
+|Get params            |GET   |/bor/params       |
