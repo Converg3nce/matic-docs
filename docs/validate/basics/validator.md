@@ -1,13 +1,21 @@
 ---
 id: validator
 title: Who is a Validator?
-sidebar_label: Validator
+sidebar_label: Who is a Validator
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
   - matic
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
+
+​A validator is a participant in the network who locks up tokens in the network and runs validator nodes in order to help run the network.
+
+A validator has the following responsibilities:
+
+- Stake network tokens and run validator nodes to join the system as a Validator
+- Earn staking rewards for validating state transitions on the blockchain
+- Subject to penalties/slashing for activities such as double signing, validator downtime, etc.
 
 A Blockchain Validator is someone who is responsible for verifying transactions within a blockchain. For Matic Network, any participant can be qualified to became a Matic's validator by running a full-node to earn Rewards and Transaction fee. To ensure Good Participation by Validators, they lock up some of their Matic Tokens as a stake in the ecosystem.
 

@@ -24,7 +24,7 @@ This is a demo for ERC20 token, where all the process are running step-by-step.
 - [Visit]((getting-started)) getting started of Maticjs and Setup the requirements for the demo. 
 - Once you are prepared then create a file demoErc20.js. Add the shared code below in this file.
 
-```js
+```js title="demoErc20.js"
 const Network = require("@maticnetwork/meta/network");
 const Matic = require("@maticnetwork/maticjs").default;
 const config = require("./config.json");

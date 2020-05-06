@@ -8,11 +8,66 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-Moving assets to and fro matic chain involves first depositing tokens onto matic's plasma contract on mainchain (Ethereum), the token is then minted onto Matic chain into the user's address. Once the user wants to withdraw tokens, the process is to burn tokens on matic chain, submit a proof of burn on main chain, and claim deposited tokens on the main chain.
-
 ### Supported Tokens
 
 - ERC20
 - ERC721
 
-> Note: To move a custom token from main chain to matic chain, the token contract is supposed to be mapped on root chain plasma contracts. To use mapped tokens, request TEST ERC20/721 from: https://faucet.matic.network.
+> Note: The mapping is executed by an owner account. To request your token to be mapped scroll down and click on 'Submit Mapping Request'
+
+ERC20 and ERC721 tokens on main chain can be deposited and withdrawn from matic chain using plasma protocol. To enable this, a token contract on main chain(*rootToken*) needs to be mapped to a token contract on matic chain(*childToken*).
+
+## Mapping a token 
+
+Mapping a token involves deploying a *childToken* contract on matic chain and registering the token on both main and matic chain. 
+
+A restricted *childToken* can be deployed and registered on matic chain automatically by making a contract call to the ChildChain contract. But if the *rootToken* has extra functionality apart from basic ERC20/ERC721, a custom *childToken* contract needs to be deployed manually.
+
+## Deploying a 'restricted' Child Token 
+
+### Step 1: On Matic
+
+The [`addToken` function call](https://github.com/maticnetwork/contracts/blob/fd4ed8343a8abb2dda5fe5a6a75a747cfd7a2807/contracts/child/ChildChain.sol#L55) on ChildChain contract deploys a child Token on matic, with restricted functionality (see: [ChildERC20](https://github.com/maticnetwork/contracts/blob/master/contracts/child/ChildERC20.sol) and [ChildERC721](https://github.com/maticnetwork/contracts/blob/master/contracts/child/ChildERC721.sol)), these is done to ensure Plasma security for the asset, otherwise the model gets broken. So if you need Plasma security with a custom token and added functionality on top of what the generic token provides, you need to write your contracts safely with restrictions as mandated.
+
+Certain Data structures are maintained to keep track of the asset on Matic: such as the events, [Deposit](https://github.com/maticnetwork/contracts/blob/fd4ed8343a8abb2dda5fe5a6a75a747cfd7a2807/contracts/child/BaseERC20.sol#L6), [Withdraw](https://github.com/maticnetwork/contracts/blob/fd4ed8343a8abb2dda5fe5a6a75a747cfd7a2807/contracts/child/BaseERC20.sol#L14), [LogTransfer](https://github.com/maticnetwork/contracts/blob/fd4ed8343a8abb2dda5fe5a6a75a747cfd7a2807/contracts/child/BaseERC20.sol#L22). These are absolutely essential to the Plasma contracts that read this data to ensure data verification of the sidechain via fraud proofs and Plasma predicates. 
+
+Based on feedback from developers, we have added mechanisms that allow devs to now program any restrictions that they wish to keep for transfers for example - see [this doc](/docs/develop/advanced/custom-restrictions) for example. This allows arbitrary logic to be coded before the Plasma-safe transfer takes place, keeping the transfer and custom logic separated - so as to ensure Plasma safety.
+
+#### Note on Restrictions
+Plasma security is relatively straightforward to implement for user-controlled accounts or EOAs, since ownership of an asset is easy to derive. However, contracts are difficult to program for Plasma, since ownership of assets cannot be known in advance, and can vary depending on the complexity of the contract.
+
+Therefore, we support some types of contracts as [Plasma predicates](https://github.com/maticnetwork/contracts/tree/master/contracts/root/predicates). We are beginning with a few pre-built predicates such as asset transfers, asset swaps, etc. - and will be increasing the number of pre-built predicates to reflect a wide variety of use cases.
+
+### Step 2: On Main Chain
+
+A mapping on Registry contract is updated for each asset to be mapped. This is done via the [`mapToken` function call](https://github.com/maticnetwork/contracts/blob/fd4ed8343a8abb2dda5fe5a6a75a747cfd7a2807/contracts/common/Registry.sol#L64). This function takes the mapped address returned from the `addToken` call to ChildChain and updates the mapping on Root.
+
+
+## Moving an asset
+
+### Deposits
+
+1. The Deposit Manager Contract is approved to spend X on behalf of msg.sender
+2. The Deposit Manager transfers the amount from msg.sender to itself
+
+This ensures the asset is locked on Main chain and isn't transferrable while the token is being used on Matic
+
+### Withdrawals
+
+1. Burn tokens on Matic sidechain
+2. Submit proof of burn (the receipt of burn tx) on Root Chain
+   1. This step is executed only after the block consisting of the burn tx has been included in a checkpoint on the Root Chain.
+   2. After checkpoint submission, a successful execution of this step
+      1. marks the initiation of the Challenge Exit Period (which is a 7-day period on main network, and set to 5 minute on test networks)
+      2. Mints an ExitNFT token to the exitor's account - which is representative of the exit initiated on the child chain by the exitor
+   3. After the challenge period has ended, processExits burns the Exit NFT and transfers the tokens back from Deposit manager to the exitor.
+
+<hr></hr>
+
+<center>
+<button style={{padding: '20px', backgroundColor: '#4093ff', color: '#fff', borderRadius: '25px', fontSize : '15px' }}>
+  <a href="/static/form.html" target="_blank" style={{color: 'inherit'}}>
+    Submit Mapping Request
+  </a>
+</button>
+</center>

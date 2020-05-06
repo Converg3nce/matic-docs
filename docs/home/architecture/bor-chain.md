@@ -1,6 +1,6 @@
 ---
 id: bor-chain
-title: What is BOR Chain?
+title: Overview
 description: Build your next blockchain app on Matic.
 keywords:
   - docs

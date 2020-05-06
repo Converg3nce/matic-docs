@@ -9,14 +9,18 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 
 For the upcoming testnet event, this is the minimal hardware configuration:
-> 8 GB RAM 
+:::tip Minimal hardware Configration
+8 GB RAM 
 
-> 100GB SSD
+100GB SSD
 
-> x64 2.0 GHz 2v CPU
+x64 2.0 GHz 2v CPU
+:::
  
 While we do not favor any operation system, more secure and stable Linux server distributions (like CentOS) should be preferred over desktop operating systems (like Mac OS and Windows).
 
 We will provide more detailed information on the hardware setup in due course of time.
 
-Note: Requirements like storage space will change over time
+:::note
+Requirements like storage space will change over time
+:::
