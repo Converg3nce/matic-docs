@@ -47,14 +47,8 @@ We will be testing all features incrementally here; rewards, slashing, replaceme
 
 **Stage 2 - The Grand Staking League**
 
-Based on the performance of all nodes in the previous round, we will have a limited number of testnet validator slots (as per tendermint limit) in this stage. Every node begins with the same amount of stake. The one with the most power in the end wins!
-
-**Advanced**
-
-This is not required to participate in the Counter stake event. However, if you wish to deploy your own Matic Testnet and experiment with the code, please follow the steps mentioned [here](/docs/develop/advanced/deploy-your-own-matic-testnet).
+Stage 2 is the final and last stage of Counter Stake, Matic's incentivized testnet staking program. This is the stage where we will encourage validators and the community to perform "Attacks" and "Break the system" notions. In order to know about Stage 2, you can join our discord channel for more details: https://discord.gg/XvpHAxZ
 
 
 **Queries, any?**
 If you face any trouble during installation or syncing, do share your queries in this [forum](https://forum.matic.network/c/counter-stake) or on our validator [Discord](https://discord.gg/XvpHAxZ) server.  
-
-This will be useful for others to review as well. We’ll try to resolve things as soon as we can. Good luck and looking forward to working together! 

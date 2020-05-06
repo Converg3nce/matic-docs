@@ -18,7 +18,6 @@ We want all validators to run the Validator and Block Producer nodes, keep them 
 **Date: Nov-Dec 2019** 
 **Status**: Completed
 
-You can already try setting up your node. We will inform you when we update our public testnet and you can then download the new genesis file. Get the current one from here: [https://github.com/maticnetwork/public-testnets/CS-1000](https://github.com/maticnetwork/public-testnets/CS-1000)
 
 ### **Stage 1** – Stake on the Beach 
 **Date**: (Feb - Apr 2020)
