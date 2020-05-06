@@ -31,7 +31,7 @@ You can navigate to the specs with these links:
 
 - [Heimdall](/docs/contribute/heimdall/overview)
 - [Bor](/docs/contribute/bor/overview)
-- [Contracts](https://docs.matic.today/docs/contribute/contracts/stakingmanager)
+- [Contracts](/docs/contribute/contracts/stakingmanager)
 
 #### Codebases
 
