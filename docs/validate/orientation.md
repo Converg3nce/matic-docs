@@ -29,7 +29,7 @@ We’ll release the staking contract details for everyone here. The aim is that 
 **Date**: April
 **Status**: Ongoing
 
-Stage 2 is the final and last stage of Counter Stake, Matic's incentivized testnet staking program. This is the stage where we will encourage validators and the community to perform "Attacks" and "Break the system" notions. In order to know about Stage 2, you can join our discord channel for more details: https://discord.gg/XvpHAxZ
+Stage 2 is the final and last stage of Counter Stake, Matic's incentivized testnet staking program. This is the stage where we will encourage validators and the community to perform "Attacks" and "Break the system". In order to know about Stage 2, you can join our discord channel for more details: https://discord.gg/XvpHAxZ.
 
 You are most welcome to help us build components for the ecosystem. Separate bounties via the [Developer Support Program](https://blog.matic.network/matic-developer-support-program/) will also be made available for such third-party components.
 
@@ -41,26 +41,26 @@ The following list will give you a headstart to know more about Matic
 
 Understand the different objectives and activities that are aligned for Counter Stake - Stage 2. There are Objective and Subjective tasks and each of them include a different bounty to it. We have writted a detailed post about all the rewards that are applicable for Stage 2.
 
-Post: https://docs.matic.network/docs/validate/counter-stake-stage-2/rewards
+Article: https://docs.matic.network/docs/validate/counter-stake-stage-2/rewards
 
 #### What is Matic?
 
 [Matic Network](https://matic.network/) is a Layer 2 scaling solution that achieves scale by utilizing sidechains for off-chain computation while ensuring asset security using the Plasma framework and a decentralized network of Proof-of-Stake (PoS) validators.
 
-Post: https://docs.matic.network/docs/validate/basics/what-is-matic
+Article: https://docs.matic.network/docs/validate/basics/what-is-matic
 
 #### Architecture
 
 In order to perform attacks (correctly) we would encourage Validators and community members to understand Matic's Architecture and Code thoroughly. Without the thorough understanding of Core Components such as Heimdall and Bor, it would be difficult to perform attacks correctly on the network. 
 
-Post: https://docs.matic.networ/docs/validate/validator/architecture
+Article: https://docs.matic.networ/docs/validate/validator/architecture
 
 #### Specs
-In order to understand the granular information about core commponents such as Heimdall, Bor and Contracts you can head over to the link below. This will not only help you understand how Matic works under-the-hood but also help you to execute attacks correctly
+In order to understand the granular information about core components such as Heimdall, Bor and Contracts you can head over to the link below. This will not only help you understand how Matic works under-the-hood but also help you to execute attacks correctly
 
-Post: https://docs.matic.network/docs/contribute/heimdall/overview
+Article: https://docs.matic.network/docs/contribute/heimdall/overview
 
-####Codebases
+#### Codebases
 
 Codebase of Matic to understand the granular interaction of how Matic's core components work.
 
