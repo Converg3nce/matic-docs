@@ -92,7 +92,7 @@ matic.withdrawNFT(transactionHash, {
 
 ## Process Exit
 
-The code for confirm withdraw remains common for ERC20 AND ERC721 tokens except for the value of `token`
+The code for process exit remains common for ERC20 AND ERC721 tokens except for the value of `token`
 
 ```js
 init();

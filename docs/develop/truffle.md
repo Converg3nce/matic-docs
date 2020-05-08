@@ -21,9 +21,7 @@ Once we have those installed, we only need one command to install Truffle:
 
 To verify that Truffle is installed properly, type **`truffle version`** on a terminal. If you see an error, make sure that your npm modules are added to your path.
 
-We also will be using [Ganache](https://www.trufflesuite.com/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. You can download Ganache by navigating to [http://truffleframework.com/ganache](http://truffleframework.com/ganache) and clicking the "Download" button.
-
-> If you're new to Truffle then please follow the `getting-started` by truffle, To setup the truffle environment. 
+> If you're new to Truffle then please follow the [Getting Started](https://www.trufflesuite.com/docs/truffle/quickstart) by truffle, To setup the truffle environment. 
 
 ## **truffle-config**
 

@@ -29,7 +29,7 @@ Details: [Network](https://docs.matic.network/docs/integrate/network/)
     - [Using Truffle](/docs/develop/truffle)
 
 - [Connecting to Matic with RPC](https://docs.matic.network/docs/develop/metamask/testnet) - adding Matic network on Metamask.
-    - Same RPC can be used with web3js (click toggle arrow to view example code)
+    - Same RPC can be used with web3js
 
         ```jsx
         // Javascript 

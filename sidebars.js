@@ -24,25 +24,6 @@ module.exports = {
         "home/blockchain-basics/sidechain",
       ],
     },
-    {
-      type: "category",
-      label: "Architecture",
-      items: [
-        "home/architecture/matic-architecture",
-        "home/architecture/matic-flow",
-        "home/architecture/security-models",
-        {
-          type: "category",
-          label: "Bor",
-          items: ["home/architecture/bor-chain", "home/architecture/bor"],
-        },
-        {
-          type: "category",
-          label: "Heimdall",
-          items: ["home/architecture/heimdall-chain"],
-        },
-      ],
-    },
     "home/faq",
   ],
   development: [
@@ -158,6 +139,25 @@ module.exports = {
         "develop/advanced/swap-assets",
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
+        {
+          type: "category",
+          label: "Architecture",
+          items: [
+            "home/architecture/matic-architecture",
+            "home/architecture/matic-flow",
+            "home/architecture/security-models",
+            {
+              type: "category",
+              label: "Bor",
+              items: ["home/architecture/bor-chain", "home/architecture/bor"],
+            },
+            {
+              type: "category",
+              label: "Heimdall",
+              items: ["home/architecture/heimdall-chain"],
+            },
+          ],
+        },
       ],
     },
   ],
