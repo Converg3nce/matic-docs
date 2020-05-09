@@ -98,7 +98,8 @@ module.exports = {
             "develop/maticjs/api-reference",
           ],
         },
-        "develop/advanced/moving-assets",
+        "develop/advanced/mapping-assets",
+        "develop/advanced/submit-mapping-request"
       ],
     },
     {

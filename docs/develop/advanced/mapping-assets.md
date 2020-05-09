@@ -1,6 +1,6 @@
 ---
-id: moving-assets
-title: Moving Assets
+id: mapping-assets
+title: Mapping Assets Explained
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
@@ -8,14 +8,9 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-### Supported Tokens
-
-- ERC20
-- ERC721
-
-> Note: The mapping is executed by an owner account. To request your token to be mapped scroll down and click on 'Submit Mapping Request'
-
 ERC20 and ERC721 tokens on main chain can be deposited and withdrawn from matic chain using plasma protocol. To enable this, a token contract on main chain(*rootToken*) needs to be mapped to a token contract on matic chain(*childToken*).
+
+You can submit your mapping request [here](/docs/develop/advanced/submit-mapping-request).
 
 ## Mapping a token 
 
@@ -23,7 +18,7 @@ Mapping a token involves deploying a *childToken* contract on matic chain and re
 
 A restricted *childToken* can be deployed and registered on matic chain automatically by making a contract call to the ChildChain contract. But if the *rootToken* has extra functionality apart from basic ERC20/ERC721, a custom *childToken* contract needs to be deployed manually.
 
-## Deploying a 'restricted' Child Token 
+## Deploying a 'Restricted' Child Token 
 
 ### Step 1: On Matic
 
@@ -43,7 +38,7 @@ Therefore, we support some types of contracts as [Plasma predicates](https://git
 A mapping on Registry contract is updated for each asset to be mapped. This is done via the [`mapToken` function call](https://github.com/maticnetwork/contracts/blob/fd4ed8343a8abb2dda5fe5a6a75a747cfd7a2807/contracts/common/Registry.sol#L64). This function takes the mapped address returned from the `addToken` call to ChildChain and updates the mapping on Root.
 
 
-## Moving an asset
+## Moving an Asset
 
 ### Deposits
 
@@ -62,12 +57,20 @@ This ensures the asset is locked on Main chain and isn't transferrable while the
       2. Mints an ExitNFT token to the exitor's account - which is representative of the exit initiated on the child chain by the exitor
    3. After the challenge period has ended, processExits burns the Exit NFT and transfers the tokens back from Deposit manager to the exitor.
 
-<hr></hr>
+## Adding functionality to Child token
 
-<center>
-<button style={{padding: '20px', backgroundColor: '#4093ff', color: '#fff', borderRadius: '25px', fontSize : '15px' }}>
-  <a href="https://angela758926.typeform.com/to/GJNUda" target="_blank" style={{color: 'inherit'}}>
-    Submit Mapping Request
-  </a>
-</button>
-</center>
+To add your custom contract as child on matic (added functionality on top of what the child token provides), you can inherit the standard plasma contract and add custom functions according to your use. Eg., 
+
+```javascript
+
+pragma solidity ^0.5.2;
+
+import { ChildERC20 } from "./ChildERC20.sol";
+
+
+contract YourCustomChildToken is ChildERC20 {
+
+  // your custom functions
+
+}
+```
