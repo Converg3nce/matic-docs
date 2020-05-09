@@ -66,7 +66,7 @@ This ensures the asset is locked on Main chain and isn't transferrable while the
 
 <center>
 <button style={{padding: '20px', backgroundColor: '#4093ff', color: '#fff', borderRadius: '25px', fontSize : '15px' }}>
-  <a href="/static/form.html" target="_blank" style={{color: 'inherit'}}>
+  <a href="https://angela758926.typeform.com/to/GJNUda" target="_blank" style={{color: 'inherit'}}>
     Submit Mapping Request
   </a>
 </button>
