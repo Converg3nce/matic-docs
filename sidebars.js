@@ -243,7 +243,7 @@ module.exports = {
         "validate/validator/checkpoint-mechanism",
         "validate/validator/proposer-producer-selection",
         "validate/validator/key_management",
-        "validate/validator/bridge",
+        // "validate/validator/bridge",
         "validate/validator/staking",
         "validate/validator/delegation",
         "validate/validator/derivatives",

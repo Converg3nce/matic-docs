@@ -8,12 +8,14 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
+For all attacks and bugs that are performed/discovered you will need to report them to this Google Form: https://forms.gle/Tnq8KQDhq6s1CYBD9 . Performing an attack and not providing submission of your proof will result in disqualification of your attempt. 
 
-For an issue you have encountered specifically with Heimdall or Heimdall related, you can create an issue in the Heimdall repository: https://github.com/maticnetwork/heimdall/issues
+You need to make sure that you add all relevant details such as Email address and Discord id so as to maintain a rapport of communication in case it's required.
 
-For issues, you have encountered specifically with Bor or Bor related, you can create an issue in the Bor repository: https://github.com/maticnetwork/bor/issues
+You would also need to provide as much details as possible so that the Matic Team can evaluate your submission appropriately.
 
-For clear identification, you can also use labels to tag the issues reported.
+Upon reporting an issue, the Matic Project team will review and update/comment on the status of the issue. Upon evaluation, the Matic team will report the outcome of the submission. The Severity will also be tagged as per the evaluation.
 
-Upon reporting an issue, the Matic Project team will review and update/comment on the status of the issue. Depending on the severity of the issue, the Matic project team may request you to create a PR to provide a fix. Bounties and incentives would be provided for such issues.
+For any further questions, you can always connect with the Community Leaders Anurag & Delroy on Discord or through email.
+Anurag - anurag@matic.network
+Delroy - delroy@matic.network

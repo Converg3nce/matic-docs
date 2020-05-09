@@ -65,7 +65,7 @@ module.exports = {
     announcementBar: {
       id: 'support_us',
       content:
-        '⭐️ Validators, we are moving to <a target="_blank" rel="noopener noreferrer" href="/docs/validate/orientation">Counter Stake Stage 2</a>! ⭐️',
+        '⭐️ Validators, we are moving to <a target="_blank" rel="noopener noreferrer" href="/docs/validate/counter_stake">Counter Stake Stage 2</a>! ⭐️',
       backgroundColor: '#2b6def', // Defaults to `#fff`
       textColor: '#fff', // Defaults to `#000`
     },
