@@ -9,7 +9,6 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Depositing Funds from Ropsten to Matic
 
 ### ERC20
 **Deposit for ERC20 is a 2 step process**
