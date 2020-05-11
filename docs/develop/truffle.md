@@ -63,7 +63,7 @@ module.exports = {
 }
 ```
 
-Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started (gas price on testnet3 can be set to 0, so you don't have to worry about funds right now).
+Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started (gas price on testnet3 can be set to 0, so you don't have to worry about funds right now).To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words. 
 
 ## **Deploying on Matic Network**
 
