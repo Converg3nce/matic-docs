@@ -8,7 +8,7 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-ERC20 and ERC721 tokens on main chain can be deposited and withdrawn from matic chain using plasma protocol. To enable this, a token contract on main chain(*rootToken*) needs to be mapped to a token contract on matic chain(*childToken*).
+ERC20 and ERC721 tokens on Ethereum can be deposited and withdrawn from matic chain using plasma protocol. To enable this, a token contract on Ethereum (*rootToken*) needs to be mapped to a token contract on Matic chain(*childToken*).
 
 You can submit your mapping request [here](/docs/develop/advanced/submit-mapping-request).
 
@@ -16,7 +16,7 @@ You can submit your mapping request [here](/docs/develop/advanced/submit-mapping
 
 Mapping a token involves deploying a *childToken* contract on matic chain and registering the token on both main and matic chain. 
 
-A restricted *childToken* can be deployed and registered on matic chain automatically by making a contract call to the ChildChain contract. But if the *rootToken* has extra functionality apart from basic ERC20/ERC721, a custom *childToken* contract needs to be deployed manually.
+A restricted *childToken* is deployed and registered on Matic chain automatically by making a contract call to the ChildChain contract. But if the *rootToken* has extra functionality apart from basic ERC20/ERC721, a custom *childToken* contract needs to be deployed manually. (Read [adding additional functionality](/docs/develop/advanced/mapping-assets#adding-functionality-to-child-token))
 
 ## Deploying a 'Restricted' Child Token 
 
@@ -59,7 +59,7 @@ This ensures the asset is locked on Main chain and isn't transferrable while the
 
 ## Adding functionality to Child token
 
-To add your custom contract as child on matic (added functionality on top of what the child token provides), you can inherit the standard plasma contract and add custom functions according to your use. Eg., 
+In some cases you might require added functionality on top of what the restricted child token provides. To add your custom token as child on Matic, you can inherit the standard plasma contract and add custom functions according to your use. Eg., 
 
 ```javascript
 
@@ -74,3 +74,5 @@ contract YourCustomChildToken is ChildERC20 {
 
 }
 ```
+
+To submit such a custom token for mapping, submit the form [here](/docs/develop/advanced/submit-mapping-request).
