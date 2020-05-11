@@ -46,15 +46,17 @@ In order to make any transactions, you will also need some Ether in the test acc
 
 ### Matic Faucet
 
-Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `TEST` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below
+Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `TEST` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below. 
 
-<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
-        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#000', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
-          <a href="https://faucet.matic.network/" target="_blank" style={{color: 'inherit'}}>
-            Get Test Tokens
-          </a>
-        </button>
-      </div>
+<center>
+<button style={{padding: '20px', backgroundColor: '#4093ff', color: '#fff', borderRadius: '25px', fontSize : '15px' }}>
+  <a href="https://faucet.matic.network/" target="_blank" style={{color: 'inherit'}}>
+    Get Test Tokens
+  </a>
+</button>
+</center>
+
+> Note: To use your own tokens for deposits and withdrawals, you'll have to get the token 'mapped'. Which essentially means making the contracts on main chain and side chain 'aware' of your custom token. Read more about the Mapping process [here](../advanced/mapping-assets), or you can submit a mapping request [here](../advanced/submit-mapping-request.md). 
 
 ### Basic setup for the tutorial
 
@@ -69,7 +71,7 @@ These Test tokens needs to be added (depending upon the type of asset you are us
 
 |  |Ropsten  |Matic  |
 |---|---|---|
-|TEST (ERC20)  | `0x28C8713DDe7F063Fdc4cA01aB2A8856e0F243Fec` | `0x9a93c912F4eFf0254d178a18ACD980C1B05b57b0` |
+|TEST (ERC20)  | `0xEc5C207897C4378658F52bCCCE0ea648D1f17D65` | `0xBc0AEe9f7b65fd3d8be30ba648e00dB5F734942b` |
 |TEST (ERC721)  | `0x07d799252cf13c01f602779b4dce24f4e5b08bbd` | `0x8D5231e0B79edD9331e0CF0d4B9f3F30d05C47A5` |
 |Wrapped ETH(WETH)   | `0x7BdDd37621186f1382FD59e1cCAE0316F979a866` | `0x8567184E6F9b1B77f24AfF6168453419AD22f90e` |
 
@@ -152,7 +154,7 @@ For now, don’t worry about these values — just keep them as is.
 
 > Note: You will need to add your private key here. Signing of transactions will require your private key. Again, it is **NOT ADVISABLE** to hard code your private key when on production. Later, you can build keeping in mind that the user will be handling their keys at their end with MetaMask, Matic Wallet or any other compatible user wallet.
 
-> !Important: Make sure you prefix `0x` to your private key.
+> Important: Make sure you prefix `0x` to your private key.
 
 
 Let's move to the next part of this tutorial - Deposit assets from root chain to Matic [(Ethereum → Matic)](deposit) 
