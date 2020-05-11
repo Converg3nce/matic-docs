@@ -9,7 +9,6 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Withdraw funds from Matic
 Funds that are available on Matic chain can be withdrawn back to the Ethereum Network.
 
 In Matic, withdrawing is a 3 step process where:

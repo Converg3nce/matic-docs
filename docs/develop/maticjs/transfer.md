@@ -9,7 +9,6 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Transferring funds within Matic
 
 Once you have funds on Matic, you can use those funds to send to others instantly.
 > `recipient` is the receiver’s address, to whom the funds are supposed to be sent.
