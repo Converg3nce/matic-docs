@@ -23,4 +23,4 @@ Matic has a three-layer architecture:
 2. Heimdall (Proof of Stake layer) 
 3. Bor (Block producer layer)
 
-<img src={useBaseUrl("img/matic/Architecture.png")} />
+<img src={useBaseUrl("img/bor/bor-architecture.png")} />
