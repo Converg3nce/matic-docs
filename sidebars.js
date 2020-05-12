@@ -115,7 +115,6 @@ module.exports = {
       label: "Oracles",
       items: [
         "develop/oracles/getting-started",
-        "develop/oracles/bandchain",
         "develop/oracles/razor",
         {
           type: "category",
