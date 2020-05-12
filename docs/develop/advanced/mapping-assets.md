@@ -33,9 +33,9 @@ Plasma security is relatively straightforward to implement for user-controlled a
 
 Therefore, we support some types of contracts as [Plasma predicates](https://github.com/maticnetwork/contracts/tree/master/contracts/root/predicates). We are beginning with a few pre-built predicates such as asset transfers, asset swaps, etc. - and will be increasing the number of pre-built predicates to reflect a wide variety of use cases.
 
-### Step 2: On Main Chain
+### Step 2: On Ethereum
 
-A mapping on Registry contract is updated for each asset to be mapped. This is done via the [`mapToken` function call](https://github.com/maticnetwork/contracts/blob/fd4ed8343a8abb2dda5fe5a6a75a747cfd7a2807/contracts/common/Registry.sol#L64). This function takes the mapped address returned from the `addToken` call to ChildChain and updates the mapping on Root.
+A mapping on Registry contract is updated for each asset to be mapped. This is done via the [`mapToken` function call](https://github.com/maticnetwork/contracts/blob/fd4ed8343a8abb2dda5fe5a6a75a747cfd7a2807/contracts/common/Registry.sol#L64) on Ethereum (or Ropsten). This function takes the mapped address returned from the `addToken` call to ChildChain and updates the mapping on Ethereum.
 
 
 ## Moving an Asset
