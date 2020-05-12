@@ -19,4 +19,4 @@ Matic has a three-layer architecture:
 
 The below image will help you understand how the core components interact with each other.
 
-<img src={useBaseUrl("img/bor/bor-architecture.png")} />
+<img src={useBaseUrl("img/Bor/bor-architecture.png")} />
