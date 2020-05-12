@@ -9,10 +9,14 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-:::caution
+Matic Network is a blockchain application platform that provides hybrid Proof-of-Stake and Plasma-enabled sidechains.
 
-This section is a work in progress.
+Matic has a three-layer architecture:
 
-:::
+1. Staking and Plasma smart contracts on Ethereum
+2. Heimdall (Proof of Stake layer) 
+3. Bor (Block producer layer)
 
-<img src={useBaseUrl("img/matic/ArchitectureDetail.png")} />
+The below image will help you understand how the core components interact with each other.
+
+<img src={useBaseUrl("img/bor/bor-architecture.png")} />
