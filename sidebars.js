@@ -116,7 +116,6 @@ module.exports = {
       label: "Oracles",
       items: [
         "develop/oracles/getting-started",
-        "develop/oracles/bandchain",
         "develop/oracles/razor",
         {
           type: "category",
@@ -273,7 +272,6 @@ module.exports = {
         "validate/counter-stake-stage-2/core-components",
         "validate/counter-stake-stage-2/linux-package-installation",
         "validate/counter-stake-stage-2/running-with-binaries",
-        //"validate/counter-stake-stage-2/running-with-docker",
         "validate/counter-stake-stage-2/stake-on-matic",
         "validate/counter-stake-stage-2/rewards",
         "validate/counter-stake-stage-2/delegate",
