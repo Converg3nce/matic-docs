@@ -13,7 +13,7 @@ Matic is a hybrid Plasma + Proof-of-Stake (PoS) platform. We use a dual-consensu
 
 ## Architecture
 
-<img src={useBaseUrl("img/Bor/BOR.svg")} />
+<img src={useBaseUrl("img/Bor/bor-architecture.png")} />
 
 A blockchain is a set of network clients interacting and working together. The client is a piece of software capable of establishing a p2p communication channel with other clients, signing and broadcasting transactions, deploying and interacting with smart contracts, etc. The client is often referred to as a node.
 
@@ -58,7 +58,7 @@ Block Producers for the Bor layer are a committee selected from the Validator po
 
 Ratio of Stake/Staking power specifies the probability to be selected as a member of the block producer committee. 
 
-<img src={useBaseUrl("img/Bor/Screenshot_2020-02-20_at_2.55.10_PM.png")} />
+<img src={useBaseUrl("img/Bor/bor-span.png")} />
 
 #### Selection Process
 
