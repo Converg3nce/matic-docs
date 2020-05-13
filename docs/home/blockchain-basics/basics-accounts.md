@@ -12,8 +12,8 @@ The global state of Ethereum is comprised of accounts that interact with one ano
 Each account is identified by a 20 byte identifier which is called an address - this is the public key of the account.
 There exist two types of accounts:
 
-1. Externally Owned Account - the private key to which is owned by a person (eg., you’d own the private key and be responsible to keep it safe)
-2. Contract Owned Account - has an associated code with it and is not owned by a person
+1. Externally Owned Account - An account controlled by a private key, and if you own the private key associated with the account you have the ability to send tokens and messages from it.
+2. Contract Owned Account - An account that has an associated smart contract code with it and its private key is not owned by anyone
 
 These can be differentiated as follows:
 

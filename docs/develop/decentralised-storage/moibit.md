@@ -15,4 +15,4 @@ A sample DApp that showcases a demo integration with MoiBit can be found here - 
 
 The sample DApp also allows users to view the file only if off-chain hash of the file matches with on-chain hash, and wherein the hashes do not match, acknowledge that file change was not recorded on Matic network.
 
-You can use this pattern to design various kinds of applications such as personal file storage apps a la Dropbox or store files for in-app actions, etc.
+You can use this pattern to design various kinds of applications such as personal file storage apps like Dropbox or store files for in-app actions, etc.

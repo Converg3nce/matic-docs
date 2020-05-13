@@ -19,7 +19,7 @@ Proof of work describes a system that requires a not-insignificant but feasible 
 Proof-of-Stake mechanism achieve consensus by requiring users to stake an amount of their tokens so as to have a chance of being selected to validate blocks of transactions, and get rewarded for doing so. Priority is given to miners who have purchased the most stake in the blockchain system.
 
 3. DPoS: Delegated Proof of Stake <br></br>
-This forms of consensus mirrors the election of members in governing bodies. Witnesses, those who validate transactions, are elected.
+This form of consensus mirrors the election of members in governing bodies. Witnesses, those who validate transactions, are elected.
 
 ### **:scroll:Resources**
 
