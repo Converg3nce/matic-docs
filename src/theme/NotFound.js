@@ -18,10 +18,10 @@ function NotFound() {
             <p>Ok don't worry. Let's see if we can help you find the correct page.</p>
             <p>
             <ul>
-                <li>If you are a developer looking for more info on building and deploying applications on Matic, please click <a href="https://docs.matic.network/docs/develop/getting-started">here</a>.</li>
-                <li>If you are a validator....</li>
-                <li>If you are looking to integrate your blockchain tools with Matic...</li>
-                <li>If you wish to contribute code to the Matic codebase....</li>
+                <li><b>Developers: </b>If you are a developer looking for more info on building and deploying applications on Matic, please click <a href="https://docs.matic.network/docs/develop/getting-started">here</a>.</li>
+                <li><b>Validators/Delegators: </b>If you are a validator or looking for information on the Matic staking program, click <a href="https://docs.matic.network/docs/validate/orientation">here</a></li>
+                <li><b>Integration Partners: </b>If you are looking to integrate your blockchain tools with Matic, click <a href="https://docs.matic.network/docs/integrate/quickstart">here</a>.</li>
+                <li><b>Code Contributors: </b>If you wish to contribute code to the Matic codebase, get started <a href="https://docs.matic.network/docs/contribute/orientation">here</a>.</li>
             </ul> 
             </p>
           </div>
