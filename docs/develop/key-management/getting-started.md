@@ -17,6 +17,15 @@ The following strategies will be discussed:
 - [Wallet Connect](walletconnect)
 - [Portis](portis)
 
+### Wallets: Metamask, WalletConnect, Portis
+
+1. [**Metamask**](https://metamask.io/): Metamask is a browser add-on that manages a user’s Ethereum wallet by storing their private key on their browser’s data store and the seed phrase encrypted with their password. It is a non-custodial wallet, meaning, the user has full access and responsibility their private key. Once lost, the user can no longer control the savings or restore access to the wallet.
+
+2. [**Wallet Connect**](https://walletconnect.org/): Wallet Connect is an open protocol - not a wallet - built to create a communication link between DApps and Wallets. A wallet and an application supporting this protocol will enable a secure link through a shared key between the two peers. A connection is initiated by the DApp displaying a QR code with a standard WalletConnect URI and the connection is established when the wallet application approves the connection request. Further requests regarding funds transfer are confirmed on the wallet application itself.
+
+3. [**Portis**](https://www.portis.io/): Portis is a web-based wallet built keeping easy user-onboarding in mind. It comes with a javascript SDK that integrates into the DApp and creates a local wallet-less experience for the user. Further, it handles setting up the wallet, transactions and gas fees. Like Metamask, it is non-custodial - users control their keys, Portis just stores them securely. But, unlike Metamask, it is integrated into the application and not the browser. Users have their keys associated with their login id and passwords.
+
+
 The overall steps would essentially remain the same for any client side application to talk to the blockchain:
  
 1. **Set up Web3**: [web3.js](https://web3js.readthedocs.io/) is a javascript library that allows our client-side application to talk to the blockchain. We configure web3 to communicate via Metamask/Wallet Connect/Portis. 

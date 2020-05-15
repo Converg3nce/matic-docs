@@ -14,7 +14,11 @@ Matic is a hybrid Plasma + Proof-of-Stake (PoS) platform. We use a dual-consensu
 ## Architecture
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <img src={useBaseUrl("img/Bor/BOR.svg")} />
+=======
+<img src={useBaseUrl("img/Bor/bor-architecture.png")} />
+>>>>>>> master
 =======
 <img src={useBaseUrl("img/Bor/bor-architecture.png")} />
 >>>>>>> master

@@ -2,7 +2,7 @@
 id: getting-started
 title: Application development on Matic
 sidebar_label: Getting Started
-description: Welcome to the most exciting and innovative platform to build your blockchain application on **Matic Blockchain**. Blockchain technology is poised to revolutionise the way the digital world handles data and does business. Be a part of this revolution and get a head start with decentralised application development on Matic.
+description: Build your next blockchain app on Matic.
 keywords:
   - docs
   - matic
