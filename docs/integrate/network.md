@@ -14,14 +14,14 @@ image: https://matic.network/banners/matic-network-16x9.png
 - [Checkpoint Status](https://status.matic.today/#/checkpoints) -> To view checkpoint status
 
 ## Testnets
-| Network   | Link | Status         | Description                                                                                                   |
-|-----------|------|----------------|----------------------------------------------------------------------------------------------------------------|
-| TestnetV3 | https://testnetv3.matic.network | Running        | With new contracts, withdrawals will work for new deposits only; old deposits will not be able to be withdrawn |
-| TestnetV2 | https://testnet2.matic.network | Running        | With old contracts; Withdrawals working                                                                        |
+| Network   | RPC | Status         | Description                                                                                                    | Block Explorer
+|-----------|------|----------------|----------------------------------------------------------------------------------------------------------------|------------------------------------
+| TestnetV3 | [:link:](https://testnetv3.matic.network) | Running        | With new contracts, withdrawals will work for new deposits only; old deposits will not be able to be withdrawn | [:ledger:](https://testnetv3-explorer.matic.network)
+| TestnetV2 | [:link:](https://testnet2.matic.network) | Running        | With old contracts; Withdrawals working                                                                        | [:ledger:](https://explorer.testnet2.matic.network)
 
 
 ## Mainnets
-| Network       | Link | Status     | Network Status                                                               |
-|---------------|------|------------|------------------------------------------------------------------------------|
-| BetaV2        |  https://betav2.matic.network | Running    | with old contracts: withdrawals working (new DApps should be sent here only) |
-| Alpha-mainnet | https://alpha.ethereum.matic.network | Running    | With old contracts; withdrawals not working                                  |
+| Network       | RPC | Status     | Network Status                                                               | Block Explorer
+|---------------|------|------------|------------------------------------------------------------------------------|-------------------------------------
+| BetaV2        | [:link:](https://betav2.matic.network)  | Running    | with old contracts: withdrawals working (new DApps should be sent here only) |[:ledger:](https://betav2-explorer.matic.network)
+| Alpha-mainnet | [:link:](https://alpha.ethereum.matic.network) | Running    | With old contracts; withdrawals not working                                  |[:ledger:](https://alpha-mainnet.explorer.matic.network)

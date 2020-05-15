@@ -21,9 +21,7 @@ Once we have those installed, we only need one command to install Truffle:
 
 To verify that Truffle is installed properly, type **`truffle version`** on a terminal. If you see an error, make sure that your npm modules are added to your path.
 
-We also will be using [Ganache](https://www.trufflesuite.com/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. You can download Ganache by navigating to [http://truffleframework.com/ganache](http://truffleframework.com/ganache) and clicking the "Download" button.
-
-> If you're new to Truffle then please follow the `getting-started` by truffle, To setup the truffle environment. 
+> If you're new to Truffle then please follow the [Getting Started](https://www.trufflesuite.com/docs/truffle/quickstart) by truffle, To setup the truffle environment. 
 
 ## **truffle-config**
 
@@ -65,7 +63,7 @@ module.exports = {
 }
 ```
 
-Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started (gas price on testnet3 can be set to 0, so you don't have to worry about funds right now).
+Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started (gas price on testnet3 can be set to 0, so you don't have to worry about funds right now).To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words. 
 
 ## **Deploying on Matic Network**
 

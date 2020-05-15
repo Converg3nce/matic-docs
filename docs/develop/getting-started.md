@@ -11,28 +11,100 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 Welcome to the most exciting and innovative platform to build your blockchain application on **Matic Blockchain**. Blockchain technology is poised to revolutionise the way the digital world handles data and does business. Be a part of this revolution and get a head start with decentralised application development on Matic.
 
-If this is overwhelming, that’s okay! You can jump right into the fire and start hacking. Here are a few pointers before you start diving into resources, repositories, and documentation.
+This page will act as your guide into the **Matic Ecosystem**. You'll find links to some useful resources and websites to get you up and started with building on Matic in particular and Blockchain in general. Feel free to reach out to us on Telegram/Discord. 
 
-1. **Beware the cost of being on the bleeding edge** More so than typical niche programming, dapp and blockchain development moves very quickly. Deep into learning, you may find complex code repositories, 404s on a documentation site, or, perhaps, no documentation at all. Rather than seeing this as a deterrent, see it as an invitation to a **Opportunity**. Ping on our developer channel, find the Discord / Gitter / Telegram channel, post on Stack Overflow or Reddit — you may be surprised at the rate of response and openness of the community.
-2. **The learning curve may be daunting, but the barrier to entry is low**. All communities have their grumps, of course, but if you do the work, put in the effort, it will be noticed. Projects welcome pull requests from outsiders and support will be there if you’ve exhausted every other resource. We’re working on creating a better world and can use all the help we can get. We’re just glad you’re here.
+## **Developer Quick Start**
 
-What are you waiting for? Let's get started!!!
+If you're an Ethereum Developer, you're already a Matic developer. 
+All the tools you're familiar with are supported on Matic out of the box: Truffle, Remix, Web3js. 
+Switch over to Matic's RPC and get started!
 
-We divided learning dapp development into two sections: learning and keeping up with Matic & Blockchain development. The first resources help you understand the similarities and differences from Web 2 to Web 3 (as blockchain is commonly called). The second are resources to keep up with that development.
-
-# **Learning Dapp Development**
-
-### QuickStart
-
-For developers who want to learn about building on Matic or Ethereum. The Tutorials available will teach you how to write a smart contract, deploy it to Matic or Ethereum, and interact with the contracts through a web-based application.
+Matic Test Network details:
+Network: **Matic Testnetv3,** connects with **Ethereum's Ropsten Testnet.** 
+Details: [Network](https://docs.matic.network/docs/integrate/network/) 
 
 - [Setup Metamask Wallet](/docs/develop/metamask/hello)
 * Deploy your Contracts on Matic Network
     - [Using Remix](/docs/develop/remix)
     - [Using Truffle](/docs/develop/truffle)
-* Configure the Web3 RPC-URL to https://testnetv3.matic.network, *Everything else remains the same*
->  Matic Mainnet will have PoS security, with greater Plasma guarantees being added
 
+- [Connecting to Matic with RPC](https://docs.matic.network/docs/develop/metamask/testnet) - adding Matic network on Metamask.
+    - Same RPC can be used with web3js
+
+        ```jsx
+        // Javascript 
+
+        const Web3 = require('Web3')
+        const web3 = new Web3('https://testnetv3.matic.network')
+
+        // web3 object is now connected with Matic's node
+        ```
+
+---
+
+### **🦕 Already have a dApp?**
+
+- **Migrating from Ethereum chain (or any EVM based chain for that matter)**
+
+    Deploy all your smart contracts directly on Matic chain. You don't have to worry about the underlying architecture, as long as it is EVM compatible!
+
+    - [Deploying your dApp on Matic](https://docs.matic.network/docs/integrate/quickstart)
+- **Using Matic as a faster transactions layer**
+
+    Using Matic as a transactions layer in your DApp deployed on Mainnet, you can get started with getting your tokens mapped by us.
+
+    - Getting your tokens mapped on Matic: 👋🏼Ping us on [http://bit.ly/matic-technical-group](http://bit.ly/matic-technical-group)
+
+### **🌱 Building a new dApp on Matic?**
+
+**🏗️ Start building!**
+
+- [Full Stack DApp: Tutorial Series](https://kauri.io/full-stack-dapp-tutorial-series/5b8e401ee727370001c942e3/c)
+- Getting to know your tools:
+    - [Web3js](https://www.dappuniversity.com/articles/web3-js-intro), [Remix](https://docs.matic.network/docs/develop/remix/), [Truffle](https://docs.matic.network/docs/develop/truffle), [Metamask](https://docs.matic.network/docs/develop/metamask/hello)
+- [Writing your first DApp on Matic!](https://docs.matic.network/docs/develop/full-stack-dapp-with-pos)
+
+**😎 Advanced**
+
+- [Sidechains and Plasma](https://docs.matic.network/docs/home/blockchain-basics/sidechain)
+- [Matic's architecture and Security](https://docs.matic.network/docs/home/architecture/components)
+- [When to use Plasma](https://docs.matic.network/docs/home/architecture/security-models)
+- [Moving assets from Mainchain to Matic chain: the Plasma way](https://docs.matic.network/docs/develop/maticjs/getting-started)
+- [Swapping Plasma Assets](https://docs.matic.network/docs/develop/advanced/swap-assets)
+
+---
+<div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
+
+<button className="btn btn-primary btn-md" style={{padding: '15px', marginLeft: '40px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 1px 4px rgba(6, 16, 36, 0.12)'}}>
+  
+  <a href="https://www.notion.so/Video-Tutorials-Library-f16cbb8c3d9d47d8bc809e06519f110c" target="_blank" style={{color: 'inherit'}}>
+    Video Tutorials Library
+  </a>
+</button>
+
+<button className="btn btn-primary btn-md" style={{padding: '15px', marginLeft: '40px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 1px 4px rgba(6, 16, 36, 0.12)'}}>
+  
+  <a href="https://www.notion.so/Writings-by-the-Team-c979819406894abb964cb50ae197f376" target="_blank" style={{color: 'inherit'}}>
+    Writings by the Team
+  </a>
+</button>
+
+<button className="btn btn-primary btn-md" style={{padding: '15px', marginLeft: '40px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 1px 4px rgba(6, 16, 36, 0.12)'}}>
+
+  <a href="https://www.notion.so/f5739c3ed3cc40e3ae71d5935a72143d" target="_blank" style={{color: 'inherit'}}>
+    Matic Tools
+  </a>
+</button>
+
+<button className="btn btn-primary btn-md" style={{padding: '15px', marginLeft: '40px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 1px 4px rgba(6, 16, 36, 0.12)'}}>
+  
+  <a href="https://www.notion.so/FAQs-2192c487105342ae90c54efadd101cac" target="_blank" style={{color: 'inherit'}}>
+    FAQs
+  </a>
+</button>
+      </div>
+
+---
 
 ### **Learn the developer tools**
 
@@ -65,7 +137,8 @@ For developers who want to learn about building on Matic or Ethereum. The Tutori
 Hackathons take place at blockchain conferences and meetups all over the world. Chances are you can’t hop on a plane on a moment’s notice, but some conferences or projects host virtual hackathons open to anyone with an internet connection.
 
 <div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
-        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#2BBDF7', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
+        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
+          
           <a href="https://discord.gg/yCj3gc" target="_blank" style={{color: 'inherit'}}>
             Matic Hackathons Discord Channel
           </a>
@@ -136,3 +209,10 @@ Twitter:
 - [Unconfirmed](https://unconfirmed.libsyn.com/)
 - [Epicenter](https://epicenter.tv/)
 - [11:FS Blockchain Insider](https://bi.11fs.com/)
+
+## Pointers
+
+If this is overwhelming, that’s okay! You can jump right into the fire and start hacking. Here are a few pointers before you start diving into resources, repositories, and documentation.
+
+1. **Beware the cost of being on the bleeding edge** More so than typical niche programming, dapp and blockchain development moves very quickly. Deep into learning, you may find complex code repositories, 404s on a documentation site, or, perhaps, no documentation at all. Rather than seeing this as a deterrent, see it as an invitation to a **Opportunity**. Ping on our developer channel, find the Discord / Gitter / Telegram channel, post on Stack Overflow or Reddit — you may be surprised at the rate of response and openness of the community.
+2. **The learning curve may be daunting, but the barrier to entry is low**. All communities have their grumps, of course, but if you do the work, put in the effort, it will be noticed. Projects welcome pull requests from outsiders and support will be there if you’ve exhausted every other resource. We’re working on creating a better world and can use all the help we can get. We’re just glad you’re here.

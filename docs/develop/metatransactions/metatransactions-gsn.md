@@ -8,6 +8,11 @@ keywords:
   - matic
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
+:::caution
+
+This section is a work in progress.
+
+:::
 
 Writing a GSN compatible application requires the following changes/workarounds on your application:
 
