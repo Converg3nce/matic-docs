@@ -118,7 +118,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout cs-2007
+// For eg: git checkout v0.1.7
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
