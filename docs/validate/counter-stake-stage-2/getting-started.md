@@ -49,7 +49,7 @@ We will be testing all features incrementally here; rewards, slashing, replaceme
 
 Stage 2 is the final and last stage of Counter Stake, Matic's incentivized testnet staking program. This is the stage where we will encourage validators and the community to perform "Attacks" and "Break the system" notions. In order to know about Stage 2, you can join our discord channel for more details: https://discord.gg/XvpHAxZ
 
-You should not stake your Mainnet Matic tokens as Counter Stake - Stage 2 is a testnet program. In order to stake on the testnet, please contact Matic Team on the discord server.
+You should not stake your Mainnet Matic tokens as Counter Stake - Stage 2 is a testnet program. In order to stake on the testnet, please contact Matic Team on the discord server. If you do not have **test staking tokens** you should not initiate the process to setup your node.
 
 **Setup your Full Node** 
 
