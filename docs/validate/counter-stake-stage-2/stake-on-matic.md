@@ -57,7 +57,7 @@ Now that you have done a basic health check and generated the keystore and priva
 
 You can stake on Matic 2 different ways, Using the Validator Dashboard or by CLI
 
-**Stake using validator dashboard**
+###**Stake using validator dashboard**
 
 In order to stake using the Validator Dashboard, you can use the following link to access the dashboard: https://wallet.matic.today/staking
 
@@ -89,7 +89,8 @@ Once the transaction is completed you will have staked successfully to become a 
 
 **Note:** For the changes to take effect on the Staking Dashboard, it requires a minimum of 12 Block Confirmations to verify and finalize. After 12 Block Confirmations, you can refresh your page and you would see the updated details on the Dashboard.
 
-**Stake using CLI**
+
+###**Stake using CLI**
 
 **Approve**
 
