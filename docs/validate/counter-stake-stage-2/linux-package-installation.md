@@ -38,8 +38,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/v0.1.6/matic-heimdall_0.1.6_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/v0.1.6/matic-bor_0.1.6_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.7/matic-heimdall_0.1.7_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.7/matic-bor_0.1.7_amd64.deb
 ```
 
     
@@ -50,8 +50,8 @@ This will setup needed services for the validator nodes - Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_0.1.6_amd64.deb
-$ sudo dpkg -i matic-bor_0.1.6_amd64.deb
+$ sudo dpkg -i matic-heimdall_0.1.7_amd64.deb
+$ sudo dpkg -i matic-bor_0.1.7_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -78,8 +78,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2006
-// Example: $ cd public-testnets/CS-2006
+// Current testnet version is CS-2007
+// Example: $ cd public-testnets/CS-2007
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -280,7 +280,7 @@ sudo mv password.txt /etc/bor/dataDir/
 $ sudo vi  /etc/bor/metadata
 
 // eg: add the NETWORK_ID and VALIDATOR_ADDRESS in the following format:
-NETWORK_ID=2006
+NETWORK_ID=2007
 VALIDATOR_ADDRESS=<your Ethereum/Goerli wallet address> 
 ```
 
