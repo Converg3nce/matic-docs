@@ -49,12 +49,14 @@ We will be testing all features incrementally here; rewards, slashing, replaceme
 
 Stage 2 is the final and last stage of Counter Stake, Matic's incentivized testnet staking program. This is the stage where we will encourage validators and the community to perform "Attacks" and "Break the system" notions. In order to know about Stage 2, you can join our discord channel for more details: https://discord.gg/XvpHAxZ
 
-Setup your Full Node 
+You should not stake your Mainnet Matic tokens as Counter Stake - Stage 2 is a testnet program. In order to stake on the testnet, please contact Matic Team on the discord server.
+
+**Setup your Full Node** 
 
 > * **Option 1:** [Linux Package Installation](https://docs.matic.network/docs/validate/counter-stake-stage-2/linux-package-installation) (Recommended; lightweight, native)
 > * **Option 2:** [Running with Binaries](https://docs.matic.network/docs/validate/counter-stake-stage-2/running-with-binaries) (Relatively complex to setup, but offers advanced 
 
-Stake on Matic
+**Stake on Matic**
 
 Stake tokens to become a validator - [follow this guide](https://docs.matic.network/docs/validate/counter-stake-stage-2/stake-on-matic)
 
