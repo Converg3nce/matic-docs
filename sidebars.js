@@ -282,6 +282,7 @@ module.exports = {
       ],
     },
     "validate/faqs",
+    "validate/bug-bounty-program",
     "validate/reporting-issues",
     "validate/validator/rewards",
   ],
