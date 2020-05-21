@@ -287,6 +287,7 @@ module.exports = {
     "validate/validator/rewards",
   ],
   Contributors: [
+    "contribute/bug-bounty-program",
     "contribute/orientation",
     {
       type: "category",
