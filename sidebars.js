@@ -282,10 +282,12 @@ module.exports = {
       ],
     },
     "validate/faqs",
+    "validate/bug-bounty-program",
     "validate/reporting-issues",
     "validate/validator/rewards",
   ],
   Contributors: [
+    "contribute/bug-bounty-program",
     "contribute/orientation",
     {
       type: "category",
