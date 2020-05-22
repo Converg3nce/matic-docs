@@ -23,5 +23,5 @@ image: https://matic.network/banners/matic-network-16x9.png
 ## Mainnets
 | Network       | RPC | Status     | Network Status                                                               | Block Explorer
 |---------------|------|------------|------------------------------------------------------------------------------|-------------------------------------
-| BetaV2        | https://betav2.matic.network  | Running    | with old contracts: withdrawals working (new DApps should be sent here only) |[:ledger:](https://betav2-explorer.matic.network)
+| BetaV2        | https://betav2.matic.network  | Running    | With old contracts: withdrawals working (new DApps should be sent here only) |[:ledger:](https://betav2-explorer.matic.network)
 | Alpha-mainnet | https://alpha.ethereum.matic.network | Running    | With old contracts; withdrawals not working                                  |[:ledger:](https://alpha-mainnet.explorer.matic.network)
