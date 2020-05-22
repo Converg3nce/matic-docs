@@ -53,9 +53,11 @@ The following output should appear:
 ```
 Now that you have done a basic health check and generated the keystore and private key for Bor and Heimdall respectively, you can now proceed to staking your tokens on Matic and become a validator.
 
-## Stake on Ethereum chain
+## Stake on Matic
 
-You can stake on Matic 2 different ways, Using the Validator Dashboard or by CLI
+You can stake on Matic 2 different ways, Using the Validator Dashboard or by CLI. 
+
+**Please note that Counter Stake is a testnet program. Do not stake your Mainnet Matic tokens**
 
 ### Stake using validator dashboard 
 
