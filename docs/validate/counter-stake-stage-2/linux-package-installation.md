@@ -38,8 +38,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/v0.1.7/matic-heimdall_0.1.7_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/v0.1.7/matic-bor_0.1.7_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.8/matic-heimdall_0.1.8_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.8/matic-bor_0.1.8_amd64.deb
 ```
 
     
@@ -50,8 +50,8 @@ This will setup needed services for the validator nodes - Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_0.1.7_amd64.deb
-$ sudo dpkg -i matic-bor_0.1.7_amd64.deb
+$ sudo dpkg -i matic-heimdall_0.1.8_amd64.deb
+$ sudo dpkg -i matic-bor_0.1.8_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -78,8 +78,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2007
-// Example: $ cd public-testnets/CS-2007
+// Current testnet version is CS-2008
+// Example: $ cd public-testnets/CS-2008
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -199,11 +199,24 @@ The key called `catching_up` will show your sync status, if it's not catching up
 
 **Expected Output**
 
-Your `heimdall-node` should be syncing now! You can see logs of the above services under `/var/log/matic-logs/` 🤩 or you could also run the command
+Your `heimdall-node` should be syncing now! You can see view the logs by running this command:
 
 ```js
-tail -f /var/log/matic-logs/heimdalld.log
+journalctl -u heimdalld.service -f 
 ```
+
+To get logs for Heimdall rest-server, you can run this command:
+
+```js
+journalctl -u heimdalld-rest-server.service -f 
+```
+
+To get logs for Heimdall Bridge, you can this command:
+
+```js
+journalctl -u heimdalld-bridge.service -f 
+```
+
 
 If everything's well, then your logs should look something like this:
 
@@ -280,7 +293,7 @@ sudo mv password.txt /etc/bor/dataDir/
 $ sudo vi  /etc/bor/metadata
 
 // eg: add the NETWORK_ID and VALIDATOR_ADDRESS in the following format:
-NETWORK_ID=2007
+NETWORK_ID=2008
 VALIDATOR_ADDRESS=<your Ethereum/Goerli wallet address> 
 ```
 

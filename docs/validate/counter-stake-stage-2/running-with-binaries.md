@@ -81,7 +81,7 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout v0.1.7
+// For eg: git checkout v0.1.8
 $ git checkout <TAG OR BRANCH>
 $ make install
 ```
@@ -118,7 +118,7 @@ $ cd $GOPATH/src/github.com/maticnetwork
 $ git clone https://github.com/maticnetwork/bor
 $ cd bor
 // Checkout to a public-testnet version.
-// For eg: git checkout v0.1.7
+// For eg: git checkout v0.1.8
 $ git checkout <TAG OR BRANCH>
 $ make bor
 
@@ -137,8 +137,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2007
-// Example: $ cd public-testnets/CS-2007
+// Current testnet version is CS-2008
+// Example: $ cd public-testnets/CS-2008
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -173,7 +173,7 @@ Move this validator key file to heimdall config folder.
 
 Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers in the file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
-To see the list of peers, run the following command, you could do so by running the command `cat /public-testnets/CS-2007/heimdall/heimdall-seeds.txt`.
+To see the list of peers, run the following command, you could do so by running the command `cat /public-testnets/CS-2008/heimdall/heimdall-seeds.txt`.
 
 All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
 
