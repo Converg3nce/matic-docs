@@ -1,7 +1,7 @@
 ---
 id: transfer-data
-title: Walkthrough, Reading data from Ethereum chain
-description: Build your next blockchain app on Matic.
+title: Transfer data from Ethereum to Matic
+description: Transfer state or data from Ethereum to Matic via Contracts
 keywords:
   - docs
   - matic
