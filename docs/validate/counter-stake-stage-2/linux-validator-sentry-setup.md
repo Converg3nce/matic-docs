@@ -81,8 +81,6 @@ $ cd public-testnets/<testnet version>
 // Current testnet version is CS-2008
 // Example: $ cd public-testnets/CS-2008
 
-$ cd without-sentry/heimdall
-
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
 $ source ~/.bashrc
