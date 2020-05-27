@@ -403,7 +403,9 @@ Add phrase you choose during generating key store file in `password.txt`
 #### 6.7: Start Bor
 
 ```js
-// You'll find the following in bor-config directory
+// You'll find the following in bor directory in Public testnets folder
+$ cd $CONFIGPATH/bor
+
 $ bash start.sh <Your address>
 ```
 
