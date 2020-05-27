@@ -147,6 +147,8 @@ $ cd public-testnets/<testnet version>
 // Current testnet version is CS-2008
 // Example: $ cd public-testnets/CS-2008
 
+cd without-sentry/heimdall
+
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
 $ source ~/.bashrc
@@ -207,6 +209,16 @@ Starting Heimdall is fairly easy, the below command will start heimdall using th
 $ heimdalld start
 
 ```
+In Binaries, running the above command will not create a log. In order to create a log for Heimdall you can run this command instead
+
+```js
+
+$ cd
+
+$ mkdir logs
+
+$ heimdalld start > logs/heimdalld.log 2>&1 &
+```
 
 **Run rest-server**
 
@@ -216,12 +228,25 @@ The rest-server can be used by external services like explorer, faucets etc to c
 $ heimdalld rest-server
 ```
 
+If you wish to write logs for `rest-server` you can run this command instead
+
+```js
+heimdalld rest-server > logs/heimdalld-rest-server.log 2>&1 &
+```
+
+
 **Run Bridge**
 
 Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge.
 
 ```bash
 $ bridge start --all
+```
+
+Similarly, for Heimdall bridge, you can run this command to write logs for it
+
+```js
+bridge start --all > logs/heimdalld-bridge.log 2>&1 &
 ```
 
 > Note: Bridge won't run without `rabbitmq` and `rest-server` so ensure they are running before trying to run bridge.
@@ -293,7 +318,11 @@ The key called `catching_up` will show your sync status, if it's not catching up
 Your `heimdall-node` should be syncing now! You can check the logs by running the command
 
 ```js
-tail -f ~/.heimdalld/logs/heimdall.log
+$ tail -f logs/heimdalld.log
+
+$ tail -f logs/heimdalld-rest-server.log 
+
+$ tail -f logs/heimdalld-bridge.log
 ```
 
 If everything's well, then your logs should look something like this:
