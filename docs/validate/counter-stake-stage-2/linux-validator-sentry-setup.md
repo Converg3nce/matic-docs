@@ -1,7 +1,7 @@
 ---
-id: linux-package-installation
-title: Setup Matic Validator Node
-sidebar_label: Linux Package Installation
+id: linux-validator-sentry-setup
+title: Setup your Validator & Sentry Node using Linux Packages
+sidebar_label: Setup Sentry + Validator (Linux)
 description: Build your next blockchain app on Matic.
 keywords:
   - docs

@@ -1,7 +1,7 @@
 ---
-id: running-with-binaries
-title: Setup Matic Validator Node
-sidebar_label: Running with Binaries
+id: binaries-validator-sentry-setup
+title: Setup your Validator & Sentry Node using Binaries
+sidebar_label: Setup Sentry + Validator (Binaries)
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
