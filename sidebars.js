@@ -158,6 +158,7 @@ module.exports = {
         "develop/advanced/swap-assets",
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
+        "develop/advanced/transfer-data"
       ],
     },
   ],
