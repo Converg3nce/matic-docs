@@ -14,7 +14,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 This guide will help you setup your **Validator Node** as well your **Sentry Node**. However, you will have to setup your nodes in parallel, as setting them both up successfully will require relay of information from your Sentry node to validator and vice versa. **Please follow the steps carefully**
 
-Note that here onwards, each step would contain a legend (**Required for Sentry**) whenever a Step is required for setting your Sentry Node. This basically means that you will have to follow that step for Sentry. For setting your Validator node, all of the steps will be applicable albiet a few changes in the config files which will be described in the steps below.
+Note that here onwards, each step would contain a legend (**Required for Sentry**) whenever a Step is required for setting your Sentry Node. This basically means that you will have to follow that step for Sentry. For setting your Validator node, all of the steps will be applicable albeit a few changes in the config files, which will be described in the steps below.
 
 Also, note that your Sentry node needs to be a **separate** machine or VM when you're setting it up.
 
@@ -144,8 +144,8 @@ Now you have `bor` installed on your local system and the binary is available in
 
 `CONFIGPATH` for Validator Node and Sentry Node will be different. You will need to make sure that these `CONFIGPATH` is set correctly for your Validator and Sentry Node.
 
-`Validator Node = /CS-2008/sentry/validator`
-`Sentry Node = /CS-2008/sentry/sentry`
+`Validator Node = .../CS-2008/sentry/validator`
+`Sentry Node = .../CS-2008/sentry/sentry`
 
 #### 6.1: Get Heimdall genesis config (**Required for Sentry Node**)
 
@@ -210,15 +210,17 @@ vi ~/.heimdalld/config/config.toml
 
 * Now in this file, check for the parameter `pex`. The value for this parameter should be `true`.
 
-* Check for the parameter `private_peer_ids`. You will need to add your Validator NodeID here. To get your Validator NodeID you can run this command `heimdalld tendermint show-node-id`. After you add your NodeID it should look something like this `private_peer_ids = "2170800c8a57c5e09b59992902f39ba350f1c0ff"`
+* Check for the parameter `private_peer_ids`. You will need to add your Validator NodeID here. To get your Validator NodeID, **you will need to run this command on your Validator node instance**: `heimdalld tendermint show-node-id`. After you add your NodeID it should look something like this `private_peer_ids = "2170800c8a57c5e09b59992902f39ba350f1c0ff"`
 
 * Check for the parameter `addr_book_strict`. This should also be set to `false`
 
-* In the `persistent_peers` you will need to add one peer from the `heimdall-seeds.txt` file and your Validator node id in the following format:
+* In the `persistent_peers`, you will need to add one peer from the `heimdall-seeds.txt` file and your Validator node id in the following format:
 
 ```js
 persistent_peers = "<validator NodeID@validator_instance_ip:26656,one peer from heimdall-seeds.txt"
 ```
+
+Note that peers are other nodes you want to sync to in order to maintain your full node. Peers are specified in the following format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
 
 **Config changes for Validator Node**
 
@@ -234,13 +236,11 @@ vi ~/.heimdalld/config/config.toml
 
 * Check for the parameter `addr_book_strict`. This should also be set to `false`
 
-* In the `persistent_peers` You will need to add your Sentry NodeID here. To get your Sentry NodeID you can run this command `heimdalld tendermint show-node-id` and add it in the following format.
+* In the `persistent_peers`, you will need to add your Sentry NodeID here. To get your Sentry NodeID, **you will need run this command on the Sentry node instance**: `heimdalld tendermint show-node-id` and add it in the following format.
 
 ```js
 persistent_peers = "sentry_machineNodeID@sentry_instance_ip:26656"
 ```
-
-Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers in the file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
 
 
 #### 6.3: Start & sync Heimdall (Required for Sentry Node)
@@ -255,7 +255,7 @@ $ heimdallcli version --long
 
 **Run Heimdall**
 
-Starting Heimdall is fairly easy, the below command will start heimdall using the genesis file in `~/.heimdalld/config/genesis.json`. Make sure that you start Heimdall for your Sentry Node first and only then start it for your Validator Node.
+Starting Heimdall is fairly easy, the below command will start Heimdall using the genesis file in `~/.heimdalld/config/genesis.json`. Make sure that you start Heimdall for your Sentry Node first and only then start it for your Validator Node.
 
 ```js
 
@@ -405,9 +405,9 @@ To sync blocks on the testnet, you need to add peers. The file `static-nodes.jso
 
 **Configuring peers for Bor on Sentry Node**
 
-* Run this command `bootnode -genkey ~/nodekey` command to generate the nodekey.
+* Run this command `bootnode -genkey ~/nodekey` command to generate the nodekey **on the Sentry node**.
 
-* Run this command `mv ~/nodekey ~/.bor/dataDir/bor/`  to copy nodekey.
+* Run this command `mv ~/nodekey ~/.bor/dataDir/bor/`  to copy the nodekey to the Bor data directory.
 
 * Run this command `bootnode -nodekey ~/.bor/dataDir/bor/nodekey -writeaddress` to get the enodeID which will be used in validator node static-nodes.json file. Keep the EnodeID handy with you as it will be required for your Validator node.
 
@@ -426,19 +426,21 @@ To sync blocks on the testnet, you need to add peers. The file `static-nodes.jso
 
 You will need your EnodeID of your **Validator node**. To get the enode for your validator follow the following steps:
 
-* Run this command `bootnode -genkey ~/nodekey` command to generate the nodekey.
+* Run this command `bootnode -genkey ~/nodekey` command to generate the nodekey **on the Validator node**.
 
-* Run this command `bootnode -nodekey ~/.bor/dataDir/bor/nodekey -writeaddress` to get the enodeID
+* Run this command `mv ~/nodekey ~/.bor/dataDir/bor/`  to copy the nodekey to the Bor data directory.
 
-Once you get the EnodeID for your Validator Node, you can then add it to your `static-nodes.json` file. Note, you can either keep all the other peers in the static-nodes.json file or your can keep just 1 along with your Validator EnodeID. If you don't keep your Validator EnodeID here, your validator will not sync correctly.
+* Run this command `bootnode -nodekey ~/.bor/dataDir/bor/nodekey -writeaddress` to get the enodeID.
+
+Once you get the EnodeID for your Validator Node, you can then add it to your `static-nodes.json` file **on the Sentry node**. Note, you can either keep all the other peers in the static-nodes.json file or your can keep just 1 along with your Validator EnodeID. If you don't keep your Validator EnodeID here, your validator will not sync correctly.
 
 Once you're done adding your Validator EnodeID to the file, you're done with updating the config for your Sentry Node.
 
-**Configuring peers for Bor on Sentry Node**
+**Configuring peers for Bor on the Validator Node**
 
-You will need to add the EnodeID of your Sentry Node. To get the EnodeID check the section above.
+You will need to add the EnodeID of your Sentry Node to the validator node config. To get the EnodeID check the section above.
 
-* Now you will need to update the `static-nodes.json` file on your Sentry node. To open the file run `sudo vi ~/.bor/dataDir/bor/static-nodes.json`. You should see an output like this:
+* Now you will need to update the `static-nodes.json` file on your Validator node. To open the file run `sudo vi ~/.bor/dataDir/bor/static-nodes.json`**on your Validator node**. You should see an output like this:
 
 ```js
 [
@@ -446,21 +448,6 @@ You will need to add the EnodeID of your Sentry Node. To get the EnodeID check t
 ]
 ```
 
-You will need to replace this with the EnodeID of your Sentry Node. Once this is done you will need to make few changes in the `start.sh` file in the Bor directory.
-
-* Open the `start.sh` file
-
-* Add the following parameters to the list `--nodiscover` and `--maxpeers 1`. For example
-
-```js
-...
-  --unlock $ADDRESS \
-  --password $BOR_DIR/password.txt \
-  --allow-insecure-unlock \
-  --nodiscover --maxpeers 1 \
-  --metrics \
-...
-```
 
 **Adding additional peers (optional)**
 
@@ -475,9 +462,11 @@ If you have certain peers you always want to connect to, you can configure perma
 
 For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
 
-**Generate Bor keystore file**
+#### 6.6 **Generate Bor keystore file**
 
-To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Ethereum/Goerli's wallet Private key. This would be the same private key that yo used for generating your `validator-key`. This step is only required to be done on your Validator Node.
+> **Note this is only needed for the Validator Bor node, and not for the Sentry Bor node**
+
+To generate a Bor keystore for your validator, you can run the following command. The private key required as the input is your Ethereum/Goerli's wallet Private key. This would be the same private key that you used for generating your `validator-key`. 
 
 ```bash
 heimdallcli generate-keystore <Your Ethereum/>Goerli wallet private key>
@@ -516,7 +505,7 @@ You will need to start Bor on your Sentry Node first and only then on your Valid
 To start Bor on your Sentry node run:
 
 ```js
-bash start.sh
+$ bash sentry-bor-start.sh
 ```
 
 To start Bor on your Validator Node run:

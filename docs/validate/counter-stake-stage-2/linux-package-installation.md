@@ -17,7 +17,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
 
-If you're planning on running a Sentry Node alongside your Validator node, we suggest you to use the Sentry Node setup guide to setup your Validatr and Sentry nodes simultaneously.
+If you're planning on running a Sentry Node alongside your Validator node, we suggest you to use the Sentry Node setup guide to setup your Validator and Sentry nodes simultaneously.
 
 * [Setup your Sentry + Validator nodes using Linux Packages](linux-validator-sentry-setup)
 * [Setup your Sentry + Validator nodes using Binaries](binaries-validator-sentry-setup)
@@ -86,7 +86,7 @@ $ cd public-testnets/<testnet version>
 // Current testnet version is CS-2008
 // Example: $ cd public-testnets/CS-2008
 
-$ cd without-sentry/heimdall
+$ cd without-sentry/
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -312,10 +312,10 @@ VALIDATOR_ADDRESS=<your Ethereum/Goerli wallet address>
 ```
 **Expected Output**
 
-You can see logs of Bor service under `/var/log/matic-logs/bor.log` 🤩 or you could run the following command:
+You can see logs of Bor service by running the following command:
 
 ```js
-tail -f /var/log/matic-logs/bor.log
+$ journalctl -u bor.service -f
 ```
 
 If everything's well, then your logs should look something like this:

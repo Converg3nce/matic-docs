@@ -14,7 +14,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
 
-If you're planning on running a Sentry Node alongside your Validator node, we suggest you to use the Sentry Node setup guide to setup your Validatr and Sentry nodes simultaneously.
+If you're planning on running a Sentry Node alongside your Validator node, we suggest you to use the Sentry Node setup guide to setup your Validator and Sentry nodes simultaneously.
 
 * [Setup your Sentry + Validator nodes using Linux Packages](linux-validator-sentry-setup)
 * [Setup your Sentry + Validator nodes using Binaries](binaries-validator-sentry-setup)
@@ -147,7 +147,7 @@ $ cd public-testnets/<testnet version>
 // Current testnet version is CS-2008
 // Example: $ cd public-testnets/CS-2008
 
-cd without-sentry/heimdall
+$ cd without-sentry/
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -215,9 +215,9 @@ In Binaries, running the above command will not create a log. In order to create
 
 $ cd
 
-$ mkdir logs
+$ mkdir ~/.heimdalld/logs/
 
-$ heimdalld start > logs/heimdalld.log 2>&1 &
+$ heimdalld start > ~/.heimdalld/logs/heimdalld.log 2>&1 &
 ```
 
 **Run rest-server**
@@ -231,7 +231,7 @@ $ heimdalld rest-server
 If you wish to write logs for `rest-server` you can run this command instead
 
 ```js
-heimdalld rest-server > logs/heimdalld-rest-server.log 2>&1 &
+$ heimdalld rest-server > ~/.heimdalld/logs/heimdalld-rest-server.log 2>&1 &
 ```
 
 
@@ -246,7 +246,7 @@ $ bridge start --all
 Similarly, for Heimdall bridge, you can run this command to write logs for it
 
 ```js
-bridge start --all > logs/heimdalld-bridge.log 2>&1 &
+$ bridge start --all > ~/.heimdalld/logs/heimdalld-bridge.log 2>&1 &
 ```
 
 > Note: Bridge won't run without `rabbitmq` and `rest-server` so ensure they are running before trying to run bridge.
@@ -318,11 +318,11 @@ The key called `catching_up` will show your sync status, if it's not catching up
 Your `heimdall-node` should be syncing now! You can check the logs by running the command
 
 ```js
-$ tail -f logs/heimdalld.log
+$ tail -f ~/.heimdalld/logs/heimdalld.log
 
-$ tail -f logs/heimdalld-rest-server.log 
+$ tail -f ~/.heimdalld/logs/heimdalld-rest-server.log 
 
-$ tail -f logs/heimdalld-bridge.log
+$ tail -f ~/.heimdalld/logs/heimdalld-bridge.log
 ```
 
 If everything's well, then your logs should look something like this:
