@@ -12,6 +12,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## We strongly recommend not using a laptop if you are running a full node.
 
+Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
+
+If you're planning on running a Sentry Node alongside your Validator node, we suggest you to use the Sentry Node setup guide to setup your Validatr and Sentry nodes simultaneously.
+
+* [Setup your Sentry + Validator nodes using Linux Packages](linux-validator-sentry-setup)
+* [Setup your Sentry + Validator nodes using Binaries](binaries-validator-sentry-setup)
+
 ### Step 1: Install GO
 
 Install go by following the [official docs](https://golang.org/doc/install). Remember to set your `$GOPATH`, `$GOBIN`, and `$PATH` environment variables, for example:
