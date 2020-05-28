@@ -24,25 +24,11 @@ module.exports = {
         "home/blockchain-basics/sidechain",
       ],
     },
-    {
-      type: "category",
-      label: "Architecture",
-      items: [
-        "home/architecture/matic-architecture",
-        "home/architecture/matic-flow",
-        "home/architecture/security-models",
-        {
-          type: "category",
-          label: "Bor",
-          items: ["home/architecture/bor-chain", "home/architecture/bor"],
-        },
-        {
-          type: "category",
-          label: "Heimdall",
-          items: ["home/architecture/heimdall-chain"],
-        },
-      ],
-    },
+    "home/architecture/matic-architecture",
+    // "home/architecture/matic-flow",
+    "home/architecture/security-models",
+    // "home/architecture/bor-chain",
+    // "home/architecture/heimdall-chain",
     "home/faq",
   ],
   development: [
@@ -52,6 +38,7 @@ module.exports = {
       label: "Deploying on Matic",
       items: ["develop/remix", "develop/truffle"],
     },
+    "develop/client-side",
     {
       type: "category",
       label: "Using Metamask",
@@ -99,7 +86,7 @@ module.exports = {
           ],
         },
         "develop/advanced/mapping-assets",
-        "develop/advanced/submit-mapping-request"
+        "develop/advanced/submit-mapping-request",
       ],
     },
     {
@@ -124,7 +111,7 @@ module.exports = {
             "develop/oracles/bandchain",
             "develop/oracles/bandchainadvanced",
           ],
-        }
+        },
       ],
     },
     "develop/fiat-on-ramp",
@@ -312,9 +299,7 @@ module.exports = {
     {
       type: "category",
       label: "Architecture",
-      items: [
-        "contribute/matic-architecture"
-      ],
+      items: ["contribute/matic-architecture"],
     },
     {
       type: "category",
@@ -377,11 +362,11 @@ module.exports = {
             "contribute/contracts/plasma_contracts/predicates",
             "contribute/contracts/plasma_contracts/important-contracts",
           ],
-        }
+        },
       ],
     },
     "contribute/state-sync",
-    "home/architecture/security-models",
-    "contribute/community-maintainers"
+    // "home/architecture/security-models",
+    "contribute/community-maintainers",
   ],
 };
