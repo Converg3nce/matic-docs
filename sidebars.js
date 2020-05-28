@@ -38,7 +38,6 @@ module.exports = {
       label: "Deploying on Matic",
       items: ["develop/remix", "develop/truffle"],
     },
-    "develop/client-side",
     {
       type: "category",
       label: "Using Metamask",
