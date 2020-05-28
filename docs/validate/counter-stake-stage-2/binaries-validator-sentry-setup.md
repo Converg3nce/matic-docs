@@ -1,7 +1,7 @@
 ---
-id: running-with-binaries
-title: Setup Matic Validator Node
-sidebar_label: Running with Binaries
+id: binaries-validator-sentry-setup
+title: Setup your Validator & Sentry Node using Binaries
+sidebar_label: Setup Sentry + Validator (Binaries)
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
@@ -12,14 +12,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## We strongly recommend not using a laptop if you are running a full node.
 
-Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
+This guide will help you setup your **Validator Node** as well your **Sentry Node**. However, you will have to setup your nodes in parallel, as setting them both up successfully will require relay of information from your Sentry node to validator and vice versa. **Please follow the steps carefully**
 
-If you're planning on running a Sentry Node alongside your Validator node, we suggest you to use the Sentry Node setup guide to setup your Validator and Sentry nodes simultaneously.
+Note that here onwards, each step would contain a legend (**Required for Sentry**) whenever a Step is required for setting your Sentry Node. This basically means that you will have to follow that step for Sentry. For setting your Validator node, all of the steps will be applicable albeit a few changes in the config files, which will be described in the steps below.
 
-* [Setup your Sentry + Validator nodes using Linux Packages](linux-validator-sentry-setup)
-* [Setup your Sentry + Validator nodes using Binaries](binaries-validator-sentry-setup)
+Also, note that your Sentry node needs to be a **separate** machine or VM when you're setting it up.
 
-### Step 1: Install GO
+
+### Step 1: Install GO (**Required for Sentry Node**)
+
+
 
 Install go by following the [official docs](https://golang.org/doc/install). Remember to set your `$GOPATH`, `$GOBIN`, and `$PATH` environment variables, for example:
 
@@ -45,9 +47,11 @@ $ bash install_go.sh
 
 > Note: Go version 1.11+ is recommended
 
-### Step 2: Install RabbitMq
+### Step 2: Install RabbitMq (**Required for Sentry Node**)
 
 **Why do you need RabbitMq?**
+
+**Required for Sentry**
 
 RabbitMQ is a message-queueing software also known as a message broker or queue manager. Simply said; it is software where queues are defined, to which applications connect in order to transfer a message or messages.
 
@@ -59,7 +63,8 @@ $ rabbitmq-server
 
 ```
 
-### Step 3: Install make
+### Step 3: Install make (**Required for Sentry Node**)
+
 
 You need to install `make` to run some commands. Using the below commands you can install `make` depending on your system.
 
@@ -77,7 +82,7 @@ $ brew install make
 
 Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
 
-### Step 4: Install Heimdall
+### Step 4: Install Heimdall (**Required for Sentry Node**)
 
 Next, let's install the latest version of Heimdall. Here, we'll use the master branch, which contains the latest stable release. If necessary, make sure you `git checkout` the correct [released version](https://github.com/maticnetwork/heimdall/releases)
 
@@ -116,7 +121,7 @@ This will emit an output which shows your node id and chain id, these can be cha
 }
 ```
 
-### Step 5: Install Bor
+### Step 5: Install Bor (**Required for Sentry Node**)
 
 ```js
 
@@ -127,7 +132,7 @@ $ cd bor
 // Checkout to a public-testnet version.
 // For eg: git checkout v0.1.8
 $ git checkout <TAG OR BRANCH>
-$ make bor
+$ make all
 
 ```
 
@@ -135,9 +140,14 @@ Now you have `bor` installed on your local system and the binary is available in
 
 <!-- #CHECK following step is the same as in running-with-docker -->
 
-### Step 6: Join public testnet
+### Step 6: Join public testnet 
 
-#### 6.1: Get Heimdall genesis config
+`CONFIGPATH` for Validator Node and Sentry Node will be different. You will need to make sure that these `CONFIGPATH` is set correctly for your Validator and Sentry Node.
+
+`Validator Node = .../CS-2008/sentry/validator`
+`Sentry Node = .../CS-2008/sentry/sentry`
+
+#### 6.1: Get Heimdall genesis config (**Required for Sentry Node**)
 
 ```js
 $ git clone https://github.com/maticnetwork/public-testnets
@@ -147,7 +157,7 @@ $ cd public-testnets/<testnet version>
 // Current testnet version is CS-2008
 // Example: $ cd public-testnets/CS-2008
 
-$ cd without-sentry/
+$ cd sentry/sentry
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -156,15 +166,23 @@ $ source ~/.bashrc
 // copy genesis file to config directory
 $ cp $CONFIGPATH/heimdall/config/genesis.json  $HEIMDALLDIR/config/genesis.json
 
-// copy config file to config directory
+// copy heimdall-config file to config directory
 $ cp $CONFIGPATH/heimdall/config/heimdall-config.toml $HEIMDALLDIR/config/heimdall-config.toml
+
+// copy config file to config directory
+$ cp $CONFIGPATH/heimdall/config/config.toml $HEIMDALLDIR/config/config.toml
+
 ```
 
 > NOTE: In case you do not have a Goerli API key, generate one using: https://ethereumico.io/knowledge-base/infura-api-key-guide
 
+You can use the same Infura key for both your Validator and Sentry node, however since Infura has a threshold limit for free accounts upto 100k/requests per day, it is recommended that you use different Infura Keys for both, Validator and Sentry node.
+
 Add your API key in file `~/.heimdalld/config/heimdall-config.toml` under the key `"eth_RPC_URL"`.
 
 **Generate Heimdall private key**
+
+This step is only required for your **Validator Node**. The Sentry node does not require generating `validatorkey`.
 
 If you have received Matic tokens as part of Counter-stake, you need to generate validator key on Heimdall to participate.
 
@@ -178,19 +196,54 @@ Move this validator key file to heimdall config folder.
 
     mv ./priv_validator_key.json $HEIMDALLDIR/config
 
-#### 6.2: Configure peers for Heimdall
+#### 6.2: Configure peers for Heimdall (**Required for Sentry Node**)
 
-Peers are the other nodes you want to sync to in order to maintain your full node. You can add peers in the file at `~/.heimdalld/config/config.toml` under `persistent_peers` with the format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`
+Configuring Peers for your Heimdall is slightly different when you're setting your Sentry node alongside your Validator node.
 
-To see the list of peers, run the following command, you could do so by running the command `cat /public-testnets/CS-2008/heimdall/heimdall-seeds.txt`.
+**Config changes for Sentry Node**
 
-All you need to do is add 1 Peer from this list to your `persistent_peers` in the format mentioned above. Make sure that you add at least one peer from the list, else you will run into connection issues. Try to choose a peer randomly from between to ensure you don't overload specific peers.
+Open the `config.toml` file
 
 ```js
 vi ~/.heimdalld/config/config.toml
 ```
 
-#### 6.3: Start & sync Heimdall
+* Now in this file, check for the parameter `pex`. The value for this parameter should be `true`.
+
+* Check for the parameter `private_peer_ids`. You will need to add your Validator NodeID here. To get your Validator NodeID, **you will need to run this command on your Validator node instance**: `heimdalld tendermint show-node-id`. After you add your NodeID it should look something like this `private_peer_ids = "2170800c8a57c5e09b59992902f39ba350f1c0ff"`
+
+* Check for the parameter `addr_book_strict`. This should also be set to `false`
+
+* In the `persistent_peers`, you will need to add one peer from the `heimdall-seeds.txt` file and your Validator node id in the following format:
+
+```js
+persistent_peers = "<validator NodeID@validator_instance_ip:26656,one peer from heimdall-seeds.txt"
+```
+
+Note that peers are other nodes you want to sync to in order to maintain your full node. Peers are specified in the following format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
+
+**Config changes for Validator Node**
+
+Once you're done with the changes for your Sentry Node you can do the same on your Validator node. Open the `config.toml` file
+
+```js
+vi ~/.heimdalld/config/config.toml
+```
+
+* Now in this file, check for the parameter `pex`. The value for this parameter should be `false`.
+
+* Check for the parameter `private_peer_ids`. This should be commented out or there should be a "#" at the start of the line.
+
+* Check for the parameter `addr_book_strict`. This should also be set to `false`
+
+* In the `persistent_peers`, you will need to add your Sentry NodeID here. To get your Sentry NodeID, **you will need run this command on the Sentry node instance**: `heimdalld tendermint show-node-id` and add it in the following format.
+
+```js
+persistent_peers = "sentry_machineNodeID@sentry_instance_ip:26656"
+```
+
+
+#### 6.3: Start & sync Heimdall (Required for Sentry Node)
 
 Before starting do verify you are on the correct version by running the below command
 
@@ -202,25 +255,26 @@ $ heimdallcli version --long
 
 **Run Heimdall**
 
-Starting Heimdall is fairly easy, the below command will start heimdall using the genesis file in `~/.heimdalld/config/genesis.json`.
+Starting Heimdall is fairly easy, the below command will start Heimdall using the genesis file in `~/.heimdalld/config/genesis.json`. Make sure that you start Heimdall for your Sentry Node first and only then start it for your Validator Node.
 
 ```js
 
 $ heimdalld start
 
 ```
+
 In Binaries, running the above command will not create a log. In order to create a log for Heimdall you can run this command instead
 
 ```js
 
 $ cd
 
-$ mkdir ~/.heimdalld/logs/
+$ mkdir logs
 
-$ heimdalld start > ~/.heimdalld/logs/heimdalld.log 2>&1 &
+$ heimdalld start > logs/heimdalld.log 2>&1 &
 ```
 
-**Run rest-server**
+**Run rest-server** (Required for Sentry Node)
 
 The rest-server can be used by external services like explorer, faucets etc to connect to heimdall chain for fetching data and sending transactions.
 
@@ -231,13 +285,13 @@ $ heimdalld rest-server
 If you wish to write logs for `rest-server` you can run this command instead
 
 ```js
-$ heimdalld rest-server > ~/.heimdalld/logs/heimdalld-rest-server.log 2>&1 &
+heimdalld rest-server > logs/heimdalld-rest-server.log 2>&1 &
 ```
 
 
 **Run Bridge**
 
-Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge.
+Bridge is a helper package that sends transactions to heimdall on behalf of validators. All interactions with other chains happens via this bridge. This need not be run for your Sentry Node.
 
 ```bash
 $ bridge start --all
@@ -246,7 +300,7 @@ $ bridge start --all
 Similarly, for Heimdall bridge, you can run this command to write logs for it
 
 ```js
-$ bridge start --all > ~/.heimdalld/logs/heimdalld-bridge.log 2>&1 &
+bridge start --all > logs/heimdalld-bridge.log 2>&1 &
 ```
 
 > Note: Bridge won't run without `rabbitmq` and `rest-server` so ensure they are running before trying to run bridge.
@@ -318,11 +372,7 @@ The key called `catching_up` will show your sync status, if it's not catching up
 Your `heimdall-node` should be syncing now! You can check the logs by running the command
 
 ```js
-$ tail -f ~/.heimdalld/logs/heimdalld.log
-
-$ tail -f ~/.heimdalld/logs/heimdalld-rest-server.log 
-
-$ tail -f ~/.heimdalld/logs/heimdalld-bridge.log
+tail -f ~/.heimdalld/logs/heimdall.log
 ```
 
 If everything's well, then your logs should look something like this:
@@ -334,7 +384,7 @@ If you're running into any issues while setting up your Heimdall node, you can r
 **You need to make sure that you let Heimdall node sync completely and only then move on to the next steps**
 
 
-#### 6.4: Initialise genesis block for Bor
+#### 6.4: Initialise genesis block for Bor (Required for Sentry Node)
 
 ```js
 
@@ -353,6 +403,52 @@ This will create Bor home directory at `~/.bor` and data directory at `~/.bor/da
 
 To sync blocks on the testnet, you need to add peers. The file `static-nodes.json` in your relevant public-testnets version folder contains information for all the available seed nodes. It will be already copied using `bash setup.sh` command.
 
+**Configuring peers for Bor on Sentry Node**
+
+* Run this command `bootnode -genkey ~/nodekey` command to generate the nodekey **on the Sentry node**.
+
+* Run this command `mv ~/nodekey ~/.bor/dataDir/bor/`  to copy the nodekey to the Bor data directory.
+
+* Run this command `bootnode -nodekey ~/.bor/dataDir/bor/nodekey -writeaddress` to get the enodeID which will be used in validator node static-nodes.json file. Keep the EnodeID handy with you as it will be required for your Validator node.
+
+* Now you will need to update the `static-nodes.json` file on your Sentry node. To open the file run `sudo vi ~/.bor/dataDir/bor/static-nodes.json`. You should see an output like this:
+
+```js
+[
+  "<replace with enode://validator_machine_enodeID@validator_machine_ip:30303>",
+  "enode://43b9003dd03cfe2032f52e72a27681904611e8b7f49879f4f314807f041c0009cb9058b3f1cc4d3daaa23d18d48fe7f16d03d2405089c938365617ccbb29730d@54.211.245.52:30303",
+  "enode://5fd33505c51dc91f181875a0f8c9e5386ea1bec3d19a03b8ce8cb64dee18b5c511133a3d5de19dce11e7968808d8f2bcbcdc66e828a5b575a69de3b6b654f162@54.84.215.227:30303",
+  "enode://0884422c6bea61259adfb47d05dc73d86e046b2556eb9ed3082301b4311b6c1b28d4a4ca9a9d38144f4e61005fe32c3a99e3c92d23794e01883434826a22d83d@34.197.83.153:30303",
+  "enode://f7b2b98d411e8940cae3db8c23cd4288321b4309670feec870450e286c8a9b62b5ca95a7a20fe8d056ddae57e40c2a7a19851904f4231e0a9710e16ad71587e9@54.237.61.33:30303",
+  "enode://e3f5a660b9bc633815ccf507a4eed53a96cdd2976dd951e0ac70fa0b4b803134a681801bb2a25ea8db1d39f90f4ab3684a905629e86fece7cccb1d7dd013c9e0@18.214.246.244:30303"
+]
+```
+
+You will need your EnodeID of your **Validator node**. To get the enode for your validator follow the following steps:
+
+* Run this command `bootnode -genkey ~/nodekey` command to generate the nodekey **on the Validator node**.
+
+* Run this command `mv ~/nodekey ~/.bor/dataDir/bor/`  to copy the nodekey to the Bor data directory.
+
+* Run this command `bootnode -nodekey ~/.bor/dataDir/bor/nodekey -writeaddress` to get the enodeID.
+
+Once you get the EnodeID for your Validator Node, you can then add it to your `static-nodes.json` file **on the Sentry node**. Note, you can either keep all the other peers in the static-nodes.json file or your can keep just 1 along with your Validator EnodeID. If you don't keep your Validator EnodeID here, your validator will not sync correctly.
+
+Once you're done adding your Validator EnodeID to the file, you're done with updating the config for your Sentry Node.
+
+**Configuring peers for Bor on the Validator Node**
+
+You will need to add the EnodeID of your Sentry Node to the validator node config. To get the EnodeID check the section above.
+
+* Now you will need to update the `static-nodes.json` file on your Validator node. To open the file run `sudo vi ~/.bor/dataDir/bor/static-nodes.json`**on your Validator node**. You should see an output like this:
+
+```js
+[
+  "<replace with enode://sentry_machine_enodeID@sentry_machine_ip:30303>"
+]
+```
+
+
 **Adding additional peers (optional)**
 
 If you have certain peers you always want to connect to, you can configure permanent static nodes by putting something like the following example into `~/.bor/dataDir/bor/static-nodes.json`
@@ -366,9 +462,11 @@ If you have certain peers you always want to connect to, you can configure perma
 
 For more info on how to connect to peers see [this](https://geth.ethereum.org/docs/interface/peer-to-peer).
 
-**Generate Bor keystore file**
+#### 6.6 **Generate Bor keystore file**
 
-To generate a BOR keystore for your validator, you can run the following command. The private key required as the input is your Ethereum/Goerli's wallet Private key. This would be the same private key that yo used for generating your `validator-key`
+> **Note this is only needed for the Validator Bor node, and not for the Sentry Bor node**
+
+To generate a Bor keystore for your validator, you can run the following command. The private key required as the input is your Ethereum/Goerli's wallet Private key. This would be the same private key that you used for generating your `validator-key`. 
 
 ```bash
 heimdallcli generate-keystore <Your Ethereum/>Goerli wallet private key>
@@ -402,10 +500,18 @@ Add phrase you choose during generating key store file in `password.txt`
 
 #### 6.7: Start Bor
 
-```js
-// You'll find the following in bor directory in Public testnets folder
-$ cd $CONFIGPATH/bor
+You will need to start Bor on your Sentry Node first and only then on your Validator Node. 
 
+To start Bor on your Sentry node run:
+
+```js
+$ bash sentry-bor-start.sh
+```
+
+To start Bor on your Validator Node run:
+
+```js
+// You'll find the following in bor-config directory
 $ bash start.sh <Your address>
 ```
 
@@ -425,16 +531,4 @@ If you're running into any issues while setting up your Bor node, you can refer 
 
 **Ta-Da**
 
-If your `Heimdall` and `Bor` logs are fine, that your node setup is complete. Congratulations on reaching so far!
-
-Once you are done checking the logs or querying the data, you may proceed to staking tokens. Here is you can stake on Matic: [How to Stake](stake-on-matic)
-
-In case you encounter blockers or high severity bugs, you can report all such issues/bugs directly to Github issues of respective repositories.
-
-For an issue you have encountered specifically with Heimdall or Heimdall related, you can create an issue in the Heimdall repository: https://github.com/maticnetwork/heimdall/issues
-
-For issues, you have encountered specifically with Bor or Bor related, you can create an issue in the Bor repository: https://github.com/maticnetwork/bor/issues
-
-For clear identification, you can also use labels to tag the issues reported.
-
-Upon reporting an issue, the Matic Project team will review and update/comment on the status of the issue. Depending on the severity of the issue, the Matic project team may request you to create a PR to provide a fix. Bounties and incentives would be provided for such issues.
+You're now running a Sentry node along with your Validator node. In order to stake on Matic, you can go ahead follow the [Stake on Matic guide](stake-on-matic)

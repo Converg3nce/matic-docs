@@ -270,8 +270,29 @@ module.exports = {
       items: [
         "validate/counter-stake-stage-2/getting-started",
         "validate/counter-stake-stage-2/core-components",
-        "validate/counter-stake-stage-2/linux-package-installation",
-        "validate/counter-stake-stage-2/running-with-binaries",
+        {
+          type: "category",
+          label: "Node Setup",
+          items: [
+            {
+              type: "category",
+              label: "With Sentry",
+              items: [
+            "validate/counter-stake-stage-2/linux-validator-sentry-setup",
+            "validate/counter-stake-stage-2/binaries-validator-sentry-setup",
+              ]
+            },
+            {
+              type: "category",
+              label: "Without Sentry",
+              items: [ 
+            "validate/counter-stake-stage-2/linux-package-installation",
+            "validate/counter-stake-stage-2/running-with-binaries",
+              ]
+            },
+          ]
+        }, 
+        //"validate/counter-stake-stage-2/running-with-docker",
         "validate/counter-stake-stage-2/stake-on-matic",
         "validate/counter-stake-stage-2/rewards",
         "validate/counter-stake-stage-2/delegate",
@@ -281,10 +302,12 @@ module.exports = {
       ],
     },
     "validate/faqs",
+    "validate/bug-bounty-program",
     "validate/reporting-issues",
     "validate/validator/rewards",
   ],
   Contributors: [
+    "contribute/bug-bounty-program",
     "contribute/orientation",
     {
       type: "category",

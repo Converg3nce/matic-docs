@@ -81,7 +81,7 @@ function reStake()
 ```
 
 - Above function is used to reStake rewards
-- # of share aren’t affected because of `exchangeRate` is same so just the rewards are moved into active stake for both validator share contract and stakeMnager timeline.
+- The number of shares aren’t affected because `exchangeRate` is the same; so just the rewards are moved into active stake for both validator share contract and stakeMnager timeline.
 - `getLiquidRewards` is used for calculating accumulated rewards.
 - i.e. delegator owns 100 share and exchange rate is 200 so rewards are 100 tokens, move 100 tokens into active stake, since exchange rate is still same number of share will also remain same. Only difference is that now 200 tokens are considered into active stake and can't be withdrawn immediately(not a part of liquid rewards).
 - Purpose of reStaking is that since delegator's validator has now more active stake and she will earn more rewards for that so will the delegator.
