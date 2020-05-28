@@ -1,7 +1,7 @@
 ---
 id: linux-validator-sentry-setup
 title: Setup your Validator & Sentry Node using Linux Packages
-sidebar_label: Setup Sentry + Validator (Linux)
+sidebar_label: Setup Sentry + Validator (Linux packages)
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
@@ -145,7 +145,7 @@ sudo vi /etc/heimdall/config/config.toml
 * In the `persistent_peers`, you will need to add one peer from the `heimdall-seeds.txt` file and your Validator node id in the following format:
 
 ```js
-persistent_peers = "<validator NodeID@validator_instance_ip:26656,one peer from heimdall-seeds.txt"
+persistent_peers = "<validator NodeID@validator_instance_ip:26656, any one peer from $CONFIGPATH/heimdall/heimdall-seeds.txt>"
 ```
 
 Note that peers are other nodes you want to sync to in order to maintain your full node. Peers are specified in the following format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
@@ -173,7 +173,7 @@ persistent_peers = "sentry_machineNodeID@sentry_instance_ip:26656"
 
 ### Step 6: Generate Heimdall private key
 
-Note: This is not required for Sentry Node
+> Note: This is not required for Sentry Node
 
 If you have received Matic tokens as part of Counter-stake, you need to generate validator key on Heimdall to participate.
 
@@ -318,7 +318,7 @@ $ sudo cp $CONFIGPATH/bor/static-nodes.json /etc/bor/dataDir/bor/static-nodes.js
 ```
 ### Step 10: Generate Bor keystore file
 
-Note: This step is not required for your Sentry Node.
+> Note: This step is not required for your Sentry Node.
 
 If you have received Matic tokens as part of Counter-stake. You need to generate a keystore for BOR here.
 
@@ -382,9 +382,9 @@ To sync blocks on the testnet, you need to add peers. The file `static-nodes.jso
 
 * Run this command `bootnode -genkey ~/nodekey` command to generate the nodekey **on the Sentry node**.
 
-* Run this command `mv ~/nodekey /etc/bor/dataDir/bor/`  to copy the nodekey to the Bor data directory.
+* Run this command `sudo mv ~/nodekey /etc/bor/dataDir/bor/`  to copy the nodekey to the Bor data directory.
 
-* Run this command `bootnode -nodekey /etc/bor/dataDir/bor/nodekey -writeaddress` to get the enodeID which will be used in validator node static-nodes.json file. Keep the EnodeID handy with you as it will be required for your Validator node.
+* Run this command `sudo bootnode -nodekey /etc/bor/dataDir/bor/nodekey -writeaddress` to get the enodeID which will be used in validator node static-nodes.json file. Keep the EnodeID handy with you as it will be required for your Validator node.
 
 * Now you will need to update the `static-nodes.json` file on your Sentry node. To open the file run `sudo vi /etc/bor/dataDir/bor/static-nodes.json`. You should see an output like this:
 
@@ -403,9 +403,9 @@ You will need your EnodeID of your **Validator node**. To get the enode for your
 
 * Run this command `bootnode -genkey ~/nodekey` command to generate the nodekey **on the Validator node**.
 
-* Run this command `mv ~/nodekey /etc/bor/dataDir/bor/`  to copy the nodekey to the Bor data directory.
+* Run this command `sudo mv ~/nodekey /etc/bor/dataDir/bor/`  to copy the nodekey to the Bor data directory.
 
-* Run this command `bootnode -nodekey /etc/bor/dataDir/bor/nodekey -writeaddress` to get the enodeID.
+* Run this command `sudo bootnode -nodekey /etc/bor/dataDir/bor/nodekey -writeaddress` to get the enodeID.
 
 Once you get the EnodeID for your Validator Node, you can then add it to your `static-nodes.json` file **on the Sentry node**. Note, you can either keep all the other peers in the static-nodes.json file or your can keep just 1 along with your Validator EnodeID. If you don't keep your Validator EnodeID here, your validator will not sync correctly.
 
