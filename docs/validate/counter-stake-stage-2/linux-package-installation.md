@@ -302,8 +302,9 @@ $ sudo vi  /etc/bor/metadata
 // eg: add the NETWORK_ID and VALIDATOR_ADDRESS in the following format:
 NETWORK_ID=2008
 VALIDATOR_ADDRESS=<your Ethereum/Goerli wallet address> 
+NODE_TYPE=validator-without-sentry
 ```
-
+To select node type, edit NODE_TYPE in /etc/bor/metadata after package is installed. Possible value for `NODE_TYPE`: `sentry`, `validator` and `validator-without-sentry`
 
 ### Step 9: Start Bor
 
