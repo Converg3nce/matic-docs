@@ -1,7 +1,8 @@
 ---
 id: bor-chain
-title: Overview
-description: Build your next blockchain app on Matic.
+title: What is BoR-Chain?
+sidebar_label: Bor Chain
+description: The Bor node or the Block Producer implementation is basically the sidechain operator. The sidechain VM is EVM-compatible.
 keywords:
   - docs
   - matic
