@@ -144,8 +144,8 @@ Now you have `bor` installed on your local system and the binary is available in
 
 `CONFIGPATH` for Validator Node and Sentry Node will be different. You will need to make sure that these `CONFIGPATH` is set correctly for your Validator and Sentry Node.
 
-`Validator Node = .../CS-2008/sentry/validator`
-`Sentry Node = .../CS-2008/sentry/sentry`
+* `Validator Node = .../CS-2008/sentry/validator`
+* `Sentry Node = .../CS-2008/sentry/sentry`
 
 #### 6.1: Get Heimdall genesis config (**Required for Sentry Node**)
 

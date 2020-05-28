@@ -85,8 +85,8 @@ $ heimdalld init
 
 `CONFIGPATH` for Validator Node and Sentry Node will be different. You will need to make sure that these `CONFIGPATH` is set correctly for your Validator and Sentry Node.
 
-`Validator Node = .../CS-2008/sentry/validator`
-`Sentry Node = .../CS-2008/sentry/sentry`
+* `Validator Node = .../CS-2008/sentry/validator`
+* `Sentry Node = .../CS-2008/sentry/sentry`
 
 ```js
 $ git clone https://github.com/maticnetwork/public-testnets
@@ -263,19 +263,19 @@ The key called `catching_up` will show your sync status, if it's not catching up
 Your `heimdall-node` should be syncing now! You can see view the logs by running this command:
 
 ```js
-journalctl -u heimdalld.service -f 
+$ journalctl -u heimdalld.service -f 
 ```
 
 To get logs for Heimdall rest-server, you can run this command:
 
 ```js
-journalctl -u heimdalld-rest-server.service -f 
+$ journalctl -u heimdalld-rest-server.service -f 
 ```
 
 To get logs for Heimdall Bridge, you can this command:
 
 ```js
-journalctl -u heimdalld-bridge.service -f 
+$ journalctl -u heimdalld-bridge.service -f 
 ```
 
 Note: Running the Bridge is not required for Sentry Node.
