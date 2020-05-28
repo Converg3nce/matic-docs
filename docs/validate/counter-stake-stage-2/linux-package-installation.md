@@ -294,7 +294,7 @@ sudo mv ./UTC-<time>-<address> /etc/bor/dataDir/keystore/
 sudo mv password.txt /etc/bor/dataDir/
 ```
 
-### Step 9: Add NETWORK_ID and VALIDATOR_ADDRESS to `/etc/bor/metadata`
+### Step 10: Add NETWORK_ID and VALIDATOR_ADDRESS to `/etc/bor/metadata`
 
 ```js
 $ sudo vi  /etc/bor/metadata
@@ -302,10 +302,12 @@ $ sudo vi  /etc/bor/metadata
 // eg: add the NETWORK_ID and VALIDATOR_ADDRESS in the following format:
 NETWORK_ID=2008
 VALIDATOR_ADDRESS=<your Ethereum/Goerli wallet address> 
+NODE_TYPE=validator-without-sentry
 ```
+To select node type, edit NODE_TYPE in /etc/bor/metadata after package is installed. Possible value for `NODE_TYPE`: `sentry`, `validator` and `validator-without-sentry`
 
 
-### Step 9: Start Bor
+### Step 11: Start Bor (Required for Sentry Node)
 
 ```js
  sudo service bor start
