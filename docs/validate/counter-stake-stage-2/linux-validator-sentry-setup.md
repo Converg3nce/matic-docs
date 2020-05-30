@@ -445,6 +445,20 @@ If everything's well, then your logs should look something like this:
 
 If you're running into any issues while setting up your Bor node, you can refer the [Technical FAQ's](technical-faqs) for solutions.
 
+### Firewall configuration
+
+To enable communication between validator & sentry nodes, we need to open few ports at firewall level.
+
+**Validator node firewall configuration**
+
+On your validator node, open ports **26656** and **30303** and point it to your sentry node.
+
+ Note: Don't open above ports in validator node to world/public (0.0.0.0/0). These ports should be open to sentry node only. 
+
+**Sentry node firewall configuration**
+
+Open ports **26656** and **30303** to world (0.0.0.0/0) on sentry node firewall
+
 **Ta-Da**
 
 You're now running a Sentry node along with your Validator node. In order to stake on Matic, you can go ahead follow the [Stake on Matic guide](stake-on-matic)

@@ -345,6 +345,7 @@ $ cd $CONFIGPATH/bor
 $ bash setup.sh
 
 $ echo "export BORDIR=~/.bor" >> ~/.bashrc
+
 ```
 
 This will create Bor home directory at `~/.bor` and data directory at `~/.bor/dataDir`
