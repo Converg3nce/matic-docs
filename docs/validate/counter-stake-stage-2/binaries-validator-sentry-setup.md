@@ -535,13 +535,13 @@ To enable communication between validator & sentry nodes, we need to open few po
 
 **Validator node firewall configuration**
 
-On your validator node, open ports **26656** and **30303** and point it to your sentry node.
+On your validator node, open ports **22**, **26656** and **30303** and point it to your sentry node.
 
  Note: Don't open above ports in validator node to world/public (0.0.0.0/0). These ports should be open to sentry node only. 
 
 **Sentry node firewall configuration**
 
-Open ports **26656** and **30303** to world (0.0.0.0/0) on sentry node firewall
+Open ports **22**, **26656** and **30303** to world (0.0.0.0/0) on sentry node firewall
 
 **Ta-Da**
 
