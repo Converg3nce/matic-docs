@@ -61,7 +61,7 @@ You can stake on Matic 2 different ways, Using the Validator Dashboard or by CLI
 
 ### Stake using validator dashboard 
 
-In order to stake using the Validator Dashboard, you can use the following link to access the dashboard: https://wallet.matic.today/staking
+In order to stake using the Validator Dashboard, you can use the following link to access the dashboard: https://cs-wallet.matic.today/staking/
 
 You will be able to login using Metamask or any WalletConnect enabled wallet. We recommend using Metamask.
 
