@@ -93,6 +93,7 @@ Once the transaction is completed you will have staked successfully to become a 
 
 
 
+
 ### Stake using CLI
 
 **Approve**
