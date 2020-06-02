@@ -92,6 +92,7 @@ Once the transaction is completed you will have staked successfully to become a 
 **Note:** For the changes to take effect on the Staking Dashboard, it requires a minimum of 12 Block Confirmations to verify and finalize. After 12 Block Confirmations, you can refresh your page and you would see the updated details on the Dashboard.
 
 
+
 ### Stake using CLI
 
 **Approve**
