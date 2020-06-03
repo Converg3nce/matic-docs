@@ -222,6 +222,8 @@ persistent_peers = "<validator NodeID@validator_instance_ip:26656,one peer from 
 
 Note that peers are other nodes you want to sync to in order to maintain your full node. Peers are specified in the following format `NodeID@IP:PORT` or `NodeID@DOMAIN:PORT`.
 
+**Note**: In case if you run into problems like `"Dropping peer"` or `"Stopping peer for error"` you can follow the steps below to resolve the issue
+
 An optional step is you can directly add a `seed node` to the `seeds` param in the `config.toml` file. If you do add a seed node, then you need to make sure that you don't add a `persistent_peer` from `heimdall-seeds.txt`.
 
 To add a seed node, you traverse to the `seeds` in the `config.toml` file and add this: `"a63097d856f9236f16a83eb83b9c01939b9a31ba@52.201.54.210:26656"`. The same needs to be updated in the `private_peer_ids` param.
