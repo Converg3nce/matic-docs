@@ -107,6 +107,40 @@ Add your API key in file `/etc/heimdall/config/heimdall-config.toml` under the k
 $ sudo vi /etc/heimdall/config/heimdall-config.toml
 ```
 
+**Note**: If you want to use non-default ports for Heimdall or Bor, Rest server needs flags for new port and non-default node url.
+
+**For Example**:
+
+```js
+heimalld rest-server --heimdalld rest-server --laddr tcp://0.0.0.0:3317 --node tcp://localhost:26637
+```
+
+So, if you are using heimdalld-rest-server.service, please edit /etc/systemd/system/heimdalld-rest-server.service with appropriate port and node (heimdalld service) url.
+
+```js
+$ heimdalld rest-server --help
+
+Start LCD (light-client daemon), a local REST server
+
+Usage:
+  heimdalld rest-server [flags]
+
+Flags:
+      --chain-id string   The chain ID to connect to
+  -h, --help              help for rest-server
+      --laddr string      The address for the server to listen on (default "tcp://0.0.0.0:1317")
+      --max-open int      The number of maximum open connections (default 1000)
+      --node string       Address of the node to connect to (default "tcp://localhost:26657")
+      --trust-node        Trust connected full node (don't verify proofs for responses) (default true)
+
+Global Flags:
+      --home string                   directory for config and data (default "/Users/jdkanani/.heimdalld")
+      --log_level string              Log level (default "main:info,state:info,*:error")
+      --trace                         print out full stack trace on errors
+      --with-heimdall-config string   Heimdall config file path (default <home>/config/heimdall-config.json)
+
+```
+
     
 ### Step 5: Configure peers for Heimdall
 
