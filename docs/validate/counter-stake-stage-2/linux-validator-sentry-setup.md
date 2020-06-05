@@ -148,7 +148,7 @@ Flags:
       --trust-node        Trust connected full node (don't verify proofs for responses) (default true)
 
 Global Flags:
-      --home string                   directory for config and data (default "/Users/jdkanani/.heimdalld")
+      --home string                   directory for config and data (default "/home/ubuntu/.heimdalld")
       --log_level string              Log level (default "main:info,state:info,*:error")
       --trace                         print out full stack trace on errors
       --with-heimdall-config string   Heimdall config file path (default <home>/config/heimdall-config.json)
