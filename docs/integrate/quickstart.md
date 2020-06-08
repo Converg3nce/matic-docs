@@ -24,7 +24,7 @@ this section is for you.
 * Deploy your Contracts on Matic Network
     - [Using Remix](/docs/develop/remix)
     - [Using Truffle](/docs/develop/truffle)
-* Configure the Web3 RPC-URL to https://testnetv3.matic.network, *Everything else remains the same*
+* Configure the Web3 RPC-URL to https://rpc-mumbai.matic.today, *Everything else remains the same*
 
 
 

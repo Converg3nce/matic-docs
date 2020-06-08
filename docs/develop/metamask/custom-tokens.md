@@ -23,9 +23,9 @@ The other fields will auto-populate. Click on Save and then click on Add Tokens.
 
 **Configuring `Matic TEST` tokens to Metamask**
 
-You will also need to configure the `TEST` tokens to Matic’s Testnet for visualization if you are following the introductory Matic.js tutorial. **Switch the network on Metamask to point to the Matic testnet - https://testnetv3.matic.network **. On Metamask, this will be shown as `Private Network`.
+You will also need to configure the `TEST` tokens to Matic’s Testnet for visualization if you are following the introductory Matic.js tutorial. **Switch the network on Metamask to point to the Matic testnet - https://rpc-mumbai.matic.today **. On Metamask, this will be shown as `Private Network`.
 
-The corresponding `TEST` token address on Matic testnet is `0x9a93c912F4eFf0254d178a18ACD980C1B05b57b0`. Note that this token contract address is different from that of Ropsten - since this is the `TEST` token on the Matic Network. A detailed, screen-by-screen guide to add custom tokens is shown here:
+The corresponding `TEST` token address on Matic testnet is `0x3f152B63Ec5CA5831061B2DccFb29a874C317502`. Note that this token contract address is different from that of Goerli - since this is the `TEST` token on the Matic Network. A detailed, screen-by-screen guide to add custom tokens is shown here:
 
 You can open Metamask and then click on the option for Add Token.
 

@@ -176,6 +176,12 @@ module.exports = {
             "integrate/network-detail",
             {
               type: "link",
+              label: "Mumbai",
+              href:
+                "https://static.matic.network/network/mumbai/index.json"
+            },
+            {
+              type: "link",
               label: "TestNetV3",
               href:
                 "https://static.matic.network/network/testnet/v3/index.json",

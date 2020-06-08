@@ -114,7 +114,7 @@ Go to Solidity Compiler
 </div>
 
 - Put in a Network name - “Matic Testnet v3”
-- In URL field you can add the URL as - https://testnetv3.matic.network
+- In URL field you can add the URL as - https://rpc-mumbai.matic.today
 - Go ahead and click save
 - Copy your address from Metamask
 <div
@@ -169,7 +169,7 @@ Let's Deploy
         <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.45.23_PM.png")} alt="RemixIDE_Step1"/>
 </div>
 
-**Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract. Check the deployement status here: https://testnetv3-explorer.matic.network/.
+**Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract. Check the deployment status here: https://mumbai-explorer.matic.today/.
 
 <div
         style={{
