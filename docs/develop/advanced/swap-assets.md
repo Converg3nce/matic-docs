@@ -334,7 +334,7 @@ $ truffle migrate --network maticBetaMainnet
 
 Once you have your contract addresses, fill them in the config file under `/scripts/erc20-721/` along with the provider, which will be the following for the two networks:
 
-Matic testnet: `https://testnetv3.matic.network`
+Matic testnet: `https://rpc-mumbai.matic.today`
 Matic beta mainnet: `https://beta.matic.network`
 
 Once the config file is ready, inside the `/scripts/erc20-721/` run the following - 

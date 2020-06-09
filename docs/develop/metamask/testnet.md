@@ -15,7 +15,7 @@ To add Matic’s Testnet, click on the Network selection dropdown and then click
 
 <img src={useBaseUrl("img/metamask/select-network.png")} />
 
-It will open up a form with 2 tabs on the top, Settings and Info. In the Settings tab you can add the URL `https://testnetv3.matic.network`.
+It will open up a form with 2 tabs on the top, Settings and Info. In the Settings tab you can add the URL `https://rpc-mumbai.matic.today`.
 
 <img src={useBaseUrl("img/metamask/metamask-settings.png")} />
 

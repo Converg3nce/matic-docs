@@ -20,7 +20,7 @@ All the tools you're familiar with are supported on Matic out of the box: Truffl
 Switch over to Matic's RPC and get started!
 
 Matic Test Network details:
-Network: **Matic Testnetv3,** connects with **Ethereum's Ropsten Testnet.** 
+Network: **Matic Mumbai Testnet,** connects with **Ethereum's Goërli Testnet.** 
 Details: [Network](https://docs.matic.network/docs/integrate/network/) 
 
 - [Setup Metamask Wallet](/docs/develop/metamask/hello)
@@ -35,7 +35,7 @@ Details: [Network](https://docs.matic.network/docs/integrate/network/)
         // Javascript 
 
         const Web3 = require('Web3')
-        const web3 = new Web3('https://testnetv3.matic.network')
+        const web3 = new Web3('https://rpc-mumbai.matic.today')
 
         // web3 object is now connected with Matic's node
         ```

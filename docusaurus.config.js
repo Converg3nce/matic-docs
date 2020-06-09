@@ -10,10 +10,10 @@ module.exports = {
     description:
       'Build your next blockchain app on Matic.',
   },
-  themes: ['@docusaurus/theme-live-codeblock'],
+  // themes: [require.resolve('@docusaurus/theme-live-codeblock')],
   plugins: [
     [
-      '@docusaurus/plugin-ideal-image',
+      require.resolve('@docusaurus/plugin-ideal-image'),
       {
         path: 'docs',
         include: ['**/*.md', '**/*.mdx'],
