@@ -48,7 +48,7 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/v0.1.8/matic-heimdall_0.1.8_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.9/matic-heimdall_0.1.9_amd64.deb
 $ wget https://matic-public.s3.amazonaws.com/v0.1.8/matic-bor_0.1.8_amd64.deb
 ```
 
@@ -60,7 +60,7 @@ This will setup needed services for the validator nodes - Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_0.1.8_amd64.deb
+$ sudo dpkg -i matic-heimdall_0.1.9_amd64.deb
 $ sudo dpkg -i matic-bor_0.1.8_amd64.deb
 ```
    
