@@ -88,7 +88,7 @@ $ git clone https://github.com/maticnetwork/heimdall
 $ cd heimdall
 
 // Checkout to a public-testnet version.
-// For eg: git checkout v0.1.8
+// For eg: git checkout v0.1.9
 $ git checkout <TAG OR BRANCH>
 $ make install
 ```
