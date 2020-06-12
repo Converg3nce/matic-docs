@@ -178,7 +178,7 @@ module.exports = {
               type: "link",
               label: "Mumbai",
               href:
-                "https://static.matic.network/network/mumbai/index.json"
+                "https://static.matic.network/network/testnet/mumbai/index.json"
             },
             {
               type: "link",
