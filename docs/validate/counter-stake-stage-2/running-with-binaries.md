@@ -144,8 +144,8 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is v0.1.9
-// For eg: git checkout v0.1.9
+// Current testnet version is 2008
+// For eg: git checkout 2008
 
 $ cd without-sentry/
 
