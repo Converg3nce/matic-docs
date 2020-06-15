@@ -13,11 +13,20 @@ Delegators are token holders who cannot, or do not want to run a validator thems
 
 ## Accessing the Dashboard and Login
 
-You will need to first choose the Goerli Testnet on your Metamask. Once you have choose that, you can then login to the Matic's Validator Dashboard. You can access the Dashboard here: https://wallet.matic.today/staking
+You will need to first choose the Goerli Testnet on your Metamask. Once you have choose that, you can then login to the Matic's Validator Dashboard. You can access the Dashboard here: https://cs-wallet.matic.today/staking
+
+<img src={useBaseUrl("img/staking/goerli-network.png")} />
+
+Matic Validator Dashboard currently supports only Metamask as of now. So you will need to have the Metamask's extension added to your browser.
+
+**Note**: We have experienced some issues with Firefox when using the Validator Dashboard. We recommend use Google Chrome of Brave.
+
+**Note:** You need to make sure you have the Staking Token added to your Metamask. For CS-2008, the staking token contract address is: `0xAFfb23A344B7ebdf4Ea6B5ec27ECC00D12fecd77`
 
 Once you have logged in you will be navigated to a screen where you will see a list of Validators and a lot of stats.
 
 **Note:** If you are already a validator, then when you attempt to become a delegator, you have to make sure that you use a different address than the one used for your validator. This is only if you're already a validator.
+
 
 ## How to delegate to a validator
 
