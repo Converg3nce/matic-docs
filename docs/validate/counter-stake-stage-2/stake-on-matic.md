@@ -18,7 +18,7 @@ This is a step-by-step guide to help you become a validator on Matic's incentivi
 You should have Heimdall and Bor setups up and running on your machine. If you haven't yet set it up, you can do so by reading this guide: [https://docs.matic.network/staking/participate-in-counter-stake/](https://docs.matic.network/staking/participate-in-counter-stake/)
 
 
-**Note:** You need to make sure you have the Staking Token added to your Metamask. For CS-2008, the staking token contract address is: 0xAFfb23A344B7ebdf4Ea6B5ec27ECC00D12fecd77
+**Note:** You need to make sure you have the Staking Token added to your Metamask. For CS-2008, the staking token contract address is: `0xAFfb23A344B7ebdf4Ea6B5ec27ECC00D12fecd77`
 
 Details for contract addresses: https://github.com/maticnetwork/public-testnets/blob/master/CS-2008/heimdall/config/genesis.json#L239
 
