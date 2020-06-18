@@ -53,7 +53,7 @@ Details: [Network](https://docs.matic.network/docs/integrate/network/)
 
     Using Matic as a transactions layer in your DApp deployed on Mainnet, you can get started with getting your tokens mapped by us.
 
-    - Getting your tokens mapped on Matic: 👋🏼Ping us on [http://bit.ly/matic-technical-group](http://bit.ly/matic-technical-group)
+    - Getting your tokens mapped on Matic: Read about mapping [here](https://docs.matic.network/docs/develop/advanced/mapping-assets)
 
 ### **🌱 Building a new dApp on Matic?**
 
