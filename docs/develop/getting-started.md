@@ -174,7 +174,7 @@ Reddit:
 Twitter:
 
 - [Bankless: How to Use Crypto Twitter](https://bankless.substack.com/p/how-to-use-crypto-twitter-to-level-77c)
-- [EthHug](https://twitter.com/ethhub_io)
+- [EthHub](https://twitter.com/ethhub_io)
 - [CodeFi](https://twitter.com/ConsenSysCodefi)
 - [ConsenSys Labs](https://twitter.com/ConsenSysLabs)
 - [Universal Login](https://twitter.com/unilogin)
