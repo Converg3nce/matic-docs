@@ -113,7 +113,7 @@ Go to Solidity Compiler
         <img src={useBaseUrl("img/helloworld/metamask-custom-rpc.png")} alt="RemixIDE_Step1"/>
 </div>
 
-- Put in a Network name - “Matic Testnet v3”
+- Put in a Network name - “Matic Mumbai Testnet”
 - In URL field you can add the URL as - https://rpc-mumbai.matic.today
 - Go ahead and click save
 - Copy your address from Metamask
@@ -127,12 +127,9 @@ Go to Solidity Compiler
         <img src={useBaseUrl("img/helloworld/Screenshot_2020-01-09_at_1.24.49_PM.png")} alt="RemixIDE_Step1"/>
 </div>
 
-- Head over to [Faucet](https://faucet.matic.network/) and request test ether - if you'd like. 
-Select 'Testnet3' and 'Test ERC20' token
-(the gas fee can also be safely set to 0 on testnet.)
-- Now, <img src={useBaseUrl("img/helloworld/Screenshot_2020-02-14_at_1.08.37_PM.png")} alt="RemixIDE_Step1"/>
-Let's Deploy
-- the Smart Contract on Matic Network
+- Head over to [Faucet](https://faucet.matic.network/) and request test ether - you will need this pay for gas on Matic. 
+Select 'Mumbai' as the network and 'MATIC Token' as the token in the faucet
+- Now, let's Deploy the Smart Contract on Matic Network
 - Select Injected Web3 in the Environment dropdown and your contract
 
 <div

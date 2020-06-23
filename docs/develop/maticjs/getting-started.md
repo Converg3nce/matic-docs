@@ -42,7 +42,7 @@ We will be showcasing the flow for asset transfers on the Matic Network in this 
 
 ### Ropsten Faucet
 
-In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Ropsten, you can use the faucet links given here — https://faucet.metamask.io/ or https://faucet.ropsten.be/.
+In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Ropsten, you can use the faucet links given here — https://goerli-faucet.slock.it/.
 
 ### Matic Faucet
 

@@ -120,5 +120,3 @@ A quick review: - Functions that alter the state of the contract are called `sen
       // returns a transaction receipt}
     )
 ```
-
-> For any transactions you make on Matic’s testnet, the gas price can be safely set to 0. :)
