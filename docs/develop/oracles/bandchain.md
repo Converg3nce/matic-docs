@@ -1,7 +1,7 @@
 ---
 id: bandchain
 title: BandChain
-sidebar_label: Basics
+sidebar_label: Bandchain
 description: Build your next blockchain app on Matic.
 keywords:
   - docs

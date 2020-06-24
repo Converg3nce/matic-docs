@@ -116,17 +116,11 @@ module.exports = {
       items: [
         "develop/oracles/getting-started",
         "develop/oracles/razor",
-        {
-          type: "category",
-          label: "Bandchain",
-          items: [
-            "develop/oracles/bandchain",
-            "develop/oracles/bandchainadvanced",
-          ],
-        }
+        "develop/oracles/bandchain"
       ],
     },
     "develop/fiat-on-ramp",
+    "develop/matic-as-gastoken",
     {
       type: "category",
       label: "Realtime Updates",
