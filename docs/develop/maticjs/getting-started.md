@@ -19,9 +19,9 @@ The process followed here is:
 2. Transfer assets between accounts on Matic [(Matic ↔ Matic)](transfer)
 3. Withdraw assets from Matic on to root chain [(Matic → Ethereum)](withdraw)
 
-- ERC20: In this tutorial we use ERC-20 assets to be transferred from Ropsten to Matic. 
+- ERC20: In this tutorial we use ERC-20 assets to be transferred from Görli to Matic. 
 - ERC721: The flow discussed below remains similar for ERC-721 assets with minor changes that will be mentioned wherever required. 
-- Ether: The flow discussed below is simliar for transfer and withdraw, The only difference is at deposit, it's only one step by using ```matic.depositEthers```. For transfer and withdraw you can find the Ropsten_ERC20Address & Matic_ERC20Address in [network detail](/docs/integrate/network-detail)
+- Ether: The flow discussed below is simliar for transfer and withdraw, The only difference is at deposit, it's only one step by using ```matic.depositEthers```. For transfer and withdraw you can find the Görli_ERC20Address & Matic_ERC20Address in [network detail](/docs/integrate/network-detail)
 
 ## Using Matic JS
 
@@ -40,13 +40,13 @@ We will be showcasing the flow for asset transfers on the Matic Network in this 
 
 ### Prerequisites:
 
-### Ropsten Faucet
+### Görli Faucet
 
-In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Ropsten, you can use the faucet links given here — https://goerli-faucet.slock.it/.
+In order to make any transactions, you will also need some Ether in the test accounts that you will use while following the tutorial. In case you don’t have some ETH on Görli, you can use the faucet links given here — https://goerli-faucet.slock.it/.
 
 ### Matic Faucet
 
-Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `TEST` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below. 
+Throughout this tutorial, we will be using the ERC20 token `TEST` on the Görli network as an example. This is a TEST token. In your DApp, you can replace it with any ERC20 token. To get some Test `TEST` tokens on Matic Network, you can access the Matic Faucet by clicking on the link below. 
 
 <center>
 <button style={{padding: '20px', backgroundColor: '#4093ff', color: '#fff', borderRadius: '25px', fontSize : '15px' }}>
@@ -67,13 +67,13 @@ Throughout this tutorial, we will be using the ERC20 token `TEST` on the Ropsten
 4. [Configure token on Matic](/docs/develop/metamask/custom-tokens): In order to view the flow of funds easily on the Matic Network using Matic.js, you can configure tokens on Metamask.
 The `TEST` token, taken as an example for this tutorial, can be configured in Metamask so as to easily visualise account balances. > Again note this is **optional**. You can very easily query the token balances and other variables using [web3](https://web3js.readthedocs.io/en/1.0/)
 
-These Test tokens needs to be added (depending upon the type of asset you are using - erc20/erc721/ether) to all 3 test accounts in Metamask once each in both the Ropsten and Matic testnets:
+These Test tokens needs to be added (depending upon the type of asset you are using - erc20/erc721/ether) to all 3 test accounts in Metamask once each in both the Görli and Matic testnets:
 
-|  |Ropsten  |Matic  |
+|  |Görli  |Matic  |
 |---|---|---|
-|TEST (ERC20)  | `0xEc5C207897C4378658F52bCCCE0ea648D1f17D65` | `0xBc0AEe9f7b65fd3d8be30ba648e00dB5F734942b` |
-|TEST (ERC721)  | `0x07d799252cf13c01f602779b4dce24f4e5b08bbd` | `0x8D5231e0B79edD9331e0CF0d4B9f3F30d05C47A5` |
-|Wrapped ETH(WETH)   | `0x7BdDd37621186f1382FD59e1cCAE0316F979a866` | `0x8567184E6F9b1B77f24AfF6168453419AD22f90e` |
+|TEST (ERC20)  | `0xb2eda8A855A4176B7f8758E0388b650BcB1828a4` | `0xc7bb71b405ea25A9251a1ea060C2891b84BE1929` |
+|TEST (ERC721)  | `0xfA08B72137eF907dEB3F202a60EfBc610D2f224b` | `0x33FC58F12A56280503b04AC7911D1EceEBcE179c` |
+|Wrapped ETH(WETH)   | `0x60D4dB9b534EF9260a88b0BED6c486fe13E604Fc` | `0x4DfAe612aaCB5b448C12A591cD0879bFa2e51d62` |
 
 ## Introducing Matic.js
 
@@ -94,35 +94,35 @@ $ npm i --save @maticnetwork/meta
 Within the `matic-js-test` folder, create a new file and name it `matic-example.js`, and add the following code
 
 ```js
-const Network = require("@maticnetwork/meta/network");
-const Matic = require("@maticnetwork/maticjs").default;
-const config = require("./config.json");
+const Matic = require('@maticnetwork/maticjs').default
+const config = require('./config.json')
 
-const network = new Network(config.network, config.version);
-const MaticNetwork = network.Matic;
-const MainNetwork = network.Main;
+// console.log(config)
+const token = config.GOERLI_TEST_TOKEN // test token address
+const from = config.FROM_ADDRESS // from address
 
-const Ropsten_Erc20Address = config.Ropsten_Erc20Address;
-const Matic_Erc20Address = config.Matic_Erc20Address;
-
-const Ropsten_Erc721Address = config.Ropsten_Erc721Address;
-const Matic_Erc721Address = config.Matic_Erc721Address;
-
-const from = config.from; // from address
-
+// Create object of Matic
 const matic = new Matic({
-  maticProvider: MaticNetwork.RPC,
-  parentProvider: MainNetwork.RPC,
-  rootChain: MainNetwork.Contracts.RootChain,
-  withdrawManager: MainNetwork.Contracts.WithdrawManagerProxy,
-  depositManager: MainNetwork.Contracts.DepositManagerProxy,
-  registry: MainNetwork.Contracts.Registry
-});
+    maticProvider: config.MATIC_PROVIDER,
+    parentProvider: config.PARENT_PROVIDER,
+    rootChain: config.ROOTCHAIN_ADDRESS,
+    withdrawManager: config.WITHDRAWMANAGER_ADDRESS,
+    depositManager: config.DEPOSITMANAGER_ADDRESS,
+    registry: config.REGISTRY,
+})
 
-async function init() {
-  await matic.initialize();
-  await matic.setWallet(config.privateKey);
+const amount = '1000000000000000000' // amount in wei
+
+async function execute() {
+    await matic.initialize()
+    matic.setWallet(config.PRIVATE_KEY)
 }
+
+execute().then(res => {
+    console.log(res)
+}).catch(err => {
+    console.log(err)
+})
 ```
 
 > **Never store your private key in code on production** — this is added in the `config.js` file for illustration purposes. Typically a user’s private key will be stored in a browser wallet such as Metamask or a mobile wallet such as the Matic wallet, Status or a hardware wallet.
@@ -132,23 +132,17 @@ async function init() {
 You will also need to create another file `config.json`. This will contain all configuration related to Matic.js.
 ```json
 {
-    "network":'testnet',
-    "version": "v3",
-
-    "privateKey": '<paste your private key here>', 
-    "from": '<paste address corresponding to the private key>',
-    
-    "Ropsten_Erc20Address": "",
-    "Matic_Erc20Address": "",
-    
-    "Ropsten_Erc721Address": "",
-    "Matic_Erc721Address": "",
-
-    "Ropsten_WEthAddress": "",
-    "Matic_WEthAddress": "",
-
-    "value": ""
-}
+    "MATIC_PROVIDER": "https://rpc-mumbai.matic.today", 
+    "PARENT_PROVIDER": "https://goerli.infura.io/v3/75aa7935112647bc8cc49d20beafa189", 
+    "ROOTCHAIN_ADDRESS": "0xCe29AEdCdBeef0b05066316013253beACa7A6268", 
+    "WITHDRAWMANAGER_ADDRESS": "0x2923C8dD6Cdf6b2507ef91de74F1d5E0F11Eac53", 
+    "DEPOSITMANAGER_ADDRESS": "0x7850ec290A2e2F40B82Ed962eaf30591bb5f5C96",  
+    "PRIVATE_KEY": "your_pvt_key", // Append 0x to your private key
+    "FROM_ADDRESS": "your address",
+    "GOERLI_TEST_TOKEN": "0xb2eda8A855A4176B7f8758E0388b650BcB1828a4", 
+    "MATIC_TEST_TOKEN": "0xc7bb71b405ea25A9251a1ea060C2891b84BE1929", 
+    "REGISTRY": "0xeE11713Fe713b2BfF2942452517483654078154D"
+  }
 ```
 For now, don’t worry about these values — just keep them as is.
 

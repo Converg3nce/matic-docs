@@ -14,7 +14,7 @@ Band Protocol allows you to query data from traditional web APIs and use it in t
 
 1. **Choosing the oracle scripts**
 
-    Oracle script is a hash that uniquely identifies the type of data to be requested from band-chain. These scripts can be found [**here**](http://scan.alpha.bandchain.org/scripts). These scripts are used as one of the parameters while making the oracle request.
+    Oracle script is a hash that uniquely identifies the type of data to be requested from band-chain. These scripts can be found [**here**](https://guanyu-devnet.cosmoscan.io/oracle-scripts). These scripts are used as one of the parameters while making the oracle request.
 
 2. **Requesting Data from BandChain**
 
@@ -22,25 +22,15 @@ Band Protocol allows you to query data from traditional web APIs and use it in t
 
 - Using the BandChain explorer
 
-    You can click on the oracle script of your choice and then from the execute tab you can pass in the parameters and get the response from BandChain. The response will contain the result and also an evm proof. This proof has to be copied and will be used in the final step. The BandChain docs for querying oracle using explorer is given [**here**](https://docs.bandchain.org/dapp-developers/making-data-request/requesting-data-via-explorer).
+    You can click on the oracle script of your choice and then from the execute tab you can pass in the parameters and get the response from BandChain. The response will contain the result and also an evm proof. This proof has to be copied and will be used in the final step. The BandChain docs for querying oracle using explorer is given [**here**](https://docs.bandchain.org/dapp-developers/requesting-data-from-bandchain/requesting-data-via-explorer).
     
     <img src={useBaseUrl("img/bandchain/executeoracle.png")} />
     
     Given above is an example of making an oracle request to get the random number values. The value 100 is passed to the max_range parameter of the oracle request. We get a hash in response. Clicking on this hash will show us the complete details of the response.
 
-- Using the BandChain REST API
+- Using the BandChain-Devnet JS Library
 
-    You can query the REST API directly using a HTTP client library like axios from your dApp. The API endpoint is [http://rpc.alpha.bandchain.org/bandsv/request](http://rpc.alpha.bandchain.org/bandsv/request). When queried using the respective parameters, it gives an **evm proof** in the response. This proof can be used for the final step of BandChain integration. The BandChain docs for querying oracle using REST API is given [**here**](https://docs.bandchain.org/dapp-developers/making-data-request/requesting-data-via-rest-api). The request payload for the random number oracle will look like this. Make sure the request body is passed in application/json format.
-
-    ```jsx
-    {
-    "type": "FULL",
-    "params": {
-        "max_range": 100
-    },
-    "codeHash": "e7944e5e24dc856dcb6d9926460926ec10b9b66cf44b664f9971b5a5e9255989"
-    }
-    ```
+    You can query Bandchain directly using the bandchain Devnet library. When queried, it gives an **evm proof** in the response. This proof can be used for the final step of BandChain integration. The BandChain docs for querying oracle using BandChain-Devnet JS Library is given [**here**](https://docs.bandchain.org/dapp-developers/requesting-data-from-bandchain/requesting-data-via-js-library). The request payload for the random number oracle will look like this. Make sure the request body is passed in application/json format.
 
 3. **Using the data in smart contracts**
   
@@ -93,4 +83,4 @@ Band Protocol allows you to query data from traditional web APIs and use it in t
 
   Once the validation contract is deployed, the state variables can be accessed by querying from a dApp. Similarly multiple validation contracts can be created for different built in oracle scripts. The IBridge interface has a method called relayAndVerify that verifies the values being updated each time in the validation contract. The update method in the validation contract has the logic to update the state variables. The evm proof obtained from querying the oracle script has to be passed to the update method. Each time a value is updated, the BandChain contract deplpyed on the matic network verfies the data before storing it in the contract state variable.
 
-  A more detailed understanding of the above steps can be obtained from [**here**](/docs/develop/oracles/bandchainadvanced). The bandChain provides a decentralised network of oracles that can be used by dApps to boost their smart contract logic. The BandChain docs on deploying the contract,storing the values and updating them can be found [**here**](https://docs.bandchain.org/dapp-developers/integration).
+  The bandChain provides a decentralised network of oracles that can be used by dApps to boost their smart contract logic. The BandChain docs on deploying the contract,storing the values and updating them can be found [**here**](https://docs.bandchain.org/dapp-developers/requesting-data-from-bandchain/requesting-data-via-js-library).

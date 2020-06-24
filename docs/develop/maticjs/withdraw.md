@@ -95,10 +95,10 @@ The code for process exit remains common for ERC20 AND ERC721 tokens except for 
 
 ```js
 init();
-// const token = Ropsten_Erc20Address                 // For ERC20 Token
-// const token = Ropsten_Erc721Address                // For ERC721 Token
-// const token = Ropsten_WEthAddress                  // For ETH
-const token = Ropsten_WEthAddress;
+// const token = Görli_Erc20Address                 // For ERC20 Token
+// const token = Görli_Erc721Address                // For ERC721 Token
+// const token = Görli_WEthAddress                  // For ETH
+const token = Görli_WEthAddress;
 matic.processExits(token,  {
    from
 })
@@ -137,7 +137,7 @@ So let's run `$ process-exit-ERC20.js`
 
 <img src={useBaseUrl("img/maticjs/run-process-exit-ERC20.png")} />
 
-Once this is complete, you will see the funds in your Ropsten account.
+Once this is complete, you will see the funds in your Görli account.
 
 So that’s it folks! You have withdrawn your funds successfuly and gotten to the end of this tutorial :)
 

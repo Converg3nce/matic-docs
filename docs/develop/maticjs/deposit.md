@@ -18,7 +18,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ```js
 const amount = "1000000000000000000"; // amount in wei
-const token = Ropsten_Erc20Address;
+const token = Görli_Erc20Address;
   // const amount = config.value
   init();
   matic
@@ -41,7 +41,7 @@ const token = Ropsten_Erc20Address;
 1. The deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network. 
 
 ```js
-const token = Ropsten_Erc721Address;
+const token = Görli_Erc721Address;
 // const tokenId = config.value
 const tokenId = "746"; // ERC721 token Id
 init();
@@ -73,13 +73,13 @@ matic.depositEther(amount, {
 
 For reference purposes, the screenshots below will provide context during the actual deposit.
 
-We currently have `100 TEST` tokens and `9` ETH at our address `0x1a06816065731fcBD7296f9B2400d632816b070B` on Ropsten Network,
+We currently have `100 TEST` tokens and `0.1` ETH at our address `0x28e9E72DbF7ADee19B5279C23E40a1b0b35C2B90` on Görli Network,
 
-<img src={useBaseUrl("img/maticjs/before-deposit-balance-ropsten.png")} />
+<img src={useBaseUrl("img/maticjs/before-deposit-balance-goerli.png")} />
 
 while on Matic Network we have `0 TEST` tokens.
 
-<img src={useBaseUrl("img/maticjs/before-deposit-balance-matic.png")} />
+<img src={useBaseUrl("img/maticjs/before-deposit-balance-mumbai.png")} />
 
 We will be depositing `1 TEST` tokens to Matic Testnet.
 
@@ -89,21 +89,18 @@ Let’s run the Deposit function. To run use:
 
 or `$ node deposit-ERC721.js`
 
-We have added console logging for both events, which when run successfully will display the Transaction Hash as well as a message `“Deposit Tokens from Ropsten/Ethereum to Matic — Transaction Approved.”.` Once deposit is complete, you will see the Transaction Hash and message `”Tokens deposited from Ropsten/Ethereum to Matic.”` Since this is only for illustration purposes, the message can be customized to anything of your choice. By default it will only display the Transaction Hash.
-
-<img src={useBaseUrl("img/maticjs/run-deposit-erc20.png")} />
 <img src={useBaseUrl("img/maticjs/run-deposit-erc20.png")} />
 
 Let’s verify our account balances on Metamask.
 
-Our Balance on Ropsten now shows `99 TEST` which means our Deposit transaction of `1 TEST` was successful.
+Our Balance on Görli now shows `99 TEST` which means our Deposit transaction of `1 TEST` was successful.
 
-<img src={useBaseUrl("img/maticjs/after-deposit-balance-update-ropsten.png")} />
+<img src={useBaseUrl("img/maticjs/after-deposit-balance-update-goerli.png")} />
 
 Verifying our balance on Matic Testnet also shows that our balance is increased by `1 TEST`.
 
 <img src={useBaseUrl("img/maticjs/after-deposit-balance-update-matic.png")} />
 
-Congratulations! You have successfully deposited funds from Ropsten to Matic.
+Congratulations! You have successfully deposited funds from Görli to Matic.
 
 In order to ensure you have more funds, deposit `1 TEST` token to Matic by repeating the above process. Make sure you change the `amount` value in the above script.
