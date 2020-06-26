@@ -96,6 +96,8 @@ Navigate to you Delegator Profile page (My Delegator Details Page). Once you log
 
 Here you will see an `Unbond` button for each of the validator. Click on the Unbond button for whichever validator that you want to Unbond from.
 
+<img src={useBaseUrl("img/staking/unbond-delegator.png")} />
+
 You will receive an pop-up notification informing you about the Unbond process. It will display the Rewards that have been accumulated (If any) and also your total stake amount. You will also be givne information on when you would receive these tokens back to your account.
 
 When you unbond from a validator, there is an `unbonding period` that we maintain to ensure there is no malicious behaviour on the network. The Unbonding period is for 21 days on Matic Mainnet. You will receive your rewards immediately after you unbond, however, your stake token amount will be unlocked in 21 Days.
