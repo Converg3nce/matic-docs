@@ -29,80 +29,93 @@ Just for reference, there will be an active exit market, which will allow tradin
 Now, depending upon your asset, add the following code:
 
 ```js
-  // const token = Matic_WEthAddress;     // For ETH
-  // const token = Matic_Erc20Address;    // For ERC20
-  // const amount = config.value
-const amount = "10000000000000000"; // amount in wei
-init();
-// Send Tokens
-matic
-.startWithdraw(token, amount, {
-   from
+const token = config.MUMBAI_ERC20 // test token address
+// const token = config.MUMBAI_WETH
+const amount = '1000000000000000000'
+
+matic.initialize().then(() => {
+    matic.setWallet(config.PRIVATE_KEY)
+    // Initiate withdraw from matic/ Burn tokens on Matic
+    matic.startWithdraw(token, amount, {
+            from,
+        }).then((res) => {
+            console.log(res.transactionHash) // eslint-disable-line
+        })
 })
-.then(logs => console.log(logs.transactionHash));
 ```
 
 ### ERC721
 ```js
-const token = Matic_Erc721Address
-// const tokenId = config.value
-const tokenId = '1' // ERC721 token Id
-init();
-// Send Tokens
-matic
-.startWithdrawForNFT(token, tokenId, {
-   from
+const token = config.MUMBAI_ERC721 // test token address
+const tokenId = '2'
+
+matic.initialize().then(() => {
+    matic.setWallet(config.PRIVATE_KEY)
+    // Initiate withdraw from matic/ Burn NFT on Matic
+    matic.startWithdrawForNFT(token, tokenId, {
+            from,
+        }).then((res) => {
+            console.log(res.transactionHash) // eslint-disable-line
+        })
 })
-.then(logs => console.log(logs.transactionHash));
 ```
-> NOTE: Wait for next checkpoint, which will take approximately 5-10 mins. Save the transaction hash which will be the input for the withdraw.
+> NOTE: Wait for next checkpoint, which will take approximately 5-10 mins. Save the transaction hash which will be the input for next step which is the confirm withdraw step.
 
 ## Confirm Withdraw
 
 ### ERC20/ETH
 ```js
-init();
-// await checkInclusion();
-var transactionHash = 'Paste txHash here ...' // Insert txHash generated from initiate-withdraw.js 
-
 //Wait for 5 mins till the checkpoint is submitted, then run the confirm withdraw
-matic
-.withdraw(transactionHash, {
-   from
+var transactionHash = '0xea14d35a3727061a6d2885e28f7378ed8b9235fe77c030a2fd1c306040ced7ff'
+
+matic.initialize().then(() => {
+    matic.setWallet(config.PRIVATE_KEY)
+
+    // Submit proof of burn on Goerli
+    matic.withdraw(transactionHash, {
+        from,
+    }).then((res) => {
+        console.log(res.transactionHash) // eslint-disable-line
+    })
 })
-.then(logs => console.log(logs.transactionHash));
-// action on Transaction success
-// Withdraw process is completed, funds will be transfer to your account after challege period is over.
+// Withdraw process is completed, funds will be transfered to your account after challege period is over.
 ```
 ### ERC721
 ```js
-init();
-// await checkInclusion();
-var transactionHash = 'Paste txHash here ...' // Insert txHash generated from initiate-withdraw.js 
-
 //Wait for 5 mins till the checkpoint is submitted, then run the confirm withdraw
-matic.withdrawNFT(transactionHash, {
-   from
+var transactionHash = '0x6d391453fb02ce833c4444a8599813069e1d75258397171068cda95f6d624eb4'
+
+matic.initialize().then(() => {
+    matic.setWallet(config.PRIVATE_KEY)
+    // Submit proof of burn on Goerli
+    matic.withdrawNFT(transactionHash, {
+        from,
+    }).then((res) => {
+        console.log(res.transactionHash) // eslint-disable-line
+    })
 })
-.then(logs => console.log(logs.transactionHash));
-// action on Transaction success
-// Withdraw process is completed, funds will be transfer to your account after challege period is over.
+// Withdraw process is completed, funds will be transfered to your account after challege period is over. 
 ```
 
 ## Process Exit
 
-The code for process exit remains common for ERC20 AND ERC721 tokens except for the value of `token`
+The code for process exit remains common for ERC20 and ERC721 tokens except for the value of `token`
 
 ```js
-init();
-// const token = Görli_Erc20Address                 // For ERC20 Token
-// const token = Görli_Erc721Address                // For ERC721 Token
-// const token = Görli_WEthAddress                  // For ETH
-const token = Görli_WEthAddress;
-matic.processExits(token,  {
-   from
+// const token = GOERLI_ERC20                 // For ERC20 Token
+// const token = GOERLI_ERC721                // For ERC721 Token
+// const token = GOERLI_WETH                  // For ETH
+const rootTokenAddress = config.GOERLI_ERC20  // Root token address
+
+matic.initialize().then(() => {
+    matic.setWallet(config.PRIVATE_KEY)
+    // Get back tokens to ethereum account after 7 day challenge period
+    matic.processExits(rootTokenAddress, {
+        from,
+    }).then((res) => {
+        console.log(res.transactionHash) // eslint-disable-line
+    })
 })
-.then(logs => console.log(logs.transactionHash));
 ```
 
 _Note: A checkpoint, which is a representation of all transactions happening on the Matic Network to the Ethereum chain every ~5 minutes, is submitted to the mainchain Ethereum contract._
@@ -123,8 +136,6 @@ I’ll add the transaction hash to the code — `0x1b12ae634c7538adfcbddd502
 
 Once the initiate process is complete, we will **wait for ~5 minutes**, before running the second script `$ node confirm-withdraw.js`.
 
-<img src={useBaseUrl("img/maticjs/run-confirm-withdraw-erc20.png")} />
-
 To verify, we will also check the account balances on Metamask.
 
 The balance on Account 1 on Matic Network now shows `8.900 TEST` Tokens.
@@ -135,11 +146,9 @@ Now, in order to claim your funds after the challenge period is complete, you wi
 
 So let's run `$ process-exit-ERC20.js`
 
-<img src={useBaseUrl("img/maticjs/run-process-exit-ERC20.png")} />
-
 Once this is complete, you will see the funds in your Görli account.
 
-So that’s it folks! You have withdrawn your funds successfuly and gotten to the end of this tutorial :)
+So that’s it folks! You have withdrawn your funds successfuly and gotten to the end of this tutorial :). The example code for performing deposit,transfer and withdraw of tokens from ethereum to matic can be found in this [github repository](https://github.com/rahuldamodar94/learnmatic.git)
 
 Hope you have understood now that interacting with the Matic Network is quite easy. We will dive deeper and explore advanced interactions with Matic in later posts.
 

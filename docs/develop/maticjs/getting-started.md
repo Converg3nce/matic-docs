@@ -72,7 +72,7 @@ These Test tokens needs to be added (depending upon the type of asset you are us
 |  |Görli  |Matic  |
 |---|---|---|
 |TEST (ERC20)  | `0xb2eda8A855A4176B7f8758E0388b650BcB1828a4` | `0xc7bb71b405ea25A9251a1ea060C2891b84BE1929` |
-|TEST (ERC721)  | `0xfA08B72137eF907dEB3F202a60EfBc610D2f224b` | `0x33FC58F12A56280503b04AC7911D1EceEBcE179c` |
+|TEST (ERC721)  | `0x0217B02596Dfe39385946f82Aab6A92509b7F352` | `0xa38c6F7FEaB941160f32DA7Bbc8a4897b37876b5` |
 |Wrapped ETH(WETH)   | `0x60D4dB9b534EF9260a88b0BED6c486fe13E604Fc` | `0x4DfAe612aaCB5b448C12A591cD0879bFa2e51d62` |
 
 ## Introducing Matic.js
@@ -97,8 +97,6 @@ Within the `matic-js-test` folder, create a new file and name it `matic-example.
 const Matic = require('@maticnetwork/maticjs').default
 const config = require('./config.json')
 
-// console.log(config)
-const token = config.GOERLI_TEST_TOKEN // test token address
 const from = config.FROM_ADDRESS // from address
 
 // Create object of Matic
@@ -111,18 +109,10 @@ const matic = new Matic({
     registry: config.REGISTRY,
 })
 
-const amount = '1000000000000000000' // amount in wei
-
 async function execute() {
     await matic.initialize()
     matic.setWallet(config.PRIVATE_KEY)
 }
-
-execute().then(res => {
-    console.log(res)
-}).catch(err => {
-    console.log(err)
-})
 ```
 
 > **Never store your private key in code on production** — this is added in the `config.js` file for illustration purposes. Typically a user’s private key will be stored in a browser wallet such as Metamask or a mobile wallet such as the Matic wallet, Status or a hardware wallet.
@@ -139,9 +129,13 @@ You will also need to create another file `config.json`. This will contain all c
     "DEPOSITMANAGER_ADDRESS": "0x7850ec290A2e2F40B82Ed962eaf30591bb5f5C96",  
     "PRIVATE_KEY": "your_pvt_key", // Append 0x to your private key
     "FROM_ADDRESS": "your address",
-    "GOERLI_TEST_TOKEN": "0xb2eda8A855A4176B7f8758E0388b650BcB1828a4", 
-    "MATIC_TEST_TOKEN": "0xc7bb71b405ea25A9251a1ea060C2891b84BE1929", 
-    "REGISTRY": "0xeE11713Fe713b2BfF2942452517483654078154D"
+    "GOERLI_ERC20": "0xb2eda8A855A4176B7f8758E0388b650BcB1828a4", 
+    "MATIC_ERC20": "0xc7bb71b405ea25A9251a1ea060C2891b84BE1929", 
+    "REGISTRY": "0xeE11713Fe713b2BfF2942452517483654078154D",
+    "MUMBAI_ERC721":"0xa38c6F7FEaB941160f32DA7Bbc8a4897b37876b5",
+    "GOERLI_ERC721":"0x0217B02596Dfe39385946f82Aab6A92509b7F352",
+    "MUMBAI_WETH":"0x4DfAe612aaCB5b448C12A591cD0879bFa2e51d62",
+    "GOERLI_WETH":"0x60D4dB9b534EF9260a88b0BED6c486fe13E604Fc"
   }
 ```
 For now, don’t worry about these values — just keep them as is.
@@ -149,6 +143,5 @@ For now, don’t worry about these values — just keep them as is.
 > Note: You will need to add your private key here. Signing of transactions will require your private key. Again, it is **NOT ADVISABLE** to hard code your private key when on production. Later, you can build keeping in mind that the user will be handling their keys at their end with MetaMask, Matic Wallet or any other compatible user wallet.
 
 > Important: Make sure you prefix `0x` to your private key.
-
 
 Let's move to the next part of this tutorial - Deposit assets from root chain to Matic [(Ethereum → Matic)](deposit) 

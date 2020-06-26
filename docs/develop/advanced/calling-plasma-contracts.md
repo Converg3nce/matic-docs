@@ -14,19 +14,19 @@ However, this page helps developers, who have a good understanding of smart cont
 
 ## Important Addresses and Links
 
-**Matic RPC endpoint**: `https://testnetv3.matic.network`
+**Matic RPC endpoint**: `https://rpc-mumbai.matic.today`
 
-| Contract           | ABI | Ropsten | Matic |
+| Contract           | ABI | Goerli | Matic |
 |--------------------|--|--|--|
-| TEST (ERC20) token |<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/v3/artifacts/ChildERC20.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0xEc5C207897C4378658F52bCCCE0ea648D1f17D65`|`0xBc0AEe9f7b65fd3d8be30ba648e00dB5F734942b`|
-|Registry Root Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/v3/artifacts/Registry.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0x82a72315E16cE224f28E1F1fB97856d3bF83f010`|   |
-|DepositManager (Proxy) Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/v3/artifacts/DepositManager.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0x3Bc6701cA1C32BBaC8D1ffA2294EE3444Ad93989`|||
-|Child Chain Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/v3/artifacts/ChildChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>||`0xa2EF03edfA084ac9e5Bf110e409Ed5483BAe4101`|
-|WithdrawManager (Proxy) Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/v3/artifacts/WithdrawManager.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0x3cf9aD3395028a42EAfc949e2EC4588396b8A7D4`||
+| TEST (ERC20) token |<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/mumbai/artifacts/ChildERC20.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0xb2eda8A855A4176B7f8758E0388b650BcB1828a4`|`0xc7bb71b405ea25A9251a1ea060C2891b84BE1929`|
+|Registry Root Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/mumbai/artifacts/Registry.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0xeE11713Fe713b2BfF2942452517483654078154D`|   |
+|DepositManager (Proxy) Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/mumbai/artifacts/DepositManager.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0x7850ec290A2e2F40B82Ed962eaf30591bb5f5C96`|||
+|Child Chain Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/mumbai/artifacts/ChildChain.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>||`0x1EDd419627Ef40736ec4f8ceffdE671a30803c5e`|
+|WithdrawManager (Proxy) Contract|<a target="_blank" href="https://raw.githubusercontent.com/maticnetwork/static/master/network/testnet/mumbai/artifacts/WithdrawManager.json"><img src="https://img.icons8.com/metro/26/000000/download.png" width="25px" style={{padding: '2px'}} /></a>|`0x2923C8dD6Cdf6b2507ef91de74F1d5E0F11Eac53`||
 
 ### Tokens for testing
 
-To get some `TEST` tokens on Ropsten network, you can access the Matic Faucet by clicking on the link below:
+To get some `TEST` tokens on Goerli network, you can access the Matic Faucet by clicking on the link below:
 
 <div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
         <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#000', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
@@ -40,19 +40,19 @@ To get some `TEST` tokens on Ropsten network, you can access the Matic Faucet by
 
 You can also check transaction procesed on the Matic Sidechain using the Matic Explorer.
 
-Link to the explorer - https://testnetv3-explorer.matic.network/
+Link to the explorer - https://mumbai-explorer.matic.today
 
 ## Workflow
 
-### 1. Deposit ERC20 token from Ropsten to Matic
+### 1. Deposit ERC20 token from Goerli to Matic
 
-**Description**: To deposit assets (ERC20) from Ropsten to Matic
+**Description**: To deposit assets (ERC20) from Goerli to Matic
 
 Let the required amount of tokens be **X**.
 
 1. The Deposit Manager Contract is approved to spend **X** on behalf of `msg.sender`
    - **Contract**: `ERC20.sol` and `DepositManager.sol`
-   - **Network**: Ropsten
+   - **Network**: Goerli
    - **Function**: `approve`
 
   Call the standard `approve` function in ERC20 contract, approving `DepositManager` to transfer the amount of tokens.
@@ -68,7 +68,7 @@ Let the required amount of tokens be **X**.
 2. The Deposit Manager transfers the amount from `msg.sender` to itself
 
    - **Contract**: `DepositManager.sol`
-   - **Network**: Ropsten
+   - **Network**: Goerli
    - **Function**: [`despositERC20ForUser()`](https://github.com/maticnetwork/contracts/blob/6413308db75ecdbf8ab9ec2beee1db0d362acea3/contracts/root/depositManager/DepositManager.sol#L129)
 
   Transfers the amount of tokens from msg.sender to DepositManager. Emits [NewDepositBlock](https://github.com/maticnetwork/contracts/blob/6413308db75ecdbf8ab9ec2beee1db0d362acea3/contracts/root/depositManager/DepositManager.sol#L223) event.
@@ -102,23 +102,23 @@ Let the required amount of tokens be **X**.
 
 ### 3. Display account balances for users on Matic
 
-**Description**: Query ERC20 token balances for user on Matic and Ropsten
+**Description**: Query ERC20 token balances for user on Matic and Goerli
 
   1. Invokes the standard `balanceOf` function of ERC20 contract.
       - **Contract**: `ChildERC20.sol`
       - **Network**: Matic
       - **Function**: `balanceOf` 
         ```javascript
-        // ERC20TokenContract can be either on Ropsten or Matic
+        // ERC20TokenContract can be either on Goerli or Matic
         ERC20TokenContract.methods
           .balanceOf(
             owner
           )
         ```
 
-### 4. Withdraw ERC20 tokens from Matic to Ropsten
+### 4. Withdraw ERC20 tokens from Matic to Goerli
 
-**Description**: To withdraw assets (ERC20) from Matic testnet to Ropsten
+**Description**: To withdraw assets (ERC20) from Matic testnet to Goerli
 
 Procedure of Withdrawal:
 
@@ -145,9 +145,9 @@ Let **X** be the amount of tokens to be withdrawn.
         amount
       )
     ```
-2. Use tx ID from previous step to create a withdraw transaction on Ropsten
+2. Use tx ID from previous step to create a withdraw transaction on Goerli
        - **Contract**: `ERC20Predicate.sol`
-       - **Network**: Ropsten
+       - **Network**: Goerli
        - **Function**: `startExitWithBurntTokens`
 
     The function accepts payload data, which is the proof of burn of tokens performed in the previous transaction. This payload is generated off-chain.
@@ -264,7 +264,7 @@ Let **X** be the amount of tokens to be withdrawn.
     Third and final step for the withdrawal process is to Process pending exits on the root chain. 
 
     - **Contract**: `WithdrawManager.sol`
-    - **Network**: Ropsten
+    - **Network**: Goerli
     - **Function**: `processExits`
         ```javascript
           withdrawManager.methods
