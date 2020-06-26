@@ -23,7 +23,7 @@ You will need to first choose the Ethereum Mainnet on your Metamask. Once you ha
 
 Matic Validator Dashboard currently supports only Metamask as of now. So you will need to have the Metamask's extension added to your browser.
 
-If you currently using a different wallet, you can import your account to Metamask and then use the Staking Dashboard. You can read our guide on how to Import an Account to Metamask here: {add link}
+If you currently using a different wallet, you can import your account to Metamask and then use the Staking Dashboard. You can read our guide on how to [Import an Account to Metamask](/docs/home/blockchain-basics//import-account-to-metamask)
 
 **Note**: We have experienced some issues with Firefox when using the Validator Dashboard. We recommend use Google Chrome of Brave.
 
