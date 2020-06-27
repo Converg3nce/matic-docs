@@ -23,9 +23,9 @@ You will need to first choose the Ethereum Mainnet on your Metamask. Once you ha
 
 Matic Validator Dashboard currently supports only Metamask as of now. So you will need to have the Metamask's extension added to your browser.
 
-If you currently using a different wallet, you can import your account to Metamask and then use the Staking Dashboard. You can read our guide on how to [Import an Account to Metamask](/docs/home/blockchain-basics//import-account-to-metamask)
+If you currently using a different wallet, you can import your account to Metamask and then use the Staking Dashboard. You can read our guide on how to [Import an Account to Metamask](https://docs.matic.network/docs/home/blockchain-basics//import-account-to-metamask)
 
-**Note**: We have experienced some issues with Firefox when using the Validator Dashboard. We recommend use Google Chrome of Brave.
+**Note**: We have experienced some issues with Firefox when using the Validator Dashboard. We recommend use Google Chrome or Brave.
 
 Once you have logged in you will be navigated to a screen where you will see a list of Validators and a lot of stats.
 
@@ -98,7 +98,7 @@ Here you will see an `Unbond` button for each of the validator. Click on the Unb
 
 <img src={useBaseUrl("img/staking/unbond-delegator.png")} />
 
-You will receive an pop-up notification informing you about the Unbond process. It will display the Rewards that have been accumulated (If any) and also your total stake amount. You will also be givne information on when you would receive these tokens back to your account.
+You will receive an pop-up notification informing you about the Unbond process. It will display the Rewards that have been accumulated (If any) and also your total stake amount. You will also be given information on when you would receive these tokens back to your account.
 
 When you unbond from a validator, there is an `unbonding period` that we maintain to ensure there is no malicious behaviour on the network. The Unbonding period is for 21 days on Matic Mainnet. You will receive your rewards immediately after you unbond, however, your stake token amount will be unlocked in 21 Days.
 

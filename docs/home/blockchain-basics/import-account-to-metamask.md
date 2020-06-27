@@ -12,6 +12,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 You can always import your account to Metamask if you're using any other web/mobile wallet. All you need to to make sure that you have a backup of your seedphrase.
 
+If you're using Matic Wallet then you can backup you seedpharse by going to the Settings and then clicking **Show Passphrase**.
+
 If you don't have the seedphrase you will be unable to import your account to Metamask.
 
 ### Installing Metamask
@@ -42,5 +44,5 @@ You are now set. You will have successfully imported your account to Metamask.
 
 <img src={useBaseUrl("img/home/congratulations.png")} />
 
-By default, only ETH is listed in Metamask. In order to view your other tokens, you can click on Add Tokens and search the token you want to be listed.
+By default, only ETH is listed in Metamask. If you already have Matic tokens then that too will be listed automatically. In order to view your other tokens, you can click on Add Tokens and search the token you want to be listed.
 
