@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 You can always import your account to Metamask if you're using any other web/mobile wallet. All you need to to make sure that you have a backup of your seedphrase.
 
-If you're using Matic Wallet then you can backup you seedpharse by going to the Settings and then clicking **Show Passphrase**.
+If you're using Matic Wallet then you can backup you seedphrase by going to the Settings and then clicking **Show Passphrase**.
 
 If you don't have the seedphrase you will be unable to import your account to Metamask.
 
@@ -32,7 +32,7 @@ Choose the option of, **Import Wallet**
 
 Keep your seedphrase handy now.
 
-When you click on Import Wallet you will be navigated to a different screen which will ask you to enter your seedpharse. You will also be asked to set a password. 
+When you click on Import Wallet you will be navigated to a different screen which will ask you to enter your seedphrase. You will also be asked to set a password. 
 
 <img src={useBaseUrl("img/home/import-account-seed.png")} />
 
@@ -46,3 +46,10 @@ You are now set. You will have successfully imported your account to Metamask.
 
 By default, only ETH is listed in Metamask. If you already have Matic tokens then that too will be listed automatically. In order to view your other tokens, you can click on Add Tokens and search the token you want to be listed.
 
+Do keep extreme care of your seedphrase and keep backups, because unlike exchanges, you need to keep your seedphrase safe. If the seedphrase is lost, funds are not recoverable. Also do not ever share this seedphrase with anyone.
+
+### Sending MATIC tokens from Binance and other exchanges to the Metamask wallet
+
+Most exchanges like Binance and others have an option to withdraw funds from your exchange account to your address on the Ethereum blockchain. Once you have setup an account in Metamask, you will see the address of your account.
+
+To send Matic tokens to Metamask, withdraw funds from your exchange account to the Metamask address. After some time, the funds will get reflected in the Metamask account.
