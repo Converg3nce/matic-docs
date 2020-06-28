@@ -22,6 +22,7 @@ module.exports = {
         "home/blockchain-basics/gas",
         "home/blockchain-basics/accounts",
         "home/blockchain-basics/sidechain",
+        "home/blockchain-basics/import-account-to-metamask",
       ],
     },
     {
