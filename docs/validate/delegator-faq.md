@@ -121,3 +121,7 @@ If you’re using Brave, please turn off the option for “Use Crypto Wallets”
 Technically, the Matic web wallet/Staking interface is just a web application. Currently it supports only 1 wallet - Metamask.
 
 So first you must withdraw your funds from Binance or any other exchange to your Ethereum address on Metamask. If you don't know how to use Metamask, google it a bit. There are plenty of videos and blogs to get started with it.
+
+### When will be possible to become a validator and how many tokens do I need to have?
+
+The Matic mainnet is being rolled out gradually in phases. Currently we are in Phase 1 with only the Matic foundation nodes running. Gradually, additional external validators will be onboarded. Please refer to https://blog.matic.network/mainnet-is-going-live-announcing-the-launch-sequence/ for more details.
