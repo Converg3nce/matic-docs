@@ -270,6 +270,7 @@ module.exports = {
       ],
     },
     "validate/delegator",
+    "validate/delegator-faq",
     // "validate/port_management",
     "validate/counter_stake",
     {
