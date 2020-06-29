@@ -25,6 +25,8 @@ Matic Validator Dashboard currently supports only Metamask as of now. So you wil
 
 If you currently using a different wallet, you can import your account to Metamask and then use the Staking Dashboard. You can read our guide on how to [Import an Account to Metamask](https://docs.matic.network/docs/home/blockchain-basics//import-account-to-metamask)
 
+In order to import you account you first need to make sure that you install the Metamask extension on your browser. To install Metamask extension you use this link: https://metamask.io
+
 **Note**: We have experienced some issues with Firefox when using the Validator Dashboard. We recommend use Google Chrome or Brave.
 
 Once you have logged in you will be navigated to a screen where you will see a list of Validators and a lot of stats.
@@ -32,6 +34,10 @@ Once you have logged in you will be navigated to a screen where you will see a l
 **Note:** If you are already a validator, then when you attempt to become a delegator, you have to make sure that you use a different address than the one used for your validator. This is only if you're already a validator.
 
 ## How to delegate to a validator
+
+Your need to have your funds on the **Main Ethereum Network** to delegate your tokens. If your tokens are on any other network/testnet or Matic Mainnet, then you won't be able to delegate your tokens to Matic.
+
+<img src={useBaseUrl("img/staking/main-ethereum-network.png")} />
 
 Once you have logged in with your address on the Staking Dashboard you should have an option that says "Become a Delegator"
 
