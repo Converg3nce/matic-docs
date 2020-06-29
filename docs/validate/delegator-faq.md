@@ -125,3 +125,9 @@ So first you must withdraw your funds from Binance or any other exchange to your
 ### When will be possible to become a validator and how many tokens do I need to have?
 
 The Matic mainnet is being rolled out gradually in phases. Currently we are in Phase 1 with only the Matic foundation nodes running. Gradually, additional external validators will be onboarded. Please refer to https://blog.matic.network/mainnet-is-going-live-announcing-the-launch-sequence/ for more details.
+
+### If I have earned rewards while delegating, and if I add additional funds to the same validator node, what happens?
+
+If you have not re-delegated your rewards before delegating additional funds to the same validator node, your rewards will be withdrawn automatically. 
+
+In case you dont want that to happen, re-delegate your rewards before delegating additional funds.
