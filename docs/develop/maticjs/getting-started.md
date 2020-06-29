@@ -124,7 +124,7 @@ You will also need to create another file `config.json`. This will contain all c
 {
     "MATIC_PROVIDER": "https://rpc-mumbai.matic.today", 
     "PARENT_PROVIDER": "https://goerli.infura.io/v3/75aa7935112647bc8cc49d20beafa189", 
-    "ROOTCHAIN_ADDRESS": "0xCe29AEdCdBeef0b05066316013253beACa7A6268", 
+    "ROOTCHAIN_ADDRESS": "0x2890bA17EfE978480615e330ecB65333b880928e", 
     "WITHDRAWMANAGER_ADDRESS": "0x2923C8dD6Cdf6b2507ef91de74F1d5E0F11Eac53", 
     "DEPOSITMANAGER_ADDRESS": "0x7850ec290A2e2F40B82Ed962eaf30591bb5f5C96",  
     "PRIVATE_KEY": "your_pvt_key", // Append 0x to your private key
