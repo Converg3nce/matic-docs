@@ -28,19 +28,17 @@ All staking transactions of Matic happen on Ethereum for security reasons.
 
 The time taken to complete a transaction depends on the gas fees that you have allowed and also the network congestion of Ethereum mainnet at that point in time. You can always use the “Speed Up” option to increase the gas fees so that your transaction can be completed soon
 
-### Which Wallet is currently supported?
+### Which wallets are currently supported?
 
-Currently, only the Metamask extension on Browser is supported. We will be gradually adding support for other wallets soon.
+Currently, only the Metamask extension on the browser and Coinbase Wallet are supported. We will be gradually adding support for other wallets soon.
 
-### My Ledger/Trezor wallet does not work. What should I do?
+### Are hardware wallets supported?
 
-Currently, only the Metamask extension on Browser is supported. We will be gradually adding support for other wallets soon.
-
-Ledger/Trezor wallets used with Metamask will also not work currently. Support for these will be added shortly.
+Yes, hardware wallets are supported. You can use the "Connect Hardware Wallet" option on Metamask and connect your Hardware wallet and then continue the delegation process.
 
 ### Why can’t I stake directly from Binance?
 
-Staking through Binance is not yet supported. There will be an announcement if and when Binance starts supporting it
+Staking through Binance is not yet supported. There will be an announcement if and when Binance starts supporting it.
 
 ### I have completed my delegation, where can I check details?
 
