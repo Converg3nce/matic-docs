@@ -27,6 +27,8 @@ If you currently using a different wallet, you can import your account to Metama
 
 In order to import you account you first need to make sure that you install the Metamask extension on your browser. To install Metamask extension you use this link: https://metamask.io
 
+You can also connect your Hardware wallet such as Ledger or Trezor using the "Connect to Hardware Wallet" option in Metamask. Once you connect your Hardware wallet in Metamask, you would be able to delegate your tokens from the Hardware wallet.
+
 **Note**: We have experienced some issues with Firefox when using the Validator Dashboard. We recommend use Google Chrome or Brave.
 
 Once you have logged in you will be navigated to a screen where you will see a list of Validators and a lot of stats.

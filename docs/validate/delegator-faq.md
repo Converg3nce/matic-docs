@@ -34,9 +34,7 @@ Currently, only the Metamask extension on Browser is supported. We will be gradu
 
 ### My Ledger/Trezor wallet does not work. What should I do?
 
-Currently, only the Metamask extension on Browser is supported. We will be gradually adding support for other wallets soon.
-
-Ledger/Trezor wallets used with Metamask will also not work currently. Support for these will be added shortly.
+Yes, hardware wallets are supported. You can use the "Connect Hardware Wallet" option on Metamask and connect your Hardware wallet and then continue the delegation process.
 
 ### Why can’t I stake directly from Binance?
 
