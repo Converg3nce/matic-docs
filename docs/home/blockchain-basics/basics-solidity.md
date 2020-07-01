@@ -15,9 +15,10 @@ Solidity is an object oriented, high-level programming language for implementing
 - variables 
 - functions 
 - objects and types 
+- events
 - and handles money transactions!
 
-Before jumping to coding with Solidity it is important to familiarize oneself with blokchain's mental models - these are essential because of the contrasting difference in a blockchain application architecture and a common web application architecture.
+Before jumping to coding with Solidity it is important to familiarize oneself with blockchain's mental models - these are essential because of the contrasting difference in a blockchain application architecture and a common web application architecture.
 Where we want to go is Web 3.0, where servers and databases are as decentralized as the clients. In other words, clients can also act as servers or databases or both (aka, peer-to-peer). With many-to-many relationships at all levels of the stack, there are no concentrations of control and a single point of failure. The network is maximally distributed.
 
 Essentially the following points need to be kept in mind always:
