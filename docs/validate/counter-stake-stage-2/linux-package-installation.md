@@ -17,6 +17,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Please note that if you do have a previous setup of Heimdall and Bor installed on your machine, you will have to remove it completely before you proceed. You can follow the instructions in this link to remove Heimdall and Bor completely: https://forum.matic.network/t/how-to-delete-previous-entries-of-heimdall-and-bor/163
 
+If you're planning on running a Sentry Node alongside your Validator node, we suggest you to use the Sentry Node setup guide to setup your Validator and Sentry nodes simultaneously.
+
+* [Setup your Sentry + Validator nodes using Linux Packages](linux-validator-sentry-setup)
+* [Setup your Sentry + Validator nodes using Binaries](binaries-validator-sentry-setup)
+
 ### Step 1: Install rabbit-mq (ignore if already installed)
 
 **Why do you need RabbitMq?**
@@ -38,8 +43,8 @@ $ sudo service rabbitmq-server start
 **For Ubuntu/Debian**
 
 ```js
-$ wget https://matic-public.s3.amazonaws.com/v0.1.7/matic-heimdall_0.1.7_amd64.deb
-$ wget https://matic-public.s3.amazonaws.com/v0.1.7/matic-bor_0.1.7_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.9/matic-heimdall_0.1.9_amd64.deb
+$ wget https://matic-public.s3.amazonaws.com/v0.1.8/matic-bor_0.1.8_amd64.deb
 ```
 
     
@@ -50,8 +55,8 @@ This will setup needed services for the validator nodes - Heimdall and Bor
 **For Ubuntu/Debian**
    
 ```js
-$ sudo dpkg -i matic-heimdall_0.1.7_amd64.deb
-$ sudo dpkg -i matic-bor_0.1.7_amd64.deb
+$ sudo dpkg -i matic-heimdall_0.1.9_amd64.deb
+$ sudo dpkg -i matic-bor_0.1.8_amd64.deb
 ```
    
 ### Step 4: Configure Heimdall
@@ -78,8 +83,10 @@ $ git clone https://github.com/maticnetwork/public-testnets
 
 //NOTE: Do make sure to join the relevant folder
 $ cd public-testnets/<testnet version>
-// Current testnet version is CS-2007
-// Example: $ cd public-testnets/CS-2007
+// Current testnet version is CS-2008
+// Example: $ cd public-testnets/CS-2008
+
+$ cd without-sentry/
 
 $ echo "export CONFIGPATH=$PWD" >> ~/.bashrc
 
@@ -98,6 +105,40 @@ Add your API key in file `/etc/heimdall/config/heimdall-config.toml` under the k
 
 ``` js
 $ sudo vi /etc/heimdall/config/heimdall-config.toml
+```
+
+**Note**: If you want to use non-default ports for Heimdall or Bor, Rest server needs flags for new port and non-default node url.
+
+**For Example**:
+
+```js
+heimalld rest-server --heimdalld rest-server --laddr tcp://0.0.0.0:3317 --node tcp://localhost:26637
+```
+
+So, if you are using heimdalld-rest-server.service, please edit /etc/systemd/system/heimdalld-rest-server.service with appropriate port and node (heimdalld service) url.
+
+```js
+$ heimdalld rest-server --help
+
+Start LCD (light-client daemon), a local REST server
+
+Usage:
+  heimdalld rest-server [flags]
+
+Flags:
+      --chain-id string   The chain ID to connect to
+  -h, --help              help for rest-server
+      --laddr string      The address for the server to listen on (default "tcp://0.0.0.0:1317")
+      --max-open int      The number of maximum open connections (default 1000)
+      --node string       Address of the node to connect to (default "tcp://localhost:26657")
+      --trust-node        Trust connected full node (don't verify proofs for responses) (default true)
+
+Global Flags:
+      --home string                   directory for config and data (default "/home/ubuntu/.heimdalld")
+      --log_level string              Log level (default "main:info,state:info,*:error")
+      --trace                         print out full stack trace on errors
+      --with-heimdall-config string   Heimdall config file path (default <home>/config/heimdall-config.json)
+
 ```
 
     
@@ -199,11 +240,24 @@ The key called `catching_up` will show your sync status, if it's not catching up
 
 **Expected Output**
 
-Your `heimdall-node` should be syncing now! You can see logs of the above services under `/var/log/matic-logs/` 🤩 or you could also run the command
+Your `heimdall-node` should be syncing now! You can see view the logs by running this command:
 
 ```js
-tail -f /var/log/matic-logs/heimdalld.log
+journalctl -u heimdalld.service -f 
 ```
+
+To get logs for Heimdall rest-server, you can run this command:
+
+```js
+journalctl -u heimdalld-rest-server.service -f 
+```
+
+To get logs for Heimdall Bridge, you can this command:
+
+```js
+journalctl -u heimdalld-bridge.service -f 
+```
+
 
 If everything's well, then your logs should look something like this:
 
@@ -274,28 +328,30 @@ sudo mv ./UTC-<time>-<address> /etc/bor/dataDir/keystore/
 sudo mv password.txt /etc/bor/dataDir/
 ```
 
-### Step 9: Add NETWORK_ID and VALIDATOR_ADDRESS to `/etc/bor/metadata`
+### Step 10: Add NETWORK_ID and VALIDATOR_ADDRESS to `/etc/bor/metadata`
 
 ```js
 $ sudo vi  /etc/bor/metadata
 
 // eg: add the NETWORK_ID and VALIDATOR_ADDRESS in the following format:
-NETWORK_ID=2007
+NETWORK_ID=2008
 VALIDATOR_ADDRESS=<your Ethereum/Goerli wallet address> 
+NODE_TYPE=validator-without-sentry
 ```
+To select node type, edit NODE_TYPE in /etc/bor/metadata after package is installed. Possible value for `NODE_TYPE`: `sentry`, `validator` and `validator-without-sentry`
 
 
-### Step 9: Start Bor
+### Step 11: Start Bor (Required for Sentry Node)
 
 ```js
  sudo service bor start
 ```
 **Expected Output**
 
-You can see logs of Bor service under `/var/log/matic-logs/bor.log` 🤩 or you could run the following command:
+You can see logs of Bor service by running the following command:
 
 ```js
-tail -f /var/log/matic-logs/bor.log
+$ journalctl -u bor.service -f
 ```
 
 If everything's well, then your logs should look something like this:

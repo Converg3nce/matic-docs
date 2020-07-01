@@ -25,25 +25,11 @@ module.exports = {
         "home/blockchain-basics/import-account-to-metamask",
       ],
     },
-    {
-      type: "category",
-      label: "Architecture",
-      items: [
-        "home/architecture/matic-architecture",
-        "home/architecture/matic-flow",
-        "home/architecture/security-models",
-        {
-          type: "category",
-          label: "Bor",
-          items: ["home/architecture/bor-chain", "home/architecture/bor"],
-        },
-        {
-          type: "category",
-          label: "Heimdall",
-          items: ["home/architecture/heimdall-chain"],
-        },
-      ],
-    },
+    "home/architecture/matic-architecture",
+    // "home/architecture/matic-flow",
+    "home/architecture/security-models",
+    // "home/architecture/bor-chain",
+    // "home/architecture/heimdall-chain",
     "home/faq",
   ],
   development: [
@@ -100,7 +86,7 @@ module.exports = {
           ],
         },
         "develop/advanced/mapping-assets",
-        "develop/advanced/submit-mapping-request"
+        "develop/advanced/submit-mapping-request",
       ],
     },
     {
@@ -125,7 +111,7 @@ module.exports = {
             "develop/oracles/bandchain",
             "develop/oracles/bandchainadvanced",
           ],
-        }
+        },
       ],
     },
     "develop/fiat-on-ramp",
@@ -279,8 +265,28 @@ module.exports = {
       items: [
         "validate/counter-stake-stage-2/getting-started",
         "validate/counter-stake-stage-2/core-components",
-        "validate/counter-stake-stage-2/linux-package-installation",
-        "validate/counter-stake-stage-2/running-with-binaries",
+        {
+          type: "category",
+          label: "Node Setup",
+          items: [
+            {
+              type: "category",
+              label: "With Sentry",
+              items: [
+            "validate/counter-stake-stage-2/linux-validator-sentry-setup",
+            "validate/counter-stake-stage-2/binaries-validator-sentry-setup",
+              ]
+            },
+            {
+              type: "category",
+              label: "Without Sentry",
+              items: [ 
+            "validate/counter-stake-stage-2/linux-package-installation",
+            "validate/counter-stake-stage-2/running-with-binaries",
+              ]
+            },
+          ]
+        }, 
         //"validate/counter-stake-stage-2/running-with-docker",
         "validate/counter-stake-stage-2/stake-on-matic",
         "validate/counter-stake-stage-2/rewards",
@@ -301,9 +307,7 @@ module.exports = {
     {
       type: "category",
       label: "Architecture",
-      items: [
-        "contribute/matic-architecture"
-      ],
+      items: ["contribute/matic-architecture"],
     },
     {
       type: "category",
@@ -366,11 +370,11 @@ module.exports = {
             "contribute/contracts/plasma_contracts/predicates",
             "contribute/contracts/plasma_contracts/important-contracts",
           ],
-        }
+        },
       ],
     },
     "contribute/state-sync",
-    "home/architecture/security-models",
-    "contribute/community-maintainers"
+    // "home/architecture/security-models",
+    "contribute/community-maintainers",
   ],
 };

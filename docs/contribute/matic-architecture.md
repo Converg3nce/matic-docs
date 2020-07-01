@@ -1,7 +1,7 @@
 ---
 id: matic-architecture
 title: Overview
-description: Build your next blockchain app on Matic.
+description: Architecturally, the beauty of Matic is its elegant design, which features a generic validation layer separated from varying execution environments like Plasma enabled chains, full blown EVM sidechains, and in the future, other Layer 2 approaches such as Optimistic Rollups.
 keywords:
   - docs
   - matic
