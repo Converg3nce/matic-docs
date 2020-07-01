@@ -9,6 +9,7 @@ module.exports = {
   customFields: {
     description: "Build your next blockchain app on Matic.",
   },
+  
   themeConfig: {
     announcementBar: {
       id: "support_us",

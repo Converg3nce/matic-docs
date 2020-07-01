@@ -41,8 +41,8 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     matic: {
-      provider: () => new HDWalletProvider(mnemonic, `https://testnetv3.matic.network`),
-      network_id: 15001,
+      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mumbai.matic.today`),
+      network_id: 80001,
       gasPrice: '0x0',
       confirmations: 2,
       timeoutBlocks: 200,
@@ -72,7 +72,7 @@ Run this command in root of the project directory:
 $ truffle migrate --network matic
 ```
 
-Contract will be deployed on MaticTestnetv3, it will somewhat looks like this:
+Contract will be deployed on Matic's Mumbai Testnet, it look like this:
 
 ```js
 2_deploy_contracts.js
@@ -113,4 +113,4 @@ Summary
 
 **Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract.
 
-You can check the deplyement status here: https://testnetv3-explorer.matic.network/
+You can check the deplyement status here: https://mumbai-explorer.matic.today/

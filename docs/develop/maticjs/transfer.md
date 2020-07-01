@@ -84,7 +84,7 @@ And to confirm that on our receiver’s account, our balance is now updated to `
 
 You can also check the transaction on the Matic Explorer by searching the transaction hash.
 
-Link to the explorer - https://testnetv3-explorer.matic.network/
+Link to the explorer - https://mumbai-explorer.matic.today/
 
 
 ### **Transfer #2**

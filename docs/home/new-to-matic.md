@@ -9,8 +9,6 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 Matic Network is a scaling solution for public blockchains. Based on an adapted implementation of Plasma framework (Plasma MoreVP) - with an account based implementation (read more [here](https://ethresear.ch/t/account-based-plasma-morevp/5480)), Matic supports all the existing Ethereum tooling along with faster and cheaper transactions.
 
-If you are Ethereum Developer then you are already a Matic Developer. You don't have to worry about anything. Just deploy your contracts on Matic within Two simple steps.
-
 ### Deploy smart contracts
 
 <!-- ### Are you an Experience Blockchain Developer? -->
@@ -18,11 +16,10 @@ If you are Ethereum Developer then you are already a Matic Developer. You don't 
 * Deploy your Contracts on Matic Network
     - [Using Remix](/docs/develop/remix)
     - [Using Truffle](/docs/develop/truffle)
-* Configure the Web3 RPC-URL to https://testnetv3.matic.network, *Everything else remains the same*
+* Configure the Web3 RPC-URL to https://rpc-mumbai.matic.today, *Everything else remains the same*
 :::info
 Matic Mainnet will have PoS security, with greater Plasma guarantees being added
 :::
-**And Volla!!! Enjoy the Scalable and Instant Solutions with almost no cost with the security of Blockchain.**
 
 ### What is a Blockchain?
 Simply put, Blockchain is a shared, immutable ledger for recording transactions, tracking assets and building trust. Head over to [Blockchain Basics](blockchain-basics/blockchain) to read more.

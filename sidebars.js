@@ -22,6 +22,7 @@ module.exports = {
         "home/blockchain-basics/gas",
         "home/blockchain-basics/accounts",
         "home/blockchain-basics/sidechain",
+        "home/blockchain-basics/import-account-to-metamask",
       ],
     },
     "home/architecture/matic-architecture",
@@ -144,6 +145,7 @@ module.exports = {
         "develop/advanced/swap-assets",
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
+        "develop/advanced/transfer-data"
       ],
     },
   ],
@@ -159,6 +161,12 @@ module.exports = {
           label: "Network Details",
           items: [
             "integrate/network-detail",
+            {
+              type: "link",
+              label: "Mumbai",
+              href:
+                "https://static.matic.network/network/testnet/mumbai/index.json"
+            },
             {
               type: "link",
               label: "TestNetV3",
@@ -248,6 +256,7 @@ module.exports = {
       ],
     },
     "validate/delegator",
+    "validate/delegator-faq",
     // "validate/port_management",
     "validate/counter_stake",
     {

@@ -8,7 +8,7 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-# Swap ERC20 and ERC721 tokens atomically using Plasma Asset Swaps
+## Swap ERC20 and ERC721 tokens atomically using Plasma Asset Swaps
 
 This document will help you understand the Plasma asset swaps that can be performed while using Matic. This allows you to create applications such as decentralized exchanges, NFT marketplaces and similar while using our Plasma construction, which piggybacks on the security of Ethereum.
 
@@ -334,7 +334,7 @@ $ truffle migrate --network maticBetaMainnet
 
 Once you have your contract addresses, fill them in the config file under `/scripts/erc20-721/` along with the provider, which will be the following for the two networks:
 
-Matic testnet: `https://testnetv3.matic.network`
+Matic testnet: `https://rpc-mumbai.matic.today`
 Matic beta mainnet: `https://beta.matic.network`
 
 Once the config file is ready, inside the `/scripts/erc20-721/` run the following - 
