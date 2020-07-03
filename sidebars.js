@@ -22,27 +22,14 @@ module.exports = {
         "home/blockchain-basics/gas",
         "home/blockchain-basics/accounts",
         "home/blockchain-basics/sidechain",
+        "home/blockchain-basics/import-account-to-metamask",
       ],
     },
-    {
-      type: "category",
-      label: "Architecture",
-      items: [
-        "home/architecture/matic-architecture",
-        "home/architecture/matic-flow",
-        "home/architecture/security-models",
-        {
-          type: "category",
-          label: "Bor",
-          items: ["home/architecture/bor-chain", "home/architecture/bor"],
-        },
-        {
-          type: "category",
-          label: "Heimdall",
-          items: ["home/architecture/heimdall-chain"],
-        },
-      ],
-    },
+    "home/architecture/matic-architecture",
+    // "home/architecture/matic-flow",
+    "home/architecture/security-models",
+    // "home/architecture/bor-chain",
+    // "home/architecture/heimdall-chain",
     "home/faq",
   ],
   development: [
@@ -89,7 +76,7 @@ module.exports = {
           ],
         },
         "develop/advanced/mapping-assets",
-        "develop/advanced/submit-mapping-request"
+        "develop/advanced/submit-mapping-request",
       ],
     },
     {
@@ -326,6 +313,7 @@ module.exports = {
       ],
     },
     "validate/delegator",
+    "validate/delegator-faq",
     // "validate/port_management",
     "validate/counter_stake",
     {
@@ -334,8 +322,28 @@ module.exports = {
       items: [
         "validate/counter-stake-stage-2/getting-started",
         "validate/counter-stake-stage-2/core-components",
-        "validate/counter-stake-stage-2/linux-package-installation",
-        "validate/counter-stake-stage-2/running-with-binaries",
+        {
+          type: "category",
+          label: "Node Setup",
+          items: [
+            {
+              type: "category",
+              label: "With Sentry",
+              items: [
+            "validate/counter-stake-stage-2/linux-validator-sentry-setup",
+            "validate/counter-stake-stage-2/binaries-validator-sentry-setup",
+              ]
+            },
+            {
+              type: "category",
+              label: "Without Sentry",
+              items: [ 
+            "validate/counter-stake-stage-2/linux-package-installation",
+            "validate/counter-stake-stage-2/running-with-binaries",
+              ]
+            },
+          ]
+        }, 
         //"validate/counter-stake-stage-2/running-with-docker",
         "validate/counter-stake-stage-2/stake-on-matic",
         "validate/counter-stake-stage-2/rewards",
