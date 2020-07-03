@@ -31,7 +31,7 @@ Next, we set up Matic and Ropsten provider via Wallet Connect’s object:
 ```javascript
 const maticProvider = new WalletConnectProvider(
   {
-    host: `https://testnet2.matic.network`,
+    host: `https://rpc-mumbai.matic.today`,
     callbacks: {
       onConnect: console.log('connected'),
       onDisconnect: console.log('disconnected!')
@@ -97,9 +97,7 @@ const tx = {
   from: this.account,
   to: myContractAddress,
   gas: 800000,
-  gasPrice: 0, // for matic testnet
   data: this.myContractInstance.methods.myMethod(myParams).encodeABI(),
-  gasPrice: "0x0",
 }
 ```
 
