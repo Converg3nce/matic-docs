@@ -41,6 +41,18 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Network Details",
+      items: [
+        "develop/network-details/network",
+        "develop/network-details/mapped-tokens",
+        "develop/network-details/gas-token",
+        "develop/network-details/genesis-contracts",
+        "develop/network-details/full-node-deployment",
+      ],
+    },
+
+    {
+      type: "category",
       label: "Using Metamask",
       items: [
         "develop/metamask/hello",
@@ -145,7 +157,7 @@ module.exports = {
         "develop/advanced/swap-assets",
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
-        "develop/advanced/transfer-data"
+        "develop/advanced/transfer-data",
       ],
     },
   ],
@@ -163,9 +175,15 @@ module.exports = {
             "integrate/network-detail",
             {
               type: "link",
+              label: "Matic-Mainnet",
+              href:
+                "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
+            },
+            {
+              type: "link",
               label: "Mumbai",
               href:
-                "https://static.matic.network/network/testnet/mumbai/index.json"
+                "https://static.matic.network/network/testnet/mumbai/index.json",
             },
             {
               type: "link",
@@ -273,20 +291,20 @@ module.exports = {
               type: "category",
               label: "With Sentry",
               items: [
-            "validate/counter-stake-stage-2/linux-validator-sentry-setup",
-            "validate/counter-stake-stage-2/binaries-validator-sentry-setup",
-              ]
+                "validate/counter-stake-stage-2/linux-validator-sentry-setup",
+                "validate/counter-stake-stage-2/binaries-validator-sentry-setup",
+              ],
             },
             {
               type: "category",
               label: "Without Sentry",
-              items: [ 
-            "validate/counter-stake-stage-2/linux-package-installation",
-            "validate/counter-stake-stage-2/running-with-binaries",
-              ]
+              items: [
+                "validate/counter-stake-stage-2/linux-package-installation",
+                "validate/counter-stake-stage-2/running-with-binaries",
+              ],
             },
-          ]
-        }, 
+          ],
+        },
         //"validate/counter-stake-stage-2/running-with-docker",
         "validate/counter-stake-stage-2/stake-on-matic",
         "validate/counter-stake-stage-2/rewards",
