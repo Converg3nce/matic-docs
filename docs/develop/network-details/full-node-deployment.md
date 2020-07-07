@@ -22,7 +22,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Full Node Deployment (Mumbai testnet)
 
-We have create simple Ansible playbooks to setup a full node.
+We have created simple Ansible playbooks to setup a full node.
 
 Pre-requisite:
 
@@ -30,7 +30,7 @@ Pre-requisite:
     - To install ansible with Python 3.x you can use this command `pip3 install ansible`. This will install Python 3 dependencies as well as ansible.
 - Check [https://github.com/maticnetwork/node-ansible#requirements](https://github.com/maticnetwork/node-ansible#requirements) for requirements
 - You will also need to make sure that Go is not installed on your VM / Machine. Setting up your full node through ansible will run into issues if you have Go already installed, as ansible requires specific packages of Go to be installed.
-- You will also need to make sure that your VM / Machine does not have any previous setups for Matic Validator or Heimdall or Bor. You will need to delete them as your setup will run in to issues.
+- You will also need to make sure that your VM / Machine does not have any previous setups for Matic Validator or Heimdall or Bor. You will need to delete them as your setup will run into issues.
 
 Setup full node for Testnetv4/Mumbai testnet
 
@@ -91,7 +91,7 @@ Setup full node for Testnetv4/Mumbai testnet
 <TabItem value="mainnet">
 
 # Full Node Deployment (Matic mainnet)
-We have create simple Ansible playbooks to setup a full node.
+We have created simple Ansible playbooks to setup a full node.
 
 Pre-requisite:
 
@@ -99,7 +99,7 @@ Pre-requisite:
     - To install ansible with Python 3.x you can use this command `pip3 install ansible`. This will install Python 3 dependencies as well as ansible.
 - Check [https://github.com/maticnetwork/node-ansible#requirements](https://github.com/maticnetwork/node-ansible#requirements) for requirements
 - You will also need to make sure that Go is not installed on your VM / Machine. Setting up your full node through ansible will run into issues if you have Go already installed, as ansible requires specific packages of Go to be installed.
-- You will also need to make sure that your VM / Machine does not have any previous setups for Matic Validator or Heimdall or Bor. You will need to delete them as your setup will run in to issues.
+- You will also need to make sure that your VM / Machine does not have any previous setups for Matic Validator or Heimdall or Bor. You will need to delete them as your setup will run into issues.
 
 Setup full node for Matic mainnet
 
