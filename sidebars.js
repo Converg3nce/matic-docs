@@ -65,12 +65,15 @@ module.exports = {
 
     {
       type: "category",
-      label: "Key Management on Web3",
+      label: "Wallets",
       items: [
-        "develop/key-management/getting-started",
-        "develop/key-management/metamask",
-        "develop/key-management/walletconnect",
-        "develop/key-management/portis",
+        "develop/wallets/getting-started",
+        "develop/wallets/metamask",
+        "develop/wallets/torus",
+        "develop/wallets/portis",
+        "develop/wallets/fortmatic",
+        "develop/wallets/arkane",
+        "develop/wallets/walletconnect",
       ],
     },
     {
