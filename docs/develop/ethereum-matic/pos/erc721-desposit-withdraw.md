@@ -12,7 +12,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 Deposit ERC721 -
 
 1. ***Approve*** ***RootChainManager*** contract to spend the tokens that have to be deposited.
-2. Make ***deposit*** or ***depositFor*** call on ***RootChainManager***.
+2. Make ***depositFor*** call on ***RootChainManager***.
 
 Deposit Ether -
 
@@ -29,7 +29,7 @@ Withdraw ERC721 -
 
 ### Configuring Matic SDK
 
-Install Matic SDK (***2.0.0-beta.12)***
+Install Matic SDK (***2.0.2)***
 
 ```bash
 npm install --save @maticnetwork/maticjs
@@ -37,7 +37,7 @@ npm install --save @maticnetwork/maticjs
 
 ```json
 "dependencies": {
-    "@maticnetwork/maticjs": "2.0.0-beta.12"
+    "@maticnetwork/maticjs": "2.0.2"
 }
 ```
 
@@ -47,10 +47,16 @@ While creating ***MaticPOSClient*** object ***maticProvider***, ***parentProvide
 const MaticPOSClient = require('@maticnetwork/maticjs').MaticPOSClient
 
 const maticPOSClient = new MaticPOSClient({
-  maticProvider: config.MATIC_PROVIDER,
-  parentProvider: config.PARENT_PROVIDER,
-  rootChain: config.PLASMA_ROOTCHAIN_ADDRESS,
-  posRootChainManager: config.POS_ROOT_CHAIN_MANAGER_ADDRESS,
+    network: 'testnet', // optional, default is testnet
+    version: 'mumbai', // optional, default is mumbai
+    parentProvider: new HDWalletProvider(config.user.privateKey, config.root.RPC),
+    maticProvider: new HDWalletProvider(config.user.privateKey, config.child.RPC),
+    posRootChainManager: config.root.POSRootChainManager,
+    posERC20Predicate: config.root.posERC20Predicate, // optional, required only if working with ERC20 tokens
+    posERC721Predicate: config.root.posERC721Predicate, // optional, required only if working with ERC721 tokens
+    posERC1155Predicate: config.root.posERC1155Predicate, // optional, required only if working with ERC71155 tokens
+    parentDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
+    maticDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
 })
 ```
 
@@ -64,7 +70,7 @@ await maticPOSClient.approveERC721ForDeposit(rootToken, tokenId, { from })
 
 ### Deposit
 
-Deposit can be done by calling ***deposit*** or ***depositFor*** on RootChainManager contract. Note that token needs to be mapped and approved for transfer beforehand. Once tokens are transferred deposit proceeds using StateSync mechanism. Matic POS client exposes ***depositERC721ForUser*** method to make this call.
+Deposit can be done by calling ***depositFor*** on RootChainManager contract. Note that token needs to be mapped and approved for transfer beforehand. Once tokens are transferred deposit proceeds using StateSync mechanism. Matic POS client exposes ***depositERC721ForUser*** method to make this call.
 
 ```jsx
 await maticPOSClient.depositERC721ForUser(rootToken, from, tokenId, { from, gasPrice: '10000000000' })

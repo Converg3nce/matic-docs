@@ -40,8 +40,3 @@ V1: add mint-able on Matic chain.
 - ***rootToChild*** and ***childToRoot*** token mapping should be stored.
 - ***StateReceiver*** should be able to call ***onStateReceive*** function.
 - ***ChildToken*** should have ***deposit*** and ***withdraw*** methods.
-
-### General state
-
-- We will allow exits of `stateRoot` which will be logged into `burn` tx and destroyed on Child contracts and while exiting users will provide proof for `stateRoot` and also provide the `stateData` and on the RootChain contract mapped contract will handle the state write mech similar to `Predicate` Which holds true for state deposits as well.
-- Will write a sample state deposit/exit contract and doc for the same later once we've completed the simple `erc20/erc721.`
