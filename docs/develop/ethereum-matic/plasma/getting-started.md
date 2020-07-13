@@ -1,6 +1,7 @@
 ---
 id: getting-started
-title: Getting Started
+title: Plasma Bridge
+sidebar_label: Introduction
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
@@ -9,9 +10,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-This tutorial will act as a guide for step-by-step process to understand and use [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Matic Network. 
-
-<img src={useBaseUrl("img/maticjs/maticjs.png")} />
+This tutorial will act as a guide for step-by-step process to understand and use Plasma bridge using [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Plasma Bridge on Matic Network. 
 
 The process followed here is:
 
