@@ -103,8 +103,10 @@ module.exports = {
           label: "PoS Bridge",
           items: [
             "develop/ethereum-matic/pos/getting-started",
+            "develop/ethereum-matic/pos/eth-deposit-withdraw",
             "develop/ethereum-matic/pos/erc20-deposit-withdraw",
             "develop/ethereum-matic/pos/erc721-deposit-withdraw",
+            "develop/ethereum-matic/pos/erc1155-deposit-withdraw",
             "develop/ethereum-matic/pos/deployment",
             "develop/ethereum-matic/pos/contract-interfaces",
             "develop/ethereum-matic/pos/support-multiple-token",

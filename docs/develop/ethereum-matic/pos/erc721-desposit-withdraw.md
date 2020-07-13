@@ -59,7 +59,7 @@ const maticPOSClient = new MaticPOSClient({
 This is a normal ERC721 approval so that  ***RootChainManager*** can call ***transferFrom*** function. Matic POS client exposes ***approveERC721ForDeposit*** method to make this call.
 
 ```jsx
-await maticPOSClient.approveERC721ForDeposit(rootToken, amount, { from })
+await maticPOSClient.approveERC721ForDeposit(rootToken, tokenId, { from })
 ```
 
 ### Deposit
@@ -67,7 +67,7 @@ await maticPOSClient.approveERC721ForDeposit(rootToken, amount, { from })
 Deposit can be done by calling ***deposit*** or ***depositFor*** on RootChainManager contract. Note that token needs to be mapped and approved for transfer beforehand. Once tokens are transferred deposit proceeds using StateSync mechanism. Matic POS client exposes ***depositERC721ForUser*** method to make this call.
 
 ```jsx
-await maticPOSClient.depositERC721ForUser(rootToken, from, amount, { from, gasPrice: '10000000000' })
+await maticPOSClient.depositERC721ForUser(rootToken, from, tokenId, { from, gasPrice: '10000000000' })
 ```
 
 ***deposit*** function of ***ChildToken*** is called by the ***ChildChainManager.*** Tokens should be minted when this call is made.
@@ -77,7 +77,7 @@ await maticPOSClient.depositERC721ForUser(rootToken, from, amount, { from, gasPr
 User can call ***withdraw*** function of ***ChildToken*** contract. This function should burn the tokens. Matic POS client exposes ***burnERC721*** method to make this call.
 
 ```jsx
-await maticPOSClient.burnERC721(childToken, amount, { from })
+await maticPOSClient.burnERC721(childToken, tokenId, { from })
 ```
 
 Store the transaction hash for this call and use it while generating burn proof.
