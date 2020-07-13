@@ -312,7 +312,7 @@ module.exports = {
     {
       type: "category",
       label: "Advanced",
-      items: ["integrate/advanced/setup-full-node-testnetv3"],
+      items: ["integrate/full-node-deployment"],
     },
   ],
   Validate: [
