@@ -11,7 +11,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 Following are the major types of blockchain networks:
 
 1. **Public Blockchain Network** <br></br>
-Anyone can read or write a transaction to the network, or participate in the consensus process. They are considered to be "permissionless". Every transaction is on the public network with privacy of encrypted data, which helps user's remain anonymous.
+Anyone can read or write a transaction to the network, or participate in the consensus process. They are considered to be "permissionless". Every transaction is on the public network with privacy of encrypted data, which helps user's remain pseudonymous.
 
 2. **Private Blockchain Network** <br></br>
 Private Blockchain are run and controlled by a single organisation that determines who can read, write and participate in consensus process. Since they are 100% centralised, private blockchain is useful for sandbox environments and not for Production.

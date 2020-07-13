@@ -17,23 +17,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 2. Once approved, the deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
 
 ```js
-const amount = "1000000000000000000"; // amount in wei
-const token = Ropsten_Erc20Address;
-  // const amount = config.value
-  init();
-  matic
-    .approveERC20TokensForDeposit(token, amount, {
-  from
-  })
-  .then(logs => console.log(logs.transactionHash))
-    .then(() => {
-      matic.depositERC20ForUser(token, from, amount, {
-  from
-  })
-  .then(logs => console.log(logs.transactionHash));
-})
+const token = config.GOERLI_ERC20 // ERC20 token address
+const amount = '1000000000000000000' // amount in wei
+
+async function execute() {
+    await matic.initialize()
+    matic.setWallet(config.PRIVATE_KEY)
+    // Approve Deposit Manager contract to transfer tokens
+    await matic.approveERC20TokensForDeposit(token, amount, { from, gasPrice: '10000000000' })
+    // Deposit tokens
+    return matic.depositERC20ForUser(token, from, amount, { from, gasPrice: '10000000000' })
+}
 ```
-`amount` is the amount that is to be deposited. Amount is mentioned in `wei` . To those new to the field, `1 TEST` token is equivalent to 10¹⁸ `wei` . In the code snippet, `0.01 TEST` = 10¹⁶ `wei`.
+`amount` is the amount that is to be deposited. Amount is mentioned in `wei` . To those new to the field, `1 TEST` token is equivalent to 10¹⁸ 
 
 ### ERC721
 **Deposit for ERC721 is a 1 step process**
@@ -41,15 +37,16 @@ const token = Ropsten_Erc20Address;
 1. The deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network. 
 
 ```js
-const token = Ropsten_Erc721Address;
-// const tokenId = config.value
-const tokenId = "746"; // ERC721 token Id
-init();
-// Deposit ERC721 into Matic chain
-matic.safeDepositERC721Tokens(token, tokenId, {
-  from
-})
-.then(logs => console.log(logs.transactionHash));
+const token = config.GOERLI_ERC721 // ERC721 token address
+const tokenId = '1' // ERC721 token ID
+
+async function execute() {
+    await matic.initialize()
+    matic.setWallet(config.PRIVATE_KEY)
+    // Depsoit NFT Token
+    let response = await matic.safeDepositERC721Tokens(token,tokenId,{ from, gasPrice: '10000000000' })
+    return response;
+}
 ```
 Here, instead of `amount` we mention the `tokenId` to be deposited.
 
@@ -59,27 +56,28 @@ Here, instead of `amount` we mention the `tokenId` to be deposited.
 1. The deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network. 
 
 ```js
-// const amount = config.value
-const amount = "1000000000000000000"; // amount in wei
-// Deposit Ether into Matic chain
-init();
-matic.depositEther(amount, {
-  from
-})
-.then(logs => console.log(logs.transactionHash));
+const amount = '10000000000000000' // amount in wei
+
+async function execute() {
+    await matic.initialize()
+    matic.setWallet(config.PRIVATE_KEY)
+    // Deposit ether
+    let response = await matic.depositEther(amount,{ from, gasPrice: '10000000000' })
+    return response;
+}
 ```
 
 ## Expected Flow
 
 For reference purposes, the screenshots below will provide context during the actual deposit.
 
-We currently have `100 TEST` tokens and `9` ETH at our address `0x1a06816065731fcBD7296f9B2400d632816b070B` on Ropsten Network,
+We currently have `100 TEST` tokens and `0.1` ETH at our address `0x28e9E72DbF7ADee19B5279C23E40a1b0b35C2B90` on Görli Network,
 
-<img src={useBaseUrl("img/maticjs/before-deposit-balance-ropsten.png")} />
+<img src={useBaseUrl("img/maticjs/before-deposit-balance-goerli.png")} />
 
 while on Matic Network we have `0 TEST` tokens.
 
-<img src={useBaseUrl("img/maticjs/before-deposit-balance-matic.png")} />
+<img src={useBaseUrl("img/maticjs/before-deposit-balance-mumbai.png")} />
 
 We will be depositing `1 TEST` tokens to Matic Testnet.
 
@@ -89,21 +87,16 @@ Let’s run the Deposit function. To run use:
 
 or `$ node deposit-ERC721.js`
 
-We have added console logging for both events, which when run successfully will display the Transaction Hash as well as a message `“Deposit Tokens from Ropsten/Ethereum to Matic — Transaction Approved.”.` Once deposit is complete, you will see the Transaction Hash and message `”Tokens deposited from Ropsten/Ethereum to Matic.”` Since this is only for illustration purposes, the message can be customized to anything of your choice. By default it will only display the Transaction Hash.
+Now, let’s verify our account balances on Metamask.
 
-<img src={useBaseUrl("img/maticjs/run-deposit-erc20.png")} />
-<img src={useBaseUrl("img/maticjs/run-deposit-erc20.png")} />
+Our Balance on Görli now shows `99 TEST` which means our Deposit transaction of `1 TEST` was successful.
 
-Let’s verify our account balances on Metamask.
+<img src={useBaseUrl("img/maticjs/after-deposit-balance-update-goerli.png")} />
 
-Our Balance on Ropsten now shows `99 TEST` which means our Deposit transaction of `1 TEST` was successful.
-
-<img src={useBaseUrl("img/maticjs/after-deposit-balance-update-ropsten.png")} />
-
-Verifying our balance on Matic Testnet also shows that our balance is increased by `1 TEST`.
+Verifying our balance on Matic Testnet also shows that our balance is increased by `1 TEST`. It may take 1 to 5 minutes for your balance to get updated on Matic chain after the deposit is complete
 
 <img src={useBaseUrl("img/maticjs/after-deposit-balance-update-matic.png")} />
 
-Congratulations! You have successfully deposited funds from Ropsten to Matic.
+Congratulations! You have successfully deposited funds from Görli to Matic.
 
 In order to ensure you have more funds, deposit `1 TEST` token to Matic by repeating the above process. Make sure you change the `amount` value in the above script.

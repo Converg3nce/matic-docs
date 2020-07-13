@@ -19,9 +19,8 @@ If you're an Ethereum Developer, you're already a Matic developer.
 All the tools you're familiar with are supported on Matic out of the box: Truffle, Remix, Web3js. 
 Switch over to Matic's RPC and get started!
 
-Matic Test Network details:
-Network: **Matic Mumbai Testnet,** connects with **Ethereum's Goërli Testnet.** 
-Details: [Network](https://docs.matic.network/docs/integrate/network/) 
+Matic's Test Network which is called **Mumbai** connects with **Ethereum's Goërli Testnet.** 
+All the network related details can be found in [Network](https://docs.matic.network/docs/integrate/network/) 
 
 - [Setup Metamask Wallet](/docs/develop/metamask/hello)
 * Deploy your Contracts on Matic Network

@@ -58,7 +58,6 @@ module.exports = {
         "develop/metamask/hello",
         "develop/metamask/custom-tokens",
         "develop/metamask/testnet",
-        "develop/metamask/gas-fees",
         "develop/metamask/multiple-accounts",
       ],
     },
@@ -85,6 +84,7 @@ module.exports = {
           type: "category",
           label: "Plasma Bridge",
           items: [
+<<<<<<< HEAD
             "develop/ethereum-matic/plasma/getting-started",
             "develop/ethereum-matic/plasma/deposit",
             "develop/ethereum-matic/plasma/transfer",
@@ -113,6 +113,13 @@ module.exports = {
             "develop/ethereum-matic/pos/deployment",
             "develop/ethereum-matic/pos/contract-interfaces",
             "develop/ethereum-matic/pos/support-multiple-token",
+=======
+            "develop/maticjs/getting-started",
+            "develop/maticjs/deposit",
+            "develop/maticjs/transfer",
+            "develop/maticjs/withdraw",
+            "develop/maticjs/api-reference",
+>>>>>>> master
           ],
         },
         "develop/advanced/mapping-assets",
@@ -134,17 +141,11 @@ module.exports = {
       items: [
         "develop/oracles/getting-started",
         "develop/oracles/razor",
-        {
-          type: "category",
-          label: "Bandchain",
-          items: [
-            "develop/oracles/bandchain",
-            "develop/oracles/bandchainadvanced",
-          ],
-        },
+        "develop/oracles/bandchain"
       ],
     },
     "develop/fiat-on-ramp",
+    "develop/matic-as-gastoken",
     {
       type: "category",
       label: "Realtime Updates",
@@ -176,6 +177,79 @@ module.exports = {
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
         "develop/advanced/transfer-data",
+      ],
+    },
+    {
+      type: "category",
+      label: "Architecture",
+      items: [
+        "contribute/matic-architecture",
+        {
+          type: "category",
+          label: "Heimdall",
+          items: [
+            "contribute/heimdall/overview",
+            {
+              type: "category",
+              label: "Core Concepts",
+              items: [
+                "contribute/heimdall/encoder",
+                "contribute/heimdall/transactions",
+                "contribute/heimdall/stdtx",
+                "contribute/heimdall/types",
+                "contribute/heimdall/validators",
+                "contribute/heimdall/checkpoint",
+                "contribute/heimdall/validator-key-management",
+                "contribute/heimdall/antehandler",
+              ],
+            },
+            {
+              type: "category",
+              label: "Modules",
+              items: [
+                "contribute/heimdall/modules/auth",
+                "contribute/heimdall/modules/bank",
+                "contribute/heimdall/modules/governance",
+                "contribute/heimdall/modules/staking",
+                "contribute/heimdall/modules/checkpoint",
+                "contribute/heimdall/modules/bor",
+                "contribute/heimdall/modules/topup",
+                "contribute/heimdall/modules/clerk",
+                "contribute/heimdall/modules/chainmanager",
+              ],
+            },
+            "contribute/peppermint",
+          ],
+        },
+        {
+          type: "category",
+          label: "Bor",
+          items: [
+            "contribute/bor/overview",
+            "contribute/bor/bor",
+            "contribute/bor/core_concepts",
+            "contribute/bor/consensus",
+          ],
+        },
+        {
+          type: "category",
+          label: "Contracts",
+          items: [
+            "contribute/contracts/stakingmanager",
+            "contribute/contracts/delegation",
+            {
+              type: "category",
+              label: "Plasma Contracts",
+              items: [
+                "contribute/contracts/plasma_contracts/account_based_plasma",
+                "contribute/contracts/plasma_contracts/predicates",
+                "contribute/contracts/plasma_contracts/important-contracts",
+              ],
+            }
+          ],
+        },
+        "contribute/state-sync",
+        "home/architecture/security-models",
       ],
     },
   ],
@@ -338,79 +412,81 @@ module.exports = {
     "validate/validator/rewards",
   ],
   Contributors: [
-    "contribute/bug-bounty-program",
     "contribute/orientation",
+    "contribute/community-maintainers",
+    "validate/bug-bounty-program",
     {
       type: "category",
       label: "Architecture",
-      items: ["contribute/matic-architecture"],
-    },
-    {
-      type: "category",
-      label: "Heimdall",
       items: [
-        "contribute/heimdall/overview",
+        "contribute/matic-architecture",
         {
           type: "category",
-          label: "Core Concepts",
+          label: "Heimdall",
           items: [
-            "contribute/heimdall/encoder",
-            "contribute/heimdall/transactions",
-            "contribute/heimdall/stdtx",
-            "contribute/heimdall/types",
-            "contribute/heimdall/validators",
-            "contribute/heimdall/checkpoint",
-            "contribute/heimdall/validator-key-management",
-            "contribute/heimdall/antehandler",
+            "contribute/heimdall/overview",
+            {
+              type: "category",
+              label: "Core Concepts",
+              items: [
+                "contribute/heimdall/encoder",
+                "contribute/heimdall/transactions",
+                "contribute/heimdall/stdtx",
+                "contribute/heimdall/types",
+                "contribute/heimdall/validators",
+                "contribute/heimdall/checkpoint",
+                "contribute/heimdall/validator-key-management",
+                "contribute/heimdall/antehandler",
+              ],
+            },
+            {
+              type: "category",
+              label: "Modules",
+              items: [
+                "contribute/heimdall/modules/auth",
+                "contribute/heimdall/modules/bank",
+                "contribute/heimdall/modules/governance",
+                "contribute/heimdall/modules/staking",
+                "contribute/heimdall/modules/checkpoint",
+                "contribute/heimdall/modules/bor",
+                "contribute/heimdall/modules/topup",
+                "contribute/heimdall/modules/clerk",
+                "contribute/heimdall/modules/chainmanager",
+              ],
+            },
+            "contribute/peppermint",
           ],
         },
         {
           type: "category",
-          label: "Modules",
+          label: "Bor",
           items: [
-            "contribute/heimdall/modules/auth",
-            "contribute/heimdall/modules/bank",
-            "contribute/heimdall/modules/governance",
-            "contribute/heimdall/modules/staking",
-            "contribute/heimdall/modules/checkpoint",
-            "contribute/heimdall/modules/bor",
-            "contribute/heimdall/modules/topup",
-            "contribute/heimdall/modules/clerk",
-            "contribute/heimdall/modules/chainmanager",
+            "contribute/bor/overview",
+            "contribute/bor/bor",
+            "contribute/bor/core_concepts",
+            "contribute/bor/consensus",
           ],
         },
-        "contribute/peppermint",
-      ],
-    },
-    {
-      type: "category",
-      label: "Bor",
-      items: [
-        "contribute/bor/overview",
-        "contribute/bor/bor",
-        "contribute/bor/core_concepts",
-        "contribute/bor/consensus",
-      ],
-    },
-    {
-      type: "category",
-      label: "Contracts",
-      items: [
-        "contribute/contracts/stakingmanager",
-        "contribute/contracts/delegation",
         {
           type: "category",
-          label: "Plasma Contracts",
+          label: "Contracts",
           items: [
-            "contribute/contracts/plasma_contracts/account_based_plasma",
-            "contribute/contracts/plasma_contracts/predicates",
-            "contribute/contracts/plasma_contracts/important-contracts",
+            "contribute/contracts/stakingmanager",
+            "contribute/contracts/delegation",
+            {
+              type: "category",
+              label: "Plasma Contracts",
+              items: [
+                "contribute/contracts/plasma_contracts/account_based_plasma",
+                "contribute/contracts/plasma_contracts/predicates",
+                "contribute/contracts/plasma_contracts/important-contracts",
+              ],
+            }
           ],
         },
+        "contribute/state-sync",
+        "home/architecture/security-models",
       ],
     },
-    "contribute/state-sync",
-    // "home/architecture/security-models",
-    "contribute/community-maintainers",
   ],
 };

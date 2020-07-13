@@ -17,36 +17,40 @@ Once you have funds on Matic, you can use those funds to send to others instantl
 Now, depending upon your asset, add the following code:
 
 ```js
-// const token = Matic_Erc20Address;   // For ERC20
-// const token = Matic_WEthAddress;    // For ETH
-const recipient = "<enter the recipient address>" // to address
-// const amount = config.value
-const amount = "1000000000000000000"; // amount in wei
-init();
-// Send Tokens
-matic.transferERC20Tokens(token, recipient, amount, {
-  from
+const recipient = 'recepient-address'
+const token = config.MUMBAI_ERC20 // test token address
+// const token = config.MUMBAI_WETH
+const amount = '1000000000000000000' // amount in wei
+
+matic.initialize().then(() => {
+    matic.setWallet(config.PRIVATE_KEY)
+    // Transfer ERC20 Tokens
+    matic.transferERC20Tokens(token, recipient, amount, {
+        from,
+    }).then((res) => {
+        console.log("hash", res.transactionHash)
+    })
 })
-.then(logs => console.log(logs.transactionHash));
 ```
 
 ### ERC721
 ```js
-const token = Matic_Erc721Address;
-const recipient = "<enter the recipient address>" // to address
-// const amount = config.value
-const tokenId = "746"; // ERC721 token Id
-init();
-// Send Tokens
-matic.transferERC721Tokens(token, recipient, tokenId, {
-  from
+const recipient = '0x28e9E72DbF7ADee19B5279C23E40a1b0b35C2B90'
+const token = config.MUMBAI_ERC721 // test token address
+const tokenId = '1' // NFT token Id
+
+matic.initialize().then(() => {
+    matic.setWallet(config.PRIVATE_KEY)
+    // Transfer ERC721 Tokens
+    matic.transferERC721Tokens(token, recipient, tokenId, {
+        from,
+    }).then((res) => {
+        console.log("hash", res.transactionHash)
+    })
 })
-.then(logs => console.log(logs.transactionHash));
 ```
 
 > **Sidenote** — you can change the `parent` parameter to TRUE if you are using Matic.js to transfer funds on the main Ethereum network.
-
-We have added console logging on both events, which when run successfully will display `“Transfer done!”` to assure that the transaction was completed successfully. These messages are completely customized for this tutorial, by default only the Transaction Hash will be displayed.
 
 ## Expected Flow
 
@@ -67,10 +71,6 @@ Account 2–`0xf66f409086647591e0c2f122C1945554b8e0e74F`. This account currently
 Now we will run the transfer function. Run this on the terminal:
 
 `$ node transfer-ERC20.js`
-
-<img src={useBaseUrl("img/maticjs/run-transfer-erc20-1.png")} />
-
-Once the code has run successfully, it will display a message of `"Transfer done!"`
 
 Let’s verify our balances on Metamask.
 
@@ -97,9 +97,7 @@ To — `0xbFF81BA6Fa6593F0467592ACcF770A120f740552`. Account 3 currently has
 
 <img src={useBaseUrl("img/maticjs/account3-transfer2-balance.png")} />
 
-We will again run `$ node transfer-ERC20.js` from the terminal. Once we get the `‘Transfer done!’` message, we will check our balances.
-
-<img src={useBaseUrl("img/maticjs/run-transfer-erc20-2.png")} />
+We will again run `$ node transfer-ERC20.js` from the terminal. 
 
 Balance on Account 1 now shows a balance of `9.900TEST`,
 

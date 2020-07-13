@@ -43,7 +43,6 @@ module.exports = {
     matic: {
       provider: () => new HDWalletProvider(mnemonic, `https://rpc-mumbai.matic.today`),
       network_id: 80001,
-      gasPrice: '0x0',
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
@@ -63,7 +62,7 @@ module.exports = {
 }
 ```
 
-Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started (gas price on testnet3 can be set to 0, so you don't have to worry about funds right now).To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words. 
+Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words. 
 
 ## **Deploying on Matic Network**
 

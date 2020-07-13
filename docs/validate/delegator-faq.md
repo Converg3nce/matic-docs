@@ -78,7 +78,7 @@ You can claim your rewards instantly by clicking on the “New Rewards” card a
 
 ### What is the Unbonding period?
 
-The unbonding period on Matic is approximately 21 days. This period applies to the originally delegated amount and re-delegated amounts - it does not apply to any rewards that were nor re-delegated.
+The unbonding period on Matic is approximately 9 days now. It was 19 days previously. This period applies to the originally delegated amount and re-delegated amounts - it does not apply to any rewards that were nor re-delegated.
 
 ### Will I keep receiving rewards after I unbond?
 
