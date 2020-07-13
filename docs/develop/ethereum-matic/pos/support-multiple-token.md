@@ -29,8 +29,6 @@ Token type should be identified using  `bytes32` identifier. New tokens can be s
 abstract contract ITokenPredicate {
     function lockTokens(address user, address rootToken, bytes memory tokenData) public virtual;
 
-    function validateBurn(bytes memory burnLogRLP) public pure virtual;
-
     function exitTokens(bytes memory burnLogRLP) public virtual;
 }
 ```
