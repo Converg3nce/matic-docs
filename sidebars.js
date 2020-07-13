@@ -137,7 +137,6 @@ module.exports = {
       ],
     },
     "develop/fiat-on-ramp",
-    "develop/matic-as-gastoken",
     {
       type: "category",
       label: "Realtime Updates",
