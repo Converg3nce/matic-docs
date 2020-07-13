@@ -84,7 +84,6 @@ module.exports = {
           type: "category",
           label: "Plasma Bridge",
           items: [
-<<<<<<< HEAD
             "develop/ethereum-matic/plasma/getting-started",
             "develop/ethereum-matic/plasma/deposit",
             "develop/ethereum-matic/plasma/transfer",
@@ -113,13 +112,6 @@ module.exports = {
             "develop/ethereum-matic/pos/deployment",
             "develop/ethereum-matic/pos/contract-interfaces",
             "develop/ethereum-matic/pos/support-multiple-token",
-=======
-            "develop/maticjs/getting-started",
-            "develop/maticjs/deposit",
-            "develop/maticjs/transfer",
-            "develop/maticjs/withdraw",
-            "develop/maticjs/api-reference",
->>>>>>> master
           ],
         },
         "develop/advanced/mapping-assets",
