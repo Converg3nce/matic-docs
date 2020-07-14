@@ -41,6 +41,18 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Network Details",
+      items: [
+        "develop/network-details/network",
+        "develop/network-details/mapped-tokens",
+        "develop/network-details/gas-token",
+        "develop/network-details/genesis-contracts",
+        "develop/network-details/full-node-deployment",
+      ],
+    },
+
+    {
+      type: "category",
       label: "Using Metamask",
       items: [
         "develop/metamask/hello",
@@ -52,27 +64,54 @@ module.exports = {
 
     {
       type: "category",
-      label: "Key Management on Web3",
+      label: "Wallets",
       items: [
-        "develop/key-management/getting-started",
-        "develop/key-management/metamask",
-        "develop/key-management/walletconnect",
-        "develop/key-management/portis",
+        "develop/wallets/getting-started",
+        "develop/wallets/metamask",
+        "develop/wallets/torus",
+        "develop/wallets/portis",
+        "develop/wallets/fortmatic",
+        "develop/wallets/arkane",
+        "develop/wallets/walletconnect",
       ],
     },
     {
       type: "category",
       label: "Ethereum ↔ Matic",
       items: [
+        "develop/ethereum-matic/getting-started",
         {
           type: "category",
-          label: "Matic.js",
+          label: "PoS Bridge",
           items: [
-            "develop/maticjs/getting-started",
-            "develop/maticjs/deposit",
-            "develop/maticjs/transfer",
-            "develop/maticjs/withdraw",
-            "develop/maticjs/api-reference",
+            "develop/ethereum-matic/pos/getting-started",
+            "develop/ethereum-matic/pos/eth-deposit-withdraw",
+            "develop/ethereum-matic/pos/erc20-deposit-withdraw",
+            "develop/ethereum-matic/pos/erc721-deposit-withdraw",
+            "develop/ethereum-matic/pos/erc1155-deposit-withdraw",
+            "develop/ethereum-matic/pos/deployment",
+            "develop/ethereum-matic/pos/contract-interfaces",
+            "develop/ethereum-matic/pos/support-multiple-token",
+          ],
+        },
+        {
+          type: "category",
+          label: "Plasma Bridge",
+          items: [
+            "develop/ethereum-matic/plasma/getting-started",
+            "develop/ethereum-matic/plasma/deposit",
+            "develop/ethereum-matic/plasma/transfer",
+            "develop/ethereum-matic/plasma/withdraw",
+            {
+              type: "category",
+              label: "Demo",
+              items: [
+                "develop/ethereum-matic/plasma/demo-erc20",
+                "develop/ethereum-matic/plasma/demo-eth",
+                "develop/ethereum-matic/plasma/demo-erc721",
+              ],
+            },
+            "develop/ethereum-matic/plasma/api-reference",
           ],
         },
         "develop/advanced/mapping-assets",
@@ -98,7 +137,6 @@ module.exports = {
       ],
     },
     "develop/fiat-on-ramp",
-    "develop/matic-as-gastoken",
     {
       type: "category",
       label: "Realtime Updates",
@@ -129,7 +167,7 @@ module.exports = {
         "develop/advanced/swap-assets",
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
-        "develop/advanced/transfer-data"
+        "develop/advanced/transfer-data",
       ],
     },
     {
@@ -220,9 +258,15 @@ module.exports = {
             "integrate/network-detail",
             {
               type: "link",
+              label: "Matic-Mainnet",
+              href:
+                "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
+            },
+            {
+              type: "link",
               label: "Mumbai",
               href:
-                "https://static.matic.network/network/testnet/mumbai/index.json"
+                "https://static.matic.network/network/testnet/mumbai/index.json",
             },
             {
               type: "link",
@@ -268,7 +312,7 @@ module.exports = {
     {
       type: "category",
       label: "Advanced",
-      items: ["integrate/advanced/setup-full-node-testnetv3"],
+      items: ["integrate/full-node-deployment"],
     },
   ],
   Validate: [
@@ -330,20 +374,20 @@ module.exports = {
               type: "category",
               label: "With Sentry",
               items: [
-            "validate/counter-stake-stage-2/linux-validator-sentry-setup",
-            "validate/counter-stake-stage-2/binaries-validator-sentry-setup",
-              ]
+                "validate/counter-stake-stage-2/linux-validator-sentry-setup",
+                "validate/counter-stake-stage-2/binaries-validator-sentry-setup",
+              ],
             },
             {
               type: "category",
               label: "Without Sentry",
-              items: [ 
-            "validate/counter-stake-stage-2/linux-package-installation",
-            "validate/counter-stake-stage-2/running-with-binaries",
-              ]
+              items: [
+                "validate/counter-stake-stage-2/linux-package-installation",
+                "validate/counter-stake-stage-2/running-with-binaries",
+              ],
             },
-          ]
-        }, 
+          ],
+        },
         //"validate/counter-stake-stage-2/running-with-docker",
         "validate/counter-stake-stage-2/stake-on-matic",
         "validate/counter-stake-stage-2/rewards",

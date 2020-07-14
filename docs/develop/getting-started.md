@@ -20,7 +20,7 @@ All the tools you're familiar with are supported on Matic out of the box: Truffl
 Switch over to Matic's RPC and get started!
 
 Matic's Test Network which is called **Mumbai** connects with **Ethereum's Goërli Testnet.** 
-All the network related details can be found in [Network](https://docs.matic.network/docs/integrate/network/) 
+All the network related details can be found in [Network](/docs/develop/network-details/network) 
 
 - [Setup Metamask Wallet](/docs/develop/metamask/hello)
 * Deploy your Contracts on Matic Network

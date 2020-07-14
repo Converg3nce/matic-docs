@@ -1,0 +1,105 @@
+---
+id: network
+title: Network
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png 
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="mainnet"
+  values={[
+    { label: 'Matic-Mainnet', value: 'mainnet', },
+    { label: 'Mumbai-Testnet', value: 'mumbai', },
+  ]
+}>
+<TabItem value="mumbai">
+
+# Mumbai-Testnet
+Mumbai Testnet replicates the Matic Mainnet, which is to be used for testing. Testnet coins are separate and distinct from actual tokens/assets, and are never supposed to have any value. This allows application developers or validators/testers to experiment, without having to use real assets or worrying about breaking the main Matic chain.
+
+The documentation corresponding contains details for the RPC - HTTP, WS and Dagger endpoints. There is also a full node setup if you wish to setup your own full node.
+
+|              |                                        |
+|--------------|----------------------------------------|
+| NetworkName  | **Mumbai**                                 |
+| ParentChain  | **Goërli**                                 |
+| chainId      | `80001`                                  |
+| Gas Token    | `MATIC Token` ([For more...](gas-token)) |
+| RPC          | `https://rpc-mumbai.matic.today`      |
+| Websocket    | `wss://ws-mumbai.matic.today`         |
+| Dagger RPC   | `https://mumbai-dagger.matic.today`   |
+| Dagger WSS   | `wss://mumbai-dagger.matic.today`  |
+| Heimdall API | `https://heimdall.api.matic.today` |
+| Block Explorer | [`https://mumbai-explorer.matic.today`](https://mumbai-explorer.matic.today/) |
+
+> For more details: [https://static.matic.network/network/testnet/mumbai/index.json](https://static.matic.network/network/testnet/mumbai/index.json)
+
+:::important
+Matic network native token is **MATIC** which will be used as gas fee.
+:::
+
+:::note
+Moving forward we will be deprecating the following Testnets and Mainnets hosted by Matic. Please make sure to migrate to the new Mumbai testnet by then.
+
+**Deprecation date: 28th July 2020**
+
+- Testnetv2 `https://testnet2.matic.network`
+- Testnetv3 `https://testnetv3.matic.network`
+
+**Deprecation date: 15th Aug 2020**
+
+- Alpha-mainnet `https://alpha.ethereum.matic.network`
+- Betav2 mainnet `https://betav2.matic.network`
+:::
+
+</TabItem>
+<TabItem value="mainnet">
+
+# Matic-Mainnet
+
+🎉Finally!!! Matic Mainnet is open for developers🎉
+
+The documentation corresponding contains details for the RPC - HTTP, WS and Dagger endpoints. There is also a full node setup if you wish to setup your own full node.
+
+
+|              |                                        |
+|--------------|----------------------------------------|
+| NetworkName  | **Matic Network**                                 |
+| ParentChain  | **Ethereum Mainnet**                                 |
+| chainId      | `137`                                  |
+| Gas Token    | `MATIC Token` ([For more...](gas-token)) |
+| RPC          | `https://rpc-mainnet.matic.network`      |
+| Websocket    | `wss://ws-mainnet.matic.network`         |
+| Ethereum Dagger WSS| `wss://mainnet.dagger.matic.network`  |
+| Matic Dagger WSS   | `wss://matic-mainnet.dagger.matic.network`  |
+| Heimdall API | `https://heimdall.api.matic.network` |
+| Block Explorer | https://explorer.matic.network |
+
+
+For more details: [https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json](https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json)
+
+:::important
+Matic network native token is **MATIC** which will be used as gas fee.
+:::
+
+:::note
+Moving forward we will be deprecating the following Testnets and Mainnets hosted by Matic. Please make sure to migrate to the new Mumbai testnet by then.
+
+**Deprecation date: 28th July 2020**
+
+- Testnetv2 `https://testnet2.matic.network`
+- Testnetv3 `https://testnetv3.matic.network`
+
+**Deprecation date: 15th Aug 2020**
+
+- Alpha-mainnet `https://alpha.ethereum.matic.network`
+- Betav2 mainnet `https://betav2.matic.network`
+:::
+
+</TabItem>
+</Tabs>
