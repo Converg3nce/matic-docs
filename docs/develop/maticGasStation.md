@@ -21,18 +21,21 @@ _Matic Gas Station_ has been deployed both on Matic Mumbai Testnet & Matic Mainn
 
 ## usage
 
-You can send GET request to https://where.matic.network and receive latest gas price recommendation as JSON from our oracle.
+For getting gas price recommendation from this oracle, send GET request to
+
+- Matic Mumbai Testnet [ https://gasstation-mumbai.matic.today ]
+- Matic Mainnet [ https://gasstation-mainet.matic.network ]
 
 ### cURL
 
 ```bash
-$ curl https://where.matic.network
+$ curl https://gasstation-mumbai.matic.today
 ```
 
 ### JavaScript
 
 ```javascript
-fetch('https://where.matic.network')
+fetch('https://gasstation-mumbai.matic.today')
   .then(response => response.json())
   .then(json => console.log(json))
 ```
@@ -42,7 +45,7 @@ fetch('https://where.matic.network')
 ```python3
 >>> import requests
 >>> import json
->>> json.loads(requests.get('https://where.matic.network').content)
+>>> json.loads(requests.get('https://gasstation-mumbai.matic.today').content)
 ```
 
 ## interpretation
@@ -55,12 +58,13 @@ fetch('https://where.matic.network')
     "standard": 9.0,
     "fast": 29.0,
     "fastest": 45.0,
-    "block_time": 2,
+    "block_time": 2.1,
     "blockNum": 1876116
 }
 ```
 
 - {'safelow', 'standard', 'fast', 'fastest'} are gas prices in GWei, you can use these prices before sending transaction off to Matic, depending upon your need
 - _blockNum_ gives non-empty block identifier when recommendation was made
-- _block\_time_ in second, which gives average block time of network
+- _block\_time_ in second, which gives average block time of network _[ Note: As long as network is not crowded, better not to trust this one ]_
 
+When network gets more crowded, effect will be reflected on recommended gas prices. 
