@@ -109,9 +109,9 @@ Chrome, Firefox, and Brave
 
 Check for the following:
 
-If you’re using Brave, please turn off the option for “Use Crypto Wallets” in the settings panel.
+- If you’re using Brave, please turn off the option for “Use Crypto Wallets” in the settings panel.
 - Check if you are logged into Metamask
-- Check if you are logged into Metamask with Trezor/Ledger. Currently they are not supported
+- Check if you are logged into Metamask with Trezor/Ledger. You need to additionally turn on permission to call contracts on your Ledger device, if not enabled already.
 - Check your system timestamp. If the system time is not correct, you will need to correct it.
 
 ### How do I send funds from Binance or other exchanges to Matic wallet?

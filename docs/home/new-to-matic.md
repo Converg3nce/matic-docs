@@ -15,7 +15,7 @@ Matic Network is a scaling solution for public blockchains. Based on an adapted 
 * [Ethereum + Matic with PoS bridge](https://docs.matic.today/docs/develop/ethereum-matic/plasma/getting-started)
 * [Ethereum + Matic with Plasma bridge](https://docs.matic.today/docs/develop/ethereum-matic/pos/getting-started)
 
-### Deploy smart contracts
+### Deploy Smart Contracts
 
 <!-- ### Are you an Experience Blockchain Developer? -->
 
@@ -30,7 +30,7 @@ Simply put, Blockchain is a shared, immutable ledger for recording transactions,
 :movie_camera: [Your first DApp](https://www.youtube.com/watch?v=rzvk2kdjr2I)
 
 ### What is a Sidechain?
-Think of Sidechain is a clone of 'parent' blockchain, supporting transfer of assets to and fro the main chain. It is simply an alternate to parent chain that creates a new blockchain with its own mechanism of creating blocks (consensus mechanism). Connecting a sidechain to a parent chain involves setting up a method of moving assets between the chains.
+Think of a Sidechain as a clone of a 'parent' blockchain, supporting transfer of assets to and from the main chain. It is simply an alternate to parent chain that creates a new blockchain with its own mechanism of creating blocks (consensus mechanism). Connecting a sidechain to a parent chain involves setting up a method of moving assets between the chains.
 
 :page_facing_up: [Sidechains and Childchains](https://hackernoon.com/what-are-sidechains-and-childchains-7202cc9e5994)
 ### What is Plasma?
