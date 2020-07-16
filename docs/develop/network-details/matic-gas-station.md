@@ -1,5 +1,5 @@
 ---
-id: maticGasStation
+id: matic-gas-station
 title: Matic Gas Station
 sidebar_label: Matic Gas Station
 description: Build your next blockchain app on Matic.
