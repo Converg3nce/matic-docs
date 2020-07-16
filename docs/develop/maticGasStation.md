@@ -24,7 +24,7 @@ _Matic Gas Station_ has been deployed both on Matic Mumbai Testnet & Matic Mainn
 For getting gas price recommendation from this oracle, send GET request to
 
 - Matic Mumbai Testnet [ https://gasstation-mumbai.matic.today ]
-- Matic Mainnet [ https://gasstation-mainet.matic.network ]
+- Matic Mainnet [ https://gasstation-mainnet.matic.network ]
 
 ### cURL
 
@@ -65,6 +65,4 @@ fetch('https://gasstation-mumbai.matic.today')
 
 - {'safelow', 'standard', 'fast', 'fastest'} are gas prices in GWei, you can use these prices before sending transaction off to Matic, depending upon your need
 - _blockNum_ gives non-empty block identifier when recommendation was made
-- _block\_time_ in second, which gives average block time of network _[ Note: As long as network is not crowded, better not to trust this one ]_
-
-When network gets more crowded, effect will be reflected on recommended gas prices. 
+- _block\_time_ in second, which gives average block time of network _[ Note: As of now, don't rely on block\_time, this will be healed as network starts becoming crowded ]_
