@@ -26,3 +26,12 @@ image: https://matic.network/banners/matic-network-16x9.png
 |---------------|------|------------|------------------------------------------------------------------------------|-------------------------------------
 | BetaV2        | https://betav2.matic.network  | Running    | Will be deprecated soon |[:ledger:](https://betav2-explorer.matic.network)
 | Alpha-mainnet | https://alpha.ethereum.matic.network | Running    | Deprecated |[:ledger:](https://alpha-mainnet.explorer.matic.network)
+
+## Matic Gas Station
+
+Network | Endpoint | Status
+--- | --- | --- 
+Mumbai Testnet | https://gasstation-mumbai.matic.today | :heavy_check_mark:
+Mainnet | https://gasstation-mainnet.matic.network | :heavy_check_mark:
+
+Usage guide can be found [here](/docs/develop/maticGasStation)
