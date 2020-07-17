@@ -52,7 +52,7 @@ fetch('https://gasstation-mumbai.matic.today')
 
 ### Python
 
-```python3
+```python
 >>> import requests
 >>> import json
 >>> json.loads(requests.get('https://gasstation-mumbai.matic.today').content)
@@ -81,7 +81,7 @@ fetch('https://gasstation-mainnet.matic.network')
 
 ### Python
 
-```python3
+```python
 >>> import requests
 >>> import json
 >>> json.loads(requests.get('https://gasstation-mainnet.matic.network').content)
