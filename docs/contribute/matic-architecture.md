@@ -7,9 +7,8 @@ keywords:
   - matic
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
-```
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
-```
 
 ## Matic Network 
 
@@ -27,7 +26,8 @@ Matic has a three-layer architecture:
 2. Heimdall (Proof of Stake layer) 
 3. Bor (Block producer layer)
 
-<img src="https://github.com/maticnetwork/matic-docs/blob/master/static/img/matic/Architecture.png" alt="matic architecture">
+
+<img src={useBaseUrl("img/matic/Architecture.png")} />;
 
 ### Matic smart contracts (on Ethereum)
 
