@@ -8,6 +8,8 @@ keywords:
   - matic
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 _Matic Gas Station_ aims to help dApp developers with gas price recommendations, so that they can use recommended gas prices before sending transaction off to _Matic_ network.
 
@@ -21,10 +23,18 @@ _Matic Gas Station_ has been deployed both on Matic Mumbai Testnet & Matic Mainn
 
 ## usage
 
-For getting gas price recommendation from this oracle, send GET request to
+<Tabs
+  defaultValue="mainnet"
+  values={[
+    { label: 'Matic-Mainnet', value: 'mainnet', },
+    { label: 'Mumbai-Testnet', value: 'mumbai', },
+  ]
+}>
+<TabItem value="mumbai">
 
-- Matic Mumbai Testnet [ https://gasstation-mumbai.matic.today ]
-- Matic Mainnet [ https://gasstation-mainnet.matic.network ]
+# Mumbai-Testnet
+
+For getting gas price recommendation from this oracle, send GET request to [https://gasstation-mumbai.matic.today](https://gasstation-mumbai.matic.today)
 
 ### cURL
 
@@ -47,6 +57,38 @@ fetch('https://gasstation-mumbai.matic.today')
 >>> import json
 >>> json.loads(requests.get('https://gasstation-mumbai.matic.today').content)
 ```
+
+</TabItem>
+<TabItem value="mainnet">
+
+# Matic-Mainnet
+
+For getting gas price recommendation from this oracle, send GET request to [https://gasstation-mainnet.matic.network](https://gasstation-mainnet.matic.network)
+
+### cURL
+
+```bash
+$ curl https://gasstation-mainnet.matic.network
+```
+
+### JavaScript
+
+```javascript
+fetch('https://gasstation-mainnet.matic.network')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
+### Python
+
+```python3
+>>> import requests
+>>> import json
+>>> json.loads(requests.get('https://gasstation-mainnet.matic.network').content)
+```
+
+</TabItem>
+</Tabs>
 
 ## interpretation
 
