@@ -133,3 +133,15 @@ In case you dont want that to happen, re-delegate your rewards before delegating
 ### I have delegated my tokens via Metamask on the Staking dashboard. Do I need to keep my system or device on?
 
 No. Once your Delegation transactions are confirmed, and you can see your tokens reflected in the Total Stake and New Reward cards/sections, then you are done. There is no need to keep your system or device on.
+
+### I have unbonded, how long will it take to Unbond
+
+The unbonding period is currently set to 424 checkpoints. This is approximately 9 days. Every checkpoint takes approximately 30 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.
+
+### I have unbonded, and I now see the Claim Stake button, but it is disabled, why is that
+
+The Claim stake button will only be enabled when your unbonding period is complete. The unbonding period is currently set at 424 checkpoints.
+
+### Do I know when will the Claim Stake button be enabled?
+
+Yes, under the Claim Stake button you would see a note on how many checkpoints are pending before the Claim Stake button would be enabled. Every checkpoint takes approximately 30 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.
