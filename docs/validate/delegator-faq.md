@@ -136,12 +136,12 @@ No. Once your Delegation transactions are confirmed, and you can see your tokens
 
 ### I have unbonded, how long will it take to Unbond
 
-The unbonding period is currently set to 424 checkpoints. This is approximately 9 days. However, it not exactly 9 days as some checkpoints may be delayed
+The unbonding period is currently set to 424 checkpoints. This is approximately 9 days. Every checkpoint takes approximately 30 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.
 
 ### I have unbonded, and I now see the Claim Stake button, but it is disabled, why is that
 
-The Claim stake button will only be enabled when your unboning period is complete. The unbonding period is currently set at 424 checkpoints.
+The Claim stake button will only be enabled when your unbonding period is complete. The unbonding period is currently set at 424 checkpoints.
 
 ### Do I know when will the Claim Stake button be enabled?
 
-Yes, under the Claim Stake button you would see a note on how many checkpoints are pending before the Claim Stake button would be enabled.
+Yes, under the Claim Stake button you would see a note on how many checkpoints are pending before the Claim Stake button would be enabled. Every checkpoint takes approximately 30 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.
