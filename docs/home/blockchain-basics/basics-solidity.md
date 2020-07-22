@@ -35,7 +35,7 @@ Essentially the following points need to be kept in mind always:
 - Each write operation has a cost associated with it - you pay it with ether. The cost is measured in gas.
 
 #### Tools for Working With Solidity
-- Truffle: Ethereum blockchain framework
+- Truffle: DApp development framework
 - Remix:  Web IDE for Solidity
 - Web3
 - Metamask
