@@ -9,13 +9,19 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-Solidity is an object oriented, high-level programming language for implementing smart contracts. It allows to write programs, which governs the behavior of accounts within blockhain network. It is just like any other programming language. Comprised of: 
+## Solidity<img src = 'https://solidity.readthedocs.io/en/v0.6.11/_images/logo.svg' width='50'/> 
+Solidity is an object oriented, high-level programming language for implementing smart contracts. It allows to write programs, which governs the behavior of accounts within blockhain network. It is statically typed, supports contract inheritance and has many built-in Contract Libraries. Solidity is similar to programming languages like  C++, Python and JavaScript. 
+
+It comprised of: 
+- variables 
+- operators
 - loops 
 - conditionals 
-- variables 
+- modifiers
 - functions 
 - objects and types 
 - events
+- interfaces 
 - and handles money transactions!
 
 Before jumping to coding with Solidity it is important to familiarize oneself with blockchain's mental models - these are essential because of the contrasting difference in a blockchain application architecture and a common web application architecture.
@@ -28,6 +34,11 @@ Essentially the following points need to be kept in mind always:
 - Reading data is free
 - Each write operation has a cost associated with it - you pay it with ether. The cost is measured in gas.
 
+#### Tools for Working With Solidity
+- Truffle: DApp development framework
+- Remix:  Web IDE for Solidity
+- Web3
+- Metamask
 ### **:scroll:Resources**
 
 :books: [Solidity Docs](https://solidity.readthedocs.io/)
