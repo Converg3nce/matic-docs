@@ -104,15 +104,6 @@ module.exports = {
             "develop/ethereum-matic/plasma/deposit",
             "develop/ethereum-matic/plasma/transfer",
             "develop/ethereum-matic/plasma/withdraw",
-            {
-              type: "category",
-              label: "Demo",
-              items: [
-                "develop/ethereum-matic/plasma/demo-erc20",
-                "develop/ethereum-matic/plasma/demo-eth",
-                "develop/ethereum-matic/plasma/demo-erc721",
-              ],
-            },
             "develop/ethereum-matic/plasma/api-reference",
           ],
         },
