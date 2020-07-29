@@ -78,19 +78,6 @@ await maticPOSClient.depositERC20ForUser(rootToken, from, amount, {
 
 **_deposit_** function of **_ChildToken_** is called by the **_ChildChainManager._** Tokens should be minted when this call is made.
 
-### Deposit ETH
-
-ETH can be deposited to matic chain by calling **_depositEther_** or **_depositEtherFor_** on RootChainManager contract. Matic POS client exposes **_depositEtherForUser_** method to make this call.
-
-**_ETH_** is deposited as **_ERC20_** token on Matic chain. For withdrawing it follow the same process as withdrawing ERC20 tokens.
-
-```jsx
-await maticPOSClient.depositEtherForUser(from, amount, {
-  from,
-  gasPrice: "10000000000",
-});
-```
-
 ### Burn
 
 User can call **_withdraw_** function of **_ChildToken_** contract. This function should burn the tokens. Matic POS client exposes **_burnERC20_** method to make this call.
