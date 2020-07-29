@@ -30,7 +30,7 @@ The time taken to complete a transaction depends on the gas fees that you have a
 
 ### Which wallets are currently supported?
 
-Currently, only the Metamask extension on the browser and Coinbase Wallet are supported. We will be gradually adding support for other wallets soon.
+Currently, only the Metamask extension on the desktop browser and Coinbase Wallet are supported. Additionally you can use WalletConnect and Walletlink from supported mobile wallets to interact with the Staking UI dashboard on desktop/laptop. We will be gradually adding support for other wallets soon.
 
 ### Are hardware wallets supported?
 
