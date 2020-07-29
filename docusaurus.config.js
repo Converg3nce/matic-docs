@@ -9,7 +9,7 @@ module.exports = {
   customFields: {
     description: "Build your next blockchain app on Matic.",
   },
-  
+  onBrokenLinks: 'log',
   themeConfig: {
     announcementBar: {
       id: "support_us",
