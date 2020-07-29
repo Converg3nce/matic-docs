@@ -48,7 +48,7 @@ module.exports = {
         "develop/network-details/gas-token",
         "develop/network-details/genesis-contracts",
         "develop/network-details/full-node-deployment",
-        "develop/network-details/matic-gas-station"
+        "develop/network-details/matic-gas-station",
       ],
     },
 
@@ -100,6 +100,7 @@ module.exports = {
           label: "Plasma Bridge",
           items: [
             "develop/ethereum-matic/plasma/getting-started",
+            "develop/advanced/mapping-assets",
             "develop/ethereum-matic/plasma/deposit",
             "develop/ethereum-matic/plasma/transfer",
             "develop/ethereum-matic/plasma/withdraw",
@@ -115,7 +116,6 @@ module.exports = {
             "develop/ethereum-matic/plasma/api-reference",
           ],
         },
-        "develop/advanced/mapping-assets",
         "develop/advanced/submit-mapping-request",
       ],
     },
@@ -134,7 +134,7 @@ module.exports = {
       items: [
         "develop/oracles/getting-started",
         "develop/oracles/razor",
-        "develop/oracles/bandchain"
+        "develop/oracles/bandchain",
       ],
     },
     "develop/fiat-on-ramp",
@@ -237,7 +237,7 @@ module.exports = {
                 "contribute/contracts/plasma_contracts/predicates",
                 "contribute/contracts/plasma_contracts/important-contracts",
               ],
-            }
+            },
           ],
         },
         "contribute/state-sync",
@@ -473,7 +473,7 @@ module.exports = {
                 "contribute/contracts/plasma_contracts/predicates",
                 "contribute/contracts/plasma_contracts/important-contracts",
               ],
-            }
+            },
           ],
         },
         "contribute/state-sync",
