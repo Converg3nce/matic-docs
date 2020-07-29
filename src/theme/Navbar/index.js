@@ -92,7 +92,7 @@ function Navbar() {
       style={{ fontSize: "16px" }}
     >
       <div className="navbar__inner">
-        <div className="navbar__links" style={{ marginLeft: "30px" }}>
+        <div className="navbar__items" style={{ marginLeft: "30px" }}>
           <div
             aria-label="Navigation bar toggle"
             className="navbar__toggle"
@@ -148,7 +148,7 @@ function Navbar() {
             ))}
         </div>
         <div
-          className="navbar__items navbar__links--right"
+          className="navbar__items navbar__items--right"
           style={{ marginRight: "10px" }}
         >
           {links
@@ -210,7 +210,7 @@ function Navbar() {
             />
           )}
         </div>
-        <div className="navbar-sidebar__links">
+        <div className="navbar-sidebar__items">
           <div className="menu">
             <ul className="menu__list">
               {links.map((linkItem, i) => (
