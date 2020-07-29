@@ -38,7 +38,7 @@ npm install --save @maticnetwork/maticjs
 }
 ```
 
-While creating **_MaticPOSClient_** object **_maticProvider_**, **_parentProvider_**, **_rootChain_** and **_posRootChainManager_** need to be provided.
+While creating **_MaticPOSClient_** object **network**,**version**,**_maticProvider_**, **_parentProvider_**, **_posERC1155Predicate_** and **_posRootChainManager_** need to be provided.
 
 ```jsx
 const MaticPOSClient = require("@maticnetwork/maticjs").MaticPOSClient;
@@ -113,7 +113,7 @@ await maticPOSClient.burnBatchERC1155(rootToken, [...tokenId], [...amount], {
 
 ### Exit
 
-Once the **_checkpoint_** has been **_submitted_** for the block containing burn transaction, user should call the **_exit_** function of **_RootChainManager_** contract and submit the proof of burn. Upon submitting valid proof tokens are transferred to the user. Matic POS client exposes **_exitBatchERC1155_** & **_singleBatchERC1155_** method to make this call.
+Once the **_checkpoint_** has been **_submitted_** for the block containing burn transaction, user should call the **_exit_** function of **_RootChainManager_** contract and submit the proof of burn. Upon submitting valid proof tokens are transferred to the user. Matic POS client exposes **_exitBatchERC1155_** & **_exitSingleERC1155_** method to make this call.
 
 ```jsx
 await maticPOSClient.exitSingleERC1155(burnTxHash, { from });

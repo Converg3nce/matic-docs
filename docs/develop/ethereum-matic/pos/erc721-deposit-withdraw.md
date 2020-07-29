@@ -15,10 +15,6 @@ Deposit ERC721 -
 1. **_Approve_** **_ERC721Predicate_** contract to spend the tokens that have to be deposited.
 2. Make **_depositFor_** call on **_RootChainManager_**.
 
-Deposit Ether -
-
-1. Make **_depositEther_** or **_depositEtherFor_** call on **_RootChainManager_** and **\*\***send **\*\***the **\*\***required ether.
-
 Withdraw ERC721 -
 
 1. **_Burn_** tokens on matic chain.
@@ -42,7 +38,7 @@ npm install --save @maticnetwork/maticjs
 }
 ```
 
-While creating **_MaticPOSClient_** object **_maticProvider_**, **_parentProvider_**, **_rootChain_** and **_posRootChainManager_** need to be provided.
+While creating **_MaticPOSClient_** object **network**,**version**,**_maticProvider_**, **_parentProvider_**, **_posERC721Predicate_** and **_posRootChainManager_** need to be provided.
 
 ```jsx
 const MaticPOSClient = require("@maticnetwork/maticjs").MaticPOSClient;
