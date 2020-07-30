@@ -51,27 +51,7 @@ module.exports = {
         "develop/network-details/matic-gas-station",
       ],
     },
-    {
-      type: "category",
-      label: "Tools",
-      items: [
-        {
-          type: "link",
-          label: "Matic Faucet",
-          href: "https://faucet.matic.network/",
-        },
-        {
-          type: "link",
-          label: "RPC Health",
-          href: "https://status.matic.today",
-        },
-        {
-          type: "link",
-          label: "Checkpoint Status",
-          href: "https://status.matic.today/#/checkpoints",
-        },
-      ],
-    },
+
     {
       type: "category",
       label: "Using Metamask",
@@ -120,14 +100,14 @@ module.exports = {
           label: "Plasma Bridge",
           items: [
             "develop/ethereum-matic/plasma/getting-started",
-            "develop/ethereum-matic/plasma/mapping-assets",
+            "develop/advanced/mapping-assets",
             "develop/ethereum-matic/plasma/deposit",
             "develop/ethereum-matic/plasma/transfer",
             "develop/ethereum-matic/plasma/withdraw",
             "develop/ethereum-matic/plasma/api-reference",
           ],
         },
-        "develop/ethereum-matic/submit-mapping-request",
+        "develop/advanced/submit-mapping-request",
       ],
     },
     {
@@ -279,6 +259,18 @@ module.exports = {
               label: "Mumbai",
               href:
                 "https://static.matic.network/network/testnet/mumbai/index.json",
+            },
+            {
+              type: "link",
+              label: "TestNetV3",
+              href:
+                "https://static.matic.network/network/testnet/v3/index.json",
+            },
+            {
+              type: "link",
+              label: "TestNetV2",
+              href:
+                "https://static.matic.network/network/testnet/v2/index.json",
             },
             {
               type: "link",
