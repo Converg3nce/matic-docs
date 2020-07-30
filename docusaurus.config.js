@@ -9,7 +9,7 @@ module.exports = {
   customFields: {
     description: "Build your next blockchain app on Matic.",
   },
-  
+  onBrokenLinks: 'log',
   themeConfig: {
     announcementBar: {
       id: "support_us",
@@ -43,7 +43,7 @@ module.exports = {
         // href: 'https://docs.matic.network/', // default to siteConfig.baseUrl
         target: "_self", // by default, this value is calculated based on the `href` attribute (the external link will open in a new tab, all others in the current one)
       },
-      links: [
+      items: [
         {
           to: "docs/home/new-to-matic",
           label: "Basics",

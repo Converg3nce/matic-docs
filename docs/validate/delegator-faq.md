@@ -30,7 +30,7 @@ The time taken to complete a transaction depends on the gas fees that you have a
 
 ### Which wallets are currently supported?
 
-Currently, only the Metamask extension on the browser and Coinbase Wallet are supported. We will be gradually adding support for other wallets soon.
+Currently, only the Metamask extension on the desktop browser and Coinbase Wallet are supported. Additionally you can use WalletConnect and Walletlink from supported mobile wallets to interact with the Staking UI dashboard on desktop/laptop. We will be gradually adding support for other wallets soon.
 
 ### Are hardware wallets supported?
 
@@ -92,9 +92,6 @@ Delegation requires 2 transactions one after the other - one Approve and another
 
 Redelegating your rewards simply means, that you want to increase your stake by restaking the rewards you have accumulated. 
 
-So what happens if I delegate to a validator dies/goes rogue/node is offline or something similar, I don't have a way to quickly react and delegate my tokens away from him to another good validator. I need to wait 21 days and am exposed to this bad validator the whole time?
-Yes, there is an option in the protocol but is not exposed in the UI for now. For every delegation, you get a set of ValidatorShares. These are fungible ERC20 tokens that could be traded as derivatives and swapped for Matic. But it requires market liquidity. Once staking stabilizes after a few weeks, we will spend time in making this market liquid.
-
 ### Can I stake to any validator?
 
 Yes. All validators are Matic Foundation nodes currently.
@@ -133,3 +130,15 @@ In case you dont want that to happen, re-delegate your rewards before delegating
 ### I have delegated my tokens via Metamask on the Staking dashboard. Do I need to keep my system or device on?
 
 No. Once your Delegation transactions are confirmed, and you can see your tokens reflected in the Total Stake and New Reward cards/sections, then you are done. There is no need to keep your system or device on.
+
+### I have unbonded, how long will it take to Unbond
+
+The unbonding period is currently set to 424 checkpoints. This is approximately 9 days. Every checkpoint takes approximately 30 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.
+
+### I have unbonded, and I now see the Claim Stake button, but it is disabled, why is that
+
+The Claim stake button will only be enabled when your unbonding period is complete. The unbonding period is currently set at 424 checkpoints.
+
+### Do I know when will the Claim Stake button be enabled?
+
+Yes, under the Claim Stake button you would see a note on how many checkpoints are pending before the Claim Stake button would be enabled. Every checkpoint takes approximately 30 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.

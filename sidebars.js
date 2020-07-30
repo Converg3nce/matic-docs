@@ -48,7 +48,7 @@ module.exports = {
         "develop/network-details/gas-token",
         "develop/network-details/genesis-contracts",
         "develop/network-details/full-node-deployment",
-        "develop/network-details/matic-gas-station"
+        "develop/network-details/matic-gas-station",
       ],
     },
     {
@@ -124,15 +124,6 @@ module.exports = {
             "develop/ethereum-matic/plasma/deposit",
             "develop/ethereum-matic/plasma/transfer",
             "develop/ethereum-matic/plasma/withdraw",
-            {
-              type: "category",
-              label: "Demo",
-              items: [
-                "develop/ethereum-matic/plasma/demo-erc20",
-                "develop/ethereum-matic/plasma/demo-eth",
-                "develop/ethereum-matic/plasma/demo-erc721",
-              ],
-            },
             "develop/ethereum-matic/plasma/api-reference",
           ],
         },
@@ -154,7 +145,7 @@ module.exports = {
       items: [
         "develop/oracles/getting-started",
         "develop/oracles/razor",
-        "develop/oracles/bandchain"
+        "develop/oracles/bandchain",
       ],
     },
     "develop/fiat-on-ramp",
@@ -257,7 +248,7 @@ module.exports = {
                 "contribute/contracts/plasma_contracts/predicates",
                 "contribute/contracts/plasma_contracts/important-contracts",
               ],
-            }
+            },
           ],
         },
         "contribute/state-sync",
@@ -481,7 +472,7 @@ module.exports = {
                 "contribute/contracts/plasma_contracts/predicates",
                 "contribute/contracts/plasma_contracts/important-contracts",
               ],
-            }
+            },
           ],
         },
         "contribute/state-sync",
