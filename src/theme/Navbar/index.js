@@ -48,7 +48,7 @@ function Navbar() {
   const { siteConfig = {} } = context;
   const { baseUrl, themeConfig = {} } = siteConfig;
   const { navbar = {}, disableDarkMode = false } = themeConfig;
-  const { title, logo = {}, links = [], hideOnScroll = false } = navbar;
+  const { title, logo = {}, items = [], hideOnScroll = false } = navbar;
 
   const [sidebarShown, setSidebarShown] = useState(false);
   const [isSearchBarExpanded, setIsSearchBarExpanded] = useState(false);
@@ -141,7 +141,7 @@ function Navbar() {
               </strong>
             )}
           </Link>
-          {links
+          {items
             .filter(linkItem => linkItem.position !== "right")
             .map((linkItem, i) => (
               <NavLink {...linkItem} key={i} />
@@ -151,7 +151,7 @@ function Navbar() {
           className="navbar__items navbar__items--right"
           style={{ marginRight: "10px" }}
         >
-          {links
+          {items
             .filter(linkItem => linkItem.position === "right")
             .map((linkItem, i) => (
               <NavLink {...linkItem} key={i} />
@@ -213,7 +213,7 @@ function Navbar() {
         <div className="navbar-sidebar__items">
           <div className="menu">
             <ul className="menu__list">
-              {links.map((linkItem, i) => (
+              {items.map((linkItem, i) => (
                 <li className="menu__list-item" key={i}>
                   <NavLink
                     className="menu__link"
