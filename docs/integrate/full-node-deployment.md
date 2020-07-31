@@ -59,6 +59,12 @@ Setup full node for Testnetv4/Mumbai testnet
 - Configure the following in `~/.heimdalld/config/config.toml`:
     - `moniker=<enter unique identifier>`
     - `seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656"`
+
+Incase your Heimdall has stopped syncing you can add additional seeds to your `config.toml` file:
+
+```js
+ seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656,b18bbe1f3d8576f4b73d9b18976e71c65e839149@34.226.134.117:26656"
+```
 - Configure the following in `~/.heimdalld/config/heimdall-config.toml`:
     - `eth_rpc_url =<insert Infura or any full node RPC URL to Goerli>`
 - Add the following flag in `~/node/bor/start.sh` to the `bor` start params:
