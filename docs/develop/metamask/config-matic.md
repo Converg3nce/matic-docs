@@ -1,5 +1,5 @@
 ---
-id: testnet
+id: config-matic
 title: Config Matic on Metamask
 description: Build your next blockchain app on Matic.
 keywords:
