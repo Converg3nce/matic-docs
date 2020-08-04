@@ -23,7 +23,7 @@ The other fields will auto-populate. Click on Save and then click on Add Tokens.
 
 **Configuring `Matic TST` tokens to Metamask**
 
-You will also need to configure the `TST` tokens to Matic’s Testnet for visualization if you are following the introductory Matic.js tutorial. **Switch the network on Metamask to point to the Matic testnet - https://rpc-mumbai.matic.today **. On Metamask, this will be shown as `Private Network`.
+You will also need to configure the `TST` tokens to Matic’s Testnet for visualization if you are following the introductory Matic.js tutorial. **Switch the network on Metamask to point to the Matic testnet - https://rpc-mumbai.matic.today **. On Metamask, this will be shown as `Private Network`or whatever you have named it when adding the custom rpc eg. `mumbai`.
 
 The corresponding `TST` token address on Matic testnet is `0x2d7882beDcbfDDce29Ba99965dd3cdF7fcB10A1e`. Note that this token contract address is different from that of Goerli - since this is the `TST` token on the Matic Network. A detailed, screen-by-screen guide to add custom tokens is shown here:
 
