@@ -88,7 +88,7 @@ Setup full node for Testnetv4/Mumbai testnet
     - In the output, `catching_up` value should be `false`
 
 - Ports / Firewall configuration
-    - Open ports 22, 26656 and 30303 to world (0.0.0.0/0) on sentry node firewall. All other ports should be closed.
+    - Open ports 22, 26656 and 30303 to world (0.0.0.0/0) on node firewall. All other ports should be closed.
 
 </TabItem>
 <TabItem value="mainnet">
@@ -160,7 +160,7 @@ Setup full node for Matic mainnet
     - In the output, `catching_up` value should be `false`
 
 - Ports / Firewall configuration
-    - Open ports 22, 26656 and 30303 to world (0.0.0.0/0) on sentry node firewall. All other ports should be closed.
+    - Open ports 22, 26656 and 30303 to world (0.0.0.0/0) on node firewall. All other ports should be closed.
 
 </TabItem>
 </Tabs>
