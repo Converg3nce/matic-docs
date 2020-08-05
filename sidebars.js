@@ -77,8 +77,8 @@ module.exports = {
       label: "Using Metamask",
       items: [
         "develop/metamask/hello",
+        "develop/metamask/config-matic",
         "develop/metamask/custom-tokens",
-        "develop/metamask/testnet",
         "develop/metamask/multiple-accounts",
       ],
     },
