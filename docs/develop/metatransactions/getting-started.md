@@ -68,5 +68,5 @@ To integrate your DApp with Meta Transactions on Matic, you can choose to go wit
 
 Assuming your familiarity with the different approaches you can take to integrate meta-transactions in your DApp, and depending on weather you're migrating to meta-transactions or building fresh DApp on using it, the following links will guide you on your steps ahead:
 
-- [[Tutorial: GSN](tutorial-metatransactions-gsn.md)]
-- [[Tutorial: Biconomy](tutorial-metatransactions-biconomy.md)]
+- [[Tutorial: GSN](metatransactions-biconomy)]
+- [[Tutorial: Biconomy](metatransactions-gsn)]

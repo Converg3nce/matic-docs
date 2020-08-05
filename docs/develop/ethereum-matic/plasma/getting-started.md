@@ -20,7 +20,7 @@ The process followed here is:
 
 - ERC20: In this tutorial we use ERC-20 assets to be transferred from Görli to Matic. 
 - ERC721: The flow discussed below remains similar for ERC-721 assets with minor changes that will be mentioned wherever required. 
-- Ether: The flow discussed below is simliar for transfer and withdraw, The only difference is at deposit, it's only one step by using ```matic.depositEthers```. For transfer and withdraw you can find the Görli_ERC20Address & Matic_ERC20Address in [network detail](/docs/integrate/network-detail)
+- Ether: The flow discussed below is simliar for transfer and withdraw, The only difference is at deposit, it's only one step by using ```matic.depositEthers```. For transfer and withdraw you can find the Görli_ERC20Address & Matic_ERC20Address in [network detail](/docs/develop/network-details/network)
 
 ## Using Matic JS
 
@@ -55,7 +55,7 @@ Throughout this tutorial, we will be using the ERC20 token `TEST` on the Görli 
 </button>
 </center>
 
-> Note: To use your own tokens for deposits and withdrawals, you'll have to get the token 'mapped'. Which essentially means making the contracts on main chain and side chain 'aware' of your custom token. Read more about the Mapping process [here](../advanced/mapping-assets), or you can submit a mapping request [here](../advanced/submit-mapping-request.md). 
+> Note: To use your own tokens for deposits and withdrawals, you'll have to get the token 'mapped'. Which essentially means making the contracts on main chain and side chain 'aware' of your custom token. Read more about the Mapping process [here](/docs/develop/ethereum-matic/plasma/mapping-assets), or you can submit a mapping request [here](/docs/develop/ethereum-matic/submit-mapping-request). 
 
 ### Basic setup for the tutorial
 

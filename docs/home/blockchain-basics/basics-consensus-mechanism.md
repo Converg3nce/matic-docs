@@ -23,7 +23,7 @@ Proof-of-Stake mechanism achieve consensus by requiring users to stake an amount
 This form of consensus mirrors the election of members in governing bodies. Witnesses, those who validate transactions, are elected.
 
 4. PoSpace: Proof of Space <br></br>
-This kind of consensus mechanism is useful in decentralized file storage applications like [storj.io](storj.io), [filecoin](filecoin.io), where nodes prove they have legitimate capacity in their hardware. Sometimes also referred as PoStorage or PoCapacity.
+This kind of consensus mechanism is useful in decentralized file storage applications like storj.io, filecoin, where nodes prove they have legitimate capacity in their hardware. Sometimes also referred as PoStorage or PoCapacity.
 
 5. PoET: Proof of Elapsed Time <br></br>
 A better alternative to PoW, consuming lesser computational resources. Each participating node needs to wait for a random amount of time and very first node to wake up from sleep gets a chance to create new block, which is then propagated through network. Requires Trusted Execution Environments ( TEE ) like Intel SGX, which are isolated part of memory, can only be accessed using certain set of instructions.

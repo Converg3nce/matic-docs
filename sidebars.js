@@ -48,17 +48,37 @@ module.exports = {
         "develop/network-details/gas-token",
         "develop/network-details/genesis-contracts",
         "develop/network-details/full-node-deployment",
-        "develop/network-details/matic-gas-station"
+        "develop/network-details/matic-gas-station",
       ],
     },
-
+    {
+      type: "category",
+      label: "Tools",
+      items: [
+        {
+          type: "link",
+          label: "Matic Faucet",
+          href: "https://faucet.matic.network/",
+        },
+        {
+          type: "link",
+          label: "RPC Health",
+          href: "https://status.matic.today",
+        },
+        {
+          type: "link",
+          label: "Checkpoint Status",
+          href: "https://status.matic.today/#/checkpoints",
+        },
+      ],
+    },
     {
       type: "category",
       label: "Using Metamask",
       items: [
         "develop/metamask/hello",
+        "develop/metamask/config-matic",
         "develop/metamask/custom-tokens",
-        "develop/metamask/testnet",
         "develop/metamask/multiple-accounts",
       ],
     },
@@ -100,23 +120,14 @@ module.exports = {
           label: "Plasma Bridge",
           items: [
             "develop/ethereum-matic/plasma/getting-started",
+            "develop/ethereum-matic/plasma/mapping-assets",
             "develop/ethereum-matic/plasma/deposit",
             "develop/ethereum-matic/plasma/transfer",
             "develop/ethereum-matic/plasma/withdraw",
-            {
-              type: "category",
-              label: "Demo",
-              items: [
-                "develop/ethereum-matic/plasma/demo-erc20",
-                "develop/ethereum-matic/plasma/demo-eth",
-                "develop/ethereum-matic/plasma/demo-erc721",
-              ],
-            },
             "develop/ethereum-matic/plasma/api-reference",
           ],
         },
-        "develop/advanced/mapping-assets",
-        "develop/advanced/submit-mapping-request",
+        "develop/ethereum-matic/submit-mapping-request",
       ],
     },
     {
@@ -134,7 +145,7 @@ module.exports = {
       items: [
         "develop/oracles/getting-started",
         "develop/oracles/razor",
-        "develop/oracles/bandchain"
+        "develop/oracles/bandchain",
       ],
     },
     "develop/fiat-on-ramp",
@@ -237,7 +248,7 @@ module.exports = {
                 "contribute/contracts/plasma_contracts/predicates",
                 "contribute/contracts/plasma_contracts/important-contracts",
               ],
-            }
+            },
           ],
         },
         "contribute/state-sync",
@@ -268,18 +279,6 @@ module.exports = {
               label: "Mumbai",
               href:
                 "https://static.matic.network/network/testnet/mumbai/index.json",
-            },
-            {
-              type: "link",
-              label: "TestNetV3",
-              href:
-                "https://static.matic.network/network/testnet/v3/index.json",
-            },
-            {
-              type: "link",
-              label: "TestNetV2",
-              href:
-                "https://static.matic.network/network/testnet/v2/index.json",
             },
             {
               type: "link",
@@ -473,7 +472,7 @@ module.exports = {
                 "contribute/contracts/plasma_contracts/predicates",
                 "contribute/contracts/plasma_contracts/important-contracts",
               ],
-            }
+            },
           ],
         },
         "contribute/state-sync",

@@ -59,12 +59,24 @@ Setup full node for Testnetv4/Mumbai testnet
 - Configure the following in `~/.heimdalld/config/config.toml`:
     - `moniker=<enter unique identifier>`
     - `seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656"`
+
+Incase your Heimdall has stopped syncing you can add additional seeds to your `config.toml` file:
+
+```js
+ seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656,b18bbe1f3d8576f4b73d9b18976e71c65e839149@34.226.134.117:26656"
+```
 - Configure the following in `~/.heimdalld/config/heimdall-config.toml`:
     - `eth_rpc_url =<insert Infura or any full node RPC URL to Goerli>`
 - Add the following flag in `~/node/bor/start.sh` to the `bor` start params:
 
 ```bash
 --bootnodes "enode://320553cda00dfc003f499a3ce9598029f364fbb3ed1222fdc20a94d97dcc4d8ba0cd0bfa996579dcc6d17a534741fb0a5da303a90579431259150de66b597251@54.147.31.250:30303"
+```
+
+In case your Bor node has stopped syncing, you can add additional bootnodes to your `start.sh` file:
+
+```js
+--bootnodes enode://320553cda00dfc003f499a3ce9598029f364fbb3ed1222fdc20a94d97dcc4d8ba0cd0bfa996579dcc6d17a534741fb0a5da303a90579431259150de66b597251@54.147.31.250:30303,enode://f0f48a8781629f95ff02606081e6e43e4aebd503f3d07fc931fad7dd5ca1ba52bd849a6f6c3be0e375cf13c9ae04d859c4a9ae3546dc8ed4f10aa5dbb47d4998@34.226.134.117:30303
 ```
 
 - In case you want to turn `trace` on for Bor, add the following flag to the `bor` start params in `~/node/bor/start.sh`:
