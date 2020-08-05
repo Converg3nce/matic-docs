@@ -14,24 +14,7 @@ Once you have funds on Matic, you can use those funds to send to others instantl
 > `recipient` is the receiver’s address, to whom the funds are supposed to be sent.
 
 ### ERC20/ETH
-Now, depending upon your asset, add the following code:
 
-```js
-const recipient = 'recepient-address'
-const token = config.MUMBAI_ERC20 // test token address
-// const token = config.MUMBAI_WETH
-const amount = '1000000000000000000' // amount in wei
-
-matic.initialize().then(() => {
-    matic.setWallet(config.PRIVATE_KEY)
-    // Transfer ERC20 Tokens
-    matic.transferERC20Tokens(token, recipient, amount, {
-        from,
-    }).then((res) => {
-        console.log("hash", res.transactionHash)
-    })
-})
-```
 
 ### ERC721
 ```js

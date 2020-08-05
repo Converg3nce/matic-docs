@@ -120,10 +120,10 @@ module.exports = {
           label: "Plasma Bridge",
           items: [
             "develop/ethereum-matic/plasma/getting-started",
+            "develop/ethereum-matic/plasma/eth",
+            "develop/ethereum-matic/plasma/erc20",
+            "develop/ethereum-matic/plasma/erc721",
             "develop/ethereum-matic/plasma/mapping-assets",
-            "develop/ethereum-matic/plasma/deposit",
-            "develop/ethereum-matic/plasma/transfer",
-            "develop/ethereum-matic/plasma/withdraw",
             "develop/ethereum-matic/plasma/api-reference",
           ],
         },

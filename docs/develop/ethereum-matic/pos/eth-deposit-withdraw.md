@@ -1,6 +1,7 @@
 ---
 id: eth-deposit-withdraw
 title: ETH Deposit and Withdraw Guide
+sidebar_label: ETH
 description: Build your next blockchain app on Matic.
 keywords:
   - docs

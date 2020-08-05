@@ -1,6 +1,7 @@
 ---
 id: erc1155-deposit-withdraw
 title: ERC1155 Deposit and Withdraw Guide
+sidebar_label: ERC1155
 description: Build your next blockchain app on Matic.
 keywords:
   - docs

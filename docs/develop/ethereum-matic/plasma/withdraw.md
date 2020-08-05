@@ -25,25 +25,6 @@ Just for reference, there will be an active exit market, which will allow tradin
 
 ## Initiate Withdraw
 
-### ERC20/ETH
-Now, depending upon your asset, add the following code:
-
-```js
-const token = config.MUMBAI_ERC20 // test token address
-// const token = config.MUMBAI_WETH
-const amount = '1000000000000000000'
-
-matic.initialize().then(() => {
-    matic.setWallet(config.PRIVATE_KEY)
-    // Initiate withdraw from matic/ Burn tokens on Matic
-    matic.startWithdraw(token, amount, {
-            from,
-        }).then((res) => {
-            console.log(res.transactionHash) // eslint-disable-line
-        })
-})
-```
-
 ### ERC721
 ```js
 const token = config.MUMBAI_ERC721 // test token address
@@ -63,23 +44,6 @@ matic.initialize().then(() => {
 
 ## Confirm Withdraw
 
-### ERC20/ETH
-```js
-//Wait for 5 mins till the checkpoint is submitted, then run the confirm withdraw
-var transactionHash = '0xea14d35a3727061a6d2885e28f7378ed8b9235fe77c030a2fd1c306040ced7ff'
-
-matic.initialize().then(() => {
-    matic.setWallet(config.PRIVATE_KEY)
-
-    // Submit proof of burn on Goerli
-    matic.withdraw(transactionHash, {
-        from,
-    }).then((res) => {
-        console.log(res.transactionHash) // eslint-disable-line
-    })
-})
-// Withdraw process is completed, funds will be transfered to your account after challege period is over.
-```
 ### ERC721
 ```js
 //Wait for 5 mins till the checkpoint is submitted, then run the confirm withdraw
