@@ -38,10 +38,17 @@ Setup full node for Testnetv4/Mumbai testnet
 - Clone the [`https://github.com/maticnetwork/node-ansible`](https://github.com/maticnetwork/node-ansible) repo
 - `cd node-ansible`
 - Edit the `inventory.yml` file and insert your IP(s) in the `sentry->hosts` section. Refer [https://github.com/maticnetwork/node-ansible#inventory](https://github.com/maticnetwork/node-ansible#inventory) for more details.
-- Check if remote machine is reachable by running `ansible sentry -m ping`
+- Check if remote machine is reachable by running 
+
+    ```js
+    ansible sentry -m ping
+    ```
+
 - For a test run to confirm if the correct remote machine / VM is configured, run the following command:
 
-    `ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=testnet-v4 node_type=sentry/sentry" --list-hosts`
+    ```js
+    ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=testnet-v4 node_type=sentry/sentry" --list-hosts
+    ```
 
     It should output the remote machine IP(s) you have configured
 
@@ -49,11 +56,15 @@ Setup full node for Testnetv4/Mumbai testnet
 
 - Setup the full node with this command:
 
-    `ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=testnet-v4 node_type=sentry/sentry"`
+    ```js
+    ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=testnet-v4 node_type=sentry/sentry"
+    ```
 
 - In case you run into any issues, delete and clean the whole setup using
 
-    `ansible-playbook -l sentry playbooks/clean.yml`
+    ```js
+    ansible-playbook -l sentry playbooks/clean.yml
+    ```
 
 - Login to the remote machine
 - Configure the following in `~/.heimdalld/config/config.toml`:
@@ -61,27 +72,55 @@ Setup full node for Testnetv4/Mumbai testnet
     - `seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656"`
 - Configure the following in `~/.heimdalld/config/heimdall-config.toml`:
     - `eth_rpc_url =<insert Infura or any full node RPC URL to Goerli>`
-- Add the following flag in `~/node/bor/start.sh` to the `bor` start params:
+- Add the following flag in `vi ~/node/bor/start.sh` to the `bor` start params:
 
 ```bash
 --bootnodes "enode://320553cda00dfc003f499a3ce9598029f364fbb3ed1222fdc20a94d97dcc4d8ba0cd0bfa996579dcc6d17a534741fb0a5da303a90579431259150de66b597251@54.147.31.250:30303"
+```
+
+In case your Bor node is not syncing you can add these additional bootnodes to your `start.sh` file.
+
+```bash
+--bootnodes "enode://320553cda00dfc003f499a3ce9598029f364fbb3ed1222fdc20a94d97dcc4d8ba0cd0bfa996579dcc6d17a534741fb0a5da303a90579431259150de66b597251@54.147.31.250:30303,enode://f0f48a8781629f95ff02606081e6e43e4aebd503f3d07fc931fad7dd5ca1ba52bd849a6f6c3be0e375cf13c9ae04d859c4a9ae3546dc8ed4f10aa5dbb47d4998@34.226.134.117:30303"
 ```
 
 - In case you want to turn `trace` on for Bor, add the following flag to the `bor` start params in `~/node/bor/start.sh`:
     - `--gcmode 'archive'`
 
 - Run the full node with the following commands:
-    - `sudo service heimdalld start`
-    - `sudo service heimdalld-rest-server start`
+    - To Start Heimdall:
 
-    Once Heimdall is synced, run 
+    ```js
+    sudo service heimdalld start
+    ```
 
-    - `sudo service bor start`
+    - To start Heimdall Rest Server you can run the following command:
+
+    ```js
+    sudo service heimdalld-rest-server start
+    ```
+
+    Once Heimdall is synced, run the following command: 
+
+    ```js
+    sudo service bor start
+    ```
 
 - Check logs:
-    - Heimdall - `journalctl -u heimdalld.service -f`
-    - Heimdall Rest Server - `journalctl -u heimdalld-rest-server.service -f`
-    - Bor - `journalctl -u bor.service -f`
+    - **Check Heimdall logs:**
+    ```js
+    journalctl -u heimdalld.service -f
+    ```
+
+    - **Check Heimdall Rest Server logs**
+    ```js
+    journalctl -u heimdalld-rest-server.service -f
+    ```
+
+    - **Check Bor logs**
+    ```js
+    journalctl -u bor.service -f
+    ```
 
 - To check if Heimdall is synced
     - On the remote machine/VM, run `curl localhost:26657/status`
@@ -110,7 +149,9 @@ Setup full node for Matic mainnet
 - Check if remote machine is reachable by running `ansible sentry -m ping`
 - For a test run to confirm if the correct remote machine / VM is configured, run the following command:
 
-    `ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=mainnet-v1 node_type=sentry/sentry" --list-hosts`
+    ```js
+    ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=mainnet-v1 node_type=sentry/sentry" --list-hosts
+    ```
 
     It should output the remote machine IP(s) you have configured
 
@@ -118,11 +159,15 @@ Setup full node for Matic mainnet
 
 - Setup the full node with this command:
 
-    `ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=mainnet-v1 node_type=sentry/sentry"`
+    ```js
+    ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=mainnet-v1 node_type=sentry/sentry"
+    ```
 
 - In case you run into any issues, delete and clean the whole setup using
 
-    `ansible-playbook -l sentry playbooks/clean.yml`
+    ```js
+    ansible-playbook -l sentry playbooks/clean.yml
+    ```
 
 - Login to the remote machine
 - Configure the following in `~/.heimdalld/config/config.toml`:
@@ -140,21 +185,38 @@ Setup full node for Matic mainnet
     - `--gcmode 'archive'`
 
 - Run the full node with the following commands:
-    - `sudo service heimdalld start`
-    - `sudo service heimdalld-rest-server start`
+    - To Start Heimdall:
 
-    Once Heimdall is synced, run 
+    ```js
+    sudo service heimdalld start
+    ```
 
-    - `sudo service bor start`
+    - To start Heimdall Rest Server you can run the following command:
 
+    ```js
+    sudo service heimdalld-rest-server start
+    ```
+
+    Once Heimdall is synced, run the following command: 
+
+    ```js
+    sudo service bor start
+    ```
 - Check logs:
-    - Heimdall - `journalctl -u heimdalld.service -f`
-    - Heimdall Rest Server - `journalctl -u heimdalld-rest-server.service -f`
-    - Bor - `journalctl -u bor.service -f`
+    - **Check Heimdall logs:**
+    ```js
+    journalctl -u heimdalld.service -f
+    ```
 
-- To check if Heimdall is synced
-    - On the remote machine/VM, run `curl localhost:26657/status`
-    - In the output, `catching_up` value should be `false`
+    - **Check Heimdall Rest Server logs**
+    ```js
+    journalctl -u heimdalld-rest-server.service -f
+    ```
+
+    - **Check Bor logs**
+    ```js
+    journalctl -u bor.service -f
+    ```
 
 </TabItem>
 </Tabs>
