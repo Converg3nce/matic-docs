@@ -106,13 +106,13 @@ In case your Bor node has stopped syncing, you can add additional bootnodes to y
 ## Start nodes and services
 
 - Run the full node with the following commands:
-    - To Start Heimdall:
+    - **To Start Heimdall**:
 
     ```js
     sudo service heimdalld start
     ```
 
-    - To start Heimdall Rest Server you can run the following command:
+    - **To start Heimdall Rest Server you can run the following command**:
 
     ```js
     sudo service heimdalld-rest-server start
@@ -220,13 +220,13 @@ Pre-requisite:
 ## Start nodes and services
 
 - Run the full node with the following commands:
-    - To Start Heimdall:
+    - **To Start Heimdall**:
 
     ```js
     sudo service heimdalld start
     ```
 
-    - To start Heimdall Rest Server you can run the following command:
+    - **To start Heimdall Rest Server you can run the following command**:
 
     ```js
     sudo service heimdalld-rest-server start
