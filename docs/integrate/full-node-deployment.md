@@ -24,24 +24,32 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 We have created simple Ansible playbooks to setup a full node.
 
-Pre-requisite:
+**Pre-requisite:**
 
-- Ansible should be installed on local machine with Python3.x. The setup will not work if you have Python2.x.
+- Minimum system requirements: https://docs.matic.network/docs/validate/technical-requirements/
+- Install **Ansible with Python 3.x**: Ansible should be installed on local machine with **Python3.x**. The setup will not work if you have Python2.x.
     - To install ansible with Python 3.x you can use this command `pip3 install ansible`. This will install Python 3 dependencies as well as ansible.
 - Check [https://github.com/maticnetwork/node-ansible#requirements](https://github.com/maticnetwork/node-ansible#requirements) for requirements
-- You will also need to make sure that Go is not installed on your VM / Machine. Setting up your full node through ansible will run into issues if you have Go already installed, as ansible requires specific packages of Go to be installed.
-- You will also need to make sure that your VM / Machine does not have any previous setups for Matic Validator or Heimdall or Bor. You will need to delete them as your setup will run into issues.
+- You will also need to make sure that **Go is not installed on your VM / Machine**. Setting up your full node through ansible will run into issues if you have Go already installed, as ansible requires specific packages of Go to be installed.
+- You will also need to make sure that your VM / Machine **does not have any previous setups for Matic Validator or Heimdall or Bor**. You will need to delete them as your setup will run into issues.
 
-Setup full node for Testnetv4/Mumbai testnet
+## Setup full node for Testnetv4/Mumbai testnet
 
 - Ensure you have access to the remote machine or VM that the full node is being setup on. Refer [https://github.com/maticnetwork/node-ansible#setup](https://github.com/maticnetwork/node-ansible#setup) for more details.
 - Clone the [`https://github.com/maticnetwork/node-ansible`](https://github.com/maticnetwork/node-ansible) repo
 - `cd node-ansible`
 - Edit the `inventory.yml` file and insert your IP(s) in the `sentry->hosts` section. Refer [https://github.com/maticnetwork/node-ansible#inventory](https://github.com/maticnetwork/node-ansible#inventory) for more details.
-- Check if remote machine is reachable by running `ansible sentry -m ping`
+- Check if remote machine is reachable by running 
+
+    ```js
+    ansible sentry -m ping
+    ```
+
 - For a test run to confirm if the correct remote machine / VM is configured, run the following command:
 
-    `ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.1 heimdall_branch=v0.2.0 network_version=testnet-v4 node_type=sentry/sentry" --list-hosts`
+    ```js
+    ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=testnet-v4 node_type=sentry/sentry" --list-hosts
+    ```
 
     It should output the remote machine IP(s) you have configured
 
@@ -49,16 +57,25 @@ Setup full node for Testnetv4/Mumbai testnet
 
 - Setup the full node with this command:
 
-    `ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.1 heimdall_branch=v0.2.0 network_version=testnet-v4 node_type=sentry/sentry"`
+    ```js
+    ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=testnet-v4 node_type=sentry/sentry"
+    ```
 
 - In case you run into any issues, delete and clean the whole setup using
 
-    `ansible-playbook -l sentry playbooks/clean.yml`
+    ```js
+    ansible-playbook -l sentry playbooks/clean.yml
+    ```
 
 - Login to the remote machine
 - Configure the following in `~/.heimdalld/config/config.toml`:
-    - `moniker=<enter unique identifier>`
-    - `seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656"`
+    ```js
+    moniker=<enter unique identifier>
+    ```
+    
+    ```js
+    seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656"
+    ```
 
 Incase your Heimdall has stopped syncing you can add additional seeds to your `config.toml` file:
 
@@ -66,8 +83,12 @@ Incase your Heimdall has stopped syncing you can add additional seeds to your `c
  seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656,b18bbe1f3d8576f4b73d9b18976e71c65e839149@34.226.134.117:26656"
 ```
 - Configure the following in `~/.heimdalld/config/heimdall-config.toml`:
-    - `eth_rpc_url =<insert Infura or any full node RPC URL to Goerli>`
-- Add the following flag in `~/node/bor/start.sh` to the `bor` start params:
+
+    ```js
+    eth_rpc_url =<insert Infura or any full node RPC URL to Goerli>
+    ```
+
+- Add the following flag in `vi ~/node/bor/start.sh` to the `bor` start params:
 
 ```bash
 --bootnodes "enode://320553cda00dfc003f499a3ce9598029f364fbb3ed1222fdc20a94d97dcc4d8ba0cd0bfa996579dcc6d17a534741fb0a5da303a90579431259150de66b597251@54.147.31.250:30303"
@@ -82,18 +103,42 @@ In case your Bor node has stopped syncing, you can add additional bootnodes to y
 - In case you want to turn `trace` on for Bor, add the following flag to the `bor` start params in `~/node/bor/start.sh`:
     - `--gcmode 'archive'`
 
+## Start nodes and services
+
 - Run the full node with the following commands:
-    - `sudo service heimdalld start`
-    - `sudo service heimdalld-rest-server start`
+    - **To Start Heimdall**:
 
-    Once Heimdall is synced, run 
+    ```js
+    sudo service heimdalld start
+    ```
 
-    - `sudo service bor start`
+    - **To start Heimdall Rest Server you can run the following command**:
+
+    ```js
+    sudo service heimdalld-rest-server start
+    ```
+
+    Once Heimdall is synced, run the following command: 
+
+    ```js
+    sudo service bor start
+    ```
 
 - Check logs:
-    - Heimdall - `journalctl -u heimdalld.service -f`
-    - Heimdall Rest Server - `journalctl -u heimdalld-rest-server.service -f`
-    - Bor - `journalctl -u bor.service -f`
+    - **Check Heimdall logs:**
+    ```js
+    journalctl -u heimdalld.service -f
+    ```
+
+    - **Check Heimdall Rest Server logs**
+    ```js
+    journalctl -u heimdalld-rest-server.service -f
+    ```
+
+    - **Check Bor logs**
+    ```js
+    journalctl -u bor.service -f
+    ```
 
 - To check if Heimdall is synced
     - On the remote machine/VM, run `curl localhost:26657/status`
@@ -110,13 +155,14 @@ We have created simple Ansible playbooks to setup a full node.
 
 Pre-requisite:
 
-- Ansible should be installed on local machine with Python3.x. The setup will not work if you have Python2.x.
-    - To install ansible with Python 3.x you can use this command `pip3 install ansible`. This will install Python 3 dependencies as well as ansible.
+- Minimum system requirements: https://docs.matic.network/docs/validate/technical-requirements/
+- Ansible should be installed on local machine with **Python3.x**. The setup will not work if you have Python2.x.
+    - To install **ansible with Python 3.x** you can use this command `pip3 install ansible`. This will install Python 3 dependencies as well as ansible.
 - Check [https://github.com/maticnetwork/node-ansible#requirements](https://github.com/maticnetwork/node-ansible#requirements) for requirements
-- You will also need to make sure that Go is not installed on your VM / Machine. Setting up your full node through ansible will run into issues if you have Go already installed, as ansible requires specific packages of Go to be installed.
-- You will also need to make sure that your VM / Machine does not have any previous setups for Matic Validator or Heimdall or Bor. You will need to delete them as your setup will run into issues.
+- You will also need to make sure that **Go is not installed on your VM / Machine**. Setting up your full node through ansible will run into issues if you have Go already installed, as ansible requires specific packages of Go to be installed.
+- You will also need to make sure that your VM / Machine does not have any **previous setups for Matic Validator or Heimdall or Bor**. You will need to delete them as your setup will run into issues.
 
-Setup full node for Matic mainnet
+## Setup full node for Matic mainnet
 
 - Ensure you have access to the remote machine or VM that the full node is being setup on. Refer [https://github.com/maticnetwork/node-ansible#setup](https://github.com/maticnetwork/node-ansible#setup) for more details.
 - Clone the [`https://github.com/maticnetwork/node-ansible`](https://github.com/maticnetwork/node-ansible) repo
@@ -125,7 +171,9 @@ Setup full node for Matic mainnet
 - Check if remote machine is reachable by running `ansible sentry -m ping`
 - For a test run to confirm if the correct remote machine / VM is configured, run the following command:
 
-    `ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.1 heimdall_branch=v0.2.0 network_version=mainnet-v1 node_type=sentry/sentry" --list-hosts`
+    ```js
+    ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=mainnet-v1 node_type=sentry/sentry" --list-hosts
+    ```
 
     It should output the remote machine IP(s) you have configured
 
@@ -133,18 +181,33 @@ Setup full node for Matic mainnet
 
 - Setup the full node with this command:
 
-    `ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.1 heimdall_branch=v0.2.0 network_version=mainnet-v1 node_type=sentry/sentry"`
+    ```js
+    ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.0 heimdall_branch=v0.2.0 network_version=mainnet-v1 node_type=sentry/sentry"
+    ```
 
 - In case you run into any issues, delete and clean the whole setup using
 
-    `ansible-playbook -l sentry playbooks/clean.yml`
+    ```js
+    ansible-playbook -l sentry playbooks/clean.yml
+    ```
 
 - Login to the remote machine
 - Configure the following in `~/.heimdalld/config/config.toml`:
-    - `moniker=<enter unique identifier>`
-    - `seeds="f4f605d60b8ffaaf15240564e58a81103510631c@159.203.9.164:26656,4fb1bc820088764a564d4f66bba1963d47d82329@44.232.55.71:26656"`
+
+    ```js
+    moniker=<enter unique identifier>
+    ```
+
+    ```js
+    seeds="f4f605d60b8ffaaf15240564e58a81103510631c@159.203.9.164:26656,4fb1bc820088764a564d4f66bba1963d47d82329@44.232.55.71:26656"
+    ```
+
 - Configure the following in `~/.heimdalld/config/heimdall-config.toml`:
-    - `eth_rpc_url =<insert Infura or any full node RPC URL to Ethereum>`
+
+    ```js
+    eth_rpc_url =<insert Infura or any full node RPC URL to Ethereum>
+    ```
+
 - Add the following flag in `~/node/bor/start.sh` to the `bor` start params:
 
 ```bash
@@ -154,22 +217,41 @@ Setup full node for Matic mainnet
 - In case you want to turn `trace` on for Bor, add the following flag to the `bor` start params in `~/node/bor/start.sh`:
     - `--gcmode 'archive'`
 
+## Start nodes and services
+
 - Run the full node with the following commands:
-    - `sudo service heimdalld start`
-    - `sudo service heimdalld-rest-server start`
+    - **To Start Heimdall**:
 
-    Once Heimdall is synced, run 
+    ```js
+    sudo service heimdalld start
+    ```
 
-    - `sudo service bor start`
+    - **To start Heimdall Rest Server you can run the following command**:
 
+    ```js
+    sudo service heimdalld-rest-server start
+    ```
+
+    Once Heimdall is synced, run the following command: 
+
+    ```js
+    sudo service bor start
+    ```
 - Check logs:
-    - Heimdall - `journalctl -u heimdalld.service -f`
-    - Heimdall Rest Server - `journalctl -u heimdalld-rest-server.service -f`
-    - Bor - `journalctl -u bor.service -f`
+    - **Check Heimdall logs:**
+    ```js
+    journalctl -u heimdalld.service -f
+    ```
 
-- To check if Heimdall is synced
-    - On the remote machine/VM, run `curl localhost:26657/status`
-    - In the output, `catching_up` value should be `false`
+    - **Check Heimdall Rest Server logs**
+    ```js
+    journalctl -u heimdalld-rest-server.service -f
+    ```
+
+    - **Check Bor logs**
+    ```js
+    journalctl -u bor.service -f
+    ```
 
 - Ports / Firewall configuration
     - Open ports 22, 26656 and 30303 to world (0.0.0.0/0) on node firewall. All other ports should be closed.
