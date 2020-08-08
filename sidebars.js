@@ -146,6 +146,7 @@ module.exports = {
         "develop/oracles/getting-started",
         "develop/oracles/razor",
         "develop/oracles/bandchain",
+        "develop/oracles/chainlink",
       ],
     },
     "develop/fiat-on-ramp",
