@@ -12,12 +12,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 This tutorial will act as a guide for step-by-step process to understand and use Plasma bridge using [Matic JS](https://github.com/maticnetwork/matic.js), which is the easiest way to interact with the Plasma Bridge on Matic Network. 
 
-The process followed here is:
-
-1. Deposit assets from root chain to Matic [(Ethereum → Matic)](deposit)
-2. Transfer assets between accounts on Matic [(Matic ↔ Matic)](transfer)
-3. Withdraw assets from Matic on to root chain [(Matic → Ethereum)](withdraw)
-
 - ERC20: In this tutorial we use ERC-20 assets to be transferred from Görli to Matic. 
 - ERC721: The flow discussed below remains similar for ERC-721 assets with minor changes that will be mentioned wherever required. 
 - Ether: The flow discussed below is simliar for transfer and withdraw, The only difference is at deposit, it's only one step by using ```matic.depositEthers```. For transfer and withdraw you can find the Görli_ERC20Address & Matic_ERC20Address in [network detail](/docs/develop/network-details/network)

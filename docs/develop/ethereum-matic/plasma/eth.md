@@ -122,7 +122,7 @@ async function execute() {
   const { matic, network } = await utils.getMaticClient()
   const { from } = utils.getAccount()
 
-  const recipient = "<>"
+  const recipient = "< >"
 
   const amount = matic.web3Client.web3.utils.toWei('1.23')
 
