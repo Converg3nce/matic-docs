@@ -14,18 +14,17 @@ image: https://matic.network/banners/matic-network-16x9.png
 #### **Deposit ERC20 (2 step process)** 
 
 1. The tokens need to be first approved to the Matic rootchain contract on Parent Chain(Etheruem/Goerli).
-2. Once approved, the deposit function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
+2. Once approved, the **deposit** function is to be invoked where the tokens get deposited to the Matic contract, and are available for use in the Matic network.
 
 #### **Transfer ERC20**
 
 Once you have funds on Matic, you can use those funds to send to others instantly.
-> `recipient` is the receiver’s address, to whom the funds are supposed to be sent.
  
 #### **Withdraw ERC20 (3 step process)**
 
-1. Withdrawal of funds is initiated from Matic Network. A checkpoint interval of 5 mins is set, where all the blocks on the Matic block layer are validated since the last checkpoint.
-2. Once the checkpoint is submitted to the mainchain ERC20ereum contract, an NFT Exit (ERC721) token is created of equivalent value. Users need to wait for a 7 day challenge period (For testnets wait for ~5 minutes for)
-3. Once the challenge period is complete, the withdrawn funds can be claimed back to your ERC20ereum acccount from the mainchain contract using a process-exit procedure.
+1. Withdrawal of funds is initiated from Matic Network. A checkpoint interval of 30 mins(For testnets wait for ~10 minutes) is set, where all the blocks on the Matic block layer are validated since the last checkpoint.
+2. Once the checkpoint is submitted to the mainchain ERC20 contract, an NFT Exit (ERC721) token is created of equivalent value. Users need to wait for a 7 day challenge period (For testnets wait for ~5 minutes for)
+3. Once the challenge period is complete, the withdrawn funds can be claimed back to your ERC20 acccount from the mainchain contract using a process-exit procedure.
 
 > For now, just go with the fact that the challenge period for withdrawals is an important part of the Plasma framework to ensure security of your transactions. Later, once you get to know the system better, the reason for the 7-day withdrawal window will become clear to you.
 
@@ -42,6 +41,8 @@ npm install --save @maticnetwork/maticjs
 ```
 
 ### util.js
+Initiating Maticjs client
+
 ```js
 const bn = require('bn.js')
 const HDWalletProvider = require('@truffle/hdwallet-provider')
@@ -90,7 +91,12 @@ FROM = ""
 
 ## deposit.js
 
+**Approve**: This is a normal ERC20 approval so that **_depositManagerContract_** can call **_transferFrom_** function. Matic Plasma client exposes **_approveERC20TokensForDeposit_** method to make this call.
 
+**deposit**: Deposit can be done by calling **_depositERC20ForUser_** on depositManagerContract contract. 
+> Note that token needs to be mapped and approved for transfer beforehand. 
+
+**_depositERC20ForUser_** method to make this call.
 ```js
 const utils = require('./utils')
 
@@ -115,6 +121,7 @@ execute().then(_ => process.exit(0))
 ```
 
 ## transfer.js
+> `recipient` is the receiver’s address, to whom the funds are supposed to be sent.
 
 ```js
 const utils = require('./utils')
@@ -123,12 +130,12 @@ async function execute() {
   const { matic, network } = await utils.getMaticClient()
   const { from } = utils.getAccount()
 
-  const to = "<>"
+  const recipient = "<>"
 
   const childTokenAddress = network.Matic.Contracts.Tokens.TestToken
   const amount = matic.web3Client.web3.utils.toWei('1.23')
 
-  await matic.transferERC20Tokens(childTokenAddress, to, amount, { from, parent: false }).then((res) => {
+  await matic.transferERC20Tokens(childTokenAddress, recipient, amount, { from, parent: false }).then((res) => {
         console.log("Transfer hash: ", res.transactionHash)
   })
 }
@@ -139,7 +146,7 @@ execute().then(_ => process.exit(0))
 ## Withdraw
 
 ### 1. Burn
-Now, depending upon your asset, add the following code:
+User can call **_withdraw_** function of **_getERC20TokenContract_** child token contract. This function should burn the tokens. Matic Plasma client exposes **_startWithdraw_** method to make this call.
 
 ```js
 const utils = require('./utils')
@@ -161,8 +168,10 @@ execute().then(_ => process.exit(0))
 
 ### 2. confirm-withdraw.js
 
+User can call **_startExitWithBurntTokens_** function of **_erc20Predicate_** contract. This function should burn the tokens. Matic Plasma client exposes **_withdraw_** method to make this call.
+
 ```js
-//Wait for 5 mins till the checkpoint is submitted for burned transaction, then run the confirm withdraw
+//Wait for ~10 mins for Mumbai testnet or ~30mins for Ethereum Mainnet till the checkpoint is submitted for burned transaction, then run the confirm withdraw
 const utils = require('./utils')
 
 async function execute() {
@@ -181,8 +190,7 @@ execute().then(_ => process.exit(0))
 
 
 ### 3. Process Exit
-
-The code for process exit remains common for ERC20 and ERC721 tokens except for the value of `token`
+Once the **_Challenge Period_** has been passed for the transaction present in checkpoint, user should call the **_processExits_** function of **_withdrawManager_** contract and submit the proof of burn. Upon submitting valid proof tokens are transferred to the user. Matic Plasma client exposes **_processExits_** method to make this call.
 
 ```js
 const utils = require('./utils')
@@ -208,4 +216,6 @@ async function execute() {
 execute().then(_ => process.exit(0))
 ```
 
-_Note: A checkpoint, which is a representation of all transactions happening on the Matic Network to the ERC20ereum chain every ~5 minutes, is submitted to the mainchain ERC20ereum contract._
+_Note: A checkpoint, which is a representation of all transactions happening on the Matic Network to the ERC20 chain every ~30 minutes, is submitted to the mainchain ERC20 contract._
+
+_Note: Once the checkpoint is submitted, user needs to wait for a challenge period of 7 days long._
