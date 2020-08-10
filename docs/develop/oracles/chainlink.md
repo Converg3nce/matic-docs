@@ -107,6 +107,30 @@ _Quick Fact_: **In matic network 1 Gwei gas price works like charm.**
 
 ## jobs
 
-One interesting fact about chainlink network is, you need to know oracle address & job id upfront, before sending request, that's because otherwise your contract might be fed with bad data.
+Before sending any request to chainlink oracle contract, make sure you set oracle address & job_id carefully.
 
-Now in Matic Mumbai Testnet, there's only one operation chainlink oracle contract at `0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17`, deployed by us. This oracle contract supports 5 job requests. 
+In Matic Mumbai Testnet, there's only one operational chainlink oracle contract at `0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17`, deployed by us. This oracle contract supports 5 job requests, which are as follows.
+
+### d50dacc32d514a2eae0d6981235a25df
+
+<img src={useBaseUrl("img/chainlink/jobspec_0.png")} />
+
+### 31779f840111490299551ba34646db47
+
+<img src={useBaseUrl("img/chainlink/jobspec_1.png")} />
+
+### d8fcf41ee8984d3b8b0eae7b74eca7dd
+
+<img src={useBaseUrl("img/chainlink/jobspec_2.png")} />
+
+### 508bac12319e4a488ac46e194997db1f
+
+<img src={useBaseUrl("img/chainlink/jobspec_3.png")} />
+
+### 4f880ce628544e1a8d26a26044c91c20
+
+<img src={useBaseUrl("img/chainlink/jobspec_4.png")} />
+
+Read more about job specifications [here](https://docs.chain.link/docs/job-specifications), to understand which of these can be useful for your usecase.
+
+Chainlink API reference can be found [here](https://docs.chain.link/docs/chainlink-framework).
