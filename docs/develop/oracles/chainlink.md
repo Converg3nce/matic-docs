@@ -97,7 +97,7 @@ contract Chainlinked is ChainlinkClient {
 ```
 
 - As above consumer contract is already deployed in Matic Mumbai, we'll start interacting with it.
-- Make sure you're connected to correct network & have enough Matic token & LINK token in your account. Get some tokens from [here](https://faucet.matic.network/).
+- For obtaining LINK token, contact us on [Discord](https://discord.gg/ThJq53).
 - Now if you interact with `requestEthereumPrice` function, it'll send a transaction off to matic network. And chainlink node will catch this job request. After serving request, data will be written back to blockchain, by calling `fulfill` callback method.
 - Now calling `ethereumPrice` function will show current Ether price in USD, multiplied by 100 _( in case you're wondering why ? EVM can't handle floating point numbers )_.
 
