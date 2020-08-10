@@ -48,7 +48,6 @@ module.exports = {
         "develop/network-details/gas-token",
         "develop/network-details/genesis-contracts",
         "develop/network-details/full-node-deployment",
-        "develop/network-details/matic-gas-station",
       ],
     },
     {
@@ -70,6 +69,7 @@ module.exports = {
           label: "Checkpoint Status",
           href: "https://status.matic.today/#/checkpoints",
         },
+        "develop/tools/matic-gas-station",
       ],
     },
     {
@@ -146,6 +146,7 @@ module.exports = {
         "develop/oracles/getting-started",
         "develop/oracles/razor",
         "develop/oracles/bandchain",
+        "develop/oracles/chainlink",
       ],
     },
     "develop/fiat-on-ramp",

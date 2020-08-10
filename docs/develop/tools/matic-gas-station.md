@@ -11,15 +11,15 @@ image: https://matic.network/banners/matic-network-16x9.png
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-_Matic Gas Station_ aims to help dApp developers with gas price recommendations, so that they can use recommended gas prices before sending transaction off to _Matic_ network.
+_Matic Gas Station_ aims to help dApp developers with gas price recommendations, so that they can use it before sending transaction off to _Matic_ network.
 
 ## origin
 
-At _Matic_, we were receiving request from dApp developers for building a gas price recommendation oracle. So we took some inspiration from _Eth Gas Station_, and built one.
+At _Matic_, we were receiving request from dApp developers for building a gas price recommendation service. So we took some inspiration from _Eth Gas Station_, and built one.
 
 ## availability
 
-_Matic Gas Station_ has been deployed both on Matic Mumbai Testnet & Matic Mainnet, where it analyzes last 200 non-empty mined blocks and recommends gas price. As soon as new non-empty block gets mined, that's taken under consideration for updating recommendation.
+_Matic Gas Station_ has been deployed both on Matic Mumbai Testnet & Matic Mainnet, where it analyzes recent 500 transactions and recommends gas price.
 
 ## usage
 
@@ -39,7 +39,7 @@ For getting gas price recommendation from this oracle, send GET request to [http
 ### cURL
 
 ```bash
-$ curl https://gasstation-mumbai.matic.today
+curl https://gasstation-mumbai.matic.today
 ```
 
 ### JavaScript
@@ -53,9 +53,8 @@ fetch('https://gasstation-mumbai.matic.today')
 ### Python
 
 ```python
->>> import requests
->>> import json
->>> json.loads(requests.get('https://gasstation-mumbai.matic.today').content)
+import requests
+requests.get('https://gasstation-mumbai.matic.today').json()
 ```
 
 </TabItem>
@@ -68,7 +67,7 @@ For getting gas price recommendation from this oracle, send GET request to [http
 ### cURL
 
 ```bash
-$ curl https://gasstation-mainnet.matic.network
+curl https://gasstation-mainnet.matic.network
 ```
 
 ### JavaScript
@@ -82,9 +81,8 @@ fetch('https://gasstation-mainnet.matic.network')
 ### Python
 
 ```python
->>> import requests
->>> import json
->>> json.loads(requests.get('https://gasstation-mainnet.matic.network').content)
+import requests
+requests.get('https://gasstation-mainnet.matic.network').json()
 ```
 
 </TabItem>
@@ -100,11 +98,11 @@ fetch('https://gasstation-mainnet.matic.network')
     "standard": 9.0,
     "fast": 29.0,
     "fastest": 45.0,
-    "block_time": 2.1,
-    "blockNum": 1876116
+    "blockTime": 2,
+    "blockNumber": 2650006
 }
 ```
 
 - {'safelow', 'standard', 'fast', 'fastest'} are gas prices in GWei, you can use these prices before sending transaction off to Matic, depending upon your need
-- _blockNum_ gives non-empty block identifier when recommendation was made
-- _block\_time_ in second, which gives average block time of network _[ Note: As of now, don't rely on block\_time, this will be healed as network starts becoming crowded ]_
+- _'blockNumber'_ tells what was latest block mined when recommendation was made
+- _'blockTime'_ in second, which gives average block time of network
