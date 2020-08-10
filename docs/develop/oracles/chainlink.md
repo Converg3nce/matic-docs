@@ -24,7 +24,7 @@ Chainlink provides your smart contracts with a reliable way to consume external 
 In this simple tutorial, you'll get an overview of how to use chainlink oracle in your smart contracts.
 
 - We'll fetch Ether Price in USD from [here](https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD)
-- You'll require to extend [ChainlinkClient.sol](https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/ChainlinkClient.sol) in your smart contract. So, lets go to Remix and paste below code into editor.
+- You'll require to extend [ChainlinkClient.sol](https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/ChainlinkClient.sol) in your smart contract which will be called as the **consumer contract** as your contract will be making the oracle requests and consuming the responses. So, lets go to Remix and paste below code into editor.
 
 ```javascript
 pragma solidity ^0.6.0;
@@ -96,10 +96,10 @@ contract Chainlinked is ChainlinkClient {
 }
 ```
 
-- As above contract is already deployed in Matic Mumbai network, we'll put address ( `0x9A5395187104EbED17364B26869d120b032c5D39` ) and start interacting with it.
+- As above consumer contract is already deployed in Matic Mumbai, we'll start interacting with it.
 - Make sure you're connected to correct network & have enough Matic token & LINK token in your account. Get some tokens from [here](https://faucet.matic.network/).
-- Now if you click on `requestEthereumPrice` on left panel in Remix, it'll send a transaction off to matic network. And chainlink node will catch this job request. After serving request, data will be written back to blockchain, by calling `fulfill` callback method.
-- Now try clicking on `ethereumPrice` button of left panel of Remix, you'll see current Ether price in USD, multiplied by 100 _( in case you're wondering why ? EVM can't handle floating point numbers )_.
+- Now if you interact with `requestEthereumPrice` function, it'll send a transaction off to matic network. And chainlink node will catch this job request. After serving request, data will be written back to blockchain, by calling `fulfill` callback method.
+- Now calling `ethereumPrice` function will show current Ether price in USD, multiplied by 100 _( in case you're wondering why ? EVM can't handle floating point numbers )_.
 
 <img src={useBaseUrl("img/chainlink/interaction.png")} />
 
@@ -111,23 +111,80 @@ Before sending any request to chainlink oracle contract, make sure you set oracl
 
 In Matic Mumbai Testnet, there's only one operational chainlink oracle contract at `0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17`, deployed by us. This oracle contract supports 5 job requests, which are as follows.
 
-### d50dacc32d514a2eae0d6981235a25df
+### HTTP POST Request
+
+#### Intro
+
+- Send POST request to specified URL
+- Parse JSON response
+- Convert value to bytes32
+- Write bytes32 back into blockchain
+
+#### Job Id
+
+`d50dacc32d514a2eae0d6981235a25df`
 
 <img src={useBaseUrl("img/chainlink/jobspec_0.png")} />
 
-### 31779f840111490299551ba34646db47
+### HTTP GET Request
+
+#### Intro
+
+- Send GET request to specified URL
+- Parse JSON response
+- Convert value to boolean
+- Write boolean back into blockchain
+
+#### Job Id
+
+`31779f840111490299551ba34646db47`
 
 <img src={useBaseUrl("img/chainlink/jobspec_1.png")} />
 
-### d8fcf41ee8984d3b8b0eae7b74eca7dd
+### HTTP GET Request
+
+#### Intro
+
+- Send GET request to specified URL
+- Parse JSON response
+- Multiply value by X
+- Convert value to unsigned integer
+- Write unsigned integer back into blockchain
+
+#### Job Id
+
+`d8fcf41ee8984d3b8b0eae7b74eca7dd`
 
 <img src={useBaseUrl("img/chainlink/jobspec_2.png")} />
 
-### 508bac12319e4a488ac46e194997db1f
+### HTTP GET Request
+
+#### Intro
+
+- Send GET request to specified URL
+- Parse JSON response
+- Multiply value by X
+- Convert value to signed integer
+- Write signed integer back into blockchain
+
+#### Job Id
+
+`508bac12319e4a488ac46e194997db1f`
 
 <img src={useBaseUrl("img/chainlink/jobspec_3.png")} />
 
-### 4f880ce628544e1a8d26a26044c91c20
+### HTTP GET Request
+
+#### Intro
+
+- Send GET request to specified URL
+- Parse JSON response
+- Convert value to bytes32
+- Write bytes32 back into blockchain
+
+#### Job Id
+
+`4f880ce628544e1a8d26a26044c91c20`
 
 <img src={useBaseUrl("img/chainlink/jobspec_4.png")} />
 
