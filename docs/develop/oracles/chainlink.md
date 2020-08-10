@@ -10,7 +10,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Chainlink provides your smart contracts with a reliable way to consume external API data. Chainlink network uses LINK token which is ERC677 standard, for incentivizing their node operators. For each oracle contract call you make from your contract, you'll transfer a certain amount of LINK token to oracle's account & provide it with a callback function signature, which is to be invoked for feeding requested data back to your smart contract. For reading more about how chainlink works, you can start [here](https://docs.chain.link/docs/architecture-overview)
+Chainlink provides your smart contracts with a reliable way to consume external API data. Chainlink network uses LINK token which is ERC677 standard, for incentivizing their node operators. For each oracle contract call you make from your contract, you'll transfer a certain amount of LINK token to oracle's account & provide it with a callback function signature, which is to be invoked for feeding requested data back to your smart contract. For reading more about how chainlink works, you can start [here](https://docs.chain.link/docs/architecture-overview).
 
 **And now we've added support for Chainlink in Matic Mumbai Testnet.**
 
@@ -21,7 +21,7 @@ Chainlink provides your smart contracts with a reliable way to consume external 
 
 ## example
 
-In this simple tutorial, you'll get an overview of how to use chainlink oracle in your smart contracts. 
+In this simple tutorial, you'll get an overview of how to use chainlink oracle in your smart contracts.
 
 - We'll fetch Ether Price in USD from [here](https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD)
 - You'll require to extend [ChainlinkClient.sol](https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/ChainlinkClient.sol) in your smart contract. So, lets go to Remix and paste below code into editor.
@@ -98,3 +98,15 @@ contract Chainlinked is ChainlinkClient {
 
 - As above contract is already deployed in Matic Mumbai network, we'll put address ( `0x9A5395187104EbED17364B26869d120b032c5D39` ) and start interacting with it.
 - Make sure you're connected to correct network & have enough Matic token & LINK token in your account. Get some tokens from [here](https://faucet.matic.network/).
+- Now if you click on `requestEthereumPrice` on left panel in Remix, it'll send a transaction off to matic network. And chainlink node will catch this job request. After serving request, data will be written back to blockchain, by calling `fulfill` callback method.
+- Now try clicking on `ethereumPrice` button of left panel of Remix, you'll see current Ether price in USD, multiplied by 100 _( in case you're wondering why ? EVM can't handle floating point numbers )_.
+
+<img src={useBaseUrl("img/chainlink/interaction.png")} />
+
+_Quick Fact_: **In matic network 1 Gwei gas price works like charm.**
+
+## jobs
+
+One interesting fact about chainlink network is, you need to know oracle address & job id upfront, before sending request, that's because otherwise your contract might be fed with bad data.
+
+Now in Matic Mumbai Testnet, there's only one operation chainlink oracle contract at `0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17`, deployed by us. This oracle contract supports 5 job requests. 
