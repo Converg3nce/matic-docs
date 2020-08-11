@@ -8,6 +8,8 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
+This tutorial uses the Matic Testnet ( Mumbai ) to demonstrate the asset transfer to and fro the two blockchains. An **important thing to be noted** while following this tutorial is that you should always use a Proxy address whenever it is available. For eg. The **RootChainManagerProxy** address has to be used for interaction instead of the **RootChainManager** address. The **address, ABI** and other deployment details of the PoS bridge contracts can be found [here](/docs/develop/ethereum-matic/pos/deployment).
+
 ## High Level Flow
 
 Deposit ETH -
@@ -31,29 +33,33 @@ Install Matic SDK (**_2.0.2)_**
 npm install --save @maticnetwork/maticjs
 ```
 
-```json
-"dependencies": {
-    "@maticnetwork/maticjs": "2.0.2"
-}
-```
-
 While creating **_MaticPOSClient_** object **network**,**version**,**_maticProvider_**, **_parentProvider_** and **_posRootChainManager_** need to be provided.
 
 ```jsx
 const MaticPOSClient = require("@maticnetwork/maticjs").MaticPOSClient;
+const config = require("./config");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
-const maticPOSClient = new MaticPOSClient({
-  network: "testnet", // optional, default is testnet
-  version: "mumbai", // optional, default is mumbai
-  parentProvider: new HDWalletProvider(config.user.privateKey, config.root.RPC),
-  maticProvider: new HDWalletProvider(config.user.privateKey, config.child.RPC),
-  posRootChainManager: config.root.POSRootChainManager,
-  posERC20Predicate: config.root.posERC20Predicate, // optional, required only if working with ERC20 tokens
-  posERC721Predicate: config.root.posERC721Predicate, // optional, required only if working with ERC721 tokens
-  posERC1155Predicate: config.root.posERC1155Predicate, // optional, required only if working with ERC71155 tokens
-  parentDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
-  maticDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
-});
+const getMaticPOSClient = () => {
+  return new MaticPOSClient({
+    network: "testnet", // optional, default is testnet
+    version: "mumbai", // optional, default is mumbai
+    parentProvider: new HDWalletProvider(
+      config.user.privateKey,
+      config.root.RPC
+    ),
+    maticProvider: new HDWalletProvider(
+      config.user.privateKey,
+      config.child.RPC
+    ),
+    posRootChainManager: config.root.POSRootChainManager,
+    posERC20Predicate: config.root.posERC20Predicate, // optional, required only if working with ERC20 tokens
+    posERC721Predicate: config.root.posERC721Predicate, // optional, required only if working with ERC721 tokens
+    posERC1155Predicate: config.root.posERC1155Predicate, // optional, required only if working with ERC71155 tokens
+    parentDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
+    maticDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
+  });
+};
 ```
 
 ### Deposit
@@ -71,7 +77,7 @@ await maticPOSClient.depositEtherForUser(from, amount, {
 
 ### Burn
 
-User can call **_withdraw_** function of **_MaticWETH_** contract. This function should burn the tokens. Since Ether is an ERC20 token on matic chain, use **_burneth_** method of Matic POS client exposes to make this call.
+User can call **_withdraw_** function of **_MaticWETH_** contract. This function should burn the tokens. Since Ether is an ERC20 token on matic chain, use **_burneth_** method that Matic POS client exposes to make this call.
 
 ```jsx
 await maticPOSClient.burneth(childToken, amount, { from });
