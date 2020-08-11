@@ -19,8 +19,6 @@ Biconomy uses a proxy contract approach to enable meta-transactions on your DApp
 
 from [https://docs.biconomy.io/](https://docs.biconomy.io/)
 
-The following tutorial builds upon a previous tutorial [link], where we built an Airbnb smart contract, followed by [link], where we deployed the complete DApp.
-
 Biconomy offers their SDK that makes this integration seamless, called Mexa.
 
 Integration with Mexa is a two step process:
