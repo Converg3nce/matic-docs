@@ -225,7 +225,7 @@ JSON payload will look like below
 End Point: `https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions`
 
 ```bash
-curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "transferType": "both", "tokenAddress": "0x0e21734a042e33b01f738fe29de44f7efc331d85", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0xf89154d7a42c5e9f77884511586a9db4618683c5"]}' https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 42, "transferType": "both", "tokenAddress": "0x0e21734a042e33b01f738fe29de44f7efc331d85", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0xf89154d7a42c5e9f77884511586a9db4618683c5"]}' https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions
 
 ```
 
@@ -367,17 +367,20 @@ Now if you check your express application console, you'll see you're no more rec
 
 ##### subscribe
 
-By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for transaction events for each of specified addresses.
+By sending a HTTP POST request to following endpoint, along with required params, you can subscribe to various transaction logs.
 
-- `JWT-TOKEN` is your dagger-webhook token
-- `URL` is your public URL, where data to be POST-ed
-- `contractAddress` is the contract from which you want to receive emitted events
-- Make sure you set `networkId` as per your requirement
-- `eventSchema`
-- `topics`
+JSON payload must have these fields
+
+- `url`: URL for sending data as HTTP POST request
+- `networkId`: Obtain events for this network
+- `contractAddress`: Catch emitted events from this contract
+- `eventSchema`: Signature of event that needs to be caught i.e. for ERC20 approval `Approval(address,address,uint256)`
+- `topics`: An array of EVM log topics, where first element is keccak256 hash of `eventSchema`. If only one topic is given, it must be hashed `eventSchema`
+
+End Point: `https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions`
 
 ```bash
-curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "contractAddress": "---", "eventSchema": "---", "topics": ["---", "---"]}' https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "contractAddress": "0x0E21734A042e33b01f738Fe29De44f7eFc331d85", "eventSchema": "Approval(address,address,uint256)", "topics": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"}' https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions
 ```
 
 After successful subscription you'll receive a JSON response like this
@@ -388,17 +391,13 @@ After successful subscription you'll receive a JSON response like this
 }
 ```
 
-Please note `subscriptionId` will be required for unsubscribing from this event.
-
-Now if you check your running express application's console, you'll see output like below
-
-```bash
-# not received yet
-```
+Please note `subscriptionId` will be required for unsubscribing from this event. Check your console for received data, on occurance of event.
 
 ##### unsubscribe
 
 For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you.
+
+End Point: `https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions/{subscriptionId}`
 
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
