@@ -16,7 +16,7 @@ Dagger provides your applications with realtime data feed from blockchain. It's 
 
 But we were receiving lots of request for incorporating webhooks support in dagger, and we did it. Now you can request data feed from dagger while specifying HTTP endpoint where we will send all events for your subscribed topic. Then you can do a lot of interesting things with that data feed. Read more about webhooks [here](https://zapier.com/blog/what-are-webhooks/).
 
-Now we're going to walk you through a simple NodeJS application which is running on your machine & we'll create webhook subscriptions for different topics. For that we're also going to use [ngork](https://ngrok.com/), for tunneling purpose. 
+Now we're going to walk you through a simple NodeJS application which is running on your machine & we'll create webhook subscriptions for different topics. For that we're also going to use [ngrok](https://ngrok.com/), for tunneling purpose. 
 
 ## example
 
@@ -83,4 +83,17 @@ app.post('/webhooks', (req, res) => {
 http.createServer(app).listen(8000, 'localhost', () => {
     console.log('[+]Express Application running on http://localhost:8000\n')
 })
+```
+
+Time to install *ngrok* on your machine. 
+
+```bash
+npm install -g ngrok
+```
+
+Now we can start our express application & expose port 8000 to outer world for interacting with our application.
+
+```
+node index.js
+ngrok http 8000
 ```
