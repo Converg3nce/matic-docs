@@ -380,7 +380,7 @@ JSON payload must have these fields
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions`
 
 ```bash
-curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "contractAddress": "0x0E21734A042e33b01f738Fe29De44f7eFc331d85", "eventSchema": "Approval(address,address,uint256)", "topics": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"}' https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 42, "contractAddress": "0x0E21734A042e33b01f738Fe29De44f7eFc331d85", "eventSchema": "Approval(address,address,uint256)", "topics": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"}' https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions
 ```
 
 After successful subscription you'll receive a JSON response like this
@@ -392,6 +392,22 @@ After successful subscription you'll receive a JSON response like this
 ```
 
 Please note `subscriptionId` will be required for unsubscribing from this event. Check your console for received data, on occurance of event.
+
+```json
+{
+  networkId: 42,
+  token: '0x0e21734a042e33b01f738fe29de44f7efc331d85',
+  tokenType: 'ERC20',
+  event: 'approval',
+  symbol: 'TOKEN',
+  decimals: 18,
+  txHash: '0xe99ea2c531c18d41ab5bcb2baed9696461001a09c0c74950ee709e4517a15cc0',
+  amount: '1000000000',
+  formattedAmount: '0.0000',
+  from: '0xf89154d7a42c5e9f77884511586a9db4618683c5',
+  to: '0xe19b9eb3bf05f1c8100c9b6e8a3d8a14f6384bfb'
+}
+```
 
 ##### unsubscribe
 
