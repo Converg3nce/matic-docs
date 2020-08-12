@@ -5,7 +5,7 @@ description: Build your next blockchain app on Matic.
 keywords:
   - docs
   - matic
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://matic.network/banners/matic-network-16x9.png
 ---
 
 Maticjs version: ^2.0.2
@@ -18,7 +18,7 @@ Artifacts: [https://github.com/maticnetwork/pos-portal/tree/v1.0.0/artifacts](ht
 
 Flattened contracts: [https://github.com/maticnetwork/pos-portal/tree/v1.0.0/flat](https://github.com/maticnetwork/pos-portal/tree/v1.0.0/flat)
 
-Use the ***Proxy*** address where ever it is available.
+Use the **_Proxy_** address where ever it is available.
 
 ```json
 {
@@ -38,16 +38,16 @@ Use the ***Proxy*** address where ever it is available.
     "ERC1155PredicateProxy": "0xB19a86ba1b50f0A395BfdC3557608789ee184dC8",
     "EtherPredicate": "0xd8AA0d2C537137916E6A0ea4b2AFE96188884a84",
     "EtherPredicateProxy": "0xe2B01f3978c03D6DdA5aE36b2f3Ac0d66C54a6D5",
-    "DummyERC20": "0x655F2166b0709cd575202630952D71E2bB0d61Af",
-    "DummyERC721": "0x084297B12F204Adb74c689be08302FA3f12dB8A7",
-    "DummyERC1155": "0x2e3Ef7931F2d0e4a7da3dea950FF3F19269d9063"
+    "DummyERC20": "0x655F2166b0709cd575202630952D71E2bB0d61Af", // Test ERC20 Token on Goerli
+    "DummyERC721": "0x084297B12F204Adb74c689be08302FA3f12dB8A7", // Test ERC721 Token on Goerli
+    "DummyERC1155": "0x2e3Ef7931F2d0e4a7da3dea950FF3F19269d9063" // Test ERC1155 Token on Goerli
   },
   "child": {
     "ChildChainManager": "0x2e5e27d50EFa501D90Ad3638ff8441a0C0C0d75e",
     "ChildChainManagerProxy": "0xb5505a6d998549090530911180f38aC5130101c6",
-    "DummyERC20": "0xfe4F5145f6e09952a5ba9e956ED0C25e3Fa4c7F1",
-    "DummyERC721": "0x757b1BD7C12B81b52650463e7753d7f5D0565C0e",
-    "DummyERC1155": "0xA07e45A987F19E25176c877d98388878622623FA",
+    "DummyERC20": "0xfe4F5145f6e09952a5ba9e956ED0C25e3Fa4c7F1", // Test ERC20 Token on Mumbai
+    "DummyERC721": "0x757b1BD7C12B81b52650463e7753d7f5D0565C0e", // Test ERC721 Token on Mumbai
+    "DummyERC1155": "0xA07e45A987F19E25176c877d98388878622623FA", // Test ERC1155 Token on Mumbai
     "MaticWETH": "0x714550C2C1Ea08688607D86ed8EeF4f5E4F22323"
   }
 }
