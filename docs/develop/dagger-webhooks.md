@@ -264,11 +264,14 @@ Now if you check your express application console, you'll see you're no more rec
 
 By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for transaction events for each of specified addresses.
 
-- `JWT-TOKEN` is your dagger-webhook token
-- `URL` is your public URL, where data to be POST-ed
-- `transferType` can take any of these possible values : `{'incoming', 'outgoing', 'both'}`
-- `addresses` will be an array of addresses or a single address string, for each of them any transaction event happening, to be notified to our POST url. **At max 20 addresses can be tracked.**
-- Make sure you set `networkId` as per your requirement.
+JSON payload needs to carry these informations
+
+- `url`: HTTP endpoint where to POST data on occurance of event
+- `networkId`: Listen to events on this network
+- `transferType`: Can take any one of these {'incoming', 'outgoing', 'both'}
+- `addresses`: An array of addresses or a single address string, for each of them any transaction event happening, to be notified to our POST url. **At max 20 addresses can be tracked.**
+
+End Point: `https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions`
 
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "transferType": "both", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0x514910771af9ca656af840dff83e8264ecf986ca"]}' https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions
@@ -286,13 +289,46 @@ Please note `subscriptionId` will be required for unsubscribing from this event.
 
 Now if you check your running express application's console, you'll see output like below
 
-```bash
-# not received yet
+```json
+{
+  networkId: 1,
+  blockHash: '0x13b40679d8f49da93e0d157c691f587287e5f02425b6b8fc6c2b698460bab26a',
+  blockNumber: 10644733,
+  from: '0x183f6DE8a3BCF67EeA2dA1dD64738DD937125D63',
+  gas: 60000,
+  gasPrice: '208000000000',
+  hash: '0xf754e94c6a20347d069e5763edbe4bc52c10991e6a447f77c00b40e684234bab',
+  input: '0xa9059cbb0000000000000000000000004597a8206978c5de22173432b2f0cb899eef9fa3000000000000000000000000000000000000000000000000000000000157c583',
+  nonce: 22,
+  r: '0x28baad215c87203bb8d9d13b4a0c90ebf3d914239affe2751b6e3fdc6f42996d',
+  s: '0x265fe3493b3cb994b37ff430c3a03f32c20dbb104a9bd2a941f677a4d68c7224',
+  to: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+  transactionIndex: 126,
+  v: '0x25',
+  value: '0',
+  receipt: {
+    blockHash: '0x13b40679d8f49da93e0d157c691f587287e5f02425b6b8fc6c2b698460bab26a',
+    blockNumber: 10644733,
+    contractAddress: null,
+    cumulativeGasUsed: 6928970,
+    from: '0x183f6de8a3bcf67eea2da1dd64738dd937125d63',
+    gasUsed: 26209,
+    logs: [ [Object] ],
+    logsBloom: '0x0000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000001000000000000000020000000000000000000000000000000000000000000000000010000000000000000000000000008000000000000000000200000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000',
+    status: true,
+    to: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+    transactionHash: '0xf754e94c6a20347d069e5763edbe4bc52c10991e6a447f77c00b40e684234bab',
+    transactionIndex: 126
+  },
+  formattedAmount: '0.0000'
+}
 ```
 
 ##### unsubscribe
 
 For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you.
+
+End Point: `https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions/{subscriptionId}`
 
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
