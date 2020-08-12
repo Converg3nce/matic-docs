@@ -109,9 +109,7 @@ curl -H 'Content-Type: application/json' -X POST -d '{"msg": "Working"}' https:/
 
 Now check ngrok console for new incoming request, if it's there, then our application is working as expected. Keep it running.
 
-### subscriptions
-
-#### networks
+### networks
 
 Currently dagger supports webhook based realtime notifications for following networks.
 
@@ -142,4 +140,40 @@ Currently dagger supports webhook based realtime notifications for following net
 </TabItem>
 </Tabs>
 
-NetworkId will be required for receiving event notifications over webhook.
+`networkId` will be required for subscribing for event notifications over webhook.
+
+### events over webhook
+
+#### mined block numbers
+
+By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for newly mined blocks.
+
+Please replace **JWT-TOKEN** with your dagger-webhook token & **URL** with your public URL, where data to be POST-ed. Also make sure you set **networkId** as per your requirement.
+
+```bash
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1}' https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions
+```
+
+After successful subscription you'll receive a JSON response like this
+
+```json
+{
+    "active":true,
+    "id":14,
+    "subscriptionId":"ecf21d77-a077-4cff-a938-d03ea9b8ffb6",
+    "url":"https://cf2672650fe7.ngrok.io/webhooks",
+    "networkId":1,
+    "updatedAt":"2020-08-12T06:00:41.092Z",
+    "createdAt":"2020-08-12T06:00:41.092Z"
+}
+```
+
+Please note `subscriptionId` will be required for unsubscribing from this event.
+
+Now if you check your running express application's console, you'll see output like below
+
+```json
+{ networkId: 1, blockNumber: 10643419 }
+```
+
+We delivering very small chunks of data over webhook, because we don't want to bombard your application. If you need detailed information, you can always fetch that using other means.
