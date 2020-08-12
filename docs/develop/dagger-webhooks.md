@@ -11,6 +11,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Dagger provides your applications with realtime data feed from blockchain. It's a simple client that you use to connect to dagger endpoint, maintained by us & get data feed on subscribed topics using industry standard MQTT protocol. 
 
@@ -97,3 +98,14 @@ Now we can start our express application & expose port 8000 to outer world for i
 node index.js
 ngrok http 8000
 ```
+
+<img src={useBaseUrl("img/dagger-webhooks/ngrok-dagger-webhooks.png")} />
+
+Lets send a HTTP POST request to ngrok provided public URL
+
+```bash
+curl -H 'Content-Type: application/json' -X POST -d '{"msg": "Working"}' https://cf2672650fe7.ngrok.io/webhooks
+```
+
+Now check ngrok console for new incoming request, if it's there, then our application is working as expected.
+
