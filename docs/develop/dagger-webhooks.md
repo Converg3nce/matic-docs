@@ -213,14 +213,19 @@ Now if you check your express application console, you'll see you're no more rec
 
 By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for transfer events for specified ERC20 token address.
 
-Please replace **JWT-TOKEN** with your dagger-webhook token & **URL** with your public URL, where data to be POST-ed. Also make sure you set **networkId** as per your requirement.
 
-- `transferType` can take any of these possible values : `{'receive', 'send', 'both'}`
-- Set `tokenAddress` as per the token for which you want to receive transfer events.
-- `addresses` will be an array of addresses or a single address string, for each of them any transfer event happening, to be notified to our POST url. **At max 20 addresses can be tracked.**
+JSON payload will look like below
+
+- `url`: Events to be POST-ed here
+- `networkId`: ERC20 transfer events on this network
+- `transferType`: Takes any of these possible values {'receive', 'send', 'both'}
+- `tokenAddress`: ERC20 token for which you want to receive Transfer events _( topic: 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef)_
+- `addresses` : An array of addresses or a single address string, for each of them any Transfer events, to be notified to POST url. **At max 20 addresses can be tracked.**
+
+End Point: `https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions`
 
 ```bash
-curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "transferType": "both", "tokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0xacd1f7958d2ee523a2206209694597c13d831ec7"]}' https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "transferType": "both", "tokenAddress": "0x0e21734a042e33b01f738fe29de44f7efc331d85", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0xf89154d7a42c5e9f77884511586a9db4618683c5"]}' https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions
 
 ```
 
@@ -236,13 +241,27 @@ Please note `subscriptionId` will be required for unsubscribing from this event.
 
 Now if you check your running express application's console, you'll see output like below
 
-```bash
-# not received yet
+```json
+{
+  networkId: 42,
+  token: '0x0e21734a042e33b01f738fe29de44f7efc331d85',
+  tokenType: 'ERC20',
+  event: 'transfer',
+  symbol: 'TOKEN',
+  decimals: 18,
+  txHash: '0x3c0176dd352cad5d3a347ed1d66fd9a599d96d29175a6a2417687511a72615bc',
+  amount: '1000000000',
+  formattedAmount: '0.0000',
+  from: '0xf89154d7a42c5e9f77884511586a9db4618683c5',
+  to: '0xe19b9eb3bf05f1c8100c9b6e8a3d8a14f6384bfb'
+}
 ```
 
 ##### unsubscribe
 
 For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you.
+
+End Point: `https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions/{subscriptionId}`
 
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
