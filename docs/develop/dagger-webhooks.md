@@ -299,3 +299,53 @@ If you receive response like below, then you've successfully unsubscribed from t
 
 Now if you check your express application console, you'll see you're no more receiving any data.
 
+#### eth-logs
+
+##### subscribe
+
+By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for transaction events for each of specified addresses.
+
+- `JWT-TOKEN` is your dagger-webhook token
+- `URL` is your public URL, where data to be POST-ed
+- `contractAddress` is the contract from which you want to receive emitted events
+- Make sure you set `networkId` as per your requirement
+- `eventSchema`
+- `topics`
+
+```bash
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "contractAddress": "---", "eventSchema": "---", "topics": ["---", "---"]}' https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions
+```
+
+After successful subscription you'll receive a JSON response like this
+
+```json
+{
+    "subscriptionId":"fe94e3c6-fb08-4537-83a6-999a5d4e5f7f"
+}
+```
+
+Please note `subscriptionId` will be required for unsubscribing from this event.
+
+Now if you check your running express application's console, you'll see output like below
+
+```bash
+# not received yet
+```
+
+##### unsubscribe
+
+For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you.
+
+```bash
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
+```
+
+If you receive response like below, then you've successfully unsubscribed from this topic.
+
+```json
+{
+    "success":true
+}
+```
+
+Now if you check your express application console, you'll see you're no more receiving any data.
