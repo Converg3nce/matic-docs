@@ -144,7 +144,7 @@ Currently dagger supports webhook based realtime notifications for following net
 
 ### events over webhook
 
-#### mined block numbers
+#### subscribe :: mined block numbers
 
 By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for newly mined blocks.
 
@@ -177,3 +177,21 @@ Now if you check your running express application's console, you'll see output l
 ```
 
 We delivering very small chunks of data over webhook, because we don't want to bombard your application. If you need detailed information, you can always fetch that using other means.
+
+#### unsubscribe :: mined block numbers
+
+For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you.
+
+```curl
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/ecf21d77-a077-4cff-a938-d03ea9b8ffb6
+```
+
+If you receive response like below, then you've successfully unsubscribed from this topic.
+
+```json
+{
+    "success":true
+}
+```
+
+Now if you check your express application console, you'll see you're no more receiving any data.
