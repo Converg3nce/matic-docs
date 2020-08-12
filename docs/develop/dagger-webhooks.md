@@ -101,11 +101,45 @@ ngrok http 8000
 
 <img src={useBaseUrl("img/dagger-webhooks/ngrok-dagger-webhooks.png")} />
 
-Lets send a HTTP POST request to ngrok provided public URL
+Lets send a HTTP POST request to ngrok provided public URL.
 
 ```bash
 curl -H 'Content-Type: application/json' -X POST -d '{"msg": "Working"}' https://cf2672650fe7.ngrok.io/webhooks
 ```
 
-Now check ngrok console for new incoming request, if it's there, then our application is working as expected.
+Now check ngrok console for new incoming request, if it's there, then our application is working as expected. Keep it running.
 
+### subscriptions
+
+#### networks
+
+Currently dagger supports webhook based realtime notifications for following networks.
+
+<Tabs
+  defaultValue="homestead"
+  values={[
+    { label: 'Ethereum Main Network', value: 'homestead', },
+    { label: 'Ethereum Kovan Network', value: 'kovan', },
+  ]
+}>
+<TabItem value="homestead">
+
+```json
+{
+    "networkId": 1
+}
+```
+
+</TabItem>
+<TabItem value="kovan">
+
+```json
+{
+    "networkId": 42
+}
+```
+
+</TabItem>
+</Tabs>
+
+NetworkId will be required for receiving event notifications over webhook.
