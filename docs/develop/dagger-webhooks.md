@@ -25,7 +25,9 @@ Now we're going to walk you through a simple NodeJS application which is running
 
 As dagger webhook uses JWT based authentication mechanism, we need to first obtain a JWT token, which needs to be passed along with all of subsequent requests.
 
-Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/token), generates a JWT token for you. _Please keep it secret._
+Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/token), generates a JWT token for you. 
+
+From now on we'll referring to it as **JWT-TOKEN**. _And please keep it secret._
 
 <Tabs
   defaultValue="curl"
@@ -140,7 +142,7 @@ Currently dagger supports webhook based realtime notifications for following net
 </TabItem>
 </Tabs>
 
-`networkId` will be required for subscribing for event notifications over webhook.
+`networkId` will be required for subscribing to topics.
 
 ### events over webhook
 
@@ -150,7 +152,12 @@ Currently dagger supports webhook based realtime notifications for following net
 
 By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for newly mined blocks.
 
-Please replace **JWT-TOKEN** with your dagger-webhook token & **URL** with your public URL, where data to be POST-ed. Also make sure you set **networkId** as per your requirement.
+JSON payload needs to carry following data
+
+- `url`: your public URL where events to be POST-ed
+- `networkId`: Network for which events to be received
+
+End Point: `https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions`
 
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1}' https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions
@@ -178,11 +185,13 @@ Now if you check your running express application's console, you'll see output l
 { networkId: 1, blockNumber: 10643419 }
 ```
 
-We delivering very small chunks of data over webhook, because we don't want to bombard your application. If you need detailed information, you can always fetch that using other means.
+_**Note**: We're delivering very small chunks of data over webhook, because we don't want to bombard your application. If you need detailed information, you can always fetch that using other means._
 
 ##### unsubscribe
 
 For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you. Replace **JWT-TOKEN** with yours.
+
+End Point: `https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/{subscriptionId}`
 
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/ecf21d77-a077-4cff-a938-d03ea9b8ffb6
