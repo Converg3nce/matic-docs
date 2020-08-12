@@ -49,3 +49,38 @@ requests.post('https://webhooks.dagger.matic.network/api/token').json()
 
 </TabItem>
 </Tabs>
+
+### backend
+
+Now we're going to write one simple NodeJS application, where dagger will send HTTP POST requests, for subscribed topics.
+
+```bash
+mkdir dagger-webhooks
+cd dagger-webhooks
+npm init -y
+npm install express
+touch index.js
+```
+
+Open `index.js` using your favourite text editor & put following code snippet there.
+
+```javascript
+const express = require('express')
+const app = express()
+const http = require('http')
+
+// JSON payload data parser
+app.use(express.json())
+
+// listening for POST requests on this endpoint
+app.post('/webhooks', (req, res) => {
+    console.log(req.body)
+
+    res.status(200).send('Received')
+})
+
+// starting http server on localhost
+http.createServer(app).listen(8000, 'localhost', () => {
+    console.log('[+]Express Application running on http://localhost:8000\n')
+})
+```
