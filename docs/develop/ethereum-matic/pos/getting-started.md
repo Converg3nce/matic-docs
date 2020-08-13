@@ -27,7 +27,7 @@ Proof of stake based assets provides PoS security and faster exit with one check
 
   1. Owner of the asset **(ERC20/ERC721/ERC1155)** token has to approve a specific contract on the PoS bridge to spend the amount of tokens to be transferred. This specific contract is called the **Predicate Contract**(deployed on the Ethereum network) which actually **locks the amount of tokens to be deposited**.
   2. Once the approval is given, the next step is to **deposit the asset**. A function call has to be made on the **RootChainManager** contract which in turn triggers the **ChildChainManager** contract on the matic chain.
-  3. This happens thoriugh a state sync mechanism which can be understood in detail from [here](/docs/contribute/state-sync-mechanism)
+  3. This happens through a state sync mechanism which can be understood in detail from [here](/docs/contribute/state-sync-mechanism)
   4. The **ChildChainManager** internally calls the **deposit** function of the child token contract and the corresponding amount of asset tokens are **minted to the users account**. It is important to note that only the ChildChainManager can access the deposit function on the child token contract.
   5. Once the user gets the tokens, they can be **transfered almost instantly with negligible fees on the Matic chain**.
   6. Withdrawing assets back to ethereum is a 2 step process in which the asset tokens has to be **first burnt on the Matic chain** and then the **proof of this burn transaction has to be submitted** on the Ethereum chain.
