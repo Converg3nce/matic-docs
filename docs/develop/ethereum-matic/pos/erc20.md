@@ -1,6 +1,7 @@
 ---
-id: erc20-deposit-withdraw
+id: erc20
 title: ERC20 Deposit and Withdraw Guide
+sidebar_label: ERC20
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
