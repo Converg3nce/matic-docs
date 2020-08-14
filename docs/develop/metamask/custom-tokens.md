@@ -5,11 +5,12 @@ description: Build your next blockchain app on Matic.
 keywords:
   - docs
   - matic
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://matic.network/banners/matic-network-16x9.png
 ---
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-This page demonstrates the process of configuring/adding custom tokens to Metamask. Specifically, we have demonstrated adding the example `TEST` token to the Görli testnet as well as the Matic testnet. 
+This page demonstrates the process of configuring/adding custom tokens to Metamask. Specifically, we have demonstrated adding the example `TEST` token to the Görli testnet as well as the Matic testnet.
 
 You can use this process to add any custom ERC20 tokens to any network on Metamask.
 
@@ -17,7 +18,7 @@ You can use this process to add any custom ERC20 tokens to any network on Metama
 
 To display `TEST` tokens on your account on the Görli Network, you can click on the Add Tokens option in Metamask. It will then navigate you to a screen. You then click on Custom Token tab and copy-paste the address below in the Token Address field.
 
-The `TEST` token contract address on Görli is `0xb2eda8A855A4176B7f8758E0388b650BcB1828a4`. Note that the `TEST` token is an example ERC20 token contract that is used throughout the Matic Network developer docs for illustration purposes.
+The `TEST` token contract address on Görli is `0x3f152B63Ec5CA5831061B2DccFb29a874C317502`. Note that the `TEST` token is an example ERC20 token contract that is used throughout the Matic Network developer docs for illustration purposes.
 
 The other fields will auto-populate. Click on Save and then click on Add Tokens. The `TEST` token should now be displayed on your account on Metamask.
 

@@ -111,8 +111,8 @@ module.exports = {
             "develop/ethereum-matic/pos/erc721",
             "develop/ethereum-matic/pos/erc1155",
             "develop/ethereum-matic/pos/deployment",
-            "develop/ethereum-matic/pos/contract-interfaces",
-            "develop/ethereum-matic/pos/support-multiple-token",
+            // "develop/ethereum-matic/pos/contract-interfaces",
+            // "develop/ethereum-matic/pos/support-multiple-token",
           ],
         },
         {
