@@ -154,6 +154,7 @@ module.exports = {
       label: "Realtime Updates",
       items: [
         "develop/dagger",
+        "develop/dagger-webhooks",
         {
           type: "category",
           label: "Zapier - Mulitple Apps",
