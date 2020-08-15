@@ -53,6 +53,8 @@ contract Child {
 
 B. Root Contract
 
+Pass this `0x1470E07a6dD1D11eAE439Acaa6971C941C9EF48f` as the value for `_predicate` in the root contract constructor.
+
 ```javascript
 contract Root {
 
