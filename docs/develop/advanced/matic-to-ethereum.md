@@ -21,49 +21,72 @@ Once this phase is over, we can use the **decoded event log data to perform any 
 - A transaction is executed on the child contract deployed on the Matic chain.
 - An event is also emitted in this transaction. The parameters of this **event includes the data which has to be transferred** from matic to ethereum.
 - The validators on the matic network picks up this transaction in a specific interval of time( probably 10-30mins), validates them and **adds them to the checkpoint** on ethereum.
-- A checkpoint transaction is created on the **RootChain** contract and the checkpoint transactions can be seen in the explorer link given [here](https://goerli.etherscan.io/address/0x2890bA17EfE978480615e330ecB65333b880928e).
+- A checkpoint transaction is created on the **RootChain** contract and the checkpoint inclusion can be checked using this [script](https://github.com/rahuldamodar94/matic-learn-pos/blob/transfer-matic-ethereum/script/check-checkpoint.js)
 - Once the checkpoint addition is completed, the **matic.js** library can be used to call the **exit** function of the **RootChainManager** contract. **exit** function can be called using the matic.js library as shown in this [example](https://github.com/rahuldamodar94/matic-learn-pos/blob/transfer-matic-ethereum/script/exit.js).
 
 - Running the script, verifies the inclusion of the matic transaction hash on ethereum chain, and then in turn calls the **exitToken** function of the [predicate](https://github.com/rahuldamodar94/matic-learn-pos/blob/transfer-matic-ethereum/contracts/CustomPredicate.sol) contract.
-- The **custom logic to be executed** can be included in this **predicate** contract. An example use case would be making a state change on the root contract.
 - This ensures that the **state change on the root chain contract** is always done in a **secure** way and **only through the predicate contract**.
-- The important thing to note is that the **verification of the transaction hash** from matic and **triggering the predicate** contract happens in a **single transaction** and thus ensuring security of any state change.
-- In the predicate contract, the **event logs of the transaction can be decoded**. So any data that was emitted from the event on the matic chain can be accessed in the predicate and used to make changes on the root chain contract.
+- The important thing to note is that the **verification of the transaction hash** from matic and **triggering the predicate** contract happens in a **single transaction** and thus ensuring security of any state change on root contract.
 
 # Implementation
 
-1.  Create the root chain and child chain contract. Ensure that the function that does the state change also emits an event. This event must include the data to be transferred as one of its parameters. A sample format of how the Root Token contract must look like is given below. This is a very simple contract that has a data variable whose value is set by using a setData function. Calling the setData function emits the Data event. Rest of the things in the contract will be explained in the upcoming sections of this tutorial. An example implementation of the **child** and **root** contract can be found [here](https://github.com/rahuldamodar94/matic-learn-pos/tree/transfer-matic-ethereum/contracts)
+This is a simple demonstration of how data can be transfered from matic to ethereum. This tutorial shows an example of transfering a uint256 value accross the chain. But you can transfer type of data. But it is necessary to encode the data in bytes and then emit it from the child contract. It can be finally decoded at the root contract.
 
-    <img src={useBaseUrl("img/matic-to-eth/root-contract.png")} />
+1.  First create the root chain and child chain contract. Ensure that the function that does the state change also emits an event. This event must include the data to be transferred as one of its parameters. A sample format of how the Child and Root contract must look like is given below. This is a very simple contract that has a data variable whose value is set by using a setData function. Calling the setData function emits the Data event. Rest of the things in the contract will be explained in the upcoming sections of this tutorial.
 
-2.  Once the child and root token contract is deployed, these contracts have to be mapped using the PoS bridge. This mapping ensures that a connection is maintained between these two contracts across the chains.
-3.  But before mapping, a predicate contract has to be created that will actually handle the custom logic of making the state change on the root contract deployed on ethereum. A few things have to be taken care of while creating the **CustomPredicate** contract.
+A. Child Contract
 
-    A. The predicate contract should implement the ITokenPredicate.sol
-    [ITokenPredicate](https://github.com/maticnetwork/pos-portal/blob/transfer-metadata/contracts/root/TokenPredicates/ITokenPredicate.sol) interface.
+```javascript
+contract Child {
 
-    B. The predicate should also have an interface with the functions on the root chain contract. This is necessary to make calls from the predicate contract to the root chain contract.
+    event Data(address indexed from, bytes bytes_data);
 
-    C. It is recommended to maintain the event signature inside the predicate. The event signature is the **keccack-256** hash of the event signature in the root contract. This signature will be later verified each time the predicate is triggered by the **RootChainManager** contract.
+    uint256 public data;
 
-    D. Once the [Predicate](https://github.com/rahuldamodar94/matic-learn-pos/blob/transfer-matic-ethereum/contracts/CustomPredicate.sol) is deployed, we also need to ensure that the RootChainManager Proxy contract address is given the access rights to trigger the **exitTokens** function of the Predicate contract. This can be done by calling the **grantRole** function of the predicate contract.
+    function setData(bytes memory bytes_data) public {
+     data = abi.decode(bytes_data,(uint256));
+     emit Data(msg.sender,bytes_data);
+    }
 
-    <img src={useBaseUrl("img/matic-to-eth/predicate.png")} />
+}
+```
 
-    It can be seen from the example above that the **logRLPList.toUint()** has the logs from the event of the transaction done on matic chain. **logTopicRLPList** will have the indexed log data and also **logTopicRLPList[0].toUint()** will always be the keccack-256 hash of the signature of the event on childchain.
+B. Root Contract
 
-4.  Hence, any custom logic that has to performed on the root contract can be included in the **exitTokens** function of the Custom Predicate contract. This logic is always executed when the RootChainManager triggers the predicate contract. The event logs from the transaction executed on the matic chain will be available inside this predicate contract. Using these logs, state changes can be performed on the root chain as well.
-5.  Once the Predicate is deployed, we also need to ensure that the Predicate contract address is given access to make state changes on the root chain contract. An **onlyPredicate** modifier can be used for this purpose as seen in the root contract code in this tutorial.
-6.  The next step is to register the predicate and map the root and child contracts. For doing this the matic team can be reached on [discord](https://discord.gg/ThJq53).
+```javascript
+contract Root {
 
-For testing the above implementation, we can create a transaction on the matic chain by calling the **setData** function of the child contract. We need to wait at this point for the checkpoint to be completed. Finally, call the exit function of the RootChainManager using the matic.js SDK.
+    address public predicate;
+    constructor(address _predicate) public{
+        predicate=_predicate;
+    }
+
+   modifier onlyPredicate() {
+        require(msg.sender == predicate);
+        _;
+    }
+
+    uint256 public data;
+
+    function setData(bytes memory bytes_data) public onlyPredicate{
+        data = abi.decode(bytes_data,(uint256));
+    }
+
+}
+```
+
+2.  Once the child and root contract is deployed on the matic and ethereum chain respectively, these contracts have to be mapped using the PoS bridge. This mapping ensures that a connection is maintained between these two contracts across the chains. For doing this mapping,the matic team can be reached on [discord](https://discord.gg/ThJq53).
+
+3.  One important thing to note is that, in the root contract, there is a onlyPredicate modifier. It is reccomended to use this modifier always because it ensures that only the predicate contract makes the state change on the root contract. The predicate contract is a special contract that triggers the root contract only when the transaction that happened on the matic chain is verified by the RootChainManager on ethereum chain. This ensures secure change of state on the root contract.
+
+For testing the above implementation, we can create a transaction on the matic chain by calling the **setData** function of the child contract. We need to wait at this point for the checkpoint to be completed. The checkpoint inclusion can be checked using this [script](https://github.com/rahuldamodar94/matic-learn-pos/blob/transfer-matic-ethereum/script/check-checkpoint.js). Once checkpoint is completed, call the exit function of the RootChainManager using the matic.js SDK.
 
 ```jsx
 const txHash =
-  "0xc9f6ba0ad48a8812a0b22bcb8a205f3c5cb41ccf1ce2908b6ebe84a5e6c1a64f";
+  "0xc094de3b7abd29f23a23549d9484e9c6bddb2542e2cc0aa605221cb55548951c";
 
 const logEventSignature =
-  "0x46269ee522654e4067695b81b5bcafa7f76e1d31ef24c997420450b0c6626531";
+  "0x93f3e547dcb3ce9c356bb293f12e44f70fc24105d675b782bd639333aab70df7";
 
 const execute = async () => {
   try {
@@ -83,5 +106,3 @@ As shown in the above screenshot, the **txHash** is the transaction hash of the 
 The **logEventSignature** is the keccack-256 hash of the Data event. This is the same hash that we have included in the Predicate contract. All the contract code used for this tutorial and the exit script can be found [here](https://github.com/rahuldamodar94/matic-learn-pos/tree/transfer-matic-ethereum)
 
 Once the exit script is completed, the root contract on ethereum chain can be queried to verify if the value of the variable **data** that was set in child contract has also been reflected in the **data** variable of the root contract.
-
-This was a simple demonstration of how data can be transfered from matic to ethereum. More complex logic to be executed can be included in the exitToken function of the **CustomPredicate** contract.
