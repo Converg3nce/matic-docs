@@ -1,0 +1,121 @@
+---
+id: eth
+title: ETH Deposit and Withdraw Guide
+sidebar_label: ETH
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png
+---
+
+This tutorial uses the Matic Testnet ( Mumbai ) which is mapped to the Goerli Network to demonstrate the asset transfer to and fro the two blockchains. An **important thing to be noted** while following this tutorial is that you should always use a Proxy address whenever it is available. For eg. The **RootChainManagerProxy** address has to be used for interaction instead of the **RootChainManager** address. The **PoS contract addresses, ABI, Test Token Addresses** and other deployment details of the PoS bridge contracts can be found [here](/docs/develop/ethereum-matic/pos/deployment).
+
+**Mapping your assets** is necessary to integrate the PoS bridge on your application. You can submit a mapping request [here](/docs/develop/ethereum-matic/submit-mapping-request). But for the purpose of this tutorial, we have already deployed the **Test tokens** and Mapped then on the PoS bridge. You may need it for trying out the tutorial on your own. You can request the desired Asset from the [faucet](https://faucet.matic.network/). If the test tokens are unavailable on the faucet, do reach us on [discord](https://discord.gg/er6QVj)
+
+In the upcoming tutorial, every step will be explained in detail along with a few code snippets. However, you can always refer to this [repository](https://github.com/maticnetwork/matic.js/tree/v2.0.2/examples/POS-client) which will have all the **example source code** that can help you to integrate and understand the working of PoS bridge.
+
+## High Level Flow
+
+Deposit ETH -
+
+1. Make **_depositEtherFor_** call on **_RootChainManager_** and **send **the required ether.
+
+Withdraw ETH -
+
+1. **_Burn_** tokens on matic chain.
+2. Call **_exit_** function on **_RootChainManager_** to submit proof of burn transaction. This call can be made **_after checkpoint_** is submitted for the block containing burn transaction.
+
+## Step Details
+
+---
+
+### Configuring Matic SDK
+
+Install Matic SDK (**_2.0.2)_**
+
+```bash
+npm install --save @maticnetwork/maticjs
+```
+
+While creating **_MaticPOSClient_** object **network**,**version**,**_maticProvider_**, **_parentProvider_** and **_posRootChainManager_** need to be provided.
+
+```jsx
+const MaticPOSClient = require("@maticnetwork/maticjs").MaticPOSClient;
+const config = require("./config");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+
+const getMaticPOSClient = () => {
+  return new MaticPOSClient({
+    network: "testnet", // optional, default is testnet
+    version: "mumbai", // optional, default is mumbai
+    parentProvider: new HDWalletProvider(
+      config.user.privateKey,
+      config.root.RPC
+    ),
+    maticProvider: new HDWalletProvider(
+      config.user.privateKey,
+      config.child.RPC
+    ),
+    posRootChainManager: config.root.POSRootChainManager,
+    parentDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
+    maticDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
+  });
+};
+```
+
+The configuration file should be structured like this. Make sure you add your Address, Privatekey and Goerli RPC into this file.
+
+```json
+module.exports = {
+  root: {
+    RPC: "GOERLI-RPC",
+    POSRootChainManager: "0xBbD7cBFA79faee899Eaf900F13C9065bF03B1A74",
+    posEtherPredicate: "0xe2B01f3978c03D6DdA5aE36b2f3Ac0d66C54a6D5",
+  },
+  child: {
+    RPC: "https://rpc-mumbai.matic.today",
+    MaticWETH: "0x714550C2C1Ea08688607D86ed8EeF4f5E4F22323",
+  },
+  user: {
+    privateKey:
+      "0xPVT_KEY",
+    address: "0xPUB_ADDR",
+    amount: "5000000000000000000", // 0.005
+    amount2: "700000000000000000", // 0.007
+    tokenId: "1234",
+    tokenId2: "6789",
+  },
+};
+```
+
+### Deposit
+
+ETH can be deposited to matic chain by calling **_depositEtherFor_** on RootChainManager contract. Matic POS client exposes **_depositEtherForUser_** method to make this call.
+
+**_ETH_** is deposited as **_ERC20_** token on Matic chain. For withdrawing it follow the same process as withdrawing ERC20 tokens.
+
+```jsx
+await maticPOSClient.depositEtherForUser(from, amount, {
+  from,
+  gasPrice: "10000000000",
+});
+```
+
+### Burn
+
+User can call **_withdraw_** function of **_MaticWETH_** contract. This function should burn the tokens. Since Ether is an ERC20 token on matic chain, use **_burneth_** method that Matic POS client exposes to make this call.
+
+```jsx
+await maticPOSClient.burneth(childToken, amount, { from });
+```
+
+Store the transaction hash for this call and use it while generating burn proof.
+
+### Exit
+
+Once the **_checkpoint_** has been **_submitted_** for the block containing burn transaction, user should call the **_exit_** function of **_RootChainManager_** contract and submit the proof of burn. Upon submitting valid proof tokens are transferred to the user. Matic POS client exposes **_exitERC20_** method to make this call.
+
+```jsx
+await maticPOSClient.exiteth(burnTxHash, { from });
+```

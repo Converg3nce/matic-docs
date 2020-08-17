@@ -106,13 +106,13 @@ module.exports = {
           label: "PoS Bridge",
           items: [
             "develop/ethereum-matic/pos/getting-started",
-            "develop/ethereum-matic/pos/eth-deposit-withdraw",
-            "develop/ethereum-matic/pos/erc20-deposit-withdraw",
-            "develop/ethereum-matic/pos/erc721-deposit-withdraw",
-            "develop/ethereum-matic/pos/erc1155-deposit-withdraw",
+            "develop/ethereum-matic/pos/eth",
+            "develop/ethereum-matic/pos/erc20",
+            "develop/ethereum-matic/pos/erc721",
+            "develop/ethereum-matic/pos/erc1155",
             "develop/ethereum-matic/pos/deployment",
-            "develop/ethereum-matic/pos/contract-interfaces",
-            "develop/ethereum-matic/pos/support-multiple-token",
+            // "develop/ethereum-matic/pos/contract-interfaces",
+            // "develop/ethereum-matic/pos/support-multiple-token",
           ],
         },
         {
@@ -120,10 +120,10 @@ module.exports = {
           label: "Plasma Bridge",
           items: [
             "develop/ethereum-matic/plasma/getting-started",
+            "develop/ethereum-matic/plasma/eth",
+            "develop/ethereum-matic/plasma/erc20",
+            "develop/ethereum-matic/plasma/erc721",
             "develop/ethereum-matic/plasma/mapping-assets",
-            "develop/ethereum-matic/plasma/deposit",
-            "develop/ethereum-matic/plasma/transfer",
-            "develop/ethereum-matic/plasma/withdraw",
             "develop/ethereum-matic/plasma/api-reference",
           ],
         },
@@ -155,6 +155,7 @@ module.exports = {
       label: "Realtime Updates",
       items: [
         "develop/dagger",
+        "develop/dagger-webhooks",
         {
           type: "category",
           label: "Zapier - Mulitple Apps",
@@ -181,6 +182,7 @@ module.exports = {
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
         "develop/advanced/transfer-data",
+        "develop/advanced/matic-to-ethereum",
       ],
     },
     {
