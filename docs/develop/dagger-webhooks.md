@@ -21,6 +21,81 @@ Now we're going to walk you through a simple NodeJS application which is running
 
 ## example
 
+### authentication
+
+For interacting with Dagger Webhook, we need to first have one **refresh-token**, which has a validity of 5 years. Using **refresh-token**, we can obtain one **access-token**, which gets expired after 10 minutes. For subscribing to any data feed, we need to send **access-token** as HTTP request header param in `Authorization` field.
+
+So let's first obtain **refresh-token**.
+
+#### refresh-token
+
+Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/refresh-token), with following JSON payload data, generates a refresh-token. 
+
+```json
+{
+  "address": "address",
+  "timestamp": 1597833025,
+  "signedMessage": "sign-me(address: address\ntimestamp: timestamp)"
+}
+```
+
+We need to sign a message of this form `address: ${address}\ntimestamp: ${timestamp}`, with account's private key. For that, we're going to use Metamask. Use below code snippet in metamask enabled browser to sign any message.
+
+
+```js
+const signMessage = () => {
+  
+  var from = web3.eth.accounts[0]
+  if (!from) {
+    if (typeof ethereum !== 'undefined') {
+    
+      ethereum.enable().catch(console.error)
+    
+    }
+  }
+
+  var msg = `address: ${from}\ntimestamp: ${Math.round(Date.now() / 1000)}`
+  var params = [msg, from]
+  var method = 'personal_sign'
+
+  web3.currentProvider.sendAsync({
+    method,
+    params,
+    from,
+  }, function (err, result) {
+    if (err) {
+      return console.error(err)
+    }
+    if (result.error) {
+      return console.error(result.error)
+    }
+
+    console.log('Signature : ' + result.result)
+  })
+
+})
+
+const recoverSigner = (message, signature, signer) => {
+
+  let recovered
+  try {
+    recovered = sigUtil.recoverPersonalSignature({
+      data: message,
+      sig: signature
+    })
+  }
+  catch (e) {
+    recovered = null
+  }
+  
+  console.log(`Signer : ${recovered} [ ${recovered === signer ? 'matched' : 'not matched'} ]`)
+
+}
+```
+
+
+Make sure you send the request with in 2 minutes of signing, otherwise it'll get expired.
+
 ### obtain access token
 
 As dagger webhook uses JWT based authentication mechanism, we need to first obtain a JWT token, which needs to be passed along with all of subsequent requests.
