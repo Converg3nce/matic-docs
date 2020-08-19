@@ -33,7 +33,7 @@ Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/ref
 
 ```json
 {
-  "address": "address",
+  "address": "0xf89154d7a42c5e9f77884511586a9db4618683c5",
   "timestamp": 1597833025,
   "signedMessage": "sign-me(address: address\ntimestamp: timestamp)"
 }
@@ -45,6 +45,8 @@ We need to sign a message of this form `address: ${address}\ntimestamp: ${timest
 ```js
 const sigUtil = require('eth-sig-util')
 
+// signing a message of form : `address: ${from}\ntimestamp: ${Math.round(Date.now() / 1000)}`
+// timestamp needs to be in seconds
 const signMessage = () => {
   
   var from = web3.eth.accounts[0]
@@ -76,6 +78,7 @@ const signMessage = () => {
 
 })
 
+// you can also verify signature, using this function
 const recoverSigner = (message, signature, signer) => {
 
   let recovered
@@ -114,13 +117,49 @@ curl -H 'Content-Type: application/json' -X POST -d '{"address": "0xf89154d7a42c
 
 ```python
 import requests
-requests.post('https://webhooks.dagger.matic.network/api/refresh-token', data={"address": "0xf89154d7a42c5e9f77884511586a9db4618683c5", "timestamp": 1697844703, "signedMessage": "fill-it-up-with-your-signed-message"}).json()
+requests.post('https://webhooks.dagger.matic.network/api/refresh-token', json={"address": "0xf89154d7a42c5e9f77884511586a9db4618683c5", "timestamp": 1697844703, "signedMessage": "fill-it-up-with-your-signed-message"}).json()
 ```
 
 </TabItem>
 </Tabs>
 
 Make sure you send the request with in 2 minutes of signing, otherwise it'll get expired.
+
+#### access-token
+
+Now using already obtained **refresh-token**, we're going to generate **access-token**. Sending a HTTP POST request to [here](https://webhooks.dagger.matic.network/api/access-token), generates one access-token for us, while JSON payload needs to have following form.
+
+```json
+{
+  "refreshToken": "your-secret-refresh-token"
+}
+```
+
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
+```bash
+curl -H 'Content-Type: application/json' -X POST -d '{"refreshToken": "your-secret-refresh-token"}' https://webhooks.dagger.matic.network/api/access-token
+```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/access-token', json={"refreshToken": "your-secret-refresh-token"}).json()
+```
+
+</TabItem>
+</Tabs>
+
+So, we've **access-token**, which we're going to refer as **JWT-TOKEN**.
 
 ### backend
 
