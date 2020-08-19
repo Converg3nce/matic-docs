@@ -39,18 +39,18 @@ Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/ref
 }
 ```
 
-We need to sign a message of this form `address: ${address}\ntimestamp: ${timestamp}`, with account's private key. For that, we're going to use Metamask. Use below code snippet in metamask enabled browser to sign any message.
+We need to sign a message of this form `address: ${address}\ntimestamp: ${timestamp}`, with account's private key. For that, we're going to use Metamask. Use below code snippet in metamask enabled browser to sign a message.
 
 
 ```js
+const sigUtil = require('eth-sig-util')
+
 const signMessage = () => {
   
   var from = web3.eth.accounts[0]
   if (!from) {
     if (typeof ethereum !== 'undefined') {
-    
       ethereum.enable().catch(console.error)
-    
     }
   }
 
@@ -70,6 +70,7 @@ const signMessage = () => {
       return console.error(result.error)
     }
 
+    // this is our target signature
     console.log('Signature : ' + result.result)
   })
 
@@ -93,16 +94,7 @@ const recoverSigner = (message, signature, signer) => {
 }
 ```
 
-
-Make sure you send the request with in 2 minutes of signing, otherwise it'll get expired.
-
-### obtain access token
-
-As dagger webhook uses JWT based authentication mechanism, we need to first obtain a JWT token, which needs to be passed along with all of subsequent requests.
-
-Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/token), generates a JWT token for you. 
-
-From now on we'll referring to it as **JWT-TOKEN**. _And please keep it secret._
+Now we can send a HTTP POST request with required payload.
 
 <Tabs
   defaultValue="curl"
@@ -114,7 +106,7 @@ From now on we'll referring to it as **JWT-TOKEN**. _And please keep it secret._
 <TabItem value="curl">
 
 ```bash
-curl -H 'Content-Type: application/json' -X POST https://webhooks.dagger.matic.network/api/token
+curl -H 'Content-Type: application/json' -X POST -d '{"address": "0xf89154d7a42c5e9f77884511586a9db4618683c5", "timestamp": 1697844703, "signedMessage": "fill-it-up-with-your-signed-message"}' https://webhooks.dagger.matic.network/api/refresh-token
 ```
 
 </TabItem>
@@ -122,11 +114,13 @@ curl -H 'Content-Type: application/json' -X POST https://webhooks.dagger.matic.n
 
 ```python
 import requests
-requests.post('https://webhooks.dagger.matic.network/api/token').json()
+requests.post('https://webhooks.dagger.matic.network/api/refresh-token', data={"address": "0xf89154d7a42c5e9f77884511586a9db4618683c5", "timestamp": 1697844703, "signedMessage": "fill-it-up-with-your-signed-message"}).json()
 ```
 
 </TabItem>
 </Tabs>
+
+Make sure you send the request with in 2 minutes of signing, otherwise it'll get expired.
 
 ### backend
 
