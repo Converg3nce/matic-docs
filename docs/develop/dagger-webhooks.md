@@ -382,10 +382,30 @@ JSON payload will look like below
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 42, "transferType": "both", "tokenAddress": "0x0e21734a042e33b01f738fe29de44f7efc331d85", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0xf89154d7a42c5e9f77884511586a9db4618683c5"]}' https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions
 
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions', json={"url": "URL", "networkId": 42, "transferType": "both", "tokenAddress": "0x0e21734a042e33b01f738fe29de44f7efc331d85", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0xf89154d7a42c5e9f77884511586a9db4618683c5"]}, headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 After successful subscription you'll receive a JSON response like this
 
@@ -421,9 +441,29 @@ For unsubscribing from this topic, we can send a HTTP DELETE request to followin
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions/{subscriptionId}`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.delete('https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f', headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 If you receive response like below, then you've successfully unsubscribed from this topic.
 
