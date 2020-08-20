@@ -159,7 +159,7 @@ requests.post('https://webhooks.dagger.matic.network/api/access-token', json={"r
 </TabItem>
 </Tabs>
 
-So, we've **access-token**, which we're going to refer as **JWT-TOKEN**.
+So, we've **access-token**, which we're going to refer to as **JWT-TOKEN**.
 
 ### backend
 
@@ -221,7 +221,7 @@ Now check ngrok console for new incoming request, if it's there, then our applic
 
 ### networks
 
-Currently dagger supports webhook based realtime notifications for following networks.
+Currently dagger supports webhook based realtime notifications for following networks. More to be added in upcoming days.
 
 <Tabs
   defaultValue="homestead"
@@ -277,9 +277,29 @@ JSON payload needs to carry following data
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1}' https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions', json={"url": "URL", "networkId": 1}, headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 After successful subscription you'll receive a JSON response like this
 
