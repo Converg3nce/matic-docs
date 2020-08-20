@@ -490,9 +490,30 @@ JSON payload needs to carry these informations
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions`
 
+
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "transferType": "both", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0x514910771af9ca656af840dff83e8264ecf986ca"]}' https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions', json={"url": "URL", "networkId": 1, "transferType": "both", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0x514910771af9ca656af840dff83e8264ecf986ca"]}, headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 After successful subscription you'll receive a JSON response like this
 
@@ -547,9 +568,30 @@ For unsubscribing from this topic, we can send a HTTP DELETE request to followin
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions/{subscriptionId}`
 
+
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.delete('https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f', headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 If you receive response like below, then you've successfully unsubscribed from this topic.
 
