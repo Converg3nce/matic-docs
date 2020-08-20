@@ -19,15 +19,15 @@ But we were receiving lots of request for incorporating webhooks support in dagg
 
 Now we're going to walk you through a simple NodeJS application which is running on your machine & we'll create webhook subscriptions for different topics. For that we're also going to use [ngrok](https://ngrok.com/), for tunneling purpose. 
 
-## example
+## Example
 
-### authentication
+### Authentication
 
 For interacting with Dagger Webhook, we need to first have one **refresh-token**, which has a validity of 5 years. Using **refresh-token**, we can obtain one **access-token**, which gets expired after 10 minutes. For subscribing to any data feed, we need to send **access-token** as HTTP request header param in `Authorization` field.
 
 So let's first obtain **refresh-token**.
 
-#### refresh-token
+#### Refresh Token
 
 Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/refresh-token), with following JSON payload data, generates a refresh-token. 
 
@@ -125,7 +125,7 @@ requests.post('https://webhooks.dagger.matic.network/api/refresh-token', json={"
 
 Make sure you send the request with in 2 minutes of signing, otherwise it'll get expired.
 
-#### access-token
+#### Access Token
 
 Now using already obtained **refresh-token**, we're going to generate **access-token**. Sending a HTTP POST request to [here](https://webhooks.dagger.matic.network/api/access-token), generates one access-token for us, while JSON payload needs to have following form.
 
@@ -161,7 +161,7 @@ requests.post('https://webhooks.dagger.matic.network/api/access-token', json={"r
 
 So, we've **access-token**, which we're going to refer to as **JWT-TOKEN**.
 
-### backend
+### Backend
 
 Now we're going to write one simple NodeJS application, where dagger will send HTTP POST requests, for subscribed topics.
 
@@ -219,7 +219,7 @@ curl -H 'Content-Type: application/json' -X POST -d '{"msg": "Working"}' https:/
 
 Now check ngrok console for new incoming request, if it's there, then our application is working as expected. Keep it running.
 
-### networks
+### Networks
 
 Currently dagger supports webhook based realtime notifications for following networks. More to be added in upcoming days.
 
@@ -262,11 +262,11 @@ Currently dagger supports webhook based realtime notifications for following net
 
 `networkId` will be required for subscribing to topics.
 
-### events over webhook
+### Events over Webhook
 
 #### eth-block-numbers
 
-##### subscribe
+##### Subscribe
 
 By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for newly mined blocks.
 
@@ -325,7 +325,7 @@ Now if you check your running express application's console, you'll see output l
 
 _**Note**: We're delivering very small chunks of data over webhook, because we don't want to bombard your application. If you need detailed information, you can always fetch that using other means._
 
-##### unsubscribe
+##### Unsubscribe
 
 For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you. Replace **JWT-TOKEN** with yours.
 
@@ -367,7 +367,7 @@ Now if you check your express application console, you'll see you're no more rec
 
 #### erc20-transfers
 
-##### subscribe
+##### Subscribe
 
 By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for transfer events for specified ERC20 token address.
 
@@ -435,7 +435,7 @@ Now if you check your running express application's console, you'll see output l
 }
 ```
 
-##### unsubscribe
+##### Unsubscribe
 
 For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you.
 
@@ -477,7 +477,7 @@ Now if you check your express application console, you'll see you're no more rec
 
 #### eth-transactions
 
-##### subscribe
+##### Subscribe
 
 By sending a HTTP POST request to following endpoint, along with required params, you can obtain a subscription for transaction events for each of specified addresses.
 
@@ -562,7 +562,7 @@ Now if you check your running express application's console, you'll see output l
 }
 ```
 
-##### unsubscribe
+##### Unsubscribe
 
 For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you.
 
@@ -605,7 +605,7 @@ Now if you check your express application console, you'll see you're no more rec
 
 #### eth-logs
 
-##### subscribe
+##### Subscribe
 
 By sending a HTTP POST request to following endpoint, along with required params, you can subscribe to various transaction logs.
 
@@ -669,7 +669,7 @@ Please note `subscriptionId` will be required for unsubscribing from this event.
 }
 ```
 
-##### unsubscribe
+##### Unsubscribe
 
 For unsubscribing from this topic, we can send a HTTP DELETE request to following endpoint. `subscriptionId` will be different for you.
 
