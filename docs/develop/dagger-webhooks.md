@@ -21,13 +21,83 @@ Now we're going to walk you through a simple NodeJS application which is running
 
 ## example
 
-### obtain access token
+### authentication
 
-As dagger webhook uses JWT based authentication mechanism, we need to first obtain a JWT token, which needs to be passed along with all of subsequent requests.
+For interacting with Dagger Webhook, we need to first have one **refresh-token**, which has a validity of 5 years. Using **refresh-token**, we can obtain one **access-token**, which gets expired after 10 minutes. For subscribing to any data feed, we need to send **access-token** as HTTP request header param in `Authorization` field.
 
-Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/token), generates a JWT token for you. 
+So let's first obtain **refresh-token**.
 
-From now on we'll referring to it as **JWT-TOKEN**. _And please keep it secret._
+#### refresh-token
+
+Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/refresh-token), with following JSON payload data, generates a refresh-token. 
+
+```json
+{
+  "address": "0xf89154d7a42c5e9f77884511586a9db4618683c5",
+  "timestamp": 1597833025,
+  "signedMessage": "sign-me(address: address\ntimestamp: timestamp)"
+}
+```
+
+We need to sign a message of this form `address: ${address}\ntimestamp: ${timestamp}`, with account's private key. For that, we're going to use Metamask. Use below code snippet in metamask enabled browser to sign a message.
+
+
+```js
+const sigUtil = require('eth-sig-util')
+
+// signing a message of form : `address: ${from}\ntimestamp: ${Math.round(Date.now() / 1000)}`
+// timestamp needs to be in seconds
+const signMessage = () => {
+  
+  var from = web3.eth.accounts[0]
+  if (!from) {
+    if (typeof ethereum !== 'undefined') {
+      ethereum.enable().catch(console.error)
+    }
+  }
+
+  var msg = `address: ${from}\ntimestamp: ${Math.round(Date.now() / 1000)}`
+  var params = [msg, from]
+  var method = 'personal_sign'
+
+  web3.currentProvider.sendAsync({
+    method,
+    params,
+    from,
+  }, function (err, result) {
+    if (err) {
+      return console.error(err)
+    }
+    if (result.error) {
+      return console.error(result.error)
+    }
+
+    // this is our target signature
+    console.log('Signature : ' + result.result)
+  })
+
+})
+
+// you can also verify signature, using this function
+const recoverSigner = (message, signature, signer) => {
+
+  let recovered
+  try {
+    recovered = sigUtil.recoverPersonalSignature({
+      data: message,
+      sig: signature
+    })
+  }
+  catch (e) {
+    recovered = null
+  }
+  
+  console.log(`Signer : ${recovered} [ ${recovered === signer ? 'matched' : 'not matched'} ]`)
+
+}
+```
+
+Now we can send a HTTP POST request with required payload.
 
 <Tabs
   defaultValue="curl"
@@ -39,7 +109,7 @@ From now on we'll referring to it as **JWT-TOKEN**. _And please keep it secret._
 <TabItem value="curl">
 
 ```bash
-curl -H 'Content-Type: application/json' -X POST https://webhooks.dagger.matic.network/api/token
+curl -H 'Content-Type: application/json' -X POST -d '{"address": "0xf89154d7a42c5e9f77884511586a9db4618683c5", "timestamp": 1697844703, "signedMessage": "fill-it-up-with-your-signed-message"}' https://webhooks.dagger.matic.network/api/refresh-token
 ```
 
 </TabItem>
@@ -47,11 +117,49 @@ curl -H 'Content-Type: application/json' -X POST https://webhooks.dagger.matic.n
 
 ```python
 import requests
-requests.post('https://webhooks.dagger.matic.network/api/token').json()
+requests.post('https://webhooks.dagger.matic.network/api/refresh-token', json={"address": "0xf89154d7a42c5e9f77884511586a9db4618683c5", "timestamp": 1697844703, "signedMessage": "fill-it-up-with-your-signed-message"}).json()
 ```
 
 </TabItem>
 </Tabs>
+
+Make sure you send the request with in 2 minutes of signing, otherwise it'll get expired.
+
+#### access-token
+
+Now using already obtained **refresh-token**, we're going to generate **access-token**. Sending a HTTP POST request to [here](https://webhooks.dagger.matic.network/api/access-token), generates one access-token for us, while JSON payload needs to have following form.
+
+```json
+{
+  "refreshToken": "your-secret-refresh-token"
+}
+```
+
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
+```bash
+curl -H 'Content-Type: application/json' -X POST -d '{"refreshToken": "your-secret-refresh-token"}' https://webhooks.dagger.matic.network/api/access-token
+```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/access-token', json={"refreshToken": "your-secret-refresh-token"}).json()
+```
+
+</TabItem>
+</Tabs>
+
+So, we've **access-token**, which we're going to refer to as **JWT-TOKEN**.
 
 ### backend
 
@@ -113,13 +221,14 @@ Now check ngrok console for new incoming request, if it's there, then our applic
 
 ### networks
 
-Currently dagger supports webhook based realtime notifications for following networks.
+Currently dagger supports webhook based realtime notifications for following networks. More to be added in upcoming days.
 
 <Tabs
   defaultValue="homestead"
   values={[
     { label: 'Ethereum Main Network', value: 'homestead', },
     { label: 'Ethereum Kovan Network', value: 'kovan', },
+    { label: 'Matic Mumbai Test Network', value: 'mumbai', },
   ]
 }>
 <TabItem value="homestead">
@@ -136,6 +245,15 @@ Currently dagger supports webhook based realtime notifications for following net
 ```json
 {
     "networkId": 42
+}
+```
+
+</TabItem>
+<TabItem value="mumbai">
+
+```json
+{
+    "networkId": 80001
 }
 ```
 
@@ -159,9 +277,29 @@ JSON payload needs to carry following data
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1}' https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions', json={"url": "URL", "networkId": 1}, headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 After successful subscription you'll receive a JSON response like this
 
@@ -193,9 +331,29 @@ For unsubscribing from this topic, we can send a HTTP DELETE request to followin
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/{subscriptionId}`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/ecf21d77-a077-4cff-a938-d03ea9b8ffb6
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.delete('https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/ecf21d77-a077-4cff-a938-d03ea9b8ffb6', headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 If you receive response like below, then you've successfully unsubscribed from this topic.
 
@@ -224,10 +382,30 @@ JSON payload will look like below
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 42, "transferType": "both", "tokenAddress": "0x0e21734a042e33b01f738fe29de44f7efc331d85", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0xf89154d7a42c5e9f77884511586a9db4618683c5"]}' https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions
 
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions', json={"url": "URL", "networkId": 42, "transferType": "both", "tokenAddress": "0x0e21734a042e33b01f738fe29de44f7efc331d85", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0xf89154d7a42c5e9f77884511586a9db4618683c5"]}, headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 After successful subscription you'll receive a JSON response like this
 
@@ -263,9 +441,29 @@ For unsubscribing from this topic, we can send a HTTP DELETE request to followin
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions/{subscriptionId}`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.delete('https://webhooks.dagger.matic.network/api/v1/erc20-transfers/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f', headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 If you receive response like below, then you've successfully unsubscribed from this topic.
 
@@ -292,9 +490,30 @@ JSON payload needs to carry these informations
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions`
 
+
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 1, "transferType": "both", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0x514910771af9ca656af840dff83e8264ecf986ca"]}' https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions', json={"url": "URL", "networkId": 1, "transferType": "both", "addresses": ["0xdac17f958d2ee523a2206206994597c13d831ec7", "0x514910771af9ca656af840dff83e8264ecf986ca"]}, headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 After successful subscription you'll receive a JSON response like this
 
@@ -349,9 +568,30 @@ For unsubscribing from this topic, we can send a HTTP DELETE request to followin
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions/{subscriptionId}`
 
+
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.delete('https://webhooks.dagger.matic.network/api/v1/eth-transactions/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f', headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 If you receive response like below, then you've successfully unsubscribed from this topic.
 
@@ -379,9 +619,29 @@ JSON payload must have these fields
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X POST -d '{"url": "URL", "networkId": 42, "contractAddress": "0x0E21734A042e33b01f738Fe29De44f7eFc331d85", "eventSchema": "Approval(address,address,uint256)", "topics": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"}' https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.post('https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions', json={"url": "URL", "networkId": 42, "contractAddress": "0x0E21734A042e33b01f738Fe29De44f7eFc331d85", "eventSchema": "Approval(address,address,uint256)", "topics": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"}, headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 After successful subscription you'll receive a JSON response like this
 
@@ -415,9 +675,29 @@ For unsubscribing from this topic, we can send a HTTP DELETE request to followin
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions/{subscriptionId}`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.delete('https://webhooks.dagger.matic.network/api/v1/eth-logs/subscriptions/fe94e3c6-fb08-4537-83a6-999a5d4e5f7f', headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 If you receive response like below, then you've successfully unsubscribed from this topic.
 
