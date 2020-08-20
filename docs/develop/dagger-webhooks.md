@@ -331,9 +331,29 @@ For unsubscribing from this topic, we can send a HTTP DELETE request to followin
 
 End Point: `https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/{subscriptionId}`
 
+<Tabs
+  defaultValue="curl"
+  values={[
+    { label: 'cURL', value: 'curl', },
+    { label: 'Python', value: 'python', },
+  ]
+}>
+<TabItem value="curl">
+
 ```bash
 curl -H 'Content-Type: application/json' -H 'Authorization: JWT-TOKEN' -X DELETE https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/ecf21d77-a077-4cff-a938-d03ea9b8ffb6
 ```
+
+</TabItem>
+<TabItem value="python">
+
+```python
+import requests
+requests.delete('https://webhooks.dagger.matic.network/api/v1/eth-block-numbers/subscriptions/ecf21d77-a077-4cff-a938-d03ea9b8ffb6', headers={"Authorization": "JWT-TOKEN"}).json()
+```
+
+</TabItem>
+</Tabs>
 
 If you receive response like below, then you've successfully unsubscribed from this topic.
 
