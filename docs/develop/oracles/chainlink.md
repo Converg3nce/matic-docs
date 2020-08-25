@@ -131,11 +131,11 @@ Here is the list of jobs that the Matic oracle is configured to run.
 
 | Name |  Return Type  | ID | Adapters |
 |-----|--------|------|-------|
-| HTTP GET | `uint256` | `d8fcf41ee8984d3b8b0eae7b74eca7dd` |  `httpget`<br>`jsonparse`<br>`multiply`<br>`ethuint256`<br>`ethtx`  |
-| HTTP GET | `int256` | `508bac12319e4a488ac46e194997db1f ` |  `httpget`<br>`jsonparse`<br>`multiply`<br>`ethint256`<br>`ethtx`  |
-| HTTP GET | `bool` | `31779f840111490299551ba34646db47 ` |  `httpget`<br>`jsonparse`<br>`ethbool`<br>`ethtx`  |
-| HTTP GET | `bytes32` | `4f880ce628544e1a8d26a26044c91c20 ` | `httpget`<br>`jsonparse`<br>`ethbytes32`<br>`ethtx`  |
-| HTTP POST | `bytes32` | `d50dacc32d514a2eae0d6981235a25df ` | `httppost`<br>`jsonparse`<br>`ethbytes32`<br>`ethtx`  |
+| HTTP GET | `uint256` | `d8fcf41ee8984d3b8b0eae7b74eca7dd` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethuint256`<br/>`ethtx`  |
+| HTTP GET | `int256` | `508bac12319e4a488ac46e194997db1f ` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethint256`<br/>`ethtx`  |
+| HTTP GET | `bool` | `31779f840111490299551ba34646db47 ` |  `httpget`<br/>`jsonparse`<br/>`ethbool`<br/>`ethtx`  |
+| HTTP GET | `bytes32` | `4f880ce628544e1a8d26a26044c91c20 ` | `httpget`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
+| HTTP POST | `bytes32` | `d50dacc32d514a2eae0d6981235a25df ` | `httppost`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
 
 Read more about job specifications [here](https://docs.chain.link/docs/job-specifications).
 
