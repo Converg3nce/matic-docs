@@ -228,7 +228,6 @@ Currently dagger supports webhook based realtime notifications for following net
   values={[
     { label: 'Ethereum Main Network', value: 'homestead', },
     { label: 'Ethereum Kovan Network', value: 'kovan', },
-    { label: 'Matic Mumbai Test Network', value: 'mumbai', },
   ]
 }>
 <TabItem value="homestead">
@@ -245,15 +244,6 @@ Currently dagger supports webhook based realtime notifications for following net
 ```json
 {
     "networkId": 42
-}
-```
-
-</TabItem>
-<TabItem value="mumbai">
-
-```json
-{
-    "networkId": 80001
 }
 ```
 
