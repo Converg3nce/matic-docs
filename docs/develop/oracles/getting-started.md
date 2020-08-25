@@ -1,7 +1,7 @@
 ---
 id: getting-started
 title: Getting Started
-sidebar_label: Oracle
+sidebar_label: Getting Started
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
@@ -15,10 +15,11 @@ With blockchains being deterministic one-way streets, an oracle is the path betw
 
 Inbound oracles bring off-chain or real-world data to the blockchain, whereas their outbound cousins do the opposite: they inform an entity outside the blockchain of an event that occurred on it.
 
-To integrate your DApp with Oracles on Matic, you can choose to go with either the following solutions:
+To integrate your DApp with Oracles on Matic, you can choose to go with one of the following solutions:
 
-1. [BandChain](bandchain)
-2. [Razor](razor)
+1. [Chainlink](chainlink)
+2. [BandChain](bandchain)
+3. [Razor](razor)
 
 
 ### **:scroll:Resources**
