@@ -12,9 +12,18 @@ Arkane allows you to easily integrate your app with Matic, whether you already h
 
 Their products will not only help you to interact with Matic but also create wallets, create different asset types such as fungible (ERC20), and non-fungible tokens (ERC721, and ERC1155) and interact with Matic smart contracts. Next to a superior developer experience, Arkane can give your users a user-friendly interface.
 
-## Getting Started
->Already have support for Web3? GREAT 🎉, this is the place to start.
+## Key features
+- Support Web and mobile
+- Offers social logins
+- Offers Fiat to crypto gateway
+- *Only wallet that supports NFTs (ERC721 and ERC1155) on Matic*
+- Supports both Matic and Ethereum
+- Easy to integrate using web3 
+- Build for a mainstream audience
+- Offers in-app customer support 
 
+
+## Getting Started 🎉
 If you already support Web3-technology, you can improve the UX within your application by integrating the Arkane Web3 provider, a smart wrapper around the existing Web3 Ethereum JavaScript API.
 
 By making use of our Web3 provider you are able to leverage the full potential of Arkane with minimal effort and you will be able to onboard users that are less tech savvy without making them leave your application or download third party plugins. Integrating just takes 2 steps and 5 minutes
