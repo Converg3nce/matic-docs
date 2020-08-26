@@ -20,9 +20,10 @@ If you already support Web3-technology, you can improve the UX within your appli
 By making use of our Web3 provider you are able to leverage the full potential of Arkane with minimal effort and you will be able to onboard users that are less tech savvy without making them leave your application or download third party plugins. Integrating just takes 2 steps and 5 minutes
 
 
-**Don't support Web3 yet?**
-Don't worry we've got you covered with our 📦 [Widget - Arkane Connect](https://arkane.gitbook.io/widget/).
 
+
+**Don't support Web3 yet?**
+>Don't worry we've got you covered with our 📦 [Widget - Arkane Connect](https://arkane.gitbook.io/widget/).
 
 
 
@@ -52,6 +53,6 @@ Arkane.createArkaneProviderEngine({clientId: ‘Arketype’}).then(provider => {
 ```
 The web3 instance now works as if it was injected by parity or metamask. You can fetch wallets, sign transactions, and messages.
 ### Congratulations, your dapp now supports Arkane 🎉
->🧙 To connect to our production environment and mainnet, you will need to register your app and request your Client ID.
+>🧙 To connect to Arkanes production environment and mainnet, you will need to [register your app](https://arkane-network.typeform.com/to/hzbcGJ) and request your [Client ID](https://arkane.gitbook.io/widget/deep-dive/authentication#client-id).
 
 Want to know more about the wonderful world Arkane has to offer, [check out their documentation](https://arkane.gitbook.io/widget/)
