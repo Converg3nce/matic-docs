@@ -65,3 +65,12 @@ The web3 instance now works as if it was injected by parity or metamask. You can
 >🧙 To connect to Arkanes production environment and mainnet, you will need to [register your app](https://arkane-network.typeform.com/to/hzbcGJ) and request your [Client ID](https://arkane.gitbook.io/widget/deep-dive/authentication#client-id).
 
 Want to know more about the wonderful world Arkane has to offer, [check out their documentation](https://arkane.gitbook.io/widget/)
+
+## Showcase videos
+#### Send Matic tokens to an email address on Matic Network
+[![Send Matic tokens to an email address on Matic Network](https://i.snipboard.io/OzXmrN.jpg)](https://www.youtube.com/watch?v=3gehPvX4DOo&list=PLh3bJA02WlKErlpDexw_cFOlPfMQiU67U&index=1)
+
+#### Transfer of a Matic NFT 
+[![Transfer of a Matic NFT](https://i.snipboard.io/dLkM3t.jpg)](https://www.youtube.com/watch?v=SLxAIXRv7ec&list=PLh3bJA02WlKErlpDexw_cFOlPfMQiU67U)
+
+
