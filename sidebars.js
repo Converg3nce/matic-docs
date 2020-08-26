@@ -89,10 +89,10 @@ module.exports = {
       items: [
         "develop/wallets/getting-started",
         "develop/wallets/metamask",
+        "develop/wallets/arkane",
         "develop/wallets/torus",
         "develop/wallets/portis",
         "develop/wallets/fortmatic",
-        "develop/wallets/arkane",
         "develop/wallets/walletconnect",
       ],
     },
