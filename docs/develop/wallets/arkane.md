@@ -15,7 +15,7 @@ Their products will not only help you to interact with Matic but also create wal
 ## Key features
 - Support Web and mobile
 - Offers social logins
-- Offers Fiat to crypto gateway
+- Offers a fiat-on-ramp
 - *Only wallet that supports NFTs (ERC721 and ERC1155) on Matic*
 - Supports both Matic and Ethereum
 - Easy to integrate using web3 
