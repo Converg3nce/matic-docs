@@ -4,6 +4,39 @@
  * work well for content-centric websites.
  */
 
+:root {
+  --ifm-color-primary: #003cb2;
+  --ifm-color-primary-dark: #0036a0;
+  --ifm-color-primary-darker: #003397;
+  --ifm-color-primary-darkest: #002a7d;
+  --ifm-color-primary-light: #0042c4;
+  --ifm-color-primary-lighter: #0045cd;
+  --ifm-color-primary-lightest: #004ee7;
+  --ifm-font-family-base: Graphik;
+
+  --ifm-h1-font-size: 2rem;
+  --ifm-h2-font-size: 1.5rem;
+  --ifm-h3-font-size: 1.25rem;
+  --ifm-h4-font-size: 1rem;
+  --ifm-h5-font-size: 0.875rem;
+  --ifm-h6-font-size: 0.85rem;
+}
+
+.markdown,
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+  --ifm-h1-font-size: 2rem;
+  --ifm-h2-font-size: 1.5rem;
+  --ifm-h3-font-size: 1.25rem;
+  --ifm-h4-font-size: 1rem;
+  --ifm-h5-font-size: 0.875rem;
+  --ifm-h6-font-size: 0.85rem;
+}
+
 /* You can override the default Infima variables here. */
 @font-face {
   font-family: "Graphik";
@@ -50,13 +83,11 @@
 @-ms-viewport {
   width: device-width;
 }
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
-}
-* {
-  font-family: "Graphik";
 }
 
 *,
@@ -809,4 +840,37 @@ a:after {
 .background-img.left {
   left: 0px;
   bottom: 0px;
+}
+
+header > h1 {
+  font-size: 2rem !important;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.codeBlockLines {
+  font-size: 90% !important;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,.08);
+}
+
+.btn-primary {
+  background-color: var(--ifm-color-primary-darker);
+  color: #ffffff;
+}
+
+.mx-4 {
+  margin: 0px 4px;
 }

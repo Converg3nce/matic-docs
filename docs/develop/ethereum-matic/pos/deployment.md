@@ -8,7 +8,7 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
-Maticjs version: ^2.0.2
+Maticjs version: `^2.0.2`
 
 Maticjs Examples: [https://github.com/maticnetwork/matic.js/tree/v2.0.2/examples/POS-client](https://github.com/maticnetwork/matic.js/tree/v2.0.2/examples/POS-client)
 
@@ -18,4 +18,4 @@ Artifacts: [https://github.com/maticnetwork/pos-portal/tree/v1.0.0/artifacts](ht
 
 Flattened contracts: [https://github.com/maticnetwork/pos-portal/tree/v1.0.0/flat](https://github.com/maticnetwork/pos-portal/tree/v1.0.0/flat)
 
-Contracts Addresses: [https://static.matic.network/network/testnet/mumbai/index.json](https://static.matic.network/network/testnet/mumbai/index.json). Use the **_Proxy_** address where ever it is available.
+Contracts Addresses: [https://static.matic.network/network/testnet/mumbai/index.json](https://static.matic.network/network/testnet/mumbai/index.json). Use the `Proxy` address where ever it is available.

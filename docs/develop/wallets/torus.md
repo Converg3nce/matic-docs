@@ -15,19 +15,23 @@ Torus is a user-friendly, secure, and non-custodial key management system for DA
 **Communication to Ethereum Ledger**: Infura <br/>
 **Private key encoding**: Mnemonic/Social-Auth-login <br/>
 
-Depending on your applications needs Torus can be integrated via the Torus Wallet, or through interacting directly with the Torus Network via DirectAuth. [For more...](https://docs.tor.us/getting-started)
+Depending on your applications needs Torus can be integrated via the Torus Wallet, or through interacting directly with the Torus Network via DirectAuth. For more, visit Torus documentation: https://docs.tor.us/getting-started
 
-## 1. [Torus Wallet integration](https://docs.tor.us/torus-wallet/quick-start)
+## 1. Torus Wallet integration
 
-If your application is already compatible with Metamask/other web3 providers, integrating the Torus Wallet would give you a provider to wrap the same web3 interface. You can install via a npm package or ipfs. or jsdelivr or unpkg. [For more...](https://docs.tor.us/getting-started#torus-wallet-integration)
+Quick start Torus wallet: https://docs.tor.us/torus-wallet/quick-start
 
-1. Integrte via:
+If your application is already compatible with Metamask/other web3 providers, integrating the Torus Wallet would give you a provider to wrap the same web3 interface. You can install via a npm package or IPFS. or jsdelivr or unpkg. For more, please visit Torus documentation on wallet integration: https://docs.tor.us/getting-started#torus-wallet-integration
+
+**Install npm package**
+
 ```bash
 npm i @toruslabs/torus-embed
 ```
 
-2. Script
-```js
+**Example**
+
+```js title="torus-example.js"
 import Torus from "@toruslabs/torus-embed";
 import Web3 from "web3";
 
@@ -50,6 +54,4 @@ const web3 = new Web3(torus.provider);
 
 ## 2. DirectAuth integration
 
-If you're looking to control your own UX, from logins to every interaction DirectAuth is the integration for you. You can integrate via one of our SDKs depending on the platform/s you are building on. [For more...](https://docs.tor.us/getting-started#directauth-integration)
-
-[Please read here](https://docs.tor.us/direct-auth/quick-start)
+If you are looking to control your own UX, from login to every interaction, then DirectAuth is the integration for you. You can integrate via one of our SDKs depending on the platform/s you are building on. For more, please visit Torus direct auth integration: https://docs.tor.us/direct-auth/quick-start

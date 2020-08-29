@@ -8,12 +8,12 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-The mechanism to natively read Ethereum data from Matic EVM chain is that of ‘State Sync’. In other words, this mechanism enables transfer of arbitrary data from Ethereum chain to Matic chain. The procedure that makes it possible is: Validators on the Heimdall layer are listening for a particular event — `StateSynced` from a Sender contract, as soon as the event is picked, the `data` that was passed in the event is written on the Receiver contract. Read more [here](https://docs.matic.network/docs/validate/validator/state-sync-mechanism).
+The mechanism to natively read Ethereum data from Matic EVM chain is that of "State Sync". In other words, this mechanism enables transfer of arbitrary data from Ethereum chain to Matic chain. The procedure that makes it possible is: Validators on the Heimdall layer are listening for a particular event — `StateSynced` from a Sender contract, as soon as the event is picked, the `data` that was passed in the event is written on the Receiver contract. Read more [here](https://docs.matic.network/docs/validate/validator/state-sync-mechanism).
 
 The Sender and Receiver contract are required to be mapped on Ethereum — [`StateSender.sol`](https://github.com/maticnetwork/contracts/blob/release-betaV2/contracts/root/stateSyncer/StateSender.sol) needs to be aware of each sender and receiver. If you'd like to get the mapping done, please request a mapping [here](https://angela758926.typeform.com/to/IqKhy2).
 
 <center>
-<button style={{padding: '20px', backgroundColor: '#4093ff', color: '#fff', borderRadius: '25px', fontSize : '15px' }}>
+<button className="btn btn-primary btn-md">
   <a href="https://angela758926.typeform.com/to/IqKhy2" target="_blank" style={{color: 'inherit'}}>
     Submit Sender/Receiver Mapping Request
   </a>
@@ -28,7 +28,7 @@ In the following walkthrough, we'll be deploying a Sender contract on Ropsten (E
 
 The sole purpose of Sender contract is to be able to call [`syncState`](https://github.com/maticnetwork/contracts/blob/e999579e9dc898ab6e66ddcb49ee84c2543a9658/contracts/root/stateSyncer/StateSender.sol#L33) function on the StateSender contract — which is Matic's state syncer contract - the StateSynced event of which Heimdall is listening to. 
 
-Deployed at:
+State syncer contract is deployed at:
 
 - `0x22E1f5aa1BA9e60527250FFeb35e30Aa2913727f` on Ropsten (Receiver on Testnetv3)
 - `0xfB631F5A239A5B651120335239CC19aEbCb185e6` on Ethereum Mainnet (Receiver on BetaV2)
@@ -45,7 +45,7 @@ contract IStateSender {
   function register(address sender, address receiver) public;
 }
 
-...
+// other code
 
 ```
 
@@ -53,8 +53,8 @@ Next, let's write our custom function that takes in the data we'd like to pass o
 
 ```javascript
 function sendState(bytes calldata data) external {
-    states = states + 1 ;
-    IStateSender(stateSenderContract).syncState(receiver, data);
+  states = states + 1; // Just for example
+  IStateSender(stateSenderContract).syncState(receiver, data);
 }
 ```
 
@@ -62,11 +62,9 @@ In the above function, `stateSenderContract` is the address of the `StateSender`
 
 It is recommended to use constructors to pass in variables, but for the purpose of this demo, we'll simply harcode these two addresses:
 
-Following is how our Sender.sol looks like:
+Following is how our `Sender.sol` looks like:
 
-```javascript
-// sender.sol
-
+```js title="Sender.sol"
 pragma solidity ^0.5.11;
 
 contract IStateSender {
@@ -77,18 +75,17 @@ contract IStateSender {
 contract sender {
   address public stateSenderContract = 0x22E1f5aa1BA9e60527250FFeb35e30Aa2913727f;
   address public receiver = 0x83bB46B64b311c89bEF813A534291e155459579e;
-  
+
   uint public states = 0;
 
   function sendState(bytes calldata data) external {
-    states = states + 1 ;
+    states = states + 1;
     IStateSender(stateSenderContract).syncState(receiver, data);
   }
-  
 }
 ```
 
-We're using a simple `states` counter to keep track of the number of states sent via the Sender contract.
+We are using a simple `states` counter to keep track of the number of states sent via the Sender contract.
 
 Use Remix to deploy the contract and keep a note of the address and ABI.
 
@@ -99,11 +96,7 @@ Ours is deployed at `0xf428d353aBdb6fdFf9E5E713f1Ec403cD15d0975` on Ropsten, and
 
 Receiver contract is the one that is invoked by a Validator when the `StateSynced` event is emitted. The Validator invokes the function `onStateReceiveon` the receiver contract to submit the data. To implement it, we first import [StateReceiver](https://github.com/maticnetwork/contracts/blob/release-betaV2/contracts/child/bor/StateReceiver.sol) interface and write down our custom logic — to interpret the tranferred data inside onStateReceive.
 
-Following is how our Receiver.sol looks like:
-
-```javascript
-// receiver.sol
-
+```js title="Receiver.sol"
 pragma solidity ^0.5.11;
 
 // IStateReceiver represents interface to receive state
@@ -120,7 +113,6 @@ contract receiver {
     lastStateId = stateId;
     lastChildData = data;
 	}
-
 }
 ```
 
@@ -131,10 +123,10 @@ Deploy  your Receiver.sol on Matic's testnet and keep a note of the address and 
 Ours is deployed at `0x83bB46B64b311c89bEF813A534291e155459579e` on TestnetV3, and here is the ABI: [ReceiverABI.json](https://gist.githubusercontent.com/nglglhtr/147d8707391b5de5a572f2b462bd058c/raw/11bf04f2342473958fb63c63fa48e0b0645e42d9/ReceiverABI.json)
 
 ## 3. Getting your Sender and Receiver Mapped
-You can either use the already deployed addresses (mentioned above) for sender and receiver, or deploy your custom contracts and request a mapping done [here](https://angela758926.typeform.com/to/IqKhy2)
+You can either use the already deployed addresses (mentioned above) for sender and receiver, or deploy your custom contracts and request a mapping:
 
 <center>
-<button style={{padding: '20px', backgroundColor: '#4093ff', color: '#fff', borderRadius: '25px', fontSize : '15px' }}>
+<button className="btn btn-primary btn-md">
   <a href="https://angela758926.typeform.com/to/IqKhy2" target="_blank" style={{color: 'inherit'}}>
     Submit Sender/Receiver Mapping Request
   </a>
@@ -149,9 +141,7 @@ Now that we have our contracts in place and mapping done, we'll be writing a sim
 
 We'll first initialise our web3 objects, wallet to make the transactions and contracts
 
-```javascript
-// test.js
-
+```js title="test.js"
 const Web3 = require('web3')
 const Network = require("@maticnetwork/meta/network")
 
@@ -187,7 +177,7 @@ We're using @maticnetwork/meta package for the RPCs, the package isn't a require
 
 Next, let's setup our functions to create bytestring of the data and send it via Sender contract: 
 
-```javascript
+```js
 // data to sync
 function getData(string) {
   let data = matic.utils.asciiToHex(string);
@@ -216,7 +206,7 @@ It should take ~4 minutes for the state sync to execute.
 
 Add the following functions to check (a) number of sent states from Sender and (b) Last received state on `Receiver`.
 
-```javascript
+```js
 // check `states` variable on sender
 async function checkSender () {
   let r = await sender.methods
@@ -240,7 +230,7 @@ async function checkReceiver () {
 
 the function `checkReceiver` simply calls the variables we defined in the contract — which would be set as soon as the Validator calls `onStateReceive` on the contract. The `getString` function simply interprets the bytestring (converts it back to ascii)
 
-```javascript
+```js
 function getString(data) {
   let string = matic.utils.hexToAscii(data);
   return string
@@ -249,7 +239,7 @@ function getString(data) {
 
 Finally, we'll write up a method to execute our functions:
 
-```javascript
+```js
 async function test() {
 	await sendData ('Sending a state sync! :) ')
 	await checkSender ()
@@ -261,9 +251,7 @@ async function test() {
 
 This is how our test script looks like: 
 
-```javascript
-// test.js
-
+```javascript title="test.js"
 const Web3 = require('web3')
 const Network = require("@maticnetwork/meta/network")
 

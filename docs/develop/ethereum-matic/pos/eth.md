@@ -26,9 +26,7 @@ Withdraw ETH -
 1. **_Burn_** tokens on matic chain.
 2. Call **_exit_** function on **_RootChainManager_** to submit proof of burn transaction. This call can be made **_after checkpoint_** is submitted for the block containing burn transaction.
 
-## Step Details
-
----
+## Steps
 
 ### Configuring Matic SDK
 
@@ -104,7 +102,7 @@ await maticPOSClient.depositEtherForUser(from, amount, {
 
 ### Burn
 
-User can call **_withdraw_** function of **_MaticWETH_** contract. This function should burn the tokens. Since Ether is an ERC20 token on matic chain, use **_burnERC20_** method that Matic POS client exposes to make this call.
+User can call `withdraw` function of `MaticWETH` contract. This function should burn the tokens. Since Ether is an ERC20 token on matic chain, use `burnERC20` method that Matic POS client exposes to make this call.
 
 ```jsx
 await maticPOSClient.burnERC20(childToken, amount, { from });
@@ -114,7 +112,7 @@ Store the transaction hash for this call and use it while generating burn proof.
 
 ### Exit
 
-Once the **_checkpoint_** has been **_submitted_** for the block containing burn transaction, user should call the **_exit_** function of **_RootChainManager_** contract and submit the proof of burn. Upon submitting valid proof tokens are transferred to the user. Matic POS client exposes **_exitERC20_** method to make this call.
+Once the **checkpoint** has been submitted for the block containing burn transaction, user should call the **exit** function of `RootChainManager` contract and submit the proof of burn. Upon submitting valid proof tokens are transferred to the user. Matic POS client exposes `exitERC20` method to make this call.
 
 ```jsx
 await maticPOSClient.exitERC20(burnTxHash, { from });
