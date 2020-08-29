@@ -30,4 +30,4 @@ To allow crypto purchasing from your DApp became partner with the above services
 
 Apply to became Partner or Request Demo, write a message or email to the respective service.
 
-> We are *AwesomeDApp* deployed on Matic Network. Requesting fiat-on-ramp solution to onboard users on our DApp. *A short description on my DApp*
+> We are **<your dapp name\>** deployed on Matic Network. Requesting fiat-on-ramp solution to onboard users on our DApp. **Please include A short description on my DApp.**

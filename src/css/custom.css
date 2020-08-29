@@ -766,13 +766,6 @@ a:after {
   --ifm-code-font-size: 95%;
 }
 
-.docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-}
-
 .show-card {
   /* Light_Gray_700 */
   background: #ffffff;
@@ -848,10 +841,6 @@ header > h1 {
 
 strong {
   font-weight: 500;
-}
-
-.codeBlockLines {
-  font-size: 90% !important;
 }
 
 .btn {
