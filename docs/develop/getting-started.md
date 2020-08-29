@@ -20,23 +20,22 @@ All the tools you're familiar with are supported on Matic out of the box: Truffl
 Switch over to Matic's RPC and get started!
 
 Matic's Test Network which is called **Mumbai** connects with **Ethereum's Goërli Testnet.** 
-All the network related details can be found in [Network](/docs/develop/network-details/network) 
+All the network related details can be found in [network docs](/docs/develop/network-details/network) 
 
 - [Setup Metamask Wallet](/docs/develop/metamask/hello)
-* Deploy your Contracts on Matic Network
+- Deploy your Contracts on Matic Network
     - [Using Remix](/docs/develop/remix)
     - [Using Truffle](/docs/develop/truffle)
+- [Connecting to Matic with RPC](https://docs.matic.network/docs/develop/metamask/testnet) by adding Matic network on Metamask.
+  Note that same RPC can be used with web3js.
 
-- [Connecting to Matic with RPC](https://docs.matic.network/docs/develop/metamask/testnet) - adding Matic network on Metamask.
-    - Same RPC can be used with web3js
+    ```jsx
+    // Javascript 
 
-        ```jsx
-        // Javascript 
+    const Web3 = require('Web3')
+    const web3 = new Web3('https://rpc-mumbai.matic.today')
 
-        const Web3 = require('Web3')
-        const web3 = new Web3('https://rpc-mumbai.matic.today')
-
-        // web3 object is now connected with Matic's node
+    // web3 object is now connected with Matic's node
         ```
 
 ---
