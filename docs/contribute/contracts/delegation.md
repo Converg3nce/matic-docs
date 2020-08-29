@@ -23,7 +23,7 @@ When a validator gets rewarded with more `MATIC` tokens, new tokens are added to
 
 ## Technical specification
 
-```cpp
+```java
 uint256 public validatorId; // Delegation contract for validator
 uint256 public validatorRewards; // accumlated rewards for validator
 uint256 public commissionRate; // validator's cut %
@@ -36,13 +36,13 @@ uint256 public activeAmount; // # of tokens delegated which are part of active s
 
 Exchange rate is calculated as below:
 
-```go
+```js
 ExchangeRate = (totalDelegatedPower + delegatorRewardPool) / totalDelegatorShares
 ```
 
 ### buyVoucher
 
-```cpp
+```js
 function buyVoucher(uint256 _amount) public;
 ```
 
@@ -53,7 +53,7 @@ function buyVoucher(uint256 _amount) public;
 
 ### sellVoucher
 
-```cpp
+```js
 function sellVoucher() public;
 ```
 
@@ -65,7 +65,7 @@ function sellVoucher() public;
 
 ### withdrawRewards
 
-```cpp
+```js
 function withdrawRewards() public;
 ```
 
@@ -76,8 +76,8 @@ function withdrawRewards() public;
 
 - Restake can work in two ways delegator can buy more shares using `buyVoucher` or reStake rewards.
 
-```cpp
-function reStake()
+```js
+function reStake() public;
 ```
 
 - Above function is used to reStake rewards
@@ -88,7 +88,7 @@ function reStake()
 
 ### unStakeClaimTokens
 
-```cpp
+```js
 function unStakeClaimTokens()
 ```
 
@@ -98,15 +98,22 @@ function unStakeClaimTokens()
 
 ### updateCommissionRate
 
-```cpp
+```js
 function updateCommissionRate(uint256 newCommissionRate)
         external
         onlyValidator
 ```
 
-- updates commission % for the validator.
+- Updates commission % for the validator.
 
 ### updateRewards
+
+```js
+function updateRewards(uint256 reward, uint256 checkpointStakePower, uint256 validatorStake)
+        external
+        onlyOwner
+        returns (uint256)
+```
 
 - When a validator gets rewards for submitting checkpoint this function is called for disbursements of rewards between validator and delegators.
 

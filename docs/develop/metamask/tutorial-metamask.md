@@ -12,7 +12,7 @@ If you are wondering how to create a new cryptocurrency wallet, consider creatin
 
 MetaMask is a free and secure browser extension that allows web applications to read and interact with the Ethereum blockchain.
 
-# **Step 1. Install MetaMask on your browser**
+## Step 1. Install MetaMask on your browser
 
 To create a new wallet with MetaMask you need to install the extension first. You can install Metamask for [Chrome](https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/), Brave and [Opera](https://addons.opera.com/en/extensions/details/metamask/) browsers.
 
@@ -36,7 +36,7 @@ In this tutorial we will be using Google Chrome as an example, but the workflow 
 
 That’s it! You have successfully installed MetaMask extension!
 
-# **Step 2. Create an account.**
+## Step 2. Create an account
 
 The next step is to create an account.
 

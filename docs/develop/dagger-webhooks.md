@@ -19,8 +19,6 @@ But we were receiving lots of request for incorporating webhooks support in dagg
 
 Now we're going to walk you through a simple NodeJS application which is running on your machine & we'll create webhook subscriptions for different topics. For that we're also going to use [ngrok](https://ngrok.com/), for tunneling purpose. 
 
-## Example
-
 ### Authentication
 
 For interacting with Dagger Webhook, we need to first have one **refresh-token**, which has a validity of 5 years. Using **refresh-token**, we can obtain one **access-token**, which gets expired after 10 minutes. For subscribing to any data feed, we need to send **access-token** as HTTP request header param in `Authorization` field.
@@ -42,7 +40,7 @@ Sending a HTTP POST request [here](https://webhooks.dagger.matic.network/api/ref
 We need to sign a message of this form `address: ${address}\ntimestamp: ${timestamp}`, with account's private key. For that, we're going to use Metamask. Use below code snippet in metamask enabled browser to sign a message.
 
 
-```js
+```js title="webhook.js"
 const sigUtil = require('eth-sig-util')
 
 // signing a message of form : `address: ${from}\ntimestamp: ${Math.round(Date.now() / 1000)}`
@@ -175,7 +173,7 @@ touch index.js
 
 Open `index.js` using your favourite text editor & put following code snippet there.
 
-```javascript
+```js title="index.js"
 const express = require('express')
 const app = express()
 const http = require('http')

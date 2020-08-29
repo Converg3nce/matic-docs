@@ -10,15 +10,15 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 Fortmatic SDK allows you to easily integrate your app with the Ethereum blockchain, whether you already have a dApp integrated with web3 or are starting from scratch. Fortmatic provides a smooth and delightful experience for both you and your app's users.
 
-1. Integrate via
+**Install npm package**
 
 ```bash
 $ npm i --save fortmatic@latest
 ```
 
-2. Script
+**Example**
 
-```js
+```js title="example.js"
 import Fortmatic from 'fortmatic';
 import Web3 from 'web3';
 

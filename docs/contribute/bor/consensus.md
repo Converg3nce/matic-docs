@@ -147,38 +147,32 @@ After each span, Bor changes view. It means that it fetches new producers for th
 
 When the current span is about to end (specifically at the end of the second-last sprint in the span), Bor pulls a new span from Heimdall. This is a simple HTTP call to the Heimdall node. Once this data is fetched, a `commitSpan` call is made to the BorValidatorSet genesis contract through System call.
 
-More details for span management: 
-
-[Bor Overview](https://www.notion.so/Bor-Overview-c8bdb110cd4d4090a7e1589ac1006bab)
-
 Bor also sets producers bytes into the header of the block. This is necessary while fast-syncing Bor. During fast-sync, Bor syncs headers in bulk and validates if blocks are created by authorized producers.
 
 At the start of each Sprint, Bor fetches header bytes from the previous header for next producers and starts creating blocks based on `ValidatorSet` algorithm.
 
-(insert note about light client sync)
-
 Here is how header looks like for a block:
 
-```go
-header.Extra = header.Vanity + header.ProducerBytes (optional) + header.Seal
+```js
+header.Extra = header.Vanity + header.ProducerBytes /* optional */ + header.Seal
 ```
 
 <img src={useBaseUrl("img/bor/header-bytes.svg")} />
+
+To know more about Bor: https://www.notion.so/Bor-Overview-c8bdb110cd4d4090a7e1589ac1006bab
 
 ## State sync from Ethereum chain
 
 Bor provides a mechanism where some specific events on the main ethereum chain are relayed to Bor. This is also how deposits to plasma contracts are processed.
 
-More details: 
+**Summary**
 
-[Bor Overview](https://www.notion.so/Bor-Overview-c8bdb110cd4d4090a7e1589ac1006bab)
+1. Any contract on Ethereum may call [syncState](https://github.com/maticnetwork/contracts/blob/develop/contracts/root/stateSyncer/StateSender.sol#L33) in `StateSender.sol`. This call emits `StateSynced` event: https://github.com/maticnetwork/contracts/blob/develop/contracts/root/stateSyncer/StateSender.sol#L38
 
-In short summary:
+  ```js
+  event StateSynced(uint256 indexed id, address indexed contractAddress, bytes data)
+  ```
 
-1. Any contract on Ethereum may call `[syncState](https://github.com/maticnetwork/contracts/blob/develop/contracts/root/stateSyncer/StateSender.sol#L33)` in `StateSender.sol`. This call emits `[event StateSynced(uint256 indexed id, address indexed contractAddress, bytes data)](https://github.com/maticnetwork/contracts/blob/develop/contracts/root/stateSyncer/StateSender.sol#L38)`.
-2. Heimdall listens to these events and calls `function [proposeState](https://github.com/maticnetwork/genesis-contracts/blob/master/contracts/StateReceiver.sol#L24)(uint256 stateId)` in `StateReceiver.sol`  - thus acting as a store for the pending state change ids. Note that the `proposeState` transaction will be processed even with a 0 gas fee as long as it is made by one of the validators in the current validator set.
-3. At the start of every sprint, Bor pulls the details about the pending state changes using the states from Heimdall and commits them to the Bor state using a system call. See `[commitState](https://github.com/maticnetwork/genesis-contracts/blob/f85d0409d2a99dff53617ad5429101d9937e3fc3/contracts/StateReceiver.sol#L41)`.
+2. Heimdall listens to these events and calls `function proposeState(uint256 stateId)`  in `StateReceiver.sol`  - thus acting as a store for the pending state change ids. Note that the `proposeState` transaction will be processed even with a 0 gas fee as long as it is made by one of the validators in the current validator set: https://github.com/maticnetwork/genesis-contracts/blob/master/contracts/StateReceiver.sol#L24
 
-## APIs
-
-[Heimdall APIs](https://www.notion.so/74adc8699e1541a6be51dff527758a9f)
+3. At the start of every sprint, Bor pulls the details about the pending state changes using the states from Heimdall and commits them to the Bor state using a system call. See `commitState` here: https://github.com/maticnetwork/genesis-contracts/blob/f85d0409d2a99dff53617ad5429101d9937e3fc3/contracts/StateReceiver.sol#L41

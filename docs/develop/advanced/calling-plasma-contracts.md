@@ -29,12 +29,12 @@ However, this page helps developers, who have a good understanding of smart cont
 To get some `TEST` tokens on Goerli network, you can access the Matic Faucet by clicking on the link below:
 
 <div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
-        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#000', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
-          <a href="https://faucet.matic.network" target="_blank" style={{color: 'inherit'}}>
-            Get Test Tokens
-          </a>
-        </button>
-      </div>
+  <button className="btn btn-primary btn-md">
+    <a href="https://faucet.matic.network" target="_blank" style={{color: 'inherit'}}>
+      Get Test Tokens
+    </a>
+  </button>
+</div>
 
 ### Matic Explorer
 

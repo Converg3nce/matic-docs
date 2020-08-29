@@ -20,23 +20,22 @@ All the tools you're familiar with are supported on Matic out of the box: Truffl
 Switch over to Matic's RPC and get started!
 
 Matic's Test Network which is called **Mumbai** connects with **Ethereum's Goërli Testnet.** 
-All the network related details can be found in [Network](/docs/develop/network-details/network) 
+All the network related details can be found in [network docs](/docs/develop/network-details/network) 
 
 - [Setup Metamask Wallet](/docs/develop/metamask/hello)
-* Deploy your Contracts on Matic Network
+- Deploy your Contracts on Matic Network
     - [Using Remix](/docs/develop/remix)
     - [Using Truffle](/docs/develop/truffle)
+- [Connecting to Matic with RPC](https://docs.matic.network/docs/develop/metamask/testnet) by adding Matic network on Metamask.
+  Note that same RPC can be used with web3js.
 
-- [Connecting to Matic with RPC](https://docs.matic.network/docs/develop/metamask/testnet) - adding Matic network on Metamask.
-    - Same RPC can be used with web3js
+    ```jsx
+    // Javascript 
 
-        ```jsx
-        // Javascript 
+    const Web3 = require('Web3')
+    const web3 = new Web3('https://rpc-mumbai.matic.today')
 
-        const Web3 = require('Web3')
-        const web3 = new Web3('https://rpc-mumbai.matic.today')
-
-        // web3 object is now connected with Matic's node
+    // web3 object is now connected with Matic's node
         ```
 
 ---
@@ -47,12 +46,13 @@ All the network related details can be found in [Network](/docs/develop/network-
 
     Deploy all your smart contracts directly on Matic chain. You don't have to worry about the underlying architecture, as long as it is EVM compatible!
 
-    - [Deploying your dApp on Matic](https://docs.matic.network/docs/integrate/quickstart)
+    [Deploying your dApp on Matic](https://docs.matic.network/docs/integrate/quickstart)
+
 - **Using Matic as a faster transactions layer**
 
     Using Matic as a transactions layer in your DApp deployed on Mainnet, you can get started with getting your tokens mapped by us.
 
-    - Getting your tokens mapped on Matic: 👋🏼Ping us on [http://bit.ly/matic-technical-group](http://bit.ly/matic-technical-group)
+    Getting your tokens mapped on Matic: 👋🏼 Ping us on [http://bit.ly/matic-technical-group](http://bit.ly/matic-technical-group)
 
 ### **🌱 Building a new dApp on Matic?**
 
@@ -71,39 +71,33 @@ All the network related details can be found in [Network](/docs/develop/network-
 - [Moving assets from Mainchain to Matic chain: the Plasma way](https://docs.matic.network/docs/develop/maticjs/getting-started)
 - [Swapping Plasma Assets](https://docs.matic.network/docs/develop/advanced/swap-assets)
 
----
+**Other links**
+
 <div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
+  <button className="btn btn-primary btn-md mx-4">
+    <a href="https://www.notion.so/Video-Tutorials-Library-f16cbb8c3d9d47d8bc809e06519f110c" target="_blank" style={{color: 'inherit'}}>
+      Video Tutorials Library
+    </a>
+  </button>
 
-<button className="btn btn-primary btn-md" style={{padding: '15px', marginLeft: '40px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 1px 4px rgba(6, 16, 36, 0.12)'}}>
-  
-  <a href="https://www.notion.so/Video-Tutorials-Library-f16cbb8c3d9d47d8bc809e06519f110c" target="_blank" style={{color: 'inherit'}}>
-    Video Tutorials Library
-  </a>
-</button>
+  <button className="btn btn-primary btn-md mx-4">
+    <a href="https://www.notion.so/Writings-by-the-Team-c979819406894abb964cb50ae197f376" target="_blank" style={{color: 'inherit'}}>
+      Writings by the Team
+    </a>
+  </button>
 
-<button className="btn btn-primary btn-md" style={{padding: '15px', marginLeft: '40px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 1px 4px rgba(6, 16, 36, 0.12)'}}>
-  
-  <a href="https://www.notion.so/Writings-by-the-Team-c979819406894abb964cb50ae197f376" target="_blank" style={{color: 'inherit'}}>
-    Writings by the Team
-  </a>
-</button>
+  <button className="btn btn-primary btn-md mx-4">
+    <a href="https://www.notion.so/f5739c3ed3cc40e3ae71d5935a72143d" target="_blank" style={{color: 'inherit'}}>
+      Matic Tools
+    </a>
+  </button>
 
-<button className="btn btn-primary btn-md" style={{padding: '15px', marginLeft: '40px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 1px 4px rgba(6, 16, 36, 0.12)'}}>
-
-  <a href="https://www.notion.so/f5739c3ed3cc40e3ae71d5935a72143d" target="_blank" style={{color: 'inherit'}}>
-    Matic Tools
-  </a>
-</button>
-
-<button className="btn btn-primary btn-md" style={{padding: '15px', marginLeft: '40px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 1px 4px rgba(6, 16, 36, 0.12)'}}>
-  
-  <a href="https://www.notion.so/FAQs-2192c487105342ae90c54efadd101cac" target="_blank" style={{color: 'inherit'}}>
-    FAQs
-  </a>
-</button>
-      </div>
-
----
+  <button className="btn btn-primary btn-md mx-4">
+    <a href="https://www.notion.so/FAQs-2192c487105342ae90c54efadd101cac" target="_blank" style={{color: 'inherit'}}>
+      FAQs
+    </a>
+  </button>
+</div>
 
 ### **Learn the developer tools**
 
@@ -136,25 +130,24 @@ All the network related details can be found in [Network](/docs/develop/network-
 Hackathons take place at blockchain conferences and meetups all over the world. Chances are you can’t hop on a plane on a moment’s notice, but some conferences or projects host virtual hackathons open to anyone with an internet connection.
 
 <div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
-        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#1877F2', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
-          
-          <a href="https://discord.gg/yCj3gc" target="_blank" style={{color: 'inherit'}}>
-            Matic Hackathons Discord Channel
-          </a>
-        </button>
-      </div>
+  <button className="btn btn-primary btn-md">
+    <a href="https://discord.gg/yCj3gc" target="_blank" style={{color: 'inherit'}}>
+      Matic Hackathons Discord Channel
+    </a>
+  </button>
+</div>
 
 ### **Meet-ups**
 
 Some meetups are more about trading “investment” advice but a good technical meetup in your area is an excellent way to meet other people interested in Dapp development.
 
 <div style={{textAlign: 'center', paddingTop: '15px', paddingBottom: '15px'}}>
-        <button className="btn btn-primary btn-md" style={{padding: '15px', backgroundColor: '#2BBDF7', color: '#fff', borderRadius: '4px', cursor: 'pointer', boxShadow: '0px 4px 7px -4px rgba(0,0,0,0.75)'}}>
-          <a href="https://t.me/EthereumIndiaOfficial" target="_blank" style={{color: 'inherit'}}>
-          Ethereum India Official
-          </a>
-        </button>
-      </div>
+  <button className="btn btn-primary btn-md">
+    <a href="https://t.me/EthereumIndiaOfficial" target="_blank" style={{color: 'inherit'}}>
+    Ethereum India Official
+    </a>
+  </button>
+</div>
 
 # **Keeping Up with Development**
 

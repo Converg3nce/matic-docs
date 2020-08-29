@@ -20,11 +20,9 @@ In order to view the flow of funds in your accounts, on the Matic Network, you w
     { label: 'Mumbai-Testnet', value: 'mumbai', },
   ]
 }>
+
 <TabItem value="mumbai">
-
-# Mumbai-Testnet
-
-To add Matic’s Mumbai-Testnet, click on the Network selection dropdown and then click on Custom RPC. 
+To add Matic’s Mumbai-Testnet, click on the Network selection dropdown and then click on Custom RPC.
 
 <img src={useBaseUrl("img/metamask/select-network.png")} />
 
@@ -33,12 +31,9 @@ It will open up a form with 2 tabs on the top, Settings and Info. In the Setting
 <img src={useBaseUrl("img/metamask/metamask-settings.png")} />
 
 Once you’ve added the URL in the New Network field, click on Save. You will be directly switched to Matic’s Mumbai-Testnet now in the network dropdown list. You can now close the dialog.
-
 </TabItem>
+
 <TabItem value="mainnet">
-
-# Matic-Mainnet
-
 To add Matic’s Mainnet, click on the Network selection dropdown and then click on Custom RPC. 
 
 <img src={useBaseUrl("img/metamask/select-network.png")} />
@@ -48,6 +43,6 @@ It will open up a form with 2 tabs on the top, Settings and Info. In the Setting
 <img src={useBaseUrl("img/metamask/metamask-settings-mainnet.png")} />
 
 Once you’ve added the URL in the New Network field, click on Save. You will be directly switched to Matic’s Mainnet now in the network dropdown list. You can now close the dialog.
-
 </TabItem>
+
 </Tabs>

@@ -55,33 +55,34 @@ Go to File Explorers, And Create a new file <img src={useBaseUrl("img/helloworld
 - Copy/Paste the Smart contract below into the newly created file ```HelloWorld.sol```
 
 # **The smart contract**
-  ```javascript
-  // Specifies that the source code is for a version
-  // of Solidity greater than 0.5.10
-  pragma solidity ^0.5.10;
 
-  // A contract is a collection of functions and data (its state)
-  // that resides at a specific address on the Ethereum blockchain.
-  contract HelloWorld {
+```js title="HelloWorld.sol"
+// Specifies that the source code is for a version
+// of Solidity greater than 0.5.10
+pragma solidity ^0.5.10;
 
-      // The keyword "public" makes variables accessible from outside a contract
-      // and creates a function that other contracts or SDKs can call to access the value
-      string public message;
+// A contract is a collection of functions and data (its state)
+// that resides at a specific address on the Ethereum blockchain.
+contract HelloWorld {
 
-      // A special function only run during the creation of the contract
-      constructor(string memory initMessage) public {
-          // Takes a string value and stores the value in the memory data storage area,
-          // setting `message` to that value
-          message = initMessage;
-      }
+    // The keyword "public" makes variables accessible from outside a contract
+    // and creates a function that other contracts or SDKs can call to access the value
+    string public message;
 
-      // A publicly accessible function that takes a string as a parameter
-      // and updates `message`
-      function update(string memory newMessage) public {
-          message = newMessage;
-      }
-  }
-  ```
+    // A special function only run during the creation of the contract
+    constructor(string memory initMessage) public {
+        // Takes a string value and stores the value in the memory data storage area,
+        // setting `message` to that value
+        message = initMessage;
+    }
+
+    // A publicly accessible function that takes a string as a parameter
+    // and updates `message`
+    function update(string memory newMessage) public {
+        message = newMessage;
+    }
+}
+```
 
 The first line, `pragma solidity ^0.5.10` specifies that the source code is for a Solidity version greater than 0.5.10. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
 
