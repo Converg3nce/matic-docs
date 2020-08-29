@@ -112,7 +112,7 @@ contract receiver {
   function onStateReceive(uint256 stateId, bytes calldata data) external {
     lastStateId = stateId;
     lastChildData = data;
-	}
+  }
 }
 ```
 
