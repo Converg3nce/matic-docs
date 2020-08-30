@@ -59,16 +59,16 @@ module.exports = {
           label: "Matic Faucet",
           href: "https://faucet.matic.network/",
         },
-        {
-          type: "link",
-          label: "RPC Health",
-          href: "https://status.matic.today",
-        },
-        {
-          type: "link",
-          label: "Checkpoint Status",
-          href: "https://status.matic.today/#/checkpoints",
-        },
+        // {
+        //   type: "link",
+        //   label: "RPC Health",
+        //   href: "https://status.matic.today",
+        // },
+        // {
+        //   type: "link",
+        //   label: "Checkpoint Status",
+        //   href: "https://status.matic.today/#/checkpoints",
+        // },
         "develop/tools/matic-gas-station",
       ],
     },

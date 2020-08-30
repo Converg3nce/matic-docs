@@ -9,7 +9,7 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
-Matic brings you a trustless two-way transaction channel between Matic and Ethereum by introducing the cross-chain bridge with Plasma and PoS security. With this users can transfer tokens across matic without incurring third-party risks and market liquidity limitations.
+Matic brings you a trustless two-way transaction channel between Matic and Ethereum by introducing the cross-chain bridge with Plasma and PoS security. With this users can transfer tokens across matic without incurring third-party risks and market liquidity limitations. **_The Plasma and PoS Bridge is available on both Mumbai as well as Mainnet._**
 
 **Matic network bridge provides a scaling solution which is near-instant, low-cost, and quite flexible**. Matic uses a dual-consensus architecture(Plasma + Proof-of-Stake (PoS) platform)
 to optimise for speed and decentralisation. We consciously architected the system to support arbitrary state transitions on our sidechains, which are EVM-enabled.
