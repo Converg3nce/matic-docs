@@ -43,8 +43,4 @@ Once you've press the button, Arkane will ask you to confirm using your PIN (the
 
 🥳 Congratulations! You have now created your Matic wallet to manage your digital assets on the Matic blockchain. 
 
-For those new to cryptocurrencies and wallets, have a look at the screenshot below to get you started with what-is-what.
-
-![Wallet Dashboard Explained](img/08.png)
-
 
