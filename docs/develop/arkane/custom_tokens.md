@@ -8,3 +8,6 @@ keywords:
   - matic
 image: https://matic.network/banners/matic-network-16x9.png
 ---
+> Custom fungible and non fungible tokens
+
+![The Hulk ERC1155 NFT on Matic](img/09.png)
