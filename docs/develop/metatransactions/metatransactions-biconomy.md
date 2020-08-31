@@ -11,7 +11,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Scalable Relayer Infrastructure for Blockchain Transactions.
 
-## intro
+## Introduction
 
 Biconomy is a scalable transaction relayer infrastructure, which can pay blockchain transaction's gas fee for your dApp user, while collecting fees from you on monthly basis, in form of some stable token.
 
@@ -30,7 +30,7 @@ If dApps support native meta transactions, then biconomy relayers can directly t
 
 <img src={useBaseUrl("img/biconomy/NativeMetaTx.png")} />
 
-## integration
+## Integration
 
 Biconomy offers their SDK that makes this integration seamless, called Mexa.
 
@@ -39,13 +39,13 @@ Integration with Mexa is a two step process:
 1. Register your DApp on Mexa Dashboard, a dashboard for developers, and copy API Key generated for your DApp.
 2. Integrate Mexa SDK in your DApp code using API Key you got from dashboard.
 
-You'll first need your deployed smart contract address and it's ABI to register on the dashboard.
+You will first need your deployed smart contract address and it's ABI to register on the dashboard.
 
-### dashboard
+### Dashboard
 
 Follow the steps **[here](https://docs.biconomy.io/biconomy-dashboard)**, to register an account and add a DApp to get the keys, and configure functions that will accept signed transactions.
 
-### using mexa
+### Using mexa
 
 Get inside dApp client code directory, to configure meta transactions. Lets first install `@biconomy/mexa` from npm.
 
@@ -78,6 +78,6 @@ You have now enabled meta transactions in your DApp. Interact with web3 the way 
 
 Now whenever there is a write transaction action(registered in mexa dashboard also) initiated from the user, mexa will ask for user’s signature in an [EIP-712](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-712.md) format and handle the transaction rather than sending signed transaction directly to blockchain from user’s wallet.
 
-### next
+### Next
 
 You can go through [this](https://github.com/bcnmy/dapp-demo) example for getting an in depth overview of native meta transactions.
