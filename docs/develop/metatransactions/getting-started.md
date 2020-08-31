@@ -17,6 +17,6 @@ Assuming your familiarity with the different approaches you can take to integrat
 
 To integrate your DApp with Meta Transactions on Matic, you can choose to go with either the following two relayers or spin up a custom solution:
 
-1. [Biconomy](metatransactions-biconomy)
-2. [Gas Station Network(GSN)](metatransactions-gsn)
+1. [Biconomy](https://docs.matic.network/docs/develop/metatransactions/metatransactions-biconomy)
+2. [Gas Station Network(GSN)](https://docs.matic.network/docs/develop/metatransactions/metatransactions-gsn)
 3. Custom solutions
