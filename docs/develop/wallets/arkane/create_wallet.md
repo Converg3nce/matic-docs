@@ -29,6 +29,7 @@ To secure your wallet you need to configure a PIN. You PIN should be between 4 a
 
 ![Configure Wallet PIN](img/04.png)
 
+## Step 2. Create your wallet
 Now that you've configured your PIN, you are ready to create a Matic wallet. Just select Matic from the list.
 
 ![Select the Matic blockchain](img/05.png)
@@ -41,6 +42,8 @@ Once you've press the button, Arkane will ask you to confirm using your PIN (the
 
 ![Wallet Dashboard](img/07.png)
 
-🥳 Congratulations! You have now created your Matic wallet to manage your digital assets on the Matic blockchain. 
+## 🥳 Congratulations! 
+
+You have now created your Matic wallet to manage your digital assets on the Matic blockchain. 
 
 

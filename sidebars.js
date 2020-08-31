@@ -74,17 +74,6 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Using Arkane",
-      items: [
-        "develop/arkane/intro",  
-	"develop/arkane/create-wallet",
-        "develop/arkane/network",
-        "develop/arkane/custom-tokens",
-        "develop/arkane/support",	      
-      ],
-    },
-    {
-      type: "category",
       label: "Using Metamask",
       items: [
         "develop/metamask/hello",
@@ -99,7 +88,17 @@ module.exports = {
       label: "Wallets",
       items: [
         "develop/wallets/getting-started",
-        "develop/wallets/arkane", 
+	{
+         type: "category",
+         label: "Arkane",
+         items: [
+	  "develop/wallets/arkane/intro",
+          "develop/wallets/arkane/create-wallet",
+          "develop/wallets/arkane/network",
+          "develop/wallets/arkane/custom-tokens",
+          "develop/wallets/arkane/support",
+         ],
+       },
         "develop/wallets/fortmatic",	      
         "develop/wallets/metamask",
 	"develop/wallets/portis",
