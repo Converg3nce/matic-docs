@@ -22,11 +22,12 @@ Switch over to Matic's RPC and get started!
 Matic's Test Network which is called **Mumbai** connects with **Ethereum's Goërli Testnet.** 
 All the network related details can be found in [network docs](/docs/develop/network-details/network) 
 
-- [Setup Metamask Wallet](/docs/develop/metamask/hello)
+- Setup [Metamask Wallet](/docs/develop/metamask/hello) or [Arkane Wallet](/docs/develop/wallets/arkane/intro)
 - Deploy your Contracts on Matic Network
     - [Using Remix](/docs/develop/remix)
     - [Using Truffle](/docs/develop/truffle)
-- [Connecting to Matic with RPC](https://docs.matic.network/docs/develop/metamask/testnet) by adding Matic network on Metamask.
+- Connecting to Matic [with RPC](https://docs.matic.network/docs/develop/metamask/testnet) by adding Matic network on Metamask or directly via [Arkane](/docs/develop/wallets/arkane/network).
+
   Note that same RPC can be used with web3js.
 
     ```jsx
@@ -60,7 +61,7 @@ All the network related details can be found in [network docs](/docs/develop/net
 
 - [Full Stack DApp: Tutorial Series](https://kauri.io/full-stack-dapp-tutorial-series/5b8e401ee727370001c942e3/c)
 - Getting to know your tools:
-    - [Web3js](https://www.dappuniversity.com/articles/web3-js-intro), [Remix](https://docs.matic.network/docs/develop/remix/), [Truffle](https://docs.matic.network/docs/develop/truffle), [Metamask](https://docs.matic.network/docs/develop/metamask/hello)
+    - [Web3js](https://www.dappuniversity.com/articles/web3-js-intro), [Remix](https://docs.matic.network/docs/develop/remix/), [Truffle](https://docs.matic.network/docs/develop/truffle), [Metamask](https://docs.matic.network/docs/develop/metamask/hello), [Arkane](/docs/develop/wallets/arkane/intro)
 - [Writing your first DApp on Matic!](https://docs.matic.network/docs/develop/full-stack-dapp-with-pos)
 
 **😎 Advanced**
