@@ -10,24 +10,6 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Ethereum Gas Station Network (GSN) abstracts away gas to minimize onboarding & UX friction for dapps. With GSN, gasless clients can interact with Ethereum contracts without users needing ETH for transaction fees. The GSN is a decentralized system that improves dapp usability without sacrificing security.
+In general, for interacting with Ethereum DApps users need to have enough Ether in their account, which requires them to go through lengthy KYC procedure; then buying Ether & start interacting - not a good UX. 
 
-<img src={useBaseUrl("img/gsn.png")} />
-
-Example use cases for GSN:
-
-1. **Pay gas in any token**: Allow users to pay for gas in any token
-2. **Pay gas in fiat**: Allow users to pay for gas in fiat without having to go through KYC
-3. **Privacy**: Enabling ETH-less withdrawal of tokens sent to stealth addresses
-4. **Onboarding**: Allow dapps to subsidize the onboarding process for new users
-
-
-## How to implement GSN?
-
-1. [Simple Integration Walkthrough](https://docs.opengsn.org/tutorials/index.html)
-2. Read more about [architecture](https://docs.opengsn.org/learn/index.html)
-
-To learn how to integrate GSN with your contracts, [see Writing GSN-capable contracts.](https://docs.opengsn.org/contracts/index.html)
-
-To learn how to integrate GSN with your client, [see Javascript client](https://docs.opengsn.org/gsn-provider/getting-started.html).
-
+That's where GSN comes into picture with an interesting proposal for improving DApp UX, where gas less transactions can be sent to Ethereum network & user requests to be funded by some party other than user.
