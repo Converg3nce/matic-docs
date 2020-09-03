@@ -16,11 +16,16 @@ That's where GSN comes into picture with an interesting proposal for improving D
 
 <img src={useBaseUrl("img/gsn/paymaster_needs_gas.png")} />
 
-## components
+## Components
 
 GSN is a broad idea, which brings several components into picture, discussed below.
 
-### client
+### Client
 
 Clients are dApp users, who will be signing a message, with all required fields & send it to a *relay server*, where gas fees to be paid for this transaction. So client doesn't initiate a transaction here, rather they'll ask relay server to do it for them.
 
+### Relay Server
+
+Relay servers will be accepting requests from clients & paying gas fees for them, while first checking with paymaster contract _( via relay hub )_ that if it relays this transaction does it get paid back or not ? 
+
+It's always advisable to use dedicated relay server for your dApp & use third party relays when your relay is down. This provides better availability guarantee of service. Also for using third party relays, most probably you're going to pay an extra service charge.
