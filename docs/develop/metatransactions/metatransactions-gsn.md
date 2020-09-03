@@ -20,6 +20,8 @@ That's where GSN comes into picture with an interesting proposal for improving D
 
 GSN is a broad idea, which brings several components into picture, discussed below.
 
+<img src={useBaseUrl("img/gsn/gsn_flow_full_layered.jpg")} />
+
 ### Client
 
 Clients are dApp users, who will be signing a message, with all required fields & send it to a *relay server*, where gas fees to be paid for this transaction. So client doesn't initiate a transaction here, rather they'll ask relay server to do it for them.
@@ -58,7 +60,7 @@ This is the contract that we want to make GSN-aware, for that we're simply going
 
 GSN relays are not serving free-of-cost, in order to cover their expenses, they will charge transaction fees in terms of FIAT or ERC20 tokens from paymaster contracts. We can inherit from [BasePaymaster](https://github.com/opengsn/gsn/blob/master/contracts/BasePaymaster.sol), and provide implementation of following methods for processing relayed calls. These methods to be invoked by relayhub _( only singleton instance of it for a certain network )_ before & after sending relayed calls to trusted forwarder.
 
-#### `acceptRelayCall`
+#### `acceptRelayedCall`
 
 RelayHub asks paymaster whether it's interested in accepting new request or not, if not it can revert in this method. It can implement business logic for only accepting requests from white listed users; calling specific onboarding function in target contract etc.
 
