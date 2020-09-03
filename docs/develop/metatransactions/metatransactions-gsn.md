@@ -45,3 +45,11 @@ This is the GSN aware target contract, able to accept meta transactions, where a
 ### Relay Hub
 
 Relay Hub will trustlessly connect clients, relay servers & paymasters, so participants don't need to know about each other. It'll help clients discover good relayers; prevent third-party relays from censoring transactions; make sure relay server gets paid back by paymaster after transaction is completed etc.
+
+## GSN-aware Contracts
+
+GSN will help us in building great dApps where user won't need to pay for their transactions, which will improve UX. For writing GSN-aware contracts, we need to take care of following things.
+
+### Recipient Contract
+
+This is the contract that we want to make GSN-aware, for that we're simply going to inherit from [BaseRelayRecipeint](https://github.com/opengsn/gsn/blob/master/contracts/BaseRelayRecipient.sol), which adds one important method `_msgSender()`, to be used in all occurances of `msg.sender`. `_msgSender()` will take care of all lower level details for extracting actual client address, which will be different that `msg.sender` in case of meta transactions.
