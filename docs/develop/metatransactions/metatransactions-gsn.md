@@ -71,3 +71,9 @@ After a relayed call is accepted by paymaster, relay hub will call this function
 After target contract call has completed, this method to be called with accurate estimate of transaction cost, where user can be charged. It'll also let us know whether transaction was reverted or not, giving relayer an opportunity to not charge user for reverted calls. 
 
 Above three methods give us opportunity for creating a fee model where users can be charged using ERC20 tokens. In `pre-` relayed call, we lock some token & in `post-` user actually gets charged, depending upon actual gas data.
+
+### Trusted Forwarder
+
+We can avoid auditing whole relay hub system, by putting an extra piece in image, which will verify client signature of relayed calls & address nonce. Verified calls get through & reach target contract method. 
+
+This eventually reduces amount of checking target contract needs to do. In constructor of target contract, we need to put trusted forwarder. We can also set a list of trusted forwarders, if situation demands. We need to also make it sure, only owner gets to update this trusted forwarder address set.
