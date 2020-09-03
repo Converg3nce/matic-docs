@@ -33,3 +33,7 @@ It's always advisable to use dedicated relay server for your dApp & use third pa
 ### PayMaster
 
 PayMaster contract has a full gas tank of Ether, in relayhub, which is to be used for paying gas fees of relayed transactions. PayMaster contract has full control of either accepting or rejecting any relayed transaction.
+
+### Trusted Forwarder
+
+Recipient contract accepts only those requests coming from a trusted forwarder, which will verify signature & account nonce, that can be directly processed in recepient contract.
