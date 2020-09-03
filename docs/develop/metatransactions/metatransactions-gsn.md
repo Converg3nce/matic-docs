@@ -36,4 +36,8 @@ PayMaster contract has a full gas tank of Ether, in relayhub, which is to be use
 
 ### Trusted Forwarder
 
-Recipient contract accepts only those requests coming from a trusted forwarder, which will verify signature & account nonce, that can be directly processed in recepient contract.
+Recipient contract accepts only those requests coming from a trusted forwarder, which will verify signature & account nonce, that can be directly processed in recipient contract.
+
+### Recipient Contract
+
+This is the GSN aware target contract, able to accept meta transactions, where actual client address can be retrieved from `_msgSender()`, instead of `msg.sender`, when it's inheriting from this simple [base class](https://github.com/opengsn/gsn/blob/master/contracts/BaseRelayRecipient.sol).
