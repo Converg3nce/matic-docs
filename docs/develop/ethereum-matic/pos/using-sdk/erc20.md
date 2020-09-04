@@ -31,69 +31,6 @@ Withdraw ERC20 -
 
 ---
 
-### Configuring Matic SDK
-
-Install Matic SDK (**_2.0.2)_**
-
-```bash
-npm install --save @maticnetwork/maticjs
-```
-
-While creating **_MaticPOSClient_** object **network**,**version**,**_maticProvider_**, **_parentProvider_**, **_posERC20Predicate_** and **_posRootChainManager_** need to be provided.
-
-```jsx
-const MaticPOSClient = require("@maticnetwork/maticjs").MaticPOSClient;
-const config = require("./config");
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-
-const getMaticPOSClient = () => {
-  return new MaticPOSClient({
-    network: "testnet", // optional, default is testnet
-    version: "mumbai", // optional, default is mumbai
-    parentProvider: new HDWalletProvider(
-      config.user.privateKey,
-      config.root.RPC
-    ),
-    maticProvider: new HDWalletProvider(
-      config.user.privateKey,
-      config.child.RPC
-    ),
-    posRootChainManager: config.root.POSRootChainManager,
-    posERC20Predicate: config.root.posERC20Predicate, // optional, required only if working with ERC20 tokens
-    parentDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
-    maticDefaultOptions: { from: config.user.address }, // optional, can also be sent as last param while sending tx
-  });
-};
-```
-
-The configuration file should be structured like this. Make sure you add your Address, Privatekey and Goerli RPC into this file.
-
-```json
-module.exports = {
-  root: {
-    RPC: "GOERLI-RPC",
-    POSRootChainManager: "0xBbD7cBFA79faee899Eaf900F13C9065bF03B1A74",
-    DERC20: "0x655F2166b0709cd575202630952D71E2bB0d61Af",
-    posERC20Predicate: "0xdD6596F2029e6233DEFfaCa316e6A95217d4Dc34",
-    posEtherPredicate: "0xe2B01f3978c03D6DdA5aE36b2f3Ac0d66C54a6D5",
-  },
-  child: {
-    RPC: "https://rpc-mumbai.matic.today",
-    DERC20: "0xfe4F5145f6e09952a5ba9e956ED0C25e3Fa4c7F1",
-    MaticWETH: "0x714550C2C1Ea08688607D86ed8EeF4f5E4F22323",
-  },
-  user: {
-    privateKey:
-      "0xPVT_KEY",
-    address: "0xPUB_ADDR",
-    amount: "5000000000000000000", // 0.005
-    amount2: "700000000000000000", // 0.007
-    tokenId: "1234",
-    tokenId2: "6789",
-  },
-};
-```
-
 ### Approve
 
 This is a normal ERC20 approval so that **_ERC20Predicate_** can call **_transferFrom_** function. Matic POS client exposes **_approveERC20ForDeposit_** method to make this call.
@@ -104,7 +41,7 @@ await maticPOSClient.approveERC20ForDeposit(rootToken, amount, { from });
 
 ### Deposit
 
-Deposit can be done by calling **_depositFor_** on RootChainManager contract. Note that token needs to be mapped and approved for transfer beforehand. Once tokens are transferred deposit proceeds using StateSync mechanism. Matic POS client exposes **_depositERC20ForUser_** method to make this call.
+Note that token needs to be mapped and approved for transfer beforehand. Matic POS client exposes **_depositERC20ForUser_** method to make this call.
 
 ```jsx
 await maticPOSClient.depositERC20ForUser(rootToken, from, amount, {

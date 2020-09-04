@@ -1,0 +1,62 @@
+---
+id: getting-started
+title: Getting started with the Matic SDK
+sidebar_label: Instantiating SDK
+description: Build your next blockchain app on Matic.
+keywords:
+  - docs
+  - matic
+image: https://matic.network/banners/matic-network-16x9.png
+---
+
+## Installation
+The easiest way to consume the SDK is via NPM. To install it in your project run
+```bash
+npm install @maticnetwork/maticjs
+```
+
+## Usage
+To access the SDK, import it in your application using
+```js
+const MaticPOSClient = require('@maticnetwork/maticjs').MaticPOSClient
+
+// or
+
+import { MaticPOSClient } from '@maticnetwork/maticjs'
+```
+
+Instantiate the client by passing network details and providers based on the network you are integrating. The providers can be RPC urls, Metamask provider, HDWalletProvider etc. based on requirement.
+```jsx
+// for mumbai testnet
+const maticPOSClient = new MaticPOSClient({
+  network: "testnet",
+  version: "mumbai",
+  parentProvider: <goerli-provider>,
+  maticProvider: <mumbai-provider>
+});
+```
+```jsx
+// for Matic mainnet
+const maticPOSClient = new MaticPOSClient({
+  network: "mainnet",
+  version: "v1",
+  parentProvider: <ethereun-provider>,
+  maticProvider: <matic-provider>
+});
+```
+More details can be provided if you want to override the default values.
+```js
+const maticPOSClient = new MaticPOSClient({
+  network: "testnet",
+  version: "mumbai",
+  parentProvider: <goerli-provider>,
+  maticProvider: <mumbai-provider>,
+  rootChain: <plasma-root-chain-address>,
+  posRootChainManager: <pos-root-chain-manager-address>,
+  posERC20Predicate: <pos-erc20-predicate-address>,
+  posERC721Predicate: <pos-erc721-predicate-address>,
+  posERC1155Predicate: <pos-erc1155-predicate-address>,
+  parentDefaultOptions: { from: <user-address> },
+  maticDefaultOptions: { from: <user-address> },
+});
+```

@@ -116,13 +116,28 @@ module.exports = {
           label: "PoS Bridge",
           items: [
             "develop/ethereum-matic/pos/getting-started",
-            "develop/ethereum-matic/pos/eth",
-            "develop/ethereum-matic/pos/erc20",
-            "develop/ethereum-matic/pos/erc721",
-            "develop/ethereum-matic/pos/erc1155",
-            "develop/ethereum-matic/pos/deployment",
-            // "develop/ethereum-matic/pos/contract-interfaces",
-            // "develop/ethereum-matic/pos/support-multiple-token",
+            {
+              type: "category",
+              label: "Using SDK",
+              items: [
+                "develop/ethereum-matic/pos/using-sdk/getting-started",
+                "develop/ethereum-matic/pos/using-sdk/eth",
+                "develop/ethereum-matic/pos/using-sdk/erc20",
+                "develop/ethereum-matic/pos/using-sdk/erc721",
+                "develop/ethereum-matic/pos/using-sdk/erc1155"
+              ],
+            },
+            {
+              type: "category",
+              label: "Calling Contracts",
+              items: [
+                "develop/ethereum-matic/pos/calling-contracts/ether",
+                "develop/ethereum-matic/pos/calling-contracts/erc20",
+                "develop/ethereum-matic/pos/calling-contracts/erc721",
+                "develop/ethereum-matic/pos/calling-contracts/erc1155",
+              ],
+            },
+            "develop/ethereum-matic/pos/deployment"
           ],
         },
         {
