@@ -425,13 +425,14 @@ dagger.on("confirmed:addr/{address}/tx", result => {
 
 #### addr/{address}/tx/{dir}
 
-`dir` is transaction direction ∈ {`in`, `out`}
+`dir` is transaction direction ∈ {`in`, `out`}. `address` can be omitted to receive notification for any address.
 
 <Tabs
   defaultValue="in"
   values={[
     { label: 'incoming', value: 'in', },
     { label: 'outgoing', value: 'out', },
+    { label: 'wild card', value: 'all', },
   ]
 }>
 <TabItem value="in">
@@ -491,6 +492,38 @@ dagger.on("latest:addr/{address}/tx/out", result => {
 ```javascript
 dagger.on("confirmed:addr/{address}/tx/out", result => {
   console.log("New Outgoing Transaction : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="all">
+
+Using wildcard notation in place of `address`, to get notified for all incoming & outgooing transactions.
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:addr/+/tx/in", result => {
+  console.log("New Incoming Transaction : ", result)
+})
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:addr/+/tx/in", result => {
+  console.log("New Incoming Transaction : ", result)
 })
 ```
 
@@ -627,24 +660,40 @@ dagger.on("confirmed:tx/{txId}/receipt", result => { console.log(result) })
 </TabItem>
 </Tabs>
 
-```javascript
-// confirmed (irreversible) incoming transaction
-dagger.on("confirmed:addr/0xa7447.../tx/in", function(result) {
-  // send email to user about new transaction she received
-});
+#### log/{contractAddress}
 
-// confirmed (irreversible) contract deployment
-dagger.on("confirmed:tx/0xd66169d..../receipt", function(result) {
-  // send notification to user saying - her contract has been deployed successfully
-});
+When log generated for `contractAddress`
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:log/{contractAddress}", result => {
+  console.log("New Log : ", result)
+})
 ```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:log/{contractAddress}", result => {
+  console.log("New Log : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
 
 You can use wildcard for events too. There are two type of wildcards: `+` (for single) and `#` (for multiple). Use with caution as it will fetch more data then you need, and can bombard with data to your DApp.
 
 ```javascript
-// Listen for every outgoing transaction for any address
-dagger.on('latest:addr/+/tx/out', ...)
-
 // Triggers when 1 GNT (Golem token) get transferred to Golem multisig wallet
 dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef/+/0x7da82c7ab4771ff031b66538d2fb9b0b047f6cf9/#', ...)
 
