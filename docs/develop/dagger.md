@@ -213,16 +213,10 @@ const filter = contract.events.Transfer({
 
 ```javascript
 // watch
-filter.watch((data, removed) => {
-  // data.returnValues.to : address to which it has been transferred to
-  // data.returnValues.value : value which has been transferred
-})
+filter.watch((data, removed) => { console.log(data, removed) })
 
 // or watch only once
-filter.watchOnce((data, removed) => {
-  // data.returnValues.to : address to which it has been transferred to
-  // data.returnValues.value : value which has been transferred
-})
+filter.watchOnce((data, removed) => { console.log(data, removed) })
 ```
 
 - Stopping event watching
