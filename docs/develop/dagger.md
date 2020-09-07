@@ -96,28 +96,10 @@ dagger.on('latest:block.number', result => {
 })
 ```
 
-- Run `index.js` & you'll start receiving data as soon as new block gets created.
+- Run `index.js` & you'll start receiving block number as soon as new block gets created.
 
 ```bash
 node index.js
-```
-
-**Test dagger server**
-
-This library consists `woodendagger` executable which is test dagger server on your local machine. So you can test with TestRPC.
-
-Please do not use `woodendagger` in production. It's only for development purpose. It doesn't support `removed` flag.
-
-```bash
-$ woodendagger --url=https://mainnet.infura.io # or http://localhost:8545 for local json-rpc
-
-# If you want to start dagger server on different ports,
-# sockport: socket port for backend connection over TCP
-# wsport: websocket port for frontend connection over websocket
-$ woodendagger --url=http://localhost:8545 --sockport=1883 --wsport=1884
-
-# To connect from dagger:
-var dagger = new Dagger('mqtt://localhost:1883')
 ```
 
 ## Events
@@ -270,9 +252,27 @@ Creates web3 contract wrapper to support dagger.
   filter.stopWatching();
   ```
 
+## Test Dagger Server
+
+This library consists `woodendagger` executable which is test dagger server on your local machine. So you can test with TestRPC.
+
+Please do not use `woodendagger` in production. It's only for development purpose. It doesn't support `removed` flag.
+
+```bash
+$ woodendagger --url=https://mainnet.infura.io # or http://localhost:8545 for local json-rpc
+
+# If you want to start dagger server on different ports,
+# sockport: socket port for backend connection over TCP
+# wsport: websocket port for frontend connection over websocket
+$ woodendagger --url=http://localhost:8545 --sockport=1883 --wsport=1884
+
+# To connect from dagger:
+var dagger = new Dagger('mqtt://localhost:1883')
+```
+
 ## Support
 
-If you have any queries, feedback or feature requests, feel free to reach out to us on telegram: https://t.me/maticnetwork
+If you have any queries, feedback or feature requests, feel free to reach out to us on [Telegram](https://t.me/maticnetwork)
 
 ## License
 
