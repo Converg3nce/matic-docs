@@ -691,11 +691,13 @@ dagger.on("confirmed:log/{contractAddress}", result => {
 </TabItem>
 </Tabs>
 
-You can use wildcard for events too. There are two type of wildcards: `+` (for single) and `#` (for multiple). Use with caution as it will fetch more data then you need, and can bombard with data to your DApp.
+#### log/{contractAddress}/filter/{topic0}/{topic1}/{topic2}
+
+When new log with `topic0`, `topic1` & `topic2` generated for `contractAddress`
 
 ```javascript
 // Triggers when 1 GNT (Golem token) get transferred to Golem multisig wallet
-dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef/+/0x7da82c7ab4771ff031b66538d2fb9b0b047f6cf9/#', ...)
+dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef/filter/+/0x7da82c7ab4771ff031b66538d2fb9b0b047f6cf9/#', console.log)
 
 // Triggers when any amount of GNT (Golem token) get sent from Golem multisig wallet
 dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef/0x7da82c7ab4771ff031b66538d2fb9b0b047f6cf9/#', ...)
@@ -705,6 +707,10 @@ dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252
 ```
 
 > Event names are case-sensitive. `address`, `txId` and `topics` must be in lowercase.
+
+> Note: You can use wildcard for events too. There are two type of wildcards: `+` (for single) and `#` (for multiple). Use with caution as it will fetch more data then you need, and can bombard with data to your DApp.
+
+
 
 ## Test Dagger Server
 
