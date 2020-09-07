@@ -53,8 +53,7 @@ module.exports = {
     {
       type: "category",
       label: "Tools",
-      items: [
-        {
+      items: [{
           type: "link",
           label: "Matic Faucet",
           href: "https://faucet.matic.network/",
@@ -70,6 +69,7 @@ module.exports = {
         //   href: "https://status.matic.today/#/checkpoints",
         // },
         "develop/tools/matic-gas-station",
+        "develop/tools/matic-widget",
       ],
     },
     {
@@ -88,20 +88,20 @@ module.exports = {
       label: "Wallets",
       items: [
         "develop/wallets/getting-started",
-	{
-         type: "category",
-         label: "Arkane",
-         items: [
-	  "develop/wallets/arkane/intro",
-          "develop/wallets/arkane/create-wallet",
-          "develop/wallets/arkane/network",
-          "develop/wallets/arkane/custom-tokens",
-          "develop/wallets/arkane/support",
-         ],
-       },
-        "develop/wallets/fortmatic",	      
+        {
+          type: "category",
+          label: "Arkane",
+          items: [
+            "develop/wallets/arkane/intro",
+            "develop/wallets/arkane/create-wallet",
+            "develop/wallets/arkane/network",
+            "develop/wallets/arkane/custom-tokens",
+            "develop/wallets/arkane/support",
+          ],
+        },
+        "develop/wallets/fortmatic",
         "develop/wallets/metamask",
-	"develop/wallets/portis",
+        "develop/wallets/portis",
         "develop/wallets/torus",
         "develop/wallets/walletconnect",
       ],
@@ -284,14 +284,12 @@ module.exports = {
             {
               type: "link",
               label: "Matic-Mainnet",
-              href:
-                "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
+              href: "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
             },
             {
               type: "link",
               label: "Mumbai",
-              href:
-                "https://static.matic.network/network/testnet/mumbai/index.json",
+              href: "https://static.matic.network/network/testnet/mumbai/index.json",
             },
             {
               type: "link",
@@ -382,8 +380,7 @@ module.exports = {
         {
           type: "category",
           label: "Node Setup",
-          items: [
-            {
+          items: [{
               type: "category",
               label: "With Sentry",
               items: [
