@@ -9,38 +9,66 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 Dagger is the best way to get realtime updates from Ethereum Blockchain.
-It provides a way for your DApps and Backend system to get ethereum blockchain events, like transactions, receipts and logs in realtime over websocket or socket.
+It provides a way for your DApps and Backend system to get Ethereum blockchain events i.e. transactions, token transfers, receipts and logs in realtime over websocket or socket.
 
-We maintain infrastructure for reliable and scalable realtime events. eth-dagger is library for dagger project written in node.js and browser. It uses dagger server to get realtime updatesfrom Ethereum Network.
-
-**About dagger**
-
-Dagger helps users to develop faster and better Ethereum DApps. For more information:
+We maintain infrastructure for reliable and scalable realtime events. `@maticnetwork/dagger` is consumer library for Dagger project written in NodeJS. It uses Dagger server to get realtime updates from Ethereum Network.
 
 ## Installation
 
 ```sh
 # Using Yarn
-yarn add eth-dagger
+yarn add @maticnetwork/dagger
 
 # Using NPM
-npm install eth-dagger --save
+npm install @maticnetwork/dagger --save
 ```
 
 ## Network
 
-**Mainnet**
+### Ethereum Network
+
+#### Mainnet
 
 ```sh
 Websocket: wss://mainnet.dagger.matic.network
 Socket: mqtts://mainnet.dagger.matic.network (You can also use `ssl://` protocol)
 ```
 
-**Kovan**
+#### Kovan
 
-```
+```sh
 Websocket: wss://kovan.dagger.matic.network
 Socket: mqtts://kovan.dagger.matic.network (You can also use `ssl://` protocol)
+```
+
+#### Ropsten
+
+```sh
+Websocket: wss://ropsten.dagger.matic.network
+Socket: mqtts://ropsten.dagger.matic.network (You can also use `ssl://` protocol)
+```
+
+#### Goerli
+
+```sh
+Websocket: wss://goerli.dagger.matic.network
+Socket: mqtts://goerli.dagger.matic.network (You can also use `ssl://` protocol)
+```
+
+### Matic Network
+
+#### Mainnet
+
+```sh
+Websocket: wss://matic-mainnet.dagger.matic.network
+Socket: mqtts://matic-mainnet.dagger.matic.network (You can also use `ssl://` protocol)
+```
+
+#### Mumbai Testnet
+
+```sh
+Websocket: wss://mumbai-dagger.matic.today
+Socket: mqtts://mumbai-dagger.matic.today (You can also use `ssl://` protocol)
 ```
 
 ## Example
