@@ -10,7 +10,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Matic widget is an instance of matic wallet that anyone can integrate to their website. The widget has been designed to support matic wallet as well as matic token bridge functionalities as part of any website. This simply means that integrating the widget gives a better user expereince and users do not have to navigate to another page to use the matic functionalities. 
+Matic widget is an instance of Matic wallet that anyone can integrate to their website. The widget has been designed to support Matic wallet as well as Matic token bridge functionalities as part of any website. This simply means that integrating the widget gives a better user expereince and users do not have to navigate to another page to use the Matic functionalities. 
 
 ## Widget Developer dashboard
 
@@ -19,7 +19,7 @@ Widget developer dashboard is used to manage the widget. Developer can create, r
 - Developer dashboard:   [https://wallet.matic.today/widgets/](https://wallet.matic.today/widgets/)
 - Create new widget:   [https://wallet.matic.today/widgets/settings](https://wallet.matic.today/widgets/settings)
 
-For creating a widget,DApp Name, RPC, Widget type have to be given as input.
+For creating a widget, DApp Name, RPC, Widget type have to be given as input.
 
 <img src={useBaseUrl("img/matic-widget/create-widget.png")} />
 
