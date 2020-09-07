@@ -228,13 +228,37 @@ filter.stopWatching();
 
 ## Events
 
-**Ethereum events**
-
-Every ethereum event has room, and there are two rooms: `latest` and `confirmed`. `latest` events are fired immediately block included in chain. `confirmed` events are fired after 12 confirmations.
+Every event has a room ∈ {`latest`, `confirmed`}. 
+  - `latest` : Events are fired immediately after block included in chain. 
+  - `confirmed` : Events are fired after 12 confirmations.
 
 If you want to show updates on UI in your DApp, use `latest` events. It will help to make UI/UX better and user friendly.
 
 Use `confirmed` events for irreversible tasks from server or on UI. Like sending email, notifications or allow user to do subsequent task on UI after one transaction gets confirmed.
+
+| Ethereum event                                 | When?                                                                   | `removed` flag |
+| ---------------------------------------------- | ----------------------------------------------------------------------- | -------------- |
+| block.number                                   | For every new block number created                                      |                |
+| block.hash                                     | For every new block hash created                                        | Yes            |
+| block                                          | For every new block created                                             | Yes            |
+| block/`number`                                 | When particular block in future included in chain                       | Yes            |
+| addr/`address`/tx                              | On every new transaction for `address`                                  | Yes            |
+| addr/`address`/tx/out                          | On every new outgoing transaction for `address`                         | Yes            |
+| addr/`address`/tx/in                           | On every new incoming transaction for `address`                         | Yes            |
+| tx/`txId`                                      | When given `txId` included in block                                     | Yes            |
+| tx/`txId`/success                              | When tx status is success (included in block) for `txId`                | Yes            |
+| tx/`txId`/fail                                 | When tx fails (included in block) for `txId`                            | Yes            |
+| tx/`txId`/receipt                              | When receipt is generated (included in block) for `txId`                | Yes            |
+| addr/`contractAddress`/deployed                | When new `contractAddress` included in block                            | Yes            |
+| log/`contractAddress`                          | When new log generated for `contractAddress`                            | Yes            |
+| log/`contractAddress`/filter/`topic1`/`topic2` | When new log with `topic1` and `topic2` generated for `contractAddress` | Yes            |
+
+**Dagger events**
+
+| Dagger event      | When?                          | args           |
+| ----------------- | ------------------------------ | -------------- |
+| connection.status | When connection status changes | value: Boolean |
+
 
 Every event has to start with room:
 
@@ -270,29 +294,6 @@ dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252
 // Listen for every Golem token transfer (notice `#` at the end)
 dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef/#', ...)
 ```
-
-| Ethereum event                                 | When?                                                                   | `removed` flag |
-| ---------------------------------------------- | ----------------------------------------------------------------------- | -------------- |
-| block.number                                   | For every new block number created                                      |                |
-| block.hash                                     | For every new block hash created                                        | Yes            |
-| block                                          | For every new block created                                             | Yes            |
-| block/`number`                                 | When particular block in future included in chain                       | Yes            |
-| addr/`address`/tx                              | On every new transaction for `address`                                  | Yes            |
-| addr/`address`/tx/out                          | On every new outgoing transaction for `address`                         | Yes            |
-| addr/`address`/tx/in                           | On every new incoming transaction for `address`                         | Yes            |
-| tx/`txId`                                      | When given `txId` included in block                                     | Yes            |
-| tx/`txId`/success                              | When tx status is success (included in block) for `txId`                | Yes            |
-| tx/`txId`/fail                                 | When tx fails (included in block) for `txId`                            | Yes            |
-| tx/`txId`/receipt                              | When receipt is generated (included in block) for `txId`                | Yes            |
-| addr/`contractAddress`/deployed                | When new `contractAddress` included in block                            | Yes            |
-| log/`contractAddress`                          | When new log generated for `contractAddress`                            | Yes            |
-| log/`contractAddress`/filter/`topic1`/`topic2` | When new log with `topic1` and `topic2` generated for `contractAddress` | Yes            |
-
-**Dagger events**
-
-| Dagger event      | When?                          | args           |
-| ----------------- | ------------------------------ | -------------- |
-| connection.status | When connection status changes | value: Boolean |
 
 > Event names are case-sensitive. `address`, `txId` and `topics` must be in lowercase.
 
