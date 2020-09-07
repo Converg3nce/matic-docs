@@ -8,6 +8,9 @@ keywords:
   - matic
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Dagger is the best way to get realtime updates from Ethereum Blockchain.
 It provides a way for your DApps and Backend system to get Ethereum blockchain events i.e. transactions, token transfers, receipts and logs in realtime over websocket or socket.
 
@@ -236,6 +239,8 @@ If you want to show updates on UI in your DApp, use `latest` events. It will hel
 
 Use `confirmed` events for irreversible tasks from server or on UI. Like sending email, notifications or allow user to do subsequent task on UI after one transaction gets confirmed.
 
+### Network Events
+
 | Ethereum event                                 | When?                                                                   | `removed` flag |
 | ---------------------------------------------- | ----------------------------------------------------------------------- | -------------- |
 | block.number                                   | For every new block number created                                      |                |
@@ -253,21 +258,88 @@ Use `confirmed` events for irreversible tasks from server or on UI. Like sending
 | log/`contractAddress`                          | When new log generated for `contractAddress`                            | Yes            |
 | log/`contractAddress`/filter/`topic1`/`topic2` | When new log with `topic1` and `topic2` generated for `contractAddress` | Yes            |
 
-**Dagger events**
+### Dagger Events
 
-| Dagger event      | When?                          | args           |
+| Dagger Event      | When?                          | args           |
 | ----------------- | ------------------------------ | -------------- |
 | connection.status | When connection status changes | value: Boolean |
 
 
 Every event has to start with room:
 
+#### Block
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
 ```javascript
 // latest block number
-dagger.on("latest:block.number", function(result) {
-  console.log("Current block number: ", result.data);
-});
+dagger.on("latest:block", result => {
+  console.log("Current block : ", result)
+})
+```
 
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+// confirmed block number
+dagger.on("confirmed:block", result => {
+  console.log("Confirmed block : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
+
+
+#### Block Number
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+// latest block number
+dagger.on("latest:block.number", result => {
+  console.log("Current block number : ", result)
+})
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+// confirmed block number
+dagger.on("confirmed:block.number", result => {
+  console.log("Confirmed block number : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
+
+#### Latest Block Hash
+
+```javascript
+// latest block number
+dagger.on("latest:block.hash", result => {
+  console.log("Current block hash : ", result)
+})
+```
+
+```javascript
 // confirmed (irreversible) incoming transaction
 dagger.on("confirmed:addr/0xa7447.../tx/in", function(result) {
   // send email to user about new transaction she received
@@ -312,7 +384,7 @@ $ woodendagger --url=https://mainnet.infura.io # or http://localhost:8545 for lo
 $ woodendagger --url=http://localhost:8545 --sockport=1883 --wsport=1884
 
 # To connect from dagger:
-var dagger = new Dagger('mqtt://localhost:1883')
+const dagger = new Dagger('mqtt://localhost:1883')
 ```
 
 ## Support
