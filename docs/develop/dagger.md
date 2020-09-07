@@ -243,9 +243,9 @@ Use `confirmed` events for irreversible tasks from server or on UI. Like sending
 
 | Ethereum event                                 | When?                                                                   | `removed` flag |
 | ---------------------------------------------- | ----------------------------------------------------------------------- | -------------- |
+| block                                          | For every new block created                                             | Yes            |
 | block.number                                   | For every new block number created                                      |                |
 | block.hash                                     | For every new block hash created                                        | Yes            |
-| block                                          | For every new block created                                             | Yes            |
 | block/`number`                                 | When particular block in future included in chain                       | Yes            |
 | addr/`address`/tx                              | On every new transaction for `address`                                  | Yes            |
 | addr/`address`/tx/out                          | On every new outgoing transaction for `address`                         | Yes            |
@@ -267,7 +267,9 @@ Use `confirmed` events for irreversible tasks from server or on UI. Like sending
 
 Every event has to start with room:
 
-#### Block
+### block
+
+For every new block
 
 <Tabs
   defaultValue="latest"
@@ -279,7 +281,6 @@ Every event has to start with room:
 <TabItem value="latest">
 
 ```javascript
-// latest block number
 dagger.on("latest:block", result => {
   console.log("Current block : ", result)
 })
@@ -289,7 +290,6 @@ dagger.on("latest:block", result => {
 <TabItem value="confirmed">
 
 ```javascript
-// confirmed block number
 dagger.on("confirmed:block", result => {
   console.log("Confirmed block : ", result)
 })
@@ -299,7 +299,9 @@ dagger.on("confirmed:block", result => {
 </Tabs>
 
 
-#### Block Number
+#### block.number
+
+For every new block number
 
 <Tabs
   defaultValue="latest"
@@ -311,7 +313,6 @@ dagger.on("confirmed:block", result => {
 <TabItem value="latest">
 
 ```javascript
-// latest block number
 dagger.on("latest:block.number", result => {
   console.log("Current block number : ", result)
 })
@@ -321,7 +322,6 @@ dagger.on("latest:block.number", result => {
 <TabItem value="confirmed">
 
 ```javascript
-// confirmed block number
 dagger.on("confirmed:block.number", result => {
   console.log("Confirmed block number : ", result)
 })
@@ -330,14 +330,68 @@ dagger.on("confirmed:block.number", result => {
 </TabItem>
 </Tabs>
 
-#### Latest Block Hash
+#### block.hash
+
+For every new block hash
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
 
 ```javascript
-// latest block number
 dagger.on("latest:block.hash", result => {
   console.log("Current block hash : ", result)
 })
 ```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:block.hash", result => {
+  console.log("Confirmed block hash : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
+
+#### block/number
+
+When particular block **X**, in future included in chain
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:block/X", result => {
+  console.log("Included in chain : ", result)
+})
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:block/X", result => {
+  console.log("Included in chain : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
+
 
 ```javascript
 // confirmed (irreversible) incoming transaction
