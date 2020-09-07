@@ -423,6 +423,83 @@ dagger.on("confirmed:addr/{address}/tx", result => {
 </TabItem>
 </Tabs>
 
+#### addr/{address}/tx/{dir}
+
+`dir` is transaction direction ∈ {`in`, `out`}
+
+<Tabs
+  defaultValue="in"
+  values={[
+    { label: 'incoming', value: 'in', },
+    { label: 'outgoing', value: 'out', },
+  ]
+}>
+<TabItem value="in">
+
+On every new incoming transaction for `address`
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:addr/{address}/tx/in", result => {
+  console.log("New Incoming Transaction : ", result)
+})
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:addr/{address}/tx/in", result => {
+  console.log("New Incoming Transaction : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="out">
+
+On every new outgoing transaction for `address`
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:addr/{address}/tx/out", result => {
+  console.log("New Outgoing Transaction : ", result)
+})
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:addr/{address}/tx/out", result => {
+  console.log("New Outgoing Transaction : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+</Tabs>
+
 
 ```javascript
 // confirmed (irreversible) incoming transaction
