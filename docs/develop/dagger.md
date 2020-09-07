@@ -102,6 +102,136 @@ dagger.on('latest:block.number', result => {
 node index.js
 ```
 
+## API
+
+### new Dagger(url)
+
+Create dagger object
+
+- `url` is dagger server's address. Check [network section](#network) for all available url values.
+
+Example:
+
+```js
+const dagger = new Dagger(<url>)
+```
+
+### dagger.on(event, fn)
+
+Subscribe to a topic
+
+- `event` is a `String` topic to subscribe to. `event` wildcard characters are supported (`+` - for single level and `#` - for multi level)
+- `fn` - `function (data, removed)`
+  fn will be executed when event occurred:
+  - `data` data from event
+  - `removed` flag saying if data is removed from blockchain due to re-organization.
+
+Example:
+
+```js
+dagger.on('latest:block.number', (res, flag) => { console.log(res, flag) })
+```
+
+### dagger.once(event, fn)
+
+Same as [on](#daggeronevent-fn) but will be fired only once.
+
+Example:
+
+```js
+dagger.once('latest:block.number', (res, flag) => { console.log(res, flag) })
+```
+
+### dagger.off(event, fn)
+
+Unsubscribe from a topic
+
+- `event` is a `String` topic to unsubscribe from
+- `fn` - `function (data, removed)`
+
+Example:
+
+```js
+dagger.off('latest:block.number', (res, flag) => { console.log(res, flag) })
+```
+
+### dagger.of(room)
+
+Create room out of dagger. `room` has to be one out of two values
+  - `latest`
+  - `confirmed`
+
+`room` object has following methods:
+  - `on` same as dagger `on`
+  - `once` same as dagger `once`
+  - `off` same as dagger `off`
+
+```js
+const latestRoom = dagger.of('latest')
+const confirmedRoom = dagger.of('confirmed')
+```
+
+### dagger.end([force])
+
+Close the dagger, accepts the following options:
+
+- `force`: passing it to true will close the dagger right away. This parameter is 
+optional.
+
+```js
+dagger.end({force: true}) // immediate closing
+```
+
+### dagger.contract(web3Contract)
+
+Creates web3 contract wrapper to support Dagger.
+
+- First create a web3 contract object.
+
+```javascript
+// web3 contract
+const web3Contract = new web3.eth.Contract(abi, address)
+```
+
+- Now we'll create a dagger contract wrapper on it.
+
+```javascript
+// dagger contract
+const contract = dagger.contract(web3Contract)
+```
+
+- Time to filter out contract events
+
+```javascript
+const filter = contract.events.Transfer({
+  filter: { from: "0x123456..." },
+  room: "latest"
+})
+```
+
+- Watching contract events
+
+```javascript
+// watch
+filter.watch((data, removed) => {
+  // data.returnValues.to : address to which it has been transferred to
+  // data.returnValues.value : value which has been transferred
+})
+
+// or watch only once
+filter.watchOnce((data, removed) => {
+  // data.returnValues.to : address to which it has been transferred to
+  // data.returnValues.value : value which has been transferred
+})
+```
+
+- Stopping event watching
+
+```js
+// stop watching
+filter.stopWatching();
+```
+
 ## Events
 
 **Ethereum events**
@@ -171,86 +301,6 @@ dagger.on('latest:log/0xa74476443119a942de498590fe1f2454d7d4ac0d/filter/0xddf252
 | connection.status | When connection status changes | value: Boolean |
 
 > Event names are case-sensitive. `address`, `txId` and `topics` must be in lowercase.
-
-## API
-
-### new Dagger(url)
-
-Create dagger object
-
-- `url` is a `String` url to connect with dagger server node. Check [network section](#network) for all available url values
-
-Example:
-
-```js
-var dagger = new Dagger(<url>);
-```
-
-### dagger.on(event, fn)
-
-Subscribe to a topic
-
-- `event` is a `String` topic to subscribe to. `event` wildcard characters are supported (`+` - for single level and `#` - for multi level)
-- `fn` - `function (data, removed)`
-  fn will be executed when event occurred:
-  - `data` data from event
-  - `removed` flag saying if data is removed from blockchain due to re-organization.
-
-### dagger.once(event, fn)
-
-Same as `on` but will be fired only once.
-
-### dagger.off(event, fn)
-
-Unsubscribe from a topic
-
-- `event` is a `String` topic to unsubscribe from
-- `fn` - `function (data, removed)`
-
-### dagger.of(room)
-
-Create room out of dagger. `room` has to be one out of two values: `latest` and `confirmed`
-
-- `room` object has following methods:
-  - `on` same as dagger `on`
-  - `once` same as dagger `once`
-  - `off` same as dagger `off`
-
-### dagger.end([force])
-
-Close the dagger, accepts the following options:
-
-- `force`: passing it to true will close the dagger right away. This parameter is optional.
-
-### dagger.contract(web3Contract)
-
-Creates web3 contract wrapper to support dagger.
-
-- `web3Contract`: contract object web3. Example: `new web3.eth.Contract(abi, address)`
-
-  ```javascript
-  // web3 contract
-  var web3Contract = new web3.eth.Contract(abi, address);
-
-  // dagger contract
-  var contract = dagger.contract(web3Contract);
-  var filter = contract.events.Transfer({
-    filter: { from: "0x123456..." },
-    room: "latest"
-  });
-  // watch
-  filter.watch(function(data, removed) {
-    // data.returnValues.to : address to which it has been transferred to
-    // data.returnValues.value : value which has been transferred
-  });
-  // watch only once
-  filter.watchOnce(function(data, removed) {
-    // data.returnValues.to : address to which it has been transferred to
-    // data.returnValues.value : value which has been transferred
-  });
-  // stop watching
-  filter.stopWatching();
-  ```
 
 ## Test Dagger Server
 
