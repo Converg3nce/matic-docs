@@ -267,7 +267,7 @@ Use `confirmed` events for irreversible tasks from server or on UI. Like sending
 
 Every event has to start with room:
 
-### block
+#### block
 
 For every new block
 
@@ -361,7 +361,7 @@ dagger.on("confirmed:block.hash", result => {
 </TabItem>
 </Tabs>
 
-#### block/number
+#### block/{number}
 
 When particular block **X**, in future included in chain
 
@@ -386,6 +386,37 @@ dagger.on("latest:block/X", result => {
 ```javascript
 dagger.on("confirmed:block/X", result => {
   console.log("Included in chain : ", result)
+})
+```
+
+</TabItem>
+</Tabs>
+
+#### addr/{address}/tx
+
+On every new transaction for `address`
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:addr/{address}/tx", result => {
+  console.log("New Transaction : ", result)
+})
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:addr/{address}/tx", result => {
+  console.log("New Transaction : ", result)
 })
 ```
 
