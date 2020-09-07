@@ -500,6 +500,132 @@ dagger.on("confirmed:addr/{address}/tx/out", result => {
 </TabItem>
 </Tabs>
 
+#### tx/{txId}/{status}
+
+`status` is `txId`'s status ∈ {`success`, `fail`, `receipt`}. It can be kept empty too i.e. resulting into `tx/{txId}`, triggered when `txId` gets included in block.
+
+<Tabs
+  defaultValue="any"
+  values={[
+    { label: 'any', value: 'any', },
+    { label: 'success', value: 'success', },
+    { label: 'fail', value: 'fail', },
+    { label: 'receipt', value: 'receipt', },
+  ]
+}>
+<TabItem value="any">
+
+When given `txId` included in block
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:tx/{txId}", result => { console.log(result) })
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:tx/{txId}", result => { console.log(result) })
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="success">
+
+When tx status is success (included in block) for `txId`
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:tx/{txId}/success", result => { console.log(result) })
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:tx/{txId}/success", result => { console.log(result) })
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="fail">
+
+When tx fails (included in block) for `txId`
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:tx/{txId}/fail", result => { console.log(result) })
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:tx/{txId}/fail", result => { console.log(result) })
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="receipt">
+
+When receipt is generated (included in block) for `txId`
+
+<Tabs
+  defaultValue="latest"
+  values={[
+    { label: 'latest', value: 'latest', },
+    { label: 'confirmed', value: 'confirmed', },
+  ]
+}>
+<TabItem value="latest">
+
+```javascript
+dagger.on("latest:tx/{txId}/receipt", result => { console.log(result) })
+```
+
+</TabItem>
+<TabItem value="confirmed">
+
+```javascript
+dagger.on("confirmed:tx/{txId}/receipt", result => { console.log(result) })
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+</Tabs>
 
 ```javascript
 // confirmed (irreversible) incoming transaction
