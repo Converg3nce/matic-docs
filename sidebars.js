@@ -53,7 +53,8 @@ module.exports = {
     {
       type: "category",
       label: "Tools",
-      items: [{
+      items: [
+        {
           type: "link",
           label: "Matic Faucet",
           href: "https://faucet.matic.network/",
@@ -70,6 +71,7 @@ module.exports = {
         // },
         "develop/tools/matic-gas-station",
         "develop/tools/matic-widget",
+        "develop/tools/deposit-withdraw-status",
       ],
     },
     {
@@ -284,12 +286,14 @@ module.exports = {
             {
               type: "link",
               label: "Matic-Mainnet",
-              href: "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
+              href:
+                "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
             },
             {
               type: "link",
               label: "Mumbai",
-              href: "https://static.matic.network/network/testnet/mumbai/index.json",
+              href:
+                "https://static.matic.network/network/testnet/mumbai/index.json",
             },
             {
               type: "link",
@@ -380,7 +384,8 @@ module.exports = {
         {
           type: "category",
           label: "Node Setup",
-          items: [{
+          items: [
+            {
               type: "category",
               label: "With Sentry",
               items: [
