@@ -9,7 +9,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 
 For the upcoming testnet event, this is the minimal hardware configuration:
-:::tip Minimal hardware Configration for Validator Node
+:::tip Minimal hardware Configuration for Validator Node
 8 GB RAM 
 
 100GB SSD
@@ -17,7 +17,7 @@ For the upcoming testnet event, this is the minimal hardware configuration:
 x64 2.0 GHz 2v CPU
 :::
 
-:::tip Minimal hardware Configration for Sentry Node
+:::tip Minimal hardware Configuration for Sentry Node
 8 GB RAM 
 
 60GB SSD
