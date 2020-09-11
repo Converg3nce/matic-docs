@@ -145,3 +145,16 @@ tree
 
 3 directories, 3 files
 ```
+
+Now lets install `@opengsn/gsn`, with in this project, so that we can use some contracts from them.
+
+```bash
+npm i @opengsn/gsn
+```
+
+Time to write a smart contract. Lets get into `contracts` directory & create a contract.
+
+```bash
+cd contracts
+touch StringOwner.sol # a very simple smart contract
+```
