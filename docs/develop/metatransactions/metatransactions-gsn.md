@@ -116,7 +116,7 @@ npm i -g @opengsn/gsn # this is also on global scope
 
 As now we've installed all tools, we can move forward with creation of a project.
 
-### Init
+#### Init
 
 Lets create directory for accomodating our project.
 
@@ -152,9 +152,82 @@ Now lets install `@opengsn/gsn`, with in this project, so that we can use some c
 npm i @opengsn/gsn
 ```
 
+#### Smart Contract
+
 Time to write a smart contract. Lets get into `contracts` directory & create a contract.
 
 ```bash
 cd contracts
 touch StringOwner.sol # a very simple smart contract
 ```
+
+Lets copy paste below code into our `StringOwner.sol`.
+
+```js
+// SPDX-License-Identifier: None
+
+pragma solidity ^0.7.0;
+
+import "@opengsn/gsn/contracts/BaseRelayRecipient.sol";
+import "@opengsn/gsn/contracts/interfaces/IKnowForwarderAddress.sol";
+
+contract StringOwner is BaseRelayRecipient, IKnowForwarderAddress {
+
+    address public deployer;
+    string private _str;
+    address private _strOwner;
+
+    // event to be emitted for denoting string got updated
+    event StringUpdated(string _prev, address _preOwner, string _current, address _currentOwner);
+
+    constructor(address forwarder) {
+        trustedForwarder = forwarder;
+
+        deployer = msg.sender;
+
+        // initializing it with this
+        _str = "init";
+        _strOwner = msg.sender;
+    }
+
+    function getTrustedForwarder() public override view returns(address) {
+		return trustedForwarder;
+	}
+
+	function setTrustedForwarder(address forwarder) public {
+        require(_msgSender() == deployer, "Only deployer can update it");
+
+		trustedForwarder = forwarder;
+	}
+
+    // get current string
+    function getString() public view returns(string memory) {
+        return _str;
+    }
+
+    // get current string owner
+    function getStringOwner() public view returns(address) {
+        return _strOwner;
+    }
+
+    // updates string content & also owner address
+    // with the address which invoked this function
+    function update(string memory _string) external {
+        string memory _tmpStr = _str;
+        address _tmpStrOwner = _strOwner;
+
+        _str = _string;
+        _strOwner = _msgSender();
+
+        emit StringUpdated(_tmpStr, _tmpStrOwner, _str, _strOwner);
+    }
+
+    function versionRecipient() external virtual view override returns (string memory) {
+		return "1.0";
+	}
+
+}
+```
+
+This contract is GSN-aware, as you can see, it's inheriting from `@opengsn/gsn/contracts/BaseRelayRecipient.sol`, which has `_msgSender()` defined, that can be used for looking up, original message signer. If we try to use `msg.sender`, it this context, most probably we'll end up with trusted forwarder's address, given it's meta transaction which is sent for invoking the function.
+
