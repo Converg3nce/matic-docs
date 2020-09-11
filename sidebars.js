@@ -144,6 +144,14 @@ module.exports = {
     },
     {
       type: "category",
+      label: "L1<>L2 Communication",
+      items: [
+        "develop/l1-l2-communication/ethereum-to-matic",
+        "develop/l1-l2-communication/matic-to-ethereum",
+      ],
+    },
+    {
+      type: "category",
       label: "Meta Transactions",
       items: [
         "develop/metatransactions/getting-started",
@@ -156,9 +164,9 @@ module.exports = {
       label: "Oracles",
       items: [
         "develop/oracles/getting-started",
+        "develop/oracles/chainlink",
         "develop/oracles/razor",
         "develop/oracles/bandchain",
-        "develop/oracles/chainlink",
       ],
     },
     "develop/fiat-on-ramp",
@@ -193,8 +201,6 @@ module.exports = {
         "develop/advanced/swap-assets",
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
-        "develop/advanced/transfer-data",
-        "develop/advanced/matic-to-ethereum",
       ],
     },
     {
