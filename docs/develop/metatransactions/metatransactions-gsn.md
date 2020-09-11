@@ -361,6 +361,7 @@ Lets deploy our contracts on local blockchain.
 ```bash
 npx truffle migrate
 ```
+### Running Project
 
 #### Sending Meta Transaction
 
@@ -405,3 +406,7 @@ const interact = async () => {
   await myRecipient.methods.update("non-GSN").send({ from, useGSN: false });
 }
 ```
+
+## More
+
+For more details, please check [here](https://docs.opengsn.org/learn/index.html). If you feel, we can improve this doc, please raise a PR or create an issue.
