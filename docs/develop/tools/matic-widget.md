@@ -6,18 +6,19 @@ description: Build your next blockchain app on Matic.
 keywords:
   - docs
   - matic
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://matic.network/banners/matic-network-16x9.png
 ---
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Matic widget is an instance of Matic wallet that anyone can integrate to their website. The widget has been designed to support Matic wallet as well as Matic token bridge functionalities as part of any website. This simply means that integrating the widget gives a better user expereince and users do not have to navigate to another page to use the Matic functionalities. 
+Matic widget is an instance of Matic wallet that anyone can integrate to their website. The widget has been designed to support Matic wallet as well as Matic token bridge functionalities as part of any website. This simply means that integrating the widget gives a better user expereince and users do not have to navigate to another page to use the Matic functionalities.
 
 ## Widget Developer dashboard
 
 Widget developer dashboard is used to manage the widget. Developer can create, remove and customize the widget.
 
-- Developer dashboard:   [https://wallet.matic.today/widgets/](https://wallet.matic.today/widgets/)
-- Create new widget:   [https://wallet.matic.today/widgets/settings](https://wallet.matic.today/widgets/settings)
+- Developer dashboard: [https://wallet.matic.today/widgets/](https://wallet.matic.today/widgets/)
+- Create new widget: [https://wallet.matic.today/widgets/settings](https://wallet.matic.today/widgets/settings)
 
 For creating a widget, DApp Name, RPC, Widget type have to be given as input.
 
@@ -32,31 +33,33 @@ The last step will be to copy the embed code and use it on your website
 
 <img src={useBaseUrl("img/matic-widget/widget-settings.png")} />
 
-See the example below:
-
-**Example**: 
+**Example**:
 
 ```html
 <!-- index.html -->
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matic Widget Demo</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matic Widget Demo</title>
-</head>
-
-<body>
-<!-- widget embed code -->
-  <button class="matic-widget-button" data-default-page="home" data-wapp-id="kiLV4NOqXgk346wibvG4">
-    Matic Widget
-  </button>
-  <script src="https://wallet.matic.today/embeds/widget-button.js" data-script-name="matic-embeds"></script>
-<!-- widget embed code -->
-</body>
-
+  <body>
+    <!-- widget embed code -->
+    <button
+      class="matic-widget-button"
+      data-default-page="home"
+      data-wapp-id="kiLV4NOqXgk346wibvG4">
+      Matic Widget
+    </button>
+    <script
+      src="https://wallet.matic.today/embeds/widget-button.min.js"
+      data-script-name="matic-embeds">
+    </script>
+    <!-- widget embed code -->
+  </body>
 </html>
 ```
 
@@ -68,41 +71,92 @@ Widget will emit events when user performs certain actions on widget. These even
 
 1. **closeWidget**
 
-    widget will emit this event whenever user closes the widget from the widget home
+   widget will emit this event whenever user closes the widget.
 
-2. **onTransfer**
+2. **Transfer Events**
 
-    widget will emit this event when user does any token transfer
+   a. **onTransferTxHash**
 
-3. **onDeposit**
+   Widget will emit this event when a transfer transaction is fired. This event is useful to get the transaction hash before the transaction gets confirmed.
 
-    widget will emit this event when user successfully deposits their token to Matic Network
+   b. **onTransfer**
 
-4. **onWithdrawInit**
+   Widget will emit this event when the transfer transaction is confirmed on the network.
 
-    widget will emit this event when user starts to withdraw token from Matic Network to Ethereum
+   c. **onTransferError**
 
-5. **onWithdrawConfirm**
+   Widget will emit this event when transfer transaction fails.
 
-    widget will emit this event when user confirms the withdraw on Ethereum ( Only for Plasma Bridge )
+3. **Deposit Events**
 
-6. **onWithdrawExit**
+   a. **onDepositTxHash**
 
-    widget will emit this event when users exits his tokens back to Ethereum.
+   Widget will emit this event when deposit transaction is initiated.
+
+   b. **onDeposit**
+
+   Widget will emit this event when a deposit transaction is confirmed on the network.
+
+   c. **onDepositError**
+
+   Widget will emit this event when a deposit transaction fails.
+
+4. **Withdraw Init Events**
+
+   a. **onWithdrawInitTxHash**
+
+   Widget will emit this event when initiate withdraw transaction is fired.
+
+   b. **onWithdrawInit**
+
+   Widget will emit this event when an intiaite withdraw transaction is confirmed on the network.
+
+   c. **onWithdrawInitError**
+
+   Widget will emit this event when an initiate withdraw transaction fails.
+
+5. **Withdraw Confirm Events**
+
+   a. **onWithdrawConfirmTxHash**
+
+   Widget will emit this event when a confirm withdraw transaction is fired.
+
+   b. **onWithdrawConfirm**
+
+   Widget will emit this event when a confirm transaction is confirmed on the network.
+
+   c. **onWithdrawConfirmError**
+
+   Widget will emit this event when a confirm withdraw transaction fails.
+
+6. **Withdraw Exit Events**
+
+   a. **onWithdrawExitTxHash**
+
+   Widget will emit this event a withdraw exit transaction is fired.
+
+   b. **onWithdrawExit**
+
+   Widget will emit this event when a withdraw exit transaction is confirmed on the network.
+
+   c. **onWithdrawExitError**
+
+   Widget will emit this event when a withdraw exit transaction fails.
 
 ```jsx
 // Listen to the events from widget
 function maticWidgetEventsListener(event) {
-    console.log('possible event types', event.eventTypes)
-    if (event.data && event.data.type === event.eventTypes.ON_TRANSFER) {
-        closeWidgetOnTransaction(event)
-    }
+  console.log(event.data.type, event);
+  if (event.data && event.data.type === event.eventTypes.TRANSFER.onReceipt) {
+    // ...TODO
+  }
 }
 
-// close widget onTransfer event
+// close widget
 function closeWidgetOnTransaction(event) {
-    // this is not an event listener
-    const iframeId = event.data.iframeId
-    document.body.removeChild(document.getElementById(iframeId))
+  // this is not an event listener
+  const iframeId = event.data.iframeId;
+  document.body.removeChild(document.getElementById(iframeId));
+  document.body.removeChild(document.getElementById("matic-iframe-backdrop"));
 }
 ```
