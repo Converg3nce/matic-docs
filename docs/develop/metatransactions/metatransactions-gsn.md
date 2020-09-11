@@ -238,6 +238,12 @@ Lets get inside `migrations` directory & create a file named `2_deploy_contracts
 
 ```js
 const StringOwner = artifacts.require('StringOwner.sol')
+// we need to deploy a trusted forwarder specific to our dapp,
+// every dapp needs to deploy it, because that will eventually
+// save us from going through a very lengthy whole relayhub contract auditing
+// process, and our contract can also be made to only accepting requests from
+// specified forwarder or a set of forwarder, whom dapp developer trusts & deployed
+// themselves.
 const TrustedForwarder = artifacts.require('Forwarder.sol')
 
 module.exports = async function deployFunc (deployer, network) {
@@ -293,6 +299,12 @@ npx gsn fund-paymaster
 
 We're going to start a local relay server for our purpose. If you want to run a public relayer in a public blockchain, then you need to read this [one](https://docs.opengsn.org/gsn-provider/running-own-relay.html).
 
+You can also expose this local relayer for public usage, but in that case make sure you set proper params while starting it. This local relayer can be exposed to public by using tunneling tool like `ngrok`. 
+
+> Install ngrok: `npm i -g ngrok`
+
+> Run ngrok, for exposing local endpoint for public usage: `npx ngrok http <relayer-port>`
+
 ```bash
 npx gsn-run-relay --Workdir <workdir> --DevMode --RelayHubAddress <hub_address>
 # check here too: https://docs.opengsn.org/gsn-provider/gsn-helpers.html#run
@@ -305,4 +317,41 @@ And last but not least, we need to register our relay server, with `RelayHub`, b
 ```bash
 npx gsn register-relayer
 # also check here: https://docs.opengsn.org/gsn-provider/gsn-helpers.html#relayer_register
+```
+
+#### Finally Deployment
+
+As we've set up all required components, we can start deployment process. But before that we need to make sure our `truffle-config.js` is okay.
+
+Given we're running `ganache-cli`, which is exposing its RPC endpoint on `http://localhost:8545`, we can use this network as our target network for deploying contracts i.e. _{StringOwner, Forwarder}_.
+
+If you'd like to deploy contracts on different network, consider adding new network & specify it while invoking truffle. In that case you need to also ensure, you've deployed all previous components on that certain network.
+
+```js
+module.exports = {
+  networks: {
+    development: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+    },
+  },
+
+  mocha: {
+    // timeout: 100000
+  },
+
+  compilers: {
+    solc: {
+      version: "0.7.0",
+      settings: {
+        optimizer: {
+          enabled: false,
+          runs: 200
+        },
+      evmVersion: "istanbul"
+      }
+    },
+  },
+};
 ```
