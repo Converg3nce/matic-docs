@@ -10,9 +10,9 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-In general, for interacting with Ethereum DApps users need to have enough Ether in their account, which requires them to go through lengthy KYC procedure; then buying Ether & start interacting - not a good UX. 
+In general, for interacting with Matic DApps users need to have enough Matic in their account, which requires them to go through lengthy KYC procedure; then buying Matic on exchange, transfer it to Matic Chain & start interacting - not a good UX. 
 
-That's where GSN comes into picture with an interesting proposal for improving DApp UX, where gas less transactions can be sent to Ethereum network & user requests to be funded by some party other than user. Now clients without Ether in their account, can talk to Ethereum Blockchain & pay their fees using ERC20 tokens. Using GSN can also improve UX when onboarding new users to dApp.
+That's where GSN comes into picture with an interesting proposal for improving DApp UX, where gas less transactions can be sent to Matic Network & user requests to be funded by some party other than user. Now clients without Matic in their account, can talk to Matic Blockchain & pay their fees using ERC20 tokens. Using GSN can also improve UX when onboarding new users to dApp.
 
 <img src={useBaseUrl("img/gsn/paymaster_needs_gas.png")} />
 
@@ -28,13 +28,13 @@ Clients are dApp users, who will be signing a message, with all required fields 
 
 ### Relay Server
 
-Relay servers will be accepting requests from clients & paying gas fees for them, while first checking with paymaster contract _( via relay hub )_ that if it relays this transaction does it get paid back or not ? 
+Relay servers will be accepting requests from clients & paying gas fees for them, while first checking with paymaster contract _( via relay hub )_ that if it relays this transaction does it get paid back or not ?
 
 It's always advisable to use dedicated relay server for your dApp & use third party relays when your relay is down. This provides better availability guarantee of service. Also for using third party relays, most probably you're going to pay an extra service charge.
 
 ### PayMaster
 
-PayMaster contract has a full gas tank of Ether, in relayhub, which is to be used for paying gas fees of relayed transactions. PayMaster contract has full control of either accepting or rejecting any relayed transaction.
+PayMaster contract has a full gas tank of Matic, in relayhub, which is to be used for paying gas fees of relayed transactions. PayMaster contract has full control of either accepting or rejecting any relayed transaction. You can design custom paymasters which implements custom ERC20 based incentivization scheme.
 
 ### Trusted Forwarder
 
@@ -98,7 +98,7 @@ npm i -g truffle # global installation will be helpful
 
 We're going to use one private blockchain i.e. a simulated blockchain environment like ganache or you can also use geth/ parity in private mode.
 
-So, lets go ahead and install GUI version of [ganache](https://www.trufflesuite.com/ganache). There's also one npm package `ganache-cli`. Consider using that if you're familiar with basic command line functionalities.
+So, lets go ahead and install GUI version of [ganache](https://www.trufflesuite.com/ganache). There's also one npm package `ganache-cli`. Consider using that if you're familiar with basic command line functionalities. If you're planning to target Matic, you can safely skip this step.
 
 ```bash
 npm i -g ganache-cli # lets install it globally
@@ -234,10 +234,11 @@ This contract is GSN-aware, as you can see, it's inheriting from `@opengsn/gsn/c
 
 #### Deployment
 
-Lets get inside `migrations` directory & create a file named `2_deploy_contracts.js` which is our deployment script.
+Lets get inside `migrations` directory & create a file named `2_deploy_contracts.js`, which is our deployment script.
 
 ```js
 const StringOwner = artifacts.require('StringOwner.sol')
+
 // we need to deploy a trusted forwarder specific to our dapp,
 // every dapp needs to deploy it, because that will eventually
 // save us from going through a very lengthy whole relayhub contract auditing
@@ -247,9 +248,7 @@ const StringOwner = artifacts.require('StringOwner.sol')
 const TrustedForwarder = artifacts.require('Forwarder.sol')
 
 module.exports = async function deployFunc (deployer, network) {
-  const netid = await web3.eth.net.getId()
-
-  // first, check if already deployed through truffle:
+  // checking whether forwarder already deployed or not
   let forwarder = await TrustedForwarder.deployed().then(c => c.address).catch(e => null)
   if (!forwarder) {
     forwarder = (await deployer.deploy(Forwarder)).address
@@ -268,7 +267,7 @@ As we've our deployment scripts ready, lets just run migration.
 
 #### Running Private Blockchain
 
-Find GUI ganache & run it or you can simply start ganache from cli using following command. 
+Find GUI ganache & run it or you can simply start ganache from cli using following command.
 
 ```bash
 npx ganache-cli -d -k 'istanbul' -l 1e8 &
@@ -278,21 +277,31 @@ npx ganache-cli -d -k 'istanbul' -l 1e8 &
 
 We're going to use `@opengsn/gsn` for installing these components in local blockchain,which is by default running on `http://localhost:8545`.
 
-
 ```bash
-npx gsn deploy-relay-hub 
+npx gsn deploy
 # for targetting another network, you need to 
 # check here https://docs.opengsn.org/gsn-provider/gsn-helpers.html#deploy
+```
+
+For targetting Matic Testnet, use following command.
+
+```bash
+npx gsn deploy --network https://rpc-mumbai.matic.today
 ```
 
 #### Funding Paymaster
 
 It's not over yet, we need to fund out paymaster, that's what is going to pay for our transaction, so we need to fund it.
 
-
 ```bash
 npx gsn fund-paymaster
 # for more control: https://docs.opengsn.org/gsn-provider/gsn-helpers.html#paymaster_fund
+```
+
+For Matic Mumbai network, try using this command.
+
+```bash
+npx gsn fund-paymaster --from <your-account-address> --hub <relay-hub-address> --paymaster <your-dapp-specific-paymaster> --network https://rpc-mumbai.matic.today
 ```
 
 #### Running Relay Server
@@ -306,9 +315,17 @@ You can also expose this local relayer for public usage, but in that case make s
 > Run ngrok, for exposing local endpoint for public usage: `npx ngrok http <relayer-port>`
 
 ```bash
-npx gsn-run-relay --Workdir <workdir> --DevMode --RelayHubAddress <hub_address>
+npx gsn relayer-run --Workdir <workdir> --DevMode --RelayHubAddress <hub_address> --EthereumNodeUrl http://localhost:8545
 # check here too: https://docs.opengsn.org/gsn-provider/gsn-helpers.html#run
 ```
+
+For Matic Mumbai run below command
+
+```bash
+npx gsn relayer-run --Workdir <workdir> --DevMode --RelayHubAddress <hub_address> --EthereumNodeUrl https://rpc-mumbai.matic.today --Url <public-url-on-which-to-advertise-relayhub>
+```
+
+`Url` can be `ngrok` generated endpoint, if you're tunneling local instance, which is not recommened for production. Other params can be set before starting your relayer, for that please check origin [doc](https://docs.opengsn.org/gsn-provider/gsn-helpers.html#run).
 
 #### Registering Relayer with RelayHub
 
@@ -318,6 +335,8 @@ And last but not least, we need to register our relay server, with `RelayHub`, b
 npx gsn register-relayer
 # also check here: https://docs.opengsn.org/gsn-provider/gsn-helpers.html#relayer_register
 ```
+
+For Matic Mumbai, don't forget to specify RPC endpoint using `--network` switch.
 
 #### Finally Deployment
 
