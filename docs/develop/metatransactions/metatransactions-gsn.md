@@ -86,6 +86,14 @@ Now we're going to write a meta transactions enabled dApp, to demonstrate how yo
 
 ### Setup
 
+#### Truffle Suite
+
+We need one manage our smart contracts easily, so we're going to use `truffle`. Lets jump into console & install it.
+
+```bash
+npm i -g truffle # global installation will be helpful
+```
+
 #### Private Blockchain
 
 We're going to use one private blockchain i.e. a simulated blockchain environment like ganache or you can also use geth/ parity in private mode.
@@ -102,4 +110,38 @@ We need another utility package `@opengsn/gsn`, for deploying all above defined 
 
 ```bash
 npm i -g @opengsn/gsn # this is also on global scope
+```
+
+### Project
+
+As now we've installed all tools, we can move forward with creation of a project.
+
+### Init
+
+Lets create directory for accomodating our project.
+
+```bash
+mkdir ~/meta-tx-gsn
+cd ~/meta-tx-gsn # got inside directory
+```
+
+Create a truffle project.
+
+```bash
+truffle init
+```
+
+If you now check content of this directory, you'll see some new directories & files created for you, which are for making your dApp development journey lesser painful.
+
+```bash
+tree
+.
+├── [4.0K]  contracts
+│   └── [ 378]  Migrations.sol
+├── [4.0K]  migrations
+│   └── [ 126]  1_initial_migration.js
+├── [4.0K]  test
+└── [4.1K]  truffle-config.js
+
+3 directories, 3 files
 ```
