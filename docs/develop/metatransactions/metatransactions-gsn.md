@@ -146,10 +146,11 @@ tree
 3 directories, 3 files
 ```
 
-Now lets install `@opengsn/gsn`, with in this project, so that we can use some contracts from them.
+Now lets install `@opengsn/gsn`, with in this project, so that we can use some contracts from them. We'll also require `web3`, so lets get it too.
 
 ```bash
 npm i @opengsn/gsn
+npm i web3
 ```
 
 #### Smart Contract
@@ -230,4 +231,32 @@ contract StringOwner is BaseRelayRecipient, IKnowForwarderAddress {
 ```
 
 This contract is GSN-aware, as you can see, it's inheriting from `@opengsn/gsn/contracts/BaseRelayRecipient.sol`, which has `_msgSender()` defined, that can be used for looking up, original message signer. If we try to use `msg.sender`, it this context, most probably we'll end up with trusted forwarder's address, given it's meta transaction which is sent for invoking the function.
+
+#### Deployment
+
+Lets get inside `migrations` directory & create a file named `2_deploy_contracts.js` which is our deployment script.
+
+```js
+const StringOwner = artifacts.require('StringOwner.sol')
+const TrustedForwarder = artifacts.require('Forwarder.sol')
+
+module.exports = async function deployFunc (deployer, network) {
+  const netid = await web3.eth.net.getId()
+
+  // first, check if already deployed through truffle:
+  let forwarder = await TrustedForwarder.deployed().then(c => c.address).catch(e => null)
+  if (!forwarder) {
+    forwarder = (await deployer.deploy(Forwarder)).address
+  }
+  console.log('Using forwarder: ', forwarder)
+  // passing forwarder address in constructor of StringOwner
+  await deployer.deploy(StringOwner, forwarder)
+}
+```
+
+As we've our deployment scripts ready, lets just run migration.
+
+**Oh wait, did we create a relay server, deploy relay hub & pay master ?**
+
+- No we didn't. So we're going to do that first & then go with target contract deployment.
 
