@@ -260,3 +260,49 @@ As we've our deployment scripts ready, lets just run migration.
 
 - No we didn't. So we're going to do that first & then go with target contract deployment.
 
+#### Running Private Blockchain
+
+Find GUI ganache & run it or you can simply start ganache from cli using following command. 
+
+```bash
+npx ganache-cli -d -k 'istanbul' -l 1e8 &
+```
+
+#### Deploy RelayHub, Paymaster, StakeManager, Penalizer
+
+We're going to use `@opengsn/gsn` for installing these components in local blockchain,which is by default running on `http://localhost:8545`.
+
+
+```bash
+npx gsn deploy-relay-hub 
+# for targetting another network, you need to 
+# check here https://docs.opengsn.org/gsn-provider/gsn-helpers.html#deploy
+```
+
+#### Funding Paymaster
+
+It's not over yet, we need to fund out paymaster, that's what is going to pay for our transaction, so we need to fund it.
+
+
+```bash
+npx gsn fund-paymaster
+# for more control: https://docs.opengsn.org/gsn-provider/gsn-helpers.html#paymaster_fund
+```
+
+#### Running Relay Server
+
+We're going to start a local relay server for our purpose. If you want to run a public relayer in a public blockchain, then you need to read this [one](https://docs.opengsn.org/gsn-provider/running-own-relay.html).
+
+```bash
+npx gsn-run-relay --Workdir <workdir> --DevMode --RelayHubAddress <hub_address>
+# check here too: https://docs.opengsn.org/gsn-provider/gsn-helpers.html#run
+```
+
+#### Registering Relayer with RelayHub
+
+And last but not least, we need to register our relay server, with `RelayHub`, because among all these moving parts, this is one, which is stiching them all together.
+
+```bash
+npx gsn register-relayer
+# also check here: https://docs.opengsn.org/gsn-provider/gsn-helpers.html#relayer_register
+```
