@@ -51,14 +51,13 @@ The last step will be to copy the embed code and use it on your website
     <button
       class="matic-widget-button"
       data-default-page="home"
-      data-wapp-id="kiLV4NOqXgk346wibvG4"
-    >
+      data-wapp-id="kiLV4NOqXgk346wibvG4">
       Matic Widget
     </button>
     <script
       src="https://wallet.matic.today/embeds/widget-button.min.js"
-      data-script-name="matic-embeds"
-    ></script>
+      data-script-name="matic-embeds">
+    </script>
     <!-- widget embed code -->
   </body>
 </html>
