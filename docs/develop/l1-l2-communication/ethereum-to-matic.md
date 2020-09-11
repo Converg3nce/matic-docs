@@ -1,5 +1,5 @@
 ---
-id: transfer-data
+id: ethereum-to-matic
 title: Transfer data from Ethereum to Matic
 description: Transfer state or data from Ethereum to Matic via Contracts
 keywords:
