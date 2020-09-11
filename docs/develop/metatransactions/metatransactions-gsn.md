@@ -327,13 +327,40 @@ Given we're running `ganache-cli`, which is exposing its RPC endpoint on `http:/
 
 If you'd like to deploy contracts on different network, consider adding new network & specify it while invoking truffle. In that case you need to also ensure, you've deployed all previous components on that certain network.
 
+If you want to deploy it to Matic Mumbai Testnet/ Mainnet, make sure you're using `@truffle/hdwallet-provider`. Lets get that installed.
+
+```bash
+npm i @truffle/hdwallet-provider
+```
+
+Also create a `.secret` file, which will hold seed phrase of your wallet. Go to your favourite wallet and export seed phrase, put it in `.secret`. It's strongly recommened to gitignore `.secret`, so that by mistake you don't push it to public git repo.
+
+```bash
+echo 'my-exported-seed-phrase' > .secret
+```
+
+Finally our truffle configuration.
+
 ```js
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+const fs = require('fs');
+
+const mnemonic = fs.readFileSync(".secret").toString().trim();
+
 module.exports = {
   networks: {
     development: {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
+    },
+    mumbai: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mumbai.matic.today`),
+      network_id: 80001,
+    },
+    maticMainNet: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mainnet.matic.network`),
+      network_id: 137,
     },
   },
 
@@ -361,6 +388,13 @@ Lets deploy our contracts on local blockchain.
 ```bash
 npx truffle migrate
 ```
+
+For deploying on Matic Mumbai Testnet, consider using following command.
+
+```bash
+npx truffle migrate --network mumbai
+```
+
 ### Running Project
 
 #### Sending Meta Transaction
