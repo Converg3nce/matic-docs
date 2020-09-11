@@ -79,3 +79,27 @@ Above three methods give us opportunity for creating a fee model where users can
 We can avoid auditing whole relay hub system, by putting an extra piece in image, which will verify client signature of relayed calls & address nonce. Verified calls get through & reach target contract method. 
 
 This eventually reduces amount of checking target contract needs to do. In constructor of target contract, we need to put trusted forwarder. We can also set a list of trusted forwarders, if situation demands. We need to also make it sure, only owner gets to update this trusted forwarder address set.
+
+## Example
+
+Now we're going to write a meta transactions enabled dApp, to demonstrate how you can also integrate it in your application.
+
+### Setup
+
+#### Private Blockchain
+
+We're going to use one private blockchain i.e. a simulated blockchain environment like ganache or you can also use geth/ parity in private mode.
+
+So, lets go ahead and install GUI version of [ganache](https://www.trufflesuite.com/ganache). There's also one npm package `ganache-cli`. Consider using that if you're familiar with basic command line functionalities.
+
+```bash
+npm i -g ganache-cli # lets install it globally
+```
+
+#### GSN
+
+We need another utility package `@opengsn/gsn`, for deploying all above defined components & also running a relay-server on local machine.
+
+```bash
+npm i -g @opengsn/gsn # this is also on global scope
+```
