@@ -355,3 +355,53 @@ module.exports = {
   },
 };
 ```
+
+Lets deploy our contracts on local blockchain.
+
+```bash
+npx truffle migrate
+```
+
+#### Sending Meta Transaction
+
+For talking to GSN aware smart contract, we need to use `@opengsn/gsn` SDK, which will manage lots of lower level complexities for us. And as we've already installed it, lets create a JS file in root of this project directory i.e.`meta-tx-gsn`.
+
+```bash
+cd ~/meta-tx-gsn
+touch index.js
+```
+
+Now lets copy paste following code snippet into `index.js`.
+
+```js
+const { RelayProvider } = require('@opengsn/gsn')
+
+const configuration = { 
+  relayHubAddress: <relay-hub-for-this-network>,
+  stakeManagerAddress: <stake-manager-for-this-network> 
+};
+
+const provider = new RelayProvider(web3.currentProvider, configuration);
+const web3 = new Web3(provider);
+```
+
+As we've connected our web3 instance to `RelayProvider`, all transactions to be automatically routed via GSN.
+
+```js
+// abi => StringOwner contracts ABI array
+// address => deployed at, in local ganache blockchain
+const myRecipient = new web3.eth.Contract(abi, address);
+
+// Interacting with GSN aware contract
+const interact = async () => {
+  // keep paymaster address that we deployed
+  // along with trusted forwarder which was specifically deployed
+  // for this dapp
+  await myRecipient.methods.update("GSN").send({ from, paymaster, forwarder });
+
+  // we can also ask this provider to not
+  // route our transaction via GSN network, rather
+  // send a vanilla transaction
+  await myRecipient.methods.update("non-GSN").send({ from, useGSN: false });
+}
+```
