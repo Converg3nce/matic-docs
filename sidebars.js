@@ -191,7 +191,9 @@ module.exports = {
     {
       type: "category",
       label: "Tutorials",
-      items: ["develop/full-stack-dapp-with-pos"],
+      items: ["develop/full-stack-dapp-with-pos",
+                "develop/pos-plasma-using-metamask",
+      ],
     },
     {
       type: "category",
