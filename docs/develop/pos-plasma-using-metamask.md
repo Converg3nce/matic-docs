@@ -10,7 +10,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
-This tutorial is a brief introduction on how to transfer tokens between Ethereum and Matic on PoS and Plasma bridge using matic.js library and Metamask.Matic-Ethereum bridge provides a cross-chain channel using which users can transfer tokens from Ethereum to Matic and vice-versa. Both PoS and Plasma bridge is available to the user to transfer the tokens across two chains. More details on using the bridge can be found [here](https://docs.matic.network/docs/develop/ethereum-matic/getting-started). This tutorial mainly focuses on using the bridge from a front end perspective. We will be using Metamask for this purpose.
+This tutorial is a brief introduction on how to transfer tokens between Ethereum and Matic on PoS and Plasma bridge using matic.js library and Metamask.Matic-Ethereum bridge provides a cross-chain channel using which users can transfer tokens from Ethereum to Matic and vice-versa. Both PoS and Plasma bridge is available to the user to transfer the tokens across two chains. More details on using the bridge can be found [here](/docs/develop/ethereum-matic/getting-started). This tutorial mainly focuses on using the bridge from a front end perspective. We will be using Metamask for this purpose.
 
 The most important thing to be understood from this tutorial is the proper usage of the web3 provider in the matic.js instance we create. Whether using PoS or Plasma, certain actions need to be performed on Matic and some on ethereum. Due to this reason, different providers are required in different scenarios. Hence correctly setting the providers is very necessary. 
 
@@ -39,11 +39,25 @@ During deposit of ERC20 tokens, the providers are specified as below
 
 `parentProvider: window.web3`
 
-<img src={useBaseUrl("img/pos-plasma-using-metamask/approve.png")} />
+<div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <img src={useBaseUrl("img/pos-plasma-using-metamask/approve.png")} />
+</div>
 
-<img src={useBaseUrl("img/pos-plasma-using-metamask/deposit.png")} />
-
-
+<div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <img src={useBaseUrl("img/pos-plasma-using-metamask/deposit.png")} />
+</div>
 
 ### Burn
 
@@ -55,7 +69,15 @@ During burning of ERC20 tokens providers are specified as below
 
 `parentProvider: ethereumprovider`
 
-<img src={useBaseUrl("img/pos-plasma-using-metamask/burn.png")} />
+<div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <img src={useBaseUrl("img/pos-plasma-using-metamask/burn.png")} />
+</div>
 
 ### Exit
 
