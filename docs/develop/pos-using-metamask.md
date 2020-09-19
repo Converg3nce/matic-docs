@@ -99,3 +99,12 @@ await maticPoSClient
   fastProof: true
 })
 ```
+<div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <img src={useBaseUrl("img/pos-plasma-using-metamask/exit.png")} />
+</div>
