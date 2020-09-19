@@ -1,7 +1,7 @@
 ---
-id: pos-plasma-using-metamask
-title: PoS-Plasma Using Metamask
-description: PoS-Plasma token transfer tutorial using metamask.
+id: pos-using-metamask
+title: PoS Using Metamask
+description: PoS token transfer tutorial using metamask.
 keywords:
   - docs
   - matic
@@ -10,7 +10,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-This tutorial is a brief introduction on how to transfer tokens between Ethereum and Matic on PoS and Plasma bridge using ***matic.js SDK and Metamask***. Matic-Ethereum bridge provides a cross-chain channel using which users can transfer tokens from Ethereum to Matic and vice-versa. Both PoS and Plasma bridge is available to the user to transfer the tokens across two chains. More details on using the bridge can be found [here](/docs/develop/ethereum-matic/getting-started). This **tutorial mainly focuses on using the bridge from a front end perspective**. We will be using Metamask for this purpose.
+This tutorial is a brief introduction on how to transfer tokens between Ethereum and Matic on PoS bridge using ***matic.js SDK and Metamask***. Matic-Ethereum bridge provides a cross-chain channel using which users can transfer tokens from Ethereum to Matic and vice-versa. Both PoS and Plasma bridge is available to the user to transfer the tokens across two chains. More details on using the bridge can be found [here](/docs/develop/ethereum-matic/getting-started). This **tutorial mainly focuses on using the bridge from a front end perspective**. We will be using Metamask for this purpose.
 
 The most important thing to be understood from this tutorial is the **proper usage of the web3 provider in the matic.js instance** we create. Whether using PoS or Plasma, certain actions need to be performed on Matic and some on Ethereum. Due to this reason, **different providers are required in different scenarios. Hence correctly setting the providers is very necessary.**
 
