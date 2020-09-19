@@ -44,21 +44,11 @@ The most important thing to be understood from this tutorial is the proper usage
 
 In deposit functionality for ERC20 tokens first, approval is given then deposit takes place. Upon clicking the deposit button metamask will first ask to approve the transfer of a specified number of tokens and after the confirmation of the approval transaction, metamask will ask to confirm the deposit transaction. Make sure the ethereum network is selected in metamask for deposit functionality.
 
-During deposit of ERC20 tokens providers are specified as below 
+During deposit of ERC20 tokens, providers are specified as below 
 
 `maticProvider: maticprovider`
 
 `parentProvider: window.web3`
-
-<div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-      >
-        <img src={useBaseUrl("img/plasma-using-metamask/approve.png")} />
-</div>
 
 <div
         style={{
@@ -74,7 +64,7 @@ During deposit of ERC20 tokens providers are specified as below
 
 Burning of tokens takes place on Matic, make sure Matic network is selected in metamask.
 
-During burning of ERC20 tokens providers are specified as below
+During burning of ERC20 tokens, providers are specified as below
 
 `maticProvider: window.web3`
 
@@ -94,7 +84,7 @@ During burning of ERC20 tokens providers are specified as below
 
 Withdrawal of funds is initiated from Matic Network. A checkpoint interval of 30 mins(For testnets wait for ~10 minutes) is set, where all the blocks on the Matic block layer are validated since the last checkpoint. Once the checkpoint is submitted to the mainchain ERC20 contract, an NFT Exit (ERC721) token is created of equivalent value. Users need to wait for a 7 day challenge period (For testnets wait for ~5 minutes for). Once the challenge period is complete, the withdrawn funds can be claimed back to your ERC20 account from the mainchain contract using a process-exit procedure.Make sure the ethereum network is selected in metamask. The burn hash obtained after burning of tokens is given as an argument.
 
-During deposit of ERC20 tokens providers are specified as below 
+During deposit of ERC20 tokens, providers are specified as below 
 
 `maticProvider: maticprovider`
 
@@ -114,7 +104,7 @@ During deposit of ERC20 tokens providers are specified as below
 
 The exit process takes place on ethereum and upon confirmation on ethereum, equivalent amount tokens burn on Matic are released on ethereum. Make sure the ethereum network is selected in metamask. The burn hash obtained after burning of tokens is given as an argument. Wait for the checkpointing to complete before doing exit process. Checkpoint time is usually 5 minutes.
 
-During deposit of ERC20 tokens providers are specified as below 
+During deposit of ERC20 tokens, providers are specified as below 
 
 `maticProvider: maticprovider`
 
