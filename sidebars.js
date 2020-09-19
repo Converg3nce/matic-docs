@@ -193,6 +193,7 @@ module.exports = {
       label: "Tutorials",
       items: ["develop/full-stack-dapp-with-pos",
                 "develop/pos-plasma-using-metamask",
+                "develop/plasma-using-metamask",
       ],
     },
     {
@@ -201,7 +202,7 @@ module.exports = {
       items: [
         "develop/advanced/calling-plasma-contracts",
         "develop/advanced/swap-assets",
-        "develop/advanced/deploy-your-own-matic-testnet",
+        "develop/advanced/deploy-your-own-matic-testnet", 
         "develop/advanced/custom-restrictions",
       ],
     },
