@@ -10,29 +10,33 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-This tutorial is a brief introduction on how to transfer tokens between Ethereum and Matic using Plasma using matic.js library and Metamask. Matic-Ethereum bridge provides a cross-chain channel using which users can transfer tokens from Ethereum to Matic and vice-versa. Both PoS and Plasma bridge is available to the user to transfer the tokens across two chains. More details on using the bridge can be found [here](/docs/develop/ethereum-matic/getting-started). This tutorial mainly focuses on using the Plasma bridge from a front end perspective. We will be using Metamask for this purpose.
+This tutorial is a brief introduction on how to transfer tokens between Ethereum and Matic on Plasma using **_matic.js SDK and Metamask_**. Matic-Ethereum bridge provides a cross-chain channel using which users can transfer tokens from Ethereum to Matic and vice-versa. More details on using the bridge can be found [here](/docs/develop/ethereum-matic/plasma/getting-started). This **tutorial mainly focuses on using the bridge from a front end perspective**. We will be using Metamask for this purpose.
 
-The most important thing to be understood from this tutorial is the proper usage of the web3 provider in the matic.js instance we create. Whether using PoS or Plasma, certain actions need to be performed on Matic and some on ethereum. Due to this reason, different providers are required in different scenarios. Hence correctly setting the providers is very necessary. 
+The most important thing to be understood from this tutorial is the **proper usage of the web3 provider in the matic.js instance** we create. Whether using PoS or Plasma, certain actions need to be performed on Matic and some on Ethereum. Due to this reason, **different providers are required in different scenarios. Hence correctly setting the providers is very necessary.**
 
 1. An example react app that demonstrates the usage of the Plasma and PoS bridge can be found [here](https://github.com/maticnetwork/pos-plasma-tutorial) .
 2. Install the dependencies using `npm install.`
 3. Replace the token addresses in src/config.json with your corresponding token addresses
 
-- **posRootERC20** : ERC20 root token address on pos bridge
-- **posChildERC20** : ERC20 child token address on pos bridge
-- **posWETH** : PoS Weth
-- **rootChainWETH**: WETH deployed on root chain
-- **plasmaWETH** : Plasma WETH
-- **plasmaRootERC20** : ERC20 root token deployed on plasma
-- **plasmaChildERC20** : ERC20 child token deployed on plasma
-- **MATIC_RPC"**: RPC for child chain,
-- **"ETHEREUM_RPC"**: RPC for root chain, 
-- **"VERSION"**: network version, 
-- **"NETWORK"**: "testnet" or "mainnet"
-- **"MATIC_CHAINID"**: Chain ID of child chain, 
-- **"ETHEREUM_CHAINID"**: Chain ID of root chain
+```jsx
 
-- The configuration and key values for matic mainnet and mumbai testnet can be found here 
+posRootERC20: ERC20 root token address on pos bridge
+posChildERC20: ERC20 child token address on pos bridge
+posWETH: PoS Weth
+rootChainWETH: WETH deployed on root chain
+plasmaWETH: Plasma WETH
+plasmaRootERC20: ERC20 root token deployed on plasma
+plasmaChildERC20: ERC20 child token deployed on plasma
+MATIC_RPC: RPC for child chain,
+ETHEREUM_RPC: RPC for root chain,
+VERSION: network version,
+NETWORK: "testnet" or "mainnet"
+MATIC_CHAINID: Chain ID of child chain,
+ETHEREUM_CHAINID: Chain ID of root chain
+
+```
+
+- The configuration and key values for matic mainnet and mumbai testnet can be found here
   1. [Mumbai Testnet Config](https://static.matic.network/network/testnet/mumbai/index.json)
   2. [Matic Mainnet Config](https://static.matic.network/network/mainnet/v1/index.json)
 
@@ -40,11 +44,24 @@ The most important thing to be understood from this tutorial is the proper usage
 
 ## Example using Plasma ERC20
 
+> NOTE: For the mainnet, Ethereum is the root chain and Matic Mainnet is the child chain and for the testnet, Goerli is the root chain and Mumbai is the child chain. The values in config.json file should be set accordingly. Goerli and Mumbai networks are used as the root and child chain in this tutorial.
+
+> getMaticPlasmaParent() and getMaticPlasmaChild() is used to initialize the root and child chain matic.js objects for Plasma bridge. Code snippets mention below under each step can be found in the [tutorial](https://github.com/maticnetwork/pos-plasma-tutorial) repo as well.
+
 ### Deposit
 
-In deposit functionality for ERC20 tokens first, approval is given then deposit takes place. Upon clicking the deposit button metamask will first ask to approve the transfer of a specified number of tokens and after the confirmation of the approval transaction, metamask will ask to confirm the deposit transaction. Make sure the ethereum network is selected in metamask for deposit functionality.
+To deposit ERC20 tokens, an approve function call has to be made before calling the deposit function. Upon clicking the deposit button, metamask will first ask to approve the transfer of a specified number of tokens and after the confirmation of the approval transaction, metamask will ask to confirm the deposit transaction. Make sure the root chain network is selected in metamask for deposit functionality.
 
-During deposit of ERC20 tokens, providers are specified as below 
+```js
+await matic.approveERC20TokensForDeposit(config.plasmaRootERC20, amount, {
+  from: account,
+});
+return matic.depositERC20ForUser(config.plasmaRootERC20, account, amount, {
+  from: account,
+});
+```
+
+During deposit of ERC20 tokens, providers are specified as below
 
 `maticProvider: maticprovider`
 
@@ -60,9 +77,15 @@ During deposit of ERC20 tokens, providers are specified as below
         <img src={useBaseUrl("img/plasma-using-metamask/deposit.png")} />
 </div>
 
-### Burn
+### Initiate withdraw
 
-Burning of tokens takes place on Matic, make sure Matic network is selected in metamask.
+For withdrawing tokens back to root chain,tokens have to be first burnt on child chain. Make sure child chain network is selected in metamask.
+
+```js
+matic.startWithdraw(config.plasmaChildERC20, amount, {
+  from: account,
+});
+```
 
 During burning of ERC20 tokens, providers are specified as below
 
@@ -82,13 +105,24 @@ During burning of ERC20 tokens, providers are specified as below
 
 ### Confirm Withdraw
 
-Withdrawal of funds is initiated from Matic Network. A checkpoint interval of 30 mins(For testnets wait for ~10 minutes) is set, where all the blocks on the Matic block layer are validated since the last checkpoint. Once the checkpoint is submitted to the mainchain ERC20 contract, an NFT Exit (ERC721) token is created of equivalent value. Users need to wait for a 7 day challenge period (For testnets wait for ~5 minutes for). Once the challenge period is complete, the withdrawn funds can be claimed back to your ERC20 account from the mainchain contract using a process-exit procedure.Make sure the ethereum network is selected in metamask. The burn hash obtained after burning of tokens is given as an argument.
+Withdrawal of funds is initiated from the child chain. A checkpoint interval of 30 mins(~10 minutes for testnet) is set, where all the blocks on the Matic block layer are validated. Once the checkpoint is submitted to the root chain, the withdraw function can be triggered.
 
-During deposit of ERC20 tokens, providers are specified as below 
+Once the withdraw function is successful,an NFT Exit (ERC721) token is created. Users need to wait for a 7 day challenge period (~5 minutes for testnet). Once the challenge period is complete, the withdrawn funds can be claimed back to your account on the root chain using a process-exit which is explained in the next step.
+
+In the confirm withdraw step, providers are specified as below
 
 `maticProvider: maticprovider`
 
 `parentProvider: window.web3`
+
+The **_withdraw_** function in PoS bridge involves block proof generation by querying the child chain multiple times and hence it may take a little longer for Metamask to popup as it consumes time to build the transacrtion object. Hence, an extra flag called fastProof can be added to the transaction options which helps in speeding up this process. An example usage is shown below.
+
+```js
+await maticPoSClient.withdraw(burnTxHash, {
+  from: account,
+  fastProof: true,
+});
+```
 
 <div
         style={{
@@ -100,11 +134,19 @@ During deposit of ERC20 tokens, providers are specified as below
         <img src={useBaseUrl("img/plasma-using-metamask/confirmWithdraw.png")} />
 </div>
 
-### Exit
+### Process Exit
 
-The exit process takes place on ethereum and upon confirmation on ethereum, equivalent amount tokens burn on Matic are released on ethereum. Make sure the ethereum network is selected in metamask. The burn hash obtained after burning of tokens is given as an argument. Wait for the checkpointing to complete before doing exit process. Checkpoint time is usually 5 minutes.
+The exit process takes place on the root chain and upon confirmation on the root chain, equivalent amount of tokens burnt on child chain are released to the users account. Make sure the root chain network is selected in Metamask. This function can be called only after the 7 day challenge period(~5 mins on testnet)
 
-During deposit of ERC20 tokens, providers are specified as below 
+```js
+await matic
+  .processExits(config.plasmaRootERC20, { from: account })
+  .then((res) => {
+    console.log("Exit hash: ", res.transactionHash);
+  });
+```
+
+In the process exit step, providers are specified as below
 
 `maticProvider: maticprovider`
 
