@@ -124,6 +124,8 @@ async function execute() {
 execute().then(_ => process.exit(0))
 ```
 
+> NOTE: Deposits from root chain to child chain happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain. This [link](/docs/develop/tools/deposit-withdraw-status/) explains how to track the deposit events.
+
 ## transfer.js
 
 ETH on matic network is a WETH(ERC20 Token).

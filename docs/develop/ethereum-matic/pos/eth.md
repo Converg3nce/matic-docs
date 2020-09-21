@@ -100,6 +100,8 @@ await maticPOSClient.depositEtherForUser(from, amount, {
 });
 ```
 
+> NOTE: Deposits from root chain to child chain happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain. This [link](/docs/develop/tools/deposit-withdraw-status/) explains how to track the deposit events.
+
 ### Burn
 
 User can call `withdraw` function of `MaticWETH` contract. This function should burn the tokens. Since Ether is an ERC20 token on matic chain, use `burnERC20` method that Matic POS client exposes to make this call.
