@@ -36,46 +36,16 @@ Let's copy [this](https://github.com/maticnetwork/pos-portal/blob/master/contrac
 pragma solidity 0.6.6;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {AccessControlMixin} from "../../common/AccessControlMixin.sol";
-import {IChildToken} from "./IChildToken.sol";
-import {NativeMetaTransaction} from "../../common/NativeMetaTransaction.sol";
-import {ChainConstants} from "../../ChainConstants.sol";
-import {ContextMixin} from "../../common/ContextMixin.sol";
 
-
-contract ChildERC20 is
-    ERC20,
-    IChildToken,
-    AccessControlMixin,
-    NativeMetaTransaction,
-    ChainConstants,
-    ContextMixin
+contract ChildERC20 is ERC20,
 {
-    bytes32 public constant DEPOSITOR_ROLE = keccak256("DEPOSITOR_ROLE");
-
-    constructor(
-        string memory name_,
-        string memory symbol_,
-        uint8 decimals_,
-        address childChainManager
-    ) public ERC20(name_, symbol_) {
-        _setupContractId("ChildERC20");
-        _setupDecimals(decimals_);
-        _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
-        _setupRole(DEPOSITOR_ROLE, childChainManager);
-        _initializeEIP712(name_, ERC712_VERSION);
+    constructor(string memory name, string memory symbol, uint8 decimals) public ERC20(name, symbol) {
+        
+        _setupDecimals(decimals);
+        _mint(msg.sender, 10 ** 27); // minting 10^9 MyToken, on root chain
+    
     }
 
-    // This is to support Native meta transactions
-    // never use msg.sender directly, use _msgSender() instead
-    function _msgSender()
-        internal
-        override
-        view
-        returns (address payable sender)
-    {
-        return ContextMixin.msgSender();
-    }
 }
 ```
 
@@ -94,6 +64,17 @@ Once this event is emitted, our Heimdal Nodes, which keep monitoring root chain 
 `deposit` method which we're going to add in our smart contract, is going to be called by [`ChildChainManagerProxy`](https://github.com/maticnetwork/static/blob/e9604415ee2510146cb3030c83d7dbebff6444ad/network/testnet/mumbai/index.json#L90) & can only be called by this one.
 
 `withdraw` method to be called on child smart contract, which will be check pointed & published on root chain as Merkel Root Proof, which then can be finally exitted by calling [`RootChainManager.exit`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/RootChainManager/RootChainManager.sol#L279), while submitting proof.
+
+- Token minting happens in `deposit` method.
+- Tokens to be burnt in `withdraw` method.
+
+These rules need to followed to keep balance of assets between two chains, otherwise it'll be assets created from thin air.
+
+> Note: No token minting in constructor of child token contract.
+
+#### implementation
+
+As we now know, why we need to implement `deposit` & `withdraw` methods in child token contract, we can proceed to implementing that.
 
 ### request-submission
 
