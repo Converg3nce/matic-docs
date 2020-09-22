@@ -89,7 +89,11 @@ Now we need to add two functions in above defined smart contract i.e. {`deposit`
 
 For transferring assets from root chain to child chain, we need to call [`RootChainManager.depositFor(...)`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/RootChainManager/RootChainManager.sol#L205), which will eventually ask [`StateSender.syncState(...)`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/StateSender/IStateSender.sol#L4), to transfer this asset from root chain to child chain, by emitting [`StateSynced`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/StateSender/DummyStateSender.sol#L29) event. 
 
-Now once this event is emitted, our Heimdal Nodes, which keep monitoring root chain periodically, will pick up `StateSynced` event & perform call to `onStateReceive` function of target smart contract. Here our target smart contract is nothing but [`ChildChainManager.onStateReceive`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/child/ChildChainManager/ChildChainManager.sol#L48).
+Once this event is emitted, our Heimdal Nodes, which keep monitoring root chain periodically, will pick up `StateSynced` event & perform call to `onStateReceive` function of target smart contract. Here our target smart contract is nothing but [`ChildChainManager.onStateReceive`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/child/ChildChainManager/ChildChainManager.sol#L48).
+
+`deposit` method which we're going to add in our smart contract, is going to be called by [`ChildChainManagerProxy`](https://github.com/maticnetwork/static/blob/e9604415ee2510146cb3030c83d7dbebff6444ad/network/testnet/mumbai/index.json#L90) & can only be called by this one.
+
+`withdraw` method to be called on child smart contract, which will be check pointed & published on root chain as Merkel Root Proof, which then can be finally exitted by calling [`RootChainManager.exit`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/RootChainManager/RootChainManager.sol#L279), while submitting proof.
 
 ### request-submission
 
