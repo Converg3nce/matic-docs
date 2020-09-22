@@ -67,7 +67,7 @@ During deposit of ERC20 tokens, the providers are specified as below
 
 `parentProvider: window.web3`
 
-> NOTE: Deposits from root chain to child chain, happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain.
+> NOTE: Deposits from Ethereum to Matic happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain. This [link](/docs/develop/tools/deposit-withdraw-status/) explains how to track the deposit events.
 
 <div
         style={{
@@ -78,6 +78,23 @@ During deposit of ERC20 tokens, the providers are specified as below
       >
         <img src={useBaseUrl("img/pos-using-metamask/deposit.png")} />
 </div>
+
+### Transfer
+
+Once deposited, the token can be transfered to any other account on the Matic chain.
+
+During Trtansfer, only the `maticProvider` needs to be set as `window.web3`.
+
+```js
+await maticPoSClient.transferERC20Tokens(
+  config.plasmaChildERC20,
+  account,
+  amount,
+  {
+    from: account,
+  }
+);
+```
 
 ### Burn
 
