@@ -10,7 +10,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 ### intro
 
-Assets can be transferred in between root chain & child chain. Let me be first clear regarding nomenclature
+Assets can be transferred in between root chain & child chain. Let's be first clear regarding nomenclature
 
 - **Root chain/ Base chain/ Parent chain/ Layer 1** :: all are same, referring to either Goerli or Ethereum Mainnet
 - **Child chain/ Layer 2** :: refers to either Matic Mumbai or Matic Matic Mainnet
@@ -26,11 +26,11 @@ For assets i.e. ERC20, ERC721, ERC1155 to be transferrable in between chains, we
 
 ### example
 
-Now I'm going to show what changes you need to make, for making one contract mapping eligible.
+Here we're going to modify child smart contract, _given root smart contract_, for making it mapping eligible.
 
 #### root token contract
 
-I'm going to copy [this](https://github.com/maticnetwork/pos-portal/blob/master/contracts/child/ChildToken/ChildERC20.sol) smart contract & use it as our root token contract.
+Let's copy [this](https://github.com/maticnetwork/pos-portal/blob/master/contracts/child/ChildToken/ChildERC20.sol) smart contract & use it as our root token contract.
 
 ```js
 pragma solidity 0.6.6;
@@ -79,7 +79,10 @@ contract ChildERC20 is
 }
 ```
 
-Lets say we've just deployed this on Goerli Testnet at `0x...`. 
+Lets say we've just deployed this on Goerli Testnet at `0x...`.
+
+#### child token contract
+
 
 ### request-submission
 
