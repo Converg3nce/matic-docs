@@ -24,7 +24,7 @@ For assets i.e. ERC20, ERC721, ERC1155 to be transferrable in between chains, we
 
 > For mapping i.e. the final step, make sure you check [below](#request-submission)
 
-### example
+### walk-through
 
 Here we're going to modify child smart contract, _given root smart contract_, for making it mapping eligible.
 
