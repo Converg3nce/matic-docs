@@ -32,7 +32,7 @@ Here we're going to modify child smart contract, _given root smart contract_, fo
 
 Let's moidfy [this](https://github.com/maticnetwork/pos-portal/blob/master/contracts/child/ChildToken/ChildERC20.sol) smart contract & use it as our root token contract.
 
-```js
+```js title="RootERC20.sol"
 pragma solidity 0.6.6;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -78,7 +78,7 @@ These rules need to followed to keep balance of assets between two chains, other
 
 As we now know, why we need to implement `deposit` & `withdraw` methods in child token contract, we can proceed for implementing it.
 
-```js
+```js title="ChildERC20.sol"
 pragma solidity 0.6.6;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -118,7 +118,7 @@ contract ChildERC20 is ERC20,
 
 But one thing you might notice, `deposit` function, in our implementation can be called by anyone, which must not happen. So we're going to make sure it can only be called by [`ChildChainManagerProxy`](https://github.com/maticnetwork/static/blob/e9604415ee2510146cb3030c83d7dbebff6444ad/network/testnet/mumbai/index.json#L90).
 
-```js
+```js title="ComplaintChildERC20.sol"
 pragma solidity 0.6.6;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -174,7 +174,7 @@ contract ChildERC20 is ERC20,
 
 This updated implementation can be used for mapping.
 
-Next steps :
+Steps :
 
 - First deploy root token on root chain i.e. {Goerli, Ethereum Mainnet}
 - Modify root token by adding `deposit` & `withdraw` functions & deploy corresponding child token on child chain i.e. {Matic Mumbai, Matic Mainnet}
