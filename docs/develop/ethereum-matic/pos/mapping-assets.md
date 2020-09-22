@@ -96,7 +96,7 @@ contract ChildERC20 is ERC20,
     
     }
 
-    function deposit(address user, bytes calldata depositData) external override {
+    function deposit(address user, bytes calldata depositData) external {
         uint256 amount = abi.decode(depositData, (uint256));
 
         // `amount` token getting minted here & equal amount got locked in RootChainManager
