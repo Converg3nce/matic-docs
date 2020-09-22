@@ -30,7 +30,7 @@ Here we're going to modify child smart contract, _given root smart contract_, fo
 
 #### root token contract
 
-Let's copy [this](https://github.com/maticnetwork/pos-portal/blob/master/contracts/child/ChildToken/ChildERC20.sol) smart contract & use it as our root token contract.
+Let's moidfy [this](https://github.com/maticnetwork/pos-portal/blob/master/contracts/child/ChildToken/ChildERC20.sol) smart contract & use it as our root token contract.
 
 ```js
 pragma solidity 0.6.6;
@@ -75,6 +75,33 @@ These rules need to followed to keep balance of assets between two chains, other
 #### implementation
 
 As we now know, why we need to implement `deposit` & `withdraw` methods in child token contract, we can proceed to implementing that.
+
+```js
+pragma solidity 0.6.6;
+
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract ChildERC20 is ERC20,
+{
+    constructor(string memory name, string memory symbol, uint8 decimals) public ERC20(name, symbol) {
+        
+        _setupDecimals(decimals);
+        // can't mint here, because minting in child chain smart contract's constructor not allowed
+        // _mint(msg.sender, 10 ** 27);
+    
+    }
+
+    function deposit(address user, bytes calldata depositData) external override {
+        uint256 amount = abi.decode(depositData, (uint256));
+        _mint(user, amount);
+    }
+
+    function withdraw(uint256 amount) external {
+        _burn(_msgSender(), amount);
+    }
+
+}
+```
 
 ### request-submission
 
