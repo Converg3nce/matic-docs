@@ -37,7 +37,7 @@ pragma solidity 0.6.6;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract ChildERC20 is ERC20,
+contract RootERC20 is ERC20,
 {
     constructor(string memory name, string memory symbol, uint8 decimals) public ERC20(name, symbol) {
         
@@ -58,6 +58,8 @@ Now we need to add two functions in above defined smart contract i.e. {`deposit`
 ##### why ?
 
 For transferring assets from root chain to child chain, we need to call [`RootChainManager.depositFor(...)`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/RootChainManager/RootChainManager.sol#L205), which will eventually ask [`StateSender.syncState(...)`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/StateSender/IStateSender.sol#L4), to transfer this asset from root chain to child chain, by emitting [`StateSynced`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/StateSender/DummyStateSender.sol#L29) event. 
+
+But before that make sure you've approved [`RootChainManagerProxy`](https://github.com/maticnetwork/static/blob/e9604415ee2510146cb3030c83d7dbebff6444ad/network/testnet/mumbai/index.json#L52) to spend equal amount of token, so that it can call `Token.transferFrom` & start deposit. 
 
 Once this event is emitted, our Heimdal Nodes, which keep monitoring root chain periodically, will pick up `StateSynced` event & perform call to `onStateReceive` function of target smart contract. Here our target smart contract is nothing but [`ChildChainManager.onStateReceive`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/child/ChildChainManager/ChildChainManager.sol#L48).
 
@@ -80,9 +82,12 @@ As we now know, why we need to implement `deposit` & `withdraw` methods in child
 pragma solidity 0.6.6;
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract ChildERC20 is ERC20,
 {
+    using SafeMath for uint256;
+
     constructor(string memory name, string memory symbol, uint8 decimals) public ERC20(name, symbol) {
         
         _setupDecimals(decimals);
@@ -93,11 +98,19 @@ contract ChildERC20 is ERC20,
 
     function deposit(address user, bytes calldata depositData) external override {
         uint256 amount = abi.decode(depositData, (uint256));
-        _mint(user, amount);
+
+        // `amount` token getting minted here & equal amount got locked in RootChainManager
+        _totalSupply = _totalSupply.add(amount);
+        _balances[account] = _balances[account].add(amount);
+        
+        emit Transfer(address(0), account, amount);
     }
 
     function withdraw(uint256 amount) external {
-        _burn(_msgSender(), amount);
+        _balances[account] = _balances[account].sub(amount, "ERC20: burn amount exceeds balance");
+        _totalSupply = _totalSupply.sub(amount);
+        
+        emit Transfer(account, address(0), amount);
     }
 
 }
