@@ -75,4 +75,6 @@ contract YourCustomChildToken is ChildERC20 {
 }
 ```
 
-To submit such a custom token for mapping, submit the form [here](/docs/develop/ethereum-matic/submit-mapping-request). Please make note that this mapping submission form is for Plasma Bridge and for PoS bridge you have to directly contact the matic team on discord.
+### request-submission
+
+Please go through [this](/docs/develop/ethereum-matic/submit-mapping-request).
