@@ -83,6 +83,13 @@ Lets say we've just deployed this on Goerli Testnet at `0x...`.
 
 #### child token contract
 
+Now we need to add two functions in above defined smart contract i.e. {`deposit`, `withdraw`}.
+
+##### why ?
+
+For transferring assets from root chain to child chain, we need to call [`RootChainManager.depositFor(...)`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/RootChainManager/RootChainManager.sol#L205), which will eventually ask [`StateSender.syncState(...)`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/StateSender/IStateSender.sol#L4), to transfer this asset from root chain to child chain, by emitting [`StateSynced`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/StateSender/DummyStateSender.sol#L29) event. 
+
+Now once this event is emitted, our Heimdal Nodes, which keep monitoring root chain periodically, will pick up `StateSynced` event & perform call to `onStateReceive` function of target smart contract. Here our target smart contract is nothing but [`ChildChainManager.onStateReceive`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/child/ChildChainManager/ChildChainManager.sol#L48).
 
 ### request-submission
 
