@@ -144,13 +144,15 @@ contract ChildERC20 is ERC20,
     // being proxified smart contract, most probably childChainManagerProxy contract's address
     // is not going to change ever, but still, lets keep it 
     function updateChildChainManager(address newChildChainManagerProxy) external {
-      require(newChildChainManagerProxy != address(0), "Bad ChildChainManagerProxy address");
-      require(msg.sender == deployer, "You're not allowed");
+        require(newChildChainManagerProxy != address(0), "Bad ChildChainManagerProxy address");
+        require(msg.sender == deployer, "You're not allowed");
 
-      childChainManagerProxy = newChildChainManagerProxy;
+        childChainManagerProxy = newChildChainManagerProxy;
     }
 
     function deposit(address user, bytes calldata depositData) external {
+        require(msg.sender == childChainManagerProxy, "You're not allowed to deposit");
+
         uint256 amount = abi.decode(depositData, (uint256));
 
         // `amount` token getting minted here & equal amount got locked in RootChainManager
@@ -169,6 +171,14 @@ contract ChildERC20 is ERC20,
 
 }
 ```
+
+This updated implementation can be used for mapping.
+
+Next steps :
+
+- First deploy root token on root chain i.e. {Goerli, Ethereum Mainnet}
+- Modify root token by adding `deposit` & `withdraw` functions & deploy corresponding child token on child chain i.e. {Matic Mumbai, Matic Mainnet}
+- Then submit a mapping request, to be resolved by team.
 
 ### request-submission
 
