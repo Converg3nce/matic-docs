@@ -24,6 +24,62 @@ For assets i.e. ERC20, ERC721, ERC1155 to be transferrable in between chains, we
 
 > For mapping i.e. the final step, make sure you check [below](#request-submission)
 
+### example
+
+Now I'm going to show what changes you need to make, for making one contract mapping eligible.
+
+#### root token contract
+
+I'm going to copy [this](https://github.com/maticnetwork/pos-portal/blob/master/contracts/child/ChildToken/ChildERC20.sol) smart contract & use it as our root token contract.
+
+```js
+pragma solidity 0.6.6;
+
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {AccessControlMixin} from "../../common/AccessControlMixin.sol";
+import {IChildToken} from "./IChildToken.sol";
+import {NativeMetaTransaction} from "../../common/NativeMetaTransaction.sol";
+import {ChainConstants} from "../../ChainConstants.sol";
+import {ContextMixin} from "../../common/ContextMixin.sol";
+
+
+contract ChildERC20 is
+    ERC20,
+    IChildToken,
+    AccessControlMixin,
+    NativeMetaTransaction,
+    ChainConstants,
+    ContextMixin
+{
+    bytes32 public constant DEPOSITOR_ROLE = keccak256("DEPOSITOR_ROLE");
+
+    constructor(
+        string memory name_,
+        string memory symbol_,
+        uint8 decimals_,
+        address childChainManager
+    ) public ERC20(name_, symbol_) {
+        _setupContractId("ChildERC20");
+        _setupDecimals(decimals_);
+        _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
+        _setupRole(DEPOSITOR_ROLE, childChainManager);
+        _initializeEIP712(name_, ERC712_VERSION);
+    }
+
+    // This is to support Native meta transactions
+    // never use msg.sender directly, use _msgSender() instead
+    function _msgSender()
+        internal
+        override
+        view
+        returns (address payable sender)
+    {
+        return ContextMixin.msgSender();
+    }
+}
+```
+
+Lets say we've just deployed this on Goerli Testnet at `0x...`. 
 
 ### request-submission
 
