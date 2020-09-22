@@ -1,6 +1,6 @@
 ---
 id: mapping-assets
-title: Mapping Assets Explained
+title: Mapping Assets using Plasma
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
