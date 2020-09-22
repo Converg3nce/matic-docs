@@ -76,7 +76,7 @@ These rules need to followed to keep balance of assets between two chains, other
 
 #### implementation
 
-As we now know, why we need to implement `deposit` & `withdraw` methods in child token contract, we can proceed to implementing that.
+As we now know, why we need to implement `deposit` & `withdraw` methods in child token contract, we can proceed for implementing it.
 
 ```js
 pragma solidity 0.6.6;
@@ -94,6 +94,60 @@ contract ChildERC20 is ERC20,
         // can't mint here, because minting in child chain smart contract's constructor not allowed
         // _mint(msg.sender, 10 ** 27);
     
+    }
+
+    function deposit(address user, bytes calldata depositData) external {
+        uint256 amount = abi.decode(depositData, (uint256));
+
+        // `amount` token getting minted here & equal amount got locked in RootChainManager
+        _totalSupply = _totalSupply.add(amount);
+        _balances[msg.sender] = _balances[msg.sender].add(amount);
+        
+        emit Transfer(address(0), msg.sender, amount);
+    }
+
+    function withdraw(uint256 amount) external {
+        _balances[msg.sender] = _balances[msg.sender].sub(amount, "ERC20: burn amount exceeds balance");
+        _totalSupply = _totalSupply.sub(amount);
+        
+        emit Transfer(msg.sender, address(0), amount);
+    }
+
+}
+```
+
+But one thing you might notice, `deposit` function, in our implementation can be called by anyone, which must not happen. So we're going to make sure it can only be called by [`ChildChainManagerProxy`](https://github.com/maticnetwork/static/blob/e9604415ee2510146cb3030c83d7dbebff6444ad/network/testnet/mumbai/index.json#L90).
+
+```js
+pragma solidity 0.6.6;
+
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
+
+contract ChildERC20 is ERC20,
+{
+    using SafeMath for uint256;
+    // keeping it for checking, whether deposit being called by valid address or not
+    address public childChainManagerProxy;
+    address deployer;
+
+    constructor(string memory name, string memory symbol, uint8 decimals, address _childChainManagerProxy) public ERC20(name, symbol) {
+        
+        _setupDecimals(decimals);
+        childChainManagerProxy = _childChainManagerProxy;
+        deployer = msg.sender;
+        // can't mint here, because minting in child chain smart contract's constructor not allowed
+        // _mint(msg.sender, 10 ** 27);
+    
+    }
+
+    // being proxified smart contract, most probably childChainManagerProxy contract's address
+    // is not going to change ever, but still, lets keep it 
+    function updateChildChainManager(address newChildChainManagerProxy) external {
+      require(newChildChainManagerProxy != address(0), "Bad ChildChainManagerProxy address");
+      require(msg.sender == deployer, "You're not allowed");
+
+      childChainManagerProxy = newChildChainManagerProxy;
     }
 
     function deposit(address user, bytes calldata depositData) external {
