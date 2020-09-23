@@ -40,7 +40,8 @@ The providers can be RPC urls or web3 based providers like Metamask provider, HD
   <TabItem value="url">
 
   ```js
-  const provider = 'https://mainnet.infura.io/v3/<infura-key>'
+  const parentProvider = 'https://mainnet.infura.io/v3/<infura-key>'
+  const maticProvider = 'https://rpc-mainnet.matic.network'
   ```
   </TabItem>
 
@@ -55,7 +56,8 @@ The providers can be RPC urls or web3 based providers like Metamask provider, HD
 
   ```js
   const HDWalletProvider = require('@truffle/hdwallet-provider')
-  const provider = new HDWalletProvider(privateKey, rpcURL),
+  const parentProvider = new HDWalletProvider(privateKey, 'https://mainnet.infura.io/v3/<infura-key>'),
+  const maticProvider = new HDWalletProvider(privateKey, 'https://rpc-mainnet.matic.network'),
   ```
   </TabItem>
 </Tabs>
