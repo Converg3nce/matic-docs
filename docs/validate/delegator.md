@@ -37,7 +37,7 @@ Once you have logged in you will be navigated to a screen where you will see a l
 
 ## How to delegate to a validator
 
-Your need to have your funds (ETH and MATIC tokens) on the Main Ethereum Network to delegate your tokens.  If your tokens are on any other network/testnet or Matic Mainnet, then you won't be able to delegate your tokens to Matic.
+You need to have your funds (ETH and MATIC tokens) on the Main Ethereum Network to delegate your tokens.  If your tokens are on any other network/testnet or Matic Mainnet, then you won't be able to delegate your tokens to Matic.
 
 <img src={useBaseUrl("img/staking/main-ethereum-network.png")} />
 

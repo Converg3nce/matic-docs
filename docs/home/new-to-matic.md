@@ -12,8 +12,8 @@ Matic Network is a scaling solution for public blockchains. Based on an adapted 
 ### Types of Interaction on Matic
 
 * [Matic PoS chain](/docs/develop/getting-started)
-* [Ethereum + Matic with PoS bridge](https://docs.matic.today/docs/develop/ethereum-matic/plasma/getting-started)
-* [Ethereum + Matic with Plasma bridge](https://docs.matic.today/docs/develop/ethereum-matic/pos/getting-started)
+* [Ethereum + Matic with PoS bridge](https://docs.matic.today/docs/develop/ethereum-matic/pos/getting-started)
+* [Ethereum + Matic with Plasma bridge](https://docs.matic.today/docs/develop/ethereum-matic/plasma/getting-started)
 
 ### Deploy Smart Contracts
 

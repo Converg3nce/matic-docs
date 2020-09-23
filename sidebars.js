@@ -70,6 +70,7 @@ module.exports = {
         //   href: "https://status.matic.today/#/checkpoints",
         // },
         "develop/tools/matic-gas-station",
+        "develop/tools/matic-widget",
       ],
     },
     {
@@ -88,20 +89,20 @@ module.exports = {
       label: "Wallets",
       items: [
         "develop/wallets/getting-started",
-	{
-         type: "category",
-         label: "Arkane",
-         items: [
-	  "develop/wallets/arkane/intro",
-          "develop/wallets/arkane/create-wallet",
-          "develop/wallets/arkane/network",
-          "develop/wallets/arkane/custom-tokens",
-          "develop/wallets/arkane/support",
-         ],
-       },
-        "develop/wallets/fortmatic",	      
+        {
+          type: "category",
+          label: "Arkane",
+          items: [
+            "develop/wallets/arkane/intro",
+            "develop/wallets/arkane/create-wallet",
+            "develop/wallets/arkane/network",
+            "develop/wallets/arkane/custom-tokens",
+            "develop/wallets/arkane/support",
+          ],
+        },
+        "develop/wallets/fortmatic",
         "develop/wallets/metamask",
-	"develop/wallets/portis",
+        "develop/wallets/portis",
         "develop/wallets/torus",
         "develop/wallets/walletconnect",
       ],
@@ -137,7 +138,9 @@ module.exports = {
                 "develop/ethereum-matic/pos/calling-contracts/erc1155",
               ],
             },
-            "develop/ethereum-matic/pos/deployment"
+            "develop/ethereum-matic/pos/deposit-withdraw-event-pos",
+            "develop/ethereum-matic/pos/deployment",
+            "develop/ethereum-matic/pos/mapping-assets",
           ],
         },
         {
@@ -148,11 +151,20 @@ module.exports = {
             "develop/ethereum-matic/plasma/eth",
             "develop/ethereum-matic/plasma/erc20",
             "develop/ethereum-matic/plasma/erc721",
-            "develop/ethereum-matic/plasma/mapping-assets",
+            "develop/ethereum-matic/plasma/deposit-withdraw-event-plasma",
             "develop/ethereum-matic/plasma/api-reference",
+            "develop/ethereum-matic/plasma/mapping-assets",
           ],
         },
         "develop/ethereum-matic/submit-mapping-request",
+      ],
+    },
+    {
+      type: "category",
+      label: "L1<>L2 Communication",
+      items: [
+        "develop/l1-l2-communication/ethereum-to-matic",
+        "develop/l1-l2-communication/matic-to-ethereum",
       ],
     },
     {
@@ -169,9 +181,9 @@ module.exports = {
       label: "Oracles",
       items: [
         "develop/oracles/getting-started",
+        "develop/oracles/chainlink",
         "develop/oracles/razor",
         "develop/oracles/bandchain",
-        "develop/oracles/chainlink",
       ],
     },
     "develop/fiat-on-ramp",
@@ -196,7 +208,11 @@ module.exports = {
     {
       type: "category",
       label: "Tutorials",
-      items: ["develop/full-stack-dapp-with-pos"],
+      items: [
+        "develop/full-stack-dapp-with-pos",
+        "develop/pos-using-metamask",
+        "develop/plasma-using-metamask",
+      ],
     },
     {
       type: "category",
@@ -206,8 +222,6 @@ module.exports = {
         "develop/advanced/swap-assets",
         "develop/advanced/deploy-your-own-matic-testnet",
         "develop/advanced/custom-restrictions",
-        "develop/advanced/transfer-data",
-        "develop/advanced/matic-to-ethereum",
       ],
     },
     {

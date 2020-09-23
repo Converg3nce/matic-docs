@@ -17,7 +17,7 @@ Inbound oracles bring off-chain or real-world data to the blockchain, whereas th
 
 To integrate your DApp with Oracles on Matic, you can choose to go with one of the following solutions:
 
-1. [Chainlink](chainlink)
+1. [Chainlink](chainlink) (recommended)
 2. [BandChain](bandchain)
 3. [Razor](razor)
 
