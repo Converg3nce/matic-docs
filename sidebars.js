@@ -71,7 +71,6 @@ module.exports = {
         // },
         "develop/tools/matic-gas-station",
         "develop/tools/matic-widget",
-        "develop/tools/deposit-withdraw-status",
       ],
     },
     {
@@ -122,7 +121,9 @@ module.exports = {
             "develop/ethereum-matic/pos/erc20",
             "develop/ethereum-matic/pos/erc721",
             "develop/ethereum-matic/pos/erc1155",
+            "develop/ethereum-matic/pos/deposit-withdraw-event-pos",
             "develop/ethereum-matic/pos/deployment",
+            "develop/ethereum-matic/pos/mapping-assets",
             // "develop/ethereum-matic/pos/contract-interfaces",
             // "develop/ethereum-matic/pos/support-multiple-token",
           ],
@@ -135,8 +136,9 @@ module.exports = {
             "develop/ethereum-matic/plasma/eth",
             "develop/ethereum-matic/plasma/erc20",
             "develop/ethereum-matic/plasma/erc721",
-            "develop/ethereum-matic/plasma/mapping-assets",
+            "develop/ethereum-matic/plasma/deposit-withdraw-event-plasma",
             "develop/ethereum-matic/plasma/api-reference",
+            "develop/ethereum-matic/plasma/mapping-assets",
           ],
         },
         "develop/ethereum-matic/submit-mapping-request",
@@ -191,7 +193,11 @@ module.exports = {
     {
       type: "category",
       label: "Tutorials",
-      items: ["develop/full-stack-dapp-with-pos"],
+      items: [
+        "develop/full-stack-dapp-with-pos",
+        "develop/pos-using-metamask",
+        "develop/plasma-using-metamask",
+      ],
     },
     {
       type: "category",
