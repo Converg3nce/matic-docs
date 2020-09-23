@@ -8,13 +8,13 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
-Contracts: [https://github.com/maticnetwork/pos-portal/tree/v1.0.0/contracts](https://github.com/maticnetwork/pos-portal/tree/v1.0.0/contracts)
+Contracts: [https://github.com/maticnetwork/pos-portal/tree/v1.1.0/contracts](https://github.com/maticnetwork/pos-portal/tree/v1.1.0/contracts)
 
-Artifacts: [https://github.com/maticnetwork/pos-portal/tree/v1.0.0/artifacts](https://github.com/maticnetwork/pos-portal/tree/v1.0.0/artifacts)
+Artifacts: [https://github.com/maticnetwork/static/tree/master/network/testnet/mumbai/artifacts/pos](https://github.com/maticnetwork/static/tree/master/network/testnet/mumbai/artifacts/pos)
 
-Flattened contracts: [https://github.com/maticnetwork/pos-portal/tree/v1.0.0/flat](https://github.com/maticnetwork/pos-portal/tree/v1.0.0/flat)
+Flattened contracts: [https://github.com/maticnetwork/pos-portal/tree/v1.1.0/flat](https://github.com/maticnetwork/pos-portal/tree/v1.1.0/flat)
 
-Maticjs Examples: [https://github.com/maticnetwork/matic.js/tree/v2.0.2/examples/POS-client](https://github.com/maticnetwork/matic.js/tree/v2.0.2/examples/POS-client)
+Maticjs Examples: [https://github.com/maticnetwork/matic.js/tree/master/examples/POS-client](https://github.com/maticnetwork/matic.js/tree/master/examples/POS-client)
 
 Contracts Addresses on Mumbai: [https://static.matic.network/network/testnet/mumbai/index.json](https://static.matic.network/network/testnet/mumbai/index.json). Use the `Proxy` address where ever it is available.
 
