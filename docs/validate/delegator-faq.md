@@ -70,7 +70,7 @@ Currently 20188 Matic tokens are distributed proportionately on each successful 
 
 (Note that there is a 10% proposer bonus that accrues to the validator who submits the checkpoint, but over time, the effect of the extra bonus is nullified over multiple checkpoints by different validators.)
 
-The checkpoint submission is done by one of the validators approximately every 30 minutes. This time is approximate and may vary based on validator consensus on the Matic Heimdall layer. 
+The checkpoint submission is done by one of the validators approximately every 34 minutes. This time is approximate and may vary based on validator consensus on the Matic Heimdall layer. This may also vary based on Ethereum Network. Highger congestion in the network may result in delayed checkpoints.
 
 You can track checkpoints on the staking contract here: https://etherscan.io/address/0x86e4dc95c7fbdbf52e33d563bbdb00823894c287
 
@@ -121,7 +121,7 @@ Check for the following:
 
 ### How do I send funds from Binance or other exchanges to Matic wallet?
 
-Technically, the Matic web wallet/Staking interface is just a web application. Currently it supports only 1 wallet - Metamask.
+Technically, the Matic web wallet/Staking interface is just a web application. Currently it supports the following wallets - Metamask. WalletConnect and WalletLink
 
 So first you must withdraw your funds from Binance or any other exchange to your Ethereum address on Metamask. If you don't know how to use Metamask, google it a bit. There are plenty of videos and blogs to get started with it.
 
@@ -141,7 +141,7 @@ No. Once your Delegation transactions are confirmed, and you can see your tokens
 
 ### I have unbonded, how long will it take to Unbond
 
-The unbonding period is currently set to 424 checkpoints. This is approximately 9 days. Every checkpoint takes approximately 30 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.
+The unbonding period is currently set to 424 checkpoints. This is approximately 9 days. Every checkpoint takes approximately 34 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.
 
 ### I have unbonded, and I now see the Claim Stake button, but it is disabled, why is that
 
