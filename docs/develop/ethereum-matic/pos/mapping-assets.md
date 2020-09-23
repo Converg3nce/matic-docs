@@ -8,7 +8,7 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
-### intro
+### Introduction
 
 Assets can be transferred in between root chain & child chain. Let's be first clear regarding nomenclature
 
@@ -24,11 +24,11 @@ For assets i.e. ERC20, ERC721, ERC1155 to be transferrable in between chains, we
 
 > For mapping i.e. the final step, make sure you check [below](#request-submission)
 
-### walk-through
+### Walk through
 
 Here we're going to modify child smart contract, _given root smart contract_, for making it mapping eligible.
 
-#### root token contract
+#### Root Token Contract
 
 Let's moidfy [this](https://github.com/maticnetwork/pos-portal/blob/master/contracts/child/ChildToken/ChildERC20.sol) smart contract & use it as our root token contract.
 
@@ -51,11 +51,11 @@ contract RootERC20 is ERC20,
 
 Lets say we've just deployed this on Goerli Testnet at `0x...`.
 
-#### child token contract
+#### Child Token Contract
 
 Now we need to add two functions in above defined smart contract i.e. {`deposit`, `withdraw`}.
 
-##### why ?
+##### Why ?
 
 For transferring assets from root chain to child chain, we need to call [`RootChainManager.depositFor(...)`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/RootChainManager/RootChainManager.sol#L205), which will eventually ask [`StateSender.syncState(...)`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/StateSender/IStateSender.sol#L4), to transfer this asset from root chain to child chain, by emitting [`StateSynced`](https://github.com/maticnetwork/pos-portal/blob/c50e4144d90fcd63aa3d5600b11ccfff9b395fcf/contracts/root/StateSender/DummyStateSender.sol#L29) event. 
 
@@ -74,7 +74,7 @@ These rules need to followed to keep balance of assets between two chains, other
 
 > Note: No token minting in constructor of child token contract.
 
-#### implementation
+#### Implementation
 
 As we now know, why we need to implement `deposit` & `withdraw` methods in child token contract, we can proceed for implementing it.
 
@@ -180,6 +180,6 @@ Steps :
 - Modify root token by adding `deposit` & `withdraw` functions & deploy corresponding child token on child chain i.e. {Matic Mumbai, Matic Mainnet}
 - Then submit a mapping request, to be resolved by team.
 
-### request-submission
+### Request Submission
 
 Please go through [this](/docs/develop/ethereum-matic/submit-mapping-request).
