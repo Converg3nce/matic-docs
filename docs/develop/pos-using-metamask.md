@@ -83,11 +83,11 @@ During deposit of ERC20 tokens, the providers are specified as below
 
 Once deposited, the token can be transfered to any other account on the Matic chain.
 
-During Trtansfer, only the `maticProvider` needs to be set as `window.web3`.
+During Transfer, only the `maticProvider` needs to be set as `window.web3`.
 
 ```js
 await maticPoSClient.transferERC20Tokens(
-  config.plasmaChildERC20,
+  config.posChildERC20,
   account,
   amount,
   {
