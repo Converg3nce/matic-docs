@@ -9,6 +9,9 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## Installation
 The easiest way to consume the SDK is via NPM. To install it in your project run
 ```bash
@@ -25,8 +28,41 @@ const MaticPOSClient = require('@maticnetwork/maticjs').MaticPOSClient
 import { MaticPOSClient } from '@maticnetwork/maticjs'
 ```
 
-Instantiate the client by passing network details and providers based on the network you are integrating. The providers can be RPC urls, Metamask provider, HDWalletProvider etc. based on requirement.
-```jsx
+The providers can be RPC urls or web3 based providers like Metamask provider, HDWalletProvider etc. based on requirement.
+<Tabs
+  defaultValue="url"
+  values={[
+    { label: 'RPC URL', value: 'url', },
+    { label: 'Metamask provider', value: 'metamask', },
+    { label: 'HD WAllet provider', value: 'hdwallet', },
+  ]}
+>
+  <TabItem value="url">
+
+  ```js
+  const provider = 'https://mainnet.infura.io/v3/<infura-key>'
+  ```
+  </TabItem>
+
+  <TabItem value="metamask">
+
+  ```js
+  const provider = window.ethereum
+  ```
+  </TabItem>
+
+  <TabItem value="hdwallet">
+
+  ```js
+  const HDWalletProvider = require('@truffle/hdwallet-provider')
+  const provider = new HDWalletProvider(privateKey, rpcURL),
+  ```
+  </TabItem>
+</Tabs>
+
+Instantiate the client by passing network details and providers based on the network you are integrating.
+
+```js
 // for mumbai testnet
 const maticPOSClient = new MaticPOSClient({
   network: "testnet",
@@ -35,7 +71,7 @@ const maticPOSClient = new MaticPOSClient({
   maticProvider: <mumbai-provider>
 });
 ```
-```jsx
+```js
 // for Matic mainnet
 const maticPOSClient = new MaticPOSClient({
   network: "mainnet",
@@ -60,3 +96,4 @@ const maticPOSClient = new MaticPOSClient({
   maticDefaultOptions: { from: <user-address> },
 });
 ```
+
