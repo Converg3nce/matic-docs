@@ -100,6 +100,8 @@ await maticPOSClient.depositEtherForUser(from, amount, {
 });
 ```
 
+> NOTE: Deposits from Ethereum to Matic happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain. This [link](/docs/develop/ethereum-matic/pos/deposit-withdraw-event-pos) explains how to track the deposit events.
+
 ### Burn
 
 User can call `withdraw` function of `MaticWETH` contract. This function should burn the tokens. Since Ether is an ERC20 token on matic chain, use `burnERC20` method that Matic POS client exposes to make this call.
@@ -112,7 +114,7 @@ Store the transaction hash for this call and use it while generating burn proof.
 
 ### Exit
 
-Once the **checkpoint** has been submitted for the block containing burn transaction, user should call the **exit** function of `RootChainManager` contract and submit the proof of burn. Upon submitting valid proof tokens are transferred to the user. Matic POS client exposes `exitERC20` method to make this call.
+Once the **checkpoint** has been submitted for the block containing burn transaction, user should call the **exit** function of `RootChainManager` contract and submit the proof of burn. Upon submitting valid proof tokens are transferred to the user. Matic POS client exposes `exitERC20` method to make this call. This function can be called only after the checkpoint is included in the main chain. The checkpoint inclusion can be tracked by following this [guide](/docs/develop/ethereum-matic/pos/deposit-withdraw-event-pos#checkpoint-events).
 
 ```jsx
 await maticPOSClient.exitERC20(burnTxHash, { from });
