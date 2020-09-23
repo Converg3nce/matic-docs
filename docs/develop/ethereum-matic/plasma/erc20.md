@@ -132,7 +132,7 @@ async function execute() {
 execute().then(_ => process.exit(0))
 ```
 
-> NOTE: Deposits from Ethereum to Matic happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain. This [link](/docs/develop/tools/deposit-withdraw-status/) explains how to track the deposit events.
+> NOTE: Deposits from Ethereum to Matic happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain. This [link](/docs/develop/ethereum-matic/plasma/deposit-withdraw-event-plasma) explains how to track the deposit events.
 
 ## transfer.js
 
@@ -189,7 +189,7 @@ execute().then((_) => process.exit(0));
 
 ### 2. confirm-withdraw.js
 
-User can call **_startExitWithBurntTokens_** function of **_erc20Predicate_** contract. This function should burn the tokens. Matic Plasma client exposes **_withdraw_** method to make this call.
+User can call **_startExitWithBurntTokens_** function of **_erc20Predicate_** contract. This function should burn the tokens. Matic Plasma client exposes **_withdraw_** method to make this call. This function can be called only after the checkpoint is included in the main chain. The checkpoint inclusion can be tracked by following this [guide](/docs/develop/ethereum-matic/plasma/deposit-withdraw-event-plasma#checkpoint-events).
 
 ```js
 //Wait for ~10 mins for Mumbai testnet or ~30mins for Ethereum Mainnet till the checkpoint is submitted for burned transaction, then run the confirm withdraw
