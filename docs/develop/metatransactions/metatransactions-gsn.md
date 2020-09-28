@@ -16,77 +16,112 @@ That's where GSN comes into picture with an interesting proposal for improving D
 
 <img src={useBaseUrl("img/gsn/paymaster_needs_gas.png")} />
 
-## Components
+## Background Info
 
-GSN is a broad idea, which brings several components into picture, discussed below.
+Broadly speaking, there is currently two versions of GSN available. GSNv1 and GSNv2. GSNv1 was released over a year ago and ran on all mainnets of Ethereum until recently, [support was dropped](https://forum.openzeppelin.com/t/doubling-down-in-security/2712) in favor of GSNv2 being released later this year  (2020).
+
+GSNv2 at time of writing, is still not released with a stable version, although suggestion to migrate to it has begun and is encouraged for those looking to integrate GSN and can wait for the final deployment before deploying their contracts. RecipientContract is currently stable, but others remain to be finalized.
+
+### GSNv1 
+#### Background
+For those, looking to integrate a stable GSN as fast as possible. GSNv1 remains the solution. It is deployed both on Matic Mumbai as well as Mainnet, with a number of relayers being maintained by various entities. 
+
+The deployed contract address is the same as the Ethereum mainnets
+
+|Network   | ```RelayHub.sol``` Address |
+|---|---|
+| Matic Mumbai  |  ```0xD216153c06E857cD7f72665E0aF1d7D82172F494``` |
+| Matic Mainnet  | ```0xD216153c06E857cD7f72665E0aF1d7D82172F494``` |
+
+#### Integration of GSNv1 
+
+Integration of GSNv1 is actually quite straight forward. It involves simply inheriting a single contract ```GSNRecipient.sol``` in the contract that is to use the GSN relayHub
+
+For more indepth details, consult the OpenGSN docs from [OpenZeppelin](https://docs.openzeppelin.com/learn/sending-gasless-transactions)
+
+Then you simply fund the ```RelayHub.sol``` with your contracts deployed address using the recipient funder function ```depositFor(address ContractToFund)``` or using the [OpenGSN Funder Tool](https://www.opengsn.org/recipients)
+
+#### Approval Strategies
+
+In GSNv1 there were a couple of various approval strategies for deciding which function calls to relay and which ones not to. The primary ones are discussed by [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/gsn-strategies) although you are free to implement your own in the ```approveRelayedCall``` function.
+
+#### Deploying your own Relayer
+
+For those looking to run your own relayer, the folks at [Creol.io](Creol.io) have created a very simple guide and tutorial for doing so on one of their github pages. [Running your own GSNv1 Relayer](https://github.com/JUDOKICK/matic-gsn-relayer-creol). It includes a simple to use Docker container script that is based on xDai's image for this.
+
+
+### GSNv2
+#### Components
+
+GSNv2 is a broad idea, which brings several components into picture, discussed below. There are a few other elements introduced in v2 that are not compatible with GSNv1, recipient contracts however remain broadly the same.
 
 <img src={useBaseUrl("img/gsn/gsn_flow_full_layered.jpg")} />
 
-### Client
+##### Client
 
 Clients are dApp users, who will be signing a message, with all required fields & send it to a *relay server*, where gas fees to be paid for this transaction. So client doesn't initiate a transaction here, rather they'll ask relay server to do it for them.
 
-### Relay Server
+##### Relay Server
 
 Relay servers will be accepting requests from clients & paying gas fees for them, while first checking with paymaster contract _( via relay hub )_ that if it relays this transaction does it get paid back or not ?
 
 It's always advisable to use dedicated relay server for your dApp & use third party relays when your relay is down. This provides better availability guarantee of service. Also for using third party relays, most probably you're going to pay an extra service charge.
 
-### PayMaster
+##### PayMaster
 
 PayMaster contract has a full gas tank of Matic, in relayhub, which is to be used for paying gas fees of relayed transactions. PayMaster contract has full control of either accepting or rejecting any relayed transaction. You can design custom paymasters which implements custom ERC20 based incentivization scheme.
 
-### Trusted Forwarder
+##### Trusted Forwarder
 
 Recipient contract accepts only those requests coming from a trusted forwarder, which will verify signature & account nonce, that can be directly processed in recipient contract.
 
-### Recipient Contract
+##### Recipient Contract
 
 This is the GSN aware target contract, able to accept meta transactions, where actual client address can be retrieved from `_msgSender()`, instead of `msg.sender`, when it's inheriting from this simple [base class](https://github.com/opengsn/gsn/blob/master/contracts/BaseRelayRecipient.sol).
 
-### Relay Hub
+##### Relay Hub
 
 Relay Hub will trustlessly connect clients, relay servers & paymasters, so participants don't need to know about each other. It'll help clients discover good relayers; prevent third-party relays from censoring transactions; make sure relay server gets paid back by paymaster after transaction is completed etc.
 
-## GSN-aware Contracts
+##### GSN-aware Contracts
 
 GSN will help us in building great dApps where user won't need to pay for their transactions, which will improve UX. For writing GSN-aware contracts, we need to take care of following things.
 
-### Recipient Contract
+##### Recipient Contract
 
 This is the contract that we want to make GSN-aware, for that we're simply going to inherit from [BaseRelayRecipeint](https://github.com/opengsn/gsn/blob/master/contracts/BaseRelayRecipient.sol), which adds one important method `_msgSender()`, to be used in all occurances of `msg.sender`. `_msgSender()` will take care of all lower level details for extracting actual client address, which will be different that `msg.sender` in case of meta transactions.
 
-### PayMaster Contract
+##### PayMaster Contract
 
 GSN relays are not serving free-of-cost, in order to cover their expenses, they will charge transaction fees in terms of FIAT or ERC20 tokens from paymaster contracts. We can inherit from [BasePaymaster](https://github.com/opengsn/gsn/blob/master/contracts/BasePaymaster.sol), and provide implementation of following methods for processing relayed calls. These methods to be invoked by relayhub _( only singleton instance of it for a certain network )_ before & after sending relayed calls to trusted forwarder.
 
-#### `acceptRelayedCall`
+###### `acceptRelayedCall`
 
 RelayHub asks paymaster whether it's interested in accepting new request or not, if not it can revert in this method. It can implement business logic for only accepting requests from white listed users; calling specific onboarding function in target contract etc.
 
-#### `preRelayedCall`
+###### `preRelayedCall`
 
 After a relayed call is accepted by paymaster, relay hub will call this function before calling target contract, where some book keeping can be done.
 
-#### `postRelayedCall`
+###### `postRelayedCall`
 
 After target contract call has completed, this method to be called with accurate estimate of transaction cost, where user can be charged. It'll also let us know whether transaction was reverted or not, giving relayer an opportunity to not charge user for reverted calls. 
 
 Above three methods give us opportunity for creating a fee model where users can be charged using ERC20 tokens. In `pre-` relayed call, we lock some token & in `post-` user actually gets charged, depending upon actual gas data.
 
-### Trusted Forwarder
+##### Trusted Forwarder
 
 We can avoid auditing whole relay hub system, by putting an extra piece in image, which will verify client signature of relayed calls & address nonce. Verified calls get through & reach target contract method. 
 
 This eventually reduces amount of checking target contract needs to do. In constructor of target contract, we need to put trusted forwarder. We can also set a list of trusted forwarders, if situation demands. We need to also make it sure, only owner gets to update this trusted forwarder address set.
 
-## Example
+### Example
 
 Now we're going to write a meta transactions enabled dApp, to demonstrate how you can also integrate it in your application.
 
-### Setup
+#### Setup
 
-#### Truffle Suite
+##### Truffle Suite
 
 We need one manage our smart contracts easily, so we're going to use `truffle`. Lets jump into console & install it.
 
@@ -94,7 +129,7 @@ We need one manage our smart contracts easily, so we're going to use `truffle`. 
 npm i -g truffle # global installation will be helpful
 ```
 
-#### Private Blockchain
+##### Private Blockchain
 
 We're going to use one private blockchain i.e. a simulated blockchain environment like ganache or you can also use geth/ parity in private mode.
 
@@ -104,7 +139,7 @@ So, lets go ahead and install GUI version of [ganache](https://www.trufflesuite.
 npm i -g ganache-cli # lets install it globally
 ```
 
-#### GSN
+##### GSN
 
 We need another utility package `@opengsn/gsn`, for deploying all above defined components & also running a relay-server on local machine.
 
@@ -112,11 +147,11 @@ We need another utility package `@opengsn/gsn`, for deploying all above defined 
 npm i -g @opengsn/gsn # this is also on global scope
 ```
 
-### Project
+#### Project
 
 As now we've installed all tools, we can move forward with creation of a project.
 
-#### Init
+##### Init
 
 Lets create directory for accomodating our project.
 
@@ -265,7 +300,7 @@ As we've our deployment scripts ready, lets just run migration.
 
 - No we didn't. So we're going to do that first & then go with target contract deployment.
 
-#### Running Private Blockchain
+##### Running Private Blockchain
 
 Find GUI ganache & run it or you can simply start ganache from cli using following command.
 
@@ -273,7 +308,7 @@ Find GUI ganache & run it or you can simply start ganache from cli using followi
 npx ganache-cli -d -k 'istanbul' -l 1e8 &
 ```
 
-#### Deploy RelayHub, Paymaster, StakeManager, Penalizer
+##### Deploy RelayHub, Paymaster, StakeManager, Penalizer
 
 We're going to use `@opengsn/gsn` for installing these components in local blockchain,which is by default running on `http://localhost:8545`.
 
@@ -289,7 +324,7 @@ For targetting Matic Testnet, use following command.
 npx gsn deploy --network https://rpc-mumbai.matic.today
 ```
 
-#### Funding Paymaster
+##### Funding Paymaster
 
 It's not over yet, we need to fund out paymaster, that's what is going to pay for our transaction, so we need to fund it.
 
@@ -304,7 +339,7 @@ For Matic Mumbai network, try using this command.
 npx gsn fund-paymaster --from <your-account-address> --hub <relay-hub-address> --paymaster <your-dapp-specific-paymaster> --network https://rpc-mumbai.matic.today
 ```
 
-#### Running Relay Server
+##### Running Relay Server
 
 We're going to start a local relay server for our purpose. If you want to run a public relayer in a public blockchain, then you need to read this [one](https://docs.opengsn.org/gsn-provider/running-own-relay.html).
 
@@ -327,7 +362,7 @@ npx gsn relayer-run --Workdir <workdir> --DevMode --RelayHubAddress <hub_address
 
 `Url` can be `ngrok` generated endpoint, if you're tunneling local instance, which is not recommened for production. Other params can be set before starting your relayer, for that please check origin [doc](https://docs.opengsn.org/gsn-provider/gsn-helpers.html#run).
 
-#### Registering Relayer with RelayHub
+##### Registering Relayer with RelayHub
 
 And last but not least, we need to register our relay server, with `RelayHub`, because among all these moving parts, this is one, which is stiching them all together.
 
@@ -338,7 +373,7 @@ npx gsn register-relayer
 
 For Matic Mumbai, don't forget to specify RPC endpoint using `--network` switch.
 
-#### Finally Deployment
+##### Finally Deployment
 
 As we've set up all required components, we can start deployment process. But before that we need to make sure our `truffle-config.js` is okay.
 
@@ -414,9 +449,9 @@ For deploying on Matic Mumbai Testnet, consider using following command.
 npx truffle migrate --network mumbai
 ```
 
-### Running Project
+#### Running Project
 
-#### Sending Meta Transaction
+##### Sending Meta Transaction
 
 For talking to GSN aware smart contract, we need to use `@opengsn/gsn` SDK, which will manage lots of lower level complexities for us. And as we've already installed it, lets create a JS file in root of this project directory i.e.`meta-tx-gsn`.
 
