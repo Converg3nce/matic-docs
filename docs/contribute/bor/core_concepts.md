@@ -159,7 +159,7 @@ func addTransferLog(
 
 ### Deposit native token
 
-A user can receive Native token by depositing Matic tokens on Ethereum main-chain to `DepositManager` contract (deployed on Ethreum chain). Source: [https://github.com/maticnetwork/contracts/blob/develop/contracts/root/depositManager/DepositManager.sol#L68](https://github.com/maticnetwork/contracts/blob/develop/contracts/root/depositManager/DepositManager.sol#L68)
+A user can receive Native token by depositing Matic tokens on Ethereum main-chain to `DepositManager` contract (deployed on Ethereum chain). Source: [https://github.com/maticnetwork/contracts/blob/develop/contracts/root/depositManager/DepositManager.sol#L68](https://github.com/maticnetwork/contracts/blob/develop/contracts/root/depositManager/DepositManager.sol#L68)
 
 ```jsx
 /**
@@ -348,7 +348,7 @@ contract MaticChildERC20 is BaseERC20 {
 
   constructor() public {}
 
-  // Intializes state since genesis contract doens't support constructor
+  // Initializes state since genesis contract doesn't support constructor
   function initialize(address _childChain, address _token) public;
 
   /**
@@ -430,7 +430,7 @@ Limitation: Currently events emitted by system call are not observable and not-i
 
 Span is a logically defined set of blocks for which a set of validators is chosen from among all the available validators. Heimdall will select the committee of producers out of all validators. The producers will include a subset of validators depending upon the number of validators in the system.
 
-<img src={useBaseUrl("img/bor/span-management.svg")} />
+<img src={useBaseUrl("img/Bor/span-management.svg")} />
 
 ### Propose Span Tx
 
@@ -510,7 +510,7 @@ There are two way to commit span in Bor.
 
 State management sends the state from the Ethereum chain to Bor chain. It is called `state-sync`. This is a way to move data from the Ethereum chain to Bor chain.
 
-<img src={useBaseUrl("img/bor/state-managment.svg")} />
+<img src={useBaseUrl("img/Bor/state-managment.svg")} />
 
 ### State sender
 
@@ -607,4 +607,4 @@ Producers can include invalid transaction during their turn. It can be possible 
 
 3. All validators are fraudulent
 
-    Assumption is that 2/3+1 validators must be honest to work this system correctly.
+    Assumption is that ⅔+1 validators must be honest to work this system correctly.

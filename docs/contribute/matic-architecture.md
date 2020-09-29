@@ -54,7 +54,7 @@ Checkpoints are important for two reasons:
 
 A bird’s eye view of the process can be explained as: 
 
-- A subset of active validators from the pool is selected to act as block producers for a span. The Selection of each span will also be consented by at least 2/3 in power. These block producers are responsible for creating blocks and broadcasting it to the remaining of the network.
+- A subset of active validators from the pool is selected to act as block producers for a span. The Selection of each span will also be consented by at least ⅔ in power. These block producers are responsible for creating blocks and broadcasting it to the remaining of the network.
 - A checkpoint includes the root of all blocks created during any given interval. All nodes validate the same and attach their signature to it.
 - A selected proposer from the validator set is responsible for collecting all signatures for a particular checkpoint and committing the same on the main-chain.
 - The responsibility of creating blocks and also proposing checkpoints is variably dependent on a validator’s stake ratio in the overall pool.

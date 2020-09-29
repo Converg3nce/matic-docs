@@ -47,7 +47,7 @@ Since the blocks are produced by a single block producer (or very few), it expos
 **A. Malicious operator**
 The following discusses the scenarios where operator could become malicious and try to cheat.
 
-1. Out-of-nowhere tokens / double spends / malformed receipts that fradulently increases (for an operator controlled account) / decreases (for a user) the token balance.
+1. Out-of-nowhere tokens / double spends / malformed receipts that fraudulently increases (for an operator controlled account) / decreases (for a user) the token balance.
 2. Data unavailabilityAfter a user sends a tx, let’s say the operator included the tx in the plasma block but made the chain data unavailable to the user. In that case, if a user starts an exit from an older tx, then they could be challenged on-chain by showcasing their most recent tx. It becomes easy to grief the user.
 3. Bad checkpointIn the worst case, an operator could perform A.1 and(or) A.2 and collude with the validators to commit those invalid state transitions to the root chain.
 4. Halting the side chainThe operator stops producing blocks and the chain comes to a halt. If a checkpoint has not been submitted for a specified duration, it would be possible to mark the side chain as halted on the root chain. After that no more checkpoints can be submitted.
@@ -119,7 +119,7 @@ Whenever a user wishes to exit the plasma chain, they (or abstracted out by thei
 *Challenge period*
 
 1. The user burnt all their tokens on the side chain and did not make any more txs, then there is nothing to challenge with and the exit will see it’s due course.
-2. User could choose to burn their balance partially, or could have received tokens that they can potentially spend on the side chain. The fact that the user is not spending any more balance than left on the side chain is guaranteed by the EVM, as long as the operator is not maliciuos.
+2. User could choose to burn their balance partially, or could have received tokens that they can potentially spend on the side chain. The fact that the user is not spending any more balance than left on the side chain is guaranteed by the EVM, as long as the operator is not malicious.
 3. If the operator himself creates malformed txs that attempt to spend more tokens than available, the only option is to start mass exiting and exits with MoreVP construction will save the users. See the next 2 scenarios for more details.
 
 ### B. Exit from the last ERC20/721 transfers (MoreVP)
@@ -171,4 +171,4 @@ This scenario is to combat data unavailability scenario. Let’s say I made a tx
 1. Large proof size: Merkle proof of the inclusion of the transaction and merkle proof of the inclusion of block (that contains that transaction) in the checkpoint.
 2. Mass exit: If the operator turns malicious, the users need to start mass exiting.
 
-The spec is in a nascent stage and we would appreciate any feedback that helps us improve it or redesign altogether if this construction is hopelessly broken. The implementation is work in progress in our [contracts 5](https://github.com/maticnetwork/contracts) repository.
+The spec is in a nascent stage and we would appreciate any feedback that helps us improve it or redesign altogether if this construction is hopelessly broken. The implementation is work in progress in our [contracts 5](https://github.com/maticnetwork/contracts) repository.
