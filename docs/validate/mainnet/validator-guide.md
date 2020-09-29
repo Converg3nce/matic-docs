@@ -23,7 +23,7 @@ We have created a simple Ansible playbooks to setup a full node on Matic Mainnet
 
     Minimum 60GB disk (make sure it is extendable)
 
-It is essential that you have **2 different Machines / VM** for your Sentry and Validator Node. Having a single Machine to run both, your Sentry and Validator no
+It is essential that you have **2 different Machines / VM** for your Sentry and Validator Node. Having a single Machine to run both, your Sentry and Validator will cause issues.
 
 You can obviously opt for higher setup infra to future-proof your Node. However, anything below the minimum requirements, you will run into issues sooner than later. The minimum requirements set above is for both, Sentry and Validator nodes.
 
@@ -210,15 +210,15 @@ Now you need to make sure that Heimdall is synced completely and only then Start
 
 Now once Heimdall is synced, run 
 
-    - **Start Bor**
+**Start Bor**
 
-    ```jsx
-    sudo service bor start
-    ```
+```jsx
+sudo service bor start
+```
 
 You can check Bor logs here:
 
-- **Bor**
+**Bor**
 
 ```jsx
 journalctl -u bor.service -f
@@ -261,83 +261,83 @@ You will need to make sure that you open ports 22, 26656 and 30303 to world (0.0
 
 Make sure you keep the proper formatting when you make the changes above.
 
-    - You will also need to make changes in the `heimdall-config.toml` file. Here you would be adding the RPC for your Ethereum full node. To open the `heimdall-config.toml`file you can run the command
+You will also need to make changes in the `heimdall-config.toml` file. Here you would be adding the RPC for your Ethereum full node. To open the `heimdall-config.toml`file you can run the command
 
-        ```jsx
-        vi ~/.heimdalld/config/heimdall-config.toml
-        ```
+```jsx
+vi ~/.heimdalld/config/heimdall-config.toml
+```
 
-        Here you need to add the URL for your Ethereum Full Node.
+Here you need to add the URL for your Ethereum Full Node.
 
-        ```jsx
-        eth_rpc_url =<insert Infura or any full node RPC URL to Ethereum>
-        ```
+```jsx
+eth_rpc_url =<insert Infura or any full node RPC URL to Ethereum>
+```
 
-    ### **Configuring Bor changes on your Validator Node**
+### Configuring Bor changes on your Validator Node
 
 You will need to add the `EnodeID` of your **Sentry Node** to the validator node config. 
 
 To get your EnodeID, Run this command on your Sentry Node to get the enodeID
 
-    ```jsx
-     bootnode -nodekey ~/.bor/data/bor/nodekey -writeaddress 
-    ```
+```jsx
+    bootnode -nodekey ~/.bor/data/bor/nodekey -writeaddress 
+```
 
-    - Now you will need to update the `static-nodes.json` file on your Validator node. To open the file run`vi ~/.bor/data/bor/static-nodes.json` **on your Validator node**. You should see an output like this:
+Now you will need to update the `static-nodes.json` file on your Validator node. To open the file run`vi ~/.bor/data/bor/static-nodes.json` **on your Validator node**. You should see an output like this:
 
-    ```jsx
-    [
-    "<replace with enode://sentry_machine_enodeID@sentry_machine_ip:30303>"
-    ]
-    ```
+```jsx
+[
+"<replace with enode://sentry_machine_enodeID@sentry_machine_ip:30303>"
+]
+```
 
 ### Owner & Signer Keys
 
 On Matic you do have the option to set your Owner Key and Signer Key. Your signer address is the one that stays on the Node, this will be considered your Signer Key and this address would be used to Signing Checkpoints, etc. You need to make sure that you have at least 0.5 ETH on the Signer address. Whereas Owner key will have the Matic Tokens. This address will be used when completing the staking transactions. On Matic, it is recommended that you keep your Owner and Signer keys different for security reasons.
 
-    ### **Generate Heimdall private key**
+### **Generate Heimdall private key**
 
-    *Note this is only needed for the Validator Bor node, and not for the Sentry Bor node.*
+*Note this is only needed for the Validator Bor node, and not for the Sentry Bor node.*
 
 This step is only required for your **Validator Node**. The Sentry node does not require generating `validatorkey`.
 
 The private key required as the input is your Ethereum wallet's Private key, where you have the Matic tokens. You will be able to locate it in the wallet settings, depending on the Ethereum wallet you use. You can 
 
-    ```jsx
-    heimdallcli generate-validatorkey <Your Ethereum wallet *private* key>
-    ```
+```jsx
+heimdallcli generate-validatorkey <Your Ethereum wallet *private* key>
+```
 
 This will create **`priv_validator_key.json`** in the same folder. Move this validator key file to heimdall config folder. 
 
-    ```jsx
-    mv ./priv_validator_key.json ~/.heimdalld/config
-    ```
+```jsx
+mv ./priv_validator_key.json ~/.heimdalld/config
+```
 
 ### **Generate Bor keystore file**
 
-    *Note this is only needed for the Validator Bor node, and not for the Sentry Bor node*
+*Note this is only needed for the Validator Bor node, and not for the Sentry Bor node*
 
 To generate a Bor keystore for your validator, you can run the following command. The private key required as the input is your Ethereum wallet Private key. This would be the same private key that you used for generating your `validator-key`.
 
-    ```jsx
-    heimdallcli generate-keystore <Your Ethereum wallet private key>
-    ```
+```jsx
+heimdallcli generate-keystore <Your Ethereum wallet private key>
+```
 
 Once you run this command you will be requested for a passphrase. A passphrase can be considered as password too. This passphrase will be used to encrypt the keystore file.
 
 This will create a keystore file in UTC format. For example:
 
-    ```jsx
-    UTC--2020-02-10T10-11-48.027180000Z--6c468cf8c9879006e22ec4029696e005c2319c9d
-    ```
+```jsx
+UTC--2020-02-10T10-11-48.027180000Z--6c468cf8c9879006e22ec4029696e005c2319c9d
+```
 
 Do `ls` here and you will see the file name in the above format.
 
 Now you will have to move the keystore file to bor data directory.
 
-    ```jsx
-    mv ./UTC-<time>-<address> ~/.bor/keystore/
-    ```
+```jsx
+mv ./UTC-<time>-<address> ~/.bor/keystore/
+```
 
 **Add password.txt**
 
