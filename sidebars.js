@@ -408,32 +408,9 @@ module.exports = {
       items: [
         "validate/mainnet/getting-started",
         "validate/mainnet/core-components",
-        {
-          type: "category",
-          label: "Node Setup",
-          items: [
-            {
-              type: "category",
-              label: "With Sentry",
-              items: [
-                "validate/mainnet/linux-validator-sentry-setup",
-                "validate/mainnet/binaries-validator-sentry-setup",
-              ],
-            },
-            {
-              type: "category",
-              label: "Without Sentry",
-              items: [
-                "validate/mainnet/linux-package-installation",
-                "validate/mainnet/running-with-binaries",
-              ],
-            },
-          ],
-        },
-        //"validate/mainnet/running-with-docker",
+        "validate/mainnet/validator-guide",
         "validate/mainnet/stake-on-matic",
         "validate/mainnet/rewards",
-        "validate/mainnet/delegate",
         "validate/mainnet/validator-replacement",
         "validate/mainnet/signer-change",
         "validate/mainnet/technical-faqs",
