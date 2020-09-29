@@ -410,7 +410,6 @@ module.exports = {
         "validate/mainnet/core-components",
         "validate/mainnet/validator-guide",
         "validate/mainnet/stake-on-matic",
-        "validate/mainnet/rewards",
         "validate/mainnet/validator-replacement",
         "validate/mainnet/signer-change",
         "validate/mainnet/technical-faqs",
