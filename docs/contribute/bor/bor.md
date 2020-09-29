@@ -128,7 +128,7 @@ Genesis transactions from current validators are executed with `gasPrice = 0`.
 
 [BorStateReceiver(0x1001)](https://github.com/maticnetwork/genesis-contracts/blob/master/contracts/StateReceiver.sol) ⇒ This Contract manages the transfer of arbitrary contract data from Ethereum contracts to Matic contracts
 
-[MaticChildERC20(0x1010)] ⇒ Child Contract for Main Chain tokens which allows to move assets from Ethereum to Matic.
+MaticChildERC20(0x1010) ⇒ Child Contract for Main Chain tokens which allows to move assets from Ethereum to Matic.
 
 ### [Bor.go](https://github.com/maticnetwork/bor/blob/master/consensus/bor/bor.go)
 

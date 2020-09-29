@@ -17,7 +17,7 @@ Peppermint is modified Tendermint. It is changed to use to make it compatible wi
 
 Peppermint uses `secp2556k1` signature scheme to verify Tendermint votes on solidity smart contract. [https://github.com/maticnetwork/tendermint/blob/peppermint/crypto/secp256k1/secp256k1_nocgo.go](https://github.com/maticnetwork/tendermint/blob/peppermint/crypto/secp256k1/secp256k1_nocgo.go)
 
-It adds `Data` field into `Vote` and `Proposal` struct to get `hash` for transactions in the block. On smart contract, it checks if `Data` matches with checkpoint data hash and majority (2/3+1) of validator signatures. The idea is to verify if majority of the validator set agrees on transaction in the contract.
+It adds `Data` field into `Vote` and `Proposal` struct to get `hash` for transactions in the block. On smart contract, it checks if `Data` matches with checkpoint data hash and majority (⅔+1) of validator signatures. The idea is to verify if majority of the validator set agrees on transaction in the contract.
 
 Peppermint uses RLP to get `Vote` bytes instead of Amino encoding. Here `Data` is `Txs.Hash()` for the block.  [https://github.com/maticnetwork/tendermint/blob/peppermint/types/canonical.go](https://github.com/maticnetwork/tendermint/blob/peppermint/types/canonical.go)
 ```go
