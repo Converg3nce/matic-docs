@@ -204,7 +204,7 @@ Diagram trying to explain timeline data structure
 
 # StakingInfo
 
-Source: contracts/staking/StakingInfo.sol
+Source: [StakingInfo.sol](https://github.com/maticnetwork/contracts/blob/develop/contracts/staking/StakingInfo.sol)
 
 Centralised logging contract for both validator and delegation events, Includes few read only functions.
 

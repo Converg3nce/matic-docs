@@ -126,7 +126,7 @@ Whenever a user wishes to exit the plasma chain, they (or abstracted out by thei
 
 Consider the scenario, user made a ERC20 transfer on the side chain. The operator added a out-of-nowhere tx just before the user’s transfer and colluded with the validators to checkpoint this block. In this scenario and more generally, in the attack vectors A1 through A3 discussed above, the user may not have had the opportunity to burn their tokens before a malicious tx is included and hence would need to start an exit from the last checkpointed tx on the root chain - for this reason, in addition to the burn exit, we need to support exits from a variety of txs like ERC20/721 transfers among others. Building upon this attack vector and breaking down the 2 scenarios:
 
-**Outgoing transfer**I transferred some tokens to a user, however I noticed that the operator included a malicious tx in the block/checkpoint before including my transfer tx. I need to start exiting the chain. I’ll start an exit from the transfer tx. As defined in MoreVP, I’ll need to provide a reference tx (*input UTXO*) that’ll define the exit priority of the exit. So, I’ll reference a tx that updated my token balance and just precedes the outgoing transfer tx.
+**Outgoing transfer:** I transferred some tokens to a user, however I noticed that the operator included a malicious tx in the block/checkpoint before including my transfer tx. I need to start exiting the chain. I’ll start an exit from the transfer tx. As defined in MoreVP, I’ll need to provide a reference tx (*input UTXO*) that’ll define the exit priority of the exit. So, I’ll reference a tx that updated my token balance and just precedes the outgoing transfer tx.
 
 ```
 startExit(referenceTx, proofOfInclusion, exitTx) {
@@ -142,7 +142,7 @@ startExit(referenceTx, proofOfInclusion, exitTx) {
 
 ```
 
-**Incoming transfer**I noticed that the operator included a malicious tx in the block/checkpoint before including my incoming transfer tx.I’ll start an exit from the incoming transfer tx while referencing the counterparty’s balance - because here the *input UTXO* is the counterparty’s token balance.
+**Incoming transfer:** I noticed that the operator included a malicious tx in the block/checkpoint before including my incoming transfer tx.I’ll start an exit from the incoming transfer tx while referencing the counterparty’s balance - because here the *input UTXO* is the counterparty’s token balance.
 
 ```
 startExit(referenceTx, proofOfInclusion, exitTx) {
@@ -158,13 +158,13 @@ startExit(referenceTx, proofOfInclusion, exitTx) {
 
 ```
 
-*Challenge period*If a user started an exit from a particular state but continued to spend tokens on the side chain, they will be challenged. To challenge, a challenger will provide any tx that the user made that appears chronologically after the reference tx.
+*Challenge period:* If a user started an exit from a particular state but continued to spend tokens on the side chain, they will be challenged. To challenge, a challenger will provide any tx that the user made that appears chronologically after the reference tx.
 
 ### C. Exit from an in-flight transaction (MoreVP)
 
 This scenario is to combat data unavailability scenario. Let’s say I made a tx but I do not know whether that tx has been included due to data unavailability. I can start an exit from this in-flight tx by referencing the last checkpointed tx. The user should be careful not to make any txs whenever they start a MoreVP style exit, otherwise they will be challenged.
 
-**Notes**When exiting from a moreVP style construction, a user can start an exit by providing reference txs, exit tx and placing a small `exit bond`. For any exit, if the exit is successfully challenged, the exit will be cancelled and exit bond will be seized.
+**Notes:** When exiting from a MoreVP style construction, a user can start an exit by providing reference txs, exit tx and placing a small `exit bond`. For any exit, if the exit is successfully challenged, the exit will be cancelled and exit bond will be seized.
 
 ## Limitations
 
