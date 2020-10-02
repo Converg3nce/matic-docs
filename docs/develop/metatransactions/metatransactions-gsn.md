@@ -47,7 +47,7 @@ In GSNv1 there were a couple of various approval strategies for deciding which f
 
 #### Deploying your own Relayer
 
-For those looking to run your own relayer, the folks at [Creol.io](Creol.io) have created a very simple guide and tutorial for doing so on one of their github pages. [Running your own GSNv1 Relayer](https://github.com/JUDOKICK/matic-gsn-relayer-creol). It includes a simple to use Docker container script that is based on xDai's image for this.
+For those looking to run your own relayer, our friends at [Creol.io](Creol.io) have created a very simple guide and tutorial for doing so on one of their github pages. [Running your own GSNv1 Relayer](https://github.com/JUDOKICK/matic-gsn-relayer-creol).
 
 
 ### GSNv2
