@@ -47,7 +47,7 @@ Since the blocks are produced by a single block producer (or very few), it expos
 **A. Malicious operator**
 The following discusses the scenarios where operator could become malicious and try to cheat.
 
-1. Out-of-nowhere tokens / double spends / malformed receipts that fradulently increases (for an operator controlled account) / decreases (for a user) the token balance.
+1. Out-of-nowhere tokens / double spends / malformed receipts that fraudulently increases (for an operator controlled account) / decreases (for a user) the token balance.
 2. Data unavailabilityAfter a user sends a tx, let’s say the operator included the tx in the plasma block but made the chain data unavailable to the user. In that case, if a user starts an exit from an older tx, then they could be challenged on-chain by showcasing their most recent tx. It becomes easy to grief the user.
 3. Bad checkpointIn the worst case, an operator could perform A.1 and(or) A.2 and collude with the validators to commit those invalid state transitions to the root chain.
 4. Halting the side chainThe operator stops producing blocks and the chain comes to a halt. If a checkpoint has not been submitted for a specified duration, it would be possible to mark the side chain as halted on the root chain. After that no more checkpoints can be submitted.
@@ -119,14 +119,14 @@ Whenever a user wishes to exit the plasma chain, they (or abstracted out by thei
 *Challenge period*
 
 1. The user burnt all their tokens on the side chain and did not make any more txs, then there is nothing to challenge with and the exit will see it’s due course.
-2. User could choose to burn their balance partially, or could have received tokens that they can potentially spend on the side chain. The fact that the user is not spending any more balance than left on the side chain is guaranteed by the EVM, as long as the operator is not maliciuos.
+2. User could choose to burn their balance partially, or could have received tokens that they can potentially spend on the side chain. The fact that the user is not spending any more balance than left on the side chain is guaranteed by the EVM, as long as the operator is not malicious.
 3. If the operator himself creates malformed txs that attempt to spend more tokens than available, the only option is to start mass exiting and exits with MoreVP construction will save the users. See the next 2 scenarios for more details.
 
 ### B. Exit from the last ERC20/721 transfers (MoreVP)
 
 Consider the scenario, user made a ERC20 transfer on the side chain. The operator added a out-of-nowhere tx just before the user’s transfer and colluded with the validators to checkpoint this block. In this scenario and more generally, in the attack vectors A1 through A3 discussed above, the user may not have had the opportunity to burn their tokens before a malicious tx is included and hence would need to start an exit from the last checkpointed tx on the root chain - for this reason, in addition to the burn exit, we need to support exits from a variety of txs like ERC20/721 transfers among others. Building upon this attack vector and breaking down the 2 scenarios:
 
-**Outgoing transfer**I transferred some tokens to a user, however I noticed that the operator included a malicious tx in the block/checkpoint before including my transfer tx. I need to start exiting the chain. I’ll start an exit from the transfer tx. As defined in MoreVP, I’ll need to provide a reference tx (*input UTXO*) that’ll define the exit priority of the exit. So, I’ll reference a tx that updated my token balance and just precedes the outgoing transfer tx.
+**Outgoing transfer:** I transferred some tokens to a user, however I noticed that the operator included a malicious tx in the block/checkpoint before including my transfer tx. I need to start exiting the chain. I’ll start an exit from the transfer tx. As defined in MoreVP, I’ll need to provide a reference tx (*input UTXO*) that’ll define the exit priority of the exit. So, I’ll reference a tx that updated my token balance and just precedes the outgoing transfer tx.
 
 ```
 startExit(referenceTx, proofOfInclusion, exitTx) {
@@ -142,7 +142,7 @@ startExit(referenceTx, proofOfInclusion, exitTx) {
 
 ```
 
-**Incoming transfer**I noticed that the operator included a malicious tx in the block/checkpoint before including my incoming transfer tx.I’ll start an exit from the incoming transfer tx while referencing the counterparty’s balance - because here the *input UTXO* is the counterparty’s token balance.
+**Incoming transfer:** I noticed that the operator included a malicious tx in the block/checkpoint before including my incoming transfer tx.I’ll start an exit from the incoming transfer tx while referencing the counterparty’s balance - because here the *input UTXO* is the counterparty’s token balance.
 
 ```
 startExit(referenceTx, proofOfInclusion, exitTx) {
@@ -158,17 +158,17 @@ startExit(referenceTx, proofOfInclusion, exitTx) {
 
 ```
 
-*Challenge period*If a user started an exit from a particular state but continued to spend tokens on the side chain, they will be challenged. To challenge, a challenger will provide any tx that the user made that appears chronologically after the reference tx.
+*Challenge period:* If a user started an exit from a particular state but continued to spend tokens on the side chain, they will be challenged. To challenge, a challenger will provide any tx that the user made that appears chronologically after the reference tx.
 
 ### C. Exit from an in-flight transaction (MoreVP)
 
 This scenario is to combat data unavailability scenario. Let’s say I made a tx but I do not know whether that tx has been included due to data unavailability. I can start an exit from this in-flight tx by referencing the last checkpointed tx. The user should be careful not to make any txs whenever they start a MoreVP style exit, otherwise they will be challenged.
 
-**Notes**When exiting from a moreVP style construction, a user can start an exit by providing reference txs, exit tx and placing a small `exit bond`. For any exit, if the exit is successfully challenged, the exit will be cancelled and exit bond will be seized.
+**Notes:** When exiting from a MoreVP style construction, a user can start an exit by providing reference txs, exit tx and placing a small `exit bond`. For any exit, if the exit is successfully challenged, the exit will be cancelled and exit bond will be seized.
 
 ## Limitations
 
 1. Large proof size: Merkle proof of the inclusion of the transaction and merkle proof of the inclusion of block (that contains that transaction) in the checkpoint.
 2. Mass exit: If the operator turns malicious, the users need to start mass exiting.
 
-The spec is in a nascent stage and we would appreciate any feedback that helps us improve it or redesign altogether if this construction is hopelessly broken. The implementation is work in progress in our [contracts 5](https://github.com/maticnetwork/contracts) repository.
+The spec is in a nascent stage and we would appreciate any feedback that helps us improve it or redesign altogether if this construction is hopelessly broken. The implementation is work in progress in our [contracts 5](https://github.com/maticnetwork/contracts) repository.

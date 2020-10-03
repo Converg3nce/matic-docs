@@ -15,7 +15,7 @@ Each validator uses two keys to manage validator related activities on Matic:
 
     The validator must keep two types of balances on this address:
 
-    - Matic tokens on Heimdall (Through Topup transactions) to perform validator responsibilities on Heimdall
+    - Matic tokens on Heimdall (through Topup transactions) to perform validator responsibilities on Heimdall
     - ETH on Ethereum chain to send checkpoints on Ethereum
 2. **Owner key**
 
@@ -29,7 +29,7 @@ This separation of responsibilities has been done to ensure an efficient tradeof
 
 Both keys are Ethereum compatible addresses and work exactly the same manner. 
 
-It is possible to have same Owner and signer keys.
+It is possible to have same owner and signer keys.
 
 **Signer change**
 

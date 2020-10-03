@@ -9,7 +9,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-For the Matic network's Proof of Security based consensus, all the 2/3+1 proof verification and handling of staking, rewards are executed on the Ethereum smart contract.
+For the Matic network's Proof of Security based consensus, all the ⅔+1 proof verification and handling of staking, rewards are executed on the Ethereum smart contract.
 
 The whole design follows this philosophy of doing less on the Mainnet contract. It does information verification and pushes all the computation-heavy operations to L2 (Read Heimdall for this doc).
 
@@ -56,7 +56,7 @@ function stakeFor(
 ## unstake
 
 - Remove validator from validator set in next epoch(only valid for current checkpoint once called `unstake`
-- Remove validator's stake from timeline data structure, update count for validaor's exit epoch.
+- Remove validator's stake from timeline data structure, update count for validator's exit epoch.
 - If validator had delegation on collect all rewards and lock delegation contract for new delegations.
 
 ## unstakeClaim
@@ -176,8 +176,8 @@ function checkSignatures(
 ```
 
 - Writes are meant only for RootChain contract when submitting checkpoints
-- `voteHash` on which all validators sign (BFT 2/3+1 agreement)
-- This function validates only unique sigs and checks for 2/3+1 power has signed on checkpoint root (inclusion in `voteHash` verification in RootChain contract for all data) `currentValidatorSetTotalStake` provides current active stake.
+- `voteHash` on which all validators sign (BFT ⅔+1 agreement)
+- This function validates only unique sigs and checks for ⅔+1 power has signed on checkpoint root (inclusion in `voteHash` verification in RootChain contract for all data) `currentValidatorSetTotalStake` provides current active stake.
 - Rewards are distributed proportional to validator's stake, more on rewards in below doc.
 
 [Rewards Distribution](https://www.notion.so/Rewards-Distribution-127d586c14544beb9ea326fd3bb5d3a2)
@@ -204,7 +204,7 @@ Diagram trying to explain timeline data structure
 
 # StakingInfo
 
-Source: contracts/staking/StakingInfo.sol
+Source: [StakingInfo.sol](https://github.com/maticnetwork/contracts/blob/develop/contracts/staking/StakingInfo.sol)
 
 Centralised logging contract for both validator and delegation events, Includes few read only functions.
 
@@ -214,4 +214,4 @@ Factory contract to deploy `ValidatorShare` contract for each validator who opt-
 
 ---
 
-NOTE: `jail`, `unJail` and `slash` function aren't used currently.(part of slashing implementation)
+NOTE: `jail`, `unJail` and `slash` function aren't used currently (part of slashing implementation).

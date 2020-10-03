@@ -25,7 +25,7 @@ When a validator gets rewarded with more `MATIC` tokens, new tokens are added to
 
 ```java
 uint256 public validatorId; // Delegation contract for validator
-uint256 public validatorRewards; // accumlated rewards for validator
+uint256 public validatorRewards; // accumulated rewards for validator
 uint256 public commissionRate; // validator's cut %
 uint256 public validatorDelegatorRatio = 10; // to be implemented/used
 
@@ -81,7 +81,7 @@ function reStake() public;
 ```
 
 - Above function is used to reStake rewards
-- The number of shares aren’t affected because `exchangeRate` is the same; so just the rewards are moved into active stake for both validator share contract and stakeMnager timeline.
+- The number of shares aren’t affected because `exchangeRate` is the same; so just the rewards are moved into active stake for both validator share contract and stakeManager timeline.
 - `getLiquidRewards` is used for calculating accumulated rewards.
 - i.e. delegator owns 100 share and exchange rate is 200 so rewards are 100 tokens, move 100 tokens into active stake, since exchange rate is still same number of share will also remain same. Only difference is that now 200 tokens are considered into active stake and can't be withdrawn immediately(not a part of liquid rewards).
 - Purpose of reStaking is that since delegator's validator has now more active stake and she will earn more rewards for that so will the delegator.
@@ -119,4 +119,6 @@ function updateRewards(uint256 reward, uint256 checkpointStakePower, uint256 val
 
 For more details here is a video explaining the whole mechanism in details: 
 
-[https://www.youtube.com/watch?v=8nODLU9C3mw](https://www.youtube.com/watch?v=8nODLU9C3mw)
+<!-- [https://www.youtube.com/watch?v=8nODLU9C3mw](https://www.youtube.com/watch?v=8nODLU9C3mw) -->
+
+[![create liquid staking assets - video](https://img.youtube.com/vi/8nODLU9C3mw/0.jpg)](https://www.youtube.com/watch?v=8nODLU9C3mw)
