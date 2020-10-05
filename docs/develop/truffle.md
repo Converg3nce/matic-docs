@@ -112,4 +112,4 @@ Summary
 
 **Congratulations!** You have successfully deployed HelloWorld Smart Contract. Now you can interact with the Smart Contract.
 
-You can check the deplyement status here: https://mumbai-explorer.matic.today/
+You can check the deployement status here: https://mumbai-explorer.matic.today/
