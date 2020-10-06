@@ -33,10 +33,9 @@ This separation of responsibilities has been done to ensure an efficient tradeof
 **Step 1** 
 You will need to make sure that you are already running a separate machine where Heimdall and Bor nodes are synced & working appropriately. You also need to run this new node with a different address, different than your current node.
 
-If you haven't setup your node, you can do so by using either of these options:
+If you haven't setup your node, you can do so by using the following guide:
 
-**Linux packages**: https://docs.matic.network/docs/validate/counter-stake-stage-2/linux-package-installation
-**Binaries**: https://docs.matic.network/docs/validate/counter-stake-stage-2/running-with-binaries
+https://docs.matic.network/docs/validate/mainnet/validator-guide
 
 For ease of this document, we will refer to your Current Node as Node 1 and your new node as Node 2.
 
