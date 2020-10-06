@@ -70,7 +70,7 @@ Currently 20188 Matic tokens are distributed proportionately on each successful 
 
 (Note that there is a 10% proposer bonus that accrues to the validator who submits the checkpoint, but over time, the effect of the extra bonus is nullified over multiple checkpoints by different validators.)
 
-The checkpoint submission is done by one of the validators approximately every 34 minutes. This time is approximate and may vary based on validator consensus on the Matic Heimdall layer. This may also vary based on Ethereum Network. Highger congestion in the network may result in delayed checkpoints.
+The checkpoint submission is done by one of the validators approximately every 34 minutes. This time is approximate and may vary based on validator consensus on the Matic Heimdall layer. This may also vary based on Ethereum Network. Higher congestion in the network may result in delayed checkpoints.
 
 You can track checkpoints on the staking contract here: https://etherscan.io/address/0x86e4dc95c7fbdbf52e33d563bbdb00823894c287
 
