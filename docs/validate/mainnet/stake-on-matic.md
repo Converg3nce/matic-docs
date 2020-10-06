@@ -53,8 +53,6 @@ Now that you have done a basic health check and generated the keystore and priva
 
 You can stake on Matic 2 different ways, Using the Validator Dashboard or by CLI. 
 
-**Please note that Counter Stake is a testnet program. Do not stake your Mainnet Matic tokens**
-
 ### Stake using validator dashboard 
 
 In order to stake using the Validator Dashboard, you can use the following link to access the dashboard: https://wallet.matic.network/staking/
@@ -107,48 +105,6 @@ amount:
     i: "1000000000000000000000"
 accountnumber: 0
 sequence: 0
-```
-
-### Validator information
-
-**By signer address**
-
-    heimdallcli query staking validator-info --validator=<signer address> --chain-id <chain-id>
-
-Here the signer address is the same as your wallet address which holds the staking tokens. And the chain id is the Heimdall chain-id for a a particular testnet, for example `heimdall-cs2004`
-
-This command should display the following output:
-```json
-    {
-    	"ID":1,
-    	"startEpoch":0,
-    	"endEpoch":0,
-    	"power":10,
-    	"pubKey":"0x04b12d8b2f6e3d45a7ace12c4b2158f79b95e4c28ebe5ad54c439be9431d7fc9dc1164210bf6a5c3b8523528b931e772c86a307e8cff4b725e6b4a77d21417bf19",
-    	"signer":"0x6c468cf8c9879006e22ec4029696e005c2319c9d",
-    	"last_updated":0,
-    	"accum":0
-    }
-```
-**By validator id**
-
-    heimdallcli query staking validator-info --id=1 --chain-id=<chain-id>
-
-Here the value in `id` needs to be inserted based on the staking transaction. Once your staking transaction is complete, your `txHash` would generate an Unique ID. You can use https://goerli.etherscan.io and check your stake transaction hash there. You would see your `id` present there.
-
-<img src={useBaseUrl("img/staking/validator-id.png")} />
-
-```json
-{
-    "ID":1,
-    "startEpoch":0,
-    "endEpoch":0,
-    "power":10,
-    "pubKey":"0x04b12d8b2f6e3d45a7ace12c4b2158f79b95e4c28ebe5ad54c439be9431d7fc9dc1164210bf6a5c3b8523528b931e772c86a307e8cff4b725e6b4a77d21417bf19",
-    "signer":"0x6c468cf8c9879006e22ec4029696e005c2319c9d",
-    "last_updated":0,
-    "accum":0
-}
 ```
 
 ### Claiming Rewards as a Validator
