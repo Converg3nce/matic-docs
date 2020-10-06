@@ -47,7 +47,7 @@ matic.initialize()
 
 - `options` is simple Javascript `object` which can have following fields:
   - `maticProvider` can be `string` or `Web3.providers` instance. This provider must connect to Matic chain. Value can be anyone of following:
-    - `'https://rpc-mumbai.matic.today'`
+    - A free RPC URL that you can get from https://rpc.maticvigil.com/
     - `new Web3.providers.HttpProvider('http://localhost:8545')`
     - [WalletConnect Provider instance](https://github.com/WalletConnect/walletconnect-monorepo#for-web3-provider-web3js)
   - `parentProvider` can be `string` or `Web3.providers` instance. This provider must connect to Ethereum chain (testnet or mainchain). Value can be anyone of following:

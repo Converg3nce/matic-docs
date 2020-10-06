@@ -404,39 +404,15 @@ module.exports = {
     "validate/counter_stake",
     {
       type: "category",
-      label: "Counter Stake: Stage 2",
+      label: "Mainnet",
       items: [
-        "validate/counter-stake-stage-2/getting-started",
-        "validate/counter-stake-stage-2/core-components",
-        {
-          type: "category",
-          label: "Node Setup",
-          items: [
-            {
-              type: "category",
-              label: "With Sentry",
-              items: [
-                "validate/counter-stake-stage-2/linux-validator-sentry-setup",
-                "validate/counter-stake-stage-2/binaries-validator-sentry-setup",
-              ],
-            },
-            {
-              type: "category",
-              label: "Without Sentry",
-              items: [
-                "validate/counter-stake-stage-2/linux-package-installation",
-                "validate/counter-stake-stage-2/running-with-binaries",
-              ],
-            },
-          ],
-        },
-        //"validate/counter-stake-stage-2/running-with-docker",
-        "validate/counter-stake-stage-2/stake-on-matic",
-        "validate/counter-stake-stage-2/rewards",
-        "validate/counter-stake-stage-2/delegate",
-        "validate/counter-stake-stage-2/validator-replacement",
-        "validate/counter-stake-stage-2/signer-change",
-        "validate/counter-stake-stage-2/technical-faqs",
+        "validate/mainnet/getting-started",
+        "validate/mainnet/core-components",
+        "validate/mainnet/validator-guide",
+        "validate/mainnet/stake-on-matic",
+        "validate/mainnet/validator-replacement",
+        "validate/mainnet/signer-change",
+        "validate/mainnet/technical-faqs",
       ],
     },
     "validate/faqs",

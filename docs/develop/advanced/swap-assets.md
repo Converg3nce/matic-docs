@@ -334,7 +334,8 @@ $ truffle migrate --network maticBetaMainnet
 
 Once you have your contract addresses, fill them in the config file under `/scripts/erc20-721/` along with the provider, which will be the following for the two networks:
 
-Matic testnet: `https://rpc-mumbai.matic.today`
+Matic testnet: `<Mumbai testnet RPC URL>. Sign up for a free dedicated RPC URL at https://rpc.maticvigil.com/ or other hosted node providers.`
+
 Matic beta mainnet: `https://beta.matic.network`
 
 Once the config file is ready, inside the `/scripts/erc20-721/` run the following - 

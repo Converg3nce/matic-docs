@@ -123,9 +123,9 @@ const provider = new Web3.providers.HttpProvider(
 );
 const web3 = new Web3(provider);
 
-// For mainnet, use the matic mainnet RPC: https://rpc-mainnet.matic.network
+// For mainnet, use the matic mainnet RPC: <Sign up for a dedicated free RPC URL at https://rpc.maticvigil.com/ or other hosted node providers.>
 const child_provider = new Web3.providers.HttpProvider(
-  "https://rpc-mumbai.matic.today"
+  "<insert Mumbai testnet RPC URL>" //Get a free RPC URL from https://rpc.maticvigil.com/ or other hosted node providers.
 );
 
 const child_web3 = new Web3(child_provider);
@@ -186,8 +186,9 @@ const provider = new Web3.providers.WebsocketProvider(
 
 const web3 = new Web3(provider);
 
+// Sign up for a free dedicated RPC URL at https://rpc.maticvigil.com/ or other hosted node providers.
 const chil_provider = new Web3.providers.HttpProvider(
-  "https://rpc-mumbai.matic.today"
+  "<insert Mumbai testnet RPC URL>"
 );
 const child_web3 = new Web3(chil_provider);
 
