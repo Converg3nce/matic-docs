@@ -318,10 +318,10 @@ npx gsn deploy
 # check here https://docs.opengsn.org/gsn-provider/gsn-helpers.html#deploy
 ```
 
-For targetting Matic Testnet, use following command.
+For targetting Matic Testnet (sign up for a dedicated free Mumbai testnet RPC URL at https://rpc.maticvigil.com/ or other hosted node providers), use following command.
 
 ```bash
-npx gsn deploy --network https://rpc-mumbai.matic.today
+npx gsn deploy --network <Mumbai testnet RPC URL>
 ```
 
 ##### Funding Paymaster
@@ -336,7 +336,7 @@ npx gsn fund-paymaster
 For Matic Mumbai network, try using this command.
 
 ```bash
-npx gsn fund-paymaster --from <your-account-address> --hub <relay-hub-address> --paymaster <your-dapp-specific-paymaster> --network https://rpc-mumbai.matic.today
+npx gsn fund-paymaster --from <your-account-address> --hub <relay-hub-address> --paymaster <your-dapp-specific-paymaster> --network <Mumbai testnet RPC URL>
 ```
 
 ##### Running Relay Server
@@ -357,7 +357,7 @@ npx gsn relayer-run --Workdir <workdir> --DevMode --RelayHubAddress <hub_address
 For Matic Mumbai run below command
 
 ```bash
-npx gsn relayer-run --Workdir <workdir> --DevMode --RelayHubAddress <hub_address> --EthereumNodeUrl https://rpc-mumbai.matic.today --Url <public-url-on-which-to-advertise-relayhub>
+npx gsn relayer-run --Workdir <workdir> --DevMode --RelayHubAddress <hub_address> --EthereumNodeUrl <Mumbai testnet RPC URL> --Url <public-url-on-which-to-advertise-relayhub>
 ```
 
 `Url` can be `ngrok` generated endpoint, if you're tunneling local instance, which is not recommened for production. Other params can be set before starting your relayer, for that please check origin [doc](https://docs.opengsn.org/gsn-provider/gsn-helpers.html#run).
@@ -409,11 +409,11 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     mumbai: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mumbai.matic.today`),
+      provider: () => new HDWalletProvider(mnemonic, `<Sign up for a dedicated free Mumbai testnet RPC URL at https://rpc.maticvigil.com/ or other hosted node providers>`),
       network_id: 80001,
     },
     maticMainNet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mainnet.matic.network`),
+      provider: () => new HDWalletProvider(mnemonic, `<Sign up for a dedicated free Matic mainnet RPC URL at https://rpc.maticvigil.com/ or other hosted node providers>`),
       network_id: 137,
     },
   },

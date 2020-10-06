@@ -14,7 +14,7 @@ However, this page helps developers, who have a good understanding of smart cont
 
 ## Important Addresses and Links
 
-**Matic RPC endpoint**: `https://rpc-mumbai.matic.today`
+**Matic RPC endpoint**: (Sign up for a free RPC link at https://rpc.maticvigil.com/)
 
 | Contract                         | ABI                                                                                                                                                                                                                             | Goerli                                       | Matic                                        |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
