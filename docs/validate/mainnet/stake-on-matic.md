@@ -20,7 +20,7 @@ You should have Heimdall and Bor setups up and running on your machine. If you h
 
 ### Account information
 
-First you do a basic check on your account information by running the below command:
+First you do a basic check on your account information by running the below command. You need to make sure that you run this command only your **Validator Node**. The output of this command will be required in your staking transactions. If you put the output of your Sentry node, it will cause complications on your node.
 
 ```bash
     heimdalld show-account
