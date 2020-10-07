@@ -51,7 +51,7 @@ Now that you have done a basic health check and generated the keystore and priva
 
 ## Stake on Matic
 
-You can stake on Matic 2 different ways, Using the Validator Dashboard or by CLI. 
+You can stake on Matic using the Validator Dashboard
 
 ### Stake using validator dashboard 
 
@@ -75,7 +75,7 @@ Clicking on Next will proceed you to next step where you add Validator details a
 
 <img src={useBaseUrl("img/staking/stake.png")} />
 
-Once you enter all the required details such as Signer Address and Stake amount, you can then click on **Stake Now**.
+Once you enter all the required details such as Signer Address and Stake amount, you can then click on **Stake Now**. You have to make sure that you don't add the entire balance of your Wallet into the amount field as 1 Matic token is taken as **Heimdall Fee**
 
 Once the transaction is completed you will have staked successfully to become a validator. You will be asked thrice to confirm the transaction. 
 
