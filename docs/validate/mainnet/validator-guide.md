@@ -293,7 +293,7 @@ Now you will need to update the `static-nodes.json` file on your Validator nod
 
 ### Owner & Signer Keys
 
-On Matic you do have the option to set your Owner Key and Signer Key. Your signer address is the one that stays on the Node, this will be considered your Signer Key and this address would be used to Signing Checkpoints, etc. You need to make sure that you have at least 0.5 ETH on the Signer address. Whereas Owner key will have the Matic Tokens. This address will be used when completing the staking transactions. On Matic, it is recommended that you keep your Owner and Signer keys different for security reasons.
+On Matic you do have the option to set your Owner Key and Signer Key. Your signer address is the one that stays on the Node, this will be considered your Signer Key and this address would be used to Signing Checkpoints, etc. You need to make sure that you have at least 1 ETH on the Signer address. Whereas Owner key will have the Matic Tokens. This address will be used when completing the staking transactions. On Matic, it is recommended that you keep your Owner and Signer keys different for security reasons.
 
 ### **Generate Heimdall private key**
 
