@@ -293,7 +293,7 @@ Now you will need to update the `static-nodes.json` file on your Validator nod
 
 ### Owner & Signer Keys
 
-On Matic you do have the option to set your Owner Key and Signer Key. Your signer address is the one that stays on the Node, this will be considered your Signer Key and this address would be used to Signing Checkpoints, etc. You need to make sure that you have at least 0.5 ETH on the Signer address. Whereas Owner key will have the Matic Tokens. This address will be used when completing the staking transactions. On Matic, it is recommended that you keep your Owner and Signer keys different for security reasons.
+On Matic you do have the option to set your Owner Key and Signer Key. Your signer address is the one that stays on the Node, this will be considered your Signer Key and this address would be used to Signing Checkpoints, etc. You need to make sure that you have at least 1 ETH on the Signer address. Whereas Owner key will have the Matic Tokens. This address will be used when completing the staking transactions. On Matic, it is recommended that you keep your Owner and Signer keys different for security reasons.
 
 ### **Generate Heimdall private key**
 
@@ -301,7 +301,7 @@ On Matic you do have the option to set your Owner Key and Signer Key. Your signe
 
 This step is only required for your **Validator Node**. The Sentry node does not require generating `validatorkey`.
 
-The private key required as the input is your Ethereum wallet's Private key, where you have the Matic tokens. You will be able to locate it in the wallet settings, depending on the Ethereum wallet you use. You can 
+The private key required as the input is your Ethereum wallet's Private key. Remember that you need to have different keys for your Owner and Signer keys. You Signer key is the one that needs to be added to your Validator node. Your owner key is ideally the one which holds your Matic tokens.
 
 ```jsx
 heimdallcli generate-validatorkey <Your Ethereum wallet *private* key>
