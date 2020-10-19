@@ -165,6 +165,7 @@ module.exports = {
       items: [
         "develop/l1-l2-communication/ethereum-to-matic",
         "develop/l1-l2-communication/matic-to-ethereum",
+        "develop/l1-l2-communication/data-tunnel",
       ],
     },
     {
