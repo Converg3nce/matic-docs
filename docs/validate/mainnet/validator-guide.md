@@ -293,7 +293,7 @@ Now you will need to update the `static-nodes.json` file on your Validator nod
 
 ### Owner & Signer Keys
 
-On Matic you do have the option to set your Owner Key and Signer Key. Your signer address is the one that stays on the Node, this will be considered your Signer Key and this address would be used to Signing Checkpoints, etc. You need to make sure that you have at least 0.5 ETH on the Signer address. Whereas Owner key will have the Matic Tokens. This address will be used when completing the staking transactions. On Matic, it is recommended that you keep your Owner and Signer keys different for security reasons.
+On Matic you do have the option to set your Owner Key and Signer Key. Your signer address is the one that stays on the Node, this will be considered your Signer Key and this address would be used to Signing Checkpoints, etc. You need to make sure that you have at least 1 ETH on the Signer address. Whereas Owner key will have the Matic Tokens. This address will be used when completing the staking transactions. On Matic, it is recommended that you keep your Owner and Signer keys different for security reasons.
 
 ### **Generate Heimdall private key**
 
@@ -301,7 +301,7 @@ On Matic you do have the option to set your Owner Key and Signer Key. Your signe
 
 This step is only required for your **Validator Node**. The Sentry node does not require generating `validatorkey`.
 
-The private key required as the input is your Ethereum wallet's Private key, where you have the Matic tokens. You will be able to locate it in the wallet settings, depending on the Ethereum wallet you use. You can 
+The private key required as the input is your Ethereum wallet's Private key. Remember that you need to have different keys for your Owner and Signer keys. You Signer key is the one that needs to be added to your Validator node. Your owner key is ideally the one which holds your Matic tokens.
 
 ```jsx
 heimdallcli generate-validatorkey <Your Ethereum wallet *private* key>
@@ -343,9 +343,9 @@ mv ./UTC-<time>-<address> ~/.bor/keystore/
 
 Add the password that you entered in the password.txt file
 
-    ```jsx
-    vi ~/.bor/password.txt
-    ```
+```jsx
+vi ~/.bor/password.txt
+```
 
 Add phrase you choose during generating key store file in `password.txt`
 
@@ -353,37 +353,37 @@ Lastly, you will need to add Metadata information
 
 You can open the metadata file from here:
 
-    ```jsx
-    vi /etc/matic/metadata
-    ```
+```jsx
+vi /etc/matic/metadata
+```
 
 And then add your Address that is associated with your Private Key
 
-    ```jsx
-    VALIDATOR_ADDRESS=<Enter your Ethereum Address here>
-    ```
+```jsx
+VALIDATOR_ADDRESS=<Enter your Ethereum Address here>
+```
 
 ### **Starting Services for Heimdall and Bor**
 
-    - Run the full node with the following commands:
+- Run the full node with the following commands:
 
-    **To Start Heimdall Service**
+**To Start Heimdall Service**
 
-    ```jsx
-    sudo service heimdalld start
-    ```
+```jsx
+sudo service heimdalld start
+```
 
-    **To start Heimdall Rest-server**
+**To start Heimdall Rest-server**
 
-    ```jsx
-    sudo service heimdalld-rest-server start
-    ```
+```jsx
+sudo service heimdalld-rest-server start
+```
 
-    **To start Heimdall bridge**
+**To start Heimdall bridge**
 
-    ```jsx
-    sudo service heimdalld-bridge start
-    ```
+```jsx
+sudo service heimdalld-bridge start
+```
 
 You check logs for Heimdall and rest-server here:
 
@@ -399,9 +399,9 @@ Now you need to make sure that Heimdall is synced completely and only then Start
 
 Now once Heimdall is synced, run 
 
-        ```jsx
-        sudo service bor start
-        ```
+```jsx
+sudo service bor start
+```
 
 You can check Bor logs here:
 

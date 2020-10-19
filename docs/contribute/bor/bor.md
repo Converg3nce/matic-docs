@@ -81,21 +81,21 @@ System call is an internal operator address which is under EVM. This helps to ma
 #### `proposeState`
 
 - Call is only allowed to validators.
-- Inspect `stateId` if it is already proposed or commited.
+- Inspect `stateId` if it is already proposed or committed.
 - Propose the `stateId` and update the flag to `true`.
 
 #### `commitState`
 
 - Call is only allowed to System.
-- Inspect `stateId` if it is already proposed or commited.
+- Inspect `stateId` if it is already proposed or committed.
 - Notify `StateReceiver` Contract with new `stateId`.
-- Update the `state` flag to `true`, And `remove` the `propopsedState`.
+- Update the `state` flag to `true`, And `remove` the `proposedState`.
 
 #### `proposeSpan`
 
 - Call is only allowed to validators.
 - Check if the Span proposal is `pending`.
-- Update the Span Prosal to `true`
+- Update the Span Proposal to `true`
 
 #### `proposeCommit`
 
@@ -137,8 +137,8 @@ Bor Protocol
 ## Glossary
 
 - StartEpoch - Checkpoint number post which a validator is activated and will participate in the consensus.
-- EndEpoch - Checkpoint number post which a validator is considered deactivated and won' t participate in the consensus.
-- Sprint - Sprint is a continuous set of blocks created by a single validator
+- EndEpoch - Checkpoint number post which a validator is considered deactivated and won't participate in the consensus.
+- Sprint - Sprint is a continuous set of blocks created by a single validator.
 - Span -  Span is a big set of blocks with a fixed validator set but consisting of various sprints. For eg for a span of length 6400 blocks it will consist of 100 sprints of 64 blocks.
 - Dynasty: Time between the end of last auction and start time of next auction.
 

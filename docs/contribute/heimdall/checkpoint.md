@@ -9,7 +9,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Checkpoints are the most crucial part of the Matic protocol. It represents snapshots of the Bor chain state and is supposed to be attested by 2/3+ of the validator set before it is validated and submitted on the contracts deployed on Ethereum.
+Checkpoints are the most crucial part of the Matic protocol. It represents snapshots of the Bor chain state and is supposed to be attested by ⅔+ of the validator set before it is validated and submitted on the contracts deployed on Ethereum.
 
 ## Types
 

@@ -157,7 +157,7 @@ Here is how header looks like for a block:
 header.Extra = header.Vanity + header.ProducerBytes /* optional */ + header.Seal
 ```
 
-<img src={useBaseUrl("img/bor/header-bytes.svg")} />
+<img src={useBaseUrl("img/Bor/header-bytes.svg")} />
 
 To know more about Bor: https://www.notion.so/Bor-Overview-c8bdb110cd4d4090a7e1589ac1006bab
 

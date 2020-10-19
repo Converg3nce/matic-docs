@@ -13,16 +13,16 @@ The following article aims to be a guide through integration of a key management
 
 The following wallets will be discussed:
 
-- [Arkane](arkane)
-- [Fortmatic](fortmatic)
 - [Metamask](metamask)
+- [Arkane](arkane/intro)
+- [Fortmatic](fortmatic)
 - [Portis](portis)
 - [Torus](torus)
 - [Wallet Connect](walletconnect)
 
 ### Wallets
 
-* [**Arkane**](https://arkane.network/): Arkane is a user-friendly, secure, and custodial key management system for DApps. Arkane supports both Web and mobile, and can service both crypto savvy users as well as a more mainstream audience. Being blockchain agnostic they are a great fit for supporting both Matic and Ethereum. [For more...](arkane)
+* [**Arkane**](https://arkane.network/): Arkane is a user-friendly, secure, and custodial key management system for DApps. Arkane supports both Web and mobile, and can service both crypto savvy users as well as a more mainstream audience. Being blockchain agnostic they are a great fit for supporting both Matic and Ethereum. [For more...](arkane/intro)
 
 * [**Fortmatic**](https://fortmatic.com/): Fortmatic SDK allows you to easily integrate your app with the Ethereum blockchain, whether you already have a dApp integrated with web3 or are starting from scratch. Fortmatic provides a smooth and delightful experience for both you and your app's users. [For more...](fortmatic)
 

@@ -24,7 +24,7 @@ contract StateSender {
 
 ## Deposit manager
 
-For deposting assets from mainchain to Bor. This contract acts as an escrow contract where the assets are held until they are withdrawn (via the withdraw manager and predicates).
+For depositing assets from mainchain to Bor. This contract acts as an escrow contract where the assets are held until they are withdrawn (via the withdraw manager and predicates).
 
 ```jsx
 function depositERC20ForUser(address _token, address _user, uint256 _amount)
