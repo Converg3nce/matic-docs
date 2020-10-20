@@ -129,7 +129,7 @@ In the confirm withdraw step, providers are specified as below
 
 `parentProvider: window.web3`
 
-The **_withdraw_** function in Plasma bridge involves block proof generation by querying the child chain multiple times and hence it may take a 4-5 seconds for Metamask to popup as it consumes time to build the transaction
+The **_withdraw_** function in Plasma bridge involves block proof generation by querying the child chain multiple times and hence it may take 4-5 seconds for Metamask to popup as it consumes time to build the transaction object.
 
 ```js
 await maticPoSClient.withdraw(burnTxHash, {
