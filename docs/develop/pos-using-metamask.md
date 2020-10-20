@@ -132,12 +132,11 @@ During exit of ERC20 tokens, the providers are specified as below
 
 `parentProvider: window.web3`
 
-The **_exitERC20_** function in PoS bridge involves block proof generation by querying the child chain multiple times and hence it may take a little longer for Metamask to popup as it consumes time to build the transacrtion object. Hence, an extra flag called fastProof can be added to the transaction options which helps in speeding up this process. An example usage is shown below.
+The **_exitERC20_** function in PoS bridge involves block proof generation by querying the child chain multiple times and hence it may take 4-5 seconds for Metamask to popup as it consumes time to build the transaction object. 
 
 ```js
 await maticPoSClient.exitERC20(burnTxHash, {
   from: account,
-  fastProof: true,
 });
 ```
 
