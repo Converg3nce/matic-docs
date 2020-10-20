@@ -129,12 +129,11 @@ In the confirm withdraw step, providers are specified as below
 
 `parentProvider: window.web3`
 
-The **_withdraw_** function in Plasma bridge involves block proof generation by querying the child chain multiple times and hence it may take a little longer for Metamask to popup as it consumes time to build the transacrtion object. Hence, an extra flag called fastProof can be added to the transaction options which helps in speeding up this process. An example usage is shown below.
+The **_withdraw_** function in Plasma bridge involves block proof generation by querying the child chain multiple times and hence it may take a 4-5 seconds for Metamask to popup as it consumes time to build the transaction
 
 ```js
 await maticPoSClient.withdraw(burnTxHash, {
   from: account,
-  fastProof: true,
 });
 ```
 
