@@ -26,8 +26,8 @@ To integrate your DApp with fiat on ramp solution on Matic, you can choose to go
 3. [CarbonMoney](https://www.carbon.money/)
 4. [Transak](https://transak.com/)
 
-To allow crypto purchasing from your DApp became partner with the above services which we'd recommend most as it keeps the user in your dapp and means the user won't have to send crypto from an exchange. The service's available above will allow you to integrate a crypto purchasing flow directly into your dapp.
+To allow crypto purchases from your DApp partner with the above providers. We'd recommend doing so as it keeps the user in your dapp and means the user won't have to send crypto from an exchange. The services available above will allow you to integrate a crypto purchasing flow directly into your dapp.
 
-Apply to became Partner or Request Demo, write a message or email to the respective service.
+Apply to become a Partner or Request a Demo, write a message or email to the respective service.
 
 > We are **<your dapp name\>** deployed on Matic Network. Requesting fiat-on-ramp solution to onboard users on our DApp. **Please include A short description on my DApp.**
