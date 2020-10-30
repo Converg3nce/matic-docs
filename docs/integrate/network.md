@@ -16,12 +16,11 @@ image: https://matic.network/banners/matic-network-16x9.png
 ## Testnets
 | Network   | RPC | Status         | Parent Chain                                                                                                    | Block Explorer
 |-----------|------|----------------|----------------------------------------------------------------------------------------------------------------|------------------------------------|
-|Mumbai Testnet| Sign up for a free RPC link at https://rpc.maticvigil.com/ |Running|Goërli|[:ledger:](https://mumbai-explorer.matic.today)|
+|Mumbai Testnet| Sign up for a free RPC link at https://rpc.maticvigil.com/ |Running|Goërli|[:ledger:](https://explorer-mumbai.maticvigil.com/)|
 
 
 ## Mainnets
-| Network       | RPC | Status     | Network Status                                                               | Block Explorer
+| Network       | RPC | Status     | Parent Chain                                                               | Block Explorer
 |---------------|------|------------|------------------------------------------------------------------------------|-------------------------------------
-| **Matic Mainnet** | Sign up for a free RPC link at https://rpc.maticvigil.com/ | Running    | Final Mainnet|[:ledger:](https://explorer.matic.network)
-| BetaV2        | https://betav2.matic.network  | Running    | Will be deprecated soon |[:ledger:](https://betav2-explorer.matic.network)
-| Alpha-mainnet | https://alpha.ethereum.matic.network | Running    | Deprecated |[:ledger:](https://alpha-mainnet.explorer.matic.network)
+| **Matic Mainnet** | Sign up for a free RPC link at https://rpc.maticvigil.com/ | Running    | Ethereum|[:ledger:](https://explorer-mainnet.maticvigil.com/)
+
