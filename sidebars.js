@@ -322,16 +322,6 @@ module.exports = {
               href:
                 "https://static.matic.network/network/testnet/mumbai/index.json",
             },
-            {
-              type: "link",
-              label: "BetaV2",
-              href: "https://static.matic.network/network/beta/v2/index.json",
-            },
-            {
-              type: "link",
-              label: "Alpha-Mainnet",
-              href: "https://static.matic.network/network/alpha/v1/index.json",
-            },
           ],
         },
         {
