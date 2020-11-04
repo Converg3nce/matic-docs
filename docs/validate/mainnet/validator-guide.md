@@ -175,7 +175,7 @@ You will need to add the `EnodeID` of your **Validator Node** to the sentry node
 
 Before you start Heimdall and other services on your Sentry node, do note that Heimdall usually takes a day to sync to the latest block. We do have an option where you can import a snapshot of the Blockchain state of Heimdall and Bor and using that your Heimdall and Bor won't need to sync from scratch and thus will only take a couple of hours to sync to the latest block
 
-For more information, you can read our forum post here: https://forum.matic.network/t/snapshots-for-blockchain-state/539
+For more information, you can read our forum post here: https://forum.matic.network/t/snapshots-for-blockchain-state-4th-november-2020/544
 
 **Starting Services for Heimdall and Bor**
 
@@ -411,6 +411,6 @@ You can check Bor logs here:
 
     - Bor - `journalctl -u bor.service -f`
 
-Now, you have successfully setup your Sentry and Validator Node. Now all that you have to do is Stake by using the Matic Staking UI.
+Now, you have successfully setup your Sentry and Validator Node. Now all that you have to do is Stake by using the Matic Staking UI. However, you need to ensure that you perform a health check of your Node before you proceed to staking. You can ask for a health check on our Discord Server: https://discord.gg/4E2XMVC
 
-You can follow this step-by-step guide to understand how you can stake on Matic: 
+You can follow this step-by-step guide to understand how you can stake on Matic: https://docs.matic.network/docs/validate/mainnet/stake-on-matic
