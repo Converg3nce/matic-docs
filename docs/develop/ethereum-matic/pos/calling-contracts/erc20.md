@@ -77,8 +77,7 @@ Exit function on **_RootChainManager_** contract has to be called to unlock and 
 Generating proof manually can be tricky so it is advisable to use the matic SDK. If you want to send the transaction manually, you can pass **_encodeAbi_** as **_true_** in the options object to get raw calldata.
 ```js
 const exitCalldata = await maticPOSClient
-  .exitERC20(burnTxHash)
-  .send({ from, encodeAbi: true })
+  .exitERC20(burnTxHash, { from, encodeAbi: true })
 ```
 
 Send this calldata to **_RootChainManager_**.
@@ -86,6 +85,6 @@ Send this calldata to **_RootChainManager_**.
 await mainWeb3.eth.sendTransaction({
   from: userAddress,
   to: rootChainManagerAddress,
-  data: exitCalldata
+  data: exitCalldata.data
 })
 ```
