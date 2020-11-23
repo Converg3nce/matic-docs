@@ -17,9 +17,9 @@ Currently there is no upperlimit on the Commision rate. Validators are allowed t
 
 ## How to change your Commission Rate
 
-Login to your Validator profile using your Signer address on the Staking Dashboard: https://wallet.matic.network/staking/
+Login to your Validator profile using your owner address on the Staking Dashboard: https://wallet.matic.network/staking/
 
-Note: The signer address is the address that holds ETH and is used for Signing Checkpoints.
+Note: The owner address is the address that holds your Matic Tokens and the address that is used for Logging to the Staking Dashboard.
 
 You will see a Card that says "Show Validator Details". Clicking on that button would navigate you to your Validator Profile.
 
