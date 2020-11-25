@@ -13,7 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Validators can set a Commission rate to their node so as to take a percentange of the rewards from the delegators that have staked on their node.
 
-Currently there is no upperlimit on the Commision rate. Validators are allowed to set any percentage as their Commission rate for their node. The lowerlimit by default is 0%
+Currently there is no upper limit on the Commision rate. Validators are allowed to set any percentage as their Commission rate for their node. The lower limit by default is 0%.
 
 ## How to change your Commission Rate
 
