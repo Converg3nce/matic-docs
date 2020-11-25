@@ -10,7 +10,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 Matic Network looks forward to working with the community to find security vulnerabilities in order to keep our **Projects**, **Developers** and **Users** safe.
 
-The bounty program is to ensure everyone has an opportunity to find bugs in our system, which will in turn help us ensure the security of Matic. Payouts will go up to $10,000 for critical issues.
+The bounty program is to ensure everyone has an opportunity to find bugs in our system, which will in turn help us ensure the security of Matic. Payouts will go up to $5,000 for critical issues.
 
 ## Getting Started
 * If you are new to blockchains and/or to Matic, take a look at the Matic overview - https://docs.matic.network/docs/home/architecture/matic-architecture
@@ -26,13 +26,9 @@ Contracts - https://github.com/maticnetwork/contracts
 The Matic CLI repo is an easy way to setup and manage the entire Matic stack, including **Heimdall**, **Bor** and the **Staking & Plasma smart contracts** on a local environment. This would help in simulating tests and attacks locally.
 
 
-If you want to run a node on the Counter Stake - Stage 2 staking testnet, you follow the instructions on these links:
+If you want to run a full node on the Matic Mainnet or Mumbai Testnet you can follow the links below
 
-* **Overview**: https://docs.matic.network/docs/validate/counter-stake-stage-2/getting-started
-
-* **Linux Package**: https://docs.matic.network/docs/validate/counter-stake-stage-2/linux-package-installation
-
-* **Binaries**: https://docs.matic.network/docs/validate/counter-stake-stage-2/running-with-binaries
+**Full Node**: https://docs.matic.network/docs/integrate/full-node-deployment/
 
 ## Getting Tokens for Testing
 

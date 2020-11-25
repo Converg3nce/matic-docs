@@ -150,3 +150,38 @@ The Claim stake button will only be enabled when your unbonding period is comple
 ### Do I know when will the Claim Stake button be enabled?
 
 Yes, under the Claim Stake button you would see a note on how many checkpoints are pending before the Claim Stake button would be enabled. Every checkpoint takes approximately 30 minutes. However, some checkpoints could be delayed upto ~1 hour due to congestion on Ethereum.
+
+### How do I switch my delegation from Foundation Nodes to External nodes?
+
+You can switch your Delegation using the Switch Delegation option on the Staking UI. This will switch your Delegation from the Foundation node to any other external node of your choice.
+
+### Will there be any ubonding period when I switch Delegation from Foundation nodes to external nodes?
+
+There will be no Unbonding period when you switch Delegation from foundation nodes to external nodes. It will be a direct switch without any delays. However, if you are unbonding from a Foundation Node or an External node there will be an Unbonding period for that.
+
+### Are they any specifics to choose an external node during switch delegation?
+
+No. You can choose any node of your choice.
+
+### What happens to my rewards that are accumalated if I switch delegation from Foundation to External node?
+
+If you haven't already claimed your rewards before switching delegation, then upon successfull switch of your delegation from Foundation to External the Rewards that were accumalated till then will be transferred back to your account. 
+
+### Will delegation on the External Nodes work the same as Foundation Nodes?
+
+Yes, it will work the same as Foundation nodes
+
+### Will I still get rewards after delegating to an External Node?
+
+Yes, rewards will be distributed the same as earlier with the Foundation nodes. Every successful submission of a checkpoint will yield in rewards. Rewards will be distributed and calculated at every checkpoint relative to the stake ratio, as currently implemented.
+
+### Will there be any unbonding period if I unbond from an External Node?
+
+Yes, the unbonding period will stay the same as currently implemented. 424 Checkpoints.
+
+### Will there be any locking period after I switch my Delegation from Foundation to External node?
+
+No. There won't be any locking period after you switch your delegation.
+
+
+
