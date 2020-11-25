@@ -397,6 +397,7 @@ module.exports = {
       items: [
         "validate/mainnet/getting-started",
         "validate/mainnet/core-components",
+        "validate/mainnet/validator-responsibilities",
         "validate/mainnet/validator-guide",
         "validate/mainnet/stake-on-matic",
         "validate/mainnet/validator-replacement",
