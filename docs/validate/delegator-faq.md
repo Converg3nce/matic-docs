@@ -153,7 +153,7 @@ Yes, under the Claim Stake button you would see a note on how many checkpoints a
 
 ### How do I switch my delegation from Foundation Nodes to External nodes?
 
-You can switch your Delegation using the Switch Delegation option on the Staking UI. This will switch your Delegation from the Foundation node to any other external node of your choice.
+You can switch your Delegation using the **Move Stake** option on the Staking UI. This will switch your Delegation from the Foundation node to any other external node of your choice.
 
 ### Will there be any ubonding period when I switch Delegation from Foundation nodes to external nodes?
 
@@ -183,5 +183,7 @@ Yes, the unbonding period will stay the same as currently implemented. 424 Check
 
 No. There won't be any locking period after you switch your delegation.
 
+### Can I partially switch my delegation from Foundation to External nodes?
 
+Yes, you will have the option to partially move your stake from Foundation node to an external node. The remaining partial stake will remain on the Foundation node. You can then move that to another node of your choice or the same node.
 
