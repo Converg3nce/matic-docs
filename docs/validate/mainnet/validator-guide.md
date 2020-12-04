@@ -175,7 +175,7 @@ You will need to add the `EnodeID` of your **Validator Node** to the sentry node
 
 Before you start Heimdall and other services on your Sentry node, do note that Heimdall usually takes a day to sync to the latest block. We do have an option where you can import a snapshot of the Blockchain state of Heimdall and Bor and using that your Heimdall and Bor won't need to sync from scratch and thus will only take a couple of hours to sync to the latest block
 
-For more information, you can read our forum post here: https://forum.matic.network/t/snapshots-for-blockchain-state-4th-november-2020/544
+For more information, you can read our forum post here: https://forum.matic.network/t/snapshots-for-blockchain-state-17th-november/553
 
 **Starting Services for Heimdall and Bor**
 
