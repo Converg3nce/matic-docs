@@ -17,9 +17,9 @@ jobs:
       # Setup node with version 12.x and NPM registry url
       - uses: actions/setup-node@v1
         with:
-          node-version: "11.0"
-      # Run yarn install to install project packages
-      - run: yarn install
-      # yarn build to build the project
-      - run: yarn build
+          node-version: "12.0"
+      # Run npm install to install project packages
+      - run: npm install
+      # npm run build to build the project
+      - run: npm run build
       # publish the files to NPM

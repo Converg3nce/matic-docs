@@ -7,7 +7,7 @@ keywords:
   - matic
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
-Hey everyone! Counter Stake is here - Get ready to run Validator nodes on the Matic testnet!
+Hey everyone! Matic Mainnet is here - Get ready to run Validator nodes on the Matic Mainnet!
 
 We have been working hard on enabling the Proof-of-Stake (PoS) layer on the Matic Network, and we are launching our public  staking to the community
 
