@@ -14,7 +14,7 @@ The Sender and Receiver contract are required to be mapped on Ethereum — [`Sta
 
 <center>
 <button className="btn btn-primary btn-md">
-  <a href="https://angela758926.typeform.com/to/IqKhy2" target="_blank" style={{color: 'inherit'}}>
+  <a href="/docs/develop/ethereum-matic/submit-mapping-request" style={{color: 'inherit'}}>
     Submit Sender/Receiver Mapping Request
   </a>
 </button>
