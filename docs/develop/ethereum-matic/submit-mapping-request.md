@@ -8,4 +8,13 @@ keywords:
 image: https://matic.network/banners/matic-network-16x9.png 
 ---
 
-Please submit token mapping request using this [portal](https://mapper.matic.today/).
+:::tip Before Submitting Token Mapping Request
+
+Make sure you've verified your contract(s) on respective block explorer(s).
+
+For standard tokens, you don't need to deploy anything on Matic. We'll deploy one standard contract, with `deposit` & `withdraw` methods for you, while serving mapping request.
+
+:::
+
+
+Now please visit [token mapper portal](https://mapper.matic.today/) & submit a request for your network of choice.
