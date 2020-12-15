@@ -187,3 +187,19 @@ No. There won't be any locking period after you switch your delegation.
 
 Yes, you will have the option to partially move your stake from Foundation node to an external node. The remaining partial stake will remain on the Foundation node. You can then move that to another node of your choice or the same node.
 
+### Can I switch delegation from an external node to another external node?
+
+No, the **Move Stake** option is only available on the Foundation Nodes. If you want to switch your delegation from an external node to another external node, you will have to unbond first and then delegate to another external node.
+
+### When will the Foundations node be turned off?
+
+The foundation nodes will be turned by the end of January, 2021
+
+### Will there be any Foundation nodes in the future?
+
+No, there wonm't be any foundation nodes in the future.
+
+
+### How many transactions do I need to pay for Gas when I do a Move Stake?
+
+The Move Stake is a single transaction only. All transactions would be on the Ethereum Blockchain so you would need to spend some ETH while doing the Move Stake transaction.
