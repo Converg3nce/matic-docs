@@ -404,6 +404,7 @@ module.exports = {
         "validate/mainnet/validator-replacement",
         "validate/mainnet/signer-change",
         "validate/mainnet/commission",
+        "validate/mainnet/move-stake",
         "validate/mainnet/technical-faqs",
       ],
     },
