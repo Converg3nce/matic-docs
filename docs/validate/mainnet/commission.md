@@ -39,6 +39,8 @@ Once you have the commission rate set, click on **Save** button and it will ask 
 
 Once you have confirmed and signed the transaction your commission rate will be set.
 
+Please note that once the commission is updated there is a cool down period before you can update the commission again. The cool down period is for 424 checkpoints or ~9 days. If you attempt to update the commission during this cooldown period you will recieve an error with High gas estimations.
+
 ## Precautionary Notes
 
 You are allowed to change the Commission rates as many times as possible. There are no restrictions on this. However, as a Validator if you have updated your Commission Rate recently, it is your duty to also update the community and the delegators that have staked on your node about the recent changes.
