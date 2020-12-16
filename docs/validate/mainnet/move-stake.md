@@ -23,17 +23,17 @@ Also, the Move Stake function is a temporary function developed by the Matic tea
 
 In order to Move stake, first you will need to loging to the Staking UI: https://wallet.matic.network/staking using your Delegator Address. 
 
-Delegator Address = The address that you have already used for Staking on the Foundation Nodes.
+**Delegator Address** = The address that you have already used for Staking on the Foundation Nodes.
 
 Once logged in your will see a list of Validators. 
 
 <img src={useBaseUrl("img/staking/validator-list.png")} />
 
-Now go to your Delegator Profile by clicking on the "Show Delegator Details" button or the "My Delegator Details" option on the left hand side
+Now go to your Delegator Profile by clicking on the "Show Delegator Details" button or the "**My Delegator Details**" option on the left hand side
 
 <img src={useBaseUrl("img/staking/show-delegator-details.png")} />
 
-Here you will find a new button called "Move Stake"
+Here you will find a new button called "**Move Stake**"
 
 <img src={useBaseUrl("img/staking/move-stake-button.png")} />
 
@@ -41,7 +41,7 @@ Clicking on that button would navigate you to a page with a list of validators t
 
 <img src={useBaseUrl("img/staking/move-stake-validator.png")} />
 
-Now after choosing your validator that you want to delegate to, click on the "Delegate Here" button.
+Now after choosing your validator that you want to delegate to, click on the "**Delegate Here**" button.
 
 Clicking on that button would open up a pop up.
 
@@ -54,3 +54,5 @@ Here you would see an Amount field which would automatically populate with entir
 Once you have entered the amount you can then click on Stake Funds button. This will then ask for confirmation on your Metamask to sign the address.
 
 Once you have signed the transaction your stake would have successfully moved from the Foundation node to the External node. However, you will have to wait for 12 block confirmations for it reflect on the Staking UI.
+
+If you have any questions or any issues please post on the Staking UI Channel on Telegram: https://t.me/maticwalletweb
