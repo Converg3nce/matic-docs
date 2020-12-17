@@ -101,9 +101,9 @@ contract ChildERC20 is ERC20,
 
         // `amount` token getting minted here & equal amount got locked in RootChainManager
         _totalSupply = _totalSupply.add(amount);
-        _balances[msg.sender] = _balances[msg.sender].add(amount);
+        _balances[user] = _balances[user].add(amount);
         
-        emit Transfer(address(0), msg.sender, amount);
+        emit Transfer(address(0), user, amount);
     }
 
     function withdraw(uint256 amount) external {
@@ -136,7 +136,11 @@ contract ChildERC20 is ERC20,
         _setupDecimals(decimals);
         childChainManagerProxy = _childChainManagerProxy;
         deployer = msg.sender;
-        // can't mint here, because minting in child chain smart contract's constructor not allowed
+
+        // Can't mint here, because minting in child chain smart contract's constructor not allowed
+        //
+        // In case of mintable tokens it can be done, there can be external mintable function too
+        // which can be called by some trusted parties
         // _mint(msg.sender, 10 ** 27);
     
     }
@@ -157,9 +161,9 @@ contract ChildERC20 is ERC20,
 
         // `amount` token getting minted here & equal amount got locked in RootChainManager
         _totalSupply = _totalSupply.add(amount);
-        _balances[msg.sender] = _balances[msg.sender].add(amount);
+        _balances[user] = _balances[user].add(amount);
         
-        emit Transfer(address(0), msg.sender, amount);
+        emit Transfer(address(0), user, amount);
     }
 
     function withdraw(uint256 amount) external {
