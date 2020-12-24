@@ -54,5 +54,14 @@ Here you would see an Amount field which would automatically populate with entir
 Once you have entered the amount you can then click on Stake Funds button. This will then ask for confirmation on your Metamask to sign the address.
 
 Once you have signed the transaction your stake would have successfully moved from the Foundation node to the External node. However, you will have to wait for 12 block confirmations for it reflect on the Staking UI. If your moved funds do not show up after 12 block confirmations, try refreshing the page once to see updated stakes.
+<video width="400" height="250"controls="controls">
+  <source type="video/mp4" src="/img/staking/MoveStakeDemo.mp4"></source>
+  
+  <p>Your browser does not support the video element.</p>
+</video>
+
 
 If you have any questions or any issues please post on the Staking UI Channel on Telegram: https://t.me/maticwalletweb
+
+
+
