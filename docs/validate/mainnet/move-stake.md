@@ -12,9 +12,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ## Moving Stake from Foundation nodes to External Nodes
 
 
-<video autoplay loop muted playsinline width="100%" height="100%" controls="controls">
+<video loop autoplay width="100%" height="100%" controls="true" >
   <source type="video/mp4" src="/img/staking/MoveStakeDemo.mp4"></source>
-  <source type="video/mov" src="/img/staking/MoveStakeDemo.mov"></source>
+  <source type="video/quicktime" src="/img/staking/MoveStakeDemo.mov"></source>
   <p>Your browser does not support the video element.</p>
 </video>
 
