@@ -11,6 +11,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Moving Stake from Foundation nodes to External Nodes
 
+
+<video loop autoplay width="100%" height="100%" controls="true" >
+  <source type="video/mp4" src="/img/staking/MoveStakeDemo.mp4"></source>
+  <source type="video/quicktime" src="/img/staking/MoveStakeDemo.mov"></source>
+  <p>Your browser does not support the video element.</p>
+</video>
+
 Delegators are now given an option to move their stake from the Foundation nodes to any External nodes of their choice by using the Move Stake functionality on the Staking UI
 
 Moving Stake from the foundation node to external node is a single transaction. So there are no delays or unbonding periods durind this event.
@@ -55,4 +62,9 @@ Once you have entered the amount you can then click on Stake Funds button. This 
 
 Once you have signed the transaction your stake would have successfully moved from the Foundation node to the External node. However, you will have to wait for 12 block confirmations for it reflect on the Staking UI. If your moved funds do not show up after 12 block confirmations, try refreshing the page once to see updated stakes.
 
+
+
 If you have any questions or any issues please post on the Staking UI Channel on Telegram: https://t.me/maticwalletweb
+
+
+
