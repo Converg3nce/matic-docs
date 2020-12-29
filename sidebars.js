@@ -101,6 +101,7 @@ module.exports = {
           ],
         },
         "develop/wallets/fortmatic",
+        "develop/wallets/ExportSeedPhrase",
         "develop/wallets/metamask",
         "develop/wallets/portis",
         "develop/wallets/torus",
