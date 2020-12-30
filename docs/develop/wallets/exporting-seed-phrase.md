@@ -1,6 +1,6 @@
 ---
-id: ExportSeedPhrase
-title: Export Seed phrase from Matic Mobile Wallet
+id: exporting-seed-phrase
+title: Export Seed Phrase from Matic Mobile Wallet
 description: Build your next blockchain app on Matic.
 keywords:
   - docs
@@ -22,11 +22,7 @@ Once you Import your account with a Matic Mobile Wallet you will be able to land
 
 <img src={useBaseUrl("img/wallet/walletHome.png")} />
 
-
-
 ## Step 2. Exporting seed phrase from Wallet
-
-
 
 1. To Export seed phrase from Wallet, tap on the **Settings** icon <img src={useBaseUrl("img/wallet/settingsIcn.png")} /> from the Home screen footer tabs and you will be navigated to **Settings** screen
 <img src={useBaseUrl("img/wallet/settingScreen.png")} />
@@ -69,10 +65,3 @@ Android     : [https://play.google.com/store/apps/details?id=com.wallet.crypto.t
    **Your wallet was successfully imported** alert should be displayed on the home screen
 
    <img src={useBaseUrl("img/wallet/trustWalletHome.png")} />
-
- 
-
-
-
-
-

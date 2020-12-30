@@ -89,6 +89,7 @@ module.exports = {
       label: "Wallets",
       items: [
         "develop/wallets/getting-started",
+        "develop/wallets/exporting-seed-phrase",
         {
           type: "category",
           label: "Arkane",
@@ -101,7 +102,6 @@ module.exports = {
           ],
         },
         "develop/wallets/fortmatic",
-        "develop/wallets/ExportSeedPhrase",
         "develop/wallets/metamask",
         "develop/wallets/portis",
         "develop/wallets/torus",
