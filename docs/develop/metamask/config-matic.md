@@ -26,9 +26,9 @@ To add Matic’s Mumbai-Testnet, click on the Network selection dropdown and the
 
 <img src={useBaseUrl("img/metamask/select-network.png")} />
 
-It will open up a form with 2 tabs on the top, Settings and Info. In the Settings tab you can add the URL `https://rpc-mumbai.matic.today`.
+It will open up a form with 2 tabs on the top, Settings and Info. In the Settings tab you can add the URL `https://rpc-mumbai.maticvigil.com/`.
 
-<img src={useBaseUrl("img/metamask/metamask-settings.png")} />
+<img src={useBaseUrl("img/metamask/metamask-settings-mumbai.png")} />
 
 Once you’ve added the URL in the New Network field, click on Save. You will be directly switched to Matic’s Mumbai-Testnet now in the network dropdown list. You can now close the dialog.
 </TabItem>
@@ -38,7 +38,7 @@ To add Matic’s Mainnet, click on the Network selection dropdown and then click
 
 <img src={useBaseUrl("img/metamask/select-network.png")} />
 
-It will open up a form with 2 tabs on the top, Settings and Info. In the Settings tab you can add the URL `https://rpc-mainnet.matic.network`.
+It will open up a form with 2 tabs on the top, Settings and Info. In the Settings tab you can add the URL `https://rpc-mainnet.maticvigil.com/`.
 
 <img src={useBaseUrl("img/metamask/metamask-settings-mainnet.png")} />
 
