@@ -89,7 +89,13 @@ module.exports = {
       label: "Wallets",
       items: [
         "develop/wallets/getting-started",
-        "develop/wallets/exporting-seed-phrase",
+        {
+          type: "category",
+          label: "Matic Wallet",
+          items: [
+            "develop/wallets/exporting-seed-phrase",
+          ],
+        },
         {
           type: "category",
           label: "Arkane",
