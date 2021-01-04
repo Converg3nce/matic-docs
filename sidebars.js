@@ -105,6 +105,13 @@ module.exports = {
         "develop/wallets/portis",
         "develop/wallets/torus",
         "develop/wallets/walletconnect",
+        {
+          type: "category",
+          label: "Matic Wallet",
+          items: [
+            "develop/wallets/exporting-seed-phrase",
+          ],
+        },
       ],
     },
     {
