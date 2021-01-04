@@ -24,7 +24,7 @@ Once you Import your account with a Matic Mobile Wallet you will be able to land
 
 ## Step 2. Exporting seed phrase from Wallet
 
-1. To Export seed phrase from Wallet, tap on the **Settings** icon <img src={useBaseUrl("img/wallet/settingsIcn.png")} /> from the Home screen footer tabs and you will be navigated to **Settings** screen
+1. To Export seed phrase from Wallet, tap on the **Settings** icon from the Home screen footer tabs and you will be navigated to **Settings** screen
 <img src={useBaseUrl("img/wallet/settingScreen.png")} />
 2. Tap on **Show Passphrase**  from the **Settings** menu and you will be navigated to **Enter your PIN** screen. Then enter your PIN to see your PassPhrase
 <img src={useBaseUrl("img/wallet/passPhrase.png")} />
