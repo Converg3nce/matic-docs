@@ -182,6 +182,7 @@ module.exports = {
         "develop/metatransactions/getting-started",
         "develop/metatransactions/metatransactions-biconomy",
         "develop/metatransactions/metatransactions-gsn",
+        "develop/metatransactions/network-agnostics"
       ],
     },
     {
