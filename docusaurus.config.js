@@ -79,6 +79,12 @@ module.exports = {
           href: "https://forum.matic.network",
           position: "right",
         },
+        {
+          to: "docs/faq/faq",
+          label: "FAQ",
+          position: "left",
+          activeBasePath: "docs/faq",
+        },
       ],
     },
   },
