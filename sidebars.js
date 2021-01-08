@@ -499,4 +499,11 @@ module.exports = {
       ],
     },
   ],
+  faq: [
+    "faq/faq",
+    "faq/delegator-faq",
+    "faq/faqs",
+    "faq/technical-faqs"
+
+  ],
 };
