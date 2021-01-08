@@ -22,7 +22,7 @@ values={[
 
 # Mumbai-Testnet
 
-Here are the list of mapped tokens on Mumbai testnet, If you would like to get your token mapped then send your mapping request here: https://mapper.matic.today/
+Here are the list of mapped tokens on Mumbai testnet, If you would like to get your token mapped then send your mapping request here: https://angela758926.typeform.com/to/GJNUda
 
 | Token Name        | Bridge | Parent Chain Address: Goerli                                                                                                 | Child Chain: MUMBAI                                                                                                                  |
 | ----------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -40,7 +40,7 @@ Here are the list of mapped tokens on Mumbai testnet, If you would like to get y
 
 # Matic-Mainnet
 
-Here are the list of mapped tokens on Matic-Mainnet, If you would like to get your token mapped then send your mapping request here: https://mapper.matic.today/
+Here are the list of mapped tokens on Matic-Mainnet, If you would like to get your token mapped then send your mapping request here: https://angela758926.typeform.com/to/GJNUda
 
 | Token Name        | Bridge | Parent Chain Address: Ethereum Mainnet                                                                                | Child Chain: Matic Network                                                                                                      |
 | ----------------- | ------ | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
