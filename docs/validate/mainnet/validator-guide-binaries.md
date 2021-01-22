@@ -1,6 +1,6 @@
 ---
 id: validator-guide-binaries
-title: Maitc Mainnet - Sentry + Validator setup in Binaries
+title: Matic Mainnet Node - Sentry & Validator
 sidebar_label: Node Setup Binaries
 description: Build your next blockchain app on Matic.
 keywords:
@@ -374,49 +374,49 @@ You can check Bor logs here:
 
     - Run these commands on your Validator Node:
 
-        **To Start Heimdall Service**
+    **To Start Heimdall Service**
 
-        ```jsx
-        sudo service heimdalld start
-        ```
+    ```js
+    sudo service heimdalld start
+    ```
 
-        **To start Heimdall Rest-server**
+    **To start Heimdall Rest-server**
 
-        ```jsx
-        sudo service heimdalld-rest-server start
-        ```
+    ```js
+    sudo service heimdalld-rest-server start
+    ```
 
-        **To start Heimdall bridge**
+    **To start Heimdall bridge**
 
-        ```jsx
-        sudo service heimdalld-bridge start
-        ```
+    ```js
+    sudo service heimdalld-bridge start
+    ```
 
-        You check logs for Heimdall and rest-server here:
+**You check logs for Heimdall and rest-server here**:
 
-        - Heimdall - `journalctl -u heimdalld.service -f`
-        - Heimdall Rest Server - `journalctl -u heimdalld-rest-server.service -f`
-        - Heimdall Bridge - `journalctl -u heimdalld-bridge.service -f`
+- Heimdall - `journalctl -u heimdalld.service -f`
+- Heimdall Rest Server - `journalctl -u heimdalld-rest-server.service -f`
+- Heimdall Bridge - `journalctl -u heimdalld-bridge.service -f`
 
-        Now you need to make sure that Heimdall is synced completely and only then Start Bor. If you start Bor without Heimdall syncing completely, you will run into issues frequently.
+Now you need to make sure that Heimdall is synced completely and only then Start Bor. If you start Bor without Heimdall syncing completely, you will run into issues frequently.
 
-        - To check if Heimdall is synced
-            - On the remote machine/VM, run `curl localhost:26657/status`
-            - In the output, `catching_up` value should be `false`
+- To check if Heimdall is synced
+    - On the remote machine/VM, run `curl localhost:26657/status`
+    - In the output, `catching_up` value should be `false`
 
-        Now once Heimdall is synced, run 
+Now once Heimdall is synced, run 
 
-        ```jsx
-        sudo service bor start
-        ```
+```js
+sudo service bor start
+```
 
-    You can check Bor logs here:
+You can check Bor logs here:
 
-    - Bor - `journalctl -u bor.service -f`
+- Bor - `journalctl -u bor.service -f`
 
-    Now, you have successfully setup your Sentry and Validator Node. Now all that you have to do is Stake by using the Matic Staking UI.
+Now, you have successfully setup your Sentry and Validator Node. Now all that you have to do is Stake by using the Matic Staking UI.
 
-    You can follow this step-by-step guide to understand how you can stake on Matic: [https://www.notion.so/maticnetwork/Staking-on-Matic-Mainnet-5ad50f58fad348fc89c6dcf3a729f260](https://www.notion.so/maticnetwork/Staking-on-Matic-Mainnet-5ad50f58fad348fc89c6dcf3a729f260)
+You can follow this step-by-step guide to understand how you can stake on Matic: [https://www.notion.so/maticnetwork/Staking-on-Matic-Mainnet-5ad50f58fad348fc89c6dcf3a729f260](https://www.notion.so/maticnetwork/Staking-on-Matic-Mainnet-5ad50f58fad348fc89c6dcf3a729f260)
 
 ## Logs
 
