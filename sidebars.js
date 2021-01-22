@@ -408,6 +408,7 @@ module.exports = {
         "validate/mainnet/core-components",
         "validate/mainnet/validator-responsibilities",
         "validate/mainnet/validator-guide",
+        "validate/mainnet/validator-guide-binaries",
         "validate/mainnet/stake-on-matic",
         "validate/mainnet/validator-replacement",
         "validate/mainnet/signer-change",

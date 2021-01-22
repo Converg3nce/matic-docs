@@ -1,7 +1,7 @@
 ---
 id: validator-guide
 title: Matic Mainnet Node - Sentry & Validator
-sidebar_label: Node Setup
+sidebar_label: Node Setup Ansible
 description: Setup your validator node on Matic Mainnet
 keywords:
   - docs
