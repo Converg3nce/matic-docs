@@ -13,7 +13,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 A user with an account can craft a transaction in a similar way to how the ‘normal’ transaction is created, sign it with the own private key, but instead of sending it on-chain (which is usually the last step that requires paying ETH for gas), they send it to so-called a ‘relayer’, or the actual ‘sender’.
 
-Assuming your familiarity with the different approaches you can take to integrate meta-transactions in your DApp, and depending on weather you're migrating to meta-transactions or building fresh DApp on using it.
+Assuming your familiarity with the different approaches you can take to integrate meta-transactions in your DApp, and depending on whether you're migrating to meta-transactions or building fresh DApp on using it.
 
 To integrate your DApp with Meta Transactions on Matic, you can choose to go with either the following two relayers or spin up a custom solution:
 
