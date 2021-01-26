@@ -36,7 +36,7 @@ import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 
 contract APIConsumer is ChainlinkClient {
   
-    uint256 public ethereumPrice;
+    uint256 public price;
     
     address private oracle;
     bytes32 private jobId;
@@ -60,19 +60,34 @@ contract APIConsumer is ChainlinkClient {
      * Create a Chainlink request to retrieve API response, find the target price
      * data, then multiply by 100 (to remove decimal places from price).
      */
-    function requestEthereumPrice() public returns (bytes32 requestId) 
+    function requestBTCCNYPrice() public returns (bytes32 requestId) 
     {
         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
         
         // Set the URL to perform the GET request on
-        request.add("get", "https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD");
+        request.add("get", "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=CNY&apikey=demo");
         
-        // Set the path to find the desired data in the API response, where the response format is:
-        // {"USD":243.33}
-        request.add("path", "USD");
+       // Set the path to find the desired data in the API response, where the response format is:
+       // {
+       //     "Realtime Currency Exchange Rate": {
+       //       "1. From_Currency Code": "BTC",
+       //       "2. From_Currency Name": "Bitcoin",
+       //       "3. To_Currency Code": "CNY",
+       //       "4. To_Currency Name": "Chinese Yuan",
+       //       "5. Exchange Rate": "207838.88814500",
+       //       "6. Last Refreshed": "2021-01-26 11:11:07",
+       //       "7. Time Zone": "UTC",
+       //      "8. Bid Price": "207838.82343000",
+       //       "9. Ask Price": "207838.88814500"
+       //     }
+       //     }
+        string[] memory path = new string[](2);
+        path[0] = "Realtime Currency Exchange Rate";
+        path[1] = "5. Exchange Rate";
+        request.addStringArray("path", path);
         
-        // Multiply the result by 100 to remove decimals
-        request.addInt("times", 100);
+        // Multiply the result by 10000000000 to remove decimals
+        request.addInt("times", 10000000000);
         
         // Sends the request
         return sendChainlinkRequestTo(oracle, request, fee);
@@ -83,7 +98,7 @@ contract APIConsumer is ChainlinkClient {
      */ 
     function fulfill(bytes32 _requestId, uint256 _price) public recordChainlinkFulfillment(_requestId)
     {
-        ethereumPrice = _price;
+        price = _price;
     }
 }
 ```
@@ -115,7 +130,14 @@ If an API responds with a complex JSON object, the "path" parameter would need t
 }
 ```
 
-This would require the following path: `"Prices.USD"`.
+This would require the following path: `"Prices.USD"`. If there are spaces in the stings, or the strings are quite long, we can use the syntax shown in the example above, where we pass them all as a string array.
+
+```
+string[] memory path = new string[](2);
+path[0] = "Prices";
+path[1] = "USD";
+request.addStringArray("path", path);
+```
 
 # What Are Job IDs For?
 
