@@ -53,7 +53,7 @@ contract APIConsumer is ChainlinkClient {
         setChainlinkToken(0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB);
         oracle = 0xBf87377162512f8098f78f055DFD2aDAc34cbB47;
         jobId = "6b57e3fe0d904ba48d137b39350c7892";
-        fee = 10 ** 18; // 1 LINK
+        fee = 10 ** 16; // 0.01 LINK
     }
     
     /**
