@@ -36,7 +36,7 @@ import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 
 contract APIConsumer is ChainlinkClient {
   
-    uint256 public ethereumPrice;
+    uint256 public price;
     
     address private oracle;
     bytes32 private jobId;
@@ -44,35 +44,50 @@ contract APIConsumer is ChainlinkClient {
     
     /**
      * Network: Matic Mumbai Testnet
-     * Oracle: 0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17
-     * Job ID: d8fcf41ee8984d3b8b0eae7b74eca7dd
+     * Oracle: 0xBf87377162512f8098f78f055DFD2aDAc34cbB47
+     * Job ID: 6b57e3fe0d904ba48d137b39350c7892
      * LINK address: 0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB
-     * Fee: 1 LINK
+     * Fee: 0.01 LINK
      */
     constructor() public {
         setChainlinkToken(0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB);
-        oracle = 0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17;
-        jobId = "d8fcf41ee8984d3b8b0eae7b74eca7dd";
-        fee = 10 ** 18; // 1 LINK
+        oracle = 0xBf87377162512f8098f78f055DFD2aDAc34cbB47;
+        jobId = "6b57e3fe0d904ba48d137b39350c7892";
+        fee = 10 ** 16; // 0.01 LINK
     }
     
     /**
      * Create a Chainlink request to retrieve API response, find the target price
      * data, then multiply by 100 (to remove decimal places from price).
      */
-    function requestEthereumPrice() public returns (bytes32 requestId) 
+    function requestBTCCNYPrice() public returns (bytes32 requestId) 
     {
         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
         
         // Set the URL to perform the GET request on
-        request.add("get", "https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD");
+        request.add("get", "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=CNY&apikey=demo");
         
-        // Set the path to find the desired data in the API response, where the response format is:
-        // {"USD":243.33}
-        request.add("path", "USD");
+       // Set the path to find the desired data in the API response, where the response format is:
+       // {
+       //     "Realtime Currency Exchange Rate": {
+       //       "1. From_Currency Code": "BTC",
+       //       "2. From_Currency Name": "Bitcoin",
+       //       "3. To_Currency Code": "CNY",
+       //       "4. To_Currency Name": "Chinese Yuan",
+       //       "5. Exchange Rate": "207838.88814500",
+       //       "6. Last Refreshed": "2021-01-26 11:11:07",
+       //       "7. Time Zone": "UTC",
+       //      "8. Bid Price": "207838.82343000",
+       //       "9. Ask Price": "207838.88814500"
+       //     }
+       //     }
+        string[] memory path = new string[](2);
+        path[0] = "Realtime Currency Exchange Rate";
+        path[1] = "5. Exchange Rate";
+        request.addStringArray("path", path);
         
-        // Multiply the result by 100 to remove decimals
-        request.addInt("times", 100);
+        // Multiply the result by 10000000000 to remove decimals
+        request.addInt("times", 10000000000);
         
         // Sends the request
         return sendChainlinkRequestTo(oracle, request, fee);
@@ -83,17 +98,21 @@ contract APIConsumer is ChainlinkClient {
      */ 
     function fulfill(bytes32 _requestId, uint256 _price) public recordChainlinkFulfillment(_requestId)
     {
-        ethereumPrice = _price;
+        price = _price;
     }
 }
 ```
 
 # Addresses
 
-There is currently only one operational Chainlink oracle on the Matic Mumbai Testnet.
+There are currently only a few operational Chainlink oracles on the Matic Mumbai Testnet. You can always run one yourself too!
 
-* Oracle: <a href="https://mumbai-explorer.matic.today/address/0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17/transactions" target="_blank">`0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17`</a>
+### View the reference on Market.Link
+[Alpha Chain Mumbai Chainlink Node](https://market.link/nodes/cca2eddf-06a3-4d43-8ae2-eb803554e2fd?start=1611015021&end=1611619821)
+
+* Oracle: <a href="https://mumbai-explorer.matic.today/address/0xBf87377162512f8098f78f055DFD2aDAc34cbB47/transactions" target="_blank">`0xBf87377162512f8098f78f055DFD2aDAc34cbB47`</a>
 * LINK: <a href="https://mumbai-explorer.matic.today/address/0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB/transactions" target="_blank">`0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB`</a>
+
 
 To obtain LINK on Mumbai Testnet, contact us on our <a href="https://discord.com/invite/UFC4VYh" target="_blank">Discord</a>.
 
@@ -111,7 +130,14 @@ If an API responds with a complex JSON object, the "path" parameter would need t
 }
 ```
 
-This would require the following path: `"Prices.USD"`.
+This would require the following path: `"Prices.USD"`. If there are spaces in the stings, or the strings are quite long, we can use the syntax shown in the example above, where we pass them all as a string array.
+
+```
+string[] memory path = new string[](2);
+path[0] = "Prices";
+path[1] = "USD";
+request.addStringArray("path", path);
+```
 
 # What Are Job IDs For?
 
@@ -131,11 +157,11 @@ Here is the list of jobs that the Matic oracle is configured to run.
 
 | Name |  Return Type  | ID | Adapters |
 |-----|--------|------|-------|
-| HTTP GET | `uint256` | `d8fcf41ee8984d3b8b0eae7b74eca7dd` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethuint256`<br/>`ethtx`  |
-| HTTP GET | `int256` | `508bac12319e4a488ac46e194997db1f ` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethint256`<br/>`ethtx`  |
-| HTTP GET | `bool` | `31779f840111490299551ba34646db47 ` |  `httpget`<br/>`jsonparse`<br/>`ethbool`<br/>`ethtx`  |
-| HTTP GET | `bytes32` | `4f880ce628544e1a8d26a26044c91c20 ` | `httpget`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
-| HTTP POST | `bytes32` | `d50dacc32d514a2eae0d6981235a25df ` | `httppost`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
+| HTTP GET | `uint256` | `6b57e3fe0d904ba48d137b39350c7892` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethuint256`<br/>`ethtx`  |
+| HTTP GET | `int256` | `18ee1e6eeedc4dac843ace23c0b4e974 ` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethint256`<br/>`ethtx`  |
+| HTTP GET | `bool` | `f1020a3f10ba478e827462daee70e3ab ` |  `httpget`<br/>`jsonparse`<br/>`ethbool`<br/>`ethtx`  |
+| HTTP GET | `bytes32` | `e5725140623b4c559c774c116ee6945a ` | `httpget`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
+| HTTP POST | `bytes32` | `c794acefe64e42b489bae7344f410798 ` | `httppost`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
 
 Read more about job specifications [here](https://docs.chain.link/docs/job-specifications).
 
