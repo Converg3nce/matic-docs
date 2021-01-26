@@ -44,15 +44,15 @@ contract APIConsumer is ChainlinkClient {
     
     /**
      * Network: Matic Mumbai Testnet
-     * Oracle: 0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17
-     * Job ID: d8fcf41ee8984d3b8b0eae7b74eca7dd
+     * Oracle: 0xBf87377162512f8098f78f055DFD2aDAc34cbB47
+     * Job ID: 6b57e3fe0d904ba48d137b39350c7892
      * LINK address: 0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB
-     * Fee: 1 LINK
+     * Fee: 0.01 LINK
      */
     constructor() public {
         setChainlinkToken(0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB);
-        oracle = 0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17;
-        jobId = "d8fcf41ee8984d3b8b0eae7b74eca7dd";
+        oracle = 0xBf87377162512f8098f78f055DFD2aDAc34cbB47;
+        jobId = "6b57e3fe0d904ba48d137b39350c7892";
         fee = 10 ** 18; // 1 LINK
     }
     
@@ -90,10 +90,14 @@ contract APIConsumer is ChainlinkClient {
 
 # Addresses
 
-There is currently only one operational Chainlink oracle on the Matic Mumbai Testnet.
+There are currently only a few operational Chainlink oracles on the Matic Mumbai Testnet. You can always run one yourself too!
 
-* Oracle: <a href="https://mumbai-explorer.matic.today/address/0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17/transactions" target="_blank">`0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17`</a>
+### View the reference on Market.Link
+[Alpha Chain Mumbai Chainlink Node](https://market.link/nodes/cca2eddf-06a3-4d43-8ae2-eb803554e2fd?start=1611015021&end=1611619821)
+
+* Oracle: <a href="https://mumbai-explorer.matic.today/address/0xBf87377162512f8098f78f055DFD2aDAc34cbB47/transactions" target="_blank">`0xBf87377162512f8098f78f055DFD2aDAc34cbB47`</a>
 * LINK: <a href="https://mumbai-explorer.matic.today/address/0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB/transactions" target="_blank">`0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB`</a>
+
 
 To obtain LINK on Mumbai Testnet, contact us on our <a href="https://discord.com/invite/UFC4VYh" target="_blank">Discord</a>.
 
@@ -131,11 +135,11 @@ Here is the list of jobs that the Matic oracle is configured to run.
 
 | Name |  Return Type  | ID | Adapters |
 |-----|--------|------|-------|
-| HTTP GET | `uint256` | `d8fcf41ee8984d3b8b0eae7b74eca7dd` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethuint256`<br/>`ethtx`  |
-| HTTP GET | `int256` | `508bac12319e4a488ac46e194997db1f ` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethint256`<br/>`ethtx`  |
-| HTTP GET | `bool` | `31779f840111490299551ba34646db47 ` |  `httpget`<br/>`jsonparse`<br/>`ethbool`<br/>`ethtx`  |
-| HTTP GET | `bytes32` | `4f880ce628544e1a8d26a26044c91c20 ` | `httpget`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
-| HTTP POST | `bytes32` | `d50dacc32d514a2eae0d6981235a25df ` | `httppost`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
+| HTTP GET | `uint256` | `6b57e3fe0d904ba48d137b39350c7892` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethuint256`<br/>`ethtx`  |
+| HTTP GET | `int256` | `18ee1e6eeedc4dac843ace23c0b4e974 ` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethint256`<br/>`ethtx`  |
+| HTTP GET | `bool` | `f1020a3f10ba478e827462daee70e3ab ` |  `httpget`<br/>`jsonparse`<br/>`ethbool`<br/>`ethtx`  |
+| HTTP GET | `bytes32` | `e5725140623b4c559c774c116ee6945a ` | `httpget`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
+| HTTP POST | `bytes32` | `c794acefe64e42b489bae7344f410798 ` | `httppost`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
 
 Read more about job specifications [here](https://docs.chain.link/docs/job-specifications).
 
