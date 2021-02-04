@@ -39,7 +39,7 @@ Alternatively we can call `calculateSumOnChildChain`. This will internally send 
 
 Both these methods will give the same final result. Second method takes some more transactions but overall gas cost will be less because all heavy processing is done on Matic chain and only result is stored on Ethereum.
 
-Please note that you have to set the child tunnel contract address and checkpoint manager address in the root tunnel contract. `setCheckpointManager` and `setChildTunnel` are the two functions exposed on the root tunnel contract for this purpose. the child tunnel contract address has to be passed to `setChildTunnel` and `0x2890bA17EfE978480615e330ecB65333b880928e` has to be passed to `setCheckpointManager`. This address is the contract address of the root chain proxy on Goerli. its mainnet equavalent is `0x86E4Dc95c7FBdBf52e33D563BbDB00823894C287`
+Please note that you have to set the child tunnel contract address and checkpoint manager address in the root tunnel contract. `setCheckpointManager` and `setChildTunnel` are the two functions exposed on the root tunnel contract for this purpose. The child tunnel contract address has to be passed to `setChildTunnel` and `0x2890bA17EfE978480615e330ecB65333b880928e` has to be passed to `setCheckpointManager`. This address is the contract address of the root chain proxy on Goerli. its mainnet equavalent is `0x86E4Dc95c7FBdBf52e33D563BbDB00823894C287`
 
 
 ```js
