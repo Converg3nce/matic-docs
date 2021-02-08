@@ -19,7 +19,6 @@ The following wallets will be discussed:
 - [Portis](portis)
 - [Torus](torus)
 - [Wallet Connect](walletconnect)
-- imToken 
 
 ### Wallets
 
@@ -35,7 +34,6 @@ The following wallets will be discussed:
 
 * [**Wallet Connect**](https://walletconnect.org/): WalletConnect is an open protocol to communicate securely between Wallets and Dapps (Web3 Apps). The protocol establishes a remote connection between two apps and/or devices using a Bridge server to relay payloads. These payloads are symmetrically encrypted through a shared key between the two peers. [For more...](walletconnect)
 
-* [**imToken**](https://token.im/): #imToken #6666 We are providing Matic token's information on imToken. After completion, you can see the logo and full information inside imToken's Token Manager.
 
 ### High-level steps:
 
