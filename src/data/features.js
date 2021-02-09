@@ -62,3 +62,20 @@ export const thirdRow = [
         description: "Interact with Ethereum and Matic Chain"
     },
 ];
+
+export const networkBanner = [
+    {
+        title: "Live Network",
+        class_name: "matic-banner",
+        linkUrl: "https://matic.network/",
+        imageUrl: "img/matic-logo.svg",
+        description: "Experience the power of Layer2 with Matic POS+Plasma Chain"
+    },
+    {
+        title: "Polygon Network",
+        class_name: "polygon-banner",
+        linkUrl: "https://polygon.technology/",
+        imageUrl: "img/polygon-logo.svg",
+        description: "A swiss army knife for Ethereum scaling, Zk Rollups, Optimistic Rollups, Shared security chains"
+    },
+];
