@@ -69,7 +69,7 @@ export const networkBanner = [
         class_name: "matic-banner",
         linkUrl: "https://matic.network/",
         imageUrl: "img/matic-logo.svg",
-        description: "Experience the power of Layer2 with Matic POS+Plasma Chain"
+        description: "Experience the power of Layer 2 with Matic PoS + Plasma chains"
     },
     {
         title: "Polygon Network",
