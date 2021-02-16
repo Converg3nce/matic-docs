@@ -197,9 +197,22 @@ The foundation nodes will be turned by the end of January, 2021
 
 ### Will there be any Foundation nodes in the future?
 
-No, there won't be any foundation nodes in the future.
+No, there wonm't be any foundation nodes in the future.
 
 
 ### How many transactions do I need to pay for Gas when I do a Move Stake?
 
 The Move Stake is a single transaction only. All transactions would be on the Ethereum Blockchain so you would need to spend some ETH while doing the Move Stake transaction.
+
+### Will my stake be automatically unbonded after 31st January?
+
+No. Your stake won't be automatically unbonded after 31st January. You will have to manually unbond. And the unbonding period will still stay the same as 424 checkpoints which is approximately 9 days.
+
+### Will I earn rewards if I haven't moved my stake from the Foundation Nodes after 31st January
+
+No. If you haven't moved your stake to an external validator, you will stop earning rewards after 31st January.
+
+### If the external validator is missing signing checkpoints, does that mean I lose on rewards too?
+
+Yes. Rewards are distributed every checkpoint and each validator is supposed to sign the checkpoint transaction. However, if any validator misses signing the checkpoint transaction then for that checkpoint, rewards are not issued for that validator. Which in return means that you as delegator will not earn any rewards for that particular checkpoint.
+
