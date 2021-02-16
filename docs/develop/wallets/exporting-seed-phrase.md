@@ -10,13 +10,13 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+> Please note that we’ve decided to retire the Mobile Wallet and hand over the reins to the decentralized developer community.
+For more details click [here](https://blog.matic.network/retiring-the-matic-mobile-wallet-handing-the-reins-to-the-dev-community/)
+
 ## Step 1. Logging in to the Matic Mobile Wallet
 
 To login to the Mobile app you need to install the Matic wallet mobile app
 
-iOS: [https://itunes.apple.com/us/app/matic-wallet/id1441139058?ls=1&mt=8](https://itunes.apple.com/us/app/matic-wallet/id1441139058?ls=1&mt=8)
-
-Android  : [https://play.google.com/store/apps/details?id=network.matic.wallet](https://play.google.com/store/apps/details?id=network.matic.wallet) 
 
 Once you Import your account with a Matic Mobile Wallet you will be able to land on the Home screen.
 
