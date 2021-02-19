@@ -105,6 +105,7 @@ module.exports = {
         "develop/wallets/portis",
         "develop/wallets/torus",
         "develop/wallets/walletconnect",
+        "develop/wallets/web-wallet-v2-guide",
         {
           type: "category",
           label: "Matic Wallet",
