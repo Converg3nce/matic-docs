@@ -96,7 +96,7 @@ git clone https://github.com/maticnetwork/bor
 cd bor
 
 # Checkout to a proper version
-# For eg: git checkout v0.2.1
+# For eg: git checkout v0.2.3
 git checkout <TAG OR BRANCH>
 make all
 ```
