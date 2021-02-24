@@ -567,7 +567,7 @@ interface IStateReceiver {
 }
 ```
 
-Only `0x0000000000000000000000000000000000001000` — `StateReceiver.sol`, must be allowed to call `onStateReceive` function on target contract. 
+Only `0x0000000000000000000000000000000000001001` — `StateReceiver.sol`, must be allowed to call `onStateReceive` function on target contract. 
 
 ## Transaction speed
 
