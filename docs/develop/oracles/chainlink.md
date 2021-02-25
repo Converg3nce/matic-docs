@@ -21,6 +21,18 @@ Chainlink's Request and Receive cycle enables your smart contracts to make a req
 
 To request data, your contract builds a request object which it provides to an oracle. Once the oracle has reached out to the API and parsed the response, it will attempt to send the data back to your contract using the callback function defined in your smart contract.
 
+# Uses
+
+1. Chainlink Data Feeds 
+   1. These are decentralized data reference points already aggregated on-chain, and the quickest, easiest, and cheapest way to get data from the real world. Currently supports some of the most popular cryptocurrency and fiat pairs. 
+2. Chainlink VRF    
+   1. Get provably random numbers, where the random number is cryptographically guaranteed to be random.
+3. Chainlink API Calls
+   1. How to configure your smart contract to work with traditional APIs, and customize to get any data, send any requests over the internet, and more. 
+
+For working with Data Feeds, use the [Polygon Data Feeds](https://docs.chain.link/docs/matic-addresses) from the Chainlink documenation.
+
+For working with Chainlink VRF, use the [Polygon VRF](https://docs.chain.link/docs/vrf-contracts) addresses from the [Chainlink documentation](https://docs.chain.link/docs/get-a-random-number).
 # Code Example
 
 To interact with external APIs, your smart contract should inherit from <a href="https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.6/ChainlinkClient.sol" target="_blank">`ChainlinkClient`</a>, which is a contract designed to make processing requests easy. It exposes a struct called `Chainlink.Request`, which your contract should use to build the API request. 
