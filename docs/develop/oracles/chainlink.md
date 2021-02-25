@@ -44,15 +44,15 @@ contract APIConsumer is ChainlinkClient {
     
     /**
      * Network: Matic Mumbai Testnet
-     * Oracle: 0xBf87377162512f8098f78f055DFD2aDAc34cbB47
-     * Job ID: 6b57e3fe0d904ba48d137b39350c7892
-     * LINK address: 0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB
+     * Oracle: 0xb33D8A4e62236eA91F3a8fD7ab15A95B9B7eEc7D
+     * Job ID: 5592aa6da3d64580933fce0401d373f0
+     * LINK address: 0x326C977E6efc84E512bB9C30f76E30c160eD06FB
      * Fee: 0.01 LINK
      */
     constructor() public {
-        setChainlinkToken(0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB);
-        oracle = 0xBf87377162512f8098f78f055DFD2aDAc34cbB47;
-        jobId = "6b57e3fe0d904ba48d137b39350c7892";
+        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
+        oracle = 0xb33D8A4e62236eA91F3a8fD7ab15A95B9B7eEc7D;
+        jobId = "5592aa6da3d64580933fce0401d373f0";
         fee = 10 ** 16; // 0.01 LINK
     }
     
@@ -65,6 +65,7 @@ contract APIConsumer is ChainlinkClient {
         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
         
         // Set the URL to perform the GET request on
+        // NOTE: If this oracle gets more than 5 requests from this job at a time, it will not return. 
         request.add("get", "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=CNY&apikey=demo");
         
        // Set the path to find the desired data in the API response, where the response format is:
@@ -108,13 +109,13 @@ contract APIConsumer is ChainlinkClient {
 There are currently only a few operational Chainlink oracles on the Matic Mumbai Testnet. You can always run one yourself too!
 
 ### View the reference on Market.Link
-[Alpha Chain Mumbai Chainlink Node](https://market.link/nodes/cca2eddf-06a3-4d43-8ae2-eb803554e2fd?start=1611015021&end=1611619821)
+[Alpha Chain Mumbai Chainlink Node](https://market.link/nodes/384a3ac9-3260-46ad-b253-f231fac77687?network=80001&start=1613667421&end=1614272221)
 
-* Oracle: <a href="https://mumbai-explorer.matic.today/address/0xBf87377162512f8098f78f055DFD2aDAc34cbB47/transactions" target="_blank">`0xBf87377162512f8098f78f055DFD2aDAc34cbB47`</a>
-* LINK: <a href="https://mumbai-explorer.matic.today/address/0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB/transactions" target="_blank">`0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB`</a>
+* Oracle: <a href="https://mumbai-explorer.matic.today/address/0xBf87377162512f8098f78f055DFD2aDAc34cbB47/transactions" target="_blank">`0xb33D8A4e62236eA91F3a8fD7ab15A95B9B7eEc7D`</a>
+* LINK: <a href="https://mumbai-explorer.matic.today/address/0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB/transactions" target="_blank">`0x326C977E6efc84E512bB9C30f76E30c160eD06FB`</a>
 
 
-To obtain LINK on Mumbai Testnet, contact us on our <a href="https://discord.com/invite/UFC4VYh" target="_blank">Discord</a>.
+To obtain LINK on Mumbai Testnet, head to the <a href="https://faucet.matic.network/" target="_blank">faucet here</a>.
 
 # Which APIs are Supported?
 
@@ -157,11 +158,11 @@ Here is the list of jobs that the Matic oracle is configured to run.
 
 | Name |  Return Type  | ID | Adapters |
 |-----|--------|------|-------|
-| HTTP GET | `uint256` | `6b57e3fe0d904ba48d137b39350c7892` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethuint256`<br/>`ethtx`  |
-| HTTP GET | `int256` | `18ee1e6eeedc4dac843ace23c0b4e974 ` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethint256`<br/>`ethtx`  |
-| HTTP GET | `bool` | `f1020a3f10ba478e827462daee70e3ab ` |  `httpget`<br/>`jsonparse`<br/>`ethbool`<br/>`ethtx`  |
-| HTTP GET | `bytes32` | `e5725140623b4c559c774c116ee6945a ` | `httpget`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
-| HTTP POST | `bytes32` | `c794acefe64e42b489bae7344f410798 ` | `httppost`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
+| HTTP GET | `uint256` | `5592aa6da3d64580933fce0401d373f0` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethuint256`<br/>`ethtx`  |
+| HTTP GET | `int256` | `8e930dbc3f7b4300a2a914da35ac9511 ` |  `httpget`<br/>`jsonparse`<br/>`multiply`<br/>`ethint256`<br/>`ethtx`  |
+| HTTP GET | `bool` | `6289d5af30684a4d9dd6b3f878a46202 ` |  `httpget`<br/>`jsonparse`<br/>`ethbool`<br/>`ethtx`  |
+| HTTP GET | `bytes32` | `92bc82fdc9824a71a2721cb5f00b8e35 ` | `httpget`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
+| HTTP POST | `bytes32` | `3af399b3ce3d4a6e80112e36049955df ` | `httppost`<br/>`jsonparse`<br/>`ethbytes32`<br/>`ethtx`  |
 
 Read more about job specifications [here](https://docs.chain.link/docs/job-specifications).
 
