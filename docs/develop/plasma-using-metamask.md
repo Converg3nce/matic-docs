@@ -67,7 +67,7 @@ During deposit of ERC20 tokens, providers are specified as below
 
 `parentProvider: window.web3`
 
-> NOTE: Deposits from Ethereum to Matic happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain. This [link](/docs/develop/tools/deposit-withdraw-status/) explains how to track the deposit events.
+> NOTE: Deposits from Ethereum to Matic happen using a state sync mechanism and takes about ~5-7 minutes. After waiting for this time interval, it is recommended to check the balance using web3.js/matic.js library or using Metamask. The explorer will show the balance only if at least one asset transfer has happened on the child chain. This [link](/docs/develop/ethereum-matic/plasma/deposit-withdraw-event-plasma/) explains how to track the deposit events.
 
 <div
         style={{
