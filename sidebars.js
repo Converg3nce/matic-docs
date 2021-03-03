@@ -37,7 +37,7 @@ module.exports = {
     {
       type: "category",
       label: "Deploying on Matic",
-      items: ["develop/remix", "develop/truffle"],
+      items: ["develop/remix", "develop/truffle","develop/hardhat"],
     },
     {
       type: "category",
@@ -198,6 +198,23 @@ module.exports = {
       ],
     },
     "develop/fiat-on-ramp",
+    {
+      type: "category",
+      label: "Indexing Services",
+      items: [
+        "develop/graph",
+        {
+          type: "link",
+          label: "Covalent",
+          href: "https://www.covalenthq.com/docs/api/",
+        },
+        {
+          type: "link",
+          label: "Ette",
+          href: "https://github.com/itzmeanjan/ette",
+        },
+      ],
+    },
     {
       type: "category",
       label: "Realtime Updates",
