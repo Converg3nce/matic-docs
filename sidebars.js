@@ -71,7 +71,6 @@ module.exports = {
         // },
         "develop/tools/matic-gas-station",
         "develop/tools/matic-widget",
-        "develop/tools/graph",
       ],
     },
     {
