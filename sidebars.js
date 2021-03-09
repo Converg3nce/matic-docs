@@ -371,7 +371,9 @@ module.exports = {
     {
       type: "category",
       label: "Advanced",
-      items: ["integrate/full-node-deployment"],
+      items: ["integrate/full-node-deployment",
+      "integrate/full-node-binaries"],
+      
     },
   ],
   Validate: [
