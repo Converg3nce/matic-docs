@@ -47,7 +47,7 @@ In GSNv1 there were a couple of various approval strategies for deciding which f
 
 #### Deploying your own Relayer
 
-For those looking to run your own relayer, our friends at [Creol.io](Creol.io) have created a very simple guide and tutorial for doing so on one of their github pages. [Running your own GSNv1 Relayer](https://github.com/JUDOKICK/matic-gsn-relayer-creol).
+For those looking to run your own relayer, our friends at [Creol.io](https://www.creol.io/) have created a very simple guide and tutorial for doing so on one of their github pages. [Running your own GSNv1 Relayer](https://github.com/JUDOKICK/matic-gsn-relayer-creol).
 
 
 ### GSNv2
