@@ -21,9 +21,13 @@ To integrate your DApp with Oracles on Matic, you can choose to go with one of t
 2. [BandChain](bandchain)
 3. [Razor](razor)
 
+Randomness is also generated through oracles. See the Randomness section of the documentation for more information. 
+
 
 ### **:scroll:Resources**
 
+1. [What is the blockchain oracle problem?](https://blog.chain.link/what-is-the-blockchain-oracle-problem/)
 1. [What is Blockchain Oracle](https://cryptobriefing.com/what-is-blockchain-oracle/)
 2. [Types of Blockchain Oracle](https://blockchainhub.net/blockchain-oracles/)
-3. [Tutorial: How to integrate Razor on Matic Network](https://docs.razor.network/tutorial/matic/)
+3. [Tutorial: Getting decentralized price data](https://docs.chain.link/docs/get-the-latest-price)
+4. [Tutorial: How to integrate Razor on Matic Network](https://docs.razor.network/tutorial/matic/)
