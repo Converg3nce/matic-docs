@@ -52,7 +52,7 @@ function sendState(bytes calldata data) external {
 
 In the above function, `stateSenderContract` is the address of the StateSender on the network you'll be deploying `Sender` on. (eg., we'll be using `0xEAa852323826C71cd7920C3b4c007184234c3945` for Goerli), and `receiver` is the contract that will receive the data we send from here.
 
-It is recommended to use constructors to pass in variables, but for the purpose of this demo, we'll simply harcode these two addresses:
+It is recommended to use constructors to pass in variables, but for the purpose of this demo, we'll simply hardcode these two addresses:
 
 Following is how our Sender.sol looks like:
 
