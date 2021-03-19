@@ -25,7 +25,7 @@ The following methods can work with any combination of base/quote token pair, as
 
 ## Querying Prices
 
-Currently, there are two methods for developers to query prices from Band's oracle: through Band's `StdReference` smart contract on BSC and through their [`bandchain.js`](https://www.npmjs.com/package/%40bandprotocol%2Fbandchain.js) JavaScript helper library.
+Currently, there are two methods for developers to query prices from Band's oracle: through Band's `StdReference` smart contract on Matic and through their [`bandchain.js`](https://www.npmjs.com/package/%40bandprotocol%2Fbandchain.js) JavaScript helper library.
 
 ### Solidity Smart Contract
 
