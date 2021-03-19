@@ -81,7 +81,7 @@ const client = new Client(endpoint);
 // This example demonstrates how to query price data from
 // Band's standard dataset
 async function exampleGetReferenceData() {
-  const rate = await client.getReferenceData(['BTC/ETH','BAND/EUR', 'FTM/USD']);
+  const rate = await client.getReferenceData(['BTC/ETH','BAND/EUR']);
   return rate;
 }
 
@@ -107,12 +107,6 @@ $ node index.js
         rate: 10.566138918332376,
         updatedAt: { base: 1615866845, quote: 1615866911 },
         requestID: { base: 2206539, quote: 2206572 } 
-    }, 
-    { 
-        pair: 'FTM/USD',
-        rate: 0.36662363,
-        updatedAt: { base: 1615866851, quote: 1615866960 },
-        requestID: { base: 2206543, quote: 0 } 
     }
 ]
 ```
