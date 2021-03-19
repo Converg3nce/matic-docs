@@ -13,7 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Introduction
 
-Developers building on Fantom can now leverage Band's decentralized oracle infrastructure. With Band's oracle, they now have access to various cryptocurrency price data to integrate into their applications.
+Developers building on Matic can now leverage Band's decentralized oracle infrastructure. With Band's oracle, they now have access to various cryptocurrency price data to integrate into their applications.
 
 ## Supported Tokens
 
