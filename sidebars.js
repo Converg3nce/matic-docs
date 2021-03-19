@@ -194,6 +194,7 @@ module.exports = {
         "develop/oracles/chainlink",
         "develop/oracles/razor",
         "develop/oracles/bandchain",
+        "develop/oracles/bandstandarddataset",
       ],
     },
     "develop/fiat-on-ramp",
