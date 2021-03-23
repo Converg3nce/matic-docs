@@ -1,6 +1,6 @@
 ---
 id: web-wallet-v2-guide
-title: Matic Web Wallet V2
+title: Web Wallet Usage Guide
 description: 
 keywords:
   - wallet
