@@ -105,7 +105,14 @@ module.exports = {
         "develop/wallets/portis",
         "develop/wallets/torus",
         "develop/wallets/walletconnect",
-        "develop/wallets/web-wallet-v2-guide",
+        {
+          type: "category",
+          label: "Matic Web Wallet",
+          items: [
+            "develop/wallets/matic-web-wallet/web-wallet-v2-guide",
+            "develop/wallets/matic-web-wallet/deposit-eth-dai-on-matic",
+          ],
+        },
         {
           type: "category",
           label: "Matic Wallet",
@@ -371,9 +378,7 @@ module.exports = {
     {
       type: "category",
       label: "Advanced",
-      items: ["integrate/full-node-deployment",
-      "integrate/full-node-binaries"],
-      
+      items: ["integrate/full-node-deployment"],
     },
   ],
   Validate: [
