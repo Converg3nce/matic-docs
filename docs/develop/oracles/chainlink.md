@@ -160,9 +160,17 @@ contract APIConsumer is ChainlinkClient {
 }
 ```
 
+# Mainnet Polygon LINK token
+
+To get mainnet Polygon LINK token from the Ethereum mainnet, you must follow a 2 step process.
+
+1. Bridge your LINK using the Plasma or [PoS bridge](https://wallet.matic.network/bridge/).
+2. Swap the LINK for the ERC677 version via the [Pegswap, deployed by the Chainlink community](https://pegswap.surge.sh/). 
+
+The Matic bridge brings over an ERC20 version of LINK, and LINK is an ERC677, so we just have to update it with this swap. 
 # Addresses
 
-There are currently only a few operational Chainlink oracles on the Matic Mumbai Testnet. You can always run one yourself too!
+There are currently only a few operational Chainlink oracles on the Matic Mumbai Testnet. You can always run one yourself too, and list it on the Chainlink Marketplace.
 
 ### View the reference on Market.Link
 [Alpha Chain Mumbai Chainlink Node](https://market.link/nodes/384a3ac9-3260-46ad-b253-f231fac77687?network=80001&start=1613667421&end=1614272221)
