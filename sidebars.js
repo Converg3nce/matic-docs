@@ -528,7 +528,9 @@ module.exports = {
   ],
   faq: [
     "faq/faq",
-    "faq/delegator-faq",
+    // "faq/delegator-faq",
+    "faq/staking-faq",
+    "faq/staking-tutorials",
     "faq/faqs",
     "faq/technical-faqs"
 
