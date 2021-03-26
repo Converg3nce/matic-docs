@@ -67,7 +67,7 @@ git clone https://github.com/maticnetwork/heimdall
 cd heimdall
 
 # Checkout to a proper version
-# For eg: git checkout v0.2.0
+# For eg: git checkout v0.2.1-mumbai
 git checkout <TAG OR BRANCH>
 make install
 ```
@@ -268,7 +268,7 @@ git clone https://github.com/maticnetwork/heimdall
 cd heimdall
 
 # Checkout to a proper version
-# For eg: git checkout v0.2.0-mainnet-1d8aca37
+# For eg: git checkout v0.2.1-mainnet 
 git checkout <TAG OR BRANCH>
 make install
 ```
