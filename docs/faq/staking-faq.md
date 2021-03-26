@@ -27,7 +27,7 @@ Check if you have funds on the Main Ethereum Network, to delegate your tokens. A
 
 ### How do I know which Validator to select for better rewards?
 
-It depends on your understanding and research on which validator you would want to stake on.You can find the list of validators here : https://staking-v2.matic.today/staking/validators
+It depends on your understanding and research on which validator you would want to stake on.You can find the list of validators here : https://wallet.matic.network/staking/validators
 
 ### What is the unbonding period? 
 
@@ -35,7 +35,7 @@ The unbonding period on Matic is 80 checkpoints. This period applies to the orig
 
 ### Where to Stake? 
 
-You can visit the below link for Staking: https://staking-v2.matic.today/staking/validators
+You can visit the below link for Staking: https://wallet.matic.network/staking/validators
 
 ### I want to Withdraw Rewards but I am unable to ?
 
