@@ -105,7 +105,14 @@ module.exports = {
         "develop/wallets/portis",
         "develop/wallets/torus",
         "develop/wallets/walletconnect",
-        "develop/wallets/web-wallet-v2-guide",
+        {
+          type: "category",
+          label: "Matic Web Wallet",
+          items: [
+            "develop/wallets/matic-web-wallet/web-wallet-v2-guide",
+            "develop/wallets/matic-web-wallet/deposit-eth-dai-on-matic",
+          ],
+        },
         {
           type: "category",
           label: "Matic Wallet",
@@ -194,6 +201,7 @@ module.exports = {
         "develop/oracles/chainlink",
         "develop/oracles/razor",
         "develop/oracles/bandchain",
+        "develop/oracles/bandstandarddataset",
       ],
     },
     "develop/fiat-on-ramp",
@@ -520,7 +528,9 @@ module.exports = {
   ],
   faq: [
     "faq/faq",
-    "faq/delegator-faq",
+    // "faq/delegator-faq",
+    "faq/staking-faq",
+    "faq/staking-tutorials",
     "faq/faqs",
     "faq/technical-faqs"
 
