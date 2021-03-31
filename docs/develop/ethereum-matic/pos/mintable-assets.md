@@ -45,9 +45,18 @@ Please do mention the contract address of the deployed child token when you subm
 
 - This role can be granted by calling the grantRole() function in the token contracts on the root chain. The first parameter is the value of PREDICATE_ROLE constant which is **0x12ff340d0cd9c652c747ca35727e68c547d0f0bfa7758d2e77f75acef481b4f2** and the second parameter is the token predicate proxy address which is given below, 
 
+    
     ```jsx
+    Mainnet
     "MintableERC20PredicateProxy"  : "0x9923263fA127b3d1484cFD649df8f1831c2A74e4",
     "MintableERC721PredicateProxy" : "0x932532aA4c0174b8453839A6E44eE09Cc615F2b7",
     "MintableERC1155PredicateProxy": "0x2d641867411650cd05dB93B59964536b1ED5b1B7",
+    ```
+
+    ```jsx
+    Mumbai( Matic Testnet )
+    "MintableERC20PredicateProxy"  : "0x37c3bfC05d5ebF9EBb3FF80ce0bd0133Bf221BC8",
+    "MintableERC721PredicateProxy" : "0x56E14C4C1748a818a5564D33cF774c59EB3eDF59",
+    "MintableERC1155PredicateProxy": "0x72d6066F486bd0052eefB9114B66ae40e0A6031a",
     ```
 
