@@ -156,6 +156,7 @@ module.exports = {
             "develop/ethereum-matic/pos/deposit-withdraw-event-pos",
             "develop/ethereum-matic/pos/deployment",
             "develop/ethereum-matic/pos/mapping-assets",
+            "develop/ethereum-matic/pos/mintable-assets",
           ],
         },
         {
@@ -528,7 +529,9 @@ module.exports = {
   ],
   faq: [
     "faq/faq",
-    "faq/delegator-faq",
+    // "faq/delegator-faq",
+    "faq/staking-faq",
+    "faq/staking-tutorials",
     "faq/faqs",
     "faq/technical-faqs"
 
