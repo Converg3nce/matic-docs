@@ -89,8 +89,6 @@ Once the transaction is completed you will have staked successfully to become a 
 
 To check the balance of your address:
 
-You can find details regarding chain-id over here: https://github.com/maticnetwork/public-testnets/blob/master/CS-2008/heimdall/config/genesis.json#L3
-
 ```bash
     heimdallcli query auth account <signer-address> --chain-id <chain-id>
 ```
