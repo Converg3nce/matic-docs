@@ -115,14 +115,14 @@ In order to claim rewards you can go to your Validator Profile.
 
 You will see 2 buttons on your profile:
 
-* Claim Rewards
+* Withdraw Rewards
 * Restake Rewards
 
 <img src={useBaseUrl("img/staking/validator-rewards.png")} />
 
-#### Claim Rewards
+#### Withdraw Rewards
 
-As a Validator, you earn rewards as long as your performing your validator correctly. Clicking on Claim Rewards will ask you for a confirmation from your Wallet. Confirming the transaction will get your rewards back to your wallet and your account should be updated.
+As a Validator, you earn rewards as long as your performing your validator correctly. Clicking on Withdraw Rewards will ask you for a confirmation from your Wallet. Confirming the transaction will get your rewards back to your wallet and your account should be updated.
 
 #### Restake Rewards
 
