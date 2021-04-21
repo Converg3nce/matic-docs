@@ -443,6 +443,7 @@ module.exports = {
         "validate/mainnet/commission",
         "validate/mainnet/move-stake",
         "validate/mainnet/technical-faqs",
+        "validate/mainnet/validator-knowledge-base",
       ],
     },
     "validate/faqs",
