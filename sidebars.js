@@ -227,7 +227,6 @@ module.exports = {
       type: "category",
       label: "Realtime Updates",
       items: [
-        "develop/dagger",
         "develop/dagger-webhooks",
         {
           type: "category",
